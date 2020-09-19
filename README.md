@@ -4,7 +4,7 @@ A post linux install script in Python
 ## under development
 
 ## screenshot
-[screencast](assets/screencast.gif)
+![screencast](assets/screencast.gif)
 
 
 ## motivation
