@@ -1,0 +1,60 @@
+# example package.toml
+[user]
+name = "username"
+
+[container]
+[container.toInstall]
+utilities = 'sudo apt install' 
+dev       = 'sudo apt install' 
+# external  = true 
+# python    = 'pip3 install' 
+# rust      = 'cargo install' 
+# npm       = 'npm install'
+# vscode    = 'code --install-extension'
+
+[container.utilities] 
+download       = ["curl", "aria2", "wget"]
+pdf            = ["zathura", "evince"]
+misc           = [
+	"software-properties-common",
+	"apt-transport-https",
+	"feh", 
+	"rsync", 
+]
+
+# external script that need to be run
+[container.external]
+onlyoffice = true
+brave      = true
+vscode     = true
+
+
+[container.dev]
+vim       = "vim"
+git       = "git"
+cpp       = ["g++", "cmake", "clang-format"]
+front-end = ["node", "npm"]
+
+# installation using pip
+[container.python]
+ipython3   = "ipython3"
+glances    = "glances"
+
+# installation using cargo
+[container.rust]
+ripgrep  = "ripgrep"
+exa      = "exa"
+
+# examples
+[container.npm]
+npm = ["create-react-app", "commander"]
+
+
+# code --install-extension
+[container.vscode]
+extensions = [
+	"bungcip.better-toml",
+	"DavidAnson.vscode-markdownlint",
+	"msjsdiag.debugger-for-chrome",
+	"yzhang.markdown-all-in-one"
+]
