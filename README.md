@@ -4,7 +4,7 @@ A post linux install script in Python
 ## under development
 
 ## screenshot
-[](/assets/screencast.gif)
+![screencast](assets/screencast.gif)
 
 
 ## TODO
