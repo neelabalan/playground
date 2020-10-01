@@ -2,8 +2,8 @@
 [user]
 name = "username"
 
-[container]
-[container.toInstall]
+[repo]
+[repo.prefix]
 utilities = 'sudo apt install' 
 dev       = 'sudo apt install' 
 # external  = true 
@@ -12,7 +12,7 @@ dev       = 'sudo apt install'
 # npm       = 'npm install'
 # vscode    = 'code --install-extension'
 
-[container.utilities] 
+[repo.utilities] 
 download       = ["curl", "aria2", "wget"]
 pdf            = ["zathura", "evince"]
 misc           = [
@@ -23,38 +23,45 @@ misc           = [
 ]
 
 # external script that need to be run
-[container.external]
+[repo.external]
 onlyoffice = true
 brave      = true
 vscode     = true
 
 
-[container.dev]
+[repo.dev]
 vim       = "vim"
 git       = "git"
 cpp       = ["g++", "cmake", "clang-format"]
 front-end = ["node", "npm"]
 
 # installation using pip
-[container.python]
+[repo.python]
 ipython3   = "ipython3"
 glances    = "glances"
 
 # installation using cargo
-[container.rust]
+[repo.rust]
 ripgrep  = "ripgrep"
 exa      = "exa"
 
 # examples
-[container.npm]
+[repo.npm]
 npm = ["create-react-app", "commander"]
 
 
 # code --install-extension
-[container.vscode]
+[repo.vscode]
 extensions = [
 	"bungcip.better-toml",
 	"DavidAnson.vscode-markdownlint",
 	"msjsdiag.debugger-for-chrome",
 	"yzhang.markdown-all-in-one"
+]
+
+[dotfile]
+[dotfile.home]
+files = [
+	".vimrc",
+	".bashrc"
 ]
