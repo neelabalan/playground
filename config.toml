@@ -1,11 +1,11 @@
 # example package.toml
-[user]
-name = "username"
-
+# to be present in $HOME directory
 [repo]
+# commented ones are not picked up for installation
+# prefix used when installing programs from the repo
 [repo.prefix]
-utilities = 'sudo apt install' 
-dev       = 'sudo apt install' 
+utilities = 'sudo apt install -y' 
+dev       = 'sudo apt install -y' 
 # external  = true 
 # python    = 'pip3 install' 
 # rust      = 'cargo install' 
@@ -23,17 +23,17 @@ misc           = [
 ]
 
 # external script that need to be run
+# in /home/user/scripts/
+# example /home/user/scripts/spotify
 [repo.external]
-onlyoffice = true
-brave      = true
-vscode     = true
+spotify = true
 
 
 [repo.dev]
 vim       = "vim"
 git       = "git"
 cpp       = ["g++", "cmake", "clang-format"]
-front-end = ["node", "npm"]
+front-end = ["nodejs", "npm"]
 
 # installation using pip
 [repo.python]

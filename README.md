@@ -1,7 +1,12 @@
 # postinstall
-A post linux install script in Python
+
+A post linux install script 
 
 ## under development
+
+The config.toml is self explanatory.
+I've tried to keep the dependencies and program as simple as possible
+and there is no gurantee SUCCESS status means the program has installed successfully
 
 ## screenshot
 ![screencast](assets/screencast.gif)
@@ -9,9 +14,10 @@ A post linux install script in Python
 
 ## TODO
 
-- [ ] add more validations/exception handling with subprocess
+- [ ] add more exception handling 
 - [ ] deploy dotfiles with config.toml
-- [ ] add logging
+- [x] add logging
+- [ ] need some kind of validation to make sure the program has installed successfully 
 
 
 ## motivation
