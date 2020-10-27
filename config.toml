@@ -60,8 +60,9 @@ extensions = [
 ]
 
 [dotfile]
-[dotfile.home]
+source = "/home/user/dotfiles/"
 files = [
 	".vimrc",
 	".bashrc"
 ]
+target = "/home/user/"
