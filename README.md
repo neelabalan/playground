@@ -4,7 +4,7 @@
 
 ### Installation
 
-> Highly recommended to run this like you run other react apps
+`npm install && npm start`
 
 ### Keyboard shortcuts
 
@@ -14,7 +14,6 @@
 
 * `Esc` reset the counter
 
-    > you guessed it right they are vim inspired :wink:
 
 ### Screenshot
 
@@ -24,7 +23,11 @@
 
 
 
-#### Dark mode ( I mean, why not? )
+#### Dark mode 
 
 ![Dark mode](https://i.imgur.com/FsqCigY.png)
+
+### todo
+
+- [ ] add drawer/app bar with option to add counters
 
