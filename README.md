@@ -15,6 +15,6 @@ and there is no gurantee "SUCCESS" status means the program has installed succes
 ## TODO
 
 - [ ] add more exception handling 
-- [x] deploy dotfiles with config.toml
 - [x] add logging
+- [ ] order of execution 
 - [ ] need some kind of validation to make sure the program has installed successfully 
