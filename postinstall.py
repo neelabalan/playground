@@ -1,23 +1,11 @@
 import subprocess
-import logging
+import sys
 import os
 import toml
 import shutil
 from rich.console import Console
 
 console = Console()
-# tasks = [f"task {n}" for n in range(1, 11)]
-
-# with console.status("[bold green]Working on tasks...") as status:
-#     while tasks:
-#         task = tasks.pop(0)
-#         sleep(1)
-#         console.log(f"{task} complete")
-
-def get_commands(config):
-    ''' returns the dict of containers to install '''
-    return config.get('repo').get('commands')
-
 
 def are_all_commands_valid(config):
     flag = True
@@ -30,17 +18,45 @@ def are_all_commands_valid(config):
 
     
 def execute_commands(commands):
-    for command in commands:
-        subprocess.run(
-            command,
-            stdout=open('/tmp/postinstall_stdout.log', 'a'),
-            stderr=open('/tmp/postinstall_stderr.log', 'a')
-        ) 
+    with console.status('[bold green]Installing packages...') as status:
+        for command in commands:
+            subprocess.run(
+                command,
+                stdout=open('/tmp/postinstall_stdout.log', 'a'),
+                stderr=open('/tmp/postinstall_stderr.log', 'a')
+            ) 
+            console.log(f' complete')
 
+
+def parse_config(path):
+    try:
+        config = toml.load(path)
+    except:
+        console.log('[red][TomlDecodeError] Unable to parse config')
+
+    return config
+
+def parse_args(args):
+    if len(args) > 2:
+        sys.exit('not enough arguments provided')
+
+    if args[1] == '--path':
+        path = args[2]
+        if path and os.path.exists(path):
+            return path
+        else:
+            console.log('config path invalid or not provided')
+    else:
+        console.log('path args not provided')
+    return None
 
 def run():
-    pass
-
+    path = parse_args(sys.argv)
+    config = parse_config(path)
+    if are_all_commands_valid(config):
+        execute_commands()
+    else:
+        pass #wrong config path
 
 if __name__ == "__main__":
     run()
