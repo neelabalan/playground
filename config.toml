@@ -1,56 +1,46 @@
-# example package.toml
-# to be present in $HOME directory
 [repo]
 # commented ones are not picked up for installation
 # prefix used when installing programs from the repo
-[repo.prefix]
-utilities = 'sudo apt install -y' 
-dev       = 'sudo apt install -y' 
-# external  = true 
-# python    = 'pip3 install' 
-# rust      = 'cargo install' 
-# npm       = 'npm install'
-# vscode    = 'code --install-extension'
+[prefix]
+os_packages = ['apt-get', 'sudo apt install -y']
+python    = ['pip3', 'pip3 install']
+rust      = ['cargo', 'cargo install' ]
+npm       = ['npm', 'npm install']
+vscode    = ['code' 'code --install-extension']
 
-[repo.utilities] 
-download       = ["curl", "aria2", "wget"]
-pdf            = ["zathura", "evince"]
-misc           = [
+[os-packages] 
+utilities = [
+	"curl", 
+	"aria2", 
+	"wget",
+	"zathura",
+	"evince",
 	"software-properties-common",
 	"apt-transport-https",
 	"feh", 
-	"rsync", 
+	"rsync"
+]
+development_tools = [
+	"vim",
+	"git",
+	"g++", 
+	"cmake", 
+	"clang-format",
+	"node",
+	"npm"
 ]
 
-# external script that need to be run
-# in /home/user/scripts/
-# example /home/user/scripts/spotify
-[repo.external]
-spotify = true
+[python-packages]
+libs = ["pandas", "numpy", "requests"] 
+utilities = ["glances", "ranger-fm"]
 
+[cargo]
+utilities = ["ripgrep", "exa"]
 
-[repo.dev]
-vim       = "vim"
-git       = "git"
-cpp       = ["g++", "cmake", "clang-format"]
-front-end = ["nodejs", "npm"]
-
-# installation using pip
-[repo.python]
-ipython3   = "ipython3"
-glances    = "glances"
-
-# installation using cargo
-[repo.rust]
-ripgrep  = "ripgrep"
-exa      = "exa"
-
-# examples
-[repo.npm]
+[npm]
 npm = ["create-react-app", "commander"]
 
 
-# code --install-extension
 [repo.vscode]
 extensions = [
 	"bungcip.better-toml",
@@ -59,10 +49,3 @@ extensions = [
 	"yzhang.markdown-all-in-one"
 ]
 
-[dotfile]
-source = "/home/user/dotfiles/"
-files = [
-	".vimrc",
-	".bashrc"
-]
-target = "/home/user/"
