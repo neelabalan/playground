@@ -1,47 +1,38 @@
-[repo]
-# commented ones are not picked up for installation
-# prefix used when installing programs from the repo
-[prefix]
-os_packages = ['apt-get', 'sudo apt install -y']
-python    = ['pip3', 'pip3 install']
-rust      = ['cargo', 'cargo install' ]
-npm       = ['npm', 'npm install']
-vscode    = ['code' 'code --install-extension']
-
 [os-packages] 
-utilities = [
+dependent = 'apt-get'
+command = 'sudo apt install -y'
+packages = [
 	"curl", 
 	"aria2", 
-	"wget",
-	"zathura",
-	"evince",
 	"software-properties-common",
 	"apt-transport-https",
 	"feh", 
-	"rsync"
-]
-development_tools = [
-	"vim",
-	"git",
-	"g++", 
-	"cmake", 
-	"clang-format",
-	"node",
-	"npm"
+	"python3-pip"
 ]
 
-[python-packages]
-libs = ["pandas", "numpy", "requests"] 
-utilities = ["glances", "ranger-fm"]
+[python]
+dependent = 'pip3'
+command = 'pip3 install'
+packages= [
+	"pandas", 
+	"numpy", 
+	"requests"
+] 
 
 [cargo]
+dependent = 'cargo'
+command = 'cargo install'
 utilities = ["ripgrep", "exa"]
 
 [npm]
+dependent = 'npm'
+command = 'npm install'
 npm = ["create-react-app", "commander"]
 
 
-[repo.vscode]
+[vscode]
+dependent = 'code'
+command = 'code --install-extension'
 extensions = [
 	"bungcip.better-toml",
 	"DavidAnson.vscode-markdownlint",
