@@ -1,4 +1,4 @@
-[os-packages] 
+[ubuntu] 
 dependent = 'apt-get'
 command = 'sudo apt install -y'
 packages = [
