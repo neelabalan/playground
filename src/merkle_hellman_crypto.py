@@ -1,3 +1,10 @@
+'''
+1. Generate a superincreasing knapsack
+2. Convert the superincreasing knapsack into a general knapsack
+3. The public key is the general knapsack
+4. The private key is the superincreasing knapsack together with the covnersion factors
+'''
+
 from random import randint, choice
 import math
 
