@@ -2,62 +2,99 @@ import pytest
 import os
 import json
 from jsondb import jsondb
-from jsondb.jsondb import DuplicateEntryError
+from jsondb import DuplicateEntryError
+from jsondb import is_callable
 
+products = [
+	{
+		"_id": "ac3",
+		"name": "AC3 Phone",
+		"brand": "ACME",
+		"type": "phone",
+		"price": 200,
+		"rating": 3.8,
+		"warranty_years": 1,
+		"available": True,
+	},
+	{
+		"_id": "ac7",
+		"name": "AC7 Phone",
+		"brand": "ACME",
+		"type": "phone",
+		"price": 320,
+		"rating": 4,
+		"warranty_years": 1,
+		"available": False,
+	},
+	{
+		"_id": {"$oid": "507d95d5719dbef170f15bf9"},
+		"name": "AC3 Series Charger",
+		"type": ["accessory", "charger"],
+		"price": 19,
+		"rating": 2.8,
+		"warranty_years": 0.25,
+		"for": ["ac3", "ac7", "ac9"],
+	},
+	{
+		"_id": {"$oid": "507d95d5719dbef170f15bfa"},
+		"name": "AC3 Case Green",
+		"type": ["accessory", "case"],
+		"color": "green",
+		"price": 12,
+		"rating": 1,
+		"warranty_years": 0,
+	},
+]
 # utils
 def dummy_func():
 	pass
 
 
 def test_iscallable():
-	assert jsondb.is_callable(dummy_func)
-	assert not jsondb.is_callable(int)
-	assert not jsondb.is_callable("hello")
+	assert is_callable(dummy_func)
+	assert not is_callable(int)
+	assert not is_callable("hello")
 
 
 # jsondb
 @pytest.fixture
 def db():
-	return jsondb.load("db")
+	db = jsondb("db/test.json")
+	yield db
+	if os.path.exists(db.path):
+		db.drop()
 
 
 def test_load():
 	# this works
-	db = jsondb.load("db")
+	db = jsondb("db/products.json")
 
 	# this should not
 	with pytest.raises(Exception) as e:
-		db = jsondb.load("/doesnotexist")
-
-
-def test_get(db):
-	assert db.get("products")
+		db = jsondb("/doesnotexist")
 
 
 def test_new_and_drop(db):
-	test = db.new("test")
-	assert test.path
-	db.drop(test)
-	assert not os.path.exists(test.path)
+	assert db.path
+	db.drop()
+	assert not os.path.exists(db.path)
 
 
-def test_insert_and_dumps(db):
+def test_insert_and_commit(db):
 	doc = [{"key": "value"}]
-	test = db.new("test")
 	# insert
-	test.insert(doc)
-	assert test.find(lambda x: x["key"] == "value") == doc
+	db.insert(doc)
+	assert db.find(lambda x: x["key"] == "value") == doc
 	# dump
-	test.dump()
+	db.commit()
 	# load and check
-	with open(test.path, "r") as file:
+	with open(db.path, "r") as file:
 		json.load(file) == doc
 
 
-# collection
 def test_find(db):
-	restaurant = db.get("products")
-	assert restaurant.find(lambda x: x.get("price") == 200) == [
+	db.insert(products)
+	assert db.find(lambda x: x.get("price") == 200) == [
 		{
 			"_id": "ac3",
 			"name": "AC3 Phone",
@@ -72,7 +109,6 @@ def test_find(db):
 
 
 def test_delete(db):
-	test = db.get("test")
 	doc = [
 		{
 			"URL": "http://www.just-eat.co.uk/restaurants-cn-chinese-cardiff/menu",
@@ -87,33 +123,35 @@ def test_delete(db):
 		}
 	]
 	# document present
-	test.insert(doc)
-	assert test.find(lambda x: x.get("address") == "228 City Road") == doc
+	db.insert(doc)
+	assert db.find(lambda x: x.get("address") == "228 City Road") == doc
 
 	# delete the document
-	test.delete(lambda x: x.get("address") == "228 City Road")
+	db.delete(lambda x: x.get("address") == "228 City Road")
 
 	# check if it is not there
-	assert not test.find(lambda x: x.get("address") == "228 City Road") == doc
+	assert not db.find(lambda x: x.get("address") == "228 City Road") == doc
 	# since no dump is called changes not written to file
-	db.drop(test)
+	db.drop()
 
 
 def test_update(db):
 	doc = [{"key": "value1"}, {"key": "value2"}]
-	test = db.new("test")
-	test.insert(doc)
+	db.insert(doc)
 
 	def func(document):
 		document.update({"key": "newvalueadded"})
 		return document
 
-	test.update(func, lambda x: x["key"] == "value2")
-	assert test.collection == [{"key": "value1"}, {"key": "newvalueadded"}]
-	db.drop(test)
+	db.update(func, lambda x: x["key"] == "value2")
+	assert db.collection == [{"key": "value1"}, {"key": "newvalueadded"}]
+	db.drop()
+
 
 def test_duplicate_entry(db):
-	test = db.new("test", indices=['key'])
-	test.insert([{'key': 'value'}])
+	db.insert([{"key": "value"}])
+	db.set_index("key")
 	with pytest.raises(DuplicateEntryError) as e:
-		test.insert([{'key': 'value'}])
+		db.insert([{"key": "value"}])
+
+	db.insert([{"key": "someothervalue"}])

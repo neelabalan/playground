@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="jsondb", 
-    version="1.0.0",
+    version="0.2.0",
     author="neelabalan.n",
     description="jsondb",
     long_description_content_type="text/markdown",
