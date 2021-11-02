@@ -18,10 +18,11 @@ from rich.panel import Panel
 from rich.style import Style
 from rich.text import Text
 from rich.markdown import Markdown
+from rich.table import Table
 
 app = typer.Typer()
 edit_app = typer.Typer()
-app.add_typer(edit_app, name='edit')
+app.add_typer(edit_app, name="edit")
 
 command = string.Template("$editor $filename")
 
@@ -54,30 +55,33 @@ class states:
             states.SELECTED,
         )
 
-# https://github.com/sanskrit-coders/sanskrit_data/blob/67e0999be6f8bf7fff761f0484141e03b9e551f4/sanskrit_data/toml_helper.py
 
+color_map = {
+    states.BACKLOG: "black on dark_orange3",
+    states.SELECTED: "black on blue",
+    states.RUNNING: "black on green",
+    states.DONE: "black on grey58",
+    states.REVISIT: "black on light_goldenrod1",
+}
+
+# https://github.com/sanskrit-coders/sanskrit_data/blob/67e0999be6f8bf7fff761f0484141e03b9e551f4/sanskrit_data/toml_helper.py
 def _dump_str_prefer_multiline(v):
-  multilines = v.split('\n')
-  if len(multilines) > 1:
-    return unicode('"""\n' + v.replace('"""', '\\"""').strip() + '\n"""')
-  else:
-    return _dump_str(v)
+    multilines = v.split("\n")
+    if len(multilines) > 1:
+        return unicode('"""\n' + v.replace('"""', '\\"""').strip() + '\n"""')
+    else:
+        return _dump_str(v)
 
 
 class MultilinePreferringTomlEncoder(TomlEncoder):
-  def __init__(self, _dict=dict, preserve=False):
-    super(MultilinePreferringTomlEncoder, self).__init__(_dict=dict, preserve=preserve)
-    self.dump_funcs[str] = _dump_str_prefer_multiline
+    def __init__(self, _dict=dict, preserve=False):
+        super(MultilinePreferringTomlEncoder, self).__init__(
+            _dict=dict, preserve=preserve
+        )
+        self.dump_funcs[str] = _dump_str_prefer_multiline
 
 
 def get_status_styled(status):
-    color_map = {
-        states.BACKLOG: "black on dark_orange3",
-        states.SELECTED: "black on blue",
-        states.RUNNING: "black on green",
-        states.DONE: "black on grey58",
-        states.REVISIT: "black on light_goldenrod1",
-    }
     return "[{}] {} [/]".format(color_map.get(status), status)
 
 
@@ -112,6 +116,24 @@ def display_task(task):
             padding=1,
         )
     )
+    console.print("\n\n")
+
+
+def render_table(tasks):
+    table = Table(title="tasks")
+    table.add_column("id", no_wrap=True)
+    table.add_column("task", no_wrap=True)
+    table.add_column("status", no_wrap=True)
+    table.add_column("created_date", style="magenta")
+    for task in tasks:
+        status = task.get('status')
+        table.add_row(
+            str(task.get("_id")),
+            task.get("task"),
+            Text(status, style=color_map.get(status)),
+            task.get("created_date"),
+        )
+    console.print(table, justify="left")
 
 
 def open_temp_toml_file(template=template):
@@ -148,7 +170,7 @@ def insert(tasks):
                 [
                     {
                         "task": task_name,
-                        "status": task.get("status"),
+                        "status": task.get("status") or states.BACKLOG,
                         "description": task.get("description"),
                         "tags": task.get("tags"),
                         "created_date": task.get("added_date")
@@ -203,13 +225,13 @@ def edit_id(_id: int):
                     updated_task = toml.load(file)
                     document.update(updated_task)
                     return document
+
     db.update(update, lambda x: x.get("_id") == _id)
 
 
 @edit_app.command("tag")
 def edit_tag(tag: str):
     pass
-
 
 
 @app.command()
@@ -223,13 +245,32 @@ def summary():
 
 
 @app.command()
-def ls():
-    pass
+def ls(order: str = typer.Argument("recent"), limit: int = typer.Argument(5)):
+    if not order in ("recent", "past"):
+        console.print("[red]order has to be one of (recent | past)")
+        sys.exit()
+    all_tasks = db.find(lambda x: True)
+    ordered_latest = sorted(all_tasks, key=lambda i: i["created_date"], reverse=True)
+    if order == "recent":
+        tasks = ordered_latest[:limit]
+    else:
+        tasks = ordered_latest[-limit:]
+    for task in tasks:
+        display_task(task)
 
 
 @app.command()
-def lss():
-    pass
+def lss(order: str = typer.Argument("recent"), limit: int = typer.Argument(5)):
+    if not order in ("recent", "past"):
+        console.print("[red]order has to be one of (recent | past)")
+        sys.exit()
+    all_tasks = db.find(lambda x: True)
+    ordered_latest = sorted(all_tasks, key=lambda i: i["created_date"], reverse=True)
+    if order == "recent":
+        tasks = ordered_latest[:limit]
+    else:
+        tasks = ordered_latest[-limit:]
+    render_table(tasks)
 
 
 @app.command()
