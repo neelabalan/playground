@@ -19,6 +19,8 @@ from rich.style import Style
 from rich.text import Text
 from rich.markdown import Markdown
 from rich.table import Table
+from rich.table import Column
+from rich.columns import Columns
 
 app = typer.Typer()
 edit_app = typer.Typer()
@@ -194,16 +196,6 @@ def insert(tasks):
     )
 
 
-@app.command()
-def new():
-    filename, status = open_temp_toml_file()
-    total_bookmarks = 0
-    if status == 0:
-        with open(filename, "r") as file:
-            tasks = toml.load(file)
-            insert(tasks)
-
-
 def filter_tasks_by_tags(tagstr: str, status: str = typer.Argument("")):
     tags = list(map(str.strip, tagstr.split(",")))
     if not status:
@@ -218,6 +210,36 @@ def filter_tasks_by_tags(tagstr: str, status: str = typer.Argument("")):
 
 def fitler_tasks_by_status(status: str):
     return db.find(lambda x: x.get("status") == status)
+
+
+def number_of_task_based_on_status():
+    return {
+        status: str(len(fitler_tasks_by_status(status)))
+        for status in states.possible_states()
+    }
+
+
+def get_all_tasks_ordered():
+    all_tasks = db.find(lambda x: True)
+    return sorted(all_tasks, key=lambda i: i["created_date"], reverse=True)
+
+
+def get_distinct_tags():
+    tags = set()
+    all_tasks = db.find(lambda x: True)
+    for task in all_tasks:
+        tags.update(task.get("tags"))
+    return tags
+
+
+@app.command()
+def new():
+    filename, status = open_temp_toml_file()
+    total_bookmarks = 0
+    if status == 0:
+        with open(filename, "r") as file:
+            tasks = toml.load(file)
+            insert(tasks)
 
 
 @tag_app.command("brief")
@@ -279,12 +301,44 @@ def rm(id: str):
 
 @app.command()
 def summary():
-    pass
+    task_len = number_of_task_based_on_status()
+    console.print(
+        "\n\n[bold green] total number of tasks {}[/]\n\n".format(
+            sum(map(int, task_len.values())),
+        ),
+        justify="center",
+    )
+    table = Table(
+        Column(states.BACKLOG, style=color_map.get(states.BACKLOG)),
+        Column(states.SELECTED, style=color_map.get(states.SELECTED)),
+        Column(states.RUNNING, style=color_map.get(states.RUNNING)),
+        Column(states.DONE, style=color_map.get(states.DONE)),
+        Column(states.REVISIT, style=color_map.get(states.REVISIT)),
+        title="status summary",
+        expand=True,
+    )
+    table.add_row(
+        task_len.get(states.BACKLOG),
+        task_len.get(states.SELECTED),
+        task_len.get(states.RUNNING),
+        task_len.get(states.DONE),
+        task_len.get(states.REVISIT),
+    )
+    console.print(table)
+    console.print("\n\n")
 
-
-def get_all_tasks_ordered():
-    all_tasks = db.find(lambda x: True)
-    return sorted(all_tasks, key=lambda i: i["created_date"], reverse=True)
+    distinct_tags = get_distinct_tags()
+    renderables = list()
+    for tag in distinct_tags:
+        tag_map = dict()
+        content = ''
+        for state in states.possible_states():
+            total = len(filter_tasks_by_tags(tag, state))
+            if total:
+                content += "[{}] {} [/][black on grey93] {} [/]\n\n".format(color_map.get(state), state, total)
+        renderables.append(Panel(content, title=tag, expand=True, padding=1))
+    console.print(Columns(renderables, expand=True))
+    console.print("\n\n")
 
 
 @app.command("")
