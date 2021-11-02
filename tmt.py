@@ -22,6 +22,7 @@ from rich.table import Table
 
 app = typer.Typer()
 edit_app = typer.Typer()
+
 app.add_typer(edit_app, name="edit")
 
 command = string.Template("$editor $filename")
@@ -33,7 +34,7 @@ task_root.mkdir(parents=True, exist_ok=True)
 
 date_format = "%a %d %b %Y %X"
 
-template = {"-": [{"task": "", "description": "", "status": "", "tags": []}]}
+template = {"-": [{"task": "", "status": "", "tags": [], "description": ""}]}
 
 tag_style = Style(color="black", bgcolor="blue")
 title_style = Style(color="green", bold=True)
@@ -120,20 +121,17 @@ def display_task(task):
 
 
 def render_table(tasks):
-    table = Table(title="tasks")
-    table.add_column("id", no_wrap=True)
-    table.add_column("task", no_wrap=True)
-    table.add_column("status", no_wrap=True)
-    table.add_column("created_date", style="magenta")
+    table = Table("id", "task", "status", "tags", "created_date", title="tasks", expand=True)
     for task in tasks:
-        status = task.get('status')
+        status = task.get("status")
         table.add_row(
             str(task.get("_id")),
             task.get("task"),
             Text(status, style=color_map.get(status)),
+            ', '.join(task.get('tags')),
             task.get("created_date"),
         )
-    console.print(table, justify="left")
+    console.print(table)
 
 
 def open_temp_toml_file(template=template):
@@ -201,9 +199,14 @@ def new():
 
 
 @app.command()
-def tag(tagstr: str):
+def tag(tagstr: str, status: str = typer.Argument('')):
     tags = list(map(str.strip, tagstr.split(",")))
-    tasks = db.find(lambda x: set(tags).issubset(set(x.get("tags"))))
+    if not status:
+        tasks = db.find(lambda x: set(tags).issubset(set(x.get("tags"))))
+    else:
+        tasks = db.find(
+            lambda x: set(tags).issubset(set(x.get("tags"))) and x.get('status') == status
+        )
     for task in tasks:
         display_task(task)
 
@@ -244,38 +247,50 @@ def summary():
     pass
 
 
-@app.command()
+def get_all_tasks_ordered():
+    all_tasks = db.find(lambda x: True)
+    return sorted(all_tasks, key=lambda i: i["created_date"], reverse=True)
+
+
+@app.command("")
 def ls(order: str = typer.Argument("recent"), limit: int = typer.Argument(5)):
     if not order in ("recent", "past"):
         console.print("[red]order has to be one of (recent | past)")
         sys.exit()
-    all_tasks = db.find(lambda x: True)
-    ordered_latest = sorted(all_tasks, key=lambda i: i["created_date"], reverse=True)
+
+    all_tasks = get_all_tasks_ordered()
     if order == "recent":
-        tasks = ordered_latest[:limit]
+        tasks = all_tasks[:limit]
     else:
-        tasks = ordered_latest[-limit:]
-    for task in tasks:
-        display_task(task)
+        tasks = all_tasks[-limit:]
+
+    if tasks:
+        for task in tasks:
+            display_task(task)
 
 
-@app.command()
+@app.command("")
 def lss(order: str = typer.Argument("recent"), limit: int = typer.Argument(5)):
     if not order in ("recent", "past"):
         console.print("[red]order has to be one of (recent | past)")
         sys.exit()
-    all_tasks = db.find(lambda x: True)
-    ordered_latest = sorted(all_tasks, key=lambda i: i["created_date"], reverse=True)
+    all_tasks = get_all_tasks_ordered()
     if order == "recent":
-        tasks = ordered_latest[:limit]
+        tasks = all_tasks[:limit]
     else:
-        tasks = ordered_latest[-limit:]
-    render_table(tasks)
+        tasks = all_tasks[-limit:]
+    if tasks:
+        render_table(tasks)
 
 
 @app.command()
 def find(searchstr: str):
-    pass
+    searchstr = searchstr.strip()
+    tasks = db.find(
+        lambda x: searchstr in x.get("task") or searchstr in x.get("description")
+    )
+    for task in tasks:
+        display_task(task)
 
 
 def init_db():
