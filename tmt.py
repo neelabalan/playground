@@ -22,8 +22,12 @@ from rich.table import Table
 
 app = typer.Typer()
 edit_app = typer.Typer()
+tag_app = typer.Typer()
+status_app = typer.Typer()
 
 app.add_typer(edit_app, name="edit")
+app.add_typer(tag_app, name="tag")
+app.add_typer(status_app, name="status")
 
 command = string.Template("$editor $filename")
 
@@ -121,14 +125,16 @@ def display_task(task):
 
 
 def render_table(tasks):
-    table = Table("id", "task", "status", "tags", "created_date", title="tasks", expand=True)
+    table = Table(
+        "id", "task", "status", "tags", "created_date", title="tasks", expand=True
+    )
     for task in tasks:
         status = task.get("status")
         table.add_row(
             str(task.get("_id")),
             task.get("task"),
             Text(status, style=color_map.get(status)),
-            ', '.join(task.get('tags')),
+            ", ".join(task.get("tags")),
             task.get("created_date"),
         )
     console.print(table)
@@ -198,15 +204,44 @@ def new():
             insert(tasks)
 
 
-@app.command()
-def tag(tagstr: str, status: str = typer.Argument('')):
+def filter_tasks_by_tags(tagstr: str, status: str = typer.Argument("")):
     tags = list(map(str.strip, tagstr.split(",")))
     if not status:
         tasks = db.find(lambda x: set(tags).issubset(set(x.get("tags"))))
     else:
         tasks = db.find(
-            lambda x: set(tags).issubset(set(x.get("tags"))) and x.get('status') == status
+            lambda x: set(tags).issubset(set(x.get("tags")))
+            and x.get("status") == status
         )
+    return tasks
+
+
+def fitler_tasks_by_status(status: str):
+    return db.find(lambda x: x.get("status") == status)
+
+
+@tag_app.command("brief")
+def tag_brief(tagstr: str, status: str = typer.Argument("")):
+    tasks = filter_tasks_by_tags(tagstr, status)
+    render_table(tasks)
+
+
+@tag_app.command("verbose")
+def tag_verbose(tagstr: str, status: str = typer.Argument("")):
+    tasks = filter_tasks_by_tags(tagstr, status)
+    for task in tasks:
+        display_task(task)
+
+
+@status_app.command("brief")
+def status_brief(status: str = typer.Argument(states.RUNNING)):
+    tasks = fitler_tasks_by_status(status)
+    render_table(tasks)
+
+
+@status_app.command("verbose")
+def status_brief(status: str = typer.Argument(states.RUNNING)):
+    tasks = fitler_tasks_by_status(status)
     for task in tasks:
         display_task(task)
 
