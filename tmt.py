@@ -11,6 +11,8 @@ from jsondb import jsondb
 
 import typer
 import toml
+from toml.encoder import _dump_str, TomlEncoder, unicode
+
 from rich.console import Console
 from rich.panel import Panel
 from rich.style import Style
@@ -18,6 +20,8 @@ from rich.text import Text
 from rich.markdown import Markdown
 
 app = typer.Typer()
+edit_app = typer.Typer()
+app.add_typer(edit_app, name='edit')
 
 command = string.Template("$editor $filename")
 
@@ -49,6 +53,21 @@ class states:
             states.RUNNING,
             states.SELECTED,
         )
+
+# https://github.com/sanskrit-coders/sanskrit_data/blob/67e0999be6f8bf7fff761f0484141e03b9e551f4/sanskrit_data/toml_helper.py
+
+def _dump_str_prefer_multiline(v):
+  multilines = v.split('\n')
+  if len(multilines) > 1:
+    return unicode('"""\n' + v.replace('"""', '\\"""').strip() + '\n"""')
+  else:
+    return _dump_str(v)
+
+
+class MultilinePreferringTomlEncoder(TomlEncoder):
+  def __init__(self, _dict=dict, preserve=False):
+    super(MultilinePreferringTomlEncoder, self).__init__(_dict=dict, preserve=preserve)
+    self.dump_funcs[str] = _dump_str_prefer_multiline
 
 
 def get_status_styled(status):
@@ -100,7 +119,7 @@ def open_temp_toml_file(template=template):
         editor = os.environ["EDITOR"]
         fd, filename = tempfile.mkstemp(suffix=".toml", text=True)
         with open(filename, "w") as file:
-            toml.dump(template, file)
+            toml.dump(template, file, encoder=MultilinePreferringTomlEncoder())
         write_status = subprocess.call(
             command.substitute(editor=editor, filename=filename), shell=True
         )
@@ -165,6 +184,57 @@ def tag(tagstr: str):
     tasks = db.find(lambda x: set(tags).issubset(set(x.get("tags"))))
     for task in tasks:
         display_task(task)
+
+
+@edit_app.command("id")
+def edit_id(_id: int):
+    def update(document):
+        if document:
+            filename, status = open_temp_toml_file(
+                {
+                    "task": document.get("task"),
+                    "status": document.get("status"),
+                    "tags": document.get("tags"),
+                    "description": document.get("description"),
+                }
+            )
+            if status == 0:
+                with open(filename, "r") as file:
+                    updated_task = toml.load(file)
+                    document.update(updated_task)
+                    return document
+    db.update(update, lambda x: x.get("_id") == _id)
+
+
+@edit_app.command("tag")
+def edit_tag(tag: str):
+    pass
+
+
+
+@app.command()
+def rm(id: str):
+    pass
+
+
+@app.command()
+def summary():
+    pass
+
+
+@app.command()
+def ls():
+    pass
+
+
+@app.command()
+def lss():
+    pass
+
+
+@app.command()
+def find(searchstr: str):
+    pass
 
 
 def init_db():
