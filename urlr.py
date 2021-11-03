@@ -108,6 +108,7 @@ def format_text(bookmark):
 def display_bookmark(bookmarks: List[Dict]):
     if bookmarks:
         for bookmark in bookmarks:
+            console.print("\n\n")
             console.print(format_text(bookmark))
 
 
