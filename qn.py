@@ -13,6 +13,7 @@ from rich.panel import Panel
 from rich.style import Style
 from rich.text import Text
 from rich.markdown import Markdown
+from rich.table import Table
 
 app = typer.Typer()
 
@@ -35,7 +36,7 @@ def environ_present(key="EDITOR"):
     return key in os.environ
 
 
-def diplay_note(front_matter, mdtext):
+def display_note(front_matter, mdtext):
     tags = Text()
     for tag in front_matter.get("tags"):
         tags.append("#{}".format(tag), style=tag_style)
@@ -43,7 +44,7 @@ def diplay_note(front_matter, mdtext):
 
     console.print(
         Panel(
-            Markdown(mdtext, code_theme='ansi_dark'),
+            Markdown(mdtext or ">", code_theme="ansi_dark"),
             title=front_matter.get("title"),
             title_align="center",
             subtitle=tags + Text(front_matter.get("created_date")),
@@ -91,7 +92,8 @@ def parse_front_matter(filepath):
         strlist = filestr.split("---")
         if strlist and strlist[1]:
             try:
-                return toml.loads(strlist[1])
+                fmdict = toml.loads(strlist[1])
+                return fmdict
             except toml.TomlDecodeError as err:
                 print(
                     "error encountered while decoding TOML string - {}".format(
@@ -123,7 +125,26 @@ def notes_meta_data():
     notesmeta = dict()
     for notepath in all_notes:
         notesmeta[str(notepath)] = parse_front_matter(notepath)
-    return notesmeta
+    return dict(
+        sorted(
+            notesmeta.items(),
+            key=lambda item: datetime.datetime.strptime(
+                item[1].get("created_date"), date_format
+            ),
+			reverse=True
+        )
+    )
+
+
+def render_table(metadata):
+    table = Table("title", "tags", "created_date", title="quick notes", expand=True)
+    for _, data in metadata:
+        table.add_row(
+            data.get("title"),
+            ", ".join(data.get("tags")) or "-",
+            data.get("created_date")
+        )
+    console.print(table)
 
 
 @app.command()
@@ -137,16 +158,41 @@ def tag(tagstr: str):
     metadata = notes_meta_data()
     for notepath, data in metadata.items():
         if set(tags).issubset(set(data.get("tags"))):
-            diplay_note(data, extract_md_text(notepath))
+            display_note(data, extract_md_text(notepath))
 
 
 @app.command()
-def ls():
-    pass
+def ls(order: str = typer.Argument("first"), val: int = typer.Argument(5)):
+    if order not in ["first", "last"]:
+        raise Exception('order has to be either "first" or "last"')
+    metadata = list(notes_meta_data().items())
+    if order == "first":
+        for notepath, data in metadata[:val]:
+            display_note(data, extract_md_text(notepath))
+    else:
+        for notepath, data in metadata[-val:]:
+            display_note(data, extract_md_text(notepath))
+
+
+@app.command()
+def lss(order: str = typer.Argument("first"), val: int = typer.Argument(5)):
+    if order not in ["first", "last"]:
+        raise Exception('order has to be either "first" or "last"')
+    metadata = list(notes_meta_data().items())
+    if order == "first":
+        render_table(metadata[:val])
+    else:
+        render_table(metadata[-val:])
+
 
 @app.command()
 def find(searchstr: str):
-    pass
+    searchstr = searchstr.strip()
+    metadata = notes_meta_data()
+    for notepath, data in metadata.items():
+        if searchstr in data.get("title"):
+            display_note(data, extract_md_text(notepath))
+
 
 if __name__ == "__main__":
     app()
