@@ -23,6 +23,7 @@ from rich.style import Style
 from rich.text import Text
 
 app = typer.Typer()
+date_format = "%a %d %b %Y %X"
 
 TOMLEXT = ".toml"
 command = string.Template("$editor $filename")
@@ -56,7 +57,7 @@ def format_date(dtms):
     seconds, micros = divmod(dtms, 1000000)
     days, seconds = divmod(seconds, 86400)
     bmdate = datetime.datetime(1601, 1, 1) + datetime.timedelta(days, seconds, micros)
-    return bmdate.strftime("%Y-%m-%d_%H:%M:%S")
+    return bmdate.strftime(date_format)
 
 
 def open_temp_toml_file(template=bookmark_template):
@@ -142,9 +143,8 @@ def insert(bookmarks):
                         or "---",
                         "description": bookmark.get("description"),
                         "tags": bookmark.get("tags"),
-                        "added_date": bookmark.get('added_date') or datetime.datetime.now().strftime(
-                            "%Y-%m-%d_%H:%M:%S"
-                        ),
+                        "added_date": bookmark.get("added_date")
+                        or datetime.datetime.now().strftime(date_format),
                     }
                 ]
             )
@@ -153,9 +153,21 @@ def insert(bookmarks):
             console.print("[red]Duplicate url found - {}".format(url))
     console.print(
         "[green bold]{}/{} {} added".format(
-            insert_count, total_bookmark, "bookmark" if total_bookmark == 1 else "bookmarks"
+            insert_count,
+            total_bookmark,
+            "bookmark" if total_bookmark == 1 else "bookmarks",
         )
     )
+
+
+def get_bookmarks_sorted():
+    all_bookmarks = db.find(lambda x: True)
+    ordered_latest = sorted(
+        all_bookmarks,
+        key=lambda i: datetime.datetime.strptime(i["added_date"], date_format),
+        reverse=True,
+    )
+    return ordered_latest
 
 
 @app.command()
@@ -188,12 +200,12 @@ def find(searchstr: str):
 def ls(order: str = typer.Argument("first"), val: int = typer.Argument(10)):
     if order not in ["first", "last"]:
         raise Exception('order has to be either "first" or "last"')
-    all_bookmarks = db.find(lambda x: True)
-    ordered_latest = sorted(all_bookmarks, key=lambda i: i["added_date"], reverse=True)
+
+    bookmarks = get_bookmarks_sorted()
     if order == "first":
-        display_bookmark(all_bookmarks[:val])
+        display_bookmark(bookmarks[:val])
     else:
-        display_bookmark(all_bookmarks[-val:])
+        display_bookmark(bookmarks[-val:])
 
 
 @app.command("edit")
@@ -226,7 +238,7 @@ def rm(id: int):
 
 @app.command("import")
 def import_viv():
-    ''' import from vivaldi bookmarks '''
+    """import from vivaldi bookmarks"""
     home = str(pathlib.Path.home())
     fullpath = home + "/.config/vivaldi/Default/Bookmarks"
     bookmarks = {"-": list()}
