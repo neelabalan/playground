@@ -33,7 +33,7 @@ headers = {
 
 console = Console()
 tag_style = Style(color="black", bgcolor="blue")
-title_style = Style(color="green", bold=True)
+title_style = Style(color="grey74")
 url_style = Style(color="blue", underline=True)
 description_style = Style(color="white")
 
@@ -91,17 +91,16 @@ def format_text(bookmark):
     bookmark_text.append(Text(bookmark.get("url"), style=url_style))
     bookmark_text.append_text(newline)
 
-    tags = Text(justify="center")
-    for tag in bookmark.get("tags"):
-        tags.append("#{}".format(tag), style=tag_style)
-        tags.append("  ")
-    bookmark_text.append_text(tags)
+    tags = bookmark.get('tags')
+    colored_tags = map(lambda x: '[black on blue]#'+x+'[/]', tags)
+    tags = " ── ".join(colored_tags)
     return Panel(
         bookmark_text,
         title=str(bookmark.get("_id")),
         title_align="left",
-        subtitle=bookmark.get("added_date"),
+        subtitle=tags + " ── " +bookmark.get("added_date"),
         subtitle_align="right",
+        padding=1
     )
 
 
@@ -198,12 +197,12 @@ def find(searchstr: str):
 
 
 @app.command()
-def ls(order: str = typer.Argument("first"), val: int = typer.Argument(10)):
-    if order not in ["first", "last"]:
-        raise Exception('order has to be either "first" or "last"')
+def ls(order: str = typer.Argument("recent"), val: int = typer.Argument(10)):
+    if order not in ["recent", "past"]:
+        raise Exception('order has to be either "recent" or "past"')
 
     bookmarks = get_bookmarks_sorted()
-    if order == "first":
+    if order == "recent":
         display_bookmark(bookmarks[:val])
     else:
         display_bookmark(bookmarks[-val:])
