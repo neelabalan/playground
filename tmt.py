@@ -7,6 +7,7 @@ import string
 import json
 import tempfile
 from typing import Optional
+from collections import Counter
 
 from jsondb import jsondb
 
@@ -34,7 +35,7 @@ command = string.Template("$editor $filename")
 
 console = Console()
 
-task_root = pathlib.Path.home() / "qn"
+task_root = pathlib.Path.home() / ".local/tmt/"
 current_bucket_path = pathlib.Path.home() / ".local/tmt/current_bucket"
 task_root.mkdir(parents=True, exist_ok=True)
 
@@ -214,15 +215,19 @@ def filter_tasks_by_tags(tagstr: str, status: str = ""):
     return tasks
 
 
-def fitler_tasks_by_status(status: str):
+def fitler_tasks_by_status(db, status):
     return db.find(lambda x: x.get("status") == status)
 
 
-def number_of_task_based_on_status():
+def number_of_task_based_on_status(db):
     return {
-        status: str(len(fitler_tasks_by_status(status)))
+        status: len(fitler_tasks_by_status(db, status))
         for status in states.possible_states()
     }
+
+
+def get_total_number_of_tasks(db):
+    return len(db.find(lambda x: True))
 
 
 def get_all_tasks_ordered():
@@ -240,6 +245,55 @@ def get_distinct_tags():
     for task in all_tasks:
         tags.update(task.get("tags"))
     return tags
+
+
+def display_initial_summary(total_task, tasknumber_by_status):
+    console.print(
+        "\n\n[bold green] total number of tasks {}[/]\n\n".format(total_task),
+        justify="center",
+    )
+    table = Table(
+        Column(states.BACKLOG, style=color_map.get(states.BACKLOG)),
+        Column(states.SELECTED, style=color_map.get(states.SELECTED)),
+        Column(states.RUNNING, style=color_map.get(states.RUNNING)),
+        Column(states.DONE, style=color_map.get(states.DONE)),
+        Column(states.REVISIT, style=color_map.get(states.REVISIT)),
+        title="status summary",
+        expand=True,
+    )
+    table.add_row(
+        str(tasknumber_by_status.get(states.BACKLOG)),
+        str(tasknumber_by_status.get(states.SELECTED)),
+        str(tasknumber_by_status.get(states.RUNNING)),
+        str(tasknumber_by_status.get(states.DONE)),
+        str(tasknumber_by_status.get(states.REVISIT)),
+    )
+    console.print(table)
+    console.print("\n\n")
+
+
+def find_buckets():
+    return filter(lambda x: x.suffix == ".json", task_root.iterdir())
+
+
+def get_bucket_names():
+    return map(lambda x: x.stem, find_buckets())
+
+
+def display_buckets():
+    buckets = list(get_bucket_names())
+    current_bucket = ""
+    with open(current_bucket_path, "r") as current:
+        current_bucket = current.read().strip() or "dump"
+    try:
+        current_bucket_index = buckets.index(current_bucket)
+        buckets[current_bucket_index] = (
+            "* [green]" + buckets[current_bucket_index] + "[/]"
+        )
+        console.print("\n")
+        console.print("\n".join(buckets))
+    except ValueError as ex:
+        console.print("[red]{}".format(ex))
 
 
 @app.command()
@@ -340,47 +394,41 @@ def show(_id: int):
 
 
 @app.command()
-def summary():
-    task_len = number_of_task_based_on_status()
-    console.print(
-        "\n\n[bold green] total number of tasks {}[/]\n\n".format(
-            sum(map(int, task_len.values())),
-        ),
-        justify="center",
-    )
-    table = Table(
-        Column(states.BACKLOG, style=color_map.get(states.BACKLOG)),
-        Column(states.SELECTED, style=color_map.get(states.SELECTED)),
-        Column(states.RUNNING, style=color_map.get(states.RUNNING)),
-        Column(states.DONE, style=color_map.get(states.DONE)),
-        Column(states.REVISIT, style=color_map.get(states.REVISIT)),
-        title="status summary",
-        expand=True,
-    )
-    table.add_row(
-        task_len.get(states.BACKLOG),
-        task_len.get(states.SELECTED),
-        task_len.get(states.RUNNING),
-        task_len.get(states.DONE),
-        task_len.get(states.REVISIT),
-    )
-    console.print(table)
-    console.print("\n\n")
-
-    distinct_tags = get_distinct_tags()
-    renderables = list()
-    for tag in distinct_tags:
-        tag_map = dict()
-        content = ""
-        for state in states.possible_states():
-            total = len(filter_tasks_by_tags(tag, state))
-            if total:
-                content += "[{}] {} [/][black on grey93] {} [/]\n\n".format(
-                    color_map.get(state), state, total
-                )
-        renderables.append(Panel(content, title=tag, expand=True, padding=1))
-    console.print(Columns(renderables, expand=True))
-    console.print("\n\n")
+def summary(bucket: Optional[str] = typer.Argument(None)):
+    if bucket and bucket not in list(get_bucket_names()) + ["all"]:
+        console.print("[red]wrong bucket name passed")
+    if bucket == "all":
+        total_tasks = 0
+        tasknumber_by_status = Counter({})
+        for bucket in get_bucket_names():
+            db = get_db(bucket)
+            total_tasks += get_total_number_of_tasks(db)
+            tasknumber_by_status += Counter(number_of_task_based_on_status(db))
+        display_initial_summary(total_tasks, tasknumber_by_status)
+    elif bucket in get_bucket_names():
+        pass
+    else:
+        current_bucket = ""
+        with open(current_bucket_path, "r") as current:
+            current_bucket = current.read().strip()
+        db = get_db(current_bucket)
+        display_initial_summary(
+            get_total_number_of_tasks(db), number_of_task_based_on_status(db)
+        )
+        distinct_tags = get_distinct_tags()
+        renderables = list()
+        for tag in distinct_tags:
+            tag_map = dict()
+            content = ""
+            for state in states.possible_states():
+                total = len(filter_tasks_by_tags(tag, state))
+                if total:
+                    content += "[{}] {} [/][black on grey93] {} [/]\n\n".format(
+                        color_map.get(state), state, total
+                    )
+            renderables.append(Panel(content, title=tag, expand=True, padding=1))
+        console.print(Columns(renderables, expand=True))
+        console.print("\n\n")
 
 
 @app.command("")
@@ -425,20 +473,25 @@ def find(searchstr: str):
 
 
 @app.command()
-def check(bucket: str):
-    bucket = bucket.strip()
-    with open(current_bucket_path, "w") as current:
-        current.write(bucket)
+def check(bucket: Optional[str] = typer.Argument(None)):
+    if not bucket:
+        display_buckets()
+    else:
+        bucket = bucket.strip()
+        with open(current_bucket_path, "w") as current:
+            current.write(bucket)
+
+
+def get_db(db_name):
+    return jsondb(str(pathlib.Path(task_root / "{}.json".format(db_name))))
 
 
 def init_db():
-    dbroot = pathlib.Path.home() / ".local/tmt"
-    dbroot.mkdir(parents=True, exist_ok=True)
     if not current_bucket_path.exists():
         current_bucket_path.touch()
     with open(current_bucket_path, "r") as current:
         current_bucket = current.read().strip() or "dump"
-        db = jsondb(str(pathlib.Path(dbroot / "{}.json".format(current_bucket))))
+        db = jsondb(str(pathlib.Path(task_root / "{}.json".format(current_bucket))))
         db.set_index("task")
         db.set_index("_id")
         return db
