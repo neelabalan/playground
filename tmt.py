@@ -6,6 +6,7 @@ import subprocess
 import string
 import json
 import tempfile
+from typing import Optional
 
 from jsondb import jsondb
 
@@ -98,9 +99,9 @@ def environ_present(key="EDITOR"):
 
 def construct_title(_id, task, status):
     return (
-        "[black on grey93] {} [/] ────".format(_id)
+        "[black on grey93] {} [/] ──── ".format(_id)
         + task
-        + "──── "
+        + " ──── "
         + get_status_styled(status)
     )
 
@@ -109,7 +110,7 @@ def display_task(task):
     tags = Text()
     for tag in task.get("tags"):
         tags.append("#{}".format(tag), style=tag_style)
-        tags.append("  ")
+        tags.append(" ── ")
 
     console.print(
         Panel(
@@ -128,7 +129,14 @@ def display_task(task):
 
 def render_table(tasks):
     table = Table(
-        "id", "task", "status", "tags", "created_date", title="tasks", expand=True
+        "id",
+        "task",
+        "status",
+        "tags",
+        "created_date",
+        title="tasks",
+        expand=True,
+        leading=1,
     )
     for task in tasks:
         status = task.get("status")
@@ -166,7 +174,7 @@ def insert(tasks):
         if not task:
             console.print("[red bold]task not added")
             sys.exit()
-        if not task.get("status") in states.possible_states():
+        if task.get("status") and task.get("status") not in states.possible_states():
             console.print(
                 "[red bold]state has be any one of {}".format(states.possible_states())
             )
@@ -179,8 +187,7 @@ def insert(tasks):
                         "status": task.get("status") or states.BACKLOG,
                         "description": task.get("description"),
                         "tags": task.get("tags"),
-                        "created_date": task.get("added_date")
-                        or datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S"),
+                        "created_date": datetime.datetime.now().strftime(date_format),
                     }
                 ]
             )
@@ -196,7 +203,7 @@ def insert(tasks):
     )
 
 
-def filter_tasks_by_tags(tagstr: str, status: str = typer.Argument("")):
+def filter_tasks_by_tags(tagstr: str, status: str = ""):
     tags = list(map(str.strip, tagstr.split(",")))
     if not status:
         tasks = db.find(lambda x: set(tags).issubset(set(x.get("tags"))))
@@ -221,7 +228,11 @@ def number_of_task_based_on_status():
 
 def get_all_tasks_ordered():
     all_tasks = db.find(lambda x: True)
-    return sorted(all_tasks, key=lambda i: i["created_date"], reverse=True)
+    return sorted(
+        all_tasks,
+        key=lambda i: datetime.datetime.strptime(i["created_date"], date_format),
+        reverse=True,
+    )
 
 
 def get_distinct_tags():
@@ -291,7 +302,29 @@ def edit_id(_id: int):
 
 @edit_app.command("tag")
 def edit_tag(tag: str):
-    pass
+    tag = tag.strip()
+    tasks = filter_tasks_by_tags(tag)
+    filename, _ = open_temp_toml_file(
+        {
+            str(task.get("_id")): {
+                "task": task.get("task"),
+                "status": task.get("status"),
+                "tags": task.get("tags"),
+                "description": task.get("description"),
+            }
+            for task in tasks
+        }
+    )
+    new_task_details = dict()
+    with open(filename, "r") as file:
+        new_task_details = toml.load(file)
+    for _id, edited_task in new_task_details.items():
+
+        def update(document):
+            document.update(edited_task)
+            return document
+
+        db.update(update, lambda y: y.get("_id") == int(_id))
 
 
 @app.command()
@@ -331,11 +364,13 @@ def summary():
     renderables = list()
     for tag in distinct_tags:
         tag_map = dict()
-        content = ''
+        content = ""
         for state in states.possible_states():
             total = len(filter_tasks_by_tags(tag, state))
             if total:
-                content += "[{}] {} [/][black on grey93] {} [/]\n\n".format(color_map.get(state), state, total)
+                content += "[{}] {} [/][black on grey93] {} [/]\n\n".format(
+                    color_map.get(state), state, total
+                )
         renderables.append(Panel(content, title=tag, expand=True, padding=1))
     console.print(Columns(renderables, expand=True))
     console.print("\n\n")
