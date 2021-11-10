@@ -26,17 +26,16 @@ from rich.columns import Columns
 app = typer.Typer()
 edit_app = typer.Typer()
 tag_app = typer.Typer()
-status_app = typer.Typer()
 
 app.add_typer(edit_app, name="edit")
 app.add_typer(tag_app, name="tag")
-app.add_typer(status_app, name="status")
 
 command = string.Template("$editor $filename")
 
 console = Console()
 
 task_root = pathlib.Path.home() / "qn"
+current_bucket_path = pathlib.Path.home() / ".local/tmt/current_bucket"
 task_root.mkdir(parents=True, exist_ok=True)
 
 date_format = "%a %d %b %Y %X"
@@ -266,17 +265,18 @@ def tag_verbose(tagstr: str, status: str = typer.Argument("")):
         display_task(task)
 
 
-@status_app.command("brief")
-def status_brief(status: str = typer.Argument(states.RUNNING)):
+@app.command()
+def status(
+    status: str = typer.Argument(states.RUNNING), display: str = typer.Argument("brief")
+):
     tasks = fitler_tasks_by_status(status)
-    render_table(tasks)
-
-
-@status_app.command("verbose")
-def status_brief(status: str = typer.Argument(states.RUNNING)):
-    tasks = fitler_tasks_by_status(status)
-    for task in tasks:
-        display_task(task)
+    if display == "brief":
+        render_table(tasks)
+    elif display == "verbose":
+        for task in tasks:
+            display_task(task)
+    else:
+        console.print("[red]display format has to be one of (brief | verbose)")
 
 
 @edit_app.command("id")
@@ -417,13 +417,24 @@ def find(searchstr: str):
         display_task(task)
 
 
+@app.command()
+def check(bucket: str):
+    bucket = bucket.strip()
+    with open(current_bucket_path, "w") as current:
+        current.write(bucket)
+
+
 def init_db():
     dbroot = pathlib.Path.home() / ".local/tmt"
     dbroot.mkdir(parents=True, exist_ok=True)
-    db = jsondb(str(pathlib.Path(dbroot / "tmt.json")))
-    db.set_index("task")
-    db.set_index("_id")
-    return db
+    if not current_bucket_path.exists():
+        current_bucket_path.touch()
+    with open(current_bucket_path, "r") as current:
+        current_bucket = current.read().strip() or "dump"
+        db = jsondb(str(pathlib.Path(dbroot / "{}.json".format(current_bucket))))
+        db.set_index("task")
+        db.set_index("_id")
+        return db
 
 
 db = init_db()
