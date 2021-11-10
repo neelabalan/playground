@@ -333,6 +333,13 @@ def rm(id: str):
 
 
 @app.command()
+def show(_id: int):
+    tasks = db.find(lambda x: x.get("_id") == _id)
+    for task in tasks:
+        display_task(task)
+
+
+@app.command()
 def summary():
     task_len = number_of_task_based_on_status()
     console.print(
