@@ -5,6 +5,7 @@ import os
 import subprocess
 import string
 import json
+from typing import Optional
 
 import typer
 import toml
@@ -28,29 +29,11 @@ date_format = "%a %d %b %Y %X"
 
 template = "---\n{}---"
 
-tag_style = Style(color="black", bgcolor="blue")
 title_style = Style(color="green", bold=True)
 
 
 def environ_present(key="EDITOR"):
     return key in os.environ
-
-
-def display_note(front_matter, mdtext):
-    tags = Text()
-    for tag in front_matter.get("tags"):
-        tags.append("#{}".format(tag), style=tag_style)
-        tags.append("  ")
-
-    console.print(
-        Panel(
-            Markdown(mdtext or ">", code_theme="ansi_dark"),
-            title=front_matter.get("title"),
-            title_align="center",
-            subtitle=tags + Text(front_matter.get("created_date")),
-            subtitle_align="right",
-        )
-    )
 
 
 def open_temp_md_file(title):
@@ -131,20 +114,30 @@ def notes_meta_data():
             key=lambda item: datetime.datetime.strptime(
                 item[1].get("created_date"), date_format
             ),
-			reverse=True
+            reverse=True,
         )
     )
 
 
 def render_table(metadata):
     table = Table("title", "tags", "created_date", title="quick notes", expand=True)
-    for _, data in metadata:
+    for data in metadata.values():
+        tags = data.get("tags")
+        colored_tags = ", ".join(map(lambda x: "[black on blue]#" + x + "[/]", tags))
         table.add_row(
             data.get("title"),
-            ", ".join(data.get("tags")) or "-",
-            data.get("created_date")
+            colored_tags or "-",
+            data.get("created_date"),
         )
     console.print(table)
+
+
+def get_distinct_tags():
+    tags = set()
+    metadata = notes_meta_data()
+    for data in metadata.values():
+        tags.update(data.get("tags"))
+    return sorted(tags)
 
 
 @app.command()
@@ -153,25 +146,18 @@ def new(title: str = typer.Argument(datetime.datetime.now().strftime("%Y-%m-%d")
 
 
 @app.command()
-def tag(tagstr: str):
-    tags = list(map(str.strip, tagstr.split(",")))
-    metadata = notes_meta_data()
-    for notepath, data in metadata.items():
-        if set(tags).issubset(set(data.get("tags"))):
-            display_note(data, extract_md_text(notepath))
-
-
-@app.command()
-def ls(order: str = typer.Argument("first"), val: int = typer.Argument(5)):
-    if order not in ["first", "last"]:
-        raise Exception('order has to be either "first" or "last"')
-    metadata = list(notes_meta_data().items())
-    if order == "first":
-        for notepath, data in metadata[:val]:
-            display_note(data, extract_md_text(notepath))
+def tag(tagstr: Optional[str] = typer.Argument(None)):
+    if not tagstr:
+        console.print("\n")
+        console.print("\n".join(get_distinct_tags()))
     else:
-        for notepath, data in metadata[-val:]:
-            display_note(data, extract_md_text(notepath))
+        tags = list(map(str.strip, tagstr.split(",")))
+        metadata = notes_meta_data()
+        data_with_tags = dict()
+        for notepath, data in metadata.items():
+            if set(tags).issubset(set(data.get("tags"))):
+                data_with_tags[notepath] = data
+        render_table(data_with_tags)
 
 
 @app.command()
@@ -189,9 +175,26 @@ def lss(order: str = typer.Argument("first"), val: int = typer.Argument(5)):
 def find(searchstr: str):
     searchstr = searchstr.strip()
     metadata = notes_meta_data()
+    found_data = dict()
     for notepath, data in metadata.items():
         if searchstr in data.get("title"):
-            display_note(data, extract_md_text(notepath))
+            found_data[notepath] = data
+    render_table(found_data)
+
+
+@app.command()
+def edit():
+    fuzzy_command = string.Template(
+        "find $filepath -maxdepth 1 -type f -name *.md | fzf --preview-window=up:60% --preview='cat {}'"
+    )
+    response = subprocess.Popen(
+        fuzzy_command.substitute(filepath=str(note_root)),
+        shell=True,
+        stdout=subprocess.PIPE,
+    ).communicate()
+    if response[0]:
+        file = response[0].decode("utf-8").strip()
+        subprocess.call("vim {}".format(file), shell=True)
 
 
 if __name__ == "__main__":
