@@ -32,7 +32,6 @@ headers = {
 }
 
 console = Console()
-tag_style = Style(color="black", bgcolor="blue")
 title_style = Style(color="grey74")
 url_style = Style(color="blue", underline=True)
 description_style = Style(color="white")
@@ -232,7 +231,6 @@ def edit(id: int):
 @app.command()
 def rm(id: int):
     doc = db.delete(lambda x: x.get("_id") == id)
-    db.dump()
     return doc
 
 
