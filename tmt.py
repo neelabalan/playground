@@ -22,14 +22,15 @@ from rich.text import Text
 from rich.markdown import Markdown
 from rich.table import Table
 from rich.table import Column
-from rich.columns import Columns
 
 app = typer.Typer()
 edit_app = typer.Typer()
 tag_app = typer.Typer()
+inall_app = typer.Typer()
 
 app.add_typer(edit_app, name="edit")
 app.add_typer(tag_app, name="tag")
+app.add_typer(inall_app, name="inall")
 
 command = string.Template("$editor $filename")
 
@@ -56,11 +57,11 @@ class states:
 
     def possible_states():
         return (
+            states.RUNNING,
+            states.SELECTED,
             states.BACKLOG,
             states.DONE,
             states.REVISIT,
-            states.RUNNING,
-            states.SELECTED,
         )
 
 
@@ -68,7 +69,7 @@ color_map = {
     states.BACKLOG: "black on dark_orange3",
     states.SELECTED: "black on blue",
     states.RUNNING: "black on green",
-    states.DONE: "black on grey58",
+    states.DONE: "black on grey30",
     states.REVISIT: "black on light_goldenrod1",
 }
 
@@ -127,14 +128,14 @@ def display_task(task):
     console.print("\n\n")
 
 
-def render_table(tasks):
+def render_table(tasks, bucket_name=""):
     table = Table(
         "id",
         "task",
         "status",
         "tags",
         "created_date",
-        title="tasks",
+        title="{} tasks".format(bucket_name or str(db)),
         expand=True,
         leading=1,
     )
@@ -148,6 +149,34 @@ def render_table(tasks):
             task.get("created_date"),
         )
     console.print(table)
+    console.print("\n")
+
+
+def render_in_all_table(alltasks):
+    table = Table(
+        "id",
+        "task",
+        "status",
+        "project",
+        "tags",
+        "created_date",
+        title="tasks",
+        expand=True,
+        leading=1,
+    )
+    for bucket, tasks in alltasks.items():
+        for task in tasks:
+            status = task.get("status")
+            table.add_row(
+                str(task.get("_id")),
+                task.get("task"),
+                Text(status, style=color_map.get(status)),
+                bucket,
+                ", ".join(task.get("tags")),
+                task.get("created_date"),
+            )
+    console.print(table)
+    console.print("\n")
 
 
 def open_temp_toml_file(template=template):
@@ -215,13 +244,13 @@ def filter_tasks_by_tags(tagstr: str, status: str = ""):
     return tasks
 
 
-def fitler_tasks_by_status(db, status):
+def filter_tasks_by_status(db, status):
     return db.find(lambda x: x.get("status") == status)
 
 
 def number_of_task_based_on_status(db):
     return {
-        status: len(fitler_tasks_by_status(db, status))
+        status: len(filter_tasks_by_status(db, status))
         for status in states.possible_states()
     }
 
@@ -230,12 +259,12 @@ def get_total_number_of_tasks(db):
     return len(db.find(lambda x: True))
 
 
-def get_all_tasks_ordered():
+def get_all_tasks_ordered(reverse=True):
     all_tasks = db.find(lambda x: True)
     return sorted(
         all_tasks,
         key=lambda i: datetime.datetime.strptime(i["created_date"], date_format),
-        reverse=True,
+        reverse=reverse,
     )
 
 
@@ -277,7 +306,7 @@ def find_buckets():
 
 
 def get_bucket_names():
-    return map(lambda x: x.stem, find_buckets())
+    return sorted(map(lambda x: x.stem, find_buckets()))
 
 
 def display_buckets():
@@ -296,6 +325,26 @@ def display_buckets():
         console.print("[red]{}".format(ex))
 
 
+def display_tag_based_summary(distinct_tags):
+    table = Table(
+        Column("tag"),
+        Column("status"),
+        title="tag summary",
+        expand=True,
+        show_lines=True,
+    )
+    for tag in distinct_tags:
+        content = ""
+        for state in states.possible_states():
+            total = len(filter_tasks_by_tags(tag, state))
+            if total:
+                content += "[{}] {} [/][black on grey93] {} [/] ".format(
+                    color_map.get(state), state, total
+                )
+        table.add_row(tag, content)
+    console.print(table, justify="center")
+
+
 @app.command()
 def new():
     filename, status = open_temp_toml_file()
@@ -304,6 +353,31 @@ def new():
         with open(filename, "r") as file:
             tasks = toml.load(file)
             insert(tasks)
+
+
+@inall_app.command("find")
+def inall_find(searchstr: str):
+    searchstr = searchstr.strip()
+    tasks = dict()
+    found_tasks = dict()
+    for bucket in get_bucket_names():
+        db = get_db(bucket)
+        tasks = db.find(lambda x: searchstr in x.get("task"))
+        if tasks:
+            found_tasks[bucket] = tasks
+    render_in_all_table(found_tasks)
+
+
+@inall_app.command("status")
+def inall_status(status: str):
+    status = status.strip()
+    found_tasks = dict()
+    for bucket in get_bucket_names():
+        db = get_db(bucket)
+        tasks = db.find(lambda x: x.get("status") == status)
+        if tasks:
+            found_tasks[bucket] = tasks
+    render_in_all_table(found_tasks)
 
 
 @tag_app.command("brief")
@@ -323,14 +397,15 @@ def tag_verbose(tagstr: str, status: str = typer.Argument("")):
 def status(
     status: str = typer.Argument(states.RUNNING), display: str = typer.Argument("brief")
 ):
-    tasks = fitler_tasks_by_status(status)
-    if display == "brief":
-        render_table(tasks)
-    elif display == "verbose":
-        for task in tasks:
-            display_task(task)
-    else:
-        console.print("[red]display format has to be one of (brief | verbose)")
+    tasks = filter_tasks_by_status(db, status)
+    if tasks:
+        if display == "brief":
+            render_table(tasks)
+        elif display == "verbose":
+            for task in tasks:
+                display_task(task)
+        else:
+            console.print("[red]display format has to be one of (brief | verbose)")
 
 
 @edit_app.command("id")
@@ -416,19 +491,7 @@ def summary(bucket: Optional[str] = typer.Argument(None)):
             get_total_number_of_tasks(db), number_of_task_based_on_status(db)
         )
         distinct_tags = get_distinct_tags()
-        renderables = list()
-        for tag in distinct_tags:
-            tag_map = dict()
-            content = ""
-            for state in states.possible_states():
-                total = len(filter_tasks_by_tags(tag, state))
-                if total:
-                    content += "[{}] {} [/][black on grey93] {} [/]\n\n".format(
-                        color_map.get(state), state, total
-                    )
-            renderables.append(Panel(content, title=tag, expand=True, padding=1))
-        console.print(Columns(renderables, expand=True))
-        console.print("\n\n")
+        display_tag_based_summary(distinct_tags)
 
 
 @app.command("")
@@ -480,6 +543,21 @@ def check(bucket: Optional[str] = typer.Argument(None)):
         bucket = bucket.strip()
         with open(current_bucket_path, "w") as current:
             current.write(bucket)
+
+
+@app.command()
+def reindex():
+    db.index._id = 0
+
+    def update(document):
+        document.update({"_id": db.index._id})
+        return document
+
+    tasks = get_all_tasks_ordered(reverse=False)
+    for task in tasks:
+        db.index.increment()
+        db.update(update, lambda x: x.get("_id") == task.get("_id"))
+    console.print("[green]re-indexing done for {} tasks!".format(len(tasks)))
 
 
 def get_db(db_name):
