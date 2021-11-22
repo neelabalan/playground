@@ -5,7 +5,11 @@ import os
 import subprocess
 import string
 import json
+import tempfile
+import shutil
 from typing import Optional
+
+from jsondb import jsondb
 
 import typer
 import toml
@@ -22,43 +26,46 @@ command = string.Template("$editor $filename")
 
 console = Console()
 
-note_root = pathlib.Path.home() / "qn"
+note_root = pathlib.Path.home() / ".local/qn/"
 note_root.mkdir(parents=True, exist_ok=True)
 
 date_format = "%a %d %b %Y %X"
-
-template = "---\n{}---"
+SEPERATOR = "+++"
+template = "+++\n{}+++{}"
 
 title_style = Style(color="green", bold=True)
+tag_style = Style(color="black", bgcolor="blue")
 
 
 def environ_present(key="EDITOR"):
     return key in os.environ
 
 
-def open_temp_md_file(title):
+def open_temp_md_file(
+    title="",
+    tags=[],
+    created_date=datetime.datetime.now().strftime(date_format),
+    mdtext="",
+):
     if environ_present("EDITOR"):
         editor = os.environ["EDITOR"]
-        title = title.replace(" ", "_")
-        filename = title + ".md"
-        filepath = note_root / filename
-        if not filepath.exists():
-            with open(filepath, "w") as file:
-                file.write(
-                    template.format(
-                        toml.dumps(
-                            {
-                                "title": title,
-                                "tags": [],
-                                "created_date": datetime.datetime.now().strftime(
-                                    date_format
-                                ),
-                            }
-                        )
-                    )
+        fd, filename = tempfile.mkstemp(suffix=".md", text=True)
+        with open(filename, "w") as file:
+
+            file.write(
+                template.format(
+                    toml.dumps(
+                        {
+                            "title": title,
+                            "tags": tags,
+                            "created_date": created_date,
+                        }
+                    ),
+                    mdtext,
                 )
+            )
         write_status = subprocess.call(
-            command.substitute(editor=editor, filename=str(filepath)), shell=True
+            command.substitute(editor=editor, filename=filename), shell=True
         )
         if write_status != 0:
             os.remove(filename)
@@ -72,7 +79,7 @@ def parse_front_matter(filepath):
     with open(filepath, "r") as file:
         filestr = file.read()
     if filestr:
-        strlist = filestr.split("---")
+        strlist = filestr.split(SEPERATOR)
         if strlist and strlist[1]:
             try:
                 fmdict = toml.loads(strlist[1])
@@ -85,117 +92,209 @@ def parse_front_matter(filepath):
                 )
 
 
+def distinct_tags():
+    tags = set()
+    notes = db.find(lambda x: True)
+    for note in notes:
+        tags.update(note.get("tags"))
+    return list(tags)
+
+
+def distinct_titles():
+    notes = db.find(lambda x: True)
+    return [note.get("title") for note in notes]
+
+
 def extract_md_text(filepath):
     filestr = ""
     with open(filepath, "r") as file:
         filestr = file.read()
     if filestr:
-        strlist = filestr.split("---")
+        strlist = filestr.split(SEPERATOR)
         if strlist and strlist[2]:
             return strlist[2]
 
 
-def list_all_notes():
-    notelist = []
-    for file in pathlib.Path(note_root).iterdir():
-        if file.is_file() and file.suffix == ".md":
-            notelist.append(file)
-    return notelist
-
-
-def notes_meta_data():
-    all_notes = list_all_notes()
-    notesmeta = dict()
-    for notepath in all_notes:
-        notesmeta[str(notepath)] = parse_front_matter(notepath)
-    return dict(
-        sorted(
-            notesmeta.items(),
-            key=lambda item: datetime.datetime.strptime(
-                item[1].get("created_date"), date_format
-            ),
-            reverse=True,
-        )
-    )
-
-
-def render_table(metadata):
+def render_table(notes):
     table = Table("title", "tags", "created_date", title="quick notes", expand=True)
-    for data in metadata.values():
-        tags = data.get("tags")
-        colored_tags = ", ".join(map(lambda x: "[black on blue]#" + x + "[/]", tags))
+    for note in notes:
+        # tags = note.get("tags")
+        # colored_tags = ", ".join(map(lambda x: "[black on blue]#" + x + "[/]", tags))
         table.add_row(
-            data.get("title"),
-            colored_tags or "-",
-            data.get("created_date"),
+            note.get("title"),
+            ", ".join(note.get("tags")) or "-",
+            note.get("created_date"),
         )
     console.print(table)
 
 
-def get_distinct_tags():
-    tags = set()
-    metadata = notes_meta_data()
-    for data in metadata.values():
-        tags.update(data.get("tags"))
-    return sorted(tags)
+def display_notes(notes):
+    for note in notes:
+        tags = Text()
+        for tag in note.get("tags"):
+            tags.append("#{}".format(tag), style=tag_style)
+            tags.append("  ")
 
-
-@app.command()
-def new(title: str = typer.Argument(datetime.datetime.now().strftime("%Y-%m-%d"))):
-    filename, status = open_temp_md_file(title)
-
-
-@app.command()
-def tag(tagstr: Optional[str] = typer.Argument(None)):
-    if not tagstr:
+        console.print(
+            Panel(
+                Markdown(note.get("note") or ">", code_theme="ansi_dark"),
+                title=note.get("title"),
+                title_align="center",
+                subtitle=tags + Text(note.get("created_date")),
+                subtitle_align="right",
+            )
+        )
         console.print("\n")
-        console.print("\n".join(get_distinct_tags()))
-    else:
-        tags = list(map(str.strip, tagstr.split(",")))
-        metadata = notes_meta_data()
-        data_with_tags = dict()
-        for notepath, data in metadata.items():
-            if set(tags).issubset(set(data.get("tags"))):
-                data_with_tags[notepath] = data
-        render_table(data_with_tags)
+
+
+def filter_notes_by_tags(tags):
+    return db.find(lambda x: set(tags).issubset(set(x.get("tags"))))
+
+
+def get_all_notes_ordered(reverse=True):
+    all_notes = db.find(lambda x: True)
+    return sorted(
+        all_notes,
+        key=lambda i: datetime.datetime.strptime(i["created_date"], date_format),
+        reverse=reverse,
+    )
+
+
+def fuzzy_search(options):
+    options = "\n".join(options)
+    command = 'echo -n "{}" | sk'.format(options)
+    selected = subprocess.Popen(
+        command, shell=True, stdout=subprocess.PIPE
+    ).communicate()[0]
+    return selected.decode("utf-8").replace("\n", "")
 
 
 @app.command()
-def lss(order: str = typer.Argument("first"), val: int = typer.Argument(5)):
-    if order not in ["first", "last"]:
-        raise Exception('order has to be either "first" or "last"')
-    metadata = list(notes_meta_data().items())
-    if order == "first":
-        render_table(metadata[:val])
+def today():
+    title = datetime.datetime.now().strftime("%d%b%Y")
+    note = db.find(lambda x: x.get("title") == title)
+    if note:
+        edit(title)
     else:
-        render_table(metadata[-val:])
+        filename, status = open_temp_md_file(title=title)
+        front_matter = parse_front_matter(filename)
+        db.insert(
+            [{**parse_front_matter(filename), **{"note": extract_md_text(filename)}}]
+        )
+        console.print("[green]new note added")
+
+
+@app.command()
+def new(title: str):
+    note = db.find(lambda x: x.get("title") == title)
+    if note:
+        edit(title)
+    else:
+        filename, status = open_temp_md_file(title=title)
+        front_matter = parse_front_matter(filename)
+        front_matter["title"] = front_matter["title"] or title
+        db.insert(
+            [{**parse_front_matter(filename), **{"note": extract_md_text(filename)}}]
+        )
+        console.print("[green]new note added")
+
+
+@app.command()
+def edit():
+    def update(document):
+        if document:
+            filename, status = open_temp_md_file(
+                note["title"], note["tags"], note["created_date"], mdtext=note["note"]
+            )
+            with open(filename, "r") as file:
+                updated_front_matter = parse_front_matter(filename)
+                updated_text = extract_md_text(filename)
+                document.update(**updated_front_matter, **{"note": updated_text})
+                return document
+
+    title = fuzzy_search(distinct_titles())
+    note = db.find(lambda x: x.get("title") == title)
+    if note:
+        note = note[0]
+        db.update(update, lambda x: x.get("title") == title)
+    else:
+        console.print("[red]no note found with this title")
+
+
+@app.command()
+def tag(tagstr: str):
+    if tagstr:
+        tags = list(map(str.strip, tagstr.split(",")))
+        notes = filter_notes_by_tags(tags)
+        render_table(notes)
+    else:
+        tag = fuzzy_search(distinct_tags())
+        notes = filter_notes_by_tags([tag])
+        display_notes(notes)
+
+
+@app.command()
+def lss(order: str = typer.Argument("recent"), val: int = typer.Argument(5)):
+    if order not in ["recent", "last"]:
+        raise Exception('order has to be either "first" or "last"')
+    all_notes = get_all_notes_ordered()
+    if order == "first":
+        render_table(all_notes[:val])
+    else:
+        render_table(all_notes[-val:])
+
+
+@app.command()
+def ls(order: str = typer.Argument("recent"), val: int = typer.Argument(5)):
+    if order not in ["recent", "last"]:
+        raise Exception('order has to be either "first" or "last"')
+    all_notes = get_all_notes_ordered()
+    notes = []
+    if order == "first":
+        display_notes(all_notes[:val])
+    else:
+        display_notes(all_notes[-val:])
+
+
+@app.command()
+def show():
+    title = fuzzy_search(distinct_titles())
+    note = db.find(lambda x: x.get("title") == title)
+    if note:
+        display_notes(note)
 
 
 @app.command()
 def find(searchstr: str):
     searchstr = searchstr.strip()
-    metadata = notes_meta_data()
-    found_data = dict()
-    for notepath, data in metadata.items():
-        if searchstr in data.get("title"):
-            found_data[notepath] = data
-    render_table(found_data)
+    notes = db.find(lambda x: searchstr in x.get("title") or searchstr in x.get("note"))
+    display_notes(notes)
 
 
 @app.command()
-def edit():
-    fuzzy_command = string.Template(
-        "find $filepath -maxdepth 1 -type f -name *.md | fzf --preview-window=up:60% --preview='cat {}'"
-    )
-    response = subprocess.Popen(
-        fuzzy_command.substitute(filepath=str(note_root)),
-        shell=True,
-        stdout=subprocess.PIPE,
-    ).communicate()
-    if response[0]:
-        file = response[0].decode("utf-8").strip()
-        subprocess.call("vim {}".format(file), shell=True)
+def rm():
+    title = fuzzy_search(distinct_titles())
+    deleted_doc = db.delete(lambda x: x.get("title") == title)
+    if deleted_doc:
+        console.print('[red]note "{}" deleted'.format(title))
 
 
+@app.command()
+def export(path: str):
+    """export to md"""
+    pass
+
+
+def init_db():
+    db = jsondb(str(pathlib.Path(note_root / "qn.json")))
+    db.set_index("title")
+    return db
+
+
+db = init_db()
 if __name__ == "__main__":
-    app()
+    if not shutil.which("sk"):
+        console.print("[bold red]could not find sk in path")
+        console.print("install from https://github.com/lotabout/skim")
+    else:
+        app()
