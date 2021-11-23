@@ -1,22 +1,21 @@
-import pathlib
 import datetime
-import sys
-import os
-import subprocess
-import tempfile
-import string
 import json
-import urllib.request
+import os
+import pathlib
+import shutil
+import string
+import subprocess
+import sys
+import tempfile
 import urllib.parse
-from typing import Optional
-from typing import List, Dict
-
-from jsondb import jsondb
-from jsondb import DuplicateEntryError
+import urllib.request
+from typing import Dict, List, Optional
 
 import toml
 import typer
 from bs4 import BeautifulSoup
+from jsondb import DuplicateEntryError, jsondb
+from rich.columns import Columns
 from rich.console import Console
 from rich.panel import Panel
 from rich.style import Style
@@ -27,6 +26,10 @@ date_format = "%a %d %b %Y %X"
 
 TOMLEXT = ".toml"
 command = string.Template("$editor $filename")
+fuzzy_search_command = string.Template(
+    'echo -n "$options" | sk -m --color="prompt:27,pointer:27" --preview="python -m urlr preview {}" --preview-window=up:50%'
+)
+
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7"
 }
@@ -90,16 +93,16 @@ def format_text(bookmark):
     bookmark_text.append(Text(bookmark.get("url"), style=url_style))
     bookmark_text.append_text(newline)
 
-    tags = bookmark.get('tags')
-    colored_tags = map(lambda x: '[black on blue]#'+x+'[/]', tags)
+    tags = bookmark.get("tags")
+    colored_tags = map(lambda x: "[black on blue]#" + x + "[/]", tags)
     tags = " ── ".join(colored_tags)
     return Panel(
         bookmark_text,
         title=str(bookmark.get("_id")),
         title_align="left",
-        subtitle=tags + " ── " +bookmark.get("added_date"),
+        subtitle=tags + " ── " + bookmark.get("added_date"),
         subtitle_align="right",
-        padding=1
+        padding=1,
     )
 
 
@@ -169,6 +172,30 @@ def get_bookmarks_sorted():
     return ordered_latest
 
 
+def fuzzy_search(options):
+    options = "\n".join(options)
+    selected = subprocess.Popen(
+        fuzzy_search_command.substitute(options=options),
+        shell=True,
+        stdout=subprocess.PIPE,
+    ).communicate()[0]
+    selected = selected.decode("utf-8")
+    return list(filter(None, selected.split("\n")))
+
+
+def distinct_tags():
+    tags = set()
+    notes = db.find(lambda x: True)
+    for note in notes:
+        tags.update(note.get("tags"))
+    return list(tags)
+
+
+def distinct_titles():
+    notes = db.find(lambda x: True)
+    return [note.get("title") for note in notes]
+
+
 @app.command()
 def new():
     filename, status = open_temp_toml_file()
@@ -180,10 +207,28 @@ def new():
 
 
 @app.command()
-def tag(tagstr: str):
-    tags = list(map(str.strip, tagstr.split(",")))
+def preview(title: str):
+    bookmark = db.find(lambda x: x.get("title") == title)
+    if bookmark:
+        console.print(format_text(bookmark[0]))
+
+
+@app.command()
+def tag():
+    tags = fuzzy_search(distinct_tags())
     bookmarks = db.find(lambda x: set(tags).issubset(set(x.get("tags"))))
     display_bookmark(bookmarks)
+
+
+@app.command()
+def tags():
+    content = []
+    for tag in distinct_tags():
+        total = len(db.find(lambda x: tag in x.get("tags")))
+        content.append(
+            "[black on blue] {} [/][black on grey93] {} [/]\t".format(tag, total)
+        )
+    console.print(Columns(content, expand=True, equal=True))
 
 
 @app.command()
@@ -207,8 +252,10 @@ def ls(order: str = typer.Argument("recent"), val: int = typer.Argument(10)):
         display_bookmark(bookmarks[-val:])
 
 
-@app.command("edit")
-def edit(id: int):
+@app.command()
+def edit():
+    title = fuzzy_search(distinct_titles())
+
     def update(document):
         if document:
             filename, status = open_temp_toml_file(
@@ -225,12 +272,13 @@ def edit(id: int):
                     document.update(updated_bookmark)
                     return document
 
-    db.update(update, lambda x: x.get("_id") == id)
+    db.update(update, lambda x: x.get("title") == title)
 
 
 @app.command()
-def rm(id: int):
-    doc = db.delete(lambda x: x.get("_id") == id)
+def rm():
+    title = fuzzy_search(distinct_titles())
+    doc = db.delete(lambda x: x.get("title") == title)
     return doc
 
 
@@ -263,7 +311,7 @@ def init_db():
     collection_name = "urlr"
     db = jsondb(str(pathlib.Path(dbroot / "urlr.json")))
     db.set_index("url")
-    db.set_index("_id")
+    db.set_index("title")
     return db
 
 

@@ -1,4 +1,0 @@
-toml
-typer
-bs4
-rich
