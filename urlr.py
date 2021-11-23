@@ -27,7 +27,7 @@ date_format = "%a %d %b %Y %X"
 TOMLEXT = ".toml"
 command = string.Template("$editor $filename")
 fuzzy_search_command = string.Template(
-    'echo -n "$options" | sk -m --color="prompt:27,pointer:27" --preview="python -m urlr preview {}" --preview-window=up:50%'
+    'echo -n "$options" | sk -m --color="prompt:27,pointer:27" --preview="urlr preview {}" --preview-window=up:50%'
 )
 
 headers = {
