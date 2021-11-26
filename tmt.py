@@ -381,8 +381,9 @@ def fuzzy_search(options):
 
 
 @app.command()
-def preview():
-    pass
+def preview(task_name: str):
+    task = bucket.find(lambda x: x.get("task") == task_name)
+    display_task(task[0])
 
 
 @app.command()
