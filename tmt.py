@@ -1,27 +1,25 @@
-import pathlib
 import datetime
-import sys
-import os
-import subprocess
-import string
 import json
+import os
+import pathlib
+import shutil
+import string
+import subprocess
+import sys
 import tempfile
-from typing import Optional
 from collections import Counter
+from typing import Optional
 
-from jsondb import jsondb
-
-import typer
 import toml
-from toml.encoder import _dump_str, TomlEncoder, unicode
-
+import typer
+from jsondb import DuplicateEntryError, jsondb
 from rich.console import Console
+from rich.markdown import Markdown
 from rich.panel import Panel
 from rich.style import Style
+from rich.table import Column, Table
 from rich.text import Text
-from rich.markdown import Markdown
-from rich.table import Table
-from rich.table import Column
+from toml.encoder import TomlEncoder, _dump_str, unicode
 
 app = typer.Typer()
 edit_app = typer.Typer()
@@ -135,7 +133,7 @@ def render_table(tasks, bucket_name=""):
         "status",
         "tags",
         "created_date",
-        title="{} tasks".format(bucket_name or str(db)),
+        title="{} tasks".format(bucket_name or str(bucket)),
         expand=True,
         leading=1,
     )
@@ -200,6 +198,9 @@ def insert(tasks):
     insert_count = 0
     for task in tasks.get("-"):
         task_name = task.get("task")
+        if not task_name:
+            console.print("[red bold]task has no name")
+            sys.exit()
         if not task:
             console.print("[red bold]task not added")
             sys.exit()
@@ -209,7 +210,7 @@ def insert(tasks):
             )
             sys.exit()
         try:
-            db.insert(
+            bucket.insert(
                 [
                     {
                         "task": task_name,
@@ -235,32 +236,32 @@ def insert(tasks):
 def filter_tasks_by_tags(tagstr: str, status: str = ""):
     tags = list(map(str.strip, tagstr.split(",")))
     if not status:
-        tasks = db.find(lambda x: set(tags).issubset(set(x.get("tags"))))
+        tasks = bucket.find(lambda x: set(tags).issubset(set(x.get("tags"))))
     else:
-        tasks = db.find(
+        tasks = bucket.find(
             lambda x: set(tags).issubset(set(x.get("tags")))
             and x.get("status") == status
         )
     return tasks
 
 
-def filter_tasks_by_status(db, status):
-    return db.find(lambda x: x.get("status") == status)
+def filter_tasks_by_status(bucket, status):
+    return bucket.find(lambda x: x.get("status") == status)
 
 
-def number_of_task_based_on_status(db):
+def number_of_task_based_on_status(bucket):
     return {
-        status: len(filter_tasks_by_status(db, status))
+        status: len(filter_tasks_by_status(bucket, status))
         for status in states.possible_states()
     }
 
 
-def get_total_number_of_tasks(db):
-    return len(db.find(lambda x: True))
+def get_total_number_of_tasks(bucket):
+    return len(bucket.find(lambda x: True))
 
 
 def get_all_tasks_ordered(reverse=True):
-    all_tasks = db.find(lambda x: True)
+    all_tasks = bucket.find(lambda x: True)
     return sorted(
         all_tasks,
         key=lambda i: datetime.datetime.strptime(i["created_date"], date_format),
@@ -270,10 +271,19 @@ def get_all_tasks_ordered(reverse=True):
 
 def get_distinct_tags():
     tags = set()
-    all_tasks = db.find(lambda x: True)
+    all_tasks = bucket.find(lambda x: True)
     for task in all_tasks:
         tags.update(task.get("tags"))
     return tags
+
+
+def fuzzy_search(options):
+    options = "\n".join(options)
+    command = 'echo -n "{}" | sk'.format(options)
+    selected = subprocess.Popen(
+        command, shell=True, stdout=subprocess.PIPE
+    ).communicate()[0]
+    return selected.decode("utf-8").replace("\n", "")
 
 
 def display_initial_summary(total_task, tasknumber_by_status):
@@ -360,11 +370,11 @@ def inall_find(searchstr: str):
     searchstr = searchstr.strip()
     tasks = dict()
     found_tasks = dict()
-    for bucket in get_bucket_names():
-        db = get_db(bucket)
-        tasks = db.find(lambda x: searchstr in x.get("task"))
+    for bucket_name in get_bucket_names():
+        bucket = get_bucket(bucket_name)
+        tasks = bucket.find(lambda x: searchstr in x.get("task"))
         if tasks:
-            found_tasks[bucket] = tasks
+            found_tasks[bucket_name] = tasks
     render_in_all_table(found_tasks)
 
 
@@ -372,11 +382,11 @@ def inall_find(searchstr: str):
 def inall_status(status: str):
     status = status.strip()
     found_tasks = dict()
-    for bucket in get_bucket_names():
-        db = get_db(bucket)
-        tasks = db.find(lambda x: x.get("status") == status)
+    for bucket_name in get_bucket_names():
+        bucket = get_bucket(bucket_name)
+        tasks = bucket.find(lambda x: x.get("status") == status)
         if tasks:
-            found_tasks[bucket] = tasks
+            found_tasks[bucket_name] = tasks
     render_in_all_table(found_tasks)
 
 
@@ -426,7 +436,7 @@ def edit_id(_id: int):
                     document.update(updated_task)
                     return document
 
-    db.update(update, lambda x: x.get("_id") == _id)
+    bucket.update(update, lambda x: x.get("_id") == _id)
 
 
 @edit_app.command("tag")
@@ -453,7 +463,7 @@ def edit_tag(tag: str):
             document.update(edited_task)
             return document
 
-        db.update(update, lambda y: y.get("_id") == int(_id))
+        bucket.update(update, lambda y: y.get("_id") == int(_id))
 
 
 @app.command()
@@ -463,30 +473,30 @@ def rm(id: str):
 
 @app.command()
 def show(_id: int):
-    tasks = db.find(lambda x: x.get("_id") == _id)
+    tasks = bucket.find(lambda x: x.get("_id") == _id)
     for task in tasks:
         display_task(task)
 
 
 @app.command()
-def summary(bucket: Optional[str] = typer.Argument(None)):
-    if bucket and bucket not in list(get_bucket_names()) + ["all"]:
+def summary(bucket_name: Optional[str] = typer.Argument(None)):
+    if bucket_name and bucket_name not in list(get_bucket_names()) + ["all"]:
         console.print("[red]wrong bucket name passed")
-    if bucket == "all":
+    if bucket_name == "all":
         total_tasks = 0
         tasknumber_by_status = Counter({})
-        for bucket in get_bucket_names():
-            db = get_db(bucket)
+        for bucket_name in get_bucket_names():
+            bucket = get_bucket(bucket_name)
             total_tasks += get_total_number_of_tasks(db)
             tasknumber_by_status += Counter(number_of_task_based_on_status(db))
         display_initial_summary(total_tasks, tasknumber_by_status)
-    elif bucket in get_bucket_names():
-        pass
+    # elif bucket_name in get_bucket_names():
+    #     pass
     else:
         current_bucket = ""
         with open(current_bucket_path, "r") as current:
             current_bucket = current.read().strip()
-        db = get_db(current_bucket)
+        db = get_bucket(current_bucket)
         display_initial_summary(
             get_total_number_of_tasks(db), number_of_task_based_on_status(db)
         )
@@ -528,7 +538,7 @@ def lss(order: str = typer.Argument("recent"), limit: int = typer.Argument(5)):
 @app.command()
 def find(searchstr: str):
     searchstr = searchstr.strip()
-    tasks = db.find(
+    tasks = bucket.find(
         lambda x: searchstr in x.get("task") or searchstr in x.get("description")
     )
     for task in tasks:
@@ -547,21 +557,21 @@ def check(bucket: Optional[str] = typer.Argument(None)):
 
 @app.command()
 def reindex():
-    db.index._id = 0
+    bucket.index._id = 0
 
     def update(document):
-        document.update({"_id": db.index._id})
+        document.update({"_id": bucket.index._id})
         return document
 
     tasks = get_all_tasks_ordered(reverse=False)
     for task in tasks:
-        db.index.increment()
-        db.update(update, lambda x: x.get("_id") == task.get("_id"))
+        bucket.index.increment()
+        bucket.update(update, lambda x: x.get("_id") == task.get("_id"))
     console.print("[green]re-indexing done for {} tasks!".format(len(tasks)))
 
 
-def get_db(db_name):
-    return jsondb(str(pathlib.Path(task_root / "{}.json".format(db_name))))
+def get_bucket(bucket_name):
+    return jsondb(str(pathlib.Path(task_root / "{}.json".format(bucket_name))))
 
 
 def init_db():
@@ -575,6 +585,10 @@ def init_db():
         return db
 
 
-db = init_db()
+bucket = init_db()
 if __name__ == "__main__":
-    app()
+    if not shutil.which("sk"):
+        console.print("[bold red]could not find sk in path")
+        console.print("install from https://github.com/lotabout/skim")
+    else:
+        app()
