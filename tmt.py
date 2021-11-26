@@ -22,15 +22,16 @@ from rich.text import Text
 from toml.encoder import TomlEncoder, _dump_str, unicode
 
 app = typer.Typer()
-edit_app = typer.Typer()
 tag_app = typer.Typer()
 inall_app = typer.Typer()
 
-app.add_typer(edit_app, name="edit")
 app.add_typer(tag_app, name="tag")
 app.add_typer(inall_app, name="inall")
 
 command = string.Template("$editor $filename")
+fuzzy_search_command = string.Template(
+    'echo -n "$options" | sk -m --color="prompt:27,pointer:27" --preview="tmt preview {}" --preview-window=up:50%'
+)
 
 console = Console()
 
@@ -40,7 +41,16 @@ task_root.mkdir(parents=True, exist_ok=True)
 
 date_format = "%a %d %b %Y %X"
 
-template = {"-": [{"task": "", "status": "", "tags": [], "description": ""}]}
+template = {
+    "-": [
+        {
+            "task": "",
+            "status": "",
+            "tags": [],
+            "description": "",
+        }
+    ]
+}
 
 tag_style = Style(color="black", bgcolor="blue")
 title_style = Style(color="green", bold=True)
@@ -96,13 +106,8 @@ def environ_present(key="EDITOR"):
     return key in os.environ
 
 
-def construct_title(_id, task, status):
-    return (
-        "[black on grey93] {} [/] ──── ".format(_id)
-        + task
-        + " ──── "
-        + get_status_styled(status)
-    )
+def construct_title(task, status):
+    return task + " ──── " + get_status_styled(status)
 
 
 def display_task(task):
@@ -114,9 +119,7 @@ def display_task(task):
     console.print(
         Panel(
             Markdown(task.get("description"), code_theme="ansi_dark"),
-            title=construct_title(
-                task.get("_id"), task.get("task"), task.get("status")
-            ),
+            title=construct_title(task.get("task"), task.get("status")),
             title_align="center",
             subtitle=tags + Text(task.get("created_date")),
             subtitle_align="right",
@@ -128,7 +131,6 @@ def display_task(task):
 
 def render_table(tasks, bucket_name=""):
     table = Table(
-        "id",
         "task",
         "status",
         "tags",
@@ -140,7 +142,6 @@ def render_table(tasks, bucket_name=""):
     for task in tasks:
         status = task.get("status")
         table.add_row(
-            str(task.get("_id")),
             task.get("task"),
             Text(status, style=color_map.get(status)),
             ", ".join(task.get("tags")),
@@ -152,7 +153,6 @@ def render_table(tasks, bucket_name=""):
 
 def render_in_all_table(alltasks):
     table = Table(
-        "id",
         "task",
         "status",
         "project",
@@ -166,7 +166,6 @@ def render_in_all_table(alltasks):
         for task in tasks:
             status = task.get("status")
             table.add_row(
-                str(task.get("_id")),
                 task.get("task"),
                 Text(status, style=color_map.get(status)),
                 bucket,
@@ -277,6 +276,11 @@ def get_distinct_tags():
     return tags
 
 
+def get_all_task_name():
+    all_tasks = bucket.find(lambda x: True)
+    return [task["task"] for task in all_tasks]
+
+
 def fuzzy_search(options):
     options = "\n".join(options)
     command = 'echo -n "{}" | sk'.format(options)
@@ -355,6 +359,22 @@ def display_tag_based_summary(distinct_tags):
     console.print(table, justify="center")
 
 
+def fuzzy_search(options):
+    options = "\n".join(options)
+    selected = subprocess.Popen(
+        fuzzy_search_command.substitute(options=options),
+        shell=True,
+        stdout=subprocess.PIPE,
+    ).communicate()[0]
+    selected = selected.decode("utf-8")
+    return list(filter(None, selected.split("\n")))
+
+
+@app.command()
+def preview():
+    pass
+
+
 @app.command()
 def new():
     filename, status = open_temp_toml_file()
@@ -418,8 +438,8 @@ def status(
             console.print("[red]display format has to be one of (brief | verbose)")
 
 
-@edit_app.command("id")
-def edit_id(_id: int):
+@app.command()
+def edit():
     def update(document):
         if document:
             filename, status = open_temp_toml_file(
@@ -436,13 +456,16 @@ def edit_id(_id: int):
                     document.update(updated_task)
                     return document
 
-    bucket.update(update, lambda x: x.get("_id") == _id)
+    task_name = fuzzy_search(get_all_task_name())
+    if task_name:
+        task = bucket.find(lambda x: x.get("task") == task_name[0])
+        if task:
+            bucket.update(update, lambda x: x.get("_id") == task[0].get("_id"))
 
 
-@edit_app.command("tag")
-def edit_tag(tag: str):
-    tag = tag.strip()
-    tasks = filter_tasks_by_tags(tag)
+@app.command()
+def editall():
+    tasks = get_all_tasks_ordered()
     filename, _ = open_temp_toml_file(
         {
             str(task.get("_id")): {
@@ -467,15 +490,17 @@ def edit_tag(tag: str):
 
 
 @app.command()
-def rm(id: str):
+def rm():
     pass
 
 
 @app.command()
-def show(_id: int):
-    tasks = bucket.find(lambda x: x.get("_id") == _id)
-    for task in tasks:
-        display_task(task)
+def show():
+    task_name = fuzzy_search(get_all_task_name())
+    if task_name:
+        task = bucket.find(lambda x: x.get("task") == task_name[0])
+        if task:
+            display_task(task[0])
 
 
 @app.command()
