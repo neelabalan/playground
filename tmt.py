@@ -235,17 +235,23 @@ def insert(tasks):
 def filter_tasks_by_tags(tagstr: str, status: str = ""):
     tags = list(map(str.strip, tagstr.split(",")))
     if not status:
-        tasks = bucket.find(lambda x: set(tags).issubset(set(x.get("tags"))))
+        tasks = bucket.find(
+            lambda x: set(tags).issubset(set(x.get("tags")))
+            and x.get("archived") != True
+        )
     else:
         tasks = bucket.find(
             lambda x: set(tags).issubset(set(x.get("tags")))
             and x.get("status") == status
+            and x.get("archived") != True
         )
     return tasks
 
 
 def filter_tasks_by_status(bucket, status):
-    return bucket.find(lambda x: x.get("status") == status)
+    return bucket.find(
+        lambda x: x.get("status") == status and x.get("archived") != True
+    )
 
 
 def number_of_task_based_on_status(bucket):
@@ -255,12 +261,16 @@ def number_of_task_based_on_status(bucket):
     }
 
 
+def get_all_tasks():
+    return bucket.find(lambda x: x.get("archived") != True)
+
+
 def get_total_number_of_tasks(bucket):
-    return len(bucket.find(lambda x: True))
+    return len(get_all_tasks())
 
 
 def get_all_tasks_ordered(reverse=True):
-    all_tasks = bucket.find(lambda x: True)
+    all_tasks = get_all_tasks()
     return sorted(
         all_tasks,
         key=lambda i: datetime.datetime.strptime(i["created_date"], date_format),
@@ -270,14 +280,14 @@ def get_all_tasks_ordered(reverse=True):
 
 def get_distinct_tags():
     tags = set()
-    all_tasks = bucket.find(lambda x: True)
+    all_tasks = get_all_tasks()
     for task in all_tasks:
         tags.update(task.get("tags"))
     return tags
 
 
 def get_all_task_name():
-    all_tasks = bucket.find(lambda x: True)
+    all_tasks = get_all_tasks()
     return [task["task"] for task in all_tasks]
 
 
@@ -404,7 +414,9 @@ def inall_status(status: str):
     found_tasks = dict()
     for bucket_name in get_bucket_names():
         bucket = get_bucket(bucket_name)
-        tasks = bucket.find(lambda x: x.get("status") == status)
+        tasks = bucket.find(
+            lambda x: x.get("status") == status and x.get("archived") != True
+        )
         if tasks:
             found_tasks[bucket_name] = tasks
     render_in_all_table(found_tasks)
@@ -491,7 +503,18 @@ def editall():
 
 @app.command()
 def rm():
-    pass
+    def update(document):
+        if document:
+            document.update({"archived": True})
+            console.print("[red]task id - {} is archived".format(document.get("_id")))
+            return document
+
+    task_names = fuzzy_search(get_all_task_name())
+    if task_names:
+        for task_name in task_names:
+            task = bucket.find(lambda x: x.get("task") == task_name)
+            if task:
+                bucket.update(update, lambda x: x.get("_id") == task[0].get("_id"))
 
 
 @app.command()
@@ -515,8 +538,6 @@ def summary(bucket_name: Optional[str] = typer.Argument(None)):
             total_tasks += get_total_number_of_tasks(db)
             tasknumber_by_status += Counter(number_of_task_based_on_status(db))
         display_initial_summary(total_tasks, tasknumber_by_status)
-    # elif bucket_name in get_bucket_names():
-    #     pass
     else:
         current_bucket = ""
         with open(current_bucket_path, "r") as current:
