@@ -30,18 +30,12 @@ inall_app = typer.Typer()
 app.add_typer(tag_app, name="tag")
 app.add_typer(inall_app, name="inall")
 
-command = string.Template("$editor $filename")
-fuzzy_search_command = string.Template(
-    'echo -n "$options" | sk -m --color="prompt:27,pointer:27" --preview="tmt preview {}" --preview-window=up:50%'
-)
-
 console = Console()
 
 task_root = pathlib.Path.home() / ".local/tmt/"
 current_bucket_path = pathlib.Path.home() / ".local/tmt/current_bucket"
 task_root.mkdir(parents=True, exist_ok=True)
 
-date_time_format = "%a %d %b %Y %X"
 date_format = "%d%b%Y"
 
 template = {
@@ -191,6 +185,8 @@ def render_in_all_table(alltasks):
         "status",
         "project",
         "tags",
+        "target_date",
+        "days_left",
         title="tasks",
         expand=True,
         leading=1,
@@ -203,13 +199,15 @@ def render_in_all_table(alltasks):
                 Text(status, style=color_map.get(status)),
                 bucket,
                 ", ".join(task.get("tags")),
-                task.get("created_date"),
+                task.get("target_date"),
+                stylize_days_left(str(find_days_left(task))),
             )
     console.print(table)
     console.print("\n")
 
 
 def open_temp_toml_file(template=template):
+    command = string.Template("$editor $filename")
     if environ_present("EDITOR"):
         editor = os.environ["EDITOR"]
         fd, filename = tempfile.mkstemp(suffix=".toml", text=True)
@@ -225,23 +223,28 @@ def open_temp_toml_file(template=template):
         raise Exception("EDITOR not found in env")
 
 
-def validate_task_insert(task):
-    validation_pass = True
+def task_validation(task):
     task_name = task.get("task")
     if not task:
         console.print("[red bold]task not added")
-        validation_pass = False
+        return {}
     elif not task_name:
         console.print("[red bold]task has no name")
-        validation_pass = False
+        return {}
     elif task.get("status") and task.get("status") not in states.possible_states():
         console.print(
             "[red bold]state has be any one of {}".format(states.possible_states())
         )
-        validation_pass = False
+        return {}
     else:
-        pass
-    return validation_pass
+        start_date, target_date = process_date_for_insert(task)
+        task.update(
+            {
+                "start_date": start_date.strftime(date_format),
+                "target_date": target_date.strftime(date_format),
+            }
+        )
+        return task
 
 
 def parse_start_and_target_date(task):
@@ -264,13 +267,13 @@ def process_date_for_insert(task):
             console.print("[red]start_date need to be lesser than target_date")
             sys.exit(0)
         else:
-            return start_date, target_date
+            return start_date.strftime(), target_date
     elif target_date and not start_date:
         try:
             target_date = dtparser.parse(target_date).date()
             start_date = (
                 dtparser.parse(task.get("created_date")).date()
-                if task.get("create_date")
+                if task.get("created_date")
                 else datetime.datetime.now().date()
             )
             return start_date, target_date
@@ -300,10 +303,9 @@ def insert(tasks):
     insert_count = 0
     for task in tasks.get("-"):
         task_name = task.get("task")
-        validation_pass = validate_task_insert(task)
-        if validation_pass:
+        task = validate_task_insert(task)
+        if task:
             try:
-                start_date, target_date = process_date_for_insert(task)
                 bucket.insert(
                     [
                         {
@@ -311,8 +313,8 @@ def insert(tasks):
                             "status": task.get("status") or states.BACKLOG,
                             "description": task.get("description"),
                             "tags": task.get("tags"),
-                            "start_date": start_date,
-                            "target_date": target_date,
+                            "start_date": task.get("start_date"),
+                            "target_date": task.get("target_date"),
                             "created_date": datetime.datetime.now().strftime(
                                 date_format
                             ),
@@ -390,13 +392,24 @@ def get_all_task_name():
     return [task["task"] for task in all_tasks]
 
 
-def fuzzy_search(options):
+def fuzzy_search(options, multiselect=False, preview=True):
     options = "\n".join(options)
-    command = 'echo -n "{}" | sk'.format(options)
+    fuzzy_search_command = string.Template(
+        'echo -n "$options" | sk $multiselect --color="prompt:27,pointer:27" $preview'
+    )
     selected = subprocess.Popen(
-        command, shell=True, stdout=subprocess.PIPE
+        fuzzy_search_command.substitute(
+            options=options,
+            multiselect="-m" if multiselect else "",
+            preview='--preview="tmt preview {}" --preview-window=up:50%'
+            if preview
+            else "",
+        ),
+        shell=True,
+        stdout=subprocess.PIPE,
     ).communicate()[0]
-    return selected.decode("utf-8").replace("\n", "")
+    selected = selected.decode("utf-8")
+    return list(filter(None, selected.split("\n")))
 
 
 def display_initial_summary(total_task, tasknumber_by_status):
@@ -466,17 +479,6 @@ def display_tag_based_summary(distinct_tags):
                 )
         table.add_row(tag, content)
     console.print(table, justify="center")
-
-
-def fuzzy_search(options):
-    options = "\n".join(options)
-    selected = subprocess.Popen(
-        fuzzy_search_command.substitute(options=options),
-        shell=True,
-        stdout=subprocess.PIPE,
-    ).communicate()[0]
-    selected = selected.decode("utf-8")
-    return list(filter(None, selected.split("\n")))
 
 
 @app.command()
@@ -559,6 +561,8 @@ def edit():
                     "task": document.get("task"),
                     "status": document.get("status"),
                     "tags": document.get("tags"),
+                    "start_date": document.get("start_date"),
+                    "target_date": document.get("target_date"),
                     "description": document.get("description"),
                 }
             )
@@ -566,7 +570,7 @@ def edit():
                 with open(filename, "r") as file:
                     updated_task = toml.load(file)
                     document.update(updated_task)
-                    return document
+                    return validate_task(document)
 
     task_name = fuzzy_search(get_all_task_name())
     if task_name:
@@ -596,7 +600,7 @@ def editall():
 
         def update(document):
             document.update(edited_task)
-            return document
+            return validate_task(document)
 
         bucket.update(update, lambda y: y.get("_id") == int(_id))
 
@@ -692,13 +696,16 @@ def find(searchstr: str):
 
 
 @app.command()
-def check(bucket: Optional[str] = typer.Argument(None)):
-    if not bucket:
-        display_buckets()
-    else:
-        bucket = bucket.strip()
+def check():
+    display_buckets()
+
+
+@app.command()
+def goto():
+    bucket_name = fuzzy_search(get_bucket_names(), multiselect=False, preview=False)
+    if bucket_name:
         with open(current_bucket_path, "w") as current:
-            current.write(bucket)
+            current.write(bucket_name[0])
 
 
 @app.command()
