@@ -229,7 +229,7 @@ def open_temp_toml_file(template=template):
         raise Exception("EDITOR not found in env")
 
 
-def task_validation(task):
+def validate_task(task):
     task_name = task.get("task")
     if not task:
         console.print("[red bold]task not added")
@@ -246,8 +246,8 @@ def task_validation(task):
         start_date, target_date = process_date_for_insert(task)
         task.update(
             {
-                "start_date": start_date.strftime(date_format),
-                "target_date": target_date.strftime(date_format),
+                "start_date": start_date,
+                "target_date": target_date,
             }
         )
         return task
@@ -273,7 +273,7 @@ def process_date_for_insert(task):
             console.print("[red]start_date need to be lesser than target_date")
             sys.exit(0)
         else:
-            return start_date.strftime(), target_date
+            return start_date.strftime(date_format), target_date.strftime(date_format)
     elif target_date and not start_date:
         try:
             target_date = dtparser.parse(target_date).date()
@@ -282,7 +282,7 @@ def process_date_for_insert(task):
                 if task.get("created_date")
                 else datetime.datetime.now().date()
             )
-            return start_date, target_date
+            return start_date.strftime(date_format), target_date.strftime(date_format)
         except dtparser.ParserError:
             console.print("error in parsing dates!!")
             sys.exit()
@@ -313,7 +313,7 @@ def insert(tasks):
     insert_count = 0
     for task in tasks.get("-"):
         task_name = task.get("task")
-        task = validate_task_insert(task)
+        task = validate_task(task)
         if task:
             try:
                 bucket.insert(
@@ -623,7 +623,7 @@ def rm():
             console.print("[red]task id - {} is archived".format(document.get("_id")))
             return document
 
-    task_names = fuzzy_search(get_all_task_name())
+    task_names = fuzzy_search(get_all_task_name(), multiselect=True)
     if task_names:
         for task_name in task_names:
             task = bucket.find(lambda x: x.get("task") == task_name)
