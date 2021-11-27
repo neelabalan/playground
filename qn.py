@@ -1,24 +1,23 @@
-import pathlib
 import datetime
-import sys
-import os
-import subprocess
-import string
 import json
-import tempfile
+import os
+import pathlib
 import shutil
+import string
+import subprocess
+import sys
+import tempfile
 from typing import Optional
 
-from jsondb import jsondb
-
-import typer
 import toml
+import typer
+from jsondb import jsondb
 from rich.console import Console
+from rich.markdown import Markdown
 from rich.panel import Panel
 from rich.style import Style
-from rich.text import Text
-from rich.markdown import Markdown
 from rich.table import Table
+from rich.text import Text
 
 app = typer.Typer()
 
@@ -161,12 +160,23 @@ def get_all_notes_ordered(reverse=True):
 
 
 def fuzzy_search(options):
+    fuzzy_search_command = string.Template(
+        'echo -n "$options" | sk -m --color="prompt:27,pointer:27" --preview="qn preview {}" --preview-window=up:50%'
+    )
     options = "\n".join(options)
-    command = 'echo -n "{}" | sk'.format(options)
     selected = subprocess.Popen(
-        command, shell=True, stdout=subprocess.PIPE
+        fuzzy_search_command.substitute(options=options),
+        shell=True,
+        stdout=subprocess.PIPE,
     ).communicate()[0]
-    return selected.decode("utf-8").replace("\n", "")
+    selected = selected.decode("utf-8")
+    return list(filter(None, selected.split("\n")))
+
+
+@app.command()
+def preview(title: str):
+    note = db.find(lambda x: x.get("title") == title)
+    display_notes(note)
 
 
 @app.command()
@@ -213,12 +223,13 @@ def edit():
                 return document
 
     title = fuzzy_search(distinct_titles())
-    note = db.find(lambda x: x.get("title") == title)
-    if note:
-        note = note[0]
-        db.update(update, lambda x: x.get("title") == title)
-    else:
-        console.print("[red]no note found with this title")
+    if title:
+        note = db.find(lambda x: x.get("title") == title[0])
+        if note:
+            note = note[0]
+            db.update(update, lambda x: x.get("title") == title[0])
+        else:
+            console.print("[red]no note found with this title")
 
 
 @app.command()
@@ -229,8 +240,9 @@ def tag(tagstr: str):
         render_table(notes)
     else:
         tag = fuzzy_search(distinct_tags())
-        notes = filter_notes_by_tags([tag])
-        display_notes(notes)
+        if tag:
+            notes = filter_notes_by_tags(tag)
+            display_notes(notes)
 
 
 @app.command()
@@ -259,9 +271,10 @@ def ls(order: str = typer.Argument("recent"), val: int = typer.Argument(5)):
 @app.command()
 def show():
     title = fuzzy_search(distinct_titles())
-    note = db.find(lambda x: x.get("title") == title)
-    if note:
-        display_notes(note)
+    if title:
+        note = db.find(lambda x: x.get("title") == title[0])
+        if note:
+            display_notes(note)
 
 
 @app.command()
@@ -274,9 +287,10 @@ def find(searchstr: str):
 @app.command()
 def rm():
     title = fuzzy_search(distinct_titles())
-    deleted_doc = db.delete(lambda x: x.get("title") == title)
-    if deleted_doc:
-        console.print('[red]note "{}" deleted'.format(title))
+    if title:
+        deleted_doc = db.delete(lambda x: x.get("title") == title[0])
+        if deleted_doc:
+            console.print('[red]note "{}" deleted'.format(title[0]))
 
 
 @app.command()
