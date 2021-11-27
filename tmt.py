@@ -10,10 +10,12 @@ import tempfile
 from collections import Counter
 from typing import Optional
 
+import dateutil.parser as dtparser
 import toml
 import typer
 from jsondb import DuplicateEntryError, jsondb
-from rich.console import Console
+from rich import box
+from rich.console import Console, Group
 from rich.markdown import Markdown
 from rich.panel import Panel
 from rich.style import Style
@@ -39,7 +41,8 @@ task_root = pathlib.Path.home() / ".local/tmt/"
 current_bucket_path = pathlib.Path.home() / ".local/tmt/current_bucket"
 task_root.mkdir(parents=True, exist_ok=True)
 
-date_format = "%a %d %b %Y %X"
+date_time_format = "%a %d %b %Y %X"
+date_format = "%d%b%Y"
 
 template = {
     "-": [
@@ -47,7 +50,9 @@ template = {
             "task": "",
             "status": "",
             "tags": [],
-            "description": "",
+            "start_date": "",
+            "target_date": "",
+            "description": "\n",
         }
     ]
 }
@@ -106,27 +111,54 @@ def environ_present(key="EDITOR"):
     return key in os.environ
 
 
-def construct_title(task, status):
-    return task + " ──── " + get_status_styled(status)
-
-
 def display_task(task):
     tags = Text()
     for tag in task.get("tags"):
         tags.append("#{}".format(tag), style=tag_style)
         tags.append(" ── ")
 
+    start_date, target_date = task.get("start_date"), task.get("target_date")
+    table = Text()
+    if start_date and target_date:
+        table = Table(
+            expand=True,
+            box=box.ROUNDED,
+            show_lines=True,
+            show_header=False,
+        )
+        days_left = str(find_days_left(task))
+        table.add_row(
+            "[grey70]start_date",
+            task.get("start_date"),
+            "[grey70]target_date",
+            task.get("target_date"),
+        )
+        table.add_row(
+            "[grey70]timeframe",
+            "[blue]" + str(find_timeframe(task)),
+            "[grey70]days_left",
+            stylize_days_left(str(find_days_left(task))),
+        )
+    console.print("\n")
     console.print(
         Panel(
-            Markdown(task.get("description"), code_theme="ansi_dark"),
-            title=construct_title(task.get("task"), task.get("status")),
-            title_align="center",
+            Group(
+                Text("\n" + task.get("task") + "\n", style="yellow", justify="center"),
+                table,
+                Markdown(task.get("description"), code_theme="ansi_dark"),
+            ),
+            title=get_status_styled(task.get("status")),
+            title_align="left",
             subtitle=tags + Text(task.get("created_date")),
             subtitle_align="right",
-            padding=1,
         )
     )
-    console.print("\n\n")
+
+    console.print("\n")
+
+
+def stylize_days_left(days_left):
+    return "[{}]{}[/]".format("red" if "-" in days_left else "green", days_left)
 
 
 def render_table(tasks, bucket_name=""):
@@ -134,7 +166,8 @@ def render_table(tasks, bucket_name=""):
         "task",
         "status",
         "tags",
-        "created_date",
+        "target_date",
+        "days_left",
         title="{} tasks".format(bucket_name or str(bucket)),
         expand=True,
         leading=1,
@@ -145,7 +178,8 @@ def render_table(tasks, bucket_name=""):
             task.get("task"),
             Text(status, style=color_map.get(status)),
             ", ".join(task.get("tags")),
-            task.get("created_date"),
+            task.get("target_date"),
+            stylize_days_left(str(find_days_left(task))),
         )
     console.print(table)
     console.print("\n")
@@ -157,7 +191,6 @@ def render_in_all_table(alltasks):
         "status",
         "project",
         "tags",
-        "created_date",
         title="tasks",
         expand=True,
         leading=1,
@@ -192,37 +225,103 @@ def open_temp_toml_file(template=template):
         raise Exception("EDITOR not found in env")
 
 
+def validate_task_insert(task):
+    validation_pass = True
+    task_name = task.get("task")
+    if not task:
+        console.print("[red bold]task not added")
+        validation_pass = False
+    elif not task_name:
+        console.print("[red bold]task has no name")
+        validation_pass = False
+    elif task.get("status") and task.get("status") not in states.possible_states():
+        console.print(
+            "[red bold]state has be any one of {}".format(states.possible_states())
+        )
+        validation_pass = False
+    else:
+        pass
+    return validation_pass
+
+
+def parse_start_and_target_date(task):
+    start_date, target_date = task.get("start_date"), task.get("target_date")
+    try:
+        target_date = dtparser.parse(target_date).date()
+        start_date = dtparser.parse(start_date).date()
+    except dtparser.ParserError:
+        console.print("error in parsing dates!!")
+        sys.exit()
+    return start_date, target_date
+
+
+def process_date_for_insert(task):
+    start_date, target_date = task.get("start_date", ""), task.get("target_date", "")
+
+    if start_date and target_date:
+        start_date, target_date = parse_start_and_target_date(task)
+        if start_date > target_date:
+            console.print("[red]start_date need to be lesser than target_date")
+            sys.exit(0)
+        else:
+            return start_date, target_date
+    elif target_date and not start_date:
+        try:
+            target_date = dtparser.parse(target_date).date()
+            start_date = (
+                dtparser.parse(task.get("created_date")).date()
+                if task.get("create_date")
+                else datetime.datetime.now().date()
+            )
+            return start_date, target_date
+        except dtparser.ParserError:
+            console.print("error in parsing dates!!")
+            sys.exit()
+    else:
+        return "", ""
+
+
+def find_timeframe(task):
+    start_date, target_date = parse_start_and_target_date(task)
+    return (target_date - start_date).days
+
+
+def find_days_left(task):
+    start_date, target_date = parse_start_and_target_date(task)
+    today = datetime.datetime.now().date()
+    if start_date > today:
+        return "task start date has not reached"
+    else:
+        return (target_date - today).days
+
+
 def insert(tasks):
     total_tasks = len(tasks.get("-"))
     insert_count = 0
     for task in tasks.get("-"):
         task_name = task.get("task")
-        if not task_name:
-            console.print("[red bold]task has no name")
-            sys.exit()
-        if not task:
-            console.print("[red bold]task not added")
-            sys.exit()
-        if task.get("status") and task.get("status") not in states.possible_states():
-            console.print(
-                "[red bold]state has be any one of {}".format(states.possible_states())
-            )
-            sys.exit()
-        try:
-            bucket.insert(
-                [
-                    {
-                        "task": task_name,
-                        "status": task.get("status") or states.BACKLOG,
-                        "description": task.get("description"),
-                        "tags": task.get("tags"),
-                        "created_date": datetime.datetime.now().strftime(date_format),
-                    }
-                ]
-            )
-            insert_count += 1
-        except DuplicateEntryError as err:
-            console.print("[red]Duplicate task found - {}".format(task_name))
+        validation_pass = validate_task_insert(task)
+        if validation_pass:
+            try:
+                start_date, target_date = process_date_for_insert(task)
+                bucket.insert(
+                    [
+                        {
+                            "task": task_name,
+                            "status": task.get("status") or states.BACKLOG,
+                            "description": task.get("description"),
+                            "tags": task.get("tags"),
+                            "start_date": start_date,
+                            "target_date": target_date,
+                            "created_date": datetime.datetime.now().strftime(
+                                date_format
+                            ),
+                        }
+                    ]
+                )
+                insert_count += 1
+            except DuplicateEntryError as err:
+                console.print("[red]Duplicate task found - {}".format(task_name))
     console.print(
         "[green bold]{}/{} {} added".format(
             insert_count,
