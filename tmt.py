@@ -152,7 +152,13 @@ def display_task(task):
 
 
 def stylize_days_left(days_left):
-    return "[{}]{}[/]".format("red" if "-" in days_left else "green", days_left)
+    text = "[{}]" + days_left + "[/]"
+    if "-" in days_left:
+        return text.format("red")
+    elif "NA" == days_left:
+        return text.format("grey42")
+    else:
+        return text.format("green")
 
 
 def render_table(tasks, bucket_name=""):
@@ -172,7 +178,7 @@ def render_table(tasks, bucket_name=""):
             task.get("task"),
             Text(status, style=color_map.get(status)),
             ", ".join(task.get("tags")),
-            task.get("target_date"),
+            task.get("target_date") or "[grey42]NA[/]",
             stylize_days_left(str(find_days_left(task))),
         )
     console.print(table)
@@ -285,17 +291,21 @@ def process_date_for_insert(task):
 
 
 def find_timeframe(task):
-    start_date, target_date = parse_start_and_target_date(task)
-    return (target_date - start_date).days
+    if task.get("start_date") and task.get("target_date"):
+        start_date, target_date = parse_start_and_target_date(task)
+        return (target_date - start_date).days
+    return "NA"
 
 
 def find_days_left(task):
-    start_date, target_date = parse_start_and_target_date(task)
-    today = datetime.datetime.now().date()
-    if start_date > today:
-        return "task start date has not reached"
-    else:
-        return (target_date - today).days
+    if task.get("start_date") and task.get("target_date"):
+        start_date, target_date = parse_start_and_target_date(task)
+        today = datetime.datetime.now().date()
+        if start_date > today:
+            return "task start date has not reached"
+        else:
+            return (target_date - today).days
+    return "NA"
 
 
 def insert(tasks):
@@ -374,7 +384,7 @@ def get_all_tasks_ordered(reverse=True):
     all_tasks = get_all_tasks()
     return sorted(
         all_tasks,
-        key=lambda i: datetime.datetime.strptime(i["created_date"], date_format),
+        key=lambda i: dtparser.parse(i["created_date"]),
         reverse=reverse,
     )
 
