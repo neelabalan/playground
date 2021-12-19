@@ -1,4 +1,6 @@
+import base64
 import datetime
+import hashlib
 import json
 import os
 import pathlib
@@ -11,8 +13,9 @@ from typing import Optional
 
 import toml
 import typer
+from cryptography.fernet import Fernet, InvalidToken
 from jsondb import jsondb
-from rich.console import Console
+from rich import print
 from rich.markdown import Markdown
 from rich.panel import Panel
 from rich.style import Style
@@ -20,20 +23,22 @@ from rich.table import Table
 from rich.text import Text
 
 app = typer.Typer()
-
-command = string.Template("$editor $filename")
-
-console = Console()
-
-note_root = pathlib.Path.home() / ".local/qn/"
-note_root.mkdir(parents=True, exist_ok=True)
+app_locked = typer.Typer()
+db = None
 
 date_format = "%a %d %b %Y %X"
 SEPERATOR = "+++"
-template = "+++\n{}+++{}"
 
-title_style = Style(color="green", bold=True)
-tag_style = Style(color="black", bgcolor="blue")
+
+class RichStyles:
+    title = Style(color="green", bold=True)
+    tag = Style(color="black", bgcolor="blue")
+
+
+class Paths:
+    note_root = pathlib.Path.home() / ".local/qn/"
+    note_path = pathlib.Path.home() / ".local/qn/qn.json"
+    enc_path = pathlib.Path.home() / ".local/qn/qn.enc"
 
 
 def environ_present(key="EDITOR"):
@@ -46,13 +51,14 @@ def open_temp_md_file(
     created_date=datetime.datetime.now().strftime(date_format),
     mdtext="",
 ):
+    command = string.Template("$editor $filename")
     if environ_present("EDITOR"):
         editor = os.environ["EDITOR"]
         fd, filename = tempfile.mkstemp(suffix=".md", text=True)
         with open(filename, "w") as file:
 
             file.write(
-                template.format(
+                "+++\n{}+++{}".format(
                     toml.dumps(
                         {
                             "title": title,
@@ -124,17 +130,17 @@ def render_table(notes):
             ", ".join(note.get("tags")) or "-",
             note.get("created_date"),
         )
-    console.print(table)
+    print(table)
 
 
 def display_notes(notes):
     for note in notes:
         tags = Text()
         for tag in note.get("tags"):
-            tags.append("#{}".format(tag), style=tag_style)
+            tags.append("#{}".format(tag), style=RichStyles.tag)
             tags.append("  ")
 
-        console.print(
+        print(
             Panel(
                 Markdown(note.get("note") or ">", code_theme="ansi_dark"),
                 title=note.get("title"),
@@ -143,7 +149,7 @@ def display_notes(notes):
                 subtitle_align="right",
             )
         )
-        console.print("\n")
+        print("\n")
 
 
 def filter_notes_by_tags(tags):
@@ -191,7 +197,7 @@ def today():
         db.insert(
             [{**parse_front_matter(filename), **{"note": extract_md_text(filename)}}]
         )
-        console.print("[green]new note added")
+        print("[green]new note added")
 
 
 @app.command()
@@ -206,7 +212,7 @@ def new(title: str):
         db.insert(
             [{**parse_front_matter(filename), **{"note": extract_md_text(filename)}}]
         )
-        console.print("[green]new note added")
+        print("[green]new note added")
 
 
 @app.command()
@@ -229,7 +235,7 @@ def edit():
             note = note[0]
             db.update(update, lambda x: x.get("title") == title[0])
         else:
-            console.print("[red]no note found with this title")
+            print("[red]no note found with this title")
 
 
 @app.command()
@@ -237,7 +243,7 @@ def tag(tagstr: str):
     if tagstr:
         tags = list(map(str.strip, tagstr.split(",")))
         notes = filter_notes_by_tags(tags)
-        render_table(notes)
+        (notes)
     else:
         tag = fuzzy_search(distinct_tags())
         if tag:
@@ -290,25 +296,58 @@ def rm():
     if title:
         deleted_doc = db.delete(lambda x: x.get("title") == title[0])
         if deleted_doc:
-            console.print('[red]note "{}" deleted'.format(title[0]))
+            print('[red]note "{}" deleted'.format(title[0]))
 
 
 @app.command()
+def encrypt(
+    password: str = typer.Option(
+        ..., prompt=True, confirmation_prompt=True, hide_input=True
+    )
+):
+    cipher_text = ""
+    hasher = hashlib.sha3_256()
+    hasher.update(password.encode("utf-8"))
+    fernet = Fernet(base64.urlsafe_b64encode(hasher.digest()))
+    with open(Paths.note_path, "r") as file:
+        cipher_text = fernet.encrypt(file.read().encode("utf-8"))
+    Paths.note_path.unlink()
+    with open(Paths.enc_path, "w") as file:
+        file.write(cipher_text.decode("utf-8"))
+
+
+@app_locked.command()
+def decrypt(password: str = typer.Option(..., prompt=True, hide_input=True)):
+    cipher_text = plain_text = ""
+    hasher = hashlib.sha3_256()
+    hasher.update(password.encode("utf-8"))
+    fernet = Fernet(base64.urlsafe_b64encode(hasher.digest()))
+    with open(Paths.enc_path, "r") as file:
+        cipher_text = file.read()
+    try:
+        plain_text = fernet.decrypt(cipher_text.encode("utf-8"))
+        with open(Paths.note_path, "w") as file:
+            file.write(plain_text.decode("utf-8"))
+        Paths.enc_path.unlink()
+    except InvalidToken as e:
+        print("[red]invalid password")
+
+
+@app.command()
+@app_locked.command()
 def export(path: str):
-    """export to md"""
     pass
 
 
-def init_db():
-    db = jsondb(str(pathlib.Path(note_root / "qn.json")))
-    db.set_index("title")
-    return db
-
-
-db = init_db()
-if __name__ == "__main__":
+def run():
     if not shutil.which("sk"):
-        console.print("[bold red]could not find sk in path")
-        console.print("install from https://github.com/lotabout/skim")
-    else:
+        print("[bold red]could not find sk in path")
+        print("install from https://github.com/lotabout/skim")
+    if not Paths.enc_path.exists():
+        global db
+        db = jsondb(str(Paths.note_path))
+        db.set_index("title")
         app()
+    else:
+        app_locked()
+    Paths.note_root.mkdir(parents=True, exist_ok=True)
