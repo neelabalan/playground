@@ -11,11 +11,13 @@ from collections import Counter
 from typing import Optional
 
 import dateutil.parser as dtparser
+import pyskim
 import toml
 import typer
 from jsondb import DuplicateEntryError, jsondb
-from rich import box
-from rich.console import Console, Group
+from rich import box, print
+from rich.columns import Columns
+from rich.console import Group
 from rich.markdown import Markdown
 from rich.panel import Panel
 from rich.style import Style
@@ -24,35 +26,10 @@ from rich.text import Text
 from toml.encoder import TomlEncoder, _dump_str, unicode
 
 app = typer.Typer()
-tag_app = typer.Typer()
-inall_app = typer.Typer()
-
-app.add_typer(tag_app, name="tag")
-app.add_typer(inall_app, name="inall")
-
-console = Console()
-
-task_root = pathlib.Path.home() / ".local/tmt/"
-current_bucket_path = pathlib.Path.home() / ".local/tmt/current_bucket"
-task_root.mkdir(parents=True, exist_ok=True)
+app_locked = typer.Typer()
 
 date_format = "%d%b%Y"
-
-template = {
-    "-": [
-        {
-            "task": "",
-            "status": "",
-            "tags": [],
-            "start_date": "",
-            "target_date": "",
-            "description": "\n",
-        }
-    ]
-}
-
-tag_style = Style(color="black", bgcolor="blue")
-title_style = Style(color="green", bold=True)
+db = None
 
 
 class states:
@@ -62,6 +39,7 @@ class states:
     DONE = "done"
     REVISIT = "revisit"
 
+    @staticmethod
     def possible_states():
         return (
             states.RUNNING,
@@ -72,13 +50,76 @@ class states:
         )
 
 
-color_map = {
-    states.BACKLOG: "black on dark_orange3",
-    states.SELECTED: "black on blue",
-    states.RUNNING: "black on green",
-    states.DONE: "black on grey30",
-    states.REVISIT: "black on light_goldenrod1",
-}
+class Paths:
+    tmt_root = pathlib.Path.home() / ".local/tmt/"
+    tmt_path = pathlib.Path.home() / ".local/tmt/tmt.json"
+    enc_path = pathlib.Path.home() / ".local/tmt/tmt.enc"
+
+
+class RichStyles:
+    backlog = Style(color="black", bgcolor="dark_orange3")
+    selected = Style(color="black", bgcolor="blue")
+    running = Style(color="black", bgcolor="green")
+    done = Style(color="black", bgcolor="grey30")
+    revisit = Style(color="black", bgcolor="light_goldenrod1")
+    date = Style(color="grey70")
+    tag_style = Style(color="black", bgcolor="blue")
+    title_style = Style(color="green", bold=True)
+    timeframe = Style(color="blue")
+    NA = Style(color="grey42")
+    days_overdue = Style(color="red")
+    days_left = Style(color="green")
+    total = Style(color="black", bgcolor="grey93")
+    summary_title = Style(color="green", bold=True)
+    empty = Style(color="white", bgcolor="black")
+
+    @staticmethod
+    def get_style(style):
+        return getattr(RichStyles, style)
+
+
+class RichTable:
+    task = "task"
+    status = "status"
+    tag = "tag"
+    tags = "tags"
+    target_date = "target_date"
+    days_left = "days_left"
+    start_date = "start_date"
+    timeframe = "timeframe"
+    NA = "NA"
+
+    @staticmethod
+    def get_table(table):
+        if table == "date_table":
+            return Table(
+                expand=True,
+                box=box.ROUNDED,
+                show_lines=True,
+                show_header=False,
+            )
+        elif table == "task_table":
+            return Table(
+                RichTable.task,
+                RichTable.status,
+                RichTable.tags,
+                RichTable.target_date,
+                RichTable.days_left,
+                expand=True,
+                leading=1,
+            )
+        elif table == "initial_summary":
+            return Table(
+                *[
+                    Column(state, style=RichStyles.get_style(state))
+                    for state in states.possible_states()
+                ],
+                title="status summary",
+                expand=True,
+            )
+        else:
+            return None
+
 
 # https://github.com/sanskrit-coders/sanskrit_data/blob/67e0999be6f8bf7fff761f0484141e03b9e551f4/sanskrit_data/toml_helper.py
 def _dump_str_prefer_multiline(v):
@@ -97,160 +138,130 @@ class MultilinePreferringTomlEncoder(TomlEncoder):
         self.dump_funcs[str] = _dump_str_prefer_multiline
 
 
-def get_status_styled(status):
-    return "[{}] {} [/]".format(color_map.get(status), status)
-
-
-def environ_present(key="EDITOR"):
-    return key in os.environ
-
-
 def display_task(task):
     tags = Text()
     for tag in task.get("tags"):
-        tags.append("#{}".format(tag), style=tag_style)
+        tags.append("#{}".format(tag), style=RichStyles.tag_style)
         tags.append(" ── ")
 
     start_date, target_date = task.get("start_date"), task.get("target_date")
     table = Text()
     if start_date and target_date:
-        table = Table(
-            expand=True,
-            box=box.ROUNDED,
-            show_lines=True,
-            show_header=False,
-        )
+        table = RichTable.get_table("date_table")
         days_left = str(find_days_left(task))
         table.add_row(
-            "[grey70]start_date",
+            Text(RichTable.start_date, style=RichStyles.date),
             task.get("start_date"),
-            "[grey70]target_date",
+            Text(RichTable.target_date, style=RichStyles.date),
             task.get("target_date"),
         )
         table.add_row(
-            "[grey70]timeframe",
-            "[blue]" + str(find_timeframe(task)),
-            "[grey70]days_left",
+            Text(RichTable.timeframe, style=RichStyles.timeframe),
+            str(find_timeframe(task)),
+            Text(RichTable.days_left, style=RichStyles.date),
             stylize_days_left(str(find_days_left(task))),
         )
-    console.print("\n")
-    console.print(
+    print("\n")
+    print(
         Panel(
             Group(
                 Text("\n" + task.get("task") + "\n", style="yellow", justify="center"),
                 table,
                 Markdown(task.get("description"), code_theme="ansi_dark"),
             ),
-            title=get_status_styled(task.get("status")),
+            title=Text(
+                task.get("status"), style=getattr(RichStyles, task.get("status"))
+            ),
             title_align="left",
             subtitle=tags + Text(task.get("created_date")),
             subtitle_align="right",
         )
     )
-
-    console.print("\n")
+    print("\n")
 
 
 def stylize_days_left(days_left):
-    text = "[{}]" + days_left + "[/]"
     if "-" in days_left:
-        return text.format("red")
+        style = RichStyles.days_overdue
     elif "NA" == days_left:
-        return text.format("grey42")
+        style = RichStyles.NA
     else:
-        return text.format("green")
+        style = RichStyles.days_left
+    return Text(days_left, style=style)
 
 
-def render_table(tasks, bucket_name=""):
-    table = Table(
-        "task",
-        "status",
-        "tags",
-        "target_date",
-        "days_left",
-        title="{} tasks".format(bucket_name or str(bucket)),
-        expand=True,
-        leading=1,
-    )
+def render_table(tasks):
+    table = RichTable.get_table("task_table")
     for task in tasks:
         status = task.get("status")
         table.add_row(
             task.get("task"),
-            Text(status, style=color_map.get(status)),
+            Text(status, style=RichStyles.get_style(status)),
             ", ".join(task.get("tags")),
-            task.get("target_date") or "[grey42]NA[/]",
+            task.get("target_date") or Text(RichTable.NA, style=RichStyles.NA),
             stylize_days_left(str(find_days_left(task))),
         )
-    console.print(table)
-    console.print("\n")
+    print(table)
 
 
-def render_in_all_table(alltasks):
-    table = Table(
-        "task",
-        "status",
-        "project",
-        "tags",
-        "target_date",
-        "days_left",
-        title="tasks",
-        expand=True,
-        leading=1,
-    )
-    for bucket, tasks in alltasks.items():
-        for task in tasks:
-            status = task.get("status")
-            table.add_row(
-                task.get("task"),
-                Text(status, style=color_map.get(status)),
-                bucket,
-                ", ".join(task.get("tags")),
-                task.get("target_date"),
-                stylize_days_left(str(find_days_left(task))),
-            )
-    console.print(table)
-    console.print("\n")
-
-
-def open_temp_toml_file(template=template):
+def open_temp_toml_file(template=None):
+    if not template:
+        template = {
+            "-": [
+                {
+                    "task": "",
+                    "status": "",
+                    "tags": [],
+                    "start_date": "",
+                    "target_date": "",
+                    "description": "\n",
+                }
+            ]
+        }
     command = string.Template("$editor $filename")
-    if environ_present("EDITOR"):
-        editor = os.environ["EDITOR"]
-        fd, filename = tempfile.mkstemp(suffix=".toml", text=True)
-        with open(filename, "w") as file:
-            toml.dump(template, file, encoder=MultilinePreferringTomlEncoder())
-        write_status = subprocess.call(
-            command.substitute(editor=editor, filename=filename), shell=True
-        )
-        if write_status != 0:
-            os.remove(filename)
-        return filename, write_status
-    else:
+    if not "EDITOR" in os.environ:
         raise Exception("EDITOR not found in env")
+    editor = os.environ["EDITOR"]
+    fd, filename = tempfile.mkstemp(suffix=".toml", text=True)
+    with open(filename, "w") as file:
+        toml.dump(template, file, encoder=MultilinePreferringTomlEncoder())
+    write_status = subprocess.call(
+        command.substitute(editor=editor, filename=filename), shell=True
+    )
+    if write_status != 0:
+        os.remove(filename)
+    return filename, write_status
 
 
 def validate_task(task):
     task_name = task.get("task")
     if not task:
-        console.print("[red bold]task not added")
+        print("[red bold]task not added")
         return {}
     elif not task_name:
-        console.print("[red bold]task has no name")
+        print("[red bold]task has no name")
         return {}
     elif task.get("status") and task.get("status") not in states.possible_states():
-        console.print(
-            "[red bold]state has be any one of {}".format(states.possible_states())
-        )
+        print("[red bold]state has be any one of {}".format(states.possible_states()))
         return {}
     else:
-        start_date, target_date = process_date_for_insert(task)
+        return task
+
+
+def prepare_task_for_insert(task):
+    start_date, target_date = process_date_for_insert(task)
+    if start_date or target_date:
         task.update(
             {
                 "start_date": start_date,
                 "target_date": target_date,
             }
         )
-        return task
+    else:
+        task.pop("start_date")
+        task.pop("target_date")
+    task.update({"created_date": datetime.datetime.now().strftime(date_format)})
+    return task
 
 
 def parse_start_and_target_date(task):
@@ -259,7 +270,7 @@ def parse_start_and_target_date(task):
         target_date = dtparser.parse(target_date).date()
         start_date = dtparser.parse(start_date).date()
     except dtparser.ParserError:
-        console.print("error in parsing dates!!")
+        print("error in parsing dates!!")
         sys.exit()
     return start_date, target_date
 
@@ -270,7 +281,7 @@ def process_date_for_insert(task):
     if start_date and target_date:
         start_date, target_date = parse_start_and_target_date(task)
         if start_date > target_date:
-            console.print("[red]start_date need to be lesser than target_date")
+            print("[red]start_date need to be lesser than target_date")
             sys.exit(0)
         else:
             return start_date.strftime(date_format), target_date.strftime(date_format)
@@ -284,7 +295,7 @@ def process_date_for_insert(task):
             )
             return start_date.strftime(date_format), target_date.strftime(date_format)
         except dtparser.ParserError:
-            console.print("error in parsing dates!!")
+            print("error in parsing dates!!")
             sys.exit()
     else:
         return "", ""
@@ -315,68 +326,39 @@ def insert(tasks):
         task_name = task.get("task")
         task = validate_task(task)
         if task:
+            task = prepare_task_for_insert(task)
+            print(task)
             try:
-                bucket.insert(
-                    [
-                        {
-                            "task": task_name,
-                            "status": task.get("status") or states.BACKLOG,
-                            "description": task.get("description"),
-                            "tags": task.get("tags"),
-                            "start_date": task.get("start_date"),
-                            "target_date": task.get("target_date"),
-                            "created_date": datetime.datetime.now().strftime(
-                                date_format
-                            ),
-                        }
-                    ]
-                )
+                db.insert([task])
                 insert_count += 1
             except DuplicateEntryError as err:
-                console.print("[red]Duplicate task found - {}".format(task_name))
-    console.print(
-        "[green bold]{}/{} {} added".format(
-            insert_count,
-            total_tasks,
-            "task" if total_tasks == 1 else "tasks",
-        )
-    )
+                print("[red]Duplicate task found - {}".format(task_name))
+    print("[green bold]{}/{} task(s) added".format(insert_count, total_tasks))
 
 
-def filter_tasks_by_tags(tagstr: str, status: str = ""):
+def filter_tasks_by_tags(tagstr: str):
     tags = list(map(str.strip, tagstr.split(",")))
-    if not status:
-        tasks = bucket.find(
-            lambda x: set(tags).issubset(set(x.get("tags")))
-            and x.get("archived") != True
-        )
-    else:
-        tasks = bucket.find(
-            lambda x: set(tags).issubset(set(x.get("tags")))
-            and x.get("status") == status
-            and x.get("archived") != True
-        )
-    return tasks
-
-
-def filter_tasks_by_status(bucket, status):
-    return bucket.find(
-        lambda x: x.get("status") == status and x.get("archived") != True
+    return db.find(
+        lambda x: set(tags).issubset(set(x.get("tags"))) and x.get("archived") != True
     )
 
 
-def number_of_task_based_on_status(bucket):
+def filter_tasks_by_status(status):
+    return db.find(lambda x: x.get("status") == status and x.get("archived") != True)
+
+
+def number_of_task_based_on_status():
     return {
-        status: len(filter_tasks_by_status(bucket, status))
+        status: len(filter_tasks_by_status(status))
         for status in states.possible_states()
     }
 
 
 def get_all_tasks():
-    return bucket.find(lambda x: x.get("archived") != True)
+    return db.find(lambda x: x.get("archived") != True)
 
 
-def get_total_number_of_tasks(bucket):
+def get_total_number_of_tasks():
     return len(get_all_tasks())
 
 
@@ -402,98 +384,49 @@ def get_all_task_name():
     return [task["task"] for task in all_tasks]
 
 
-def fuzzy_search(options, multiselect=False, preview=True):
-    options = "\n".join(options)
-    fuzzy_search_command = string.Template(
-        'echo -n "$options" | sk $multiselect --color="prompt:27,pointer:27" $preview'
-    )
-    selected = subprocess.Popen(
-        fuzzy_search_command.substitute(
-            options=options,
-            multiselect="-m" if multiselect else "",
-            preview='--preview="tmt preview {}" --preview-window=up:50%'
-            if preview
-            else "",
-        ),
-        shell=True,
-        stdout=subprocess.PIPE,
-    ).communicate()[0]
-    selected = selected.decode("utf-8")
-    return list(filter(None, selected.split("\n")))
-
-
 def display_initial_summary(total_task, tasknumber_by_status):
-    console.print(
-        "\n\n[bold green] total number of tasks {}[/]\n\n".format(total_task),
-        justify="center",
-    )
-    table = Table(
-        Column(states.BACKLOG, style=color_map.get(states.BACKLOG)),
-        Column(states.SELECTED, style=color_map.get(states.SELECTED)),
-        Column(states.RUNNING, style=color_map.get(states.RUNNING)),
-        Column(states.DONE, style=color_map.get(states.DONE)),
-        Column(states.REVISIT, style=color_map.get(states.REVISIT)),
-        title="status summary",
-        expand=True,
-    )
-    table.add_row(
-        str(tasknumber_by_status.get(states.BACKLOG)),
-        str(tasknumber_by_status.get(states.SELECTED)),
-        str(tasknumber_by_status.get(states.RUNNING)),
-        str(tasknumber_by_status.get(states.DONE)),
-        str(tasknumber_by_status.get(states.REVISIT)),
-    )
-    console.print(table)
-    console.print("\n\n")
-
-
-def find_buckets():
-    return filter(lambda x: x.suffix == ".json", task_root.iterdir())
-
-
-def get_bucket_names():
-    return sorted(map(lambda x: x.stem, find_buckets()))
-
-
-def display_buckets():
-    buckets = list(get_bucket_names())
-    current_bucket = ""
-    with open(current_bucket_path, "r") as current:
-        current_bucket = current.read().strip() or "dump"
-    try:
-        current_bucket_index = buckets.index(current_bucket)
-        buckets[current_bucket_index] = (
-            "* [green]" + buckets[current_bucket_index] + "[/]"
+    print(
+        Text(
+            "total number of tasks {}".format(total_task),
+            style=RichStyles.summary_title,
+            justify="center",
         )
-        console.print("\n")
-        console.print("\n".join(buckets))
-    except ValueError as ex:
-        console.print("[red]{}".format(ex))
+    )
+    print("\n")
+    table = RichTable.get_table("initial_summary")
+    rows = [tasknumber_by_status.get(state) for state in states.possible_states()]
+    table.add_row(*list(map(str, rows)))
+    print(table)
 
 
 def display_tag_based_summary(distinct_tags):
-    table = Table(
-        Column("tag"),
-        Column("status"),
-        title="tag summary",
-        expand=True,
-        show_lines=True,
-    )
-    for tag in distinct_tags:
-        content = ""
-        for state in states.possible_states():
-            total = len(filter_tasks_by_tags(tag, state))
-            if total:
-                content += "[{}] {} [/][black on grey93] {} [/] ".format(
-                    color_map.get(state), state, total
+    table = RichTable.get_table("tag_summary")
+    renderables = list()
+    for state in states.possible_states():
+        tasks = filter_tasks_by_status(state)
+        tags = list()
+        for task in tasks:
+            tags.extend(task.get("tags"))
+        if tags:
+            content = Text("\n")
+            for tag, number in Counter(tags).items():
+                content += Text(" {} ".format(tag), style=RichStyles.tag_style)
+                content += Text(
+                    " {} ".format(str(number)), style=RichStyles.total
+                ) + Text("\n")
+            renderables.append(
+                Panel(
+                    content,
+                    title="[{}] {} [/]".format(str(RichStyles.get_style(state)), state),
                 )
-        table.add_row(tag, content)
-    console.print(table, justify="center")
+            )
+    print("\n")
+    print(Columns(renderables, equal=True, align="center"))
 
 
 @app.command()
 def preview(task_name: str):
-    task = bucket.find(lambda x: x.get("task") == task_name)
+    task = db.find(lambda x: x.get("task") == task_name)
     display_task(task[0])
 
 
@@ -507,112 +440,64 @@ def new():
             insert(tasks)
 
 
-@inall_app.command("find")
-def inall_find(searchstr: str):
-    searchstr = searchstr.strip()
-    tasks = dict()
-    found_tasks = dict()
-    for bucket_name in get_bucket_names():
-        bucket = get_bucket(bucket_name)
-        tasks = bucket.find(lambda x: searchstr in x.get("task"))
-        if tasks:
-            found_tasks[bucket_name] = tasks
-    render_in_all_table(found_tasks)
-
-
-@inall_app.command("status")
-def inall_status(status: str):
-    status = status.strip()
-    found_tasks = dict()
-    for bucket_name in get_bucket_names():
-        bucket = get_bucket(bucket_name)
-        tasks = bucket.find(
-            lambda x: x.get("status") == status and x.get("archived") != True
-        )
-        if tasks:
-            found_tasks[bucket_name] = tasks
-    render_in_all_table(found_tasks)
-
-
-@tag_app.command("brief")
-def tag_brief(tagstr: str, status: str = typer.Argument("")):
-    tasks = filter_tasks_by_tags(tagstr, status)
+@app.command()
+def tag(tagstr: str):
+    tasks = filter_tasks_by_tags(tagstr)
     render_table(tasks)
 
 
-@tag_app.command("verbose")
-def tag_verbose(tagstr: str, status: str = typer.Argument("")):
-    tasks = filter_tasks_by_tags(tagstr, status)
-    for task in tasks:
-        display_task(task)
-
-
 @app.command()
-def status(
-    status: str = typer.Argument(states.RUNNING), display: str = typer.Argument("brief")
-):
-    tasks = filter_tasks_by_status(db, status)
+def status(status: str = typer.Argument(states.RUNNING)):
+    tasks = filter_tasks_by_status(status)
     if tasks:
-        if display == "brief":
-            render_table(tasks)
-        elif display == "verbose":
-            for task in tasks:
-                display_task(task)
-        else:
-            console.print("[red]display format has to be one of (brief | verbose)")
+        render_table(tasks)
+
+
+def diff(prev_tasks, new_tasks):
+    diff_dict = dict()
+    for _id, task in new_tasks.items():
+        if prev_tasks.get(_id) != task:
+            diff_dict.update({_id: task})
+            diff_dict.get(_id).update({"prev_task": prev_tasks.get(_id).get("task")})
+    return diff_dict
 
 
 @app.command()
 def edit():
-    def update(document):
-        if document:
-            filename, status = open_temp_toml_file(
-                {
-                    "task": document.get("task"),
-                    "status": document.get("status"),
-                    "tags": document.get("tags"),
-                    "start_date": document.get("start_date"),
-                    "target_date": document.get("target_date"),
-                    "description": document.get("description"),
-                }
-            )
-            if status == 0:
-                with open(filename, "r") as file:
-                    updated_task = toml.load(file)
-                    document.update(updated_task)
-                    return validate_task(document)
-
-    task_name = fuzzy_search(get_all_task_name())
-    if task_name:
-        task = bucket.find(lambda x: x.get("task") == task_name[0])
-        if task:
-            bucket.update(update, lambda x: x.get("_id") == task[0].get("_id"))
-
-
-@app.command()
-def editall():
-    tasks = get_all_tasks_ordered()
-    filename, _ = open_temp_toml_file(
-        {
-            str(task.get("_id")): {
-                "task": task.get("task"),
-                "status": task.get("status"),
-                "tags": task.get("tags"),
-                "description": task.get("description"),
-            }
-            for task in tasks
-        }
+    task_names = pyskim.skim(
+        get_all_task_name(),
+        '-m --preview="tmt preview {}" --preview-window=up:50% --bind="ctrl-a:select-all"',
     )
-    new_task_details = dict()
+    if not task_names:
+        sys.exit()
+    tasks = list()
+    for task_name in task_names:
+        tasks.extend(db.find(lambda x: x.get("task") == task_name))
+
+    prev_tasks = {
+        str(_id): {
+            "task": task.get("task"),
+            "status": task.get("status"),
+            "tags": task.get("tags"),
+            "description": task.get("description"),
+        }
+        for _id, task in enumerate(tasks, start=1)
+    }
+    filename, _ = open_temp_toml_file(prev_tasks)
+    new_tasks = dict()
     with open(filename, "r") as file:
-        new_task_details = toml.load(file)
-    for _id, edited_task in new_task_details.items():
+        new_tasks = toml.load(file)
+    diff_dict = diff(prev_tasks, new_tasks)
+
+    for _id, edited_task in diff_dict.items():
+        prev_task = edited_task.pop("prev_task")
 
         def update(document):
             document.update(edited_task)
             return validate_task(document)
 
-        bucket.update(update, lambda y: y.get("_id") == int(_id))
+        db.update(update, lambda y: y.get("task") == prev_task)
+    print("[green]{} task(s) updated".format(len(diff_dict)))
 
 
 @app.command()
@@ -620,77 +505,60 @@ def rm():
     def update(document):
         if document:
             document.update({"archived": True})
-            console.print("[red]task id - {} is archived".format(document.get("_id")))
             return document
 
-    task_names = fuzzy_search(get_all_task_name(), multiselect=True)
+    task_names = pyskim.skim(
+        get_all_task_name(), '-m --preview="tmt preview {}" --preview-window=up:50%'
+    )
     if task_names:
+        count = 0
         for task_name in task_names:
-            task = bucket.find(lambda x: x.get("task") == task_name)
+            task = db.find(lambda x: x.get("task") == task_name)
             if task:
-                bucket.update(update, lambda x: x.get("_id") == task[0].get("_id"))
+                db.update(update, lambda x: x.get("task") == task[0].get("task"))
+                count += 1
+        print("[green]{} task(s) archived".format(count))
 
 
 @app.command()
-def show():
-    task_name = fuzzy_search(get_all_task_name())
+def view():
+    task_name = pyskim.skim(
+        get_all_task_name(), '--preview="tmt preview {}" --preview-window=up:50%'
+    )
     if task_name:
-        task = bucket.find(lambda x: x.get("task") == task_name[0])
+        task = db.find(lambda x: x.get("task") == task_name[0])
         if task:
             display_task(task[0])
 
 
 @app.command()
-def summary(bucket_name: Optional[str] = typer.Argument(None)):
-    if bucket_name and bucket_name not in list(get_bucket_names()) + ["all"]:
-        console.print("[red]wrong bucket name passed")
-    if bucket_name == "all":
-        total_tasks = 0
-        tasknumber_by_status = Counter({})
-        for bucket_name in get_bucket_names():
-            bucket = get_bucket(bucket_name)
-            total_tasks += get_total_number_of_tasks(db)
-            tasknumber_by_status += Counter(number_of_task_based_on_status(db))
-        display_initial_summary(total_tasks, tasknumber_by_status)
-    else:
-        current_bucket = ""
-        with open(current_bucket_path, "r") as current:
-            current_bucket = current.read().strip()
-        db = get_bucket(current_bucket)
-        display_initial_summary(
-            get_total_number_of_tasks(db), number_of_task_based_on_status(db)
-        )
-        distinct_tags = get_distinct_tags()
-        display_tag_based_summary(distinct_tags)
+def summary():
+    total_tasks = 0
+    tasknumber_by_status = Counter({})
+    total_tasks += get_total_number_of_tasks()
+    tasknumber_by_status += Counter(number_of_task_based_on_status())
+    display_initial_summary(total_tasks, tasknumber_by_status)
+    distinct_tags = get_distinct_tags()
+    display_tag_based_summary(distinct_tags)
 
 
-@app.command("")
-def ls(order: str = typer.Argument("recent"), limit: int = typer.Argument(5)):
-    if not order in ("recent", "past"):
-        console.print("[red]order has to be one of (recent | past)")
-        sys.exit()
-
+@app.command()
+def ll(limit: int = typer.Argument(5)):
     all_tasks = get_all_tasks_ordered()
-    if order == "recent":
-        tasks = all_tasks[:limit]
-    else:
-        tasks = all_tasks[-limit:]
-
+    tasks = all_tasks[:limit]
+    if limit < 0:
+        tasks = all_tasks[limit:]
     if tasks:
         for task in tasks:
             display_task(task)
 
 
-@app.command("")
-def lss(order: str = typer.Argument("recent"), limit: int = typer.Argument(5)):
-    if not order in ("recent", "past"):
-        console.print("[red]order has to be one of (recent | past)")
-        sys.exit()
+@app.command()
+def ls(limit: int = typer.Argument(5)):
     all_tasks = get_all_tasks_ordered()
-    if order == "recent":
-        tasks = all_tasks[:limit]
-    else:
-        tasks = all_tasks[-limit:]
+    tasks = all_tasks[:limit]
+    if limit < 0:
+        tasks = all_tasks[limit:]
     if tasks:
         render_table(tasks)
 
@@ -698,7 +566,7 @@ def lss(order: str = typer.Argument("recent"), limit: int = typer.Argument(5)):
 @app.command()
 def find(searchstr: str):
     searchstr = searchstr.strip()
-    tasks = bucket.find(
+    tasks = db.find(
         lambda x: searchstr in x.get("task") or searchstr in x.get("description")
     )
     for task in tasks:
@@ -706,52 +574,16 @@ def find(searchstr: str):
 
 
 @app.command()
-def check():
-    display_buckets()
+def q():
+    pass
 
 
-@app.command()
-def goto():
-    bucket_name = fuzzy_search(get_bucket_names(), multiselect=False, preview=False)
-    if bucket_name:
-        with open(current_bucket_path, "w") as current:
-            current.write(bucket_name[0])
-
-
-@app.command()
-def reindex():
-    bucket.index._id = 0
-
-    def update(document):
-        document.update({"_id": bucket.index._id})
-        return document
-
-    tasks = get_all_tasks_ordered(reverse=False)
-    for task in tasks:
-        bucket.index.increment()
-        bucket.update(update, lambda x: x.get("_id") == task.get("_id"))
-    console.print("[green]re-indexing done for {} tasks!".format(len(tasks)))
-
-
-def get_bucket(bucket_name):
-    return jsondb(str(pathlib.Path(task_root / "{}.json".format(bucket_name))))
-
-
-def init_db():
-    if not current_bucket_path.exists():
-        current_bucket_path.touch()
-    with open(current_bucket_path, "r") as current:
-        current_bucket = current.read().strip() or "dump"
-        db = jsondb(str(pathlib.Path(task_root / "{}.json".format(current_bucket))))
+def run():
+    if not Paths.enc_path.exists():
+        global db
+        db = jsondb(str(Paths.tmt_path))
         db.set_index("task")
-        db.set_index("_id")
-        return db
-
-
-bucket = init_db()
-if __name__ == "__main__":
-    if not shutil.which("sk"):
-        console.print("[bold red]could not find sk in path")
-        console.print("install from https://github.com/lotabout/skim")
-    else:
         app()
+    else:
+        app_locked()
+    Paths.tmt_root.mkdir(parents=True, exist_ok=True)
