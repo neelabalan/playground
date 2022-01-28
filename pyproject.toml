@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "urlr"
-version = "0.1.0"
+version = "0.1.1"
 description = "command line url management"
 authors = ["neelabalan <neelabalan.n@outlook.com>"]
 
