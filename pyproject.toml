@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "qn"
-version = "0.1.1"
+version = "0.1.2"
 description = "quick markdown notes from terminal"
 authors = ["neelabalan <neelabalan.n@outlook.com>"]
 
@@ -9,8 +9,9 @@ python = "^3.8"
 rich = "^10.14.0"
 typer = {extras = ["all"], version = "^0.4.0"}
 toml = "^0.10.2"
-jsondb = {git = "https://github.com/neelabalan/jsondb.git", rev = "main"}
 cryptography = "^36.0.1"
+jsondb = {git = "https://github.com/neelabalan/jsondb.git", rev = "main"}
+pyskim = {git = "https://github.com/neelabalan/pyskim.git", rev = "main"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
