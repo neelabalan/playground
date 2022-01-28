@@ -17,7 +17,7 @@ import typer
 from jsondb import DuplicateEntryError, jsondb
 from rich import box, print
 from rich.columns import Columns
-from rich.console import Group
+from rich.console import Console, Group
 from rich.markdown import Markdown
 from rich.panel import Panel
 from rich.style import Style
@@ -139,6 +139,7 @@ class MultilinePreferringTomlEncoder(TomlEncoder):
 
 
 def display_task(task):
+    console = Console(color_system="256")
     tags = Text()
     for tag in task.get("tags"):
         tags.append("#{}".format(tag), style=RichStyles.tag_style)
@@ -162,15 +163,15 @@ def display_task(task):
             stylize_days_left(str(find_days_left(task))),
         )
     print("\n")
-    print(
+    console.print(
         Panel(
             Group(
                 Text("\n" + task.get("task") + "\n", style="yellow", justify="center"),
                 table,
                 Markdown(task.get("description"), code_theme="ansi_dark"),
             ),
-            title=Text(
-                task.get("status"), style=getattr(RichStyles, task.get("status"))
+            title="[{}]{}[/]".format(
+                str(getattr(RichStyles, task.get("status"))), task.get("status")
             ),
             title_align="left",
             subtitle=tags + Text(task.get("created_date")),
@@ -466,7 +467,7 @@ def diff(prev_tasks, new_tasks):
 def edit():
     task_names = pyskim.skim(
         get_all_task_name(),
-        '-m --preview="tmt preview {}" --preview-window=up:50% --bind="ctrl-a:select-all"',
+        '-m --ansi --preview="tmt preview {}" --preview-window=up:50% --bind="ctrl-a:select-all"',
     )
     if not task_names:
         sys.exit()
@@ -508,7 +509,8 @@ def rm():
             return document
 
     task_names = pyskim.skim(
-        get_all_task_name(), '-m --preview="tmt preview {}" --preview-window=up:50%'
+        get_all_task_name(),
+        '-m --ansi --preview="tmt preview {}" --preview-window=up:50%',
     )
     if task_names:
         count = 0
@@ -523,7 +525,7 @@ def rm():
 @app.command()
 def view():
     task_name = pyskim.skim(
-        get_all_task_name(), '--preview="tmt preview {}" --preview-window=up:50%'
+        get_all_task_name(), '--ansi --preview="tmt preview {}" --preview-window=up:50%'
     )
     if task_name:
         task = db.find(lambda x: x.get("task") == task_name[0])
