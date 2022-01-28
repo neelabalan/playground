@@ -11,6 +11,7 @@ typer = {extras = ["all"], version = "^0.4.0"}
 toml = "^0.10.2"
 bs4 = "^0.0.1"
 jsondb = {git = "https://github.com/neelabalan/jsondb.git", rev = "main"}
+pyskim = {git = "https://github.com/neelabalan/pyskim.git", rev = "main"}
 
 [tool.poetry.dev-dependencies]
 black = "^21.11b1"
@@ -20,4 +21,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-urlr = "urlr:app"
+urlr = "urlr:run"
