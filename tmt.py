@@ -239,10 +239,12 @@ def validate_task(task):
     if not task:
         print("[red bold]task not added")
         return {}
-    elif not task_name:
+    if not task_name:
         print("[red bold]task has no name")
         return {}
-    elif task.get("status") and task.get("status") not in states.possible_states():
+    if not task.get("status"):
+        task["status"] = "backlog"
+    if task.get("status") and task.get("status") not in states.possible_states():
         print("[red bold]state has be any one of {}".format(states.possible_states()))
         return {}
     else:
