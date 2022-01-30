@@ -272,13 +272,6 @@ def insert(tasks):
     print("[green bold]{}/{} task(s) added".format(insert_count, total_tasks))
 
 
-def filter_tasks_by_tags(tagstr: str):
-    tags = list(map(str.strip, tagstr.split(",")))
-    return db.find(
-        lambda x: set(tags).issubset(set(x.get("tags"))) and x.get("archived") != True
-    )
-
-
 def filter_tasks_by_status(status):
     return db.find(lambda x: x.get("status") == status and x.get("archived") != True)
 
@@ -311,7 +304,7 @@ def get_distinct_tags():
     all_tasks = get_all_tasks()
     for task in all_tasks:
         tags.update(task.get("tags"))
-    return tags
+    return sorted(tags)
 
 
 def get_all_task_name():
@@ -382,9 +375,17 @@ def new():
 
 
 @app.command()
-def tag(tagstr: str):
-    tasks = filter_tasks_by_tags(tagstr)
-    render_table(tasks)
+def tag():
+    tags = pyskim.skim(get_distinct_tags(), '-m --color="prompt:27,pointer:27"')
+    if tags:
+        tasks = db.find(lambda x: set(tags).issubset(set(x.get("tags"))))
+        task_names = [task["task"] for task in tasks]
+        task = pyskim.skim(
+            task_names,
+            '-m --color="prompt:27,pointer:27" --preview="tmt preview {}" --preview-window=up:50%',
+        )
+        if task:
+            display_task(task[0])
 
 
 @app.command()
