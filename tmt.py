@@ -342,7 +342,6 @@ def display_initial_summary(total_task, tasknumber_by_status):
 
 
 def display_tag_based_summary(distinct_tags):
-    table = RichTable.get_table("tag_summary")
     renderables = list()
     for state in states.possible_states():
         tasks = filter_tasks_by_status(state)
