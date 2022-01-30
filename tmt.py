@@ -1,4 +1,6 @@
+import base64
 import datetime
+import hashlib
 import json
 import os
 import pathlib
@@ -14,6 +16,7 @@ import dateutil.parser as dtparser
 import pyskim
 import toml
 import typer
+from cryptography.fernet import Fernet, InvalidToken
 from jsondb import DuplicateEntryError, jsondb
 from rich import box, print
 from rich.columns import Columns
@@ -579,6 +582,46 @@ def find(searchstr: str):
 
 @app.command()
 def q():
+    pass
+
+
+@app.command()
+def encrypt(
+    password: str = typer.Option(
+        ..., prompt=True, confirmation_prompt=True, hide_input=True
+    )
+):
+    cipher_text = ""
+    hasher = hashlib.sha3_256()
+    hasher.update(password.encode("utf-8"))
+    fernet = Fernet(base64.urlsafe_b64encode(hasher.digest()))
+    with open(Paths.tmt_path, "r") as file:
+        cipher_text = fernet.encrypt(file.read().encode("utf-8"))
+    Paths.tmt_path.unlink()
+    with open(Paths.enc_path, "w") as file:
+        file.write(cipher_text.decode("utf-8"))
+
+
+@app_locked.command()
+def decrypt(password: str = typer.Option(..., prompt=True, hide_input=True)):
+    cipher_text = plain_text = ""
+    hasher = hashlib.sha3_256()
+    hasher.update(password.encode("utf-8"))
+    fernet = Fernet(base64.urlsafe_b64encode(hasher.digest()))
+    with open(Paths.enc_path, "r") as file:
+        cipher_text = file.read()
+    try:
+        plain_text = fernet.decrypt(cipher_text.encode("utf-8"))
+        with open(Paths.tmt_path, "w") as file:
+            file.write(plain_text.decode("utf-8"))
+        Paths.enc_path.unlink()
+    except InvalidToken as e:
+        print("[red]invalid password")
+
+
+@app.command()
+@app_locked.command()
+def export(path: str):
     pass
 
 
