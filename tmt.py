@@ -65,16 +65,16 @@ class RichStyles:
     running = Style(color="black", bgcolor="green")
     done = Style(color="black", bgcolor="grey30")
     revisit = Style(color="black", bgcolor="light_goldenrod1")
-    date = Style(color="grey70")
     tag_style = Style(color="black", bgcolor="blue")
     title_style = Style(color="green", bold=True)
-    timeframe = Style(color="blue")
     NA = Style(color="grey42")
-    days_overdue = Style(color="red")
-    days_left = Style(color="green")
+    days_overdue = Style(bgcolor="red", color="grey93")
+    days_left = Style(bgcolor="dark_green", color="grey93")
+    date_text = style = Style(color="grey93", bgcolor="grey19")
     total = Style(color="black", bgcolor="grey93")
     summary_title = Style(color="green", bold=True)
     empty = Style(color="white", bgcolor="black")
+    date = style = Style(bgcolor="grey93", color="black")
 
     @staticmethod
     def get_style(style):
@@ -86,42 +86,9 @@ class RichTable:
     status = "status"
     tag = "tag"
     tags = "tags"
-    target_date = "target_date"
-    days_left = "days_left"
-    start_date = "start_date"
-    timeframe = "timeframe"
+    due_date = "due date"
+    days_left = "days left"
     NA = "NA"
-
-    @staticmethod
-    def get_table(table):
-        if table == "date_table":
-            return Table(
-                expand=True,
-                box=box.ROUNDED,
-                show_lines=True,
-                show_header=False,
-            )
-        elif table == "task_table":
-            return Table(
-                RichTable.task,
-                RichTable.status,
-                RichTable.tags,
-                RichTable.target_date,
-                RichTable.days_left,
-                expand=True,
-                leading=1,
-            )
-        elif table == "initial_summary":
-            return Table(
-                *[
-                    Column(state, style=RichStyles.get_style(state))
-                    for state in states.possible_states()
-                ],
-                title="status summary",
-                expand=True,
-            )
-        else:
-            return None
 
 
 # https://github.com/sanskrit-coders/sanskrit_data/blob/67e0999be6f8bf7fff761f0484141e03b9e551f4/sanskrit_data/toml_helper.py
@@ -148,36 +115,39 @@ def display_task(task):
         tags.append("#{}".format(tag), style=RichStyles.tag_style)
         tags.append(" ── ")
 
-    start_date, target_date = task.get("start_date"), task.get("target_date")
-    table = Text()
-    if start_date and target_date:
-        table = RichTable.get_table("date_table")
-        days_left = str(find_days_left(task))
-        table.add_row(
-            Text(RichTable.start_date, style=RichStyles.date),
-            task.get("start_date"),
-            Text(RichTable.target_date, style=RichStyles.date),
-            task.get("target_date"),
+    due_date = task.get("due_date")
+    subtitle = Text("")
+    if due_date:
+        subtitle = (
+            tags
+            + Text(" days left ", style=RichStyles.date_text)
+            + stylize_days_left(" {} ".format(str(find_days_left(task))))
+            + Text(" ── ")
+            + Text(" due date ", style=RichStyles.date_text)
+            + Text(" {} ".format(due_date), style=RichStyles.date)
+            + Text(" ── ")
+            + Text(" created date ", style=RichStyles.date_text)
+            + Text(" {} ".format(task.get("created_date")), style=RichStyles.date)
         )
-        table.add_row(
-            Text(RichTable.timeframe, style=RichStyles.timeframe),
-            str(find_timeframe(task)),
-            Text(RichTable.days_left, style=RichStyles.date),
-            stylize_days_left(str(find_days_left(task))),
+    else:
+        subtitle = (
+            tags
+            + Text(" created date ", style=RichStyles.date_text)
+            + Text(" {} ".format(task.get("created_date")), style=RichStyles.date)
         )
     print("\n")
     console.print(
         Panel(
             Group(
                 Text("\n" + task.get("task") + "\n", style="yellow", justify="center"),
-                table,
                 Markdown(task.get("description"), code_theme="ansi_dark"),
+                Text("\n"),
             ),
             title="[{}]{}[/]".format(
                 str(getattr(RichStyles, task.get("status"))), task.get("status")
             ),
             title_align="left",
-            subtitle=tags + Text(task.get("created_date")),
+            subtitle=subtitle,
             subtitle_align="right",
         )
     )
@@ -191,18 +161,26 @@ def stylize_days_left(days_left):
         style = RichStyles.NA
     else:
         style = RichStyles.days_left
-    return Text(days_left, style=style)
+    return Text(days_left, style=style, justify="center")
 
 
 def render_table(tasks):
-    table = RichTable.get_table("task_table")
+    table = Table(
+        RichTable.task,
+        RichTable.status,
+        RichTable.tags,
+        RichTable.due_date,
+        RichTable.days_left,
+        expand=True,
+        leading=1,
+    )
     for task in tasks:
         status = task.get("status")
         table.add_row(
             task.get("task"),
             Text(status, style=RichStyles.get_style(status)),
             ", ".join(task.get("tags")),
-            task.get("target_date") or Text(RichTable.NA, style=RichStyles.NA),
+            task.get("due_date") or Text(RichTable.NA, style=RichStyles.NA),
             stylize_days_left(str(find_days_left(task))),
         )
     print(table)
@@ -216,24 +194,15 @@ def open_temp_toml_file(template=None):
                     "task": "",
                     "status": "",
                     "tags": [],
-                    "start_date": "",
-                    "target_date": "",
+                    "due_date": "",
                     "description": "\n",
                 }
             ]
         }
-    command = string.Template("$editor $filename")
-    if not "EDITOR" in os.environ:
-        raise Exception("EDITOR not found in env")
-    editor = os.environ["EDITOR"]
     fd, filename = tempfile.mkstemp(suffix=".toml", text=True)
     with open(filename, "w") as file:
         toml.dump(template, file, encoder=MultilinePreferringTomlEncoder())
-    write_status = subprocess.call(
-        command.substitute(editor=editor, filename=filename), shell=True
-    )
-    if write_status != 0:
-        os.remove(filename)
+    write_status = subprocess.call("$EDITOR {}".format(filename), shell=True)
     return filename, write_status
 
 
@@ -251,78 +220,41 @@ def validate_task(task):
         print("[red bold]state has be any one of {}".format(states.possible_states()))
         return {}
     else:
+        due_date = process_date_for_insert(task)
+        if due_date:
+            task.update({"due_date": due_date})
+        else:
+            task.pop("due_date")
+        task.update({"created_date": datetime.datetime.now().strftime(date_format)})
         return task
 
 
-def prepare_task_for_insert(task):
-    start_date, target_date = process_date_for_insert(task)
-    if start_date or target_date:
-        task.update(
-            {
-                "start_date": start_date,
-                "target_date": target_date,
-            }
-        )
-    else:
-        task.pop("start_date")
-        task.pop("target_date")
-    task.update({"created_date": datetime.datetime.now().strftime(date_format)})
-    return task
-
-
-def parse_start_and_target_date(task):
-    start_date, target_date = task.get("start_date"), task.get("target_date")
+def parse_due_date(task):
+    due_date = task.get("due_date")
     try:
-        target_date = dtparser.parse(target_date).date()
-        start_date = dtparser.parse(start_date).date()
+        due_date = dtparser.parse(due_date).date()
     except dtparser.ParserError:
-        print("error in parsing dates!!")
+        print("error in parsing due date!")
         sys.exit()
-    return start_date, target_date
+    return due_date
 
 
 def process_date_for_insert(task):
-    start_date, target_date = task.get("start_date", ""), task.get("target_date", "")
-
-    if start_date and target_date:
-        start_date, target_date = parse_start_and_target_date(task)
-        if start_date > target_date:
-            print("[red]start_date need to be lesser than target_date")
-            sys.exit(0)
-        else:
-            return start_date.strftime(date_format), target_date.strftime(date_format)
-    elif target_date and not start_date:
-        try:
-            target_date = dtparser.parse(target_date).date()
-            start_date = (
-                dtparser.parse(task.get("created_date")).date()
-                if task.get("created_date")
-                else datetime.datetime.now().date()
-            )
-            return start_date.strftime(date_format), target_date.strftime(date_format)
-        except dtparser.ParserError:
-            print("error in parsing dates!!")
-            sys.exit()
+    due_date = task.get("due_date", "")
+    if due_date:
+        due_date = parse_due_date(task)
+        return due_date.strftime(date_format)
     else:
-        return "", ""
-
-
-def find_timeframe(task):
-    if task.get("start_date") and task.get("target_date"):
-        start_date, target_date = parse_start_and_target_date(task)
-        return (target_date - start_date).days
-    return "NA"
+        return ""
 
 
 def find_days_left(task):
-    if task.get("start_date") and task.get("target_date"):
-        start_date, target_date = parse_start_and_target_date(task)
+    if task.get("due_date"):
+        due_date = parse_due_date(task)
         today = datetime.datetime.now().date()
-        if start_date > today:
-            return "task start date has not reached"
-        else:
-            return (target_date - today).days
-    return "NA"
+        return (due_date - today).days
+    else:
+        return "NA"
 
 
 def insert(tasks):
@@ -332,8 +264,6 @@ def insert(tasks):
         task_name = task.get("task")
         task = validate_task(task)
         if task:
-            task = prepare_task_for_insert(task)
-            print(task)
             try:
                 db.insert([task])
                 insert_count += 1
@@ -369,9 +299,8 @@ def get_total_number_of_tasks():
 
 
 def get_all_tasks_ordered(reverse=True):
-    all_tasks = get_all_tasks()
     return sorted(
-        all_tasks,
+        get_all_tasks(),
         key=lambda i: dtparser.parse(i["created_date"]),
         reverse=reverse,
     )
@@ -386,11 +315,19 @@ def get_distinct_tags():
 
 
 def get_all_task_name():
-    all_tasks = get_all_tasks()
+    all_tasks = get_all_tasks_ordered()
     return [task["task"] for task in all_tasks]
 
 
 def display_initial_summary(total_task, tasknumber_by_status):
+    table = Table(
+        *[
+            Column(state, style=RichStyles.get_style(state))
+            for state in states.possible_states()
+        ],
+        title="status summary",
+        expand=True,
+    )
     print(
         Text(
             "total number of tasks {}".format(total_task),
@@ -399,7 +336,6 @@ def display_initial_summary(total_task, tasknumber_by_status):
         )
     )
     print("\n")
-    table = RichTable.get_table("initial_summary")
     rows = [tasknumber_by_status.get(state) for state in states.possible_states()]
     table.add_row(*list(map(str, rows)))
     print(table)
@@ -486,6 +422,7 @@ def edit():
             "status": task.get("status"),
             "tags": task.get("tags"),
             "description": task.get("description"),
+            "due_date": task.get("due_date"),
         }
         for _id, task in enumerate(tasks, start=1)
     }
@@ -547,17 +484,6 @@ def summary():
     display_initial_summary(total_tasks, tasknumber_by_status)
     distinct_tags = get_distinct_tags()
     display_tag_based_summary(distinct_tags)
-
-
-@app.command()
-def ll(limit: int = typer.Argument(5)):
-    all_tasks = get_all_tasks_ordered()
-    tasks = all_tasks[:limit]
-    if limit < 0:
-        tasks = all_tasks[limit:]
-    if tasks:
-        for task in tasks:
-            display_task(task)
 
 
 @app.command()
