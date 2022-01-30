@@ -1,3 +1,5 @@
+import base64
+import hashlib
 import json
 import os
 import pathlib
@@ -11,6 +13,7 @@ import pyskim
 import toml
 import typer
 from bs4 import BeautifulSoup
+from cryptography.fernet import Fernet, InvalidToken
 from jsondb import DuplicateEntryError, jsondb
 from rich import print
 from rich.columns import Columns
@@ -20,12 +23,19 @@ from rich.style import Style
 from rich.text import Text
 
 app = typer.Typer()
+app_locked = typer.Typer()
 db = None
 
 
 class RichStyles:
     title_style = Style(color="grey74", bold=True)
     url_style = Style(color="blue", underline=True)
+
+
+class Paths:
+    urlr_root = pathlib.Path.home() / ".local/urlr/"
+    urlr_path = pathlib.Path.home() / ".local/urlr/urlr.json"
+    enc_path = pathlib.Path.home() / ".local/urlr/urlr.enc"
 
 
 def open_temp_toml_file(template={"-": [{"url": "", "title": "", "tags": []}]}):
@@ -92,6 +102,7 @@ def insert(bookmarks):
     insert_count = 0
     for bookmark in bookmarks.get("-"):
         bookmark = validate_insert(bookmark)
+        url = bookmark.get("url")
         try:
             db.insert(
                 [
@@ -233,6 +244,46 @@ def import_viv():
         insert(bookmarks)
 
 
+@app.command()
+def encrypt(
+    password: str = typer.Option(
+        ..., prompt=True, confirmation_prompt=True, hide_input=True
+    )
+):
+    cipher_text = ""
+    hasher = hashlib.sha3_256()
+    hasher.update(password.encode("utf-8"))
+    fernet = Fernet(base64.urlsafe_b64encode(hasher.digest()))
+    with open(Paths.urlr_path, "r") as file:
+        cipher_text = fernet.encrypt(file.read().encode("utf-8"))
+    Paths.urlr_path.unlink()
+    with open(Paths.enc_path, "w") as file:
+        file.write(cipher_text.decode("utf-8"))
+
+
+@app_locked.command()
+def decrypt(password: str = typer.Option(..., prompt=True, hide_input=True)):
+    cipher_text = plain_text = ""
+    hasher = hashlib.sha3_256()
+    hasher.update(password.encode("utf-8"))
+    fernet = Fernet(base64.urlsafe_b64encode(hasher.digest()))
+    with open(Paths.enc_path, "r") as file:
+        cipher_text = file.read()
+    try:
+        plain_text = fernet.decrypt(cipher_text.encode("utf-8"))
+        with open(Paths.urlr_path, "w") as file:
+            file.write(plain_text.decode("utf-8"))
+        Paths.enc_path.unlink()
+    except InvalidToken as e:
+        print("[red]invalid password")
+
+
+@app.command()
+@app_locked.command()
+def export(path: str):
+    pass
+
+
 @app.callback(invoke_without_command=True)
 def main(ctx: typer.Context):
     if ctx.invoked_subcommand is None:
@@ -251,9 +302,11 @@ def main(ctx: typer.Context):
 
 
 def run():
-    global db
-    dbroot = pathlib.Path.home() / ".local/urlr"
-    dbroot.mkdir(parents=True, exist_ok=True)
-    db = jsondb(str(pathlib.Path(dbroot / "urlr.json")))
-    db.set_index("url")
-    app()
+    if not Paths.enc_path.exists():
+        global db
+        db = jsondb(str(Paths.urlr_path))
+        db.set_index("url")
+        app()
+    else:
+        app_locked()
+    Paths.urlr_root.mkdir(parents=True, exist_ok=True)
