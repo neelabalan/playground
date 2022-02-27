@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tmt"
-version = "0.1.5"
+version = "0.1.6"
 description = "task management tool"
 authors = ["neelabalan <neelabalan.n@outlook.com>"]
 

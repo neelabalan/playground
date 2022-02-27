@@ -59,30 +59,57 @@ class Paths:
     enc_path = pathlib.Path.home() / ".local/tmt/tmt.enc"
 
 
-class RichStyles:
-    backlog = Style(color="black", bgcolor="dark_orange3")
-    selected = Style(color="black", bgcolor="blue")
-    running = Style(color="black", bgcolor="green")
-    done = Style(color="black", bgcolor="grey30")
-    revisit = Style(color="black", bgcolor="light_goldenrod1")
-    tag_style = Style(color="black", bgcolor="blue")
-    title_style = Style(color="green", bold=True)
-    NA = Style(color="grey42")
-    days_overdue = Style(bgcolor="red", color="grey93")
-    days_left = Style(bgcolor="dark_green", color="grey93")
-    date_text = style = Style(color="grey93", bgcolor="grey19")
-    total = Style(color="black", bgcolor="grey93")
-    summary_title = Style(color="green", bold=True)
-    empty = Style(color="white", bgcolor="black")
-    date = style = Style(bgcolor="grey93", color="black")
+class Color:
+    white = "grey93"
+    black = "black"
 
-    @staticmethod
-    def get_style(style):
-        return getattr(RichStyles, style)
+    class Light:
+        grey = "grey27"
+        red = "red"
+        green = "green"
+        blue = "blue"
+        yellow = "yellow"
+
+    class Dark:
+        sky_blue = "deep_sky_blue4"
+        orange = "orange4"
+        blue = "dark_blue"
+        green = "dark_green"
+        red = "dark_red"
+        grey = "grey11"
+
+
+class RichStyles:
+    class Status:
+        backlog = Style(bgcolor=Color.Dark.blue)
+        selected = Style(bgcolor=Color.Dark.sky_blue)
+        running = Style(bgcolor=Color.Dark.green)
+        done = Style(bgcolor=Color.Dark.grey)
+        revisit = Style(bgcolor=Color.Dark.orange)
+
+    tag_style = Style(color=Color.Light.blue, bold=True)
+    title_style = Style(color=Color.Light.green, bold=True)
+
+    NA = Style(color=Color.Light.grey)
+    days_overdue = Style(bgcolor=Color.Dark.red)
+    days_left = Style(bgcolor=Color.Dark.green)
+    date_text = style = Style(bgcolor=Color.Dark.grey)
+
+    date = style = Style(bgcolor=Color.Light.grey)
+    total = Style(bgcolor=Color.Light.grey)
+    summary_title = Style(color=Color.Light.green, bold=True)
+    priority = {
+        1: Style(bgcolor=Color.Dark.red),
+        2: Style(bgcolor=Color.Dark.orange),
+        3: Style(bgcolor=Color.Dark.green),
+        4: Style(bgcolor=Color.Dark.sky_blue),
+        5: Style(bgcolor=Color.Dark.blue),
+    }
 
 
 class RichTable:
     task = "task"
+    priority = "priority"
     status = "status"
     tag = "tag"
     tags = "tags"
@@ -91,28 +118,28 @@ class RichTable:
     NA = "NA"
 
 
-# https://github.com/sanskrit-coders/sanskrit_data/blob/67e0999be6f8bf7fff761f0484141e03b9e551f4/sanskrit_data/toml_helper.py
-def _dump_str_prefer_multiline(v):
-    multilines = v.split("\n")
-    if len(multilines) > 1:
-        return unicode('"""\n' + v.replace('"""', '\\"""').strip() + '\n"""')
-    else:
-        return _dump_str(v)
-
-
 class MultilinePreferringTomlEncoder(TomlEncoder):
     def __init__(self, _dict=dict, preserve=False):
         super(MultilinePreferringTomlEncoder, self).__init__(
             _dict=dict, preserve=preserve
         )
-        self.dump_funcs[str] = _dump_str_prefer_multiline
+        self.dump_funcs[str] = MultilinePreferringTomlEncoder._dump_str_prefer_multiline
+
+    # https://github.com/sanskrit-coders/sanskrit_data/blob/67e0999be6f8bf7fff761f0484141e03b9e551f4/sanskrit_data/toml_helper.py
+    @staticmethod
+    def _dump_str_prefer_multiline(v):
+        multilines = v.split("\n")
+        if len(multilines) > 1:
+            return unicode('"""\n' + v.replace('"""', '\\"""').strip() + '\n"""')
+        else:
+            return _dump_str(v)
 
 
 def display_task(task):
     console = Console(color_system="256")
     tags = Text()
     for tag in task.get("tags"):
-        tags.append("#{}".format(tag), style=RichStyles.tag_style)
+        tags.append(" #{} ".format(tag), style=RichStyles.tag_style)
         tags.append(" ── ")
 
     due_date = task.get("due_date")
@@ -143,8 +170,8 @@ def display_task(task):
                 Markdown(task.get("description"), code_theme="ansi_dark"),
                 Text("\n"),
             ),
-            title="[{}]{}[/]".format(
-                str(getattr(RichStyles, task.get("status"))), task.get("status")
+            title="[{}] {} [/]".format(
+                str(getattr(RichStyles.Status, task.get("status"))), task.get("status")
             ),
             title_align="left",
             subtitle=subtitle,
@@ -166,6 +193,7 @@ def stylize_days_left(days_left):
 
 def render_table(tasks):
     table = Table(
+        RichTable.priority,
         RichTable.task,
         RichTable.status,
         RichTable.tags,
@@ -177,8 +205,13 @@ def render_table(tasks):
     for task in tasks:
         status = task.get("status")
         table.add_row(
+            Text(
+                str(task.get("priority")),
+                style=RichStyles.priority.get(task.get("priority")),
+                justify="center",
+            ),
             task.get("task"),
-            Text(status, style=RichStyles.get_style(status)),
+            Text(status, style=getattr(RichStyles.Status, status)),
             ", ".join(task.get("tags")),
             task.get("due_date") or Text(RichTable.NA, style=RichStyles.NA),
             stylize_days_left(str(find_days_left(task))),
@@ -192,6 +225,7 @@ def open_temp_toml_file(template=None):
             "-": [
                 {
                     "task": "",
+                    "priority": 5,
                     "status": "",
                     "tags": [],
                     "due_date": "",
@@ -218,15 +252,27 @@ def validate_task(task):
         task["status"] = "backlog"
     if task.get("status") and task.get("status") not in states.possible_states():
         print("[red bold]state has be any one of {}".format(states.possible_states()))
-        return {}
+        print("[red bold]proceeding with state as BACKLOG")
+        task["status"] = "backlog"
+    if task.get("priority") or task.get("priority") == 0:
+        try:
+            priority = int(task.get("priority"))
+            if not 0 < priority < 6:
+                print("[red bold]priority must be between [1,5]")
+                print("[red bold]proceeding with priority as 5")
+                priority = 5
+            task["priority"] = priority
+        except ValueError as err:
+            print("[red]priority has to be a number")
+            return {}
+
+    due_date = process_date_for_insert(task)
+    if due_date:
+        task.update({"due_date": due_date})
     else:
-        due_date = process_date_for_insert(task)
-        if due_date:
-            task.update({"due_date": due_date})
-        else:
-            task.pop("due_date")
-        task.update({"created_date": datetime.datetime.now().strftime(date_format)})
-        return task
+        task.pop("due_date")
+    task.update({"created_date": datetime.datetime.now().strftime(date_format)})
+    return task
 
 
 def parse_due_date(task):
@@ -312,50 +358,43 @@ def get_all_task_name():
     return [task["task"] for task in all_tasks]
 
 
-def display_initial_summary(total_task, tasknumber_by_status):
+def display_summary(total_task, tasknumber_by_status):
     table = Table(
-        *[
-            Column(state, style=RichStyles.get_style(state))
-            for state in states.possible_states()
-        ],
-        title="status summary",
-        expand=True,
-    )
-    print(
-        Text(
-            "total number of tasks {}".format(total_task),
-            style=RichStyles.summary_title,
-            justify="center",
-        )
+        "state",
+        "tag",
+        "total",
+        "percentage",
+        title="total number of tasks {}".format(total_task),
+        padding=4,
     )
     print("\n")
-    rows = [tasknumber_by_status.get(state) for state in states.possible_states()]
-    table.add_row(*list(map(str, rows)))
-    print(table)
-
-
-def display_tag_based_summary(distinct_tags):
-    renderables = list()
     for state in states.possible_states():
         tasks = filter_tasks_by_status(state)
         tags = list()
         for task in tasks:
             tags.extend(task.get("tags"))
         if tags:
-            content = Text("\n")
-            for tag, number in Counter(tags).items():
-                content += Text(" {} ".format(tag), style=RichStyles.tag_style)
-                content += Text(
-                    " {} ".format(str(number)), style=RichStyles.total
-                ) + Text("\n")
-            renderables.append(
-                Panel(
-                    content,
-                    title="[{}] {} [/]".format(str(RichStyles.get_style(state)), state),
-                )
+            content = Text("")
+            tag_table = Table(
+                box=None,
+                show_header=False,
+                show_edge=False,
+                show_footer=False,
+                expand=True,
             )
-    print("\n")
-    print(Columns(renderables, equal=True, align="center"))
+            for tag, number in Counter(tags).items():
+                tag_table.add_row(tag, str(number))
+        else:
+            tag_table = Table()
+        table.add_row(
+            state,
+            tag_table,
+            str(tasknumber_by_status.get(state)),
+            "{:.2f}%".format((tasknumber_by_status.get(state) / total_task) * 100),
+            style=getattr(RichStyles.Status, state),
+        )
+    console = Console()
+    console.print(table, justify="center")
 
 
 @app.command()
@@ -478,12 +517,10 @@ def view():
 @app.command()
 def summary():
     total_tasks = 0
-    tasknumber_by_status = Counter({})
+    tasknumber_by_status = Counter({state: 0 for state in states.possible_states()})
     total_tasks += get_total_number_of_tasks()
-    tasknumber_by_status += Counter(number_of_task_based_on_status())
-    display_initial_summary(total_tasks, tasknumber_by_status)
-    distinct_tags = get_distinct_tags()
-    display_tag_based_summary(distinct_tags)
+    tasknumber_by_status.update(Counter(number_of_task_based_on_status()))
+    display_summary(total_tasks, tasknumber_by_status)
 
 
 @app.command()
