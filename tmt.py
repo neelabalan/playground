@@ -270,8 +270,10 @@ def validate_task(task):
     if due_date:
         task.update({"due_date": due_date})
     else:
-        task.pop("due_date")
-    task.update({"created_date": datetime.datetime.now().strftime(date_format)})
+        if task.get("due_date"):
+            task.pop("due_date")
+    if not task.get("created_date"):
+        task.update({"created_date": datetime.datetime.now().strftime(date_format)})
     return task
 
 
