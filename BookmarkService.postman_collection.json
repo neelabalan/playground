@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "3fdf3e52-77ff-47e4-8a54-8f67e493e82c",
+		"name": "BookmarkService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bookmark",
+			"item": [
+				{
+					"name": "BookmarkList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzMyNTc2NjcsIm5iZiI6MTY3MzI1NzY2NywianRpIjoiZTMxYjY0NWItMWVlYy00M2Y2LWI5ZmQtODQ1NDhmMDkzODhmIiwiZXhwIjoxNjczMjU4NTY3LCJpZGVudGl0eSI6MSwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.V9g9ni-KQzZ73I5m24wJItB9_k85V5c1OGgzLZtSEVc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"url\": \"http://test.com\", \n    \"description\": \"This is a lovely Blueberry Smoothie\",\n    \"category\": \"test_category\"\n} "
+						},
+						"url": {
+							"raw": "http://localhost:5000/bookmarks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bookmarks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BookmarkList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/bookmarks?per_page=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bookmarks"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "2"
+								},
+								{
+									"key": "sort",
+									"value": "cook_time",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "asc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bookmark",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM5NzQ2MzYsIm5iZiI6MTU3Mzk3NDYzNiwianRpIjoiYmZlOGQ5NzAtNmM4YS00Y2U2LTkzNTMtOTQ4MjFjMTlmODRjIiwiZXhwIjoxNTczOTc1NTM2LCJpZGVudGl0eSI6NCwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.egTb1MwBAwprbol7ABZBRDViRL5jk3f7GVqb4msNadg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n\t\"num_of_servings\": 10,\n\t\"cook_time\": 100\n}  "
+						},
+						"url": {
+							"raw": "http://localhost:5000/bookmarks/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bookmarks",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bookmark",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM3MjM0ODMsIm5iZiI6MTU3MzcyMzQ4MywianRpIjoiNzczZDkzMjYtYTkxOS00OGU5LWFjZTYtNzIxNTg1NmQyMjYzIiwiZXhwIjoxNTczNzI0MzgzLCJpZGVudGl0eSI6NCwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.Dz5XnYN88V6XHjnMKMf3Xy91GbkhOC-8kYim9SJMy4o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/bookmarks/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bookmarks",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bookmark",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/bookmarks/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bookmarks",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "UserList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"username\": \"test\", \n    \"email\": \"test@test.com\", \n    \"password\": \"pass123\" \n} "
+						},
+						"url": {
+							"raw": "http://localhost:5000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjgxODU4MTYsIm5iZiI6MTU2ODE4NTgxNiwianRpIjoiZmU1OTUwMDgtYWNhMi00ZmJkLWE1ZjgtZmI2ZmZkYmQ0ZWQ3IiwiZXhwIjoxNTY4MTg2NzE2LCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.6B_QB8Q2eDJgm3EIgtYWoHbZe9nKHgn4Zo5AdCY8qrk",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/users/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMzNTY4ODIsIm5iZiI6MTU3MzM1Njg4MiwianRpIjoiMjZiYzg2ZGMtMTYzNy00MWU3LTk0YzItNDg2MTM3ZWM1N2NiIiwiZXhwIjoxNTczMzU3NzgyLCJpZGVudGl0eSI6MywiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.HYMmZMyDSoGh_m5UGCugicLPfhO8jIl_LtY7a-PPgrA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserBookmarkList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM1NDkyODAsIm5iZiI6MTU3MzU0OTI4MCwianRpIjoiOWNmNzU5OWItNjJmZS00MTkyLThmM2ItNmUyYmRjZDEwYzE2IiwiZXhwIjoxNTczNTUwMTgwLCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ._Dcrg7wyGUGxsHHagDwZLyPinZ1zSPU52QKJ-0gnu0o",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/users/test/bookmarks?per_page=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"test",
+								"bookmarks"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMzNTY4ODIsIm5iZiI6MTU3MzM1Njg4MiwianRpIjoiMjZiYzg2ZGMtMTYzNy00MWU3LTk0YzItNDg2MTM3ZWM1N2NiIiwiZXhwIjoxNTczMzU3NzgyLCJpZGVudGl0eSI6MywiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.HYMmZMyDSoGh_m5UGCugicLPfhO8jIl_LtY7a-PPgrA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"email\": \"test@test.com\",\n    \"password\": \"pass123\"\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjgxODY0MzQsIm5iZiI6MTU2ODE4NjQzNCwianRpIjoiZThlMGM2OTgtYjY5OS00MTg0LWFiYzItMThjMTdkYjA4NmNkIiwiZXhwIjoxNTcwNzc4NDM0LCJpZGVudGl0eSI6MywidHlwZSI6InJlZnJlc2gifQ.XIXEex13Er28h2SNeQSAwb2ubGVxd7au-JLxjX_tXpk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMzNzIwNDIsIm5iZiI6MTU3MzM3MjA0MiwianRpIjoiNzBmOGUwOTYtOWQ4MS00OTAxLTgwMGMtOGNmNTIyODllZDg5IiwiZXhwIjoxNTczMzcyOTQyLCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.Q7POtXfelopK4Q060GCVH26Hb_kDynj_TBwBxncf_-Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/revoke",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
