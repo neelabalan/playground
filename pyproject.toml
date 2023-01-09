@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "bookmark-service"
+version = "0.1.0"
+description = "Sample/Reference bookmark implementation"
+authors = ["neelabalan <neelabalan.n@outlook.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "1.0.3"
+flask-restx = "0.3.0"
+psycopg2-binary = "2.9.5"
+marshmallow = "3.19.0"
+itsdangerous = "2.0.0"
+passlib = "1.7.4"
+loguru = "0.6.0"
+webargs = "8.2.0"
+flask-jwt-extended = "3.25.0"
+flask-caching = "2.0.1"
+flask-limiter = "1.0.1"
+flask-migrate = "4.0.1"
+jinja2 = "3.0.0"
+werkzeug = "2.0.0"
+
+
+
+
+[tool.poetry.group.dev.dependencies]
+black = "22.12.0"
+isort = "^5.11.4"
+pre-commit = "^2.21.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 119
+
+[tool.pylint]
+max-line-length = 119
+disable = ["wrong-import-position", "missing-module-docstring", "too-few-public-methods"]
+good-names = ["df", "id", "ex"]
+
+[tool.isort]
+force_single_line = true
+profile = "black"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
