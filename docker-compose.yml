@@ -5,7 +5,10 @@ services:
       context: ./
     ports:
       - 5000:5000
+    working_dir: /home/app/bookmark
     # command: flask db upgrade
+    depends_on:
+      - db
     environment:
       - PYTHONBUFFERED=1
       - DATABASE_URL=postgresql://bm_user:pass@db:5432/bookmark
@@ -18,6 +21,18 @@ services:
       - POSTGRES_USER=bm_user
       - POSTGRES_PASSWORD=pass
       - POSTGRES_DB=bookmark
+
+  tests:
+    build:
+      context: ./
+      dockerfile: Dockerfile.test
+    depends_on:
+      - bookmark
+    working_dir: /home/app/bookmark/
+    entrypoint: sh /home/app/bookmark/run_tests.sh
+    environment:
+      - PYTHONBUFFERED=1
+      - DATABASE_URL=postgresql://bm_user:pass@db:5432/bookmark
 
 volumes:
   postgres_data:

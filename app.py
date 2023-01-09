@@ -1,7 +1,7 @@
 from flask import Flask
-from flask.cli import FlaskGroup
 from flask_migrate import Migrate
 from flask_restx import Api
+from loguru import logger
 
 # from config import AppConfig
 from extensions import cache
@@ -20,12 +20,11 @@ from resources.user import UserBookmarkListResource
 from resources.user import UserListResource
 from resources.user import UserResource
 
+app = Flask(__name__)
+app.config.from_object("config.AppConfig")
+
 
 def create_app():
-
-    app = Flask(__name__)
-    app.config.from_object("config.AppConfig")
-
     register_extensions(app)
     register_resources(app)
 
