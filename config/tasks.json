@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+		{
+			"type": "shell",
+			"label": "run rust program",
+			"command": "rustc",
+			"args": [
+				"${file}",
+				"&&",
+				"./${fileBasenameNoExtension}"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$rustc"
+			],
+			"presentation": {
+                 "echo": false,
+				 "reveal": "always",
+				 "focus": false,
+				 "panel": "shared",
+				 "showReuseMessage": false,
+				 "clear": true
+             },
+		}
+	]
+}

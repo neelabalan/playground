@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<!-- an effort to try something without depending on react -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Find your IFSC details</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+
+    <body>
+        <table id='tableArea'>
+            <tbody>
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <div id='interactionArea'>
+            <input id='inputText' , placeholder='Enter IFSC code here'></input>
+            <a class="waves-effect waves-light btn" id='button' , onclick=showData()>check</a>
+        </div>
+    </body>
+    </div>
+
+    <script>
+        const getData = (ifsc) => {
+            const url = 'https://ifsc.razorpay.com/' + ifsc
+            const response = fetch(url).then(res => {
+                if (res.ok) {
+                    return res.json()
+                }
+            }).then(responseData => {
+                var table = document.getElementById('tableArea');
+                // below line from https://stackoverflow.com/a/51836513/4873716
+                while (table.firstChild) table.removeChild(table.firstChild);
+                Object.keys(responseData).forEach(function (key) {
+                    var row = table.insertRow(0);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    cell1.innerHTML = '<strong>' + key + '</strong>';
+                    if (responseData[key] == true) {
+                        cell2.innerHTML = 'Present'
+                    }
+                    else if (responseData[key] == false) {
+                        cell2.innerHTML = 'NA'
+                    }
+                    else {
+                        cell2.innerHTML = responseData[key];
+                    }
+                })
+            })
+        }
+        const showData = () => {
+            const ifsc = document.getElementById("inputText").value
+            getData(ifsc)
+        }
+    </script>
+    <style>
+        div#interactionArea {
+            text-align: center;
+            margin: 0;
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+        div#tableArea {
+            text-align: center;
+        }
+
+        td {
+            padding-left: 50px;
+        }
+    </style>
+
+</html>

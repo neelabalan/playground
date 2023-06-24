@@ -1,0 +1,43 @@
+{
+	"editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "breadcrumbs.enabled": false,
+    // "markdown.styles": [
+    //     "/home/blue/style.css"
+    // ],
+	"markdown.preview.fontFamily": "'Gentium Book Basic', BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+    "markdown.extension.print.theme": "dark",
+    "jupyter.alwaysTrustNotebooks": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+	"editor.cursorStyle": "block",
+    "editor.fontFamily": "monospace",
+    "settingsSync.ignoredSettings": [
+        "-window.zoomLevel"
+	],
+    "editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.inlayHints.fontFamily": "'monospace', monospace, 'Droid Sans Fallback'",
+	"workbench.tree.indent": 16,
+	"debug.console.fontSize": 16,
+	"terminal.integrated.fontSize": 16,
+	"window.zoomLevel": 1,
+	"notebook.lineNumbers": "on",
+	"Notes.notesLocation": "/home/blue/notes",
+	"editor.largeFileOptimizations": false,
+	"keyboard.dispatch": "keyCode",
+	"search.maintainFileSearchCache": true,
+	// "markdown.styles": [
+	// 	"https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
+	// ],
+	"editor.minimap.enabled": false,
+	"zenMode.fullScreen": false,
+	"zenMode.centerLayout": false,
+	"workbench.colorTheme": "Vanta Black",
+	"markdown.preview.fontSize": 18,
+}

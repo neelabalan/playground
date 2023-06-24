@@ -1,0 +1,11 @@
+[tool.blue]
+line_length = 119
+
+[tool.pylint]
+max-line-length = 119
+disable = ["wrong-import-position", "missing-moudle-docstring", "two-few-public-method"]
+good-names=["df", "id", "ex"]
+
+[tool.isort]
+force_single_line = true
+profile = "black"

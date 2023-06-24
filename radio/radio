@@ -1,0 +1,189 @@
+#!/bin/bash
+arg=$(echo -e "Vividh Bharati
+FM Gold
+FM Rainbow
+AIR Urdu
+AIR Gujarati
+AIR Marathi
+AIR Bangla
+AIR Punjabi
+AIR Tamil
+AIR Telugu
+AIR Kannada
+AIR Malayalam
+Raagam
+Radio Kashmir
+AIR Odia
+AIR Assamase
+Service North East
+FM Tragopan Kohima
+FM Rainbow Goa
+AIR Shimla
+AIR Bhuj
+AIR Indore
+AIR Mysuru
+AIR Jodhpur
+AIR Amrutvarshini
+Vividh Bharati Bangaluru
+Rainbow Kannada Kaamanbilu
+AIR Bengaluru
+Sun City FM Jodhpur
+AIR Pune
+AIR Rohtak
+FM Rainbow Lucknow
+AIR Jabalpur
+AIR Bhopal
+AIR Rainbow Mumbai
+FM Gold Mumbai
+Samvadita Mumbai" | fzf)
+
+case $arg in
+	"Vividh Bharati")				
+		mpv "http://vividhbharati-lh.akamaihd.net/i/vividhbharati_1@507811/master.m3u8" 
+	;;
+
+	"FM Gold")	
+		mpv "http://airfmgold-lh.akamaihd.net/i/fmgold_1@507591/master.m3u8" 
+	;;
+
+	"FM Rainbow")					
+		mpv "http://fmrainbow-lh.akamaihd.net/i/fmrainbow_1@507812/master.m3u8" 
+	;;
+
+	"AIR Urdu")						
+		mpv "http://airurdu-lh.akamaihd.net/i/airurdu_1@507813/master.m3u8" 
+	;;
+
+	"AIR Gujarati")					
+	mpv "http://airgujarati-lh.akamaihd.net/i/airgujarati_1@507814/master.m3u8" 
+	;;
+
+	"AIR Marathi")					
+	mpv "http://airmarathi-lh.akamaihd.net/i/airmarathi_1@507815/master.m3u8" 
+	;;
+
+	"AIR Bangla") 					
+	mpv "http://airbangla-lh.akamaihd.net/i/airbangla_1@507821/master.m3u8" 
+	;;
+
+	"AIR Punjabi")				
+	mpv "http://airpunjabi-lh.akamaihd.net/i/airpunjabi_1@507822/master.m3u8" 
+	;;
+
+	"AIR Tamil")						
+	mpv "http://airtamil-lh.akamaihd.net/i/airtamil_1@507817/master.m3u8" 
+	;;
+
+	"AIR Telugu")					
+	mpv "http://airtelugu-lh.akamaihd.net/i/airtelugu_1@507818/master.m3u8" 
+	;;
+
+	"AIR Kannada")					
+	mpv "http://airkannada-lh.akamaihd.net/i/airkannada_1@507819/master.m3u8" 
+	;;
+
+	"AIR Malayalam")					
+	mpv "http://airmalayalam-lh.akamaihd.net/i/[EVENT_ANGLE]@507816/master.m3u8" 
+	;;
+
+	"Raagam")						
+	mpv "http://airraagam-lh.akamaihd.net/i/airraagam_1@507820/master.m3u8" 
+	;;
+
+	"Radio Kashmir")					
+	mpv "http://kashmiri-lh.akamaihd.net/i/kashmiri_1@528067/master.m3u8" 
+	;;
+
+	"AIR Odia")						
+	mpv "http://airodiya-lh.akamaihd.net/i/airodiya_1@528056/master.m3u8" 
+	;;
+
+	"AIR Assamase")					
+	mpv "http://airassamese-lh.akamaihd.net/i/airassamese_1@528059/master.m3u8" 
+	;;
+
+	"Service North East")			
+	mpv "http://northeastservice-lh.akamaihd.net/i/northeastservice_1@528061/master.m3u8" 
+	;;
+
+	"FM Tragopan Kohima")			
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airkohima_1@813589/master.m3u8" 
+	;;
+
+	"FM Rainbow Goa")				
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/fmraingoa_1@813593/master.m3u8" 
+	;;
+
+	"AIR Shimla")					
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airshimla_1@813586/master.m3u8" 
+	;;
+
+	"AIR Bhuj")						
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airbhuj_1@813592/master.m3u8" 
+	;;
+
+	"AIR Indore")					
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airindore_1@813588/master.m3u8" 
+	;;
+
+	"AIR Mysuru")					
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airmysuru_1@813587/master.m3u8" 
+	;;
+
+	"AIR Jodhpur")					
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airjodhpc_1@813591/master.m3u8" 
+	;;
+
+	"Amrutvarshini")					
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/amruthbeng_1@812373/master.m3u8" 
+	;;
+
+	"Vividh Bharati Bengaluru")		
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/vbsbeng_1@812379/master.m3u8" 
+	;;
+
+	"Rainbow Kannada Kaamanbilu")	
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/rainbeng_1@812381/master.m3u8" 
+	;;
+
+	"AIR Bengaluru")					
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airbeng_1@813585/master.m3u8" 
+	;;
+
+	"Sun City FM Jodhpur")			
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airjodhfm_1@813590/master.m3u8" 
+	;;
+
+	"AIR Pune")						
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airpune_1@825822/master.m3u8" 
+	;;
+
+	"AIR Rohtak")					
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/rohtakair_1@825825/master.m3u8" 
+	;;
+
+	"FM Rainbow Lucknow")			
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airlucknow_1@825824/master.m3u8" 
+	;;
+
+	"AIR Jabalpur")					
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airjabalpur_1@825823/master.m3u8" 
+	;;
+
+	"AIR Bhopal")					
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/airbhopal_1@825828/master.m3u8" 
+	;;
+
+	"FM Rainbow Mumbai")				
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/rainmumb_1@830454/master.m3u8" 
+	;;
+
+	"FM Gold Mumbai")				
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/goldmumb_1@830453/master.m3u8" 
+	;;
+
+	"Samvadita Mumbai")			
+	mpv "http://nondelhi-lh.akamaihd-staging.net/i/pcmumbai_1@830455/master.m3u8" 
+	;;
+
+esac

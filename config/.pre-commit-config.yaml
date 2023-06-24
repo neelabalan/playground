@@ -1,0 +1,28 @@
+default_language_version:
+  python: python3.8
+
+default_stages: [commit]
+
+repos:
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        entry: poetry run isort --settings-path pyproject.toml
+        types: [python]
+        name: isort (python)
+  - repo: local
+    hooks:
+      - id: black
+        name: black
+        entry: poetry run blue --config pyproject.toml
+        types: [python]
+        language: system
+  - repo: local
+    hooks:
+      - id: update-requirements-txt
+        name: update-requirements-txt
+        description: 'Generate requirements.txt based on poetry lock'
+        entry: poetry
+        args: [export, --without-hashes, --format, requirements.txt, --output, requirements.txt]
+        language: system
