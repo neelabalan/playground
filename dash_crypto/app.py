@@ -37,7 +37,10 @@ app.layout = html.Div(
                 ),
             ]
         ),
-        html.Br(), html.Br(), html.Br(), html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Br(),
         html.H4(children="In $", style=text_style),
         dash_table.DataTable(
             id="table",
@@ -46,7 +49,7 @@ app.layout = html.Div(
                 for i in ["Coin", "Price", "Market Cap", "24h Volume", "24h Change"]
             ],
             data=[],
-            export_format="csv"
+            export_format="csv",
         ),
     ]
 )

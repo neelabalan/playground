@@ -4,7 +4,6 @@ def count_substring(string, sub_string):
     strlen = len(string)
     for _ in range(strlen):
         if string[-substrlen:] == sub_string:
-            count = count+1
+            count = count + 1
         string = string[:-1]
     return count
-        

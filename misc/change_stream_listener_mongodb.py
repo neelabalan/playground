@@ -13,6 +13,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from bson.json_util import dumps
 from loguru import logger
 
+
 class SerializableTokenCache:
     def __init__(self, path):
         self.path = path
@@ -40,6 +41,7 @@ class SerializableTokenCache:
         except FileNotFoundError as err:
             logger.error("Specified file not found")
 
+
 class ChangeStreamListener(threading.Thread):
     def __init__(self, db_object: pymongo.database.Database, collection_names: List):
         super(ChangeStreamListener, self).__init__()
@@ -56,11 +58,17 @@ class ChangeStreamListener(threading.Thread):
             logger.error("pymongo Error ", err)
             sys.exit(0)
 
-        if not self.collection_names or not set(self.collection_names).intersection(self.db.list_collection_names()) == set(self.collection_names):
+        if not self.collection_names or not set(self.collection_names).intersection(
+            self.db.list_collection_names()
+        ) == set(self.collection_names):
             logger.error(f"Listed collection not found - {self.collection_names}")
             sys.exit(0)
 
-    def init_listener(self, pipeline: List = [{"$match": {"operationType": "insert"}}], on_change: Callable = None):
+    def init_listener(
+        self,
+        pipeline: List = [{"$match": {"operationType": "insert"}}],
+        on_change: Callable = None,
+    ):
         self.check_conn()
         self.loop = asyncio.new_event_loop()
         pipeline.append({"$match": {"ns.coll": {"$in": self.collection_names}}})
@@ -82,7 +90,9 @@ class ChangeStreamListener(threading.Thread):
                 cursor = self.db.watch(pipeline)
                 self.token_cache.dump(cursor.resume_token)
 
-            with self.db.watch(pipeline, resume_after=token if token else None) as stream:
+            with self.db.watch(
+                pipeline, resume_after=token if token else None
+            ) as stream:
                 for change in stream:
                     self.token_cache.dump(stream.resume_token)
                     if callable(on_change):

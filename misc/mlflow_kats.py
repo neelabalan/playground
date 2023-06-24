@@ -13,14 +13,14 @@ from loguru import logger
 
 import os
 
-os.environ['MLFLOW_TRACKING_URI'] = "http://0.0.0.0:5000"
-os.environ['MLFLOW_TRACKING_USERNAME'] = "mlflow_user"
-os.environ['MLFLOW_TRACKING_PASSWORD'] = "mlflow_pass"
+os.environ["MLFLOW_TRACKING_URI"] = "http://0.0.0.0:5000"
+os.environ["MLFLOW_TRACKING_USERNAME"] = "mlflow_user"
+os.environ["MLFLOW_TRACKING_PASSWORD"] = "mlflow_pass"
 
 PYTHON_VERSION = f"{version_info.major}.{version_info.minor}.{version_info.micro}"
 
 data = []
-with open('data.json') as file:
+with open("data.json") as file:
     data = json.load(file)
 
 reg_model_name = "SARIMA"
@@ -36,6 +36,7 @@ class SARIMA_MLFlowModel(mlflow.pyfunc.PythonModel):
 
     def predict(self, context, model_input):
         return [context, model_input]
+
 
 def run():
     model_path = "mlflow_artifacts"
@@ -53,9 +54,8 @@ def run():
     mlflow.pyfunc.log_model(
         artifact_path=model_path,
         python_model=model,
-        registered_model_name=reg_model_name
+        registered_model_name=reg_model_name,
     )
-
 
 
 def forecast():
@@ -64,6 +64,7 @@ def forecast():
     model_uri = "models:/SARIMA/1"
     loaded_model = mlflow.pyfunc.load_model(model_uri)
     logger.info(loaded_model.predict(50))
+
 
 if __name__ == "__main__":
     run()

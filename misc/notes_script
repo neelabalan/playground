@@ -1,0 +1,36 @@
+# to be added to .bashrc
+# have edited nl and ns func to show preview in bat
+# add markdown extension by default
+
+nn() 
+{
+    local note_name="$*"
+    local note_date="`date +%F`"
+    local note_ext="md"
+    if [[ $note_name == "" ]]; then
+        note_name="$note_date.$note_ext"
+    else 
+        note_name="$note_name.$note_ext"
+    fi
+    mkdir -p $NOTESDIR
+    vim -c 'startinsert' "$NOTESDIR/$note_name"
+}
+
+ns() 
+{
+    local file
+    [ -z "$1" ] && echo "No argument supplied - Enter a term to search" && return 1
+    file="$(rg --files-with-matches --no-ignore --ignore-case --hidden --no-heading --no-messages $1 $NOTESDIR | fzf --preview 'batcat --theme TwoDark --color "always" {}')"
+    if [[ -n $file ]]; then
+        vim $file
+    fi
+}
+
+nl() 
+{
+    local files
+    files="$(rg --files $NOTESDIR | fzf --preview 'batcat --theme TwoDark --color "always" {}')"
+    if [[ -n $files ]]; then
+        vim $files
+    fi
+}

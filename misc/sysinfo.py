@@ -24,27 +24,33 @@ list_of_commands = [
     "sysaccount",
     "sysdriver",
     "timezone",
-    "useraccount"
+    "useraccount",
 ]
 
-root_path = 'system-info\\'
+root_path = "system-info\\"
 
-def format_command( command ):
+
+def format_command(command):
     return "wmic " + command + " list full /format:hform"
 
-def mkdir_if_not_exists( path ):
-    if not os.path.exists( path ):
-        os.makedirs( path ) 
+
+def mkdir_if_not_exists(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
 
 def store_sysinfo():
     for command in list_of_commands:
-        filepath = root_path + command + '.html'
-        with open( filepath, 'w' ) as file:
+        filepath = root_path + command + ".html"
+        with open(filepath, "w") as file:
             try:
-                process = subprocess.Popen( format_command( command ).split( ' ' ), stdout = file)
+                process = subprocess.Popen(
+                    format_command(command).split(" "), stdout=file
+                )
             except:
-                print('EXCEPTION command not executable {}'.format( command ))
+                print(f"EXCEPTION command not executable {command}")
+
 
 if __name__ == "__main__":
-    mkdir_if_not_exists( root_path )
+    mkdir_if_not_exists(root_path)
     store_sysinfo()

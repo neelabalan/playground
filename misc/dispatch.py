@@ -1,7 +1,9 @@
 import functools
 
+
 class Car:
     pass
+
 
 class Bike:
     pass
@@ -16,6 +18,7 @@ def dispatch_on_type(x):
 @dispatch_on_type.register(Car)
 def _(x):
     print("This is car type")
+
 
 @dispatch_on_type.register(Bike)
 def _(x):

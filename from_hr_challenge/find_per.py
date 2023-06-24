@@ -6,7 +6,8 @@ def run(n):
         student_marks[name] = scores
     query_name = input()
     marks = student_marks.get(query_name)
-    print("{:.2f}".format(sum(marks)/len(marks)))
+    print(f"{sum(marks) / len(marks):.2f}")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     n = int(input())
