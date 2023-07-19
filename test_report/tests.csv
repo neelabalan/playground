@@ -1,0 +1,4 @@
+id,module,name,file,doc,markers,status,message,duration
+test_source_file.py::test_add_property,test_source_file,test_add_property,test_source_file.py,,hypothesis,passed,,0.07473158699940541
+test_source_file.py::test_multiply_property,test_source_file,test_multiply_property,test_source_file.py,,hypothesis,passed,,0.06209296599990921
+test_source_file.py::test_divide_property,test_source_file,test_divide_property,test_source_file.py,,hypothesis,passed,,0.06289039900002535
