@@ -1,0 +1,1434 @@
+[
+    {
+        "fullname": "Amazon Lex Runtime Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon HealthLake",
+        "abbr": "HealthLake"
+    },
+    {
+        "fullname": "Amazon CloudWatch Application Insights",
+        "abbr": "Application Insights"
+    },
+    {
+        "fullname": "AWS RDS DataService",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Personalize",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Omics",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT Events",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon DynamoDB Accelerator (DAX)",
+        "abbr": "Amazon DAX"
+    },
+    {
+        "fullname": "Amazon Location Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Data Lifecycle Manager",
+        "abbr": "Amazon DLM"
+    },
+    {
+        "fullname": "Amazon Machine Learning",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Detective",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Backup Storage",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Cognito Identity Provider",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Forecast Query Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Connect Participant Service",
+        "abbr": "Amazon Connect Participant"
+    },
+    {
+        "fullname": "Application Migration Service",
+        "abbr": "mgn"
+    },
+    {
+        "fullname": "AWS Amplify",
+        "abbr": "Amplify"
+    },
+    {
+        "fullname": "Braket",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Interactive Video Service",
+        "abbr": "Amazon IVS"
+    },
+    {
+        "fullname": "AWS Key Management Service",
+        "abbr": "KMS"
+    },
+    {
+        "fullname": "Amazon Simple Notification Service",
+        "abbr": "Amazon SNS"
+    },
+    {
+        "fullname": "Amazon Lex Model Building Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "CodeArtifact",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS EC2 Instance Connect",
+        "abbr": "EC2 Instance Connect"
+    },
+    {
+        "fullname": "Amazon NeptuneData",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Config",
+        "abbr": "Config Service"
+    },
+    {
+        "fullname": "AWS Elemental MediaPackage v2",
+        "abbr": "mediapackagev2"
+    },
+    {
+        "fullname": "Amazon Security Lake",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon EventBridge Pipes",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS AppConfig Data",
+        "abbr": ""
+    },
+    {
+        "fullname": "AmazonApiGatewayV2",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon WorkLink",
+        "abbr": "WorkLink"
+    },
+    {
+        "fullname": "AWSKendraFrontendService",
+        "abbr": "kendra"
+    },
+    {
+        "fullname": "Amazon SageMaker Service",
+        "abbr": "SageMaker"
+    },
+    {
+        "fullname": "AWS ARC - Zonal Shift",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Mobile",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon GuardDuty",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Macie",
+        "abbr": ""
+    },
+    {
+        "fullname": "Access Analyzer",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon S3 on Outposts",
+        "abbr": "Amazon S3 Outposts"
+    },
+    {
+        "fullname": "Amazon Route 53 Resolver",
+        "abbr": "Route53Resolver"
+    },
+    {
+        "fullname": "AWS Single Sign-On",
+        "abbr": "SSO"
+    },
+    {
+        "fullname": "Amazon Polly",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Interactive Video Service Chat",
+        "abbr": "ivschat"
+    },
+    {
+        "fullname": "Amazon Kinesis Video Streams Archived Media",
+        "abbr": "Kinesis Video Archived Media"
+    },
+    {
+        "fullname": "AWS Data Pipeline",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Backup Gateway",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Systems Manager Incident Manager",
+        "abbr": "SSM Incidents"
+    },
+    {
+        "fullname": "AmazonConnectCampaignService",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS OpsWorks",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Elastic Transcoder",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon QLDB",
+        "abbr": "QLDB"
+    },
+    {
+        "fullname": "CloudWatch RUM",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Direct Connect",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Identity and Access Management",
+        "abbr": "IAM"
+    },
+    {
+        "fullname": "Amazon CloudSearch Domain",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Audit Manager",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Cloud Control API",
+        "abbr": "CloudControlApi"
+    },
+    {
+        "fullname": "Amazon Inspector",
+        "abbr": ""
+    },
+    {
+        "fullname": "Elastic Disaster Recovery Service",
+        "abbr": "drs"
+    },
+    {
+        "fullname": "Amazon DynamoDB Streams",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Elemental MediaConvert",
+        "abbr": "MediaConvert"
+    },
+    {
+        "fullname": "Payment Cryptography Control Plane",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Relational Database Service",
+        "abbr": "Amazon RDS"
+    },
+    {
+        "fullname": "Amazon AppStream",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Batch",
+        "abbr": "AWS Batch"
+    },
+    {
+        "fullname": "AWS OpsWorks CM",
+        "abbr": "OpsWorksCM"
+    },
+    {
+        "fullname": "Amazon ElastiCache",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Migration Hub Refactor Spaces",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT Greengrass V2",
+        "abbr": "AWS GreengrassV2"
+    },
+    {
+        "fullname": "Amazon SageMaker geospatial capabilities",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Pinpoint SMS and Voice Service",
+        "abbr": "Pinpoint SMS Voice"
+    },
+    {
+        "fullname": "Amazon Chime SDK Media Pipelines",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS S3 Control",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS CloudFormation",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Timestream Write",
+        "abbr": "Timestream Write"
+    },
+    {
+        "fullname": "Amazon API Gateway",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Telco Network Builder",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon CloudDirectory",
+        "abbr": ""
+    },
+    {
+        "fullname": "Elastic Load Balancing",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS WAF",
+        "abbr": "WAF"
+    },
+    {
+        "fullname": "AWS IoT SiteWise",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon CodeCatalyst",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS CodeCommit",
+        "abbr": "CodeCommit"
+    },
+    {
+        "fullname": "Amazon Pinpoint Email Service",
+        "abbr": "Pinpoint Email"
+    },
+    {
+        "fullname": "AWS IoT Data Plane",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Route53 Recovery Readiness",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon EMR",
+        "abbr": "Amazon EMR"
+    },
+    {
+        "fullname": "Amazon Cognito Identity",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon EventBridge",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon CloudWatch Events",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Lookout for Equipment",
+        "abbr": "LookoutEquipment"
+    },
+    {
+        "fullname": "Schemas",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Transcribe Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Resource Explorer",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS License Manager Linux Subscriptions",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Rekognition",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Security Token Service",
+        "abbr": "AWS STS"
+    },
+    {
+        "fullname": "Amazon CloudHSM",
+        "abbr": "CloudHSM"
+    },
+    {
+        "fullname": "Amazon DynamoDB",
+        "abbr": "DynamoDB"
+    },
+    {
+        "fullname": "Amazon DevOps Guru",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS X-Ray",
+        "abbr": ""
+    },
+    {
+        "fullname": "Inspector2",
+        "abbr": "Inspector2"
+    },
+    {
+        "fullname": "AWS Elemental MediaStore Data Plane",
+        "abbr": "MediaStore Data"
+    },
+    {
+        "fullname": "Amazon Simple Storage Service",
+        "abbr": "Amazon S3"
+    },
+    {
+        "fullname": "AWS Launch Wizard",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Signer",
+        "abbr": "signer"
+    },
+    {
+        "fullname": "AWSMainframeModernization",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Cost Explorer Service",
+        "abbr": "AWS Cost Explorer"
+    },
+    {
+        "fullname": "Amazon Macie 2",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT Fleet Hub",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Kinesis Video Signaling Channels",
+        "abbr": "Amazon Kinesis Video Signaling Channels"
+    },
+    {
+        "fullname": "Amazon Simple Email Service",
+        "abbr": "Amazon SES"
+    },
+    {
+        "fullname": "Amazon Managed Blockchain",
+        "abbr": "ManagedBlockchain"
+    },
+    {
+        "fullname": "AWS Transfer Family",
+        "abbr": "AWS Transfer"
+    },
+    {
+        "fullname": "Amazon Elastic File System",
+        "abbr": "EFS"
+    },
+    {
+        "fullname": "AWS SimSpace Weaver",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Directory Service",
+        "abbr": "Directory Service"
+    },
+    {
+        "fullname": "Amazon Prometheus Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Resilience Hub",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon SimpleDB",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Database Migration Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Chime SDK Meetings",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Elastic Container Registry Public",
+        "abbr": "Amazon ECR Public"
+    },
+    {
+        "fullname": "Amazon SageMaker Runtime",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Cognito Sync",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS CodeDeploy",
+        "abbr": "CodeDeploy"
+    },
+    {
+        "fullname": "Amazon Lex Runtime V2",
+        "abbr": "Lex Runtime V2"
+    },
+    {
+        "fullname": "Amazon Managed Grafana",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Ground Station",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon VPC Lattice",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Lake Formation",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Panorama",
+        "abbr": "Panorama"
+    },
+    {
+        "fullname": "AWS Cloud Map",
+        "abbr": "ServiceDiscovery"
+    },
+    {
+        "fullname": "Amazon Sagemaker Edge Manager",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Forecast Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon QLDB Session",
+        "abbr": "QLDB Session"
+    },
+    {
+        "fullname": "AWS Organizations",
+        "abbr": "Organizations"
+    },
+    {
+        "fullname": "AWS Systems Manager Incident Manager Contacts",
+        "abbr": "SSM Contacts"
+    },
+    {
+        "fullname": "Amazon Lookout for Vision",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Elemental MediaPackage",
+        "abbr": "MediaPackage"
+    },
+    {
+        "fullname": "Amazon Kinesis Firehose",
+        "abbr": "Firehose"
+    },
+    {
+        "fullname": "AmazonApiGatewayManagementApi",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Resource Groups Tagging API",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Simple Queue Service",
+        "abbr": "Amazon SQS"
+    },
+    {
+        "fullname": "Amazon AppIntegrations Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Personalize Events",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Service Catalog",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon CloudSearch",
+        "abbr": ""
+    },
+    {
+        "fullname": "Managed Streaming for Kafka Connect",
+        "abbr": "Kafka Connect"
+    },
+    {
+        "fullname": "Amazon Simple Systems Manager (SSM)",
+        "abbr": "Amazon SSM"
+    },
+    {
+        "fullname": "Amazon AppConfig",
+        "abbr": "AppConfig"
+    },
+    {
+        "fullname": "Amazon Route 53 Domains",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon SageMaker Feature Store Runtime",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Amplify UI Builder",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon WorkMail Message Flow",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS CloudHSM V2",
+        "abbr": "CloudHSM V2"
+    },
+    {
+        "fullname": "AmazonMWAA",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Kinesis Video Streams",
+        "abbr": "Kinesis Video"
+    },
+    {
+        "fullname": "Amazon EMR Containers",
+        "abbr": ""
+    },
+    {
+        "fullname": "AmazonMQ",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon DocumentDB with MongoDB compatibility",
+        "abbr": "Amazon DocDB"
+    },
+    {
+        "fullname": "Amazon Augmented AI Runtime",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Data Exchange",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT Events Data",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS SSO Identity Store",
+        "abbr": "IdentityStore"
+    },
+    {
+        "fullname": "Amazon EC2 Container Service",
+        "abbr": "Amazon ECS"
+    },
+    {
+        "fullname": "AWS IoT Things Graph",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT Secure Tunneling",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Personalize Runtime",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon WorkSpaces",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Certificate Manager",
+        "abbr": "ACM"
+    },
+    {
+        "fullname": "Migration Hub Strategy Recommendations",
+        "abbr": ""
+    },
+    {
+        "fullname": "CloudWatch Observability Access Manager",
+        "abbr": ""
+    },
+    {
+        "fullname": "Redshift Serverless",
+        "abbr": ""
+    },
+    {
+        "fullname": "Route53 Recovery Cluster",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Comprehend Medical",
+        "abbr": "ComprehendMedical"
+    },
+    {
+        "fullname": "Amazon GameLift",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Route 53",
+        "abbr": "Route 53"
+    },
+    {
+        "fullname": "AWS CloudTrail Data Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Import/Export",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Elastic  Inference",
+        "abbr": "Amazon Elastic Inference"
+    },
+    {
+        "fullname": "AWS IoT",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Certificate Manager Private Certificate Authority",
+        "abbr": "ACM-PCA"
+    },
+    {
+        "fullname": "Amazon Glacier",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS License Manager User Subscriptions",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Voice ID",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Elemental MediaPackage VOD",
+        "abbr": "MediaPackage Vod"
+    },
+    {
+        "fullname": "Amazon Elasticsearch Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Bedrock",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Chime SDK Identity",
+        "abbr": ""
+    },
+    {
+        "fullname": "Service Quotas",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon MemoryDB",
+        "abbr": "Amazon MemoryDB"
+    },
+    {
+        "fullname": "AWS CloudTrail",
+        "abbr": "CloudTrail"
+    },
+    {
+        "fullname": "AWS Server Migration Service",
+        "abbr": "SMS"
+    },
+    {
+        "fullname": "Elastic Load Balancing",
+        "abbr": "Elastic Load Balancing v2"
+    },
+    {
+        "fullname": "Amazon Neptune",
+        "abbr": "Amazon Neptune"
+    },
+    {
+        "fullname": "AWS Control Tower",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT FleetWise",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT Core Device Advisor",
+        "abbr": "AWSIoTDeviceAdvisor"
+    },
+    {
+        "fullname": "AWS Glue DataBrew",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Kendra Intelligent Ranking",
+        "abbr": "Kendra Ranking"
+    },
+    {
+        "fullname": "Amazon CodeGuru Profiler",
+        "abbr": ""
+    },
+    {
+        "fullname": "IAM Roles Anywhere",
+        "abbr": ""
+    },
+    {
+        "fullname": "EC2 Image Builder",
+        "abbr": "imagebuilder"
+    },
+    {
+        "fullname": "Amazon Timestream Query",
+        "abbr": "Timestream Query"
+    },
+    {
+        "fullname": "AWS CodePipeline",
+        "abbr": "CodePipeline"
+    },
+    {
+        "fullname": "Amazon Verified Permissions",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT Analytics",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Budgets",
+        "abbr": "AWSBudgets"
+    },
+    {
+        "fullname": "Amazon Connect Cases",
+        "abbr": "ConnectCases"
+    },
+    {
+        "fullname": "Amazon CloudWatch Internet Monitor",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Elastic Kubernetes Service",
+        "abbr": "Amazon EKS"
+    },
+    {
+        "fullname": "Amazon Lex Model Building V2",
+        "abbr": "Lex Models V2"
+    },
+    {
+        "fullname": "AWS Elastic Beanstalk",
+        "abbr": "Elastic Beanstalk"
+    },
+    {
+        "fullname": "AWS Storage Gateway",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Support App",
+        "abbr": "SupportApp"
+    },
+    {
+        "fullname": "Amazon Import/Export Snowball",
+        "abbr": "Amazon Snowball"
+    },
+    {
+        "fullname": "Amazon Managed Blockchain Query",
+        "abbr": ""
+    },
+    {
+        "fullname": "Auto Scaling",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Lightsail",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Glue",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Resource Access Manager",
+        "abbr": "RAM"
+    },
+    {
+        "fullname": "Amazon SageMaker Metrics Service",
+        "abbr": "SageMaker Metrics"
+    },
+    {
+        "fullname": "AWS DataSync",
+        "abbr": "DataSync"
+    },
+    {
+        "fullname": "AWS AppSync",
+        "abbr": "AWSAppSync"
+    },
+    {
+        "fullname": "AWS Elemental MediaStore",
+        "abbr": "MediaStore"
+    },
+    {
+        "fullname": "AWS IoT Wireless",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon EC2 Container Registry",
+        "abbr": "Amazon ECR"
+    },
+    {
+        "fullname": "AWSServerlessApplicationRepository",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon OpenSearch Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon DataZone",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Migration Hub Config",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS CodeStar connections",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Lambda",
+        "abbr": ""
+    },
+    {
+        "fullname": "AmplifyBackend",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Mechanical Turk",
+        "abbr": "Amazon MTurk"
+    },
+    {
+        "fullname": "AWS IoT Jobs Data Plane",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Lookout for Metrics",
+        "abbr": "LookoutMetrics"
+    },
+    {
+        "fullname": "OpenSearch Service Serverless",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon WorkSpaces Web",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Single Sign-On Admin",
+        "abbr": "SSO Admin"
+    },
+    {
+        "fullname": "Amazon Kinesis Video WebRTC Storage",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Connect Service",
+        "abbr": "Amazon Connect"
+    },
+    {
+        "fullname": "Amazon Interactive Video Service RealTime",
+        "abbr": "ivsrealtime"
+    },
+    {
+        "fullname": "Amazon Chime SDK Voice",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Private 5G",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Chime SDK Messaging",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Cost and Usage Report Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Connect Customer Profiles",
+        "abbr": "Customer Profiles"
+    },
+    {
+        "fullname": "Amazon Kinesis Analytics",
+        "abbr": "Kinesis Analytics V2"
+    },
+    {
+        "fullname": "Amazon CodeGuru Security",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Connect Contact Lens",
+        "abbr": "Amazon Connect Contact Lens"
+    },
+    {
+        "fullname": "AWS RoboMaker",
+        "abbr": "RoboMaker"
+    },
+    {
+        "fullname": "Alexa For Business",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Elemental MediaLive",
+        "abbr": "MediaLive"
+    },
+    {
+        "fullname": "AWS MediaConnect",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Greengrass",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon QuickSight",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon FSx",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Health Imaging",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon CloudWatch Evidently",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS SSO OIDC",
+        "abbr": "SSO OIDC"
+    },
+    {
+        "fullname": "AWS MediaTailor",
+        "abbr": "MediaTailor"
+    },
+    {
+        "fullname": "Firewall Management Service",
+        "abbr": "FMS"
+    },
+    {
+        "fullname": "AWS Savings Plans",
+        "abbr": "AWSSavingsPlans"
+    },
+    {
+        "fullname": "Amazon DocumentDB Elastic Clusters",
+        "abbr": "DocDB Elastic"
+    },
+    {
+        "fullname": "AWSMarketplace Metering",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Account",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Outposts",
+        "abbr": "Outposts"
+    },
+    {
+        "fullname": "AWS CodeStar",
+        "abbr": "CodeStar"
+    },
+    {
+        "fullname": "AWS Network Firewall",
+        "abbr": "Network Firewall"
+    },
+    {
+        "fullname": "AWS Migration Hub",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT 1-Click Projects Service",
+        "abbr": "AWS IoT 1-Click Projects"
+    },
+    {
+        "fullname": "FinSpace Public API",
+        "abbr": "FinSpace Data"
+    },
+    {
+        "fullname": "Managed Streaming for Kafka",
+        "abbr": "Kafka"
+    },
+    {
+        "fullname": "AWS Support",
+        "abbr": ""
+    },
+    {
+        "fullname": "Payment Cryptography Data Plane",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Connect Wisdom Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Simple Email Service",
+        "abbr": "Amazon SES V2"
+    },
+    {
+        "fullname": "Amazon Recycle Bin",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Performance Insights",
+        "abbr": "AWS PI"
+    },
+    {
+        "fullname": "Amazon CloudWatch",
+        "abbr": "CloudWatch"
+    },
+    {
+        "fullname": "Application Auto Scaling",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Step Functions",
+        "abbr": "AWS SFN"
+    },
+    {
+        "fullname": "Amazon WorkDocs",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Clean Rooms Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Kinesis Analytics",
+        "abbr": "Kinesis Analytics"
+    },
+    {
+        "fullname": "AWS App Mesh",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon CodeGuru Reviewer",
+        "abbr": "CodeGuruReviewer"
+    },
+    {
+        "fullname": "AWS IoT RoboRunner",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Snow Device Management",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Secrets Manager",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Network Manager",
+        "abbr": "NetworkManager"
+    },
+    {
+        "fullname": "AWS Proton",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Pinpoint",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Pinpoint SMS Voice V2",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Textract",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Well-Architected Tool",
+        "abbr": "Well-Architected"
+    },
+    {
+        "fullname": "Amazon Keyspaces",
+        "abbr": ""
+    },
+    {
+        "fullname": "AmazonNimbleStudio",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Application Cost Profiler",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Cloud9",
+        "abbr": ""
+    },
+    {
+        "fullname": "EMR Serverless",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Device Farm",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS License Manager",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Marketplace Commerce Analytics",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Kinesis",
+        "abbr": "Kinesis"
+    },
+    {
+        "fullname": "AWS WAF Regional",
+        "abbr": "WAF Regional"
+    },
+    {
+        "fullname": "Amazon Translate",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Bedrock Runtime",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Appflow",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Backup",
+        "abbr": ""
+    },
+    {
+        "fullname": "Redshift Data API Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Route53 Recovery Control Config",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon CloudWatch Logs",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS App Runner",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Application Discovery Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Compute Optimizer",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon EventBridge Scheduler",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Redshift",
+        "abbr": ""
+    },
+    {
+        "fullname": "Synthetics",
+        "abbr": "Synthetics"
+    },
+    {
+        "fullname": "Amazon Elastic Compute Cloud",
+        "abbr": "Amazon EC2"
+    },
+    {
+        "fullname": "AWS CodeStar Notifications",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Resource Groups",
+        "abbr": "Resource Groups"
+    },
+    {
+        "fullname": "AWS WAFV2",
+        "abbr": "WAFV2"
+    },
+    {
+        "fullname": "AWS Marketplace Catalog Service",
+        "abbr": "AWS Marketplace Catalog"
+    },
+    {
+        "fullname": "Amazon Honeycode",
+        "abbr": "Honeycode"
+    },
+    {
+        "fullname": "Amazon Comprehend",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Health APIs and Notifications",
+        "abbr": "AWSHealth"
+    },
+    {
+        "fullname": "AWS EntityResolution",
+        "abbr": "AWSEntityResolution"
+    },
+    {
+        "fullname": "Amazon Chime",
+        "abbr": ""
+    },
+    {
+        "fullname": "FinSpace User Environment Management service",
+        "abbr": "finspace"
+    },
+    {
+        "fullname": "AWS Auto Scaling Plans",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS CodeBuild",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT TwinMaker",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Simple Workflow Service",
+        "abbr": "Amazon SWF"
+    },
+    {
+        "fullname": "AWS Shield",
+        "abbr": "AWS Shield"
+    },
+    {
+        "fullname": "AWS Price List Service",
+        "abbr": "AWS Pricing"
+    },
+    {
+        "fullname": "Amazon Elastic Block Store",
+        "abbr": "Amazon EBS"
+    },
+    {
+        "fullname": "Amazon Kinesis Video Streams Media",
+        "abbr": "Kinesis Video Media"
+    },
+    {
+        "fullname": "AWSBillingConductor",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS IoT 1-Click Devices Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "AppFabric",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Global Accelerator",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Systems Manager for SAP",
+        "abbr": "SsmSap"
+    },
+    {
+        "fullname": "AWS Marketplace Entitlement Service",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Fault Injection Simulator",
+        "abbr": "FIS"
+    },
+    {
+        "fullname": "Amazon CloudFront",
+        "abbr": "CloudFront"
+    },
+    {
+        "fullname": "AWS SecurityHub",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Service Catalog App Registry",
+        "abbr": "AppRegistry"
+    },
+    {
+        "fullname": "Amazon OpenSearch Ingestion",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon WorkMail",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Athena",
+        "abbr": ""
+    },
+    {
+        "fullname": "Amazon Fraud Detector",
+        "abbr": ""
+    },
+    {
+        "fullname": "AWS Migration Hub Orchestrator",
+        "abbr": ""
+    },
+    {
+        "fullname": "PcaConnectorAd",
+        "abbr": ""
+    }
+]
