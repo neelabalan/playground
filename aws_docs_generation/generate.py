@@ -41,6 +41,8 @@ class AwsServiceDocumenter:
                     result[key] = self.traverse_and_document(
                         _value, history=history.copy()
                     )
+                elif _value.type_name == "list" and hasattr(_value, "member") and _value.member.type_name != "string":
+                    result[key] = [self.traverse_and_document(_value.member, history=history.copy())]
                 else:
                     result[key] = {
                         "description": remove_p_tags(_value.documentation)

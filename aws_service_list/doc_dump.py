@@ -42,34 +42,42 @@ def get_valid_xml_links(links: List[str]) -> List[str]:
             word = matches.group(1) if matches else None
             if word:
                 print(word)
-            link_list.append(link)
-    with open('xml_links.json', 'w') as _file:
+            link_list.append(url)
+    with open("landing_page_links.json", "w") as _file:
         json.dump(link_list, _file, indent=4)
     return link_list
 
 
 def get_developer_and_user_guide_links(links: List[str]) -> List[str]:
-    links = []
+    filtered_links = []
     for link in links:
         doc_links = get_href_links(link)
-        links.extend(
+        print(f"XML extracted for {link=}")
+        filtered_links.extend(
             list(
                 filter(
-                    lambda x: "/dg/" in x.lower()
-                    or "userguide" in x.lower()
-                    or "developerguide" in x.lower(),
+                    lambda x: (x.lower().endswith("/dg/")
+                    or x.lower().endswith("/userguide/")
+                    or x.lower().endswith("/developerguide/")) and not x.startswith("https://"),
                     doc_links,
                 )
             )
         )
-    return links
+    filtered_links = [base_url + link for link in filtered_links]
+    with open("developer_and_userguide_links.json", "w") as _file:
+        json.dump(filtered_links, _file, indent=4)
+    print(f"{len(filtered_links)=}")
+    return filtered_links
+
 
 # TOC to find all the user guide HTML links
 def get_toc(links: List[str]) -> List[Dict]:
     for link in links:
-        url = base_url + link + "toc-contents.json"
+        url = link + "toc-contents.json"
+        print(f"{url=}")
         response = requests.get(url)
-        service = url.split("/")[1]
+        # link looks something like this 'https://docs.aws.amazon.com/lambda/latest/dg/toc-contents.json'
+        service = link.split("/")[3]
         with open(f"toc/{service}.json", "w") as _file:
             _file.write(response.text)
             print(f"{service} toc downloaded")
