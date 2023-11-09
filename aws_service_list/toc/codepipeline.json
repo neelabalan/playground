@@ -1,1 +1,668 @@
-{ "contents" : [ { "title" : "What is CodePipeline?", "href" : "welcome.html", "contents" : [ { "title" : "Continuous delivery and continuous integration", "href" : "concepts-continuous-delivery-integration.html" }, { "title" : "What can I do with CodePipeline?", "href" : "welcome-what-can-I-do.html" }, { "title" : "A quick look at CodePipeline", "href" : "welcome-introducing.html" }, { "title" : "How do I get started with CodePipeline?", "href" : "welcome-get-started.html" }, { "title" : "Concepts", "href" : "concepts.html" }, { "title" : "DevOps pipeline example", "href" : "concepts-devops-example.html" }, { "title" : "How pipeline executions work", "href" : "concepts-how-it-works.html" }, { "title" : "Input and output artifacts", "href" : "welcome-introducing-artifacts.html" }, { "title" : "Pipeline types", "href" : "pipeline-types.html" }, { "title" : "What type of pipeline is right for me?", "href" : "pipeline-types-planning.html" } ] }, { "title" : "Getting started", "href" : "getting-started-codepipeline.html" }, { "title" : "Product and service integrations", "href" : "integrations.html", "contents" : [ { "title" : "Integrations with CodePipeline action types", "href" : "integrations-action-type.html" }, { "title" : "General integrations with CodePipeline", "href" : "integrations-general.html" }, { "title" : "Examples from the community", "href" : "integrations-community.html", "contents" : [ { "title" : "Blog posts", "href" : "integrations-community-blogposts.html" } ] } ] }, { "title" : "Tutorials", "href" : "tutorials.html", "contents" : [ { "title" : "Tutorial: Use Git tags to start your pipeline", "href" : "tutorials-github-tags.html" }, { "title" : "Tutorial: Use pipeline-level variables", "href" : "tutorials-pipeline-variables.html" }, { "title" : "Tutorial: Create a simple pipeline (S3 bucket)", "href" : "tutorials-simple-s3.html" }, { "title" : "Tutorial: Create a simple pipeline (CodeCommit repository)", "href" : "tutorials-simple-codecommit.html" }, { "title" : "Tutorial: Create a four-stage pipeline", "href" : "tutorials-four-stage-pipeline.html" }, { "title" : "Tutorial: Set up a CloudWatch Events rule to receive email notifications for pipeline state changes", "href" : "tutorials-cloudwatch-sns-notifications.html" }, { "title" : "Tutorial: Build and test an Android app with AWS Device Farm", "href" : "tutorials-codebuild-devicefarm.html" }, { "title" : "Tutorial: Test an iOS app with AWS Device Farm", "href" : "tutorials-codebuild-devicefarm-S3.html" }, { "title" : "Tutorial: Create a pipeline that deploys to Service Catalog", "href" : "tutorials-S3-servicecatalog.html" }, { "title" : "Tutorial: Create a pipeline with AWS CloudFormation", "href" : "tutorials-cloudformation.html", "contents" : [ { "title" : "Example 1: Create an AWS CodeCommit pipeline with AWS CloudFormation", "href" : "tutorials-cloudformation-codecommit.html" }, { "title" : "Example 2: Create an Amazon S3 pipeline with AWS CloudFormation", "href" : "tutorials-cloudformation-s3.html" } ] }, { "title" : "Tutorial: Create a pipeline that uses variables from AWS CloudFormation deployment actions", "href" : "tutorials-cloudformation-action.html" }, { "title" : "Tutorial: Amazon ECS Standard Deployment with CodePipeline", "href" : "ecs-cd-pipeline.html" }, { "title" : "Tutorial: Create a pipeline with an Amazon ECR source and ECS-to-CodeDeploy deployment", "href" : "tutorials-ecs-ecr-codedeploy.html" }, { "title" : "Tutorial: Create a pipeline that deploys an Amazon Alexa skill", "href" : "tutorials-alexa-skills-kit.html" }, { "title" : "Tutorial: Create a pipeline that uses Amazon S3 as a deployment provider", "href" : "tutorials-s3deploy.html" }, { "title" : "Tutorial: Publish applications to the AWS Serverless Application Repository", "href" : "tutorials-serverlessrepo-auto-publish.html" }, { "title" : "Tutorial: Using variables with Lambda invoke actions", "href" : "tutorials-lambda-variables.html" }, { "title" : "Tutorial: Use an AWS Step Functions invoke action", "href" : "tutorials-step-functions.html" }, { "title" : "Tutorial: Create a pipeline that uses AppConfig as a deployment provider", "href" : "tutorials-AppConfig.html" }, { "title" : "Tutorial: Use full clone with a GitHub pipeline source", "href" : "tutorials-github-gitclone.html" }, { "title" : "Tutorial: Use full clone with a CodeCommit pipeline source", "href" : "tutorials-codecommit-gitclone.html" }, { "title" : "Tutorial: Create a pipeline with AWS CloudFormation StackSets deployment actions", "href" : "tutorials-stackset-deployment.html" } ] }, { "title" : "Best practices and use cases", "href" : "best-practices.html" }, { "title" : "Tagging resources", "href" : "tag-resources.html" }, { "title" : "Use CodePipeline with Amazon VPC", "href" : "vpc-support.html" }, { "title" : "Working with pipelines", "href" : "pipelines.html", "contents" : [ { "title" : "Start a pipeline in CodePipeline", "href" : "pipelines-about-starting.html", "contents" : [ { "title" : "Start a pipeline manually", "href" : "pipelines-rerun-manually.html" }, { "title" : "Start a pipeline on a schedule", "href" : "pipelines-trigger-source-schedule.html" } ] }, { "title" : "Stop a pipeline execution", "href" : "pipelines-stop.html" }, { "title" : "Create a pipeline", "href" : "pipelines-create.html", "contents" : [ { "title" : "Amazon ECR source actions and EventBridge", "href" : "create-cwe-ecr-source.html", "contents" : [ { "title" : "Create an EventBridge rule for an Amazon ECR source (console)", "href" : "create-cwe-ecr-source-console.html" }, { "title" : "Create an EventBridge rule for an Amazon ECR source (CLI)", "href" : "create-cwe-ecr-source-cli.html" }, { "title" : "Create an EventBridge rule for an Amazon ECR source (AWS CloudFormation template)", "href" : "create-cwe-ecr-source-cfn.html" } ] }, { "title" : "Amazon S3 source actions and EventBridge", "href" : "create-cloudtrail-S3-source.html", "contents" : [ { "title" : "Create an EventBridge rule for an Amazon S3 source (console)", "href" : "create-cloudtrail-S3-source-console.html" }, { "title" : "Create an EventBridge rule for an Amazon S3 source (CLI)", "href" : "create-cloudtrail-S3-source-cli.html" }, { "title" : "Create an EventBridge rule for an Amazon S3 source (AWS CloudFormation template)", "href" : "create-cloudtrail-S3-source-cfn.html" } ] }, { "title" : "Bitbucket Cloudconnections", "href" : "connections-bitbucket.html" }, { "title" : "CodeCommit source actions and EventBridge", "href" : "triggering.html", "contents" : [ { "title" : "Create an EventBridge rule for a CodeCommit source (console)", "href" : "pipelines-trigger-source-repo-changes-console.html" }, { "title" : "Create an EventBridge rule for a CodeCommit source (CLI)", "href" : "pipelines-trigger-source-repo-changes-cli.html" }, { "title" : "Create an EventBridge rule for a CodeCommit source (AWS CloudFormation template)", "href" : "pipelines-trigger-source-repo-changes-cfn.html" } ] }, { "title" : "GitHub connections", "href" : "connections-github.html" }, { "title" : "GitHub Enterprise Server connections", "href" : "connections-ghes.html" }, { "title" : "GitLab.com connections", "href" : "connections-gitlab.html" } ] }, { "title" : "Edit a pipeline", "href" : "pipelines-edit.html" }, { "title" : "View pipeline details", "href" : "pipelines-view.html", "contents" : [ { "title" : "View pipeline (console)", "href" : "pipelines-view-console.html" }, { "title" : "View the pipeline ARN and service role ARN (console)", "href" : "pipelines-settings-console.html" }, { "title" : "View pipeline details and history (CLI)", "href" : "pipelines-view-cli.html" } ] }, { "title" : "Delete a pipeline", "href" : "pipelines-delete.html" }, { "title" : "Create a pipeline that uses resources from another account", "href" : "pipelines-create-cross-account.html" }, { "title" : "Migrate polling pipelines to use event-based change detection", "href" : "update-change-detection.html" }, { "title" : "Create the CodePipeline service role", "href" : "pipelines-create-service-role.html", "contents" : [ { "title" : "Create the CodePipeline service role (console)", "href" : "pipelines-create-service-role-console.html" }, { "title" : "Create the CodePipeline service role (CLI)", "href" : "pipelines-create-service-role-cli.html" } ] }, { "title" : "Tag a pipeline", "href" : "pipelines-tag.html" }, { "title" : "Create a notification rule", "href" : "notification-rule-create.html" } ] }, { "title" : "Manage executions", "href" : "manage-executions.html", "contents" : [ { "title" : "View executions", "href" : "executions-view.html" }, { "title" : "Retry a failed stage or failed actions in a stage", "href" : "stage-retry.html" } ] }, { "title" : "Working with actions", "href" : "actions.html", "contents" : [ { "title" : "Working with action types", "href" : "action-types.html" }, { "title" : "Create a custom action for a pipeline", "href" : "actions-create-custom-action.html" }, { "title" : "Tag a custom action in CodePipeline", "href" : "customactions-tag.html" }, { "title" : "Invoke a Lambda function in a pipeline", "href" : "actions-invoke-lambda-function.html" }, { "title" : "Retry a failed action in a stage", "href" : "actions-retry.html" }, { "title" : "Manage approval actions in pipelines", "href" : "approvals.html", "contents" : [ { "title" : "Grant approval permissions to an IAM user in CodePipeline", "href" : "approvals-iam-permissions.html" }, { "title" : "Grant Amazon SNS permissions to a service role", "href" : "approvals-service-role-permissions.html" }, { "title" : "Add a manual approval action", "href" : "approvals-action-add.html" }, { "title" : "Approve or reject an approval action", "href" : "approvals-approve-or-reject.html" }, { "title" : "JSON data format for manual approval notifications", "href" : "approvals-json-format.html" } ] }, { "title" : "Add a cross-Region action to a pipeline", "href" : "actions-create-cross-region.html" }, { "title" : "Working with variables", "href" : "actions-variables.html" } ] }, { "title" : "Working with stage transitions", "href" : "transitions.html" }, { "title" : "Monitoring pipelines", "href" : "monitoring.html", "contents" : [ { "title" : "Monitoring CodePipeline events", "href" : "detect-state-changes-cloudwatch-events.html" }, { "title" : "Events placeholder bucket reference", "href" : "reference-ct-placeholder-buckets.html" }, { "title" : "Logging API calls with AWS CloudTrail", "href" : "monitoring-cloudtrail-logs.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Configure server-side encryption for artifacts stored in Amazon S3 for CodePipeline", "href" : "S3-artifact-encryption.html" }, { "title" : "Use AWS Secrets Manager to track database passwords or third-party API keys", "href" : "parameter-store-encryption.html" } ] }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS CodePipeline works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html", "contents" : [ { "title" : "Policy best practices", "href" : "security_iam_service-with-iam-policy-best-practices.html" }, { "title" : "Viewing resources in the console", "href" : "security-iam-resources-console.html" }, { "title" : "Allow users to view their own permissions", "href" : "security_iam_id-based-policy-examples-view-own-permissions.html" }, { "title" : "Identity-based policies (IAM) examples", "href" : "security-iam-id-policies-examples.html" }, { "title" : "Using tags to control access to CodePipeline resources", "href" : "tag-based-access-control.html" }, { "title" : "Permissions required to use the CodePipeline console", "href" : "security-iam-permissions-console.html" }, { "title" : "AWS managed policies", "href" : "managed-policies.html" } ] }, { "title" : "Resource-based policy examples", "href" : "security_iam_resource-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" }, { "title" : "CodePipeline permissions reference", "href" : "permissions-reference.html" } ] }, { "title" : "Incident response", "href" : "incident-response.html" }, { "title" : "Compliance validation", "href" : "codepipeline-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" } ] }, { "title" : "Command line reference", "href" : "reference-command-line.html" }, { "title" : "Pipeline structure reference", "href" : "reference-pipeline-structure.html" }, { "title" : "Action structure reference", "href" : "action-reference.html", "contents" : [ { "title" : "Amazon ECR", "href" : "action-reference-ECR.html" }, { "title" : "Amazon ECS and CodeDeploy blue-green", "href" : "action-reference-ECSbluegreen.html" }, { "title" : "Amazon Elastic Container Service", "href" : "action-reference-ECS.html" }, { "title" : "Amazon S3 deploy action", "href" : "action-reference-S3Deploy.html" }, { "title" : "Amazon S3 source action", "href" : "action-reference-S3.html" }, { "title" : "AWS AppConfig", "href" : "action-reference-AppConfig.html" }, { "title" : "AWS CloudFormation", "href" : "action-reference-CloudFormation.html" }, { "title" : "AWS CloudFormation StackSets", "href" : "action-reference-StackSets.html" }, { "title" : "AWS CodeBuild", "href" : "action-reference-CodeBuild.html" }, { "title" : "AWS CodeCommit", "href" : "action-reference-CodeCommit.html" }, { "title" : "AWS CodeDeploy", "href" : "action-reference-CodeDeploy.html" }, { "title" : "CodeStarSourceConnection for Bitbucket Cloud, GitHub, GitHub Enterprise Server, and GitLab.com actions", "href" : "action-reference-CodestarConnectionSource.html" }, { "title" : "AWS Device Farm", "href" : "action-reference-DeviceFarm.html" }, { "title" : "AWS Lambda", "href" : "action-reference-Lambda.html" }, { "title" : "Snyk", "href" : "action-reference-Snyk.html" }, { "title" : "AWS Step Functions", "href" : "action-reference-StepFunctions.html" } ] }, { "title" : "Integration model reference", "href" : "reference-integrations.html" }, { "title" : "Image definitions file reference", "href" : "file-reference.html" }, { "title" : "Variables", "href" : "reference-variables.html" }, { "title" : "Working with glob patterns in syntax", "href" : "syntax-glob.html" }, { "title" : "Update polling pipelines to the recommended change detection method", "href" : "trigger-S3-migration-cwe.html" }, { "title" : "Update a GitHub version 1 source action to a GitHub version 2 source action", "href" : "update-github-action-connections.html" }, { "title" : "Quotas", "href" : "limits.html" }, { "title" : "Appendix A: GitHub version 1 source actions", "href" : "appendix-github-oauth.html" }, { "title" : "Document history", "href" : "history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/",
+    "service": "codepipeline",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is CodePipeline?",
+                "href": "welcome.html",
+                "contents": [
+                    {
+                        "title": "Continuous delivery and continuous integration",
+                        "href": "concepts-continuous-delivery-integration.html"
+                    },
+                    {
+                        "title": "What can I do with CodePipeline?",
+                        "href": "welcome-what-can-I-do.html"
+                    },
+                    {
+                        "title": "A quick look at CodePipeline",
+                        "href": "welcome-introducing.html"
+                    },
+                    {
+                        "title": "How do I get started with CodePipeline?",
+                        "href": "welcome-get-started.html"
+                    },
+                    {
+                        "title": "Concepts",
+                        "href": "concepts.html"
+                    },
+                    {
+                        "title": "DevOps pipeline example",
+                        "href": "concepts-devops-example.html"
+                    },
+                    {
+                        "title": "How pipeline executions work",
+                        "href": "concepts-how-it-works.html"
+                    },
+                    {
+                        "title": "Input and output artifacts",
+                        "href": "welcome-introducing-artifacts.html"
+                    },
+                    {
+                        "title": "Pipeline types",
+                        "href": "pipeline-types.html"
+                    },
+                    {
+                        "title": "What type of pipeline is right for me?",
+                        "href": "pipeline-types-planning.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started-codepipeline.html"
+            },
+            {
+                "title": "Product and service integrations",
+                "href": "integrations.html",
+                "contents": [
+                    {
+                        "title": "Integrations with CodePipeline action types",
+                        "href": "integrations-action-type.html"
+                    },
+                    {
+                        "title": "General integrations with CodePipeline",
+                        "href": "integrations-general.html"
+                    },
+                    {
+                        "title": "Examples from the community",
+                        "href": "integrations-community.html",
+                        "contents": [
+                            {
+                                "title": "Blog posts",
+                                "href": "integrations-community-blogposts.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tutorials",
+                "href": "tutorials.html",
+                "contents": [
+                    {
+                        "title": "Tutorial: Use Git tags to start your pipeline",
+                        "href": "tutorials-github-tags.html"
+                    },
+                    {
+                        "title": "Tutorial: Use pipeline-level variables",
+                        "href": "tutorials-pipeline-variables.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a simple pipeline (S3 bucket)",
+                        "href": "tutorials-simple-s3.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a simple pipeline (CodeCommit repository)",
+                        "href": "tutorials-simple-codecommit.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a four-stage pipeline",
+                        "href": "tutorials-four-stage-pipeline.html"
+                    },
+                    {
+                        "title": "Tutorial: Set up a CloudWatch Events rule to receive email notifications for pipeline state changes",
+                        "href": "tutorials-cloudwatch-sns-notifications.html"
+                    },
+                    {
+                        "title": "Tutorial: Build and test an Android app with AWS Device Farm",
+                        "href": "tutorials-codebuild-devicefarm.html"
+                    },
+                    {
+                        "title": "Tutorial: Test an iOS app with AWS Device Farm",
+                        "href": "tutorials-codebuild-devicefarm-S3.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a pipeline that deploys to Service Catalog",
+                        "href": "tutorials-S3-servicecatalog.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a pipeline with AWS CloudFormation",
+                        "href": "tutorials-cloudformation.html",
+                        "contents": [
+                            {
+                                "title": "Example 1: Create an AWS CodeCommit pipeline with AWS CloudFormation",
+                                "href": "tutorials-cloudformation-codecommit.html"
+                            },
+                            {
+                                "title": "Example 2: Create an Amazon S3 pipeline with AWS CloudFormation",
+                                "href": "tutorials-cloudformation-s3.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tutorial: Create a pipeline that uses variables from AWS CloudFormation deployment actions",
+                        "href": "tutorials-cloudformation-action.html"
+                    },
+                    {
+                        "title": "Tutorial: Amazon ECS Standard Deployment with CodePipeline",
+                        "href": "ecs-cd-pipeline.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a pipeline with an Amazon ECR source and ECS-to-CodeDeploy deployment",
+                        "href": "tutorials-ecs-ecr-codedeploy.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a pipeline that deploys an Amazon Alexa skill",
+                        "href": "tutorials-alexa-skills-kit.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a pipeline that uses Amazon S3 as a deployment provider",
+                        "href": "tutorials-s3deploy.html"
+                    },
+                    {
+                        "title": "Tutorial: Publish applications to the AWS Serverless Application Repository",
+                        "href": "tutorials-serverlessrepo-auto-publish.html"
+                    },
+                    {
+                        "title": "Tutorial: Using variables with Lambda invoke actions",
+                        "href": "tutorials-lambda-variables.html"
+                    },
+                    {
+                        "title": "Tutorial: Use an AWS Step Functions invoke action",
+                        "href": "tutorials-step-functions.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a pipeline that uses AppConfig as a deployment provider",
+                        "href": "tutorials-AppConfig.html"
+                    },
+                    {
+                        "title": "Tutorial: Use full clone with a GitHub pipeline source",
+                        "href": "tutorials-github-gitclone.html"
+                    },
+                    {
+                        "title": "Tutorial: Use full clone with a CodeCommit pipeline source",
+                        "href": "tutorials-codecommit-gitclone.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a pipeline with AWS CloudFormation StackSets deployment actions",
+                        "href": "tutorials-stackset-deployment.html"
+                    }
+                ]
+            },
+            {
+                "title": "Best practices and use cases",
+                "href": "best-practices.html"
+            },
+            {
+                "title": "Tagging resources",
+                "href": "tag-resources.html"
+            },
+            {
+                "title": "Use CodePipeline with Amazon VPC",
+                "href": "vpc-support.html"
+            },
+            {
+                "title": "Working with pipelines",
+                "href": "pipelines.html",
+                "contents": [
+                    {
+                        "title": "Start a pipeline in CodePipeline",
+                        "href": "pipelines-about-starting.html",
+                        "contents": [
+                            {
+                                "title": "Start a pipeline manually",
+                                "href": "pipelines-rerun-manually.html"
+                            },
+                            {
+                                "title": "Start a pipeline on a schedule",
+                                "href": "pipelines-trigger-source-schedule.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Stop a pipeline execution",
+                        "href": "pipelines-stop.html"
+                    },
+                    {
+                        "title": "Create a pipeline",
+                        "href": "pipelines-create.html",
+                        "contents": [
+                            {
+                                "title": "Amazon ECR source actions and EventBridge",
+                                "href": "create-cwe-ecr-source.html",
+                                "contents": [
+                                    {
+                                        "title": "Create an EventBridge rule for an Amazon ECR source (console)",
+                                        "href": "create-cwe-ecr-source-console.html"
+                                    },
+                                    {
+                                        "title": "Create an EventBridge rule for an Amazon ECR source (CLI)",
+                                        "href": "create-cwe-ecr-source-cli.html"
+                                    },
+                                    {
+                                        "title": "Create an EventBridge rule for an Amazon ECR source (AWS CloudFormation template)",
+                                        "href": "create-cwe-ecr-source-cfn.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Amazon S3 source actions and EventBridge",
+                                "href": "create-cloudtrail-S3-source.html",
+                                "contents": [
+                                    {
+                                        "title": "Create an EventBridge rule for an Amazon S3 source (console)",
+                                        "href": "create-cloudtrail-S3-source-console.html"
+                                    },
+                                    {
+                                        "title": "Create an EventBridge rule for an Amazon S3 source (CLI)",
+                                        "href": "create-cloudtrail-S3-source-cli.html"
+                                    },
+                                    {
+                                        "title": "Create an EventBridge rule for an Amazon S3 source (AWS CloudFormation template)",
+                                        "href": "create-cloudtrail-S3-source-cfn.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Bitbucket Cloudconnections",
+                                "href": "connections-bitbucket.html"
+                            },
+                            {
+                                "title": "CodeCommit source actions and EventBridge",
+                                "href": "triggering.html",
+                                "contents": [
+                                    {
+                                        "title": "Create an EventBridge rule for a CodeCommit source (console)",
+                                        "href": "pipelines-trigger-source-repo-changes-console.html"
+                                    },
+                                    {
+                                        "title": "Create an EventBridge rule for a CodeCommit source (CLI)",
+                                        "href": "pipelines-trigger-source-repo-changes-cli.html"
+                                    },
+                                    {
+                                        "title": "Create an EventBridge rule for a CodeCommit source (AWS CloudFormation template)",
+                                        "href": "pipelines-trigger-source-repo-changes-cfn.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "GitHub connections",
+                                "href": "connections-github.html"
+                            },
+                            {
+                                "title": "GitHub Enterprise Server connections",
+                                "href": "connections-ghes.html"
+                            },
+                            {
+                                "title": "GitLab.com connections",
+                                "href": "connections-gitlab.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Edit a pipeline",
+                        "href": "pipelines-edit.html"
+                    },
+                    {
+                        "title": "View pipeline details",
+                        "href": "pipelines-view.html",
+                        "contents": [
+                            {
+                                "title": "View pipeline (console)",
+                                "href": "pipelines-view-console.html"
+                            },
+                            {
+                                "title": "View the pipeline ARN and service role ARN (console)",
+                                "href": "pipelines-settings-console.html"
+                            },
+                            {
+                                "title": "View pipeline details and history (CLI)",
+                                "href": "pipelines-view-cli.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Delete a pipeline",
+                        "href": "pipelines-delete.html"
+                    },
+                    {
+                        "title": "Create a pipeline that uses resources from another account",
+                        "href": "pipelines-create-cross-account.html"
+                    },
+                    {
+                        "title": "Migrate polling pipelines to use event-based change detection",
+                        "href": "update-change-detection.html"
+                    },
+                    {
+                        "title": "Create the CodePipeline service role",
+                        "href": "pipelines-create-service-role.html",
+                        "contents": [
+                            {
+                                "title": "Create the CodePipeline service role (console)",
+                                "href": "pipelines-create-service-role-console.html"
+                            },
+                            {
+                                "title": "Create the CodePipeline service role (CLI)",
+                                "href": "pipelines-create-service-role-cli.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tag a pipeline",
+                        "href": "pipelines-tag.html"
+                    },
+                    {
+                        "title": "Create a notification rule",
+                        "href": "notification-rule-create.html"
+                    }
+                ]
+            },
+            {
+                "title": "Manage executions",
+                "href": "manage-executions.html",
+                "contents": [
+                    {
+                        "title": "View executions",
+                        "href": "executions-view.html"
+                    },
+                    {
+                        "title": "Retry a failed stage or failed actions in a stage",
+                        "href": "stage-retry.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with actions",
+                "href": "actions.html",
+                "contents": [
+                    {
+                        "title": "Working with action types",
+                        "href": "action-types.html"
+                    },
+                    {
+                        "title": "Create a custom action for a pipeline",
+                        "href": "actions-create-custom-action.html"
+                    },
+                    {
+                        "title": "Tag a custom action in CodePipeline",
+                        "href": "customactions-tag.html"
+                    },
+                    {
+                        "title": "Invoke a Lambda function in a pipeline",
+                        "href": "actions-invoke-lambda-function.html"
+                    },
+                    {
+                        "title": "Retry a failed action in a stage",
+                        "href": "actions-retry.html"
+                    },
+                    {
+                        "title": "Manage approval actions in pipelines",
+                        "href": "approvals.html",
+                        "contents": [
+                            {
+                                "title": "Grant approval permissions to an IAM user in CodePipeline",
+                                "href": "approvals-iam-permissions.html"
+                            },
+                            {
+                                "title": "Grant Amazon SNS permissions to a service role",
+                                "href": "approvals-service-role-permissions.html"
+                            },
+                            {
+                                "title": "Add a manual approval action",
+                                "href": "approvals-action-add.html"
+                            },
+                            {
+                                "title": "Approve or reject an approval action",
+                                "href": "approvals-approve-or-reject.html"
+                            },
+                            {
+                                "title": "JSON data format for manual approval notifications",
+                                "href": "approvals-json-format.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Add a cross-Region action to a pipeline",
+                        "href": "actions-create-cross-region.html"
+                    },
+                    {
+                        "title": "Working with variables",
+                        "href": "actions-variables.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with stage transitions",
+                "href": "transitions.html"
+            },
+            {
+                "title": "Monitoring pipelines",
+                "href": "monitoring.html",
+                "contents": [
+                    {
+                        "title": "Monitoring CodePipeline events",
+                        "href": "detect-state-changes-cloudwatch-events.html"
+                    },
+                    {
+                        "title": "Events placeholder bucket reference",
+                        "href": "reference-ct-placeholder-buckets.html"
+                    },
+                    {
+                        "title": "Logging API calls with AWS CloudTrail",
+                        "href": "monitoring-cloudtrail-logs.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Configure server-side encryption for artifacts stored in Amazon S3 for CodePipeline",
+                                "href": "S3-artifact-encryption.html"
+                            },
+                            {
+                                "title": "Use AWS Secrets Manager to track database passwords or third-party API keys",
+                                "href": "parameter-store-encryption.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS CodePipeline works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html",
+                                "contents": [
+                                    {
+                                        "title": "Policy best practices",
+                                        "href": "security_iam_service-with-iam-policy-best-practices.html"
+                                    },
+                                    {
+                                        "title": "Viewing resources in the console",
+                                        "href": "security-iam-resources-console.html"
+                                    },
+                                    {
+                                        "title": "Allow users to view their own permissions",
+                                        "href": "security_iam_id-based-policy-examples-view-own-permissions.html"
+                                    },
+                                    {
+                                        "title": "Identity-based policies (IAM) examples",
+                                        "href": "security-iam-id-policies-examples.html"
+                                    },
+                                    {
+                                        "title": "Using tags to control access to CodePipeline resources",
+                                        "href": "tag-based-access-control.html"
+                                    },
+                                    {
+                                        "title": "Permissions required to use the CodePipeline console",
+                                        "href": "security-iam-permissions-console.html"
+                                    },
+                                    {
+                                        "title": "AWS managed policies",
+                                        "href": "managed-policies.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Resource-based policy examples",
+                                "href": "security_iam_resource-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            },
+                            {
+                                "title": "CodePipeline permissions reference",
+                                "href": "permissions-reference.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Incident response",
+                        "href": "incident-response.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "codepipeline-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Command line reference",
+                "href": "reference-command-line.html"
+            },
+            {
+                "title": "Pipeline structure reference",
+                "href": "reference-pipeline-structure.html"
+            },
+            {
+                "title": "Action structure reference",
+                "href": "action-reference.html",
+                "contents": [
+                    {
+                        "title": "Amazon ECR",
+                        "href": "action-reference-ECR.html"
+                    },
+                    {
+                        "title": "Amazon ECS and CodeDeploy blue-green",
+                        "href": "action-reference-ECSbluegreen.html"
+                    },
+                    {
+                        "title": "Amazon Elastic Container Service",
+                        "href": "action-reference-ECS.html"
+                    },
+                    {
+                        "title": "Amazon S3 deploy action",
+                        "href": "action-reference-S3Deploy.html"
+                    },
+                    {
+                        "title": "Amazon S3 source action",
+                        "href": "action-reference-S3.html"
+                    },
+                    {
+                        "title": "AWS AppConfig",
+                        "href": "action-reference-AppConfig.html"
+                    },
+                    {
+                        "title": "AWS CloudFormation",
+                        "href": "action-reference-CloudFormation.html"
+                    },
+                    {
+                        "title": "AWS CloudFormation StackSets",
+                        "href": "action-reference-StackSets.html"
+                    },
+                    {
+                        "title": "AWS CodeBuild",
+                        "href": "action-reference-CodeBuild.html"
+                    },
+                    {
+                        "title": "AWS CodeCommit",
+                        "href": "action-reference-CodeCommit.html"
+                    },
+                    {
+                        "title": "AWS CodeDeploy",
+                        "href": "action-reference-CodeDeploy.html"
+                    },
+                    {
+                        "title": "CodeStarSourceConnection for Bitbucket Cloud, GitHub, GitHub Enterprise Server, and GitLab.com actions",
+                        "href": "action-reference-CodestarConnectionSource.html"
+                    },
+                    {
+                        "title": "AWS Device Farm",
+                        "href": "action-reference-DeviceFarm.html"
+                    },
+                    {
+                        "title": "AWS Lambda",
+                        "href": "action-reference-Lambda.html"
+                    },
+                    {
+                        "title": "Snyk",
+                        "href": "action-reference-Snyk.html"
+                    },
+                    {
+                        "title": "AWS Step Functions",
+                        "href": "action-reference-StepFunctions.html"
+                    }
+                ]
+            },
+            {
+                "title": "Integration model reference",
+                "href": "reference-integrations.html"
+            },
+            {
+                "title": "Image definitions file reference",
+                "href": "file-reference.html"
+            },
+            {
+                "title": "Variables",
+                "href": "reference-variables.html"
+            },
+            {
+                "title": "Working with glob patterns in syntax",
+                "href": "syntax-glob.html"
+            },
+            {
+                "title": "Update polling pipelines to the recommended change detection method",
+                "href": "trigger-S3-migration-cwe.html"
+            },
+            {
+                "title": "Update a GitHub version 1 source action to a GitHub version 2 source action",
+                "href": "update-github-action-connections.html"
+            },
+            {
+                "title": "Quotas",
+                "href": "limits.html"
+            },
+            {
+                "title": "Appendix A: GitHub version 1 source actions",
+                "href": "appendix-github-oauth.html"
+            },
+            {
+                "title": "Document history",
+                "href": "history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

@@ -1,1 +1,114 @@
-{ "contents" : [ { "title" : "What is Porting Assistant for .NET?", "href" : "what-is-porting-assistant.html" }, { "title" : "How it works", "href" : "how-porting-assistant-works.html" }, { "title" : "Get Started", "href" : "porting-assistant-getting-started.html", "contents" : [ { "title" : "Prerequisites", "href" : "porting-assistant-prerequisites.html" }, { "title" : "Install", "href" : "porting-assistant-install.html" }, { "title" : "Use the assessment tool", "href" : "porting-assistant-assessment-tool.html" }, { "title" : "Port solution", "href" : "porting-assistant-port.html" }, { "title" : "Remove solution assessment", "href" : "porting-assistant-remove.html" }, { "title" : "Change settings", "href" : "porting-assistant-settings.html" } ] }, { "title" : "Porting Assistant for .NET Visual Studio IDE extension", "href" : "porting-assistant-vs-ide.html", "contents" : [ { "title" : "How it works", "href" : "porting-assistant-vs-ide-how-it-works.html" }, { "title" : "Install extension", "href" : "porting-assistant-vs-ide-installation.html" }, { "title" : "Assess and analyze solution", "href" : "porting-assistant-vs-ide-solution-assessment.html" }, { "title" : "Port solution", "href" : "porting-assistant-vs-ide-port-solution.html" }, { "title" : "Transition from standalone tool to extension", "href" : "porting-assistant-vs-ide-transition.html" }, { "title" : "Troubleshoot", "href" : "porting-assistant-vs-ide-troubleshooting.html" }, { "title" : "Version history", "href" : "porting-assistant-vs-ide-versions.html" } ] }, { "title" : "Security", "href" : "porting-assistant-security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and Access Management", "href" : "security-iam.html" }, { "title" : "Configuration and vulnerability analysis", "href" : "security-vulnerability-analysis-and-management.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" } ] }, { "title" : "Collected Metrics", "href" : "porting-assistant-metrics.html" }, { "title" : "Version history", "href" : "porting-assistant-versions.html" }, { "title" : "Document History", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/portingassistant/latest/userguide/",
+    "service": "portingassistant",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Porting Assistant for .NET?",
+                "href": "what-is-porting-assistant.html"
+            },
+            {
+                "title": "How it works",
+                "href": "how-porting-assistant-works.html"
+            },
+            {
+                "title": "Get Started",
+                "href": "porting-assistant-getting-started.html",
+                "contents": [
+                    {
+                        "title": "Prerequisites",
+                        "href": "porting-assistant-prerequisites.html"
+                    },
+                    {
+                        "title": "Install",
+                        "href": "porting-assistant-install.html"
+                    },
+                    {
+                        "title": "Use the assessment tool",
+                        "href": "porting-assistant-assessment-tool.html"
+                    },
+                    {
+                        "title": "Port solution",
+                        "href": "porting-assistant-port.html"
+                    },
+                    {
+                        "title": "Remove solution assessment",
+                        "href": "porting-assistant-remove.html"
+                    },
+                    {
+                        "title": "Change settings",
+                        "href": "porting-assistant-settings.html"
+                    }
+                ]
+            },
+            {
+                "title": "Porting Assistant for .NET Visual Studio IDE extension",
+                "href": "porting-assistant-vs-ide.html",
+                "contents": [
+                    {
+                        "title": "How it works",
+                        "href": "porting-assistant-vs-ide-how-it-works.html"
+                    },
+                    {
+                        "title": "Install extension",
+                        "href": "porting-assistant-vs-ide-installation.html"
+                    },
+                    {
+                        "title": "Assess and analyze solution",
+                        "href": "porting-assistant-vs-ide-solution-assessment.html"
+                    },
+                    {
+                        "title": "Port solution",
+                        "href": "porting-assistant-vs-ide-port-solution.html"
+                    },
+                    {
+                        "title": "Transition from standalone tool to extension",
+                        "href": "porting-assistant-vs-ide-transition.html"
+                    },
+                    {
+                        "title": "Troubleshoot",
+                        "href": "porting-assistant-vs-ide-troubleshooting.html"
+                    },
+                    {
+                        "title": "Version history",
+                        "href": "porting-assistant-vs-ide-versions.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "porting-assistant-security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "security-vulnerability-analysis-and-management.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Collected Metrics",
+                "href": "porting-assistant-metrics.html"
+            },
+            {
+                "title": "Version history",
+                "href": "porting-assistant-versions.html"
+            },
+            {
+                "title": "Document History",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

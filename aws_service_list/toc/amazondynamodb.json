@@ -1,1 +1,2480 @@
-{ "contents" : [ { "title" : "What is Amazon DynamoDB?", "href" : "Introduction.html", "contents" : [ { "title" : "How it works", "href" : "HowItWorks.html", "contents" : [ { "title" : "Cheat sheet", "href" : "CheatSheet.html" }, { "title" : "Core components", "href" : "HowItWorks.CoreComponents.html" }, { "title" : "DynamoDB API", "href" : "HowItWorks.API.html" }, { "title" : "Supported data types and naming rules", "href" : "HowItWorks.NamingRulesDataTypes.html" }, { "title" : "Read consistency", "href" : "HowItWorks.ReadConsistency.html" }, { "title" : "Read/write capacity mode", "href" : "HowItWorks.ReadWriteCapacityMode.html" }, { "title" : "Table classes", "href" : "HowItWorks.TableClasses.html" }, { "title" : "Partitions and data distribution", "href" : "HowItWorks.Partitions.html" } ] }, { "title" : "From SQL to NoSQL", "href" : "SQLtoNoSQL.html", "contents" : [ { "title" : "Relational or NoSQL?", "href" : "SQLtoNoSQL.WhyDynamoDB.html" }, { "title" : "Characteristics of databases", "href" : "SQLtoNoSQL.Accessing.html" }, { "title" : "Creating a table", "href" : "SQLtoNoSQL.CreateTable.html" }, { "title" : "Getting information about a table", "href" : "SQLtoNoSQL.GetTableInfo.html" }, { "title" : "Writing data to a table", "href" : "SQLtoNoSQL.WriteData.html" }, { "title" : "Reading data from a table", "href" : "SQLtoNoSQL.ReadData.html", "contents" : [ { "title" : "Reading an item using its primary key", "href" : "SQLtoNoSQL.ReadData.SingleItem.html" }, { "title" : "Querying a table", "href" : "SQLtoNoSQL.ReadData.Query.html" }, { "title" : "Scanning a table", "href" : "SQLtoNoSQL.ReadData.Scan.html" } ] }, { "title" : "Managing indexes", "href" : "SQLtoNoSQL.Indexes.html", "contents" : [ { "title" : "Creating an index", "href" : "SQLtoNoSQL.Indexes.Creating.html" }, { "title" : "Querying and scanning an index", "href" : "SQLtoNoSQL.Indexes.QueryAndScan.html" } ] }, { "title" : "Modifying data in a table", "href" : "SQLtoNoSQL.UpdateData.html" }, { "title" : "Deleting data from a table", "href" : "SQLtoNoSQL.DeleteData.html" }, { "title" : "Removing a table", "href" : "SQLtoNoSQL.RemoveTable.html" } ] }, { "title" : "Additional resources for Amazon DynamoDB", "href" : "AdditionalResources.html", "contents" : [ { "title" : "Tools for coding and visualization", "href" : "AdditionalResources.Tools.html" }, { "title" : "Prescriptive Guidance", "href" : "AdditionalResources.PrescriptiveGuidance.html" }, { "title" : "Knowledge Center", "href" : "AdditionalResources.KnowledgeCenter.html" }, { "title" : "Blog posts, repositories, and guides", "href" : "AdditionalResources.Guides.html" }, { "title" : "Data modeling and design patterns", "href" : "AdditionalResources.DataModeling.html" }, { "title" : "Training courses", "href" : "AdditionalResources.Training.html" } ] } ] }, { "title" : "Setting up DynamoDB", "href" : "SettingUp.html", "contents" : [ { "title" : "Setting up DynamoDB local (downloadable version)", "href" : "DynamoDBLocal.html", "contents" : [ { "title" : "Deploying", "href" : "DynamoDBLocal.DownloadingAndRunning.html" }, { "title" : "Usage notes", "href" : "DynamoDBLocal.UsageNotes.html" }, { "title" : "Release history", "href" : "DynamoDBLocalHistory.html" }, { "title" : "DynamoDB local telemetry", "href" : "DynamoDBLocalTelemetry.html" } ] }, { "title" : "Setting up DynamoDB (web service)", "href" : "SettingUp.DynamoWebService.html" } ] }, { "title" : "Accessing DynamoDB", "href" : "AccessingDynamoDB.html", "contents" : [ { "title" : "Using the console", "href" : "ConsoleDynamoDB.html" }, { "title" : "Using the AWS CLI", "href" : "Tools.CLI.html" }, { "title" : "Using the API", "href" : "Using.API.html" }, { "title" : "Using the NoSQL workbench", "href" : "Using.Workbench.html" }, { "title" : "IP address ranges", "href" : "Using.IPRanges.html" } ] }, { "title" : "Getting started with DynamoDB", "href" : "GettingStartedDynamoDB.html", "contents" : [ { "title" : "Step 1: Create a table", "href" : "getting-started-step-1.html" }, { "title" : "Step 2: Write data", "href" : "getting-started-step-2.html" }, { "title" : "Step 3: Read data", "href" : "getting-started-step-3.html" }, { "title" : "Step 4: Update data", "href" : "getting-started-step-4.html" }, { "title" : "Step 5: Query data", "href" : "getting-started-step-5.html" }, { "title" : "Step 6: Create a global secondary index", "href" : "getting-started-step-6.html" }, { "title" : "Step 7: Query the global secondary index", "href" : "getting-started-step-7.html" }, { "title" : "Step 8: (Optional) clean up", "href" : "getting-started-step-8.html" }, { "title" : "Next steps", "href" : "getting-started-NextSteps.html" } ] }, { "title" : "Getting started with DynamoDB and the AWS SDKs", "href" : "GettingStarted.html", "contents" : [ { "title" : "Create a table", "href" : "GettingStarted.CreateTable.html" }, { "title" : "Write an item", "href" : "GettingStarted.WriteItem.html" }, { "title" : "Read an item", "href" : "GettingStarted.ReadItem.html" }, { "title" : "Update an item", "href" : "GettingStarted.UpdateItem.html" }, { "title" : "Delete an item", "href" : "GettingStarted.DeleteItem.html" }, { "title" : "Query a table", "href" : "GettingStarted.Query.html" }, { "title" : "Scan a table", "href" : "GettingStarted.Scan.html" }, { "title" : "Working with AWS SDKs", "href" : "sdk-general-information-section.html" } ] }, { "title" : "Programming with DynamoDB", "href" : "Programming.html", "contents" : [ { "title" : "Overview of AWS SDK support for DynamoDB", "href" : "Programming.SDKOverview.html", "contents" : [ { "title" : "Programmatic interfaces", "href" : "Programming.SDKs.Interfaces.html", "contents" : [ { "title" : "Low-level interfaces", "href" : "Programming.SDKs.Interfaces.LowLevel.html" }, { "title" : "Document interfaces", "href" : "Programming.SDKs.Interfaces.Document.html" }, { "title" : "Object persistence interface", "href" : "Programming.SDKs.Interfaces.Mapper.html" } ] }, { "title" : "Low-level API", "href" : "Programming.LowLevelAPI.html" }, { "title" : "Error handling", "href" : "Programming.Errors.html" } ] }, { "title" : "Higher-level programming interfaces", "href" : "HigherLevelInterfaces.html", "contents" : [ { "title" : "Java 1.x: DynamoDBMapper", "href" : "DynamoDBMapper.html", "contents" : [ { "title" : "Supported Data Types", "href" : "DynamoDBMapper.DataTypes.html" }, { "title" : "Java Annotations for DynamoDB", "href" : "DynamoDBMapper.Annotations.html" }, { "title" : "DynamoDBMapper Class", "href" : "DynamoDBMapper.Methods.html" }, { "title" : "Optional configuration settings for DynamoDBMapper", "href" : "DynamoDBMapper.OptionalConfig.html" }, { "title" : "Optimistic Locking With Version Number", "href" : "DynamoDBMapper.OptimisticLocking.html" }, { "title" : "Mapping Arbitrary Data", "href" : "DynamoDBMapper.ArbitraryDataMapping.html" }, { "title" : "DynamoDBMapper Examples", "href" : "DynamoDBMapper.Examples.html", "contents" : [ { "title" : "CRUD operations", "href" : "DynamoDBMapper.CRUDExample1.html" }, { "title" : "Query and scan operations", "href" : "DynamoDBMapper.QueryScanExample.html" }, { "title" : "Batch operations", "href" : "DynamoDBMapper.Batch.html" }, { "title" : "Transaction operations", "href" : "DynamoDBMapper.Transactions.html" } ] } ] }, { "title" : "Java 2.x: DynamoDB Enhanced Client", "href" : "DynamoDBEnhanced.html" }, { "title" : ".NET: Document model", "href" : "DotNetSDKMidLevel.html", "contents" : [ { "title" : "Supported data types", "href" : "MidLevelAPILimitations.SupportedTypes.html" }, { "title" : "Working with items - .NET document model", "href" : "WorkingWithItemsDocumentClasses.html" }, { "title" : "Example: CRUD operations - .NET document model", "href" : "ItemCRUDDotNetDocumentAPI.html" }, { "title" : "Example: Batch operations-.NET document model API", "href" : "example-batch-operations-net-doc-model.html" }, { "title" : "Working with tables - .NET document model", "href" : "QueryAndScanMidLevelDotNet.html", "contents" : [ { "title" : "Table.Query", "href" : "QueryMidLevelDotNet.html" }, { "title" : "Table.Scan", "href" : "ScanMidLevelDotNet.html" } ] } ] }, { "title" : ".NET: Object persistence model", "href" : "DotNetSDKHighLevel.html", "contents" : [ { "title" : "DynamoDB attributes", "href" : "DeclarativeTagsList.html" }, { "title" : "DynamoDBContext class", "href" : "DotNetDynamoDBContext.html" }, { "title" : "Optimistic locking using version number", "href" : "DynamoDBContext.VersionSupport.html" }, { "title" : "Mapping arbitrary data", "href" : "DynamoDBContext.ArbitraryDataMapping.html" }, { "title" : "Batch operations", "href" : "DotNetDynamoDBContext.BatchOperations.html" }, { "title" : "Example: CRUD operations - .NET object persistence model", "href" : "CRUDHighLevelExample1.html" }, { "title" : "Example: Batch write operation", "href" : "orm-dotnet-batchoperations-example.html" }, { "title" : "Example: Query and scan - .NET object persistence model", "href" : "DynamoDBContext.QueryScan.html" } ] } ] }, { "title" : "Running the code examples", "href" : "CodeSamples.html", "contents" : [ { "title" : "Load sample data", "href" : "SampleData.html" }, { "title" : "Java code examples", "href" : "CodeSamples.Java.html" }, { "title" : ".NET code examples", "href" : "CodeSamples.DotNet.html" } ] } ] }, { "title" : "Working with DynamoDB", "href" : "WorkingWithDynamo.html", "contents" : [ { "title" : "Working with tables", "href" : "WorkingWithTables.html", "contents" : [ { "title" : "Basic operations on tables", "href" : "WorkingWithTables.Basics.html" }, { "title" : "Considerations when changing read/write Capacity Mode", "href" : "switching.capacitymode.html" }, { "title" : "Considerations when choosing a table class", "href" : "WorkingWithTables.tableclasses.html" }, { "title" : "Provisioned capacity tables", "href" : "ProvisionedThroughput.html" }, { "title" : "Item sizes and formats", "href" : "CapacityUnitCalculations.html" }, { "title" : "Managing throughput capacity with auto scaling", "href" : "AutoScaling.html", "contents" : [ { "title" : "Using the AWS Management Console with DynamoDB auto scaling", "href" : "AutoScaling.Console.html" }, { "title" : "Using the AWS CLI to manage DynamoDB auto scaling", "href" : "AutoScaling.CLI.html" }, { "title" : "Using the AWS SDK to configure auto scaling", "href" : "AutoScaling.HowTo.SDK.html" } ] }, { "title" : "Working with global tables", "href" : "GlobalTables.html", "contents" : [ { "title" : "Determining the version", "href" : "globaltables.DetermineVersion.html" }, { "title" : "Version 2019.11.21 (Current)", "href" : "globaltables.V2.html", "contents" : [ { "title" : "How it works", "href" : "V2globaltables_HowItWorks.html" }, { "title" : "Best practices and requirements", "href" : "V2globaltables_reqs_bestpractices.html" }, { "title" : "Tutorial: Creating a global table", "href" : "V2globaltables.tutorial.html" }, { "title" : "Monitoring global tables", "href" : "V2globaltables_monitoring.html" }, { "title" : "Using IAM with global tables", "href" : "V2gt_IAM.html" }, { "title" : "Updating global tables", "href" : "V2globaltables_upgrade.html" } ] }, { "title" : "Version 2017.11.29 (Legacy)", "href" : "globaltables.V1.html", "contents" : [ { "title" : "How it works", "href" : "globaltables_HowItWorks.html" }, { "title" : "Best Practices and Requirements", "href" : "globaltables_reqs_bestpractices.html" }, { "title" : "Creating a global table", "href" : "globaltables.tutorial.html" }, { "title" : "Monitoring global tables", "href" : "globaltables_monitoring.html" }, { "title" : "Using IAM with global tables", "href" : "gt_IAM.html" } ] } ] }, { "title" : "Tagging resources", "href" : "Tagging.html", "contents" : [ { "title" : "Tagging restrictions in DynamoDB", "href" : "TaggingRestrictions.html" }, { "title" : "Tagging resources", "href" : "Tagging.Operations.html" }, { "title" : "Cost allocation reports", "href" : "CostAllocationReports.html" } ] }, { "title" : "Working with tables: Java", "href" : "JavaDocumentAPIWorkingWithTables.html", "contents" : [ { "title" : "Example: Create, update, delete and list tables", "href" : "JavaDocumentAPITablesExample.html" } ] }, { "title" : "Working with tables: .NET", "href" : "LowLevelDotNetWorkingWithTables.html", "contents" : [ { "title" : "Example: Create, update, delete, and list tables - .NET low-level API", "href" : "LowLevelDotNetTableOperationsExample.html" } ] } ] }, { "title" : "Working with read and write operations", "href" : "WorkingWithReadWriteOperations.html", "contents" : [ { "title" : "DynamoDB API", "href" : "DynamoDB_API.html", "contents" : [ { "title" : "Working with items", "href" : "WorkingWithItems.html", "contents" : [ { "title" : "Using expressions", "href" : "Expressions.html", "contents" : [ { "title" : "Specifying item attributes", "href" : "Expressions.Attributes.html" }, { "title" : "Projection expressions", "href" : "Expressions.ProjectionExpressions.html" }, { "title" : "Expression attribute names", "href" : "Expressions.ExpressionAttributeNames.html" }, { "title" : "Expression attribute values", "href" : "Expressions.ExpressionAttributeValues.html" }, { "title" : "Condition expressions", "href" : "Expressions.ConditionExpressions.html", "contents" : [ { "title" : "Comparison operator and function reference", "href" : "Expressions.OperatorsAndFunctions.html" } ] }, { "title" : "Update expressions", "href" : "Expressions.UpdateExpressions.html" } ] }, { "title" : "Expiring items with Time to Live", "href" : "TTL.html", "contents" : [ { "title" : "How it Works", "href" : "howitworks-ttl.html" }, { "title" : "Using TTL", "href" : "time-to-live-ttl-before-you-start.html" }, { "title" : "Enabling Time to Live", "href" : "time-to-live-ttl-how-to.html" } ] }, { "title" : "Working with items: Java", "href" : "JavaDocumentAPIItemCRUD.html", "contents" : [ { "title" : "Example: CRUD operations - Java document API", "href" : "JavaDocumentAPICRUDExample.html" }, { "title" : "Example: Batch operations - Java document API", "href" : "batch-operation-document-api-java.html" }, { "title" : "Example: Handling binary type attributes - Java document API", "href" : "JavaDocumentAPIBinaryTypeExample.html" } ] }, { "title" : "Working with items: .NET", "href" : "LowLevelDotNetItemCRUD.html", "contents" : [ { "title" : "Example: CRUD operations - .NET low-level API", "href" : "LowLevelDotNetItemsExample.html" }, { "title" : "Example: Batch operations - .NET low-level API", "href" : "batch-operation-lowlevel-dotnet.html" }, { "title" : "Example: Handling binary type attributes - .NET low-level API", "href" : "LowLevelDotNetBinaryTypeExample.html" } ] } ] }, { "title" : "Working with Item Collections", "href" : "WorkingWithItemCollections.html", "contents" : [ { "title" : "Working with queries", "href" : "Query.html", "contents" : [ { "title" : "Key condition expressions for queries", "href" : "Query.KeyConditionExpressions.html" }, { "title" : "Filter expressions for queries", "href" : "Query.FilterExpression.html" }, { "title" : "Paginating query results", "href" : "Query.Pagination.html" }, { "title" : "Other aspects of queries", "href" : "Query.Other.html" }, { "title" : "Querying: Java", "href" : "QueryingJavaDocumentAPI.html" }, { "title" : "Querying: .NET", "href" : "LowLevelDotNetQuerying.html" } ] } ] }, { "title" : "Working with scans", "href" : "Scan.html", "contents" : [ { "title" : "Scanning: Java", "href" : "ScanJavaDocumentAPI.html" }, { "title" : "Scanning: .NET", "href" : "LowLevelDotNetScanning.html" } ] } ] }, { "title" : "PartiQL query language", "href" : "ql-reference.html", "contents" : [ { "title" : "Getting started", "href" : "ql-gettingstarted.html" }, { "title" : "Data types", "href" : "ql-reference.data-types.html" }, { "title" : "Statements", "href" : "ql-reference.statements.html", "contents" : [ { "title" : "Select", "href" : "ql-reference.select.html" }, { "title" : "Update", "href" : "ql-reference.update.html" }, { "title" : "Delete", "href" : "ql-reference.delete.html" }, { "title" : "Insert", "href" : "ql-reference.insert.html" } ] }, { "title" : "Functions", "href" : "ql-functions.html", "contents" : [ { "title" : "Exists", "href" : "ql-functions.exists.html" }, { "title" : "Begins_with", "href" : "ql-functions.beginswith.html" }, { "title" : "Missing", "href" : "ql-functions.missing.html" }, { "title" : "Attribute_type", "href" : "ql-functions.attribute_type.html" }, { "title" : "Contains", "href" : "ql-functions.contains.html" }, { "title" : "Size", "href" : "ql-functions.size.html" } ] }, { "title" : "Operators", "href" : "ql-operators.html" }, { "title" : "Transactions", "href" : "ql-reference.multiplestatements.transactions.html" }, { "title" : "Batch operations", "href" : "ql-reference.multiplestatements.batching.html" }, { "title" : "IAM policies", "href" : "ql-iam.html" } ] } ] }, { "title" : "Working with indexes", "href" : "SecondaryIndexes.html", "contents" : [ { "title" : "Global secondary indexes", "href" : "GSI.html", "contents" : [ { "title" : "Managing Global Secondary Indexes", "href" : "GSI.OnlineOps.html", "contents" : [ { "title" : "Detecting and correcting index key violations", "href" : "GSI.OnlineOps.ViolationDetection.html" } ] }, { "title" : "Global Secondary Indexes: Java", "href" : "GSIJavaDocumentAPI.html", "contents" : [ { "title" : "Example: Global Secondary Indexes - Java document API", "href" : "GSIJavaDocumentAPI.Example.html" } ] }, { "title" : "Global Secondary Indexes: .NET", "href" : "GSILowLevelDotNet.html", "contents" : [ { "title" : "Example: Global Secondary Indexes - .NET low-level API", "href" : "GSILowLevelDotNet.Example.html" } ] }, { "title" : "Global Secondary Indexes: AWS CLI", "href" : "GCICli.html" } ] }, { "title" : "Local Secondary Indexes", "href" : "LSI.html", "contents" : [ { "title" : "Local Secondary Indexes: Java", "href" : "LSIJavaDocumentAPI.html", "contents" : [ { "title" : "Example: Local Secondary Indexes - Java document API", "href" : "LSIJavaDocumentAPI.Example.html" } ] }, { "title" : "Local Secondary Indexes: .NET", "href" : "LSILowLevelDotNet.html", "contents" : [ { "title" : "Example: Local Secondary Indexes - .NET low-level API", "href" : "LSILowLevelDotNet.Example.html" } ] }, { "title" : "Local Secondary Indexes: AWS CLI", "href" : "LCICli.html" } ] } ] }, { "title" : "Working with transactions", "href" : "transactions.html", "contents" : [ { "title" : "How it works", "href" : "transaction-apis.html" }, { "title" : "Using IAM with transactions", "href" : "transaction-apis-iam.html" }, { "title" : "Example code", "href" : "transaction-example.html" } ] }, { "title" : "Working with streams", "href" : "streamsmain.html", "contents" : [ { "title" : "Working with Kinesis Data Streams", "href" : "kds.html", "contents" : [ { "title" : "Getting started", "href" : "kds_gettingstarted.html" }, { "title" : "Configuring shards and monitoring streams", "href" : "kds_using-shards-and-metrics.html" }, { "title" : "Using IAM policies", "href" : "kds_iam.html" } ] }, { "title" : "Working with DynamoDB Streams", "href" : "Streams.html", "contents" : [ { "title" : "DynamoDB Streams and TTL", "href" : "time-to-live-ttl-streams.html" }, { "title" : "Using the DynamoDB Streams Kinesis adapter to process stream records", "href" : "Streams.KCLAdapter.html", "contents" : [ { "title" : "Walkthrough: DynamoDB Streams Kinesis adapter", "href" : "Streams.KCLAdapter.Walkthrough.html", "contents" : [ { "title" : "Complete program: DynamoDB Streams Kinesis adapter", "href" : "Streams.KCLAdapter.Walkthrough.CompleteProgram.html" } ] } ] }, { "title" : "DynamoDB Streams low-level API: Java example", "href" : "Streams.LowLevel.Walkthrough.html" }, { "title" : "DynamoDB Streams and AWS Lambda triggers", "href" : "Streams.Lambda.html", "contents" : [ { "title" : "Tutorial #1: Processing all events", "href" : "Streams.Lambda.Tutorial.html" }, { "title" : "Tutorial #2: Processing some events", "href" : "Streams.Lambda.Tutorial2.html" }, { "title" : "Best practices", "href" : "Streams.Lambda.BestPracticesWithDynamoDB.html" } ] } ] } ] }, { "title" : "Working with On-Demand backup and restore", "href" : "BackupRestore.html", "contents" : [ { "title" : "Using AWS Backup", "href" : "backuprestore_HowItWorksAWS.html", "contents" : [ { "title" : "How it works", "href" : "GettingStartedBackupsAWS.html" }, { "title" : "Creating backups", "href" : "CreateBackupAWS.html" }, { "title" : "Copying backups", "href" : "CrossRegionAccountCopyAWS.html" }, { "title" : "Restoring a table", "href" : "Restore.TutorialAWS.html" }, { "title" : "Deleting backups", "href" : "Delete.TutorialAWS.html" }, { "title" : "Usage notes", "href" : "UsageNotesAWS.html" } ] }, { "title" : "Using DynamoDB backups", "href" : "backuprestore_HowItWorks.html", "contents" : [ { "title" : "How it works", "href" : "CreateBackup.html" }, { "title" : "Backing up a table", "href" : "Backup.Tutorial.html" }, { "title" : "Restoring a table", "href" : "Restore.Tutorial.html" }, { "title" : "Deleting a table backup", "href" : "Delete.Tutorial.html" }, { "title" : "Using IAM", "href" : "backuprestore_IAM.html" } ] } ] }, { "title" : "Working with point-in-time recovery", "href" : "PointInTimeRecovery.html", "contents" : [ { "title" : "How it works", "href" : "PointInTimeRecovery_Howitworks.html" }, { "title" : "Before you begin", "href" : "pointintimerecovery_beforeyoubegin.html" }, { "title" : "Restoring a table to a point in time", "href" : "PointInTimeRecovery.Tutorial.html" } ] } ] }, { "title" : "In-memory acceleration with DAX", "href" : "DAX.html", "contents" : [ { "title" : "How it works", "href" : "DAX.concepts.html" }, { "title" : "DAX cluster components", "href" : "DAX.concepts.cluster.html" }, { "title" : "Creating a DAX cluster", "href" : "DAX.create-cluster.html", "contents" : [ { "title" : "Using the AWS CLI", "href" : "DAX.create-cluster.cli.html", "contents" : [ { "title" : "Step 1: Create a service role", "href" : "DAX.create-cluster.cli.create-service-role.html" }, { "title" : "Step 2: Create a subnet group", "href" : "DAX.create-cluster.cli.create-subnet-group.html" }, { "title" : "Step 3: Create a DAX cluster", "href" : "DAX.create-cluster.cli.create-cluster.html" }, { "title" : "Step 4: Configure security group inbound rules", "href" : "DAX.create-cluster.cli.configure-inbound-rules.html" } ] }, { "title" : "Using the console", "href" : "DAX.create-cluster.console.html", "contents" : [ { "title" : "Step 1: Create a subnet group", "href" : "DAX.create-cluster.console.create-subnet-group.html" }, { "title" : "Step 2: Create a DAX cluster", "href" : "DAX.create-cluster.console.create-cluster.html" }, { "title" : "Step 3: Configure security group inbound rules", "href" : "DAX.create-cluster.console.configure-inbound-rules.html" } ] } ] }, { "title" : "Consistency models", "href" : "DAX.consistency.html" }, { "title" : "Developing with the DAX client", "href" : "DAX.client.html", "contents" : [ { "title" : "Tutorial: Running a sample application", "href" : "DAX.client.sample-app.html", "contents" : [ { "title" : "Step 1: Launch an EC2 instance", "href" : "DAX.client.launch-ec2-instance.html" }, { "title" : "Step 2: Create a user and policy", "href" : "DAX.client.create-user-policy.html" }, { "title" : "Step 3: Configure an EC2 instance", "href" : "DAX.client.configure-ec2-instance.html" }, { "title" : "Step 4: Run a sample application", "href" : "DAX.client.run-application.html", "contents" : [ { "title" : "Go and DAX", "href" : "DAX.client.run-application-go.html" }, { "title" : "Java and DAX", "href" : "DAX.client.run-application-java.html", "contents" : [ { "title" : "TryDax.java", "href" : "DAX.client.TryDax.java.html" } ] }, { "title" : ".NET and DAX", "href" : "DAX.client.run-application-dotnet.html", "contents" : [ { "title" : "01-CreateTable.cs", "href" : "DAX.client.run-application-dotnet.01-CreateTable.html" }, { "title" : "02-Write-Data.cs", "href" : "DAX.client.run-application-dotnet.02-Write-Data.html" }, { "title" : "03-GetItem-Test.cs", "href" : "DAX.client.run-application-dotnet.03-GetItem-Test.html" }, { "title" : "04-Query-Test.cs", "href" : "DAX.client.run-application-dotnet.04-Query-Test.html" }, { "title" : "05-Scan-Test.cs", "href" : "DAX.client.run-application-dotnet.05-Scan-Test.html" }, { "title" : "06-DeleteTable.cs", "href" : "DAX.client.run-application-dotnet.06-DeleteTable.html" } ] }, { "title" : "Node.js and DAX", "href" : "DAX.client.run-application-nodejs.html", "contents" : [ { "title" : "01-create-table.js", "href" : "DAX.client.run-application-nodejs.01-create-table.html" }, { "title" : "02-write-data.js", "href" : "DAX.client.run-application-nodejs.02-write-data.html" }, { "title" : "03-getitem-test.js", "href" : "DAX.client.run-application-nodejs.03-getitem-test.html" }, { "title" : "04-query-test.js", "href" : "DAX.client.run-application-nodejs.04-query-test.html" }, { "title" : "05-scan-test.js", "href" : "DAX.client.run-application-nodejs.05-scan-test.html" }, { "title" : "06-delete-table.js", "href" : "DAX.client.run-application-nodejs.06-delete-table.html" } ] }, { "title" : "Python and DAX", "href" : "DAX.client.run-application-python.html", "contents" : [ { "title" : "01-create-table.py", "href" : "DAX.client.run-application-python.01-create-table.html" }, { "title" : "02-write-data.py", "href" : "DAX.client.run-application-python.02-write-data.html" }, { "title" : "03-getitem-test.py", "href" : "DAX.client.run-application-python.03-getitem-test.html" }, { "title" : "04-query-test.py", "href" : "DAX.client.run-application-python.04-query-test.html" }, { "title" : "05-scan-test.py", "href" : "DAX.client.run-application-python.05-scan-test.html" }, { "title" : "06-delete-table.py", "href" : "DAX.client.run-application-python.06-delete-table.html" } ] } ] } ] }, { "title" : "Modifying an existing application to use DAX", "href" : "DAX.client.modify-your-app.html" } ] }, { "title" : "Managing DAX clusters", "href" : "DAX.cluster-management.html" }, { "title" : "Monitoring DAX", "href" : "DAX.Monitoring.html", "contents" : [ { "title" : "Monitoring tools", "href" : "dax-monitoring-automated-manual.html" }, { "title" : "Monitoring with CloudWatch", "href" : "dax-monitoring-cloudwatch.html", "contents" : [ { "title" : "Metrics and dimensions", "href" : "dax-metrics-dimensions-dax.html" }, { "title" : "Creating alarms", "href" : "dax-creating-alarms.html" }, { "title" : "Production monitoring", "href" : "dax-production-monitoring.html" } ] }, { "title" : "Logging DAX operations using AWS CloudTrail", "href" : "dax-logging-using-cloudtrail.html" } ] }, { "title" : "DAX T3/T2 burstable instances", "href" : "DAX.Burstable.html" }, { "title" : "DAX access control", "href" : "DAX.access-control.html" }, { "title" : "DAX encryption at rest", "href" : "DAXEncryptionAtRest.html" }, { "title" : "DAX encryption in transit", "href" : "DAXEncryptionInTransit.html" }, { "title" : "Using service-linked roles for DAX", "href" : "using-service-linked-roles.html" }, { "title" : "Accessing DAX across AWS accounts", "href" : "DAX.cross-account-access.html" }, { "title" : "DAX cluster sizing guide", "href" : "DAX.sizing-guide.html" }, { "title" : "API reference", "href" : "DAX.api.html" } ] }, { "title" : "Data modeling", "href" : "data-modeling.html", "contents" : [ { "title" : "Data modeling foundations", "href" : "data-modeling-foundations.html" }, { "title" : "Data modeling building blocks", "href" : "data-modeling-blocks.html" }, { "title" : "Data modeling schema design packages", "href" : "data-modeling-schemas.html", "contents" : [ { "title" : "Session management", "href" : "data-modeling-schema-session-management.html" }, { "title" : "Social network", "href" : "data-modeling-schema-social-network.html" }, { "title" : "Gaming profile", "href" : "data-modeling-schema-gaming-profile.html" }, { "title" : "Complaint management system", "href" : "data-modeling-complaint-management.html" }, { "title" : "Recurring payments", "href" : "data-modeling-schema-recurring-payments.html" }, { "title" : "Device status updates", "href" : "data-modeling-device-status.html" }, { "title" : "Online shop", "href" : "data-modeling-online-shop.html" } ] } ] }, { "title" : "NoSQL Workbench", "href" : "workbench.html", "contents" : [ { "title" : "Download", "href" : "workbench.settingup.html" }, { "title" : "Install", "href" : "workbench.settingup.install.html" }, { "title" : "Data modeler", "href" : "workbench.Modeler.html", "contents" : [ { "title" : "Creating a new model", "href" : "workbench.Modeler.CreateNew.html" }, { "title" : "Importing an existing model", "href" : "workbench.Modeler.ImportExisting.html" }, { "title" : "Exporting a model", "href" : "workbench.Modeler.ExportModel.html" }, { "title" : "Editing an existing model", "href" : "workbench.Modeler.Edit.html" } ] }, { "title" : "Data visualizer", "href" : "workbench.Visualizer.html", "contents" : [ { "title" : "Adding sample data", "href" : "workbench.Visualizer.AddData.html" }, { "title" : "Importing from CSV", "href" : "workbench.Visualizer.ImportCSV.html" }, { "title" : "Facets", "href" : "workbench.Visualizer.Facets.html" }, { "title" : "Aggregate view", "href" : "workbench.Visualizer.AggregateView.html" }, { "title" : "Committing a data model", "href" : "workbench.Visualizer.Commit.html" } ] }, { "title" : "Operation builder", "href" : "workbench.querybuilder.html", "contents" : [ { "title" : "Connecting to datasets", "href" : "workbench.querybuilder.connect.html" }, { "title" : "Building operations", "href" : "workbench.querybuilder.operationbuilder.html", "contents" : [ { "title" : "PartiQL statements", "href" : "workbench.querybuilder.partiql.html" }, { "title" : "API operations", "href" : "workbench.querybuilder.operationbuilder.api.html" } ] }, { "title" : "Exporting to CSV", "href" : "workbench.querybuilder.exportcsv.html" } ] }, { "title" : "Sample data models", "href" : "workbench.SampleModels.html" }, { "title" : "Release history", "href" : "WorkbenchDocumentHistory.html" } ] }, { "title" : "Code examples", "href" : "service_code_examples.html", "contents" : [ { "title" : "Actions", "href" : "service_code_examples_actions.html", "contents" : [ { "title" : "Create a table", "href" : "example_dynamodb_CreateTable_section.html" }, { "title" : "Delete a table", "href" : "example_dynamodb_DeleteTable_section.html" }, { "title" : "Delete an item from a table", "href" : "example_dynamodb_DeleteItem_section.html" }, { "title" : "Get a batch of items", "href" : "example_dynamodb_BatchGetItem_section.html" }, { "title" : "Get an item from a table", "href" : "example_dynamodb_GetItem_section.html" }, { "title" : "Get information about a table", "href" : "example_dynamodb_DescribeTable_section.html" }, { "title" : "List tables", "href" : "example_dynamodb_ListTables_section.html" }, { "title" : "Put an item in a table", "href" : "example_dynamodb_PutItem_section.html" }, { "title" : "Query a table", "href" : "example_dynamodb_Query_section.html" }, { "title" : "Run a PartiQL statement", "href" : "example_dynamodb_ExecuteStatement_section.html" }, { "title" : "Run batches of PartiQL statements", "href" : "example_dynamodb_BatchExecuteStatement_section.html" }, { "title" : "Scan a table", "href" : "example_dynamodb_Scan_section.html" }, { "title" : "Update an item in a table", "href" : "example_dynamodb_UpdateItem_section.html" }, { "title" : "Write a batch of items", "href" : "example_dynamodb_BatchWriteItem_section.html" } ] }, { "title" : "Scenarios", "href" : "service_code_examples_scenarios.html", "contents" : [ { "title" : "Accelerate reads with DAX", "href" : "example_dynamodb_Usage_DaxDemo_section.html" }, { "title" : "Get started with tables, items, and queries", "href" : "example_dynamodb_Scenario_GettingStartedMovies_section.html" }, { "title" : "Query a table by using batches of PartiQL statements", "href" : "example_dynamodb_Scenario_PartiQLBatch_section.html" }, { "title" : "Query a table using PartiQL", "href" : "example_dynamodb_Scenario_PartiQLSingle_section.html" }, { "title" : "Use a document model", "href" : "example_dynamodb_MidLevelInterface_section.html" }, { "title" : "Use a high-level object persistence model", "href" : "example_dynamodb_HighLevelInterface_section.html" } ] }, { "title" : "Cross-service examples", "href" : "service_code_examples_cross-service_examples.html", "contents" : [ { "title" : "Build an app to submit data to a DynamoDB table", "href" : "example_cross_SubmitDataApp_section.html" }, { "title" : "Create a REST API to track COVID-19 data", "href" : "example_cross_ApiGatewayDataTracker_section.html" }, { "title" : "Create a messenger application", "href" : "example_cross_StepFunctionsMessenger_section.html" }, { "title" : "Create a serverless application to manage photos", "href" : "example_cross_PAM_section.html" }, { "title" : "Create a web application to track DynamoDB data", "href" : "example_cross_DynamoDBDataTracker_section.html" }, { "title" : "Create a websocket chat application", "href" : "example_cross_ApiGatewayWebsocketChat_section.html" }, { "title" : "Detect PPE in images", "href" : "example_cross_RekognitionPhotoAnalyzerPPE_section.html" }, { "title" : "Invoke a Lambda function from a browser", "href" : "example_cross_LambdaForBrowser_section.html" }, { "title" : "Save EXIF and other image information", "href" : "example_cross_DetectLabels_section.html" }, { "title" : "Use API Gateway to invoke a Lambda function", "href" : "example_cross_LambdaAPIGateway_section.html" }, { "title" : "Use Step Functions to invoke Lambda functions", "href" : "example_cross_ServerlessWorkflows_section.html" }, { "title" : "Use scheduled events to invoke a Lambda function", "href" : "example_cross_LambdaScheduledEvents_section.html" } ] } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "AWS managed policies", "href" : "ddb-security-iam.awsmanpol.html" }, { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Encryption at rest", "href" : "EncryptionAtRest.html", "contents" : [ { "title" : "How it works", "href" : "encryption.howitworks.html" }, { "title" : "Usage notes", "href" : "encryption.usagenotes.html" }, { "title" : "Managing encrypted tables", "href" : "encryption.tutorial.html" } ] }, { "title" : "Data protection in DAX", "href" : "DAXDataProtection.html" }, { "title" : "Internetwork traffic privacy", "href" : "inter-network-traffic-privacy.html" } ] }, { "title" : "IAM", "href" : "identity-and-access-mgmt.html", "contents" : [ { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon DynamoDB works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html", "contents" : [ { "title" : "Using identity-based policies", "href" : "using-identity-based-policies.html", "contents" : [ { "title" : "Perform any actions on a table", "href" : "grant-permissions-to-any-action-on-table.html" }, { "title" : "Read-only access on items", "href" : "read-only-permissions-on-table-items.html" }, { "title" : "Access to a specific table and its indexes", "href" : "iam-policy-specific-table-indexes.html" }, { "title" : "CRUD operations on all data", "href" : "iam-policy-example-data-crud.html" }, { "title" : "Separate environments in the same AWS account", "href" : "iam-policy-separate-environments.html" }, { "title" : "Prevent purchase of reserved capacity", "href" : "iam-prevent-purchase-reserved-capacity.html" }, { "title" : "Read access for a stream only", "href" : "iam-policy-read-stream-only.html" }, { "title" : "Lambda function to process stream records", "href" : "iam-policy-example-lamda-process-dynamodb-streams.html" }, { "title" : "CRUD operations on a DAX cluster", "href" : "iam-policy-example-read-write-dax-access.html" } ] } ] }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" }, { "title" : "Prevent purchase of reserved capacity", "href" : "iam-policy-prevent-purchase-reserved-capacity.html" } ] }, { "title" : "Using conditions", "href" : "specifying-conditions.html", "contents" : [ { "title" : "Using web identity federation", "href" : "WIF.html", "contents" : [ { "title" : "Preparing to use web identity federation", "href" : "WIF.PreparingForUse.html" }, { "title" : "Writing your app to use web identity federation", "href" : "WIF.RunningYourApp.html" } ] }, { "title" : "DynamoDB API permissions reference", "href" : "api-permissions-reference.html" } ] }, { "title" : "Identity and access management in DAX", "href" : "DAXIAM.html" } ] }, { "title" : "Compliance validation", "href" : "Compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "network-isolation.html", "contents" : [ { "title" : "Using VPC endpoints", "href" : "vpc-endpoints-dynamodb.html" } ] }, { "title" : "Configuration and vulnerability analysis", "href" : "configuration-vulnerability.html" }, { "title" : "Security best practices", "href" : "best-practices-security.html", "contents" : [ { "title" : "Preventative security best practices", "href" : "best-practices-security-preventative.html" }, { "title" : "Detective security best practices", "href" : "best-practices-security-detective.html" } ] } ] }, { "title" : "Monitoring", "href" : "monitoring.html", "contents" : [ { "title" : "Logging and monitoring in DynamoDB", "href" : "MonitoringDynamoDB.html", "contents" : [ { "title" : "Monitoring tools", "href" : "monitoring-automated-manual.html" }, { "title" : "Monitoring with Amazon CloudWatch", "href" : "monitoring-cloudwatch.html", "contents" : [ { "title" : "Metrics and dimensions", "href" : "metrics-dimensions.html" }, { "title" : "Creating alarms", "href" : "creating-alarms.html" } ] }, { "title" : "Logging DynamoDB operations by using AWS CloudTrail", "href" : "logging-using-cloudtrail.html", "contents" : [ { "title" : "Understanding DynamoDB log file entries", "href" : "understanding-ddb-log-entries.html" } ] } ] }, { "title" : "Logging and monitoring in DAX", "href" : "LoggingMonitoringDAX.html" }, { "title" : "Contributor Insights", "href" : "contributorinsights.html", "contents" : [ { "title" : "How it works", "href" : "contributorinsights_HowItWorks.html" }, { "title" : "Getting started", "href" : "contributorinsights_tutorial.html" }, { "title" : "Using IAM", "href" : "Contributor_Insights_IAM.html" } ] }, { "title" : "Using User Notifications with Amazon DynamoDB", "href" : "ddb-user-notifications.html" } ] }, { "title" : "Best practices", "href" : "best-practices.html", "contents" : [ { "title" : "NoSQL design", "href" : "bp-general-nosql-design.html" }, { "title" : "Deletion protection", "href" : "bp-deletion-protection.html" }, { "title" : "The DynamoDB Well-Architected Lens", "href" : "bp-wal.html", "contents" : [ { "title" : "Cost optimization", "href" : "bp-cost-optimization.html", "contents" : [ { "title" : "Evaluate your costs at the table level", "href" : "CostOptimization_TableLevelCostAnalysis.html" }, { "title" : "Evaluate your table capacity mode", "href" : "CostOptimization_TableCapacityMode.html" }, { "title" : "Evaluate your table's auto scaling settings", "href" : "CostOptimization_AutoScalingSettings.html" }, { "title" : "Evaluate your table class selection", "href" : "CostOptimization_TableClass.html" }, { "title" : "Identifying your unused resources", "href" : "CostOptimization_UnusedResources.html" }, { "title" : "Evaluate your table usage patterns", "href" : "CostOptimization_TableUsagePatterns.html" }, { "title" : "Evaluate your Streams usage", "href" : "CostOptimization_StreamsUsage.html" }, { "title" : "Evaluate your provisioned capacity for right-sized provisioning", "href" : "CostOptimization_RightSizedProvisioning.html" } ] } ] }, { "title" : "Partition key design", "href" : "bp-partition-key-design.html", "contents" : [ { "title" : "Distributing workloads", "href" : "bp-partition-key-uniform-load.html" }, { "title" : "Write sharding", "href" : "bp-partition-key-sharding.html" }, { "title" : "Uploading data efficiently", "href" : "bp-partition-key-data-upload.html" } ] }, { "title" : "Sort key design", "href" : "bp-sort-keys.html" }, { "title" : "Secondary indexes", "href" : "bp-indexes.html", "contents" : [ { "title" : "General guidelines", "href" : "bp-indexes-general.html" }, { "title" : "Sparse indexes", "href" : "bp-indexes-general-sparse-indexes.html" }, { "title" : "Aggregation", "href" : "bp-gsi-aggregation.html" }, { "title" : "GSI overloading", "href" : "bp-gsi-overloading.html" }, { "title" : "GSI sharding", "href" : "bp-indexes-gsi-sharding.html" }, { "title" : "Creating a replica", "href" : "bp-indexes-gsi-replica.html" } ] }, { "title" : "Large items", "href" : "bp-use-s3-too.html" }, { "title" : "Time series data", "href" : "bp-time-series.html" }, { "title" : "Many-to-many relationships", "href" : "bp-adjacency-graphs.html" }, { "title" : "Hybrid DynamoDBâ€“RDBMS", "href" : "bp-hybrid.html" }, { "title" : "Relational modeling", "href" : "bp-relational-modeling.html", "contents" : [ { "title" : "First steps", "href" : "bp-modeling-nosql.html" }, { "title" : "Example", "href" : "bp-modeling-nosql-B.html" } ] }, { "title" : "Querying and scanning", "href" : "bp-query-scan.html" }, { "title" : "Table design", "href" : "bp-table-design.html" }, { "title" : "Global table design", "href" : "bp-global-table-design.html", "contents" : [ { "title" : "Write modes", "href" : "bp-global-table-design.prescriptive-guidance.writemodes.html" }, { "title" : "Request routing", "href" : "bp-global-table-design.prescriptive-guidance.request-routing.html" }, { "title" : "Evacuating a Region", "href" : "bp-global-table-design.prescriptive-guidance.evacuation.html" }, { "title" : "Throughput capacity with global tables", "href" : "bp-global-table-design.prescriptive-guidance.throughput.html" }, { "title" : "Checklist and FAQ for global tables", "href" : "bp-global-table-design.prescriptive-guidance.checklist-and-faq.html" } ] }, { "title" : "Control plane", "href" : "bp-control-plane.html" } ] }, { "title" : "Using DynamoDB with other AWS services", "href" : "OtherServices.html", "contents" : [ { "title" : "Integrating with Amazon Cognito", "href" : "Cognito.Credentials.html" }, { "title" : "Integrating with Amazon Redshift", "href" : "RedshiftforDynamoDB.html" }, { "title" : "Integrating with Amazon EMR", "href" : "EMRforDynamoDB.html", "contents" : [ { "title" : "Tutorial: Working with Amazon DynamoDB and Apache Hive", "href" : "EMRforDynamoDB.Tutorial.html", "contents" : [ { "title" : "Step 1: Create an Amazon EC2 key pair", "href" : "EMRforDynamoDB.Tutorial.EC2KeyPair.html" }, { "title" : "Step 2: Launch an Amazon EMR cluster", "href" : "EMRforDynamoDB.Tutorial.LaunchEMRCluster.html" }, { "title" : "Step 3: Connect to the Leader node", "href" : "EMRforDynamoDB.Tutorial.ConnectToLeaderNode.html" }, { "title" : "Step 4: Load data into HDFS", "href" : "EMRforDynamoDB.Tutorial.LoadDataIntoHDFS.html" }, { "title" : "Step 5: Copy data to DynamoDB", "href" : "EMRforDynamoDB.Tutorial.CopyDataToDDB.html" }, { "title" : "Step 6: Query the data in the DynamoDB table", "href" : "EMRforDynamoDB.Tutorial.QueryDataInDynamoDB.html" }, { "title" : "Step 7: (Optional) clean up", "href" : "EMRforDynamoDB.Tutorial.CleanUp.html" } ] }, { "title" : "Creating an external table in Hive", "href" : "EMRforDynamoDB.ExternalTableForDDB.html" }, { "title" : "Processing HiveQL statements", "href" : "EMRforDynamoDB.ProcessingHiveQL.html" }, { "title" : "Querying data in DynamoDB", "href" : "EMRforDynamoDB.Querying.html" }, { "title" : "Copying data to and from Amazon DynamoDB", "href" : "EMRforDynamoDB.CopyingData.html", "contents" : [ { "title" : "Copying data between DynamoDB and a native Hive table", "href" : "EMRforDynamoDB.CopyingData.NativeHive.html" }, { "title" : "Copying data between DynamoDB and Amazon S3", "href" : "EMRforDynamoDB.CopyingData.S3.html" }, { "title" : "Copying data between DynamoDB and HDFS", "href" : "EMRforDynamoDB.CopyingData.HDFS.html" }, { "title" : "Using data compression", "href" : "EMRforDynamoDB.CopyingData.Compression.html" }, { "title" : "Reading non-printable UTF-8 character data", "href" : "EMRforDynamoDB.CopyingData.NonPrintableData.html" } ] }, { "title" : "Performance tuning", "href" : "EMRforDynamoDB.PerformanceTuning.html", "contents" : [ { "title" : "DynamoDB provisioned throughput", "href" : "EMRforDynamoDB.PerformanceTuning.Throughput.html" }, { "title" : "Adjusting the mappers", "href" : "EMRforDynamoDB.PerformanceTuning.Mappers.html" }, { "title" : "Additional topics", "href" : "EMRforDynamoDB.PerformanceTuning.Misc.html" } ] } ] }, { "title" : "Integrating with S3", "href" : "S3forDynamoDB.html", "contents" : [ { "title" : "Import from Amazon S3", "href" : "S3DataImport.HowItWorks.html", "contents" : [ { "title" : "Importing a table", "href" : "S3DataImport.Requesting.html" }, { "title" : "Import formats", "href" : "S3DataImport.Format.html" }, { "title" : "Quotas and Validation", "href" : "S3DataImport.Validation.html" }, { "title" : "Best practices", "href" : "S3DataImport.BestPractices.html" } ] }, { "title" : "Export to Amazon S3", "href" : "S3DataExport.HowItWorks.html", "contents" : [ { "title" : "Requesting a table export", "href" : "S3DataExport_Requesting.html" }, { "title" : "Export format", "href" : "S3DataExport.Output.html" } ] } ] } ] }, { "title" : "Quotas and limits", "href" : "ServiceQuotas.html" }, { "title" : "API reference", "href" : "CurrentAPI.html" }, { "title" : "Troubleshooting", "href" : "Troubleshooting.html", "contents" : [ { "title" : "Latency", "href" : "TroubleshootingLatency.html" }, { "title" : "Throttling", "href" : "TroubleshootingThrottling.html" } ] }, { "title" : "Appendix", "href" : "Appendix.html", "contents" : [ { "title" : "Troubleshooting SSL/TLS connection establishment issues", "href" : "ats-certs.html" }, { "title" : "Example tables and data", "href" : "AppendixSampleTables.html" }, { "title" : "Creating example tables and uploading data", "href" : "AppendixSampleDataCode.html", "contents" : [ { "title" : "Creating example tables and uploading data - Java", "href" : "AppendixSampleDataCodeJava.html" }, { "title" : "Creating example tables and uploading data - .NET", "href" : "AppendixSampleDataCodeDotNET.html" } ] }, { "title" : "Example application using AWS SDK for Python (Boto3)", "href" : "TicTacToe.html", "contents" : [ { "title" : "Step 1: Deploy and test locally", "href" : "TicTacToe.Phase1.html" }, { "title" : "Step 2: Examine the data model and implementation details", "href" : "TicTacToe.Phase2.html" }, { "title" : "Step 3: Deploy in production", "href" : "TicTacToe.Phase3.html" }, { "title" : "Step 4: Clean up resources", "href" : "TicTacToe.AppClosure.html" } ] }, { "title" : "Integrating with AWS Data Pipeline", "href" : "DynamoDBPipeline.html" }, { "title" : "Amazon DynamoDB Storage Backend for Titan", "href" : "Tools.TitanDB.html" }, { "title" : "Reserved words in DynamoDB", "href" : "ReservedWords.html" }, { "title" : "Legacy conditional parameters", "href" : "LegacyConditionalParameters.html", "contents" : [ { "title" : "AttributesToGet", "href" : "LegacyConditionalParameters.AttributesToGet.html" }, { "title" : "AttributeUpdates", "href" : "LegacyConditionalParameters.AttributeUpdates.html" }, { "title" : "ConditionalOperator", "href" : "LegacyConditionalParameters.ConditionalOperator.html" }, { "title" : "Expected", "href" : "LegacyConditionalParameters.Expected.html" }, { "title" : "KeyConditions", "href" : "LegacyConditionalParameters.KeyConditions.html" }, { "title" : "QueryFilter", "href" : "LegacyConditionalParameters.QueryFilter.html" }, { "title" : "ScanFilter", "href" : "LegacyConditionalParameters.ScanFilter.html" }, { "title" : "Writing conditions with legacy parameters", "href" : "LegacyConditionalParameters.Conditions.html" } ] }, { "title" : "Previous low-level API version (2011-12-05)", "href" : "Appendix.APIv20111205.html", "contents" : [ { "title" : "BatchGetItem", "href" : "API_BatchGetItem_v20111205.html" }, { "title" : "BatchWriteItem", "href" : "API_BatchWriteItem_v20111205.html" }, { "title" : "CreateTable", "href" : "API_CreateTable_v20111205.html" }, { "title" : "DeleteItem", "href" : "API_DeleteItem_v20111205.html" }, { "title" : "DeleteTable", "href" : "API_DeleteTable_v20111205.html" }, { "title" : "DescribeTables", "href" : "API_DescribeTables_v20111205.html" }, { "title" : "GetItem", "href" : "API_GetItem_v20111205.html" }, { "title" : "ListTables", "href" : "API_ListTables_v20111205.html" }, { "title" : "PutItem", "href" : "API_PutItem_v20111205.html" }, { "title" : "Query", "href" : "API_Query_v20111205.html" }, { "title" : "Scan", "href" : "API_Scan_v20111205.html" }, { "title" : "UpdateItem", "href" : "API_UpdateItem_v20111205.html" }, { "title" : "UpdateTable", "href" : "API_UpdateTable_v20111205.html" } ] }, { "title" : "AWS SDK for Java 1.x examples", "href" : "Appendix.JavaSDKv1.html", "contents" : [ { "title" : "DAX and Java SDK v1", "href" : "DAX.client.java-sdk-v1.html", "contents" : [ { "title" : "TryDax.java", "href" : "DAX.client.run-application-java.TryDax.html" }, { "title" : "TryDaxHelper.java", "href" : "DAX.client.run-application-java.TryDaxHelper.html" }, { "title" : "TryDaxTests.java", "href" : "DAX.client.run-application-java.TryDaxTests.html" } ] }, { "title" : "Modifying an existing SDK for Java 1.x application to use DAX", "href" : "DAX.client.modify-your-app.java-sdk-v1.html" }, { "title" : "Querying global secondary indexes with SDK for Java 1.x", "href" : "DAX.client.QueryGSI.java-sdk-v1.html" } ] } ] }, { "title" : "Document history", "href" : "DocumentHistory.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/",
+    "service": "amazondynamodb",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon DynamoDB?",
+                "href": "Introduction.html",
+                "contents": [
+                    {
+                        "title": "How it works",
+                        "href": "HowItWorks.html",
+                        "contents": [
+                            {
+                                "title": "Cheat sheet",
+                                "href": "CheatSheet.html"
+                            },
+                            {
+                                "title": "Core components",
+                                "href": "HowItWorks.CoreComponents.html"
+                            },
+                            {
+                                "title": "DynamoDB API",
+                                "href": "HowItWorks.API.html"
+                            },
+                            {
+                                "title": "Supported data types and naming rules",
+                                "href": "HowItWorks.NamingRulesDataTypes.html"
+                            },
+                            {
+                                "title": "Read consistency",
+                                "href": "HowItWorks.ReadConsistency.html"
+                            },
+                            {
+                                "title": "Read/write capacity mode",
+                                "href": "HowItWorks.ReadWriteCapacityMode.html"
+                            },
+                            {
+                                "title": "Table classes",
+                                "href": "HowItWorks.TableClasses.html"
+                            },
+                            {
+                                "title": "Partitions and data distribution",
+                                "href": "HowItWorks.Partitions.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "From SQL to NoSQL",
+                        "href": "SQLtoNoSQL.html",
+                        "contents": [
+                            {
+                                "title": "Relational or NoSQL?",
+                                "href": "SQLtoNoSQL.WhyDynamoDB.html"
+                            },
+                            {
+                                "title": "Characteristics of databases",
+                                "href": "SQLtoNoSQL.Accessing.html"
+                            },
+                            {
+                                "title": "Creating a table",
+                                "href": "SQLtoNoSQL.CreateTable.html"
+                            },
+                            {
+                                "title": "Getting information about a table",
+                                "href": "SQLtoNoSQL.GetTableInfo.html"
+                            },
+                            {
+                                "title": "Writing data to a table",
+                                "href": "SQLtoNoSQL.WriteData.html"
+                            },
+                            {
+                                "title": "Reading data from a table",
+                                "href": "SQLtoNoSQL.ReadData.html",
+                                "contents": [
+                                    {
+                                        "title": "Reading an item using its primary key",
+                                        "href": "SQLtoNoSQL.ReadData.SingleItem.html"
+                                    },
+                                    {
+                                        "title": "Querying a table",
+                                        "href": "SQLtoNoSQL.ReadData.Query.html"
+                                    },
+                                    {
+                                        "title": "Scanning a table",
+                                        "href": "SQLtoNoSQL.ReadData.Scan.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Managing indexes",
+                                "href": "SQLtoNoSQL.Indexes.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating an index",
+                                        "href": "SQLtoNoSQL.Indexes.Creating.html"
+                                    },
+                                    {
+                                        "title": "Querying and scanning an index",
+                                        "href": "SQLtoNoSQL.Indexes.QueryAndScan.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Modifying data in a table",
+                                "href": "SQLtoNoSQL.UpdateData.html"
+                            },
+                            {
+                                "title": "Deleting data from a table",
+                                "href": "SQLtoNoSQL.DeleteData.html"
+                            },
+                            {
+                                "title": "Removing a table",
+                                "href": "SQLtoNoSQL.RemoveTable.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Additional resources for Amazon DynamoDB",
+                        "href": "AdditionalResources.html",
+                        "contents": [
+                            {
+                                "title": "Tools for coding and visualization",
+                                "href": "AdditionalResources.Tools.html"
+                            },
+                            {
+                                "title": "Prescriptive Guidance",
+                                "href": "AdditionalResources.PrescriptiveGuidance.html"
+                            },
+                            {
+                                "title": "Knowledge Center",
+                                "href": "AdditionalResources.KnowledgeCenter.html"
+                            },
+                            {
+                                "title": "Blog posts, repositories, and guides",
+                                "href": "AdditionalResources.Guides.html"
+                            },
+                            {
+                                "title": "Data modeling and design patterns",
+                                "href": "AdditionalResources.DataModeling.html"
+                            },
+                            {
+                                "title": "Training courses",
+                                "href": "AdditionalResources.Training.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Setting up DynamoDB",
+                "href": "SettingUp.html",
+                "contents": [
+                    {
+                        "title": "Setting up DynamoDB local (downloadable version)",
+                        "href": "DynamoDBLocal.html",
+                        "contents": [
+                            {
+                                "title": "Deploying",
+                                "href": "DynamoDBLocal.DownloadingAndRunning.html"
+                            },
+                            {
+                                "title": "Usage notes",
+                                "href": "DynamoDBLocal.UsageNotes.html"
+                            },
+                            {
+                                "title": "Release history",
+                                "href": "DynamoDBLocalHistory.html"
+                            },
+                            {
+                                "title": "DynamoDB local telemetry",
+                                "href": "DynamoDBLocalTelemetry.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Setting up DynamoDB (web service)",
+                        "href": "SettingUp.DynamoWebService.html"
+                    }
+                ]
+            },
+            {
+                "title": "Accessing DynamoDB",
+                "href": "AccessingDynamoDB.html",
+                "contents": [
+                    {
+                        "title": "Using the console",
+                        "href": "ConsoleDynamoDB.html"
+                    },
+                    {
+                        "title": "Using the AWS CLI",
+                        "href": "Tools.CLI.html"
+                    },
+                    {
+                        "title": "Using the API",
+                        "href": "Using.API.html"
+                    },
+                    {
+                        "title": "Using the NoSQL workbench",
+                        "href": "Using.Workbench.html"
+                    },
+                    {
+                        "title": "IP address ranges",
+                        "href": "Using.IPRanges.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started with DynamoDB",
+                "href": "GettingStartedDynamoDB.html",
+                "contents": [
+                    {
+                        "title": "Step 1: Create a table",
+                        "href": "getting-started-step-1.html"
+                    },
+                    {
+                        "title": "Step 2: Write data",
+                        "href": "getting-started-step-2.html"
+                    },
+                    {
+                        "title": "Step 3: Read data",
+                        "href": "getting-started-step-3.html"
+                    },
+                    {
+                        "title": "Step 4: Update data",
+                        "href": "getting-started-step-4.html"
+                    },
+                    {
+                        "title": "Step 5: Query data",
+                        "href": "getting-started-step-5.html"
+                    },
+                    {
+                        "title": "Step 6: Create a global secondary index",
+                        "href": "getting-started-step-6.html"
+                    },
+                    {
+                        "title": "Step 7: Query the global secondary index",
+                        "href": "getting-started-step-7.html"
+                    },
+                    {
+                        "title": "Step 8: (Optional) clean up",
+                        "href": "getting-started-step-8.html"
+                    },
+                    {
+                        "title": "Next steps",
+                        "href": "getting-started-NextSteps.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started with DynamoDB and the AWS SDKs",
+                "href": "GettingStarted.html",
+                "contents": [
+                    {
+                        "title": "Create a table",
+                        "href": "GettingStarted.CreateTable.html"
+                    },
+                    {
+                        "title": "Write an item",
+                        "href": "GettingStarted.WriteItem.html"
+                    },
+                    {
+                        "title": "Read an item",
+                        "href": "GettingStarted.ReadItem.html"
+                    },
+                    {
+                        "title": "Update an item",
+                        "href": "GettingStarted.UpdateItem.html"
+                    },
+                    {
+                        "title": "Delete an item",
+                        "href": "GettingStarted.DeleteItem.html"
+                    },
+                    {
+                        "title": "Query a table",
+                        "href": "GettingStarted.Query.html"
+                    },
+                    {
+                        "title": "Scan a table",
+                        "href": "GettingStarted.Scan.html"
+                    },
+                    {
+                        "title": "Working with AWS SDKs",
+                        "href": "sdk-general-information-section.html"
+                    }
+                ]
+            },
+            {
+                "title": "Programming with DynamoDB",
+                "href": "Programming.html",
+                "contents": [
+                    {
+                        "title": "Overview of AWS SDK support for DynamoDB",
+                        "href": "Programming.SDKOverview.html",
+                        "contents": [
+                            {
+                                "title": "Programmatic interfaces",
+                                "href": "Programming.SDKs.Interfaces.html",
+                                "contents": [
+                                    {
+                                        "title": "Low-level interfaces",
+                                        "href": "Programming.SDKs.Interfaces.LowLevel.html"
+                                    },
+                                    {
+                                        "title": "Document interfaces",
+                                        "href": "Programming.SDKs.Interfaces.Document.html"
+                                    },
+                                    {
+                                        "title": "Object persistence interface",
+                                        "href": "Programming.SDKs.Interfaces.Mapper.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Low-level API",
+                                "href": "Programming.LowLevelAPI.html"
+                            },
+                            {
+                                "title": "Error handling",
+                                "href": "Programming.Errors.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Higher-level programming interfaces",
+                        "href": "HigherLevelInterfaces.html",
+                        "contents": [
+                            {
+                                "title": "Java 1.x: DynamoDBMapper",
+                                "href": "DynamoDBMapper.html",
+                                "contents": [
+                                    {
+                                        "title": "Supported Data Types",
+                                        "href": "DynamoDBMapper.DataTypes.html"
+                                    },
+                                    {
+                                        "title": "Java Annotations for DynamoDB",
+                                        "href": "DynamoDBMapper.Annotations.html"
+                                    },
+                                    {
+                                        "title": "DynamoDBMapper Class",
+                                        "href": "DynamoDBMapper.Methods.html"
+                                    },
+                                    {
+                                        "title": "Optional configuration settings for DynamoDBMapper",
+                                        "href": "DynamoDBMapper.OptionalConfig.html"
+                                    },
+                                    {
+                                        "title": "Optimistic Locking With Version Number",
+                                        "href": "DynamoDBMapper.OptimisticLocking.html"
+                                    },
+                                    {
+                                        "title": "Mapping Arbitrary Data",
+                                        "href": "DynamoDBMapper.ArbitraryDataMapping.html"
+                                    },
+                                    {
+                                        "title": "DynamoDBMapper Examples",
+                                        "href": "DynamoDBMapper.Examples.html",
+                                        "contents": [
+                                            {
+                                                "title": "CRUD operations",
+                                                "href": "DynamoDBMapper.CRUDExample1.html"
+                                            },
+                                            {
+                                                "title": "Query and scan operations",
+                                                "href": "DynamoDBMapper.QueryScanExample.html"
+                                            },
+                                            {
+                                                "title": "Batch operations",
+                                                "href": "DynamoDBMapper.Batch.html"
+                                            },
+                                            {
+                                                "title": "Transaction operations",
+                                                "href": "DynamoDBMapper.Transactions.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Java 2.x: DynamoDB Enhanced Client",
+                                "href": "DynamoDBEnhanced.html"
+                            },
+                            {
+                                "title": ".NET: Document model",
+                                "href": "DotNetSDKMidLevel.html",
+                                "contents": [
+                                    {
+                                        "title": "Supported data types",
+                                        "href": "MidLevelAPILimitations.SupportedTypes.html"
+                                    },
+                                    {
+                                        "title": "Working with items - .NET document model",
+                                        "href": "WorkingWithItemsDocumentClasses.html"
+                                    },
+                                    {
+                                        "title": "Example: CRUD operations - .NET document model",
+                                        "href": "ItemCRUDDotNetDocumentAPI.html"
+                                    },
+                                    {
+                                        "title": "Example: Batch operations-.NET document model API",
+                                        "href": "example-batch-operations-net-doc-model.html"
+                                    },
+                                    {
+                                        "title": "Working with tables - .NET document model",
+                                        "href": "QueryAndScanMidLevelDotNet.html",
+                                        "contents": [
+                                            {
+                                                "title": "Table.Query",
+                                                "href": "QueryMidLevelDotNet.html"
+                                            },
+                                            {
+                                                "title": "Table.Scan",
+                                                "href": "ScanMidLevelDotNet.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": ".NET: Object persistence model",
+                                "href": "DotNetSDKHighLevel.html",
+                                "contents": [
+                                    {
+                                        "title": "DynamoDB attributes",
+                                        "href": "DeclarativeTagsList.html"
+                                    },
+                                    {
+                                        "title": "DynamoDBContext class",
+                                        "href": "DotNetDynamoDBContext.html"
+                                    },
+                                    {
+                                        "title": "Optimistic locking using version number",
+                                        "href": "DynamoDBContext.VersionSupport.html"
+                                    },
+                                    {
+                                        "title": "Mapping arbitrary data",
+                                        "href": "DynamoDBContext.ArbitraryDataMapping.html"
+                                    },
+                                    {
+                                        "title": "Batch operations",
+                                        "href": "DotNetDynamoDBContext.BatchOperations.html"
+                                    },
+                                    {
+                                        "title": "Example: CRUD operations - .NET object persistence model",
+                                        "href": "CRUDHighLevelExample1.html"
+                                    },
+                                    {
+                                        "title": "Example: Batch write operation",
+                                        "href": "orm-dotnet-batchoperations-example.html"
+                                    },
+                                    {
+                                        "title": "Example: Query and scan - .NET object persistence model",
+                                        "href": "DynamoDBContext.QueryScan.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Running the code examples",
+                        "href": "CodeSamples.html",
+                        "contents": [
+                            {
+                                "title": "Load sample data",
+                                "href": "SampleData.html"
+                            },
+                            {
+                                "title": "Java code examples",
+                                "href": "CodeSamples.Java.html"
+                            },
+                            {
+                                "title": ".NET code examples",
+                                "href": "CodeSamples.DotNet.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Working with DynamoDB",
+                "href": "WorkingWithDynamo.html",
+                "contents": [
+                    {
+                        "title": "Working with tables",
+                        "href": "WorkingWithTables.html",
+                        "contents": [
+                            {
+                                "title": "Basic operations on tables",
+                                "href": "WorkingWithTables.Basics.html"
+                            },
+                            {
+                                "title": "Considerations when changing read/write Capacity Mode",
+                                "href": "switching.capacitymode.html"
+                            },
+                            {
+                                "title": "Considerations when choosing a table class",
+                                "href": "WorkingWithTables.tableclasses.html"
+                            },
+                            {
+                                "title": "Provisioned capacity tables",
+                                "href": "ProvisionedThroughput.html"
+                            },
+                            {
+                                "title": "Item sizes and formats",
+                                "href": "CapacityUnitCalculations.html"
+                            },
+                            {
+                                "title": "Managing throughput capacity with auto scaling",
+                                "href": "AutoScaling.html",
+                                "contents": [
+                                    {
+                                        "title": "Using the AWS Management Console with DynamoDB auto scaling",
+                                        "href": "AutoScaling.Console.html"
+                                    },
+                                    {
+                                        "title": "Using the AWS CLI to manage DynamoDB auto scaling",
+                                        "href": "AutoScaling.CLI.html"
+                                    },
+                                    {
+                                        "title": "Using the AWS SDK to configure auto scaling",
+                                        "href": "AutoScaling.HowTo.SDK.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Working with global tables",
+                                "href": "GlobalTables.html",
+                                "contents": [
+                                    {
+                                        "title": "Determining the version",
+                                        "href": "globaltables.DetermineVersion.html"
+                                    },
+                                    {
+                                        "title": "Version 2019.11.21 (Current)",
+                                        "href": "globaltables.V2.html",
+                                        "contents": [
+                                            {
+                                                "title": "How it works",
+                                                "href": "V2globaltables_HowItWorks.html"
+                                            },
+                                            {
+                                                "title": "Best practices and requirements",
+                                                "href": "V2globaltables_reqs_bestpractices.html"
+                                            },
+                                            {
+                                                "title": "Tutorial: Creating a global table",
+                                                "href": "V2globaltables.tutorial.html"
+                                            },
+                                            {
+                                                "title": "Monitoring global tables",
+                                                "href": "V2globaltables_monitoring.html"
+                                            },
+                                            {
+                                                "title": "Using IAM with global tables",
+                                                "href": "V2gt_IAM.html"
+                                            },
+                                            {
+                                                "title": "Updating global tables",
+                                                "href": "V2globaltables_upgrade.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Version 2017.11.29 (Legacy)",
+                                        "href": "globaltables.V1.html",
+                                        "contents": [
+                                            {
+                                                "title": "How it works",
+                                                "href": "globaltables_HowItWorks.html"
+                                            },
+                                            {
+                                                "title": "Best Practices and Requirements",
+                                                "href": "globaltables_reqs_bestpractices.html"
+                                            },
+                                            {
+                                                "title": "Creating a global table",
+                                                "href": "globaltables.tutorial.html"
+                                            },
+                                            {
+                                                "title": "Monitoring global tables",
+                                                "href": "globaltables_monitoring.html"
+                                            },
+                                            {
+                                                "title": "Using IAM with global tables",
+                                                "href": "gt_IAM.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Tagging resources",
+                                "href": "Tagging.html",
+                                "contents": [
+                                    {
+                                        "title": "Tagging restrictions in DynamoDB",
+                                        "href": "TaggingRestrictions.html"
+                                    },
+                                    {
+                                        "title": "Tagging resources",
+                                        "href": "Tagging.Operations.html"
+                                    },
+                                    {
+                                        "title": "Cost allocation reports",
+                                        "href": "CostAllocationReports.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Working with tables: Java",
+                                "href": "JavaDocumentAPIWorkingWithTables.html",
+                                "contents": [
+                                    {
+                                        "title": "Example: Create, update, delete and list tables",
+                                        "href": "JavaDocumentAPITablesExample.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Working with tables: .NET",
+                                "href": "LowLevelDotNetWorkingWithTables.html",
+                                "contents": [
+                                    {
+                                        "title": "Example: Create, update, delete, and list tables - .NET low-level API",
+                                        "href": "LowLevelDotNetTableOperationsExample.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with read and write operations",
+                        "href": "WorkingWithReadWriteOperations.html",
+                        "contents": [
+                            {
+                                "title": "DynamoDB API",
+                                "href": "DynamoDB_API.html",
+                                "contents": [
+                                    {
+                                        "title": "Working with items",
+                                        "href": "WorkingWithItems.html",
+                                        "contents": [
+                                            {
+                                                "title": "Using expressions",
+                                                "href": "Expressions.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Specifying item attributes",
+                                                        "href": "Expressions.Attributes.html"
+                                                    },
+                                                    {
+                                                        "title": "Projection expressions",
+                                                        "href": "Expressions.ProjectionExpressions.html"
+                                                    },
+                                                    {
+                                                        "title": "Expression attribute names",
+                                                        "href": "Expressions.ExpressionAttributeNames.html"
+                                                    },
+                                                    {
+                                                        "title": "Expression attribute values",
+                                                        "href": "Expressions.ExpressionAttributeValues.html"
+                                                    },
+                                                    {
+                                                        "title": "Condition expressions",
+                                                        "href": "Expressions.ConditionExpressions.html",
+                                                        "contents": [
+                                                            {
+                                                                "title": "Comparison operator and function reference",
+                                                                "href": "Expressions.OperatorsAndFunctions.html"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "title": "Update expressions",
+                                                        "href": "Expressions.UpdateExpressions.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Expiring items with Time to Live",
+                                                "href": "TTL.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "How it Works",
+                                                        "href": "howitworks-ttl.html"
+                                                    },
+                                                    {
+                                                        "title": "Using TTL",
+                                                        "href": "time-to-live-ttl-before-you-start.html"
+                                                    },
+                                                    {
+                                                        "title": "Enabling Time to Live",
+                                                        "href": "time-to-live-ttl-how-to.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Working with items: Java",
+                                                "href": "JavaDocumentAPIItemCRUD.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Example: CRUD operations - Java document API",
+                                                        "href": "JavaDocumentAPICRUDExample.html"
+                                                    },
+                                                    {
+                                                        "title": "Example: Batch operations - Java document API",
+                                                        "href": "batch-operation-document-api-java.html"
+                                                    },
+                                                    {
+                                                        "title": "Example: Handling binary type attributes - Java document API",
+                                                        "href": "JavaDocumentAPIBinaryTypeExample.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Working with items: .NET",
+                                                "href": "LowLevelDotNetItemCRUD.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Example: CRUD operations - .NET low-level API",
+                                                        "href": "LowLevelDotNetItemsExample.html"
+                                                    },
+                                                    {
+                                                        "title": "Example: Batch operations - .NET low-level API",
+                                                        "href": "batch-operation-lowlevel-dotnet.html"
+                                                    },
+                                                    {
+                                                        "title": "Example: Handling binary type attributes - .NET low-level API",
+                                                        "href": "LowLevelDotNetBinaryTypeExample.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Working with Item Collections",
+                                        "href": "WorkingWithItemCollections.html",
+                                        "contents": [
+                                            {
+                                                "title": "Working with queries",
+                                                "href": "Query.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Key condition expressions for queries",
+                                                        "href": "Query.KeyConditionExpressions.html"
+                                                    },
+                                                    {
+                                                        "title": "Filter expressions for queries",
+                                                        "href": "Query.FilterExpression.html"
+                                                    },
+                                                    {
+                                                        "title": "Paginating query results",
+                                                        "href": "Query.Pagination.html"
+                                                    },
+                                                    {
+                                                        "title": "Other aspects of queries",
+                                                        "href": "Query.Other.html"
+                                                    },
+                                                    {
+                                                        "title": "Querying: Java",
+                                                        "href": "QueryingJavaDocumentAPI.html"
+                                                    },
+                                                    {
+                                                        "title": "Querying: .NET",
+                                                        "href": "LowLevelDotNetQuerying.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Working with scans",
+                                        "href": "Scan.html",
+                                        "contents": [
+                                            {
+                                                "title": "Scanning: Java",
+                                                "href": "ScanJavaDocumentAPI.html"
+                                            },
+                                            {
+                                                "title": "Scanning: .NET",
+                                                "href": "LowLevelDotNetScanning.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "PartiQL query language",
+                                "href": "ql-reference.html",
+                                "contents": [
+                                    {
+                                        "title": "Getting started",
+                                        "href": "ql-gettingstarted.html"
+                                    },
+                                    {
+                                        "title": "Data types",
+                                        "href": "ql-reference.data-types.html"
+                                    },
+                                    {
+                                        "title": "Statements",
+                                        "href": "ql-reference.statements.html",
+                                        "contents": [
+                                            {
+                                                "title": "Select",
+                                                "href": "ql-reference.select.html"
+                                            },
+                                            {
+                                                "title": "Update",
+                                                "href": "ql-reference.update.html"
+                                            },
+                                            {
+                                                "title": "Delete",
+                                                "href": "ql-reference.delete.html"
+                                            },
+                                            {
+                                                "title": "Insert",
+                                                "href": "ql-reference.insert.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Functions",
+                                        "href": "ql-functions.html",
+                                        "contents": [
+                                            {
+                                                "title": "Exists",
+                                                "href": "ql-functions.exists.html"
+                                            },
+                                            {
+                                                "title": "Begins_with",
+                                                "href": "ql-functions.beginswith.html"
+                                            },
+                                            {
+                                                "title": "Missing",
+                                                "href": "ql-functions.missing.html"
+                                            },
+                                            {
+                                                "title": "Attribute_type",
+                                                "href": "ql-functions.attribute_type.html"
+                                            },
+                                            {
+                                                "title": "Contains",
+                                                "href": "ql-functions.contains.html"
+                                            },
+                                            {
+                                                "title": "Size",
+                                                "href": "ql-functions.size.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Operators",
+                                        "href": "ql-operators.html"
+                                    },
+                                    {
+                                        "title": "Transactions",
+                                        "href": "ql-reference.multiplestatements.transactions.html"
+                                    },
+                                    {
+                                        "title": "Batch operations",
+                                        "href": "ql-reference.multiplestatements.batching.html"
+                                    },
+                                    {
+                                        "title": "IAM policies",
+                                        "href": "ql-iam.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with indexes",
+                        "href": "SecondaryIndexes.html",
+                        "contents": [
+                            {
+                                "title": "Global secondary indexes",
+                                "href": "GSI.html",
+                                "contents": [
+                                    {
+                                        "title": "Managing Global Secondary Indexes",
+                                        "href": "GSI.OnlineOps.html",
+                                        "contents": [
+                                            {
+                                                "title": "Detecting and correcting index key violations",
+                                                "href": "GSI.OnlineOps.ViolationDetection.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Global Secondary Indexes: Java",
+                                        "href": "GSIJavaDocumentAPI.html",
+                                        "contents": [
+                                            {
+                                                "title": "Example: Global Secondary Indexes - Java document API",
+                                                "href": "GSIJavaDocumentAPI.Example.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Global Secondary Indexes: .NET",
+                                        "href": "GSILowLevelDotNet.html",
+                                        "contents": [
+                                            {
+                                                "title": "Example: Global Secondary Indexes - .NET low-level API",
+                                                "href": "GSILowLevelDotNet.Example.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Global Secondary Indexes: AWS CLI",
+                                        "href": "GCICli.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Local Secondary Indexes",
+                                "href": "LSI.html",
+                                "contents": [
+                                    {
+                                        "title": "Local Secondary Indexes: Java",
+                                        "href": "LSIJavaDocumentAPI.html",
+                                        "contents": [
+                                            {
+                                                "title": "Example: Local Secondary Indexes - Java document API",
+                                                "href": "LSIJavaDocumentAPI.Example.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Local Secondary Indexes: .NET",
+                                        "href": "LSILowLevelDotNet.html",
+                                        "contents": [
+                                            {
+                                                "title": "Example: Local Secondary Indexes - .NET low-level API",
+                                                "href": "LSILowLevelDotNet.Example.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Local Secondary Indexes: AWS CLI",
+                                        "href": "LCICli.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with transactions",
+                        "href": "transactions.html",
+                        "contents": [
+                            {
+                                "title": "How it works",
+                                "href": "transaction-apis.html"
+                            },
+                            {
+                                "title": "Using IAM with transactions",
+                                "href": "transaction-apis-iam.html"
+                            },
+                            {
+                                "title": "Example code",
+                                "href": "transaction-example.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with streams",
+                        "href": "streamsmain.html",
+                        "contents": [
+                            {
+                                "title": "Working with Kinesis Data Streams",
+                                "href": "kds.html",
+                                "contents": [
+                                    {
+                                        "title": "Getting started",
+                                        "href": "kds_gettingstarted.html"
+                                    },
+                                    {
+                                        "title": "Configuring shards and monitoring streams",
+                                        "href": "kds_using-shards-and-metrics.html"
+                                    },
+                                    {
+                                        "title": "Using IAM policies",
+                                        "href": "kds_iam.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Working with DynamoDB Streams",
+                                "href": "Streams.html",
+                                "contents": [
+                                    {
+                                        "title": "DynamoDB Streams and TTL",
+                                        "href": "time-to-live-ttl-streams.html"
+                                    },
+                                    {
+                                        "title": "Using the DynamoDB Streams Kinesis adapter to process stream records",
+                                        "href": "Streams.KCLAdapter.html",
+                                        "contents": [
+                                            {
+                                                "title": "Walkthrough: DynamoDB Streams Kinesis adapter",
+                                                "href": "Streams.KCLAdapter.Walkthrough.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Complete program: DynamoDB Streams Kinesis adapter",
+                                                        "href": "Streams.KCLAdapter.Walkthrough.CompleteProgram.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "DynamoDB Streams low-level API: Java example",
+                                        "href": "Streams.LowLevel.Walkthrough.html"
+                                    },
+                                    {
+                                        "title": "DynamoDB Streams and AWS Lambda triggers",
+                                        "href": "Streams.Lambda.html",
+                                        "contents": [
+                                            {
+                                                "title": "Tutorial #1: Processing all events",
+                                                "href": "Streams.Lambda.Tutorial.html"
+                                            },
+                                            {
+                                                "title": "Tutorial #2: Processing some events",
+                                                "href": "Streams.Lambda.Tutorial2.html"
+                                            },
+                                            {
+                                                "title": "Best practices",
+                                                "href": "Streams.Lambda.BestPracticesWithDynamoDB.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with On-Demand backup and restore",
+                        "href": "BackupRestore.html",
+                        "contents": [
+                            {
+                                "title": "Using AWS Backup",
+                                "href": "backuprestore_HowItWorksAWS.html",
+                                "contents": [
+                                    {
+                                        "title": "How it works",
+                                        "href": "GettingStartedBackupsAWS.html"
+                                    },
+                                    {
+                                        "title": "Creating backups",
+                                        "href": "CreateBackupAWS.html"
+                                    },
+                                    {
+                                        "title": "Copying backups",
+                                        "href": "CrossRegionAccountCopyAWS.html"
+                                    },
+                                    {
+                                        "title": "Restoring a table",
+                                        "href": "Restore.TutorialAWS.html"
+                                    },
+                                    {
+                                        "title": "Deleting backups",
+                                        "href": "Delete.TutorialAWS.html"
+                                    },
+                                    {
+                                        "title": "Usage notes",
+                                        "href": "UsageNotesAWS.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using DynamoDB backups",
+                                "href": "backuprestore_HowItWorks.html",
+                                "contents": [
+                                    {
+                                        "title": "How it works",
+                                        "href": "CreateBackup.html"
+                                    },
+                                    {
+                                        "title": "Backing up a table",
+                                        "href": "Backup.Tutorial.html"
+                                    },
+                                    {
+                                        "title": "Restoring a table",
+                                        "href": "Restore.Tutorial.html"
+                                    },
+                                    {
+                                        "title": "Deleting a table backup",
+                                        "href": "Delete.Tutorial.html"
+                                    },
+                                    {
+                                        "title": "Using IAM",
+                                        "href": "backuprestore_IAM.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with point-in-time recovery",
+                        "href": "PointInTimeRecovery.html",
+                        "contents": [
+                            {
+                                "title": "How it works",
+                                "href": "PointInTimeRecovery_Howitworks.html"
+                            },
+                            {
+                                "title": "Before you begin",
+                                "href": "pointintimerecovery_beforeyoubegin.html"
+                            },
+                            {
+                                "title": "Restoring a table to a point in time",
+                                "href": "PointInTimeRecovery.Tutorial.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "In-memory acceleration with DAX",
+                "href": "DAX.html",
+                "contents": [
+                    {
+                        "title": "How it works",
+                        "href": "DAX.concepts.html"
+                    },
+                    {
+                        "title": "DAX cluster components",
+                        "href": "DAX.concepts.cluster.html"
+                    },
+                    {
+                        "title": "Creating a DAX cluster",
+                        "href": "DAX.create-cluster.html",
+                        "contents": [
+                            {
+                                "title": "Using the AWS CLI",
+                                "href": "DAX.create-cluster.cli.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Create a service role",
+                                        "href": "DAX.create-cluster.cli.create-service-role.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Create a subnet group",
+                                        "href": "DAX.create-cluster.cli.create-subnet-group.html"
+                                    },
+                                    {
+                                        "title": "Step 3: Create a DAX cluster",
+                                        "href": "DAX.create-cluster.cli.create-cluster.html"
+                                    },
+                                    {
+                                        "title": "Step 4: Configure security group inbound rules",
+                                        "href": "DAX.create-cluster.cli.configure-inbound-rules.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using the console",
+                                "href": "DAX.create-cluster.console.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Create a subnet group",
+                                        "href": "DAX.create-cluster.console.create-subnet-group.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Create a DAX cluster",
+                                        "href": "DAX.create-cluster.console.create-cluster.html"
+                                    },
+                                    {
+                                        "title": "Step 3: Configure security group inbound rules",
+                                        "href": "DAX.create-cluster.console.configure-inbound-rules.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Consistency models",
+                        "href": "DAX.consistency.html"
+                    },
+                    {
+                        "title": "Developing with the DAX client",
+                        "href": "DAX.client.html",
+                        "contents": [
+                            {
+                                "title": "Tutorial: Running a sample application",
+                                "href": "DAX.client.sample-app.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Launch an EC2 instance",
+                                        "href": "DAX.client.launch-ec2-instance.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Create a user and policy",
+                                        "href": "DAX.client.create-user-policy.html"
+                                    },
+                                    {
+                                        "title": "Step 3: Configure an EC2 instance",
+                                        "href": "DAX.client.configure-ec2-instance.html"
+                                    },
+                                    {
+                                        "title": "Step 4: Run a sample application",
+                                        "href": "DAX.client.run-application.html",
+                                        "contents": [
+                                            {
+                                                "title": "Go and DAX",
+                                                "href": "DAX.client.run-application-go.html"
+                                            },
+                                            {
+                                                "title": "Java and DAX",
+                                                "href": "DAX.client.run-application-java.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "TryDax.java",
+                                                        "href": "DAX.client.TryDax.java.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": ".NET and DAX",
+                                                "href": "DAX.client.run-application-dotnet.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "01-CreateTable.cs",
+                                                        "href": "DAX.client.run-application-dotnet.01-CreateTable.html"
+                                                    },
+                                                    {
+                                                        "title": "02-Write-Data.cs",
+                                                        "href": "DAX.client.run-application-dotnet.02-Write-Data.html"
+                                                    },
+                                                    {
+                                                        "title": "03-GetItem-Test.cs",
+                                                        "href": "DAX.client.run-application-dotnet.03-GetItem-Test.html"
+                                                    },
+                                                    {
+                                                        "title": "04-Query-Test.cs",
+                                                        "href": "DAX.client.run-application-dotnet.04-Query-Test.html"
+                                                    },
+                                                    {
+                                                        "title": "05-Scan-Test.cs",
+                                                        "href": "DAX.client.run-application-dotnet.05-Scan-Test.html"
+                                                    },
+                                                    {
+                                                        "title": "06-DeleteTable.cs",
+                                                        "href": "DAX.client.run-application-dotnet.06-DeleteTable.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Node.js and DAX",
+                                                "href": "DAX.client.run-application-nodejs.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "01-create-table.js",
+                                                        "href": "DAX.client.run-application-nodejs.01-create-table.html"
+                                                    },
+                                                    {
+                                                        "title": "02-write-data.js",
+                                                        "href": "DAX.client.run-application-nodejs.02-write-data.html"
+                                                    },
+                                                    {
+                                                        "title": "03-getitem-test.js",
+                                                        "href": "DAX.client.run-application-nodejs.03-getitem-test.html"
+                                                    },
+                                                    {
+                                                        "title": "04-query-test.js",
+                                                        "href": "DAX.client.run-application-nodejs.04-query-test.html"
+                                                    },
+                                                    {
+                                                        "title": "05-scan-test.js",
+                                                        "href": "DAX.client.run-application-nodejs.05-scan-test.html"
+                                                    },
+                                                    {
+                                                        "title": "06-delete-table.js",
+                                                        "href": "DAX.client.run-application-nodejs.06-delete-table.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Python and DAX",
+                                                "href": "DAX.client.run-application-python.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "01-create-table.py",
+                                                        "href": "DAX.client.run-application-python.01-create-table.html"
+                                                    },
+                                                    {
+                                                        "title": "02-write-data.py",
+                                                        "href": "DAX.client.run-application-python.02-write-data.html"
+                                                    },
+                                                    {
+                                                        "title": "03-getitem-test.py",
+                                                        "href": "DAX.client.run-application-python.03-getitem-test.html"
+                                                    },
+                                                    {
+                                                        "title": "04-query-test.py",
+                                                        "href": "DAX.client.run-application-python.04-query-test.html"
+                                                    },
+                                                    {
+                                                        "title": "05-scan-test.py",
+                                                        "href": "DAX.client.run-application-python.05-scan-test.html"
+                                                    },
+                                                    {
+                                                        "title": "06-delete-table.py",
+                                                        "href": "DAX.client.run-application-python.06-delete-table.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Modifying an existing application to use DAX",
+                                "href": "DAX.client.modify-your-app.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing DAX clusters",
+                        "href": "DAX.cluster-management.html"
+                    },
+                    {
+                        "title": "Monitoring DAX",
+                        "href": "DAX.Monitoring.html",
+                        "contents": [
+                            {
+                                "title": "Monitoring tools",
+                                "href": "dax-monitoring-automated-manual.html"
+                            },
+                            {
+                                "title": "Monitoring with CloudWatch",
+                                "href": "dax-monitoring-cloudwatch.html",
+                                "contents": [
+                                    {
+                                        "title": "Metrics and dimensions",
+                                        "href": "dax-metrics-dimensions-dax.html"
+                                    },
+                                    {
+                                        "title": "Creating alarms",
+                                        "href": "dax-creating-alarms.html"
+                                    },
+                                    {
+                                        "title": "Production monitoring",
+                                        "href": "dax-production-monitoring.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Logging DAX operations using AWS CloudTrail",
+                                "href": "dax-logging-using-cloudtrail.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "DAX T3/T2 burstable instances",
+                        "href": "DAX.Burstable.html"
+                    },
+                    {
+                        "title": "DAX access control",
+                        "href": "DAX.access-control.html"
+                    },
+                    {
+                        "title": "DAX encryption at rest",
+                        "href": "DAXEncryptionAtRest.html"
+                    },
+                    {
+                        "title": "DAX encryption in transit",
+                        "href": "DAXEncryptionInTransit.html"
+                    },
+                    {
+                        "title": "Using service-linked roles for DAX",
+                        "href": "using-service-linked-roles.html"
+                    },
+                    {
+                        "title": "Accessing DAX across AWS accounts",
+                        "href": "DAX.cross-account-access.html"
+                    },
+                    {
+                        "title": "DAX cluster sizing guide",
+                        "href": "DAX.sizing-guide.html"
+                    },
+                    {
+                        "title": "API reference",
+                        "href": "DAX.api.html"
+                    }
+                ]
+            },
+            {
+                "title": "Data modeling",
+                "href": "data-modeling.html",
+                "contents": [
+                    {
+                        "title": "Data modeling foundations",
+                        "href": "data-modeling-foundations.html"
+                    },
+                    {
+                        "title": "Data modeling building blocks",
+                        "href": "data-modeling-blocks.html"
+                    },
+                    {
+                        "title": "Data modeling schema design packages",
+                        "href": "data-modeling-schemas.html",
+                        "contents": [
+                            {
+                                "title": "Session management",
+                                "href": "data-modeling-schema-session-management.html"
+                            },
+                            {
+                                "title": "Social network",
+                                "href": "data-modeling-schema-social-network.html"
+                            },
+                            {
+                                "title": "Gaming profile",
+                                "href": "data-modeling-schema-gaming-profile.html"
+                            },
+                            {
+                                "title": "Complaint management system",
+                                "href": "data-modeling-complaint-management.html"
+                            },
+                            {
+                                "title": "Recurring payments",
+                                "href": "data-modeling-schema-recurring-payments.html"
+                            },
+                            {
+                                "title": "Device status updates",
+                                "href": "data-modeling-device-status.html"
+                            },
+                            {
+                                "title": "Online shop",
+                                "href": "data-modeling-online-shop.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "NoSQL Workbench",
+                "href": "workbench.html",
+                "contents": [
+                    {
+                        "title": "Download",
+                        "href": "workbench.settingup.html"
+                    },
+                    {
+                        "title": "Install",
+                        "href": "workbench.settingup.install.html"
+                    },
+                    {
+                        "title": "Data modeler",
+                        "href": "workbench.Modeler.html",
+                        "contents": [
+                            {
+                                "title": "Creating a new model",
+                                "href": "workbench.Modeler.CreateNew.html"
+                            },
+                            {
+                                "title": "Importing an existing model",
+                                "href": "workbench.Modeler.ImportExisting.html"
+                            },
+                            {
+                                "title": "Exporting a model",
+                                "href": "workbench.Modeler.ExportModel.html"
+                            },
+                            {
+                                "title": "Editing an existing model",
+                                "href": "workbench.Modeler.Edit.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Data visualizer",
+                        "href": "workbench.Visualizer.html",
+                        "contents": [
+                            {
+                                "title": "Adding sample data",
+                                "href": "workbench.Visualizer.AddData.html"
+                            },
+                            {
+                                "title": "Importing from CSV",
+                                "href": "workbench.Visualizer.ImportCSV.html"
+                            },
+                            {
+                                "title": "Facets",
+                                "href": "workbench.Visualizer.Facets.html"
+                            },
+                            {
+                                "title": "Aggregate view",
+                                "href": "workbench.Visualizer.AggregateView.html"
+                            },
+                            {
+                                "title": "Committing a data model",
+                                "href": "workbench.Visualizer.Commit.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Operation builder",
+                        "href": "workbench.querybuilder.html",
+                        "contents": [
+                            {
+                                "title": "Connecting to datasets",
+                                "href": "workbench.querybuilder.connect.html"
+                            },
+                            {
+                                "title": "Building operations",
+                                "href": "workbench.querybuilder.operationbuilder.html",
+                                "contents": [
+                                    {
+                                        "title": "PartiQL statements",
+                                        "href": "workbench.querybuilder.partiql.html"
+                                    },
+                                    {
+                                        "title": "API operations",
+                                        "href": "workbench.querybuilder.operationbuilder.api.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Exporting to CSV",
+                                "href": "workbench.querybuilder.exportcsv.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Sample data models",
+                        "href": "workbench.SampleModels.html"
+                    },
+                    {
+                        "title": "Release history",
+                        "href": "WorkbenchDocumentHistory.html"
+                    }
+                ]
+            },
+            {
+                "title": "Code examples",
+                "href": "service_code_examples.html",
+                "contents": [
+                    {
+                        "title": "Actions",
+                        "href": "service_code_examples_actions.html",
+                        "contents": [
+                            {
+                                "title": "Create a table",
+                                "href": "example_dynamodb_CreateTable_section.html"
+                            },
+                            {
+                                "title": "Delete a table",
+                                "href": "example_dynamodb_DeleteTable_section.html"
+                            },
+                            {
+                                "title": "Delete an item from a table",
+                                "href": "example_dynamodb_DeleteItem_section.html"
+                            },
+                            {
+                                "title": "Get a batch of items",
+                                "href": "example_dynamodb_BatchGetItem_section.html"
+                            },
+                            {
+                                "title": "Get an item from a table",
+                                "href": "example_dynamodb_GetItem_section.html"
+                            },
+                            {
+                                "title": "Get information about a table",
+                                "href": "example_dynamodb_DescribeTable_section.html"
+                            },
+                            {
+                                "title": "List tables",
+                                "href": "example_dynamodb_ListTables_section.html"
+                            },
+                            {
+                                "title": "Put an item in a table",
+                                "href": "example_dynamodb_PutItem_section.html"
+                            },
+                            {
+                                "title": "Query a table",
+                                "href": "example_dynamodb_Query_section.html"
+                            },
+                            {
+                                "title": "Run a PartiQL statement",
+                                "href": "example_dynamodb_ExecuteStatement_section.html"
+                            },
+                            {
+                                "title": "Run batches of PartiQL statements",
+                                "href": "example_dynamodb_BatchExecuteStatement_section.html"
+                            },
+                            {
+                                "title": "Scan a table",
+                                "href": "example_dynamodb_Scan_section.html"
+                            },
+                            {
+                                "title": "Update an item in a table",
+                                "href": "example_dynamodb_UpdateItem_section.html"
+                            },
+                            {
+                                "title": "Write a batch of items",
+                                "href": "example_dynamodb_BatchWriteItem_section.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Scenarios",
+                        "href": "service_code_examples_scenarios.html",
+                        "contents": [
+                            {
+                                "title": "Accelerate reads with DAX",
+                                "href": "example_dynamodb_Usage_DaxDemo_section.html"
+                            },
+                            {
+                                "title": "Get started with tables, items, and queries",
+                                "href": "example_dynamodb_Scenario_GettingStartedMovies_section.html"
+                            },
+                            {
+                                "title": "Query a table by using batches of PartiQL statements",
+                                "href": "example_dynamodb_Scenario_PartiQLBatch_section.html"
+                            },
+                            {
+                                "title": "Query a table using PartiQL",
+                                "href": "example_dynamodb_Scenario_PartiQLSingle_section.html"
+                            },
+                            {
+                                "title": "Use a document model",
+                                "href": "example_dynamodb_MidLevelInterface_section.html"
+                            },
+                            {
+                                "title": "Use a high-level object persistence model",
+                                "href": "example_dynamodb_HighLevelInterface_section.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Cross-service examples",
+                        "href": "service_code_examples_cross-service_examples.html",
+                        "contents": [
+                            {
+                                "title": "Build an app to submit data to a DynamoDB table",
+                                "href": "example_cross_SubmitDataApp_section.html"
+                            },
+                            {
+                                "title": "Create a REST API to track COVID-19 data",
+                                "href": "example_cross_ApiGatewayDataTracker_section.html"
+                            },
+                            {
+                                "title": "Create a messenger application",
+                                "href": "example_cross_StepFunctionsMessenger_section.html"
+                            },
+                            {
+                                "title": "Create a serverless application to manage photos",
+                                "href": "example_cross_PAM_section.html"
+                            },
+                            {
+                                "title": "Create a web application to track DynamoDB data",
+                                "href": "example_cross_DynamoDBDataTracker_section.html"
+                            },
+                            {
+                                "title": "Create a websocket chat application",
+                                "href": "example_cross_ApiGatewayWebsocketChat_section.html"
+                            },
+                            {
+                                "title": "Detect PPE in images",
+                                "href": "example_cross_RekognitionPhotoAnalyzerPPE_section.html"
+                            },
+                            {
+                                "title": "Invoke a Lambda function from a browser",
+                                "href": "example_cross_LambdaForBrowser_section.html"
+                            },
+                            {
+                                "title": "Save EXIF and other image information",
+                                "href": "example_cross_DetectLabels_section.html"
+                            },
+                            {
+                                "title": "Use API Gateway to invoke a Lambda function",
+                                "href": "example_cross_LambdaAPIGateway_section.html"
+                            },
+                            {
+                                "title": "Use Step Functions to invoke Lambda functions",
+                                "href": "example_cross_ServerlessWorkflows_section.html"
+                            },
+                            {
+                                "title": "Use scheduled events to invoke a Lambda function",
+                                "href": "example_cross_LambdaScheduledEvents_section.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "AWS managed policies",
+                        "href": "ddb-security-iam.awsmanpol.html"
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Encryption at rest",
+                                "href": "EncryptionAtRest.html",
+                                "contents": [
+                                    {
+                                        "title": "How it works",
+                                        "href": "encryption.howitworks.html"
+                                    },
+                                    {
+                                        "title": "Usage notes",
+                                        "href": "encryption.usagenotes.html"
+                                    },
+                                    {
+                                        "title": "Managing encrypted tables",
+                                        "href": "encryption.tutorial.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Data protection in DAX",
+                                "href": "DAXDataProtection.html"
+                            },
+                            {
+                                "title": "Internetwork traffic privacy",
+                                "href": "inter-network-traffic-privacy.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IAM",
+                        "href": "identity-and-access-mgmt.html",
+                        "contents": [
+                            {
+                                "title": "Identity and Access Management",
+                                "href": "security-iam.html",
+                                "contents": [
+                                    {
+                                        "title": "How Amazon DynamoDB works with IAM",
+                                        "href": "security_iam_service-with-iam.html"
+                                    },
+                                    {
+                                        "title": "Identity-based policy examples",
+                                        "href": "security_iam_id-based-policy-examples.html",
+                                        "contents": [
+                                            {
+                                                "title": "Using identity-based policies",
+                                                "href": "using-identity-based-policies.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Perform any actions on a table",
+                                                        "href": "grant-permissions-to-any-action-on-table.html"
+                                                    },
+                                                    {
+                                                        "title": "Read-only access on items",
+                                                        "href": "read-only-permissions-on-table-items.html"
+                                                    },
+                                                    {
+                                                        "title": "Access to a specific table and its indexes",
+                                                        "href": "iam-policy-specific-table-indexes.html"
+                                                    },
+                                                    {
+                                                        "title": "CRUD operations on all data",
+                                                        "href": "iam-policy-example-data-crud.html"
+                                                    },
+                                                    {
+                                                        "title": "Separate environments in the same AWS account",
+                                                        "href": "iam-policy-separate-environments.html"
+                                                    },
+                                                    {
+                                                        "title": "Prevent purchase of reserved capacity",
+                                                        "href": "iam-prevent-purchase-reserved-capacity.html"
+                                                    },
+                                                    {
+                                                        "title": "Read access for a stream only",
+                                                        "href": "iam-policy-read-stream-only.html"
+                                                    },
+                                                    {
+                                                        "title": "Lambda function to process stream records",
+                                                        "href": "iam-policy-example-lamda-process-dynamodb-streams.html"
+                                                    },
+                                                    {
+                                                        "title": "CRUD operations on a DAX cluster",
+                                                        "href": "iam-policy-example-read-write-dax-access.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Troubleshooting",
+                                        "href": "security_iam_troubleshoot.html"
+                                    },
+                                    {
+                                        "title": "Prevent purchase of reserved capacity",
+                                        "href": "iam-policy-prevent-purchase-reserved-capacity.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using conditions",
+                                "href": "specifying-conditions.html",
+                                "contents": [
+                                    {
+                                        "title": "Using web identity federation",
+                                        "href": "WIF.html",
+                                        "contents": [
+                                            {
+                                                "title": "Preparing to use web identity federation",
+                                                "href": "WIF.PreparingForUse.html"
+                                            },
+                                            {
+                                                "title": "Writing your app to use web identity federation",
+                                                "href": "WIF.RunningYourApp.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "DynamoDB API permissions reference",
+                                        "href": "api-permissions-reference.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Identity and access management in DAX",
+                                "href": "DAXIAM.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "Compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "network-isolation.html",
+                        "contents": [
+                            {
+                                "title": "Using VPC endpoints",
+                                "href": "vpc-endpoints-dynamodb.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "configuration-vulnerability.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "best-practices-security.html",
+                        "contents": [
+                            {
+                                "title": "Preventative security best practices",
+                                "href": "best-practices-security-preventative.html"
+                            },
+                            {
+                                "title": "Detective security best practices",
+                                "href": "best-practices-security-detective.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring.html",
+                "contents": [
+                    {
+                        "title": "Logging and monitoring in DynamoDB",
+                        "href": "MonitoringDynamoDB.html",
+                        "contents": [
+                            {
+                                "title": "Monitoring tools",
+                                "href": "monitoring-automated-manual.html"
+                            },
+                            {
+                                "title": "Monitoring with Amazon CloudWatch",
+                                "href": "monitoring-cloudwatch.html",
+                                "contents": [
+                                    {
+                                        "title": "Metrics and dimensions",
+                                        "href": "metrics-dimensions.html"
+                                    },
+                                    {
+                                        "title": "Creating alarms",
+                                        "href": "creating-alarms.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Logging DynamoDB operations by using AWS CloudTrail",
+                                "href": "logging-using-cloudtrail.html",
+                                "contents": [
+                                    {
+                                        "title": "Understanding DynamoDB log file entries",
+                                        "href": "understanding-ddb-log-entries.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring in DAX",
+                        "href": "LoggingMonitoringDAX.html"
+                    },
+                    {
+                        "title": "Contributor Insights",
+                        "href": "contributorinsights.html",
+                        "contents": [
+                            {
+                                "title": "How it works",
+                                "href": "contributorinsights_HowItWorks.html"
+                            },
+                            {
+                                "title": "Getting started",
+                                "href": "contributorinsights_tutorial.html"
+                            },
+                            {
+                                "title": "Using IAM",
+                                "href": "Contributor_Insights_IAM.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using User Notifications with Amazon DynamoDB",
+                        "href": "ddb-user-notifications.html"
+                    }
+                ]
+            },
+            {
+                "title": "Best practices",
+                "href": "best-practices.html",
+                "contents": [
+                    {
+                        "title": "NoSQL design",
+                        "href": "bp-general-nosql-design.html"
+                    },
+                    {
+                        "title": "Deletion protection",
+                        "href": "bp-deletion-protection.html"
+                    },
+                    {
+                        "title": "The DynamoDB Well-Architected Lens",
+                        "href": "bp-wal.html",
+                        "contents": [
+                            {
+                                "title": "Cost optimization",
+                                "href": "bp-cost-optimization.html",
+                                "contents": [
+                                    {
+                                        "title": "Evaluate your costs at the table level",
+                                        "href": "CostOptimization_TableLevelCostAnalysis.html"
+                                    },
+                                    {
+                                        "title": "Evaluate your table capacity mode",
+                                        "href": "CostOptimization_TableCapacityMode.html"
+                                    },
+                                    {
+                                        "title": "Evaluate your table's auto scaling settings",
+                                        "href": "CostOptimization_AutoScalingSettings.html"
+                                    },
+                                    {
+                                        "title": "Evaluate your table class selection",
+                                        "href": "CostOptimization_TableClass.html"
+                                    },
+                                    {
+                                        "title": "Identifying your unused resources",
+                                        "href": "CostOptimization_UnusedResources.html"
+                                    },
+                                    {
+                                        "title": "Evaluate your table usage patterns",
+                                        "href": "CostOptimization_TableUsagePatterns.html"
+                                    },
+                                    {
+                                        "title": "Evaluate your Streams usage",
+                                        "href": "CostOptimization_StreamsUsage.html"
+                                    },
+                                    {
+                                        "title": "Evaluate your provisioned capacity for right-sized provisioning",
+                                        "href": "CostOptimization_RightSizedProvisioning.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Partition key design",
+                        "href": "bp-partition-key-design.html",
+                        "contents": [
+                            {
+                                "title": "Distributing workloads",
+                                "href": "bp-partition-key-uniform-load.html"
+                            },
+                            {
+                                "title": "Write sharding",
+                                "href": "bp-partition-key-sharding.html"
+                            },
+                            {
+                                "title": "Uploading data efficiently",
+                                "href": "bp-partition-key-data-upload.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Sort key design",
+                        "href": "bp-sort-keys.html"
+                    },
+                    {
+                        "title": "Secondary indexes",
+                        "href": "bp-indexes.html",
+                        "contents": [
+                            {
+                                "title": "General guidelines",
+                                "href": "bp-indexes-general.html"
+                            },
+                            {
+                                "title": "Sparse indexes",
+                                "href": "bp-indexes-general-sparse-indexes.html"
+                            },
+                            {
+                                "title": "Aggregation",
+                                "href": "bp-gsi-aggregation.html"
+                            },
+                            {
+                                "title": "GSI overloading",
+                                "href": "bp-gsi-overloading.html"
+                            },
+                            {
+                                "title": "GSI sharding",
+                                "href": "bp-indexes-gsi-sharding.html"
+                            },
+                            {
+                                "title": "Creating a replica",
+                                "href": "bp-indexes-gsi-replica.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Large items",
+                        "href": "bp-use-s3-too.html"
+                    },
+                    {
+                        "title": "Time series data",
+                        "href": "bp-time-series.html"
+                    },
+                    {
+                        "title": "Many-to-many relationships",
+                        "href": "bp-adjacency-graphs.html"
+                    },
+                    {
+                        "title": "Hybrid DynamoDB\u2013RDBMS",
+                        "href": "bp-hybrid.html"
+                    },
+                    {
+                        "title": "Relational modeling",
+                        "href": "bp-relational-modeling.html",
+                        "contents": [
+                            {
+                                "title": "First steps",
+                                "href": "bp-modeling-nosql.html"
+                            },
+                            {
+                                "title": "Example",
+                                "href": "bp-modeling-nosql-B.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Querying and scanning",
+                        "href": "bp-query-scan.html"
+                    },
+                    {
+                        "title": "Table design",
+                        "href": "bp-table-design.html"
+                    },
+                    {
+                        "title": "Global table design",
+                        "href": "bp-global-table-design.html",
+                        "contents": [
+                            {
+                                "title": "Write modes",
+                                "href": "bp-global-table-design.prescriptive-guidance.writemodes.html"
+                            },
+                            {
+                                "title": "Request routing",
+                                "href": "bp-global-table-design.prescriptive-guidance.request-routing.html"
+                            },
+                            {
+                                "title": "Evacuating a Region",
+                                "href": "bp-global-table-design.prescriptive-guidance.evacuation.html"
+                            },
+                            {
+                                "title": "Throughput capacity with global tables",
+                                "href": "bp-global-table-design.prescriptive-guidance.throughput.html"
+                            },
+                            {
+                                "title": "Checklist and FAQ for global tables",
+                                "href": "bp-global-table-design.prescriptive-guidance.checklist-and-faq.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Control plane",
+                        "href": "bp-control-plane.html"
+                    }
+                ]
+            },
+            {
+                "title": "Using DynamoDB with other AWS services",
+                "href": "OtherServices.html",
+                "contents": [
+                    {
+                        "title": "Integrating with Amazon Cognito",
+                        "href": "Cognito.Credentials.html"
+                    },
+                    {
+                        "title": "Integrating with Amazon Redshift",
+                        "href": "RedshiftforDynamoDB.html"
+                    },
+                    {
+                        "title": "Integrating with Amazon EMR",
+                        "href": "EMRforDynamoDB.html",
+                        "contents": [
+                            {
+                                "title": "Tutorial: Working with Amazon DynamoDB and Apache Hive",
+                                "href": "EMRforDynamoDB.Tutorial.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Create an Amazon EC2 key pair",
+                                        "href": "EMRforDynamoDB.Tutorial.EC2KeyPair.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Launch an Amazon EMR cluster",
+                                        "href": "EMRforDynamoDB.Tutorial.LaunchEMRCluster.html"
+                                    },
+                                    {
+                                        "title": "Step 3: Connect to the Leader node",
+                                        "href": "EMRforDynamoDB.Tutorial.ConnectToLeaderNode.html"
+                                    },
+                                    {
+                                        "title": "Step 4: Load data into HDFS",
+                                        "href": "EMRforDynamoDB.Tutorial.LoadDataIntoHDFS.html"
+                                    },
+                                    {
+                                        "title": "Step 5: Copy data to DynamoDB",
+                                        "href": "EMRforDynamoDB.Tutorial.CopyDataToDDB.html"
+                                    },
+                                    {
+                                        "title": "Step 6: Query the data in the DynamoDB table",
+                                        "href": "EMRforDynamoDB.Tutorial.QueryDataInDynamoDB.html"
+                                    },
+                                    {
+                                        "title": "Step 7: (Optional) clean up",
+                                        "href": "EMRforDynamoDB.Tutorial.CleanUp.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Creating an external table in Hive",
+                                "href": "EMRforDynamoDB.ExternalTableForDDB.html"
+                            },
+                            {
+                                "title": "Processing HiveQL statements",
+                                "href": "EMRforDynamoDB.ProcessingHiveQL.html"
+                            },
+                            {
+                                "title": "Querying data in DynamoDB",
+                                "href": "EMRforDynamoDB.Querying.html"
+                            },
+                            {
+                                "title": "Copying data to and from Amazon DynamoDB",
+                                "href": "EMRforDynamoDB.CopyingData.html",
+                                "contents": [
+                                    {
+                                        "title": "Copying data between DynamoDB and a native Hive table",
+                                        "href": "EMRforDynamoDB.CopyingData.NativeHive.html"
+                                    },
+                                    {
+                                        "title": "Copying data between DynamoDB and Amazon S3",
+                                        "href": "EMRforDynamoDB.CopyingData.S3.html"
+                                    },
+                                    {
+                                        "title": "Copying data between DynamoDB and HDFS",
+                                        "href": "EMRforDynamoDB.CopyingData.HDFS.html"
+                                    },
+                                    {
+                                        "title": "Using data compression",
+                                        "href": "EMRforDynamoDB.CopyingData.Compression.html"
+                                    },
+                                    {
+                                        "title": "Reading non-printable UTF-8 character data",
+                                        "href": "EMRforDynamoDB.CopyingData.NonPrintableData.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Performance tuning",
+                                "href": "EMRforDynamoDB.PerformanceTuning.html",
+                                "contents": [
+                                    {
+                                        "title": "DynamoDB provisioned throughput",
+                                        "href": "EMRforDynamoDB.PerformanceTuning.Throughput.html"
+                                    },
+                                    {
+                                        "title": "Adjusting the mappers",
+                                        "href": "EMRforDynamoDB.PerformanceTuning.Mappers.html"
+                                    },
+                                    {
+                                        "title": "Additional topics",
+                                        "href": "EMRforDynamoDB.PerformanceTuning.Misc.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Integrating with S3",
+                        "href": "S3forDynamoDB.html",
+                        "contents": [
+                            {
+                                "title": "Import from Amazon S3",
+                                "href": "S3DataImport.HowItWorks.html",
+                                "contents": [
+                                    {
+                                        "title": "Importing a table",
+                                        "href": "S3DataImport.Requesting.html"
+                                    },
+                                    {
+                                        "title": "Import formats",
+                                        "href": "S3DataImport.Format.html"
+                                    },
+                                    {
+                                        "title": "Quotas and Validation",
+                                        "href": "S3DataImport.Validation.html"
+                                    },
+                                    {
+                                        "title": "Best practices",
+                                        "href": "S3DataImport.BestPractices.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Export to Amazon S3",
+                                "href": "S3DataExport.HowItWorks.html",
+                                "contents": [
+                                    {
+                                        "title": "Requesting a table export",
+                                        "href": "S3DataExport_Requesting.html"
+                                    },
+                                    {
+                                        "title": "Export format",
+                                        "href": "S3DataExport.Output.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Quotas and limits",
+                "href": "ServiceQuotas.html"
+            },
+            {
+                "title": "API reference",
+                "href": "CurrentAPI.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "Troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Latency",
+                        "href": "TroubleshootingLatency.html"
+                    },
+                    {
+                        "title": "Throttling",
+                        "href": "TroubleshootingThrottling.html"
+                    }
+                ]
+            },
+            {
+                "title": "Appendix",
+                "href": "Appendix.html",
+                "contents": [
+                    {
+                        "title": "Troubleshooting SSL/TLS connection establishment issues",
+                        "href": "ats-certs.html"
+                    },
+                    {
+                        "title": "Example tables and data",
+                        "href": "AppendixSampleTables.html"
+                    },
+                    {
+                        "title": "Creating example tables and uploading data",
+                        "href": "AppendixSampleDataCode.html",
+                        "contents": [
+                            {
+                                "title": "Creating example tables and uploading data - Java",
+                                "href": "AppendixSampleDataCodeJava.html"
+                            },
+                            {
+                                "title": "Creating example tables and uploading data - .NET",
+                                "href": "AppendixSampleDataCodeDotNET.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Example application using AWS SDK for Python (Boto3)",
+                        "href": "TicTacToe.html",
+                        "contents": [
+                            {
+                                "title": "Step 1: Deploy and test locally",
+                                "href": "TicTacToe.Phase1.html"
+                            },
+                            {
+                                "title": "Step 2: Examine the data model and implementation details",
+                                "href": "TicTacToe.Phase2.html"
+                            },
+                            {
+                                "title": "Step 3: Deploy in production",
+                                "href": "TicTacToe.Phase3.html"
+                            },
+                            {
+                                "title": "Step 4: Clean up resources",
+                                "href": "TicTacToe.AppClosure.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Integrating with AWS Data Pipeline",
+                        "href": "DynamoDBPipeline.html"
+                    },
+                    {
+                        "title": "Amazon DynamoDB Storage Backend for Titan",
+                        "href": "Tools.TitanDB.html"
+                    },
+                    {
+                        "title": "Reserved words in DynamoDB",
+                        "href": "ReservedWords.html"
+                    },
+                    {
+                        "title": "Legacy conditional parameters",
+                        "href": "LegacyConditionalParameters.html",
+                        "contents": [
+                            {
+                                "title": "AttributesToGet",
+                                "href": "LegacyConditionalParameters.AttributesToGet.html"
+                            },
+                            {
+                                "title": "AttributeUpdates",
+                                "href": "LegacyConditionalParameters.AttributeUpdates.html"
+                            },
+                            {
+                                "title": "ConditionalOperator",
+                                "href": "LegacyConditionalParameters.ConditionalOperator.html"
+                            },
+                            {
+                                "title": "Expected",
+                                "href": "LegacyConditionalParameters.Expected.html"
+                            },
+                            {
+                                "title": "KeyConditions",
+                                "href": "LegacyConditionalParameters.KeyConditions.html"
+                            },
+                            {
+                                "title": "QueryFilter",
+                                "href": "LegacyConditionalParameters.QueryFilter.html"
+                            },
+                            {
+                                "title": "ScanFilter",
+                                "href": "LegacyConditionalParameters.ScanFilter.html"
+                            },
+                            {
+                                "title": "Writing conditions with legacy parameters",
+                                "href": "LegacyConditionalParameters.Conditions.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Previous low-level API version (2011-12-05)",
+                        "href": "Appendix.APIv20111205.html",
+                        "contents": [
+                            {
+                                "title": "BatchGetItem",
+                                "href": "API_BatchGetItem_v20111205.html"
+                            },
+                            {
+                                "title": "BatchWriteItem",
+                                "href": "API_BatchWriteItem_v20111205.html"
+                            },
+                            {
+                                "title": "CreateTable",
+                                "href": "API_CreateTable_v20111205.html"
+                            },
+                            {
+                                "title": "DeleteItem",
+                                "href": "API_DeleteItem_v20111205.html"
+                            },
+                            {
+                                "title": "DeleteTable",
+                                "href": "API_DeleteTable_v20111205.html"
+                            },
+                            {
+                                "title": "DescribeTables",
+                                "href": "API_DescribeTables_v20111205.html"
+                            },
+                            {
+                                "title": "GetItem",
+                                "href": "API_GetItem_v20111205.html"
+                            },
+                            {
+                                "title": "ListTables",
+                                "href": "API_ListTables_v20111205.html"
+                            },
+                            {
+                                "title": "PutItem",
+                                "href": "API_PutItem_v20111205.html"
+                            },
+                            {
+                                "title": "Query",
+                                "href": "API_Query_v20111205.html"
+                            },
+                            {
+                                "title": "Scan",
+                                "href": "API_Scan_v20111205.html"
+                            },
+                            {
+                                "title": "UpdateItem",
+                                "href": "API_UpdateItem_v20111205.html"
+                            },
+                            {
+                                "title": "UpdateTable",
+                                "href": "API_UpdateTable_v20111205.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS SDK for Java 1.x examples",
+                        "href": "Appendix.JavaSDKv1.html",
+                        "contents": [
+                            {
+                                "title": "DAX and Java SDK v1",
+                                "href": "DAX.client.java-sdk-v1.html",
+                                "contents": [
+                                    {
+                                        "title": "TryDax.java",
+                                        "href": "DAX.client.run-application-java.TryDax.html"
+                                    },
+                                    {
+                                        "title": "TryDaxHelper.java",
+                                        "href": "DAX.client.run-application-java.TryDaxHelper.html"
+                                    },
+                                    {
+                                        "title": "TryDaxTests.java",
+                                        "href": "DAX.client.run-application-java.TryDaxTests.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Modifying an existing SDK for Java 1.x application to use DAX",
+                                "href": "DAX.client.modify-your-app.java-sdk-v1.html"
+                            },
+                            {
+                                "title": "Querying global secondary indexes with SDK for Java 1.x",
+                                "href": "DAX.client.QueryGSI.java-sdk-v1.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "DocumentHistory.html"
+            }
+        ]
+    }
+}

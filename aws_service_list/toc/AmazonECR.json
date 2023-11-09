@@ -1,1 +1,356 @@
-{ "contents" : [ { "title" : "What is Amazon ECR", "href" : "what-is-ecr.html" }, { "title" : "Setting up", "href" : "get-set-up-for-amazon-ecr.html" }, { "title" : "Getting started", "href" : "getting-started-console.html" }, { "title" : "Using the AWS CLI", "href" : "getting-started-cli.html" }, { "title" : "Private registry", "href" : "Registries.html", "contents" : [ { "title" : "Registry authentication", "href" : "registry_auth.html" }, { "title" : "Registry settings", "href" : "registry-settings.html" }, { "title" : "Registry permissions", "href" : "registry-permissions.html", "contents" : [ { "title" : "Setting a registry permission statement", "href" : "registry-permissions-create.html" }, { "title" : "Deleting a registry permission statement", "href" : "registry-permissions-delete.html" }, { "title" : "Registry policy examples", "href" : "registry-permissions-examples.html" } ] } ] }, { "title" : "Private repositories", "href" : "Repositories.html", "contents" : [ { "title" : "Creating a repository", "href" : "repository-create.html" }, { "title" : "Viewing repository details", "href" : "repository-info.html" }, { "title" : "Editing a repository", "href" : "repository-edit.html" }, { "title" : "Deleting a repository", "href" : "repository-delete.html" }, { "title" : "Repository policies", "href" : "repository-policies.html", "contents" : [ { "title" : "Setting a repository policy statement", "href" : "set-repository-policy.html" }, { "title" : "Deleting a repository policy statement", "href" : "delete-repository-policy.html" }, { "title" : "Repository policy examples", "href" : "repository-policy-examples.html" } ] }, { "title" : "Tagging a repository", "href" : "ecr-using-tags.html" } ] }, { "title" : "Private images", "href" : "images.html", "contents" : [ { "title" : "Pushing an image", "href" : "image-push.html", "contents" : [ { "title" : "Pushing a Docker image", "href" : "docker-push-ecr-image.html" }, { "title" : "Pushing a multi-architecture image", "href" : "docker-push-multi-architecture-image.html" }, { "title" : "Pushing a Helm chart", "href" : "push-oci-artifact.html" } ] }, { "title" : "Signing an image", "href" : "image-signing.html" }, { "title" : "Viewing image details", "href" : "image-info.html" }, { "title" : "Pulling an image", "href" : "docker-pull-ecr-image.html" }, { "title" : "Using pull through cache rules", "href" : "pull-through-cache.html" }, { "title" : "Deleting an image", "href" : "delete_image.html" }, { "title" : "Retagging an image", "href" : "image-retag.html" }, { "title" : "Image replication", "href" : "replication.html", "contents" : [ { "title" : "Configuring replication", "href" : "registry-settings-configure.html" }, { "title" : "Viewing replication status", "href" : "replication-status.html" }, { "title" : "Replication examples", "href" : "registry-settings-examples.html" } ] }, { "title" : "Lifecycle policies", "href" : "LifecyclePolicies.html", "contents" : [ { "title" : "Creating a lifecycle policy preview", "href" : "lpp_creation.html" }, { "title" : "Creating a lifecycle policy", "href" : "lp_creation.html" }, { "title" : "Examples of lifecycle policies", "href" : "lifecycle_policy_examples.html" } ] }, { "title" : "Image tag mutability", "href" : "image-tag-mutability.html" }, { "title" : "Image scanning", "href" : "image-scanning.html", "contents" : [ { "title" : "Enhanced scanning", "href" : "image-scanning-enhanced.html" }, { "title" : "Basic scanning", "href" : "image-scanning-basic.html" } ] }, { "title" : "Container image manifest formats", "href" : "image-manifest-formats.html" }, { "title" : "Using Amazon ECR images with Amazon ECS", "href" : "ECR_on_ECS.html" }, { "title" : "Using Amazon ECR Images with Amazon EKS", "href" : "ECR_on_EKS.html" }, { "title" : "Amazon Linux container image", "href" : "amazon_linux_container_image.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon Elastic Container Registry works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "AWS managed policies for Amazon ECR", "href" : "security-iam-awsmanpol.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html", "contents" : [ { "title" : "Service-linked role for replication", "href" : "slr-replication.html" }, { "title" : "Service-linked role for pull through cache", "href" : "slr-pullthroughcache.html" } ] }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Using Tag-Based Access Control", "href" : "ecr-supported-iam-actions-tagging.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Encryption at rest", "href" : "encryption-at-rest.html" } ] }, { "title" : "Compliance validation", "href" : "ecr-compliance.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html", "contents" : [ { "title" : "Interface VPC Endpoints (AWS PrivateLink)", "href" : "vpc-endpoints.html" } ] } ] }, { "title" : "Monitoring", "href" : "monitoring.html", "contents" : [ { "title" : "Visualizing Your Service Quotas and Setting Alarms", "href" : "monitoring-quotas-alarms.html" }, { "title" : "Usage Metrics", "href" : "monitoring-usage.html" }, { "title" : "Usage Reports", "href" : "usage-reports.html" }, { "title" : "Repository metrics", "href" : "ecr-repository-metrics.html" }, { "title" : "Events and EventBridge", "href" : "ecr-eventbridge.html" }, { "title" : "Logging Actions with AWS CloudTrail", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Service quotas", "href" : "service-quotas.html" }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "Troubleshooting errors with Docker commands when using Amazon ECR", "href" : "common-errors-docker.html" }, { "title" : "Troubleshooting Amazon ECR error messages", "href" : "common-errors.html" }, { "title" : "Troubleshooting pull through cache issues", "href" : "error-pullthroughcache.html" }, { "title" : "Troubleshooting image scanning issues", "href" : "image-scanning-troubleshooting.html" } ] }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/AmazonECR/latest/userguide/",
+    "service": "AmazonECR",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon ECR",
+                "href": "what-is-ecr.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "get-set-up-for-amazon-ecr.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started-console.html"
+            },
+            {
+                "title": "Using the AWS CLI",
+                "href": "getting-started-cli.html"
+            },
+            {
+                "title": "Private registry",
+                "href": "Registries.html",
+                "contents": [
+                    {
+                        "title": "Registry authentication",
+                        "href": "registry_auth.html"
+                    },
+                    {
+                        "title": "Registry settings",
+                        "href": "registry-settings.html"
+                    },
+                    {
+                        "title": "Registry permissions",
+                        "href": "registry-permissions.html",
+                        "contents": [
+                            {
+                                "title": "Setting a registry permission statement",
+                                "href": "registry-permissions-create.html"
+                            },
+                            {
+                                "title": "Deleting a registry permission statement",
+                                "href": "registry-permissions-delete.html"
+                            },
+                            {
+                                "title": "Registry policy examples",
+                                "href": "registry-permissions-examples.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Private repositories",
+                "href": "Repositories.html",
+                "contents": [
+                    {
+                        "title": "Creating a repository",
+                        "href": "repository-create.html"
+                    },
+                    {
+                        "title": "Viewing repository details",
+                        "href": "repository-info.html"
+                    },
+                    {
+                        "title": "Editing a repository",
+                        "href": "repository-edit.html"
+                    },
+                    {
+                        "title": "Deleting a repository",
+                        "href": "repository-delete.html"
+                    },
+                    {
+                        "title": "Repository policies",
+                        "href": "repository-policies.html",
+                        "contents": [
+                            {
+                                "title": "Setting a repository policy statement",
+                                "href": "set-repository-policy.html"
+                            },
+                            {
+                                "title": "Deleting a repository policy statement",
+                                "href": "delete-repository-policy.html"
+                            },
+                            {
+                                "title": "Repository policy examples",
+                                "href": "repository-policy-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tagging a repository",
+                        "href": "ecr-using-tags.html"
+                    }
+                ]
+            },
+            {
+                "title": "Private images",
+                "href": "images.html",
+                "contents": [
+                    {
+                        "title": "Pushing an image",
+                        "href": "image-push.html",
+                        "contents": [
+                            {
+                                "title": "Pushing a Docker image",
+                                "href": "docker-push-ecr-image.html"
+                            },
+                            {
+                                "title": "Pushing a multi-architecture image",
+                                "href": "docker-push-multi-architecture-image.html"
+                            },
+                            {
+                                "title": "Pushing a Helm chart",
+                                "href": "push-oci-artifact.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Signing an image",
+                        "href": "image-signing.html"
+                    },
+                    {
+                        "title": "Viewing image details",
+                        "href": "image-info.html"
+                    },
+                    {
+                        "title": "Pulling an image",
+                        "href": "docker-pull-ecr-image.html"
+                    },
+                    {
+                        "title": "Using pull through cache rules",
+                        "href": "pull-through-cache.html"
+                    },
+                    {
+                        "title": "Deleting an image",
+                        "href": "delete_image.html"
+                    },
+                    {
+                        "title": "Retagging an image",
+                        "href": "image-retag.html"
+                    },
+                    {
+                        "title": "Image replication",
+                        "href": "replication.html",
+                        "contents": [
+                            {
+                                "title": "Configuring replication",
+                                "href": "registry-settings-configure.html"
+                            },
+                            {
+                                "title": "Viewing replication status",
+                                "href": "replication-status.html"
+                            },
+                            {
+                                "title": "Replication examples",
+                                "href": "registry-settings-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Lifecycle policies",
+                        "href": "LifecyclePolicies.html",
+                        "contents": [
+                            {
+                                "title": "Creating a lifecycle policy preview",
+                                "href": "lpp_creation.html"
+                            },
+                            {
+                                "title": "Creating a lifecycle policy",
+                                "href": "lp_creation.html"
+                            },
+                            {
+                                "title": "Examples of lifecycle policies",
+                                "href": "lifecycle_policy_examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Image tag mutability",
+                        "href": "image-tag-mutability.html"
+                    },
+                    {
+                        "title": "Image scanning",
+                        "href": "image-scanning.html",
+                        "contents": [
+                            {
+                                "title": "Enhanced scanning",
+                                "href": "image-scanning-enhanced.html"
+                            },
+                            {
+                                "title": "Basic scanning",
+                                "href": "image-scanning-basic.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Container image manifest formats",
+                        "href": "image-manifest-formats.html"
+                    },
+                    {
+                        "title": "Using Amazon ECR images with Amazon ECS",
+                        "href": "ECR_on_ECS.html"
+                    },
+                    {
+                        "title": "Using Amazon ECR Images with Amazon EKS",
+                        "href": "ECR_on_EKS.html"
+                    },
+                    {
+                        "title": "Amazon Linux container image",
+                        "href": "amazon_linux_container_image.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon Elastic Container Registry works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "AWS managed policies for Amazon ECR",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html",
+                                "contents": [
+                                    {
+                                        "title": "Service-linked role for replication",
+                                        "href": "slr-replication.html"
+                                    },
+                                    {
+                                        "title": "Service-linked role for pull through cache",
+                                        "href": "slr-pullthroughcache.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Using Tag-Based Access Control",
+                                "href": "ecr-supported-iam-actions-tagging.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Encryption at rest",
+                                "href": "encryption-at-rest.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "ecr-compliance.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html",
+                        "contents": [
+                            {
+                                "title": "Interface VPC Endpoints (AWS PrivateLink)",
+                                "href": "vpc-endpoints.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring.html",
+                "contents": [
+                    {
+                        "title": "Visualizing Your Service Quotas and Setting Alarms",
+                        "href": "monitoring-quotas-alarms.html"
+                    },
+                    {
+                        "title": "Usage Metrics",
+                        "href": "monitoring-usage.html"
+                    },
+                    {
+                        "title": "Usage Reports",
+                        "href": "usage-reports.html"
+                    },
+                    {
+                        "title": "Repository metrics",
+                        "href": "ecr-repository-metrics.html"
+                    },
+                    {
+                        "title": "Events and EventBridge",
+                        "href": "ecr-eventbridge.html"
+                    },
+                    {
+                        "title": "Logging Actions with AWS CloudTrail",
+                        "href": "logging-using-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Service quotas",
+                "href": "service-quotas.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Troubleshooting errors with Docker commands when using Amazon ECR",
+                        "href": "common-errors-docker.html"
+                    },
+                    {
+                        "title": "Troubleshooting Amazon ECR error messages",
+                        "href": "common-errors.html"
+                    },
+                    {
+                        "title": "Troubleshooting pull through cache issues",
+                        "href": "error-pullthroughcache.html"
+                    },
+                    {
+                        "title": "Troubleshooting image scanning issues",
+                        "href": "image-scanning-troubleshooting.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

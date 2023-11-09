@@ -1,1 +1,168 @@
-{ "contents" : [ { "title" : "What is Application Composer?", "href" : "what-is-composer.html" }, { "title" : "Setting up", "href" : "setting-up-composer.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Take a tour", "href" : "getting-started-tour.html" }, { "title" : "Tutorial 1: Load and modify the demo", "href" : "getting-started-demo.html" }, { "title" : "Tutorial 2: Build your first application", "href" : "getting-started-build.html" } ] }, { "title" : "Using Application Composer", "href" : "using-composer.html", "contents" : [ { "title" : "Manage your project", "href" : "using-composer-project.html" }, { "title" : "Designing with cards", "href" : "using-composer-cards.html" }, { "title" : "Connect resources together", "href" : "using-composer-connecting.html" }, { "title" : "Referencing external files", "href" : "using-composer-external-files.html" }, { "title" : "View code updates with the Change Inspector", "href" : "using-change-inspector.html" }, { "title" : "Featured AWS services", "href" : "using-composer-services.html", "contents" : [ { "title" : "Amazon RDS", "href" : "using-composer-services-rds.html" }, { "title" : "Amazon VPC", "href" : "using-composer-services-vpc.html" } ] } ] }, { "title" : "Working with other services", "href" : "other-services.html", "contents" : [ { "title" : "Using Application Composer with your local IDE", "href" : "other-services-ide.html" }, { "title" : "AWS CloudFormation and AWS SAM", "href" : "other-services-cfn.html" } ] }, { "title" : "Reference", "href" : "reference.html", "contents" : [ { "title" : "Visual reference", "href" : "reference-visual.html" }, { "title" : "Features reference", "href" : "reference-features.html", "contents" : [ { "title" : "Export canvas", "href" : "reference-features-export.html" }, { "title" : "Local sync mode", "href" : "reference-features-local-sync.html" }, { "title" : "Undo and redo", "href" : "reference-features-undo.html" } ] }, { "title" : "Gestures and shortcuts", "href" : "reference-navigation.html" }, { "title" : "File System Access API", "href" : "reference-fsa.html" }, { "title" : "Card reference", "href" : "reference-cards.html" }, { "title" : "Troubleshooting", "href" : "ref-troubleshooting.html" }, { "title" : "Serverless concepts", "href" : "what-is-concepts.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS Application Composer works with IAM", "href" : "security_iam_service-with-iam.html" } ] }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" } ] }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/application-composer/latest/dg/",
+    "service": "application-composer",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Application Composer?",
+                "href": "what-is-composer.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "setting-up-composer.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Take a tour",
+                        "href": "getting-started-tour.html"
+                    },
+                    {
+                        "title": "Tutorial 1: Load and modify the demo",
+                        "href": "getting-started-demo.html"
+                    },
+                    {
+                        "title": "Tutorial 2: Build your first application",
+                        "href": "getting-started-build.html"
+                    }
+                ]
+            },
+            {
+                "title": "Using Application Composer",
+                "href": "using-composer.html",
+                "contents": [
+                    {
+                        "title": "Manage your project",
+                        "href": "using-composer-project.html"
+                    },
+                    {
+                        "title": "Designing with cards",
+                        "href": "using-composer-cards.html"
+                    },
+                    {
+                        "title": "Connect resources together",
+                        "href": "using-composer-connecting.html"
+                    },
+                    {
+                        "title": "Referencing external files",
+                        "href": "using-composer-external-files.html"
+                    },
+                    {
+                        "title": "View code updates with the Change Inspector",
+                        "href": "using-change-inspector.html"
+                    },
+                    {
+                        "title": "Featured AWS services",
+                        "href": "using-composer-services.html",
+                        "contents": [
+                            {
+                                "title": "Amazon RDS",
+                                "href": "using-composer-services-rds.html"
+                            },
+                            {
+                                "title": "Amazon VPC",
+                                "href": "using-composer-services-vpc.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Working with other services",
+                "href": "other-services.html",
+                "contents": [
+                    {
+                        "title": "Using Application Composer with your local IDE",
+                        "href": "other-services-ide.html"
+                    },
+                    {
+                        "title": "AWS CloudFormation and AWS SAM",
+                        "href": "other-services-cfn.html"
+                    }
+                ]
+            },
+            {
+                "title": "Reference",
+                "href": "reference.html",
+                "contents": [
+                    {
+                        "title": "Visual reference",
+                        "href": "reference-visual.html"
+                    },
+                    {
+                        "title": "Features reference",
+                        "href": "reference-features.html",
+                        "contents": [
+                            {
+                                "title": "Export canvas",
+                                "href": "reference-features-export.html"
+                            },
+                            {
+                                "title": "Local sync mode",
+                                "href": "reference-features-local-sync.html"
+                            },
+                            {
+                                "title": "Undo and redo",
+                                "href": "reference-features-undo.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Gestures and shortcuts",
+                        "href": "reference-navigation.html"
+                    },
+                    {
+                        "title": "File System Access API",
+                        "href": "reference-fsa.html"
+                    },
+                    {
+                        "title": "Card reference",
+                        "href": "reference-cards.html"
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "href": "ref-troubleshooting.html"
+                    },
+                    {
+                        "title": "Serverless concepts",
+                        "href": "what-is-concepts.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS Application Composer works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

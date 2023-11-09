@@ -1,1 +1,694 @@
-{ "contents" : [ { "title" : "What is FreeRTOS?", "href" : "what-is-freertos.html" }, { "title" : "FreeRTOS kernel fundamentals", "href" : "dev-guide-freertos-kernel.html" }, { "title" : "AWS IoT Device SDK for EmbeddedÂ C", "href" : "c-sdk.html" }, { "title" : "Common IO", "href" : "freertos-common-io.html" }, { "title" : "Getting Started with FreeRTOS", "href" : "freertos-getting-started-modular.html" }, { "title" : "AWS IoT Device Tester for FreeRTOS", "href" : "device-tester-for-freertos-ug.html", "contents" : [ { "title" : "Supported versions of IDT for FreeRTOS", "href" : "dev-test-versions-afr.html" }, { "title" : "Unsupported IDT versions", "href" : "idt-unsupported-versions-afr.html" }, { "title" : "Download IDT for FreeRTOS", "href" : "idt-programmatic-download.html" }, { "title" : "Use IDT with FreeRTOS qualification suite 2.0 (FRQ 2.0)", "href" : "lts-idt-freertos-qualification.html", "contents" : [ { "title" : "Prerequisites", "href" : "lts-idt-dev-tester-prereqs.html" }, { "title" : "Preparing to test your microcontroller board for the first time", "href" : "lts-qual-steps.html" }, { "title" : "Use the IDT UI to run the FreeRTOS qualification suite", "href" : "lts-device-tester-ui.html" }, { "title" : "Running the FreeRTOS qualification 2.0 suite", "href" : "lts-run-tests.html" }, { "title" : "Understanding results and logs", "href" : "lts-results-logs.html" } ] }, { "title" : "Use IDT with FreeRTOS qualification suite 1.0 (FRQ 1.0)", "href" : "idt-freertos-qualification.html", "contents" : [ { "title" : "Prerequisites", "href" : "dev-tester-prereqs.html" }, { "title" : "Preparing to test your microcontroller board for the first time", "href" : "qual-steps.html" }, { "title" : "Use the IDT UI to run the FreeRTOS qualification suite", "href" : "device-tester-ui.html", "contents" : [ { "title" : "Prerequisites", "href" : "dev-tester-ui-prereqs.html" }, { "title" : "Getting started with the IDT-FreeRTOS UI", "href" : "dev-tester-ui-getting-started.html" } ] }, { "title" : "Running Bluetooth Low Energy tests", "href" : "afr-bridgekeeper-dt-bt.html" }, { "title" : "Running the FreeRTOS qualification suite", "href" : "run-tests.html", "contents" : [ { "title" : "Test for re-qualification", "href" : "requal-test.html" } ] }, { "title" : "Understanding results and logs", "href" : "results-logs.html" } ] }, { "title" : "Use IDT to develop and run your own test suites", "href" : "idt-custom-tests.html", "contents" : [ { "title" : "Tutorial: Build and run the sample IDT test suite", "href" : "build-sample-suite.html" }, { "title" : "Tutorial: Develop a simple IDT test suite", "href" : "create-custom-tests.html", "contents" : [ { "title" : "Create IDT test suite configuration files", "href" : "idt-json-config.html" }, { "title" : "Configure the IDT test orchestrator", "href" : "idt-test-orchestrator.html" }, { "title" : "Configure the IDT state machine", "href" : "idt-state-machine.html" }, { "title" : "Create IDT test case executable", "href" : "test-executables.html" }, { "title" : "Use the IDT context", "href" : "idt-context.html" }, { "title" : "Configure settings for test runners", "href" : "set-config-custom.html" }, { "title" : "Debug and run custom test suites", "href" : "run-tests-custom.html" }, { "title" : "Review IDT test results and logs", "href" : "idt-review-results-logs.html" }, { "title" : "IDT usage metrics", "href" : "idt-usage-metrics.html" } ] } ] }, { "title" : "Test suite versions", "href" : "idt-test-suite-versions.html" }, { "title" : "Troubleshooting", "href" : "dt-afr-troubleshooting.html" }, { "title" : "AWS Managed policy for AWS IoT Device Tester", "href" : "security-iam-aws-managed-policies.html" }, { "title" : "Support policy", "href" : "idt-support-policy.html" } ] }, { "title" : "Security in AWS", "href" : "security.html", "contents" : [ { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How FreeRTOS works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Compliance validation", "href" : "freertos-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Amazon-FreeRTOS Github Repository Migration Guide", "href" : "github-repo-migration.html" }, { "title" : "Archive", "href" : "archive-all.html", "contents" : [ { "title" : "FreeRTOS User Guide Archive", "href" : "freertos-ug-archive.html" }, { "title" : "Previous FreeRTOS User Guide contents", "href" : "archive-previous.html", "contents" : [ { "title" : "Getting Started with FreeRTOS", "href" : "freertos-getting-started.html", "contents" : [ { "title" : "FreeRTOS demo application", "href" : "freertos-getting-started-demo.html" }, { "title" : "First steps", "href" : "freertos-prereqs.html" }, { "title" : "Troubleshooting", "href" : "gsg-troubleshooting.html" }, { "title" : "Using CMake with FreeRTOS", "href" : "getting-started-cmake.html" }, { "title" : "Developer-mode key provisioning", "href" : "dev-mode-key-provisioning.html" }, { "title" : "Board-specific getting started guides", "href" : "getting-started-guides.html", "contents" : [ { "title" : "Cypress CYW943907AEVAL1F Development Kit", "href" : "getting_started_cypress_43.html" }, { "title" : "Cypress CYW954907AEVAL1F Development Kit", "href" : "getting_started_cypress_54.html" }, { "title" : "Cypress CY8CKIT-064S0S2-4343W", "href" : "getting_started_cypress_psoc64.html" }, { "title" : "Microchip ATECC608A Secure Element with Windows simulator", "href" : "getting_started_atecc608a.html" }, { "title" : "Getting started with the Espressif ESP32-DevKitC and the ESP-WROVER-KIT", "href" : "getting_started_espressif.html" }, { "title" : "Getting started with the Espressif ESP32-WROOM-32SE", "href" : "getting_started_esp32wroom-32se.html" }, { "title" : "Getting started with the Espressif ESP32-S2", "href" : "getting_started_esp32-s2.html" }, { "title" : "Infineon XMC4800 IoT Connectivity Kit", "href" : "getting_started_infineon.html" }, { "title" : "Infineon OPTIGA Trust X and XMC4800 IoT Connectivity Kit", "href" : "getting_started_infineon_trust_x.html" }, { "title" : "Marvell MW32x AWS IoT Starter Kit", "href" : "getting_started_mw32x.html" }, { "title" : "MediaTek MT7697Hx development kit", "href" : "getting_started_mediatek.html" }, { "title" : "Microchip Curiosity PIC32MZ EF", "href" : "getting_started_mch.html" }, { "title" : "Nordic nRF52840-DK", "href" : "getting_started_nordic.html" }, { "title" : "Nuvoton NuMaker-IoT-M487", "href" : "getting-started-nuvoton-m487.html" }, { "title" : "NXP LPC54018 IoT Module", "href" : "getting_started_nxp.html" }, { "title" : "Renesas Starter Kit+ for RX65N-2MB", "href" : "getting_started_renesas.html" }, { "title" : "STMicroelectronics STM32L4 Discovery Kit IoT Node", "href" : "getting_started_st.html" }, { "title" : "Texas Instruments CC3220SF-LAUNCHXL", "href" : "getting_started_ti.html" }, { "title" : "Windows Device Simulator", "href" : "getting_started_windows.html" }, { "title" : "Xilinx Avnet MicroZed Industrial IoT Kit", "href" : "getting_started_xilinx.html" } ] }, { "title" : "Next steps with FreeRTOS", "href" : "getting-started-next-steps.html" } ] }, { "title" : "Over-the-Air Updates", "href" : "freertos-ota-dev.html", "contents" : [ { "title" : "OTA update prerequisites", "href" : "ota-prereqs.html", "contents" : [ { "title" : "Create an Amazon S3 bucket to store your update", "href" : "dg-ota-bucket.html" }, { "title" : "Create an OTA Update service role", "href" : "create-service-role.html" }, { "title" : "Create an OTA user policy", "href" : "create-ota-user-policy.html" }, { "title" : "Create a code-signing certificate", "href" : "ota-code-sign-cert.html", "contents" : [ { "title" : "Creating a code-signing certificate for the Texas Instruments CC3220SF-LAUNCHXL", "href" : "ota-code-sign-cert-ti.html" }, { "title" : "Creating a code-signing certificate for the Espressif ESP32", "href" : "ota-code-sign-cert-esp.html" }, { "title" : "Creating a code-signing certificate for the Nordic nrf52840-dk", "href" : "ota-code-sign-cert-nordic.html" }, { "title" : "Creating a code-signing certificate for the FreeRTOS Windows simulator", "href" : "ota-code-sign-cert-win.html" }, { "title" : "Creating a code-signing certificate for custom hardware", "href" : "ota-code-sign-cert-other.html" } ] }, { "title" : "Grant access to code signing for AWS IoT", "href" : "code-sign-policy.html" }, { "title" : "Download FreeRTOS with the OTA library", "href" : "ota-download-freertos.html" }, { "title" : "Prerequisites for OTA updates using MQTT", "href" : "ota-mqtt-freertos.html" }, { "title" : "Prerequisites for OTA updates using HTTP", "href" : "ota-http-freertos.html" } ] }, { "title" : "OTA tutorial", "href" : "dev-guide-ota-workflow.html", "contents" : [ { "title" : "Installing the initial firmware", "href" : "dg-ota-initial-firmware.html", "contents" : [ { "title" : "Install the initial version of firmware on the Texas Instruments CC3220SF-LAUNCHXL", "href" : "burn-initial-firmware-ti.html" }, { "title" : "Install the initial version of firmware on the Espressif ESP32", "href" : "burn-initial-firmware-esp.html" }, { "title" : "Install the initial version of firmware on the Nordic nRF52840 DK", "href" : "burn-initial-firmware-nordic.html" }, { "title" : "Initial firmware on the Windows simulator", "href" : "burn-initial-firmware-windows.html" }, { "title" : "Install the initial version of firmware on a custom board", "href" : "burn-initial-firmware-other.html" } ] }, { "title" : "Update the version of your firmware", "href" : "dg-ota-update-firmware.html" }, { "title" : "Creating an OTA update (AWS IoT console)", "href" : "ota-console-workflow.html" }, { "title" : "Creating an OTA update with the AWS CLI", "href" : "ota-cli-workflow.html" } ] }, { "title" : "OTA Update Manager service", "href" : "ota-manager.html" }, { "title" : "Integrating the OTA Agent into your application", "href" : "integrate-ota-agent.html" }, { "title" : "OTA security", "href" : "dev-guide-ota-security.html" }, { "title" : "OTA troubleshooting", "href" : "ota-troubleshooting.html", "contents" : [ { "title" : "Set up CloudWatch Logs for OTA updates", "href" : "ota-logging.html" }, { "title" : "Log AWS IoT OTA API calls with AWS CloudTrail", "href" : "iot-using-cloudtrail-afr.html" }, { "title" : "Get CreateOTAUpdate failure details using the AWS CLI", "href" : "ota-create-failure.html" }, { "title" : "Get OTA failure codes with the AWS CLI", "href" : "ota-failure-codes.html" }, { "title" : "Troubleshoot OTA updates of multiple devices", "href" : "ota-troubleshooting-multi-thing.html" }, { "title" : "Troubleshoot OTA updates with the Texas Instruments CC3220SF Launchpad", "href" : "ota-troubleshooting-ti.html" } ] } ] }, { "title" : "FreeRTOS Libraries", "href" : "dev-guide-freertos-libraries.html", "contents" : [ { "title" : "backoffAlgorithm", "href" : "backoffalgorithm-library.html" }, { "title" : "Bluetooth Low Energy", "href" : "freertos-ble-library.html", "contents" : [ { "title" : "Mobile SDKs for FreeRTOS Bluetooth devices", "href" : "freertos-ble-mobile.html" } ] }, { "title" : "Cellular Interface", "href" : "cellular-interface.html" }, { "title" : "Common I/O", "href" : "common-io.html" }, { "title" : "AWS IoT Device Defender", "href" : "afr-device-defender-library.html" }, { "title" : "AWS IoT Greengrass", "href" : "freertos-lib-gg-connectivity.html" }, { "title" : "coreHTTP", "href" : "core-http.html" }, { "title" : "coreJSON", "href" : "freertos-lib-corejson.html" }, { "title" : "coreMQTT", "href" : "coremqtt.html" }, { "title" : "coreMQTT Agent", "href" : "coremqtt-agent.html" }, { "title" : "Over the Air (OTA)", "href" : "ota-update-library.html" }, { "title" : "corePKCS11", "href" : "security-pkcs.html" }, { "title" : "Secure Sockets", "href" : "secure-sockets.html" }, { "title" : "AWS IoT Device Shadow", "href" : "freertos-lib-cloud-shadows.html" }, { "title" : "AWS IoT Jobs", "href" : "freertos-lib-jobs.html" }, { "title" : "Transport Layer Security", "href" : "security-tls.html" }, { "title" : "Wi-Fi", "href" : "freertos-wifi.html" } ] }, { "title" : "FreeRTOS demos", "href" : "freertos-next-steps.html", "contents" : [ { "title" : "Bluetooth Low Energy", "href" : "ble-demo.html" }, { "title" : "Bootloader for the Microchip Curiosity PIC32MZEF", "href" : "microchip-bootloader.html" }, { "title" : "AWS IoT Device Defender", "href" : "dd-demo.html" }, { "title" : "AWS IoT Greengrass", "href" : "gg-demov1.html" }, { "title" : "AWS IoT Greengrass Version 2", "href" : "gg-demov2.html" }, { "title" : "coreHTTP", "href" : "core-http-demo.html", "contents" : [ { "title" : "coreHTTP mutual authentication", "href" : "core-http-ma-demo.html" }, { "title" : "coreHTTP Amazon S3 upload", "href" : "core-http-s3-upload-demo.html" }, { "title" : "coreHTTP S3 download", "href" : "core-http-s3-download-demo.html" }, { "title" : "coreHTTP multithreaded", "href" : "core-http-bmt-demo.html" } ] }, { "title" : "AWS IoT Jobs", "href" : "freertos-jobs-demo.html" }, { "title" : "coreMQTT", "href" : "mqtt-demo.html", "contents" : [ { "title" : "coreMQTT mutual authentication", "href" : "mqtt-demo-ma.html" }, { "title" : "coreMQTT Agent connection sharing", "href" : "mqtt-demo-cs.html" } ] }, { "title" : "Over-the-air updates", "href" : "ota-demo.html", "contents" : [ { "title" : "Over-the-air demo configurations", "href" : "ota-demo-specific-config.html" }, { "title" : "Texas Instruments CC3220SF-LAUNCHXL", "href" : "download-ota-ti.html" }, { "title" : "Microchip Curiosity PIC32MZEF", "href" : "download-ota-mchip.html" }, { "title" : "Espressif ESP32", "href" : "download-ota-esp.html" }, { "title" : "Renesas RX65N", "href" : "download-rx65n-ota.html" }, { "title" : "Tutorial: OTA updates on Espressif ESP32 using BLE", "href" : "ota-updates-esp32-ble.html" } ] }, { "title" : "AWS IoT Device Shadow", "href" : "shadow-demo.html" }, { "title" : "Secure Sockets", "href" : "secure-sockets-demo.html" } ] } ] } ] } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/freertos/latest/userguide/",
+    "service": "freertos",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is FreeRTOS?",
+                "href": "what-is-freertos.html"
+            },
+            {
+                "title": "FreeRTOS kernel fundamentals",
+                "href": "dev-guide-freertos-kernel.html"
+            },
+            {
+                "title": "AWS IoT Device SDK for Embedded\u00a0C",
+                "href": "c-sdk.html"
+            },
+            {
+                "title": "Common IO",
+                "href": "freertos-common-io.html"
+            },
+            {
+                "title": "Getting Started with FreeRTOS",
+                "href": "freertos-getting-started-modular.html"
+            },
+            {
+                "title": "AWS IoT Device Tester for FreeRTOS",
+                "href": "device-tester-for-freertos-ug.html",
+                "contents": [
+                    {
+                        "title": "Supported versions of IDT for FreeRTOS",
+                        "href": "dev-test-versions-afr.html"
+                    },
+                    {
+                        "title": "Unsupported IDT versions",
+                        "href": "idt-unsupported-versions-afr.html"
+                    },
+                    {
+                        "title": "Download IDT for FreeRTOS",
+                        "href": "idt-programmatic-download.html"
+                    },
+                    {
+                        "title": "Use IDT with FreeRTOS qualification suite 2.0 (FRQ 2.0)",
+                        "href": "lts-idt-freertos-qualification.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "lts-idt-dev-tester-prereqs.html"
+                            },
+                            {
+                                "title": "Preparing to test your microcontroller board for the first time",
+                                "href": "lts-qual-steps.html"
+                            },
+                            {
+                                "title": "Use the IDT UI to run the FreeRTOS qualification suite",
+                                "href": "lts-device-tester-ui.html"
+                            },
+                            {
+                                "title": "Running the FreeRTOS qualification 2.0 suite",
+                                "href": "lts-run-tests.html"
+                            },
+                            {
+                                "title": "Understanding results and logs",
+                                "href": "lts-results-logs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Use IDT with FreeRTOS qualification suite 1.0 (FRQ 1.0)",
+                        "href": "idt-freertos-qualification.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "dev-tester-prereqs.html"
+                            },
+                            {
+                                "title": "Preparing to test your microcontroller board for the first time",
+                                "href": "qual-steps.html"
+                            },
+                            {
+                                "title": "Use the IDT UI to run the FreeRTOS qualification suite",
+                                "href": "device-tester-ui.html",
+                                "contents": [
+                                    {
+                                        "title": "Prerequisites",
+                                        "href": "dev-tester-ui-prereqs.html"
+                                    },
+                                    {
+                                        "title": "Getting started with the IDT-FreeRTOS UI",
+                                        "href": "dev-tester-ui-getting-started.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Running Bluetooth Low Energy tests",
+                                "href": "afr-bridgekeeper-dt-bt.html"
+                            },
+                            {
+                                "title": "Running the FreeRTOS qualification suite",
+                                "href": "run-tests.html",
+                                "contents": [
+                                    {
+                                        "title": "Test for re-qualification",
+                                        "href": "requal-test.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Understanding results and logs",
+                                "href": "results-logs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Use IDT to develop and run your own test suites",
+                        "href": "idt-custom-tests.html",
+                        "contents": [
+                            {
+                                "title": "Tutorial: Build and run the sample IDT test suite",
+                                "href": "build-sample-suite.html"
+                            },
+                            {
+                                "title": "Tutorial: Develop a simple IDT test suite",
+                                "href": "create-custom-tests.html",
+                                "contents": [
+                                    {
+                                        "title": "Create IDT test suite configuration files",
+                                        "href": "idt-json-config.html"
+                                    },
+                                    {
+                                        "title": "Configure the IDT test orchestrator",
+                                        "href": "idt-test-orchestrator.html"
+                                    },
+                                    {
+                                        "title": "Configure the IDT state machine",
+                                        "href": "idt-state-machine.html"
+                                    },
+                                    {
+                                        "title": "Create IDT test case executable",
+                                        "href": "test-executables.html"
+                                    },
+                                    {
+                                        "title": "Use the IDT context",
+                                        "href": "idt-context.html"
+                                    },
+                                    {
+                                        "title": "Configure settings for test runners",
+                                        "href": "set-config-custom.html"
+                                    },
+                                    {
+                                        "title": "Debug and run custom test suites",
+                                        "href": "run-tests-custom.html"
+                                    },
+                                    {
+                                        "title": "Review IDT test results and logs",
+                                        "href": "idt-review-results-logs.html"
+                                    },
+                                    {
+                                        "title": "IDT usage metrics",
+                                        "href": "idt-usage-metrics.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Test suite versions",
+                        "href": "idt-test-suite-versions.html"
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "href": "dt-afr-troubleshooting.html"
+                    },
+                    {
+                        "title": "AWS Managed policy for AWS IoT Device Tester",
+                        "href": "security-iam-aws-managed-policies.html"
+                    },
+                    {
+                        "title": "Support policy",
+                        "href": "idt-support-policy.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security in AWS",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How FreeRTOS works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "freertos-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Amazon-FreeRTOS Github Repository Migration Guide",
+                "href": "github-repo-migration.html"
+            },
+            {
+                "title": "Archive",
+                "href": "archive-all.html",
+                "contents": [
+                    {
+                        "title": "FreeRTOS User Guide Archive",
+                        "href": "freertos-ug-archive.html"
+                    },
+                    {
+                        "title": "Previous FreeRTOS User Guide contents",
+                        "href": "archive-previous.html",
+                        "contents": [
+                            {
+                                "title": "Getting Started with FreeRTOS",
+                                "href": "freertos-getting-started.html",
+                                "contents": [
+                                    {
+                                        "title": "FreeRTOS demo application",
+                                        "href": "freertos-getting-started-demo.html"
+                                    },
+                                    {
+                                        "title": "First steps",
+                                        "href": "freertos-prereqs.html"
+                                    },
+                                    {
+                                        "title": "Troubleshooting",
+                                        "href": "gsg-troubleshooting.html"
+                                    },
+                                    {
+                                        "title": "Using CMake with FreeRTOS",
+                                        "href": "getting-started-cmake.html"
+                                    },
+                                    {
+                                        "title": "Developer-mode key provisioning",
+                                        "href": "dev-mode-key-provisioning.html"
+                                    },
+                                    {
+                                        "title": "Board-specific getting started guides",
+                                        "href": "getting-started-guides.html",
+                                        "contents": [
+                                            {
+                                                "title": "Cypress CYW943907AEVAL1F Development Kit",
+                                                "href": "getting_started_cypress_43.html"
+                                            },
+                                            {
+                                                "title": "Cypress CYW954907AEVAL1F Development Kit",
+                                                "href": "getting_started_cypress_54.html"
+                                            },
+                                            {
+                                                "title": "Cypress CY8CKIT-064S0S2-4343W",
+                                                "href": "getting_started_cypress_psoc64.html"
+                                            },
+                                            {
+                                                "title": "Microchip ATECC608A Secure Element with Windows simulator",
+                                                "href": "getting_started_atecc608a.html"
+                                            },
+                                            {
+                                                "title": "Getting started with the Espressif ESP32-DevKitC and the ESP-WROVER-KIT",
+                                                "href": "getting_started_espressif.html"
+                                            },
+                                            {
+                                                "title": "Getting started with the Espressif ESP32-WROOM-32SE",
+                                                "href": "getting_started_esp32wroom-32se.html"
+                                            },
+                                            {
+                                                "title": "Getting started with the Espressif ESP32-S2",
+                                                "href": "getting_started_esp32-s2.html"
+                                            },
+                                            {
+                                                "title": "Infineon XMC4800 IoT Connectivity Kit",
+                                                "href": "getting_started_infineon.html"
+                                            },
+                                            {
+                                                "title": "Infineon OPTIGA Trust X and XMC4800 IoT Connectivity Kit",
+                                                "href": "getting_started_infineon_trust_x.html"
+                                            },
+                                            {
+                                                "title": "Marvell MW32x AWS IoT Starter Kit",
+                                                "href": "getting_started_mw32x.html"
+                                            },
+                                            {
+                                                "title": "MediaTek MT7697Hx development kit",
+                                                "href": "getting_started_mediatek.html"
+                                            },
+                                            {
+                                                "title": "Microchip Curiosity PIC32MZ EF",
+                                                "href": "getting_started_mch.html"
+                                            },
+                                            {
+                                                "title": "Nordic nRF52840-DK",
+                                                "href": "getting_started_nordic.html"
+                                            },
+                                            {
+                                                "title": "Nuvoton NuMaker-IoT-M487",
+                                                "href": "getting-started-nuvoton-m487.html"
+                                            },
+                                            {
+                                                "title": "NXP LPC54018 IoT Module",
+                                                "href": "getting_started_nxp.html"
+                                            },
+                                            {
+                                                "title": "Renesas Starter Kit+ for RX65N-2MB",
+                                                "href": "getting_started_renesas.html"
+                                            },
+                                            {
+                                                "title": "STMicroelectronics STM32L4 Discovery Kit IoT Node",
+                                                "href": "getting_started_st.html"
+                                            },
+                                            {
+                                                "title": "Texas Instruments CC3220SF-LAUNCHXL",
+                                                "href": "getting_started_ti.html"
+                                            },
+                                            {
+                                                "title": "Windows Device Simulator",
+                                                "href": "getting_started_windows.html"
+                                            },
+                                            {
+                                                "title": "Xilinx Avnet MicroZed Industrial IoT Kit",
+                                                "href": "getting_started_xilinx.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Next steps with FreeRTOS",
+                                        "href": "getting-started-next-steps.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Over-the-Air Updates",
+                                "href": "freertos-ota-dev.html",
+                                "contents": [
+                                    {
+                                        "title": "OTA update prerequisites",
+                                        "href": "ota-prereqs.html",
+                                        "contents": [
+                                            {
+                                                "title": "Create an Amazon S3 bucket to store your update",
+                                                "href": "dg-ota-bucket.html"
+                                            },
+                                            {
+                                                "title": "Create an OTA Update service role",
+                                                "href": "create-service-role.html"
+                                            },
+                                            {
+                                                "title": "Create an OTA user policy",
+                                                "href": "create-ota-user-policy.html"
+                                            },
+                                            {
+                                                "title": "Create a code-signing certificate",
+                                                "href": "ota-code-sign-cert.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Creating a code-signing certificate for the Texas Instruments CC3220SF-LAUNCHXL",
+                                                        "href": "ota-code-sign-cert-ti.html"
+                                                    },
+                                                    {
+                                                        "title": "Creating a code-signing certificate for the Espressif ESP32",
+                                                        "href": "ota-code-sign-cert-esp.html"
+                                                    },
+                                                    {
+                                                        "title": "Creating a code-signing certificate for the Nordic nrf52840-dk",
+                                                        "href": "ota-code-sign-cert-nordic.html"
+                                                    },
+                                                    {
+                                                        "title": "Creating a code-signing certificate for the FreeRTOS Windows simulator",
+                                                        "href": "ota-code-sign-cert-win.html"
+                                                    },
+                                                    {
+                                                        "title": "Creating a code-signing certificate for custom hardware",
+                                                        "href": "ota-code-sign-cert-other.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Grant access to code signing for AWS IoT",
+                                                "href": "code-sign-policy.html"
+                                            },
+                                            {
+                                                "title": "Download FreeRTOS with the OTA library",
+                                                "href": "ota-download-freertos.html"
+                                            },
+                                            {
+                                                "title": "Prerequisites for OTA updates using MQTT",
+                                                "href": "ota-mqtt-freertos.html"
+                                            },
+                                            {
+                                                "title": "Prerequisites for OTA updates using HTTP",
+                                                "href": "ota-http-freertos.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "OTA tutorial",
+                                        "href": "dev-guide-ota-workflow.html",
+                                        "contents": [
+                                            {
+                                                "title": "Installing the initial firmware",
+                                                "href": "dg-ota-initial-firmware.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Install the initial version of firmware on the Texas Instruments CC3220SF-LAUNCHXL",
+                                                        "href": "burn-initial-firmware-ti.html"
+                                                    },
+                                                    {
+                                                        "title": "Install the initial version of firmware on the Espressif ESP32",
+                                                        "href": "burn-initial-firmware-esp.html"
+                                                    },
+                                                    {
+                                                        "title": "Install the initial version of firmware on the Nordic nRF52840 DK",
+                                                        "href": "burn-initial-firmware-nordic.html"
+                                                    },
+                                                    {
+                                                        "title": "Initial firmware on the Windows simulator",
+                                                        "href": "burn-initial-firmware-windows.html"
+                                                    },
+                                                    {
+                                                        "title": "Install the initial version of firmware on a custom board",
+                                                        "href": "burn-initial-firmware-other.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Update the version of your firmware",
+                                                "href": "dg-ota-update-firmware.html"
+                                            },
+                                            {
+                                                "title": "Creating an OTA update (AWS IoT console)",
+                                                "href": "ota-console-workflow.html"
+                                            },
+                                            {
+                                                "title": "Creating an OTA update with the AWS CLI",
+                                                "href": "ota-cli-workflow.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "OTA Update Manager service",
+                                        "href": "ota-manager.html"
+                                    },
+                                    {
+                                        "title": "Integrating the OTA Agent into your application",
+                                        "href": "integrate-ota-agent.html"
+                                    },
+                                    {
+                                        "title": "OTA security",
+                                        "href": "dev-guide-ota-security.html"
+                                    },
+                                    {
+                                        "title": "OTA troubleshooting",
+                                        "href": "ota-troubleshooting.html",
+                                        "contents": [
+                                            {
+                                                "title": "Set up CloudWatch Logs for OTA updates",
+                                                "href": "ota-logging.html"
+                                            },
+                                            {
+                                                "title": "Log AWS IoT OTA API calls with AWS CloudTrail",
+                                                "href": "iot-using-cloudtrail-afr.html"
+                                            },
+                                            {
+                                                "title": "Get CreateOTAUpdate failure details using the AWS CLI",
+                                                "href": "ota-create-failure.html"
+                                            },
+                                            {
+                                                "title": "Get OTA failure codes with the AWS CLI",
+                                                "href": "ota-failure-codes.html"
+                                            },
+                                            {
+                                                "title": "Troubleshoot OTA updates of multiple devices",
+                                                "href": "ota-troubleshooting-multi-thing.html"
+                                            },
+                                            {
+                                                "title": "Troubleshoot OTA updates with the Texas Instruments CC3220SF Launchpad",
+                                                "href": "ota-troubleshooting-ti.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "FreeRTOS Libraries",
+                                "href": "dev-guide-freertos-libraries.html",
+                                "contents": [
+                                    {
+                                        "title": "backoffAlgorithm",
+                                        "href": "backoffalgorithm-library.html"
+                                    },
+                                    {
+                                        "title": "Bluetooth Low Energy",
+                                        "href": "freertos-ble-library.html",
+                                        "contents": [
+                                            {
+                                                "title": "Mobile SDKs for FreeRTOS Bluetooth devices",
+                                                "href": "freertos-ble-mobile.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Cellular Interface",
+                                        "href": "cellular-interface.html"
+                                    },
+                                    {
+                                        "title": "Common I/O",
+                                        "href": "common-io.html"
+                                    },
+                                    {
+                                        "title": "AWS IoT Device Defender",
+                                        "href": "afr-device-defender-library.html"
+                                    },
+                                    {
+                                        "title": "AWS IoT Greengrass",
+                                        "href": "freertos-lib-gg-connectivity.html"
+                                    },
+                                    {
+                                        "title": "coreHTTP",
+                                        "href": "core-http.html"
+                                    },
+                                    {
+                                        "title": "coreJSON",
+                                        "href": "freertos-lib-corejson.html"
+                                    },
+                                    {
+                                        "title": "coreMQTT",
+                                        "href": "coremqtt.html"
+                                    },
+                                    {
+                                        "title": "coreMQTT Agent",
+                                        "href": "coremqtt-agent.html"
+                                    },
+                                    {
+                                        "title": "Over the Air (OTA)",
+                                        "href": "ota-update-library.html"
+                                    },
+                                    {
+                                        "title": "corePKCS11",
+                                        "href": "security-pkcs.html"
+                                    },
+                                    {
+                                        "title": "Secure Sockets",
+                                        "href": "secure-sockets.html"
+                                    },
+                                    {
+                                        "title": "AWS IoT Device Shadow",
+                                        "href": "freertos-lib-cloud-shadows.html"
+                                    },
+                                    {
+                                        "title": "AWS IoT Jobs",
+                                        "href": "freertos-lib-jobs.html"
+                                    },
+                                    {
+                                        "title": "Transport Layer Security",
+                                        "href": "security-tls.html"
+                                    },
+                                    {
+                                        "title": "Wi-Fi",
+                                        "href": "freertos-wifi.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "FreeRTOS demos",
+                                "href": "freertos-next-steps.html",
+                                "contents": [
+                                    {
+                                        "title": "Bluetooth Low Energy",
+                                        "href": "ble-demo.html"
+                                    },
+                                    {
+                                        "title": "Bootloader for the Microchip Curiosity PIC32MZEF",
+                                        "href": "microchip-bootloader.html"
+                                    },
+                                    {
+                                        "title": "AWS IoT Device Defender",
+                                        "href": "dd-demo.html"
+                                    },
+                                    {
+                                        "title": "AWS IoT Greengrass",
+                                        "href": "gg-demov1.html"
+                                    },
+                                    {
+                                        "title": "AWS IoT Greengrass Version 2",
+                                        "href": "gg-demov2.html"
+                                    },
+                                    {
+                                        "title": "coreHTTP",
+                                        "href": "core-http-demo.html",
+                                        "contents": [
+                                            {
+                                                "title": "coreHTTP mutual authentication",
+                                                "href": "core-http-ma-demo.html"
+                                            },
+                                            {
+                                                "title": "coreHTTP Amazon S3 upload",
+                                                "href": "core-http-s3-upload-demo.html"
+                                            },
+                                            {
+                                                "title": "coreHTTP S3 download",
+                                                "href": "core-http-s3-download-demo.html"
+                                            },
+                                            {
+                                                "title": "coreHTTP multithreaded",
+                                                "href": "core-http-bmt-demo.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "AWS IoT Jobs",
+                                        "href": "freertos-jobs-demo.html"
+                                    },
+                                    {
+                                        "title": "coreMQTT",
+                                        "href": "mqtt-demo.html",
+                                        "contents": [
+                                            {
+                                                "title": "coreMQTT mutual authentication",
+                                                "href": "mqtt-demo-ma.html"
+                                            },
+                                            {
+                                                "title": "coreMQTT Agent connection sharing",
+                                                "href": "mqtt-demo-cs.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Over-the-air updates",
+                                        "href": "ota-demo.html",
+                                        "contents": [
+                                            {
+                                                "title": "Over-the-air demo configurations",
+                                                "href": "ota-demo-specific-config.html"
+                                            },
+                                            {
+                                                "title": "Texas Instruments CC3220SF-LAUNCHXL",
+                                                "href": "download-ota-ti.html"
+                                            },
+                                            {
+                                                "title": "Microchip Curiosity PIC32MZEF",
+                                                "href": "download-ota-mchip.html"
+                                            },
+                                            {
+                                                "title": "Espressif ESP32",
+                                                "href": "download-ota-esp.html"
+                                            },
+                                            {
+                                                "title": "Renesas RX65N",
+                                                "href": "download-rx65n-ota.html"
+                                            },
+                                            {
+                                                "title": "Tutorial: OTA updates on Espressif ESP32 using BLE",
+                                                "href": "ota-updates-esp32-ble.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "AWS IoT Device Shadow",
+                                        "href": "shadow-demo.html"
+                                    },
+                                    {
+                                        "title": "Secure Sockets",
+                                        "href": "secure-sockets-demo.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

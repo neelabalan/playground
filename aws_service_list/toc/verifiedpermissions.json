@@ -1,1 +1,266 @@
-{ "contents" : [ { "title" : "What is Amazon Verified Permissions?", "href" : "what-is-avp.html" }, { "title" : "Terms & concepts", "href" : "terminology.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Create your first policy store", "href" : "getting-started-first-policy-store.html" }, { "title" : "Differences with Cedar", "href" : "getting-started-differences-verifiedpermissions-cedar.html" } ] }, { "title" : "Policy stores", "href" : "policy-stores.html", "contents" : [ { "title" : "Creating policy stores", "href" : "policy-stores_create.html" }, { "title" : "Switching policy stores", "href" : "policy-stores_switch.html" }, { "title" : "Deleting policy stores", "href" : "policy-stores_delete.html" } ] }, { "title" : "Policy store schema", "href" : "schema.html", "contents" : [ { "title" : "Editing schema - Visual", "href" : "schema_edit-visual.html" }, { "title" : "Editing schema - JSON", "href" : "schema_edit-json.html" }, { "title" : "Deleting a schema", "href" : "schema_delete.html" } ] }, { "title" : "Policy validation mode", "href" : "policy-validation-mode.html" }, { "title" : "Policies", "href" : "policies.html", "contents" : [ { "title" : "Entity formatting", "href" : "policies_entity-formatting.html" }, { "title" : "Creating static policies", "href" : "policies_create.html" }, { "title" : "Editing static policies", "href" : "policies_edit.html" }, { "title" : "Viewing policies", "href" : "policies_view.html" }, { "title" : "Example policies", "href" : "policies_examples.html", "contents" : [ { "title" : "Allows access to individual entities", "href" : "policies_examples-individual-entities.html" }, { "title" : "Allows access to groups of entities", "href" : "policies_examples-group-entities.html" }, { "title" : "Allows access for any entity", "href" : "policies_examples-any-entity.html" }, { "title" : "Allows access for attributes of an entity (ABAC)", "href" : "policies_examples-abac.html" }, { "title" : "Denies access", "href" : "policies_examples-forbid.html" } ] } ] }, { "title" : "Policy templates", "href" : "policy-templates.html", "contents" : [ { "title" : "Creating policy templates", "href" : "policies_create-template.html" }, { "title" : "Creating template-linked policies", "href" : "policies_create-from-template.html" }, { "title" : "Editing policy templates", "href" : "policies_template-edit.html" }, { "title" : "Example template-linked policies for sample policy stores", "href" : "example-template-linked-policies.html" } ] }, { "title" : "Test bench", "href" : "test-bench.html" }, { "title" : "Identity providers", "href" : "identity-providers.html", "contents" : [ { "title" : "Creating identity sources", "href" : "identity-sources_create.html" }, { "title" : "Editing identity sources", "href" : "identity-sources_edit.html" }, { "title" : "Mapping Amazon Cognito tokens to schema", "href" : "identity-sources_map-token-to-schema.html" } ] }, { "title" : "Designing an authorization model", "href" : "design-authz-strategy.html", "contents" : [ { "title" : "No single correct model", "href" : "design-no-canonical-correct-model.html" }, { "title" : "Focus on resources", "href" : "design-focus-on-data-not-apis.html" }, { "title" : "Compound authorization", "href" : "design-compound-authx.html" }, { "title" : "Populate the policy scope", "href" : "design-populate-scope.html" }, { "title" : "Put all resources in containers", "href" : "design-resources-in-containers.html" }, { "title" : "Separate principals from resources", "href" : "design-separate-principals-resources.html" }, { "title" : "Don't embed permissions in attributes", "href" : "design-perms-in-attrs.html" }, { "title" : "Fine-grained permissions", "href" : "design-fine-grained-actions.html" }, { "title" : "Other reasons to query authorization", "href" : "design-other-query-types.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "security-data-protection.html" }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon Verified Permissions works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Compliance validation", "href" : "security-compliance-validation.html" }, { "title" : "Resilience", "href" : "security-disaster-recovery-resiliency.html" } ] }, { "title" : "Monitoring", "href" : "monitoring-overview.html", "contents" : [ { "title" : "CloudTrail logs", "href" : "cloudtrail.html" } ] }, { "title" : "AWS CloudFormation resources", "href" : "cloudformation-verified-permissions.html" }, { "title" : "AWS PrivateLink", "href" : "vpc-interface-endpoints.html" }, { "title" : "Quotas", "href" : "quotas.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/",
+    "service": "verifiedpermissions",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon Verified Permissions?",
+                "href": "what-is-avp.html"
+            },
+            {
+                "title": "Terms & concepts",
+                "href": "terminology.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Create your first policy store",
+                        "href": "getting-started-first-policy-store.html"
+                    },
+                    {
+                        "title": "Differences with Cedar",
+                        "href": "getting-started-differences-verifiedpermissions-cedar.html"
+                    }
+                ]
+            },
+            {
+                "title": "Policy stores",
+                "href": "policy-stores.html",
+                "contents": [
+                    {
+                        "title": "Creating policy stores",
+                        "href": "policy-stores_create.html"
+                    },
+                    {
+                        "title": "Switching policy stores",
+                        "href": "policy-stores_switch.html"
+                    },
+                    {
+                        "title": "Deleting policy stores",
+                        "href": "policy-stores_delete.html"
+                    }
+                ]
+            },
+            {
+                "title": "Policy store schema",
+                "href": "schema.html",
+                "contents": [
+                    {
+                        "title": "Editing schema - Visual",
+                        "href": "schema_edit-visual.html"
+                    },
+                    {
+                        "title": "Editing schema - JSON",
+                        "href": "schema_edit-json.html"
+                    },
+                    {
+                        "title": "Deleting a schema",
+                        "href": "schema_delete.html"
+                    }
+                ]
+            },
+            {
+                "title": "Policy validation mode",
+                "href": "policy-validation-mode.html"
+            },
+            {
+                "title": "Policies",
+                "href": "policies.html",
+                "contents": [
+                    {
+                        "title": "Entity formatting",
+                        "href": "policies_entity-formatting.html"
+                    },
+                    {
+                        "title": "Creating static policies",
+                        "href": "policies_create.html"
+                    },
+                    {
+                        "title": "Editing static policies",
+                        "href": "policies_edit.html"
+                    },
+                    {
+                        "title": "Viewing policies",
+                        "href": "policies_view.html"
+                    },
+                    {
+                        "title": "Example policies",
+                        "href": "policies_examples.html",
+                        "contents": [
+                            {
+                                "title": "Allows access to individual entities",
+                                "href": "policies_examples-individual-entities.html"
+                            },
+                            {
+                                "title": "Allows access to groups of entities",
+                                "href": "policies_examples-group-entities.html"
+                            },
+                            {
+                                "title": "Allows access for any entity",
+                                "href": "policies_examples-any-entity.html"
+                            },
+                            {
+                                "title": "Allows access for attributes of an entity (ABAC)",
+                                "href": "policies_examples-abac.html"
+                            },
+                            {
+                                "title": "Denies access",
+                                "href": "policies_examples-forbid.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Policy templates",
+                "href": "policy-templates.html",
+                "contents": [
+                    {
+                        "title": "Creating policy templates",
+                        "href": "policies_create-template.html"
+                    },
+                    {
+                        "title": "Creating template-linked policies",
+                        "href": "policies_create-from-template.html"
+                    },
+                    {
+                        "title": "Editing policy templates",
+                        "href": "policies_template-edit.html"
+                    },
+                    {
+                        "title": "Example template-linked policies for sample policy stores",
+                        "href": "example-template-linked-policies.html"
+                    }
+                ]
+            },
+            {
+                "title": "Test bench",
+                "href": "test-bench.html"
+            },
+            {
+                "title": "Identity providers",
+                "href": "identity-providers.html",
+                "contents": [
+                    {
+                        "title": "Creating identity sources",
+                        "href": "identity-sources_create.html"
+                    },
+                    {
+                        "title": "Editing identity sources",
+                        "href": "identity-sources_edit.html"
+                    },
+                    {
+                        "title": "Mapping Amazon Cognito tokens to schema",
+                        "href": "identity-sources_map-token-to-schema.html"
+                    }
+                ]
+            },
+            {
+                "title": "Designing an authorization model",
+                "href": "design-authz-strategy.html",
+                "contents": [
+                    {
+                        "title": "No single correct model",
+                        "href": "design-no-canonical-correct-model.html"
+                    },
+                    {
+                        "title": "Focus on resources",
+                        "href": "design-focus-on-data-not-apis.html"
+                    },
+                    {
+                        "title": "Compound authorization",
+                        "href": "design-compound-authx.html"
+                    },
+                    {
+                        "title": "Populate the policy scope",
+                        "href": "design-populate-scope.html"
+                    },
+                    {
+                        "title": "Put all resources in containers",
+                        "href": "design-resources-in-containers.html"
+                    },
+                    {
+                        "title": "Separate principals from resources",
+                        "href": "design-separate-principals-resources.html"
+                    },
+                    {
+                        "title": "Don't embed permissions in attributes",
+                        "href": "design-perms-in-attrs.html"
+                    },
+                    {
+                        "title": "Fine-grained permissions",
+                        "href": "design-fine-grained-actions.html"
+                    },
+                    {
+                        "title": "Other reasons to query authorization",
+                        "href": "design-other-query-types.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "security-data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon Verified Permissions works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "security-compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "security-disaster-recovery-resiliency.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "CloudTrail logs",
+                        "href": "cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "AWS CloudFormation resources",
+                "href": "cloudformation-verified-permissions.html"
+            },
+            {
+                "title": "AWS PrivateLink",
+                "href": "vpc-interface-endpoints.html"
+            },
+            {
+                "title": "Quotas",
+                "href": "quotas.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

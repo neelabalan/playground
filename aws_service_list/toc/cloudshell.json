@@ -1,1 +1,156 @@
-{ "contents" : [ { "title" : "What is AWS CloudShell?", "href" : "welcome.html", "contents" : [ { "title" : "AWS CloudShell features", "href" : "cloudshell-features.html" }, { "title" : "Pricing for AWS CloudShell", "href" : "shell-pricing.html" }, { "title" : "FAQs", "href" : "faq-list.html" } ] }, { "title" : "Getting started", "href" : "getting-started.html" }, { "title" : "Tutorials", "href" : "tutorials.html", "contents" : [ { "title" : "Tutorial: Copying multiple files", "href" : "multiple-files-upload-download.html" }, { "title" : "Tutorial: Using CodeCommit", "href" : "tutorial-code-commit.html" }, { "title" : "Tutorial: Creating presigned URLs", "href" : "tutorial-presigned-url.html" } ] }, { "title" : "Working with AWS CloudShell", "href" : "working-with-aws-cloudshell.html" }, { "title" : "Accessibility features", "href" : "working-with-accessibility-feature-aws-cloudshell.html" }, { "title" : "Working with AWS services", "href" : "working-with-aws-cli.html" }, { "title" : "Customizing AWS CloudShell", "href" : "customizing-cshell.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Data encryption", "href" : "data-encryption.html" } ] }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "Audience", "href" : "sec-audience.html" }, { "title" : "Authentication", "href" : "authentication.html" }, { "title" : "Managing AWS CloudShell access and usage with IAM policies", "href" : "sec-auth-with-identities.html" } ] }, { "title" : "Logging and monitoring", "href" : "logging-and-monitoring.html" }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Configuration and vulnerability analysis", "href" : "vulnerability-analysis-and-management.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" }, { "title" : "Security FAQs", "href" : "cloudshell-security-faqs.html" } ] }, { "title" : "AWS CloudShell compute environment", "href" : "vm-specs.html", "contents" : [ { "title" : "Migrating from Amazon Linux 2 to Amazon Linux 2023", "href" : "cloudshell-AL2023-migration.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" }, { "title" : "Supported browsers", "href" : "browsers.html" }, { "title" : "Supported Regions", "href" : "supported-aws-regions.html" }, { "title" : "Service quotas and restrictions", "href" : "limits.html" }, { "title" : "Document history", "href" : "history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/cloudshell/latest/userguide/",
+    "service": "cloudshell",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS CloudShell?",
+                "href": "welcome.html",
+                "contents": [
+                    {
+                        "title": "AWS CloudShell features",
+                        "href": "cloudshell-features.html"
+                    },
+                    {
+                        "title": "Pricing for AWS CloudShell",
+                        "href": "shell-pricing.html"
+                    },
+                    {
+                        "title": "FAQs",
+                        "href": "faq-list.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html"
+            },
+            {
+                "title": "Tutorials",
+                "href": "tutorials.html",
+                "contents": [
+                    {
+                        "title": "Tutorial: Copying multiple files",
+                        "href": "multiple-files-upload-download.html"
+                    },
+                    {
+                        "title": "Tutorial: Using CodeCommit",
+                        "href": "tutorial-code-commit.html"
+                    },
+                    {
+                        "title": "Tutorial: Creating presigned URLs",
+                        "href": "tutorial-presigned-url.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with AWS CloudShell",
+                "href": "working-with-aws-cloudshell.html"
+            },
+            {
+                "title": "Accessibility features",
+                "href": "working-with-accessibility-feature-aws-cloudshell.html"
+            },
+            {
+                "title": "Working with AWS services",
+                "href": "working-with-aws-cli.html"
+            },
+            {
+                "title": "Customizing AWS CloudShell",
+                "href": "customizing-cshell.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Data encryption",
+                                "href": "data-encryption.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "Audience",
+                                "href": "sec-audience.html"
+                            },
+                            {
+                                "title": "Authentication",
+                                "href": "authentication.html"
+                            },
+                            {
+                                "title": "Managing AWS CloudShell access and usage with IAM policies",
+                                "href": "sec-auth-with-identities.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "logging-and-monitoring.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "vulnerability-analysis-and-management.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    },
+                    {
+                        "title": "Security FAQs",
+                        "href": "cloudshell-security-faqs.html"
+                    }
+                ]
+            },
+            {
+                "title": "AWS CloudShell compute environment",
+                "href": "vm-specs.html",
+                "contents": [
+                    {
+                        "title": "Migrating from Amazon Linux 2 to Amazon Linux 2023",
+                        "href": "cloudshell-AL2023-migration.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            },
+            {
+                "title": "Supported browsers",
+                "href": "browsers.html"
+            },
+            {
+                "title": "Supported Regions",
+                "href": "supported-aws-regions.html"
+            },
+            {
+                "title": "Service quotas and restrictions",
+                "href": "limits.html"
+            },
+            {
+                "title": "Document history",
+                "href": "history.html"
+            }
+        ]
+    }
+}

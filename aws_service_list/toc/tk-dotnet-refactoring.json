@@ -1,1 +1,118 @@
-{ "contents" : [ { "title" : "What is AWS Toolkit for .NET Refactoring?", "href" : "what-is-tk-dotnet-refactoring.html" }, { "title" : "Get started", "href" : "dotnet-refactoring-getting-started.html", "contents" : [ { "title" : "Prerequisites", "href" : "getting-started-prerequisites.html" }, { "title" : "Set up for testing on AWS", "href" : "setup-for-testing.html", "contents" : [ { "title" : "Prerequisites for testing on AWS", "href" : "test-prerequisites.html" }, { "title" : "Roles and managed policies", "href" : "roles-and-policies.html" }, { "title" : "Active Directory setup", "href" : "ad-setup.html" } ] }, { "title" : "Installation", "href" : "dotnet-refactoring-installation.html" }, { "title" : "Pricing", "href" : "dotnet-refactoring-pricing.html" } ] }, { "title" : "Toolkit for .NET Refactoring extension", "href" : "toolkit-dotnet-refactoring.html", "contents" : [ { "title" : "Run an assessment", "href" : "compatibility-assessment.html" }, { "title" : "Analyze the results", "href" : "analyze-assessment.html" }, { "title" : "Port the solution", "href" : "port-solution.html" }, { "title" : "Test the application", "href" : "test-application-on-aws.html", "contents" : [ { "title" : "What is a test deployment?", "href" : "test-deployment.html" }, { "title" : "Create a deployment", "href" : "create-deployment.html" }, { "title" : "Delete a deployment", "href" : "delete-deployment.html" } ] } ] }, { "title" : "Debugging", "href" : "debugging.html" }, { "title" : "Security", "href" : "dotnet-refactoring-security.html", "contents" : [ { "title" : "AWS Identity and Access Management", "href" : "dotnet-refactoring-iam.html" }, { "title" : "EULA", "href" : "eula.html" }, { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/tk-dotnet-refactoring/latest/userguide/",
+    "service": "tk-dotnet-refactoring",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS Toolkit for .NET Refactoring?",
+                "href": "what-is-tk-dotnet-refactoring.html"
+            },
+            {
+                "title": "Get started",
+                "href": "dotnet-refactoring-getting-started.html",
+                "contents": [
+                    {
+                        "title": "Prerequisites",
+                        "href": "getting-started-prerequisites.html"
+                    },
+                    {
+                        "title": "Set up for testing on AWS",
+                        "href": "setup-for-testing.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites for testing on AWS",
+                                "href": "test-prerequisites.html"
+                            },
+                            {
+                                "title": "Roles and managed policies",
+                                "href": "roles-and-policies.html"
+                            },
+                            {
+                                "title": "Active Directory setup",
+                                "href": "ad-setup.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Installation",
+                        "href": "dotnet-refactoring-installation.html"
+                    },
+                    {
+                        "title": "Pricing",
+                        "href": "dotnet-refactoring-pricing.html"
+                    }
+                ]
+            },
+            {
+                "title": "Toolkit for .NET Refactoring extension",
+                "href": "toolkit-dotnet-refactoring.html",
+                "contents": [
+                    {
+                        "title": "Run an assessment",
+                        "href": "compatibility-assessment.html"
+                    },
+                    {
+                        "title": "Analyze the results",
+                        "href": "analyze-assessment.html"
+                    },
+                    {
+                        "title": "Port the solution",
+                        "href": "port-solution.html"
+                    },
+                    {
+                        "title": "Test the application",
+                        "href": "test-application-on-aws.html",
+                        "contents": [
+                            {
+                                "title": "What is a test deployment?",
+                                "href": "test-deployment.html"
+                            },
+                            {
+                                "title": "Create a deployment",
+                                "href": "create-deployment.html"
+                            },
+                            {
+                                "title": "Delete a deployment",
+                                "href": "delete-deployment.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Debugging",
+                "href": "debugging.html"
+            },
+            {
+                "title": "Security",
+                "href": "dotnet-refactoring-security.html",
+                "contents": [
+                    {
+                        "title": "AWS Identity and Access Management",
+                        "href": "dotnet-refactoring-iam.html"
+                    },
+                    {
+                        "title": "EULA",
+                        "href": "eula.html"
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "AWS managed policies",
+                        "href": "security-iam-awsmanpol.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

@@ -1,1 +1,1156 @@
-{ "contents" : [ { "title" : "Automation runbook reference", "href" : "automation-runbook-reference.html", "contents" : [ { "title" : "API Gateway", "href" : "automation-ref-abp.html", "contents" : [ { "title" : "AWSConfigRemediation-DeleteAPIGatewayStage", "href" : "automation-aws-delete-apigw-stage.html" }, { "title" : "AWSConfigRemediation-EnableAPIGatewayTracing", "href" : "automation-aws-enable-apigw-tracing.html" }, { "title" : "AWSConfigRemediation-UpdateAPIGatewayMethodCaching", "href" : "automation-aws-update-api-gateway.html" } ] }, { "title" : "AWS CloudFormation", "href" : "automation-ref-cfn.html", "contents" : [ { "title" : "AWS-DeleteCloudFormationStack", "href" : "automation-aws-deletecloudformationstack.html" }, { "title" : "AWS-RunCfnLint", "href" : "automation-aws-runcfnlint.html" }, { "title" : "AWSSupport-TroubleshootCFNCustomResource", "href" : "automation-awssupport-TroubleshootCFNCustomResource.html" }, { "title" : "AWS-UpdateCloudFormationStack", "href" : "automation-aws-updatecloudformationstack.html" } ] }, { "title" : "CloudFront", "href" : "automation-ref-cf.html", "contents" : [ { "title" : "AWSConfigRemediation-EnableCloudFrontDefaultRootObject", "href" : "automation-aws-enable-cloudfront-root-object.html" }, { "title" : "AWSConfigRemediation-EnableCloudFrontAccessLogs", "href" : "automation-aws-enable-cloudfront-access-logs.html" }, { "title" : "AWSConfigRemediation-EnableCloudFrontOriginAccessIdentity", "href" : "automation-aws-enable-cloudfront-origin-access.html" }, { "title" : "AWSConfigRemediation-EnableCloudFrontOriginFailover", "href" : "automation-aws-enable-cloudfront-failover.html" }, { "title" : "AWSConfigRemediation-EnableCloudFrontViewerPolicyHTTPS", "href" : "automation-aws-enable-cloudfront-viewer-policy.html" } ] }, { "title" : "CloudTrail", "href" : "automation-ref-ct.html", "contents" : [ { "title" : "AWSConfigRemediation-CreateCloudTrailMultiRegionTrail", "href" : "automation-aws-create-ct-mr.html" }, { "title" : "AWS-EnableCloudTrail", "href" : "automation-aws-enablecloudtrail.html" }, { "title" : "AWSConfigRemediation-EnableCloudTrailEncryptionWithKMS", "href" : "automation-aws-ctrail-kms.html" }, { "title" : "AWSConfigRemediation-EnableCloudTrailLogFileValidation", "href" : "automation-aws-enable-ctrail-log-validation.html" }, { "title" : "AWS-QueryCloudTrailLogs", "href" : "aws-querycloudtraillogs.html" } ] }, { "title" : "CloudWatch", "href" : "automation-ref-cw.html", "contents" : [ { "title" : "AWS-ConfigureCloudWatchOnEC2Instance", "href" : "automation-aws-configurecloudwatchonec2instance.html" } ] }, { "title" : "CodeBuild", "href" : "automation-ref-acb.html", "contents" : [ { "title" : "AWSConfigRemediation-ConfigureCodeBuildProjectWithKMSCMK", "href" : "automation-aws-codebuild-cmk.html" }, { "title" : "AWSConfigRemediation-DeleteAccessKeysFromCodeBuildProject", "href" : "automation-aws-delete-cb-keys.html" } ] }, { "title" : "AWS CodeDeploy", "href" : "automation-ref-acd.html", "contents" : [ { "title" : "AWSSupport-TroubleshootCodeDeploy", "href" : "automation-awssupport-troubleshootcodedeploy.html" } ] }, { "title" : "AWS Config", "href" : "automation-ref-cc.html", "contents" : [ { "title" : "AWSSupport-SetupConfig", "href" : "automation-aws-setup-config.html" } ] }, { "title" : "AWS Directory Service", "href" : "automation-ref-ads.html", "contents" : [ { "title" : "AWS-CreateDSManagementInstance", "href" : "automation-awssupport-create-ds-management-instance.html" }, { "title" : "AWSSupport-TroubleshootADConnectorConnectivity", "href" : "automation-awssupport-troubleshootadconnectorconnectivity.html" }, { "title" : "AWSSupport-TroubleshootDirectoryTrust", "href" : "automation-awssupport-troubleshootdirectorytrust.html" } ] }, { "title" : "DynamoDB", "href" : "automation-ref-ddb.html", "contents" : [ { "title" : "AWS-CreateDynamoDBBackup", "href" : "automation-aws-createdynamodbbackup.html" }, { "title" : "AWS-DeleteDynamoDbBackup", "href" : "automation-aws-deletedynamodbbackup.html" }, { "title" : "AWSConfigRemediation-DeleteDynamoDbTable", "href" : "automation-aws-deletedynamodbtable.html" }, { "title" : "AWS-DeleteDynamoDbTableBackups", "href" : "automation-aws-deletedynamodbtablebackups.html" }, { "title" : "AWSConfigRemediation-EnableEncryptionOnDynamoDBTable", "href" : "automation-aws-enable-ddb-encrypt.html" }, { "title" : "AWSConfigRemediation-EnablePITRForDynamoDbTable", "href" : "automation-aws-enable-pitr-ddb.html" }, { "title" : "AWS-RestoreDynamoDBTable", "href" : "aws-restore-dynamodb-table.html" } ] }, { "title" : "Amazon EBS", "href" : "automation-ref-ebs.html", "contents" : [ { "title" : "AWS-ArchiveEBSSnapshots", "href" : "aws-archiveebssnapshots.html" }, { "title" : "AWS-AttachEBSVolume", "href" : "automation-aws-attachebsvolume.html" }, { "title" : "AWSSupport-CalculateEBSPerformanceMetrics", "href" : "automation-aws-calculate-ebs-performance-metrics.html" }, { "title" : "AWS-CopySnapshot", "href" : "automation-aws-copysnapshot.html" }, { "title" : "AWS-CreateSnapshot", "href" : "automation-aws-createsnapshot.html" }, { "title" : "AWS-DeleteSnapshot", "href" : "automation-aws-deletesnapshot.html" }, { "title" : "AWSConfigRemediation-DeleteUnusedEBSVolume", "href" : "automation-aws-delete-ebs-volume.html" }, { "title" : "AWS-DeregisterAMIs", "href" : "aws-deregisteramis.html" }, { "title" : "AWS-DetachEBSVolume", "href" : "automation-aws-detachebsvolume.html" }, { "title" : "AWSConfigRemediation-EnableEbsEncryptionByDefault", "href" : "automation-aws-enable-ebs-encryption.html" }, { "title" : "AWS-ExtendEBSVolume", "href" : "aws-extendebsvolume.html" }, { "title" : "AWSSupport-ModifyEBSSnapshotPermission", "href" : "automation-awssupport-modifyebssnapshotpermission.html" }, { "title" : "AWSConfigRemediation-ModifyEBSVolumeType", "href" : "automation-aws-modify-ebs-type.html" } ] }, { "title" : "Amazon EC2", "href" : "automation-ref-ec2.html", "contents" : [ { "title" : "AWS-ASGEnterStandby", "href" : "automation-aws-asgenterstandby.html" }, { "title" : "AWS-ASGExitStandby", "href" : "automation-aws-asgexitstandby.html" }, { "title" : "AWS-CreateImage", "href" : "automation-aws-createimage.html" }, { "title" : "AWS-DeleteImage", "href" : "automation-aws-deleteimage.html" }, { "title" : "AWS-PatchAsgInstance", "href" : "automation-aws-patchasginstance.html" }, { "title" : "AWS-PatchInstanceWithRollback", "href" : "automation-aws-patchinstancewithrollback.html" }, { "title" : "AWS-QuarantineEC2Instance", "href" : "aws-quarantineec2instance.html" }, { "title" : "AWS-ResizeInstance", "href" : "automation-aws-resizeinstance.html" }, { "title" : "AWS-RestartEC2Instance", "href" : "automation-aws-restartec2instance.html" }, { "title" : "AWS-SetupJupyter", "href" : "aws-setup-jupyter.html" }, { "title" : "AWS-StartEC2Instance", "href" : "automation-aws-startec2instance.html" }, { "title" : "AWS-StopEC2Instance", "href" : "automation-aws-stopec2instance.html" }, { "title" : "AWS-TerminateEC2Instance", "href" : "automation-aws-terminateec2instance.html" }, { "title" : "AWS-UpdateLinuxAmi", "href" : "automation-aws-updatelinuxami.html" }, { "title" : "AWS-UpdateWindowsAmi", "href" : "automation-aws-updatewindowsami.html" }, { "title" : "AWSConfigRemediation-EnableAutoScalingGroupELBHealthCheck", "href" : "automation-aws-enable-asg-health-check.html" }, { "title" : "AWSConfigRemediation-EnforceEC2InstanceIMDSv2", "href" : "automation-aws-enforce-ec2-imdsv2.html" }, { "title" : "AWSEC2-CloneInstanceAndUpgradeSQLServer", "href" : "automation-awsec2-CloneInstanceAndUpgradeSQLServer.html" }, { "title" : "AWSEC2-CloneInstanceAndUpgradeWindows", "href" : "automation-awsec2-CloneInstanceAndUpgradeWindows.html" }, { "title" : "AWSEC2-ConfigureSTIG", "href" : "awsec2-configurestig.html" }, { "title" : "AWSEC2-PatchLoadBalancerInstance", "href" : "automation-awsec2-patch-load-balancer-instance.html" }, { "title" : "AWSEC2-SQLServerDBRestore", "href" : "automation-awsec2-sqlserverdbrestore.html" }, { "title" : "AWSSupport-ActivateWindowsWithAmazonLicense", "href" : "automation-awssupport-activatewindowswithamazonlicense.html" }, { "title" : "AWSSupport-AnalyzeAWSEndpointReachabilityFromEC2", "href" : "automation-awssupport-analyzeawsendpointreachabilityfromec2.html" }, { "title" : "AWSPremiumSupport-ChangeInstanceTypeIntelToAMD", "href" : "automation-aws-changeinstancetypeinteltoamd.html" }, { "title" : "AWSSupport-CheckXenToNitroMigrationRequirements", "href" : "automation-awssupport-checkxentonitromigrationrequirements.html" }, { "title" : "AWSSupport-ConfigureEC2Metadata", "href" : "automation-awssupport-configureec2metadata.html" }, { "title" : "AWSSupport-CopyEC2Instance", "href" : "automation-awssupport-copyec2instance.html" }, { "title" : "AWSSupport-ExecuteEC2Rescue", "href" : "automation-awssupport-executeec2rescue.html" }, { "title" : "AWSSupport-ListEC2Resources", "href" : "automation-awssupport-listec2resources.html" }, { "title" : "AWSSupport-ManageRDPSettings", "href" : "automation-awssupport-managerdpsettings.html" }, { "title" : "AWSSupport-ManageWindowsService", "href" : "automation-awssupport-managewindowsservice.html" }, { "title" : "AWSSupport-MigrateEC2ClassicToVPC", "href" : "automation-awssupport-migrate-ec2-classic-to-vpc.html" }, { "title" : "AWSSupport-MigrateXenToNitroLinux", "href" : "automation-awssupport-migrate-xen-to-nitro.html" }, { "title" : "AWSSupport-ResetAccess", "href" : "automation-awssupport-resetaccess.html" }, { "title" : "AWSSupport-ResetLinuxUserPassword", "href" : "automation-awssupport-resetlinuxuserpassword.html" }, { "title" : "AWSPremiumSupport-ResizeNitroInstance", "href" : "automation-aws-resizenitroinstance.html" }, { "title" : "AWSSupport-RestoreEC2InstanceFromSnapshot", "href" : "automation-awssupport-restoreec2instancefromsnapshot.html" }, { "title" : "AWSSupport-SendLogBundleToS3Bucket", "href" : "automation-awssupport-sendlogbundletos3bucket.html" }, { "title" : "AWSSupport-StartEC2RescueWorkflow", "href" : "automation-awssupport-startec2rescueworkflow.html" }, { "title" : "AWSPremiumSupport-TroubleshootEC2DiskUsage", "href" : "automation-awspremiumsupport-troubleshootEC2diskusage.html" }, { "title" : "AWSSupport-TroubleshootRDP", "href" : "automation-awssupport-troubleshootrdp.html" }, { "title" : "AWSSupport-TroubleshootSSH", "href" : "automation-awssupport-troubleshootssh.html" }, { "title" : "AWSSupport-TroubleshootSUSERegistration", "href" : "automation-awssupport-troubleshoot-suse-registration.html" }, { "title" : "AWSSupport-UpgradeWindowsAWSDrivers", "href" : "automation-awssupport-upgradewindowsawsdrivers.html" } ] }, { "title" : "Amazon ECS", "href" : "automation-ref-ecs.html", "contents" : [ { "title" : "AWSSupport-CollectECSInstanceLogs", "href" : "automation-awssupport-collectecsinstancelogs.html" }, { "title" : "AWS-InstallAmazonECSAgent", "href" : "automation-aws-install-ecs-agent.html" }, { "title" : "AWSSupport-TroubleshootECSContainerInstance", "href" : "automation-aws-troubleshoot-ecs-container-instance.html" }, { "title" : "AWSSupport-TroubleshootECSTaskFailedToStart", "href" : "automation-aws-troubleshootecstaskfailedtostart.html" }, { "title" : "AWS-UpdateAmazonECSAgent", "href" : "automation-aws-update-ecs-agent.html" } ] }, { "title" : "Amazon EFS", "href" : "automation-ref-efs.html", "contents" : [ { "title" : "AWSSupport-CheckAndMountEFS", "href" : "automation-awssupport-check-and-mount-efs.html" } ] }, { "title" : "Amazon EKS", "href" : "automation-ref-eks.html", "contents" : [ { "title" : "AWSSupport-CollectEKSInstanceLogs", "href" : "automation-awssupport-collecteksinstancelogs.html" }, { "title" : "AWS-DeleteEKSCluster", "href" : "automation-aws-deleteekscluster.html" }, { "title" : "AWSPremiumSupport-TroubleshootEKSCluster", "href" : "automation-awspremiumsupport-troubleshootekscluster.html" }, { "title" : "AWSSupport-TroubleshootEKSWorkerNode", "href" : "automation-awssupport-troubleshooteksworkernode.html" }, { "title" : "AWS-UpdateEKSManagedNodegroup", "href" : "aws-updateeksmanagednodegroup.html" }, { "title" : "AWS-UpdateEKSSelfManagedNodeGroups", "href" : "aws-updateeksselfmanagednodegroup.html" } ] }, { "title" : "Elastic Beanstalk", "href" : "automation-ref-aeb.html", "contents" : [ { "title" : "AWSSupport-CollectElasticBeanstalkLogs", "href" : "automation-awssupport-collectbeanstalk-logs.html" }, { "title" : "AWSConfigRemediation-EnableElasticBeanstalkEnvironmentLogStreaming", "href" : "automation-aws-enable-eb-logging.html" }, { "title" : "AWSConfigRemediation-EnableBeanstalkEnvironmentNotifications", "href" : "automation-aws-enable-eb-notifications.html" }, { "title" : "AWSSupport-TroubleshootElasticBeanstalk", "href" : "automation-awssupport-troubleshoot-elastic-beanstalk.html" } ] }, { "title" : "Elastic Load Balancing", "href" : "automation-ref-elb.html", "contents" : [ { "title" : "AWSConfigRemediation-DropInvalidHeadersForALB", "href" : "automation-aws-drop-alb-headers.html" }, { "title" : "AWSConfigRemediation-EnableCLBCrossZoneLoadBalancing", "href" : "automation-aws-enable-clb-crosszone.html" }, { "title" : "AWSConfigRemediation-EnableELBDeletionProtection", "href" : "automation-aws-enable-elb-protection.html" }, { "title" : "AWSConfigRemediation-EnableLoggingForALBAndCLB", "href" : "automation-aws-enable-logging-alb-clb.html" }, { "title" : "AWSSupport-TroubleshootCLBConnectivity", "href" : "automation-aws-troubleshootclbconnectivity.html" }, { "title" : "AWSConfigRemediation-EnableNLBCrossZoneLoadBalancing", "href" : "automation-aws-enable-nlb-crosszone.html" } ] }, { "title" : "Amazon EMR", "href" : "automation-ref-emr.html", "contents" : [ { "title" : "AWSSupport-AnalyzeEMRLogs", "href" : "automation-awssupport-analyzeemrlogs.html" } ] }, { "title" : "Amazon OpenSearch Service", "href" : "automation-ref-opensearch.html", "contents" : [ { "title" : "AWSConfigRemediation-DeleteOpenSearchDomain", "href" : "automation-aws-delete-opensearch-domain.html" }, { "title" : "AWSConfigRemediation-EnforceHTTPSOnOpenSearchDomain", "href" : "automation-aws-enforce-https-opensearch.html" }, { "title" : "AWSConfigRemediation-UpdateOpenSearchDomainSecurityGroups", "href" : "automation-aws-update-opensearch-security-group.html" } ] }, { "title" : "EventBridge", "href" : "automation-ref-ev.html", "contents" : [ { "title" : "AWS-AddOpsItemDedupStringToEventBridgeRule", "href" : "automation-aws-add-dedup-string-ev.html" }, { "title" : "AWS-DisableEventBridgeRule", "href" : "automation-aws-disable-ev-rule.html" } ] }, { "title" : "GuardDuty", "href" : "automation-ref-gdu.html", "contents" : [ { "title" : "AWSConfigRemediation-CreateGuardDutyDetector", "href" : "automation-aws-enable-guard-detect.html" } ] }, { "title" : "IAM", "href" : "automation-ref-iam.html", "contents" : [ { "title" : "AWS-AttachIAMToInstance", "href" : "automation-aws-attachiamtoinstance.html" }, { "title" : "AWSConfigRemediation-DeleteIAMRole", "href" : "automation-aws-delete-iam-role.html" }, { "title" : "AWSConfigRemediation-DeleteIAMUser", "href" : "automation-aws-delete-iam-user.html" }, { "title" : "AWSConfigRemediation-DeleteUnusedIAMGroup", "href" : "automation-aws-delete-iam-group.html" }, { "title" : "AWSConfigRemediation-DeleteUnusedIAMPolicy", "href" : "automation-aws-delete-iam-policy.html" }, { "title" : "AWSConfigRemediation-DetachIAMPolicy", "href" : "automation-aws-detach-iam-policy.html" }, { "title" : "AWSConfigRemediation-EnableAccountAccessAnalyzer", "href" : "automation-aws-enable-account-access-analyzer.html" }, { "title" : "AWSSupport-GrantPermissionsToIAMUser", "href" : "automation-awssupport-grantpermissionstoiamuser.html" }, { "title" : "AWSConfigRemediation-RemoveUserPolicies", "href" : "automation-aws-remove-user-policies.html" }, { "title" : "AWSConfigRemediation-ReplaceIAMInlinePolicy", "href" : "automation-aws-replace-iam-policy.html" }, { "title" : "AWSConfigRemediation-RevokeUnusedIAMUserCredentials", "href" : "automation-aws-revoke-iam-user.html" }, { "title" : "AWSConfigRemediation-SetIAMPasswordPolicy", "href" : "automation-aws-set-iam-policy.html" } ] }, { "title" : "AWS KMS", "href" : "automation-ref-kms.html", "contents" : [ { "title" : "AWSConfigRemediation-CancelKeyDeletion", "href" : "automation-aws-cancel-key-deletion.html" }, { "title" : "AWSConfigRemediation-EnableKeyRotation", "href" : "automation-aws-enable-key-rotation.html" } ] }, { "title" : "Lambda", "href" : "automation-ref-lam.html", "contents" : [ { "title" : "AWSConfigRemediation-ConfigureLambdaFunctionXRayTracing", "href" : "automation-aws-config-lambda-xray.html" }, { "title" : "AWSConfigRemediation-DeleteLambdaFunction", "href" : "automation-aws-delete-lambda.html" }, { "title" : "AWSConfigRemediation-EncryptLambdaEnvironmentVariablesWithCMK", "href" : "automation-aws-encrypt-lambda-variables.html" }, { "title" : "AWSConfigRemediation-MoveLambdaToVPC", "href" : "automation-aws-lambda-to-vpc.html" }, { "title" : "AWSSupport-RemediateLambdaS3Event", "href" : "automation-awssupport-remediatelambdas3event.html" }, { "title" : "AWSSupport-TroubleshootLambdaInternetAccess", "href" : "AWSSupport-TroubleshootLambdaInternetAccess.html" }, { "title" : "AWSSupport-TroubleshootLambdaS3Event", "href" : "automation-aws-troubleshootlambdas3event.html" } ] }, { "title" : "Amazon RDS", "href" : "automation-ref-rds.html", "contents" : [ { "title" : "AWS-CreateRdsSnapshot", "href" : "automation-aws-createrdssnapshot.html" }, { "title" : "AWSConfigRemediation-DeleteRDSCluster", "href" : "automation-aws-delete-rds-cluster.html" }, { "title" : "AWSConfigRemediation-DeleteRDSClusterSnapshot", "href" : "automation-aws-delete-rds-cluster-snap.html" }, { "title" : "AWSConfigRemediation-DeleteRDSInstance", "href" : "automation-aws-delete-rds-instance.html" }, { "title" : "AWSConfigRemediation-DeleteRDSInstanceSnapshot", "href" : "automation-aws-delete-rds-snapshot.html" }, { "title" : "AWSConfigRemediation-DisablePublicAccessToRDSInstance", "href" : "automation-aws-disable-rds-instance-public-access.html" }, { "title" : "AWSConfigRemediation-EnableCopyTagsToSnapshotOnRDSCluster", "href" : "automation-aws-enable-tags-snapshot-rds-cluster.html" }, { "title" : "AWSConfigRemediation-EnableCopyTagsToSnapshotOnRDSDBInstance", "href" : "automation-aws-enable-tags-snapshot-rds-instance.html" }, { "title" : "AWSConfigRemediation-EnableEnhancedMonitoringOnRDSInstance", "href" : "automation-aws-enable-rds-monitoring.html" }, { "title" : "AWSConfigRemediation-EnableMinorVersionUpgradeOnRDS", "href" : "automation-aws-enable-rds-minor-version.html" }, { "title" : "AWSConfigRemediation-EnableMultiAZOnRDSInstance", "href" : "automation-aws-multi-az-rds.html" }, { "title" : "AWSConfigRemediation-EnablePerformanceInsightsOnRDSInstance", "href" : "automation-aws-enable-performance-insights-rds.html" }, { "title" : "AWSConfigRemediation-EnableRDSClusterDeletionProtection", "href" : "automation-aws-enable-rds-cluster-deletion-protection.html" }, { "title" : "AWSConfigRemediation-EnableRDSInstanceBackup", "href" : "automation-aws-enable-rds-instance-backup.html" }, { "title" : "AWSConfigRemediation-EnableRDSInstanceDeletionProtection", "href" : "automation-aws-enable-rds-instance-deletion-protection.html" }, { "title" : "AWSConfigRemediation-ModifyRDSInstancePortNumber", "href" : "automation-aws-modify-rds-port.html" }, { "title" : "AWSSupport-ModifyRDSSnapshotPermission", "href" : "automation-awssupport-modifyrdssnapshotpermission.html" }, { "title" : "AWSPremiumSupport-PostgreSQLWorkloadReview", "href" : "automation-aws-postgresqlworkloadreview.html" }, { "title" : "AWS-RebootRdsInstance", "href" : "automation-aws-rebootrdsinstance.html" }, { "title" : "AWSSupport-ShareRDSSnapshot", "href" : "automation-aws-sharerdssnapshot.html" }, { "title" : "AWS-StartRdsInstance", "href" : "automation-aws-startrdsinstance.html" }, { "title" : "AWSSupport-TroubleshootConnectivityToRDS", "href" : "automation-awssupport-troubleshootconnectivitytords.html" } ] }, { "title" : "Amazon Redshift", "href" : "automation-ref-rs.html", "contents" : [ { "title" : "AWSConfigRemediation-DeleteRedshiftCluster", "href" : "automation-aws-delete-redshift.html" }, { "title" : "AWSConfigRemediation-DisablePublicAccessToRedshiftCluster", "href" : "automation-aws-disable-redshift-public-access.html" }, { "title" : "AWSConfigRemediation-EnableRedshiftClusterAuditLogging", "href" : "automation-aws-enable-redshift-audit.html" }, { "title" : "AWSConfigRemediation-EnableRedshiftClusterAutomatedSnapshot", "href" : "automation-aws-enable-redshift-snapshot.html" }, { "title" : "AWSConfigRemediation-EnableRedshiftClusterEncryption", "href" : "automation-aws-enable-redshift-encrypt.html" }, { "title" : "AWSConfigRemediation-EnableRedshiftClusterEnhancedVPCRouting", "href" : "automation-aws-enable-redshift-enhanced-routing.html" }, { "title" : "AWSConfigRemediation-EnforceSSLOnlyConnectionsToRedshiftCluster", "href" : "automation-aws-enforce-redshift-ssl-only.html" }, { "title" : "AWSConfigRemediation-ModifyRedshiftClusterMaintenanceSettings", "href" : "automation-aws-modify-redshift-maintenance.html" }, { "title" : "AWSConfigRemediation-ModifyRedshiftClusterNodeType", "href" : "automation-aws-modify-redshift-cluster-node.html" } ] }, { "title" : "Amazon S3", "href" : "automation-ref-s3.html", "contents" : [ { "title" : "AWS-ConfigureS3BucketLogging", "href" : "automation-aws-configures3bucketlogging.html" }, { "title" : "AWS-ConfigureS3BucketVersioning", "href" : "automation-aws-configures3bucketversioning.html" }, { "title" : "AWSConfigRemediation-ConfigureS3BucketPublicAccessBlock", "href" : "automation-aws-block-public-s3-bucket.html" }, { "title" : "AWSConfigRemediation-ConfigureS3PublicAccessBlock", "href" : "automation-aws-block-public-s3.html" }, { "title" : "AWS-DisableS3BucketPublicReadWrite", "href" : "automation-aws-disables3bucketpublicreadwrite.html" }, { "title" : "AWS-EnableS3BucketEncryption", "href" : "automation-aws-enableS3bucketencryption.html" }, { "title" : "AWSConfigRemediation-RemovePrincipalStarFromS3BucketPolicy", "href" : "automation-aws-remove-s3-wildcard.html" }, { "title" : "AWSConfigRemediation-RestrictBucketSSLRequestsOnly", "href" : "automation-aws-s3-deny-http.html" }, { "title" : "AWSSupport-TroubleshootS3PublicRead", "href" : "automation-awssupport-troubleshoots3publicread.html" } ] }, { "title" : "Secrets Manager", "href" : "automation-ref-asm.html", "contents" : [ { "title" : "AWSConfigRemediation-DeleteSecret", "href" : "automation-aws-delete-secret.html" }, { "title" : "AWSConfigRemediation-RotateSecret", "href" : "automation-aws-rotate-secret.html" } ] }, { "title" : "Security Hub", "href" : "automation-ref-ash.html", "contents" : [ { "title" : "AWSConfigRemediation-EnableSecurityHub", "href" : "automation-aws-enable-security-hub.html" } ] }, { "title" : "AWS Shield", "href" : "automation-ref-shd.html", "contents" : [ { "title" : "AWSPremiumSupport-DDoSResiliencyAssessment", "href" : "automation-aws-ddosresiliencyassessment.html" } ] }, { "title" : "Amazon SNS", "href" : "automation-ref-sns.html", "contents" : [ { "title" : "AWSConfigRemediation-EncryptSNSTopic", "href" : "automation-aws-encrypt-sns-topic.html" }, { "title" : "AWS-PublishSNSNotification", "href" : "automation-aws-publishsnsnotification.html" } ] }, { "title" : "Systems Manager", "href" : "automation-ref-sys.html", "contents" : [ { "title" : "AWS-BulkDeleteAssociation", "href" : "aws-bulkdeleteassociation.html" }, { "title" : "AWS-BulkEditOpsItems", "href" : "automation-aws-bulk-edit-opsitems.html" }, { "title" : "AWS-BulkResolveOpsItems", "href" : "automation-aws-bulk-resolve-opsitems.html" }, { "title" : "AWS-ConfigureMaintenanceWindows", "href" : "aws-configuremaintenancewindows.html" }, { "title" : "AWS-CreateManagedLinuxInstance", "href" : "automation-aws-createmanagedlinuxinstance.html" }, { "title" : "AWS-CreateManagedWindowsInstance", "href" : "automation-aws-createmanagedwindowsinstance.html" }, { "title" : "AWSConfigRemediation-EnableCWLoggingForSessionManager", "href" : "automation-aws-enable-cw-log-sm.html" }, { "title" : "AWS-ExportOpsDataToS3", "href" : "automation-aws-exportopsdatatos3.html" }, { "title" : "AWS-ExportPatchReportToS3", "href" : "automation-aws-exportpatchreporttos3.html" }, { "title" : "AWS-SetupInventory", "href" : "automation-aws-setupinventory.html" }, { "title" : "AWS-SetupManagedInstance", "href" : "automation-aws-setupmanagedinstance.html" }, { "title" : "AWS-SetupManagedRoleOnEC2Instance", "href" : "automation-aws-setupmanagedroleonec2instance.html" }, { "title" : "AWSSupport-TroubleshootManagedInstance", "href" : "automation-awssupport-troubleshoot-managed-instance.html" }, { "title" : "AWSSupport-TroubleshootSessionManager", "href" : "automation-awssupport-troubleshoot-session-manager.html" } ] }, { "title" : "Third-party", "href" : "automation-ref-third-party.html", "contents" : [ { "title" : "AWS-CreateJiraIssue", "href" : "automation-aws-createjiraissue.html" }, { "title" : "AWS-CreateServiceNowIncident", "href" : "automation-aws-createservicenowincident.html" }, { "title" : "AWS-RunPacker", "href" : "automation-aws-runpacker.html" } ] }, { "title" : "Amazon VPC", "href" : "automation-ref-vpc.html", "contents" : [ { "title" : "AWSSupport-ConfigureDNSQueryLogging", "href" : "automation-aws-configure-dns-query-logging.html" }, { "title" : "AWSSupport-ConfigureTrafficMirroring", "href" : "automation-aws-configuretrafficmirroring.html" }, { "title" : "AWSSupport-ConnectivityTroubleshooter", "href" : "automation-awssupport-connectivitytroubleshooter.html" }, { "title" : "AWSSupport-TroubleshootVPN", "href" : "automation-aws-troubleshoot-vpn.html" }, { "title" : "AWSConfigRemediation-DeleteEgressOnlyInternetGateway", "href" : "automation-aws-delete-egress-igw.html" }, { "title" : "AWSConfigRemediation-DeleteUnusedENI", "href" : "automation-aws-delete-eni.html" }, { "title" : "AWSConfigRemediation-DeleteUnusedSecurityGroup", "href" : "automation-aws-delete-ec2-security-group.html" }, { "title" : "AWSConfigRemediation-DeleteUnusedVPCNetworkACL", "href" : "automation-aws-delete-vpc-nacl.html" }, { "title" : "AWSConfigRemediation-DeleteVPCFlowLog", "href" : "automation-aws-delete-vpc-flow-log.html" }, { "title" : "AWSConfigRemediation-DetachAndDeleteInternetGateway", "href" : "automation-aws-detach-delete-igw.html" }, { "title" : "AWSConfigRemediation-DetachAndDeleteVirtualPrivateGateway", "href" : "automation-aws-detach-delete-vpg.html" }, { "title" : "AWS-DisablePublicAccessForSecurityGroup", "href" : "automation-aws-disablepublicaccessforsecuritygroup.html" }, { "title" : "AWSConfigRemediation-DisableSubnetAutoAssignPublicIP", "href" : "automation-aws-disable-subnet-auto-public-ip.html" }, { "title" : "AWSSupport-EnableVPCFlowLogs", "href" : "automation-aws-enable-vpc-flowlogs.html" }, { "title" : "AWSConfigRemediation-EnableVPCFlowLogsToCloudWatch", "href" : "automation-aws-enable-flow-logs-cw.html" }, { "title" : "AWSConfigRemediation-EnableVPCFlowLogsToS3Bucket", "href" : "automation-aws-enable-flow-logs-s3.html" }, { "title" : "AWS-ReleaseElasticIP", "href" : "automation-aws-releaseelasticip.html" }, { "title" : "AWSConfigRemediation-RemoveUnrestrictedSourceIngressRules", "href" : "automation-aws-remove-unrestricted-source-ingress.html" }, { "title" : "AWSConfigRemediation-RemoveVPCDefaultSecurityGroupRules", "href" : "automation-aws-remove-default-secg-rules.html" }, { "title" : "AWSSupport-SetupIPMonitoringFromVPC", "href" : "automation-awssupport-setupipmonitoringfromvpc.html" }, { "title" : "AWSSupport-TerminateIPMonitoringFromVPC", "href" : "automation-awssupport-terminateipmonitoringfromvpc.html" } ] }, { "title" : "AWS WAF", "href" : "automation-ref-waf.html", "contents" : [ { "title" : "AWSConfigRemediation-EnableWAFClassicLogging", "href" : "automation-aws-enable-waf-logging.html" }, { "title" : "AWSConfigRemediation-EnableWAFClassicRegionalLogging", "href" : "automation-aws-enable-waf-reg-logging.html" }, { "title" : "AWSConfigRemediation-EnableWAFV2Logging", "href" : "automation-aws-enable-wafv2-logging.html" } ] }, { "title" : "Amazon WorkSpaces", "href" : "automation-ref-wsp.html", "contents" : [ { "title" : "AWS-CreateWorkSpace", "href" : "aws-create-workspace.html" }, { "title" : "AWSSupport-RecoverWorkSpace", "href" : "automation-awssupport-recover-workspace.html" } ] }, { "title" : "X-Ray", "href" : "automation-ref-xray.html", "contents" : [ { "title" : "AWSConfigRemediation-UpdateXRayKMSKey", "href" : "automation-aws-update-xray-key.html" } ] } ] } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/",
+    "service": "systems-manager-automation-runbooks",
+    "toc": {
+        "contents": [
+            {
+                "title": "Automation runbook reference",
+                "href": "automation-runbook-reference.html",
+                "contents": [
+                    {
+                        "title": "API Gateway",
+                        "href": "automation-ref-abp.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-DeleteAPIGatewayStage",
+                                "href": "automation-aws-delete-apigw-stage.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableAPIGatewayTracing",
+                                "href": "automation-aws-enable-apigw-tracing.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-UpdateAPIGatewayMethodCaching",
+                                "href": "automation-aws-update-api-gateway.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS CloudFormation",
+                        "href": "automation-ref-cfn.html",
+                        "contents": [
+                            {
+                                "title": "AWS-DeleteCloudFormationStack",
+                                "href": "automation-aws-deletecloudformationstack.html"
+                            },
+                            {
+                                "title": "AWS-RunCfnLint",
+                                "href": "automation-aws-runcfnlint.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootCFNCustomResource",
+                                "href": "automation-awssupport-TroubleshootCFNCustomResource.html"
+                            },
+                            {
+                                "title": "AWS-UpdateCloudFormationStack",
+                                "href": "automation-aws-updatecloudformationstack.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CloudFront",
+                        "href": "automation-ref-cf.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-EnableCloudFrontDefaultRootObject",
+                                "href": "automation-aws-enable-cloudfront-root-object.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableCloudFrontAccessLogs",
+                                "href": "automation-aws-enable-cloudfront-access-logs.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableCloudFrontOriginAccessIdentity",
+                                "href": "automation-aws-enable-cloudfront-origin-access.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableCloudFrontOriginFailover",
+                                "href": "automation-aws-enable-cloudfront-failover.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableCloudFrontViewerPolicyHTTPS",
+                                "href": "automation-aws-enable-cloudfront-viewer-policy.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CloudTrail",
+                        "href": "automation-ref-ct.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-CreateCloudTrailMultiRegionTrail",
+                                "href": "automation-aws-create-ct-mr.html"
+                            },
+                            {
+                                "title": "AWS-EnableCloudTrail",
+                                "href": "automation-aws-enablecloudtrail.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableCloudTrailEncryptionWithKMS",
+                                "href": "automation-aws-ctrail-kms.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableCloudTrailLogFileValidation",
+                                "href": "automation-aws-enable-ctrail-log-validation.html"
+                            },
+                            {
+                                "title": "AWS-QueryCloudTrailLogs",
+                                "href": "aws-querycloudtraillogs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CloudWatch",
+                        "href": "automation-ref-cw.html",
+                        "contents": [
+                            {
+                                "title": "AWS-ConfigureCloudWatchOnEC2Instance",
+                                "href": "automation-aws-configurecloudwatchonec2instance.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CodeBuild",
+                        "href": "automation-ref-acb.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-ConfigureCodeBuildProjectWithKMSCMK",
+                                "href": "automation-aws-codebuild-cmk.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteAccessKeysFromCodeBuildProject",
+                                "href": "automation-aws-delete-cb-keys.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS CodeDeploy",
+                        "href": "automation-ref-acd.html",
+                        "contents": [
+                            {
+                                "title": "AWSSupport-TroubleshootCodeDeploy",
+                                "href": "automation-awssupport-troubleshootcodedeploy.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS Config",
+                        "href": "automation-ref-cc.html",
+                        "contents": [
+                            {
+                                "title": "AWSSupport-SetupConfig",
+                                "href": "automation-aws-setup-config.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS Directory Service",
+                        "href": "automation-ref-ads.html",
+                        "contents": [
+                            {
+                                "title": "AWS-CreateDSManagementInstance",
+                                "href": "automation-awssupport-create-ds-management-instance.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootADConnectorConnectivity",
+                                "href": "automation-awssupport-troubleshootadconnectorconnectivity.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootDirectoryTrust",
+                                "href": "automation-awssupport-troubleshootdirectorytrust.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "DynamoDB",
+                        "href": "automation-ref-ddb.html",
+                        "contents": [
+                            {
+                                "title": "AWS-CreateDynamoDBBackup",
+                                "href": "automation-aws-createdynamodbbackup.html"
+                            },
+                            {
+                                "title": "AWS-DeleteDynamoDbBackup",
+                                "href": "automation-aws-deletedynamodbbackup.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteDynamoDbTable",
+                                "href": "automation-aws-deletedynamodbtable.html"
+                            },
+                            {
+                                "title": "AWS-DeleteDynamoDbTableBackups",
+                                "href": "automation-aws-deletedynamodbtablebackups.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableEncryptionOnDynamoDBTable",
+                                "href": "automation-aws-enable-ddb-encrypt.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnablePITRForDynamoDbTable",
+                                "href": "automation-aws-enable-pitr-ddb.html"
+                            },
+                            {
+                                "title": "AWS-RestoreDynamoDBTable",
+                                "href": "aws-restore-dynamodb-table.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon EBS",
+                        "href": "automation-ref-ebs.html",
+                        "contents": [
+                            {
+                                "title": "AWS-ArchiveEBSSnapshots",
+                                "href": "aws-archiveebssnapshots.html"
+                            },
+                            {
+                                "title": "AWS-AttachEBSVolume",
+                                "href": "automation-aws-attachebsvolume.html"
+                            },
+                            {
+                                "title": "AWSSupport-CalculateEBSPerformanceMetrics",
+                                "href": "automation-aws-calculate-ebs-performance-metrics.html"
+                            },
+                            {
+                                "title": "AWS-CopySnapshot",
+                                "href": "automation-aws-copysnapshot.html"
+                            },
+                            {
+                                "title": "AWS-CreateSnapshot",
+                                "href": "automation-aws-createsnapshot.html"
+                            },
+                            {
+                                "title": "AWS-DeleteSnapshot",
+                                "href": "automation-aws-deletesnapshot.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteUnusedEBSVolume",
+                                "href": "automation-aws-delete-ebs-volume.html"
+                            },
+                            {
+                                "title": "AWS-DeregisterAMIs",
+                                "href": "aws-deregisteramis.html"
+                            },
+                            {
+                                "title": "AWS-DetachEBSVolume",
+                                "href": "automation-aws-detachebsvolume.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableEbsEncryptionByDefault",
+                                "href": "automation-aws-enable-ebs-encryption.html"
+                            },
+                            {
+                                "title": "AWS-ExtendEBSVolume",
+                                "href": "aws-extendebsvolume.html"
+                            },
+                            {
+                                "title": "AWSSupport-ModifyEBSSnapshotPermission",
+                                "href": "automation-awssupport-modifyebssnapshotpermission.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-ModifyEBSVolumeType",
+                                "href": "automation-aws-modify-ebs-type.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon EC2",
+                        "href": "automation-ref-ec2.html",
+                        "contents": [
+                            {
+                                "title": "AWS-ASGEnterStandby",
+                                "href": "automation-aws-asgenterstandby.html"
+                            },
+                            {
+                                "title": "AWS-ASGExitStandby",
+                                "href": "automation-aws-asgexitstandby.html"
+                            },
+                            {
+                                "title": "AWS-CreateImage",
+                                "href": "automation-aws-createimage.html"
+                            },
+                            {
+                                "title": "AWS-DeleteImage",
+                                "href": "automation-aws-deleteimage.html"
+                            },
+                            {
+                                "title": "AWS-PatchAsgInstance",
+                                "href": "automation-aws-patchasginstance.html"
+                            },
+                            {
+                                "title": "AWS-PatchInstanceWithRollback",
+                                "href": "automation-aws-patchinstancewithrollback.html"
+                            },
+                            {
+                                "title": "AWS-QuarantineEC2Instance",
+                                "href": "aws-quarantineec2instance.html"
+                            },
+                            {
+                                "title": "AWS-ResizeInstance",
+                                "href": "automation-aws-resizeinstance.html"
+                            },
+                            {
+                                "title": "AWS-RestartEC2Instance",
+                                "href": "automation-aws-restartec2instance.html"
+                            },
+                            {
+                                "title": "AWS-SetupJupyter",
+                                "href": "aws-setup-jupyter.html"
+                            },
+                            {
+                                "title": "AWS-StartEC2Instance",
+                                "href": "automation-aws-startec2instance.html"
+                            },
+                            {
+                                "title": "AWS-StopEC2Instance",
+                                "href": "automation-aws-stopec2instance.html"
+                            },
+                            {
+                                "title": "AWS-TerminateEC2Instance",
+                                "href": "automation-aws-terminateec2instance.html"
+                            },
+                            {
+                                "title": "AWS-UpdateLinuxAmi",
+                                "href": "automation-aws-updatelinuxami.html"
+                            },
+                            {
+                                "title": "AWS-UpdateWindowsAmi",
+                                "href": "automation-aws-updatewindowsami.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableAutoScalingGroupELBHealthCheck",
+                                "href": "automation-aws-enable-asg-health-check.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnforceEC2InstanceIMDSv2",
+                                "href": "automation-aws-enforce-ec2-imdsv2.html"
+                            },
+                            {
+                                "title": "AWSEC2-CloneInstanceAndUpgradeSQLServer",
+                                "href": "automation-awsec2-CloneInstanceAndUpgradeSQLServer.html"
+                            },
+                            {
+                                "title": "AWSEC2-CloneInstanceAndUpgradeWindows",
+                                "href": "automation-awsec2-CloneInstanceAndUpgradeWindows.html"
+                            },
+                            {
+                                "title": "AWSEC2-ConfigureSTIG",
+                                "href": "awsec2-configurestig.html"
+                            },
+                            {
+                                "title": "AWSEC2-PatchLoadBalancerInstance",
+                                "href": "automation-awsec2-patch-load-balancer-instance.html"
+                            },
+                            {
+                                "title": "AWSEC2-SQLServerDBRestore",
+                                "href": "automation-awsec2-sqlserverdbrestore.html"
+                            },
+                            {
+                                "title": "AWSSupport-ActivateWindowsWithAmazonLicense",
+                                "href": "automation-awssupport-activatewindowswithamazonlicense.html"
+                            },
+                            {
+                                "title": "AWSSupport-AnalyzeAWSEndpointReachabilityFromEC2",
+                                "href": "automation-awssupport-analyzeawsendpointreachabilityfromec2.html"
+                            },
+                            {
+                                "title": "AWSPremiumSupport-ChangeInstanceTypeIntelToAMD",
+                                "href": "automation-aws-changeinstancetypeinteltoamd.html"
+                            },
+                            {
+                                "title": "AWSSupport-CheckXenToNitroMigrationRequirements",
+                                "href": "automation-awssupport-checkxentonitromigrationrequirements.html"
+                            },
+                            {
+                                "title": "AWSSupport-ConfigureEC2Metadata",
+                                "href": "automation-awssupport-configureec2metadata.html"
+                            },
+                            {
+                                "title": "AWSSupport-CopyEC2Instance",
+                                "href": "automation-awssupport-copyec2instance.html"
+                            },
+                            {
+                                "title": "AWSSupport-ExecuteEC2Rescue",
+                                "href": "automation-awssupport-executeec2rescue.html"
+                            },
+                            {
+                                "title": "AWSSupport-ListEC2Resources",
+                                "href": "automation-awssupport-listec2resources.html"
+                            },
+                            {
+                                "title": "AWSSupport-ManageRDPSettings",
+                                "href": "automation-awssupport-managerdpsettings.html"
+                            },
+                            {
+                                "title": "AWSSupport-ManageWindowsService",
+                                "href": "automation-awssupport-managewindowsservice.html"
+                            },
+                            {
+                                "title": "AWSSupport-MigrateEC2ClassicToVPC",
+                                "href": "automation-awssupport-migrate-ec2-classic-to-vpc.html"
+                            },
+                            {
+                                "title": "AWSSupport-MigrateXenToNitroLinux",
+                                "href": "automation-awssupport-migrate-xen-to-nitro.html"
+                            },
+                            {
+                                "title": "AWSSupport-ResetAccess",
+                                "href": "automation-awssupport-resetaccess.html"
+                            },
+                            {
+                                "title": "AWSSupport-ResetLinuxUserPassword",
+                                "href": "automation-awssupport-resetlinuxuserpassword.html"
+                            },
+                            {
+                                "title": "AWSPremiumSupport-ResizeNitroInstance",
+                                "href": "automation-aws-resizenitroinstance.html"
+                            },
+                            {
+                                "title": "AWSSupport-RestoreEC2InstanceFromSnapshot",
+                                "href": "automation-awssupport-restoreec2instancefromsnapshot.html"
+                            },
+                            {
+                                "title": "AWSSupport-SendLogBundleToS3Bucket",
+                                "href": "automation-awssupport-sendlogbundletos3bucket.html"
+                            },
+                            {
+                                "title": "AWSSupport-StartEC2RescueWorkflow",
+                                "href": "automation-awssupport-startec2rescueworkflow.html"
+                            },
+                            {
+                                "title": "AWSPremiumSupport-TroubleshootEC2DiskUsage",
+                                "href": "automation-awspremiumsupport-troubleshootEC2diskusage.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootRDP",
+                                "href": "automation-awssupport-troubleshootrdp.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootSSH",
+                                "href": "automation-awssupport-troubleshootssh.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootSUSERegistration",
+                                "href": "automation-awssupport-troubleshoot-suse-registration.html"
+                            },
+                            {
+                                "title": "AWSSupport-UpgradeWindowsAWSDrivers",
+                                "href": "automation-awssupport-upgradewindowsawsdrivers.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon ECS",
+                        "href": "automation-ref-ecs.html",
+                        "contents": [
+                            {
+                                "title": "AWSSupport-CollectECSInstanceLogs",
+                                "href": "automation-awssupport-collectecsinstancelogs.html"
+                            },
+                            {
+                                "title": "AWS-InstallAmazonECSAgent",
+                                "href": "automation-aws-install-ecs-agent.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootECSContainerInstance",
+                                "href": "automation-aws-troubleshoot-ecs-container-instance.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootECSTaskFailedToStart",
+                                "href": "automation-aws-troubleshootecstaskfailedtostart.html"
+                            },
+                            {
+                                "title": "AWS-UpdateAmazonECSAgent",
+                                "href": "automation-aws-update-ecs-agent.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon EFS",
+                        "href": "automation-ref-efs.html",
+                        "contents": [
+                            {
+                                "title": "AWSSupport-CheckAndMountEFS",
+                                "href": "automation-awssupport-check-and-mount-efs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon EKS",
+                        "href": "automation-ref-eks.html",
+                        "contents": [
+                            {
+                                "title": "AWSSupport-CollectEKSInstanceLogs",
+                                "href": "automation-awssupport-collecteksinstancelogs.html"
+                            },
+                            {
+                                "title": "AWS-DeleteEKSCluster",
+                                "href": "automation-aws-deleteekscluster.html"
+                            },
+                            {
+                                "title": "AWSPremiumSupport-TroubleshootEKSCluster",
+                                "href": "automation-awspremiumsupport-troubleshootekscluster.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootEKSWorkerNode",
+                                "href": "automation-awssupport-troubleshooteksworkernode.html"
+                            },
+                            {
+                                "title": "AWS-UpdateEKSManagedNodegroup",
+                                "href": "aws-updateeksmanagednodegroup.html"
+                            },
+                            {
+                                "title": "AWS-UpdateEKSSelfManagedNodeGroups",
+                                "href": "aws-updateeksselfmanagednodegroup.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Elastic Beanstalk",
+                        "href": "automation-ref-aeb.html",
+                        "contents": [
+                            {
+                                "title": "AWSSupport-CollectElasticBeanstalkLogs",
+                                "href": "automation-awssupport-collectbeanstalk-logs.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableElasticBeanstalkEnvironmentLogStreaming",
+                                "href": "automation-aws-enable-eb-logging.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableBeanstalkEnvironmentNotifications",
+                                "href": "automation-aws-enable-eb-notifications.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootElasticBeanstalk",
+                                "href": "automation-awssupport-troubleshoot-elastic-beanstalk.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Elastic Load Balancing",
+                        "href": "automation-ref-elb.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-DropInvalidHeadersForALB",
+                                "href": "automation-aws-drop-alb-headers.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableCLBCrossZoneLoadBalancing",
+                                "href": "automation-aws-enable-clb-crosszone.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableELBDeletionProtection",
+                                "href": "automation-aws-enable-elb-protection.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableLoggingForALBAndCLB",
+                                "href": "automation-aws-enable-logging-alb-clb.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootCLBConnectivity",
+                                "href": "automation-aws-troubleshootclbconnectivity.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableNLBCrossZoneLoadBalancing",
+                                "href": "automation-aws-enable-nlb-crosszone.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon EMR",
+                        "href": "automation-ref-emr.html",
+                        "contents": [
+                            {
+                                "title": "AWSSupport-AnalyzeEMRLogs",
+                                "href": "automation-awssupport-analyzeemrlogs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon OpenSearch Service",
+                        "href": "automation-ref-opensearch.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-DeleteOpenSearchDomain",
+                                "href": "automation-aws-delete-opensearch-domain.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnforceHTTPSOnOpenSearchDomain",
+                                "href": "automation-aws-enforce-https-opensearch.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-UpdateOpenSearchDomainSecurityGroups",
+                                "href": "automation-aws-update-opensearch-security-group.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "EventBridge",
+                        "href": "automation-ref-ev.html",
+                        "contents": [
+                            {
+                                "title": "AWS-AddOpsItemDedupStringToEventBridgeRule",
+                                "href": "automation-aws-add-dedup-string-ev.html"
+                            },
+                            {
+                                "title": "AWS-DisableEventBridgeRule",
+                                "href": "automation-aws-disable-ev-rule.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "GuardDuty",
+                        "href": "automation-ref-gdu.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-CreateGuardDutyDetector",
+                                "href": "automation-aws-enable-guard-detect.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IAM",
+                        "href": "automation-ref-iam.html",
+                        "contents": [
+                            {
+                                "title": "AWS-AttachIAMToInstance",
+                                "href": "automation-aws-attachiamtoinstance.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteIAMRole",
+                                "href": "automation-aws-delete-iam-role.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteIAMUser",
+                                "href": "automation-aws-delete-iam-user.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteUnusedIAMGroup",
+                                "href": "automation-aws-delete-iam-group.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteUnusedIAMPolicy",
+                                "href": "automation-aws-delete-iam-policy.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DetachIAMPolicy",
+                                "href": "automation-aws-detach-iam-policy.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableAccountAccessAnalyzer",
+                                "href": "automation-aws-enable-account-access-analyzer.html"
+                            },
+                            {
+                                "title": "AWSSupport-GrantPermissionsToIAMUser",
+                                "href": "automation-awssupport-grantpermissionstoiamuser.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-RemoveUserPolicies",
+                                "href": "automation-aws-remove-user-policies.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-ReplaceIAMInlinePolicy",
+                                "href": "automation-aws-replace-iam-policy.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-RevokeUnusedIAMUserCredentials",
+                                "href": "automation-aws-revoke-iam-user.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-SetIAMPasswordPolicy",
+                                "href": "automation-aws-set-iam-policy.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS KMS",
+                        "href": "automation-ref-kms.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-CancelKeyDeletion",
+                                "href": "automation-aws-cancel-key-deletion.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableKeyRotation",
+                                "href": "automation-aws-enable-key-rotation.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Lambda",
+                        "href": "automation-ref-lam.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-ConfigureLambdaFunctionXRayTracing",
+                                "href": "automation-aws-config-lambda-xray.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteLambdaFunction",
+                                "href": "automation-aws-delete-lambda.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EncryptLambdaEnvironmentVariablesWithCMK",
+                                "href": "automation-aws-encrypt-lambda-variables.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-MoveLambdaToVPC",
+                                "href": "automation-aws-lambda-to-vpc.html"
+                            },
+                            {
+                                "title": "AWSSupport-RemediateLambdaS3Event",
+                                "href": "automation-awssupport-remediatelambdas3event.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootLambdaInternetAccess",
+                                "href": "AWSSupport-TroubleshootLambdaInternetAccess.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootLambdaS3Event",
+                                "href": "automation-aws-troubleshootlambdas3event.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon RDS",
+                        "href": "automation-ref-rds.html",
+                        "contents": [
+                            {
+                                "title": "AWS-CreateRdsSnapshot",
+                                "href": "automation-aws-createrdssnapshot.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteRDSCluster",
+                                "href": "automation-aws-delete-rds-cluster.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteRDSClusterSnapshot",
+                                "href": "automation-aws-delete-rds-cluster-snap.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteRDSInstance",
+                                "href": "automation-aws-delete-rds-instance.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteRDSInstanceSnapshot",
+                                "href": "automation-aws-delete-rds-snapshot.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DisablePublicAccessToRDSInstance",
+                                "href": "automation-aws-disable-rds-instance-public-access.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableCopyTagsToSnapshotOnRDSCluster",
+                                "href": "automation-aws-enable-tags-snapshot-rds-cluster.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableCopyTagsToSnapshotOnRDSDBInstance",
+                                "href": "automation-aws-enable-tags-snapshot-rds-instance.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableEnhancedMonitoringOnRDSInstance",
+                                "href": "automation-aws-enable-rds-monitoring.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableMinorVersionUpgradeOnRDS",
+                                "href": "automation-aws-enable-rds-minor-version.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableMultiAZOnRDSInstance",
+                                "href": "automation-aws-multi-az-rds.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnablePerformanceInsightsOnRDSInstance",
+                                "href": "automation-aws-enable-performance-insights-rds.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableRDSClusterDeletionProtection",
+                                "href": "automation-aws-enable-rds-cluster-deletion-protection.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableRDSInstanceBackup",
+                                "href": "automation-aws-enable-rds-instance-backup.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableRDSInstanceDeletionProtection",
+                                "href": "automation-aws-enable-rds-instance-deletion-protection.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-ModifyRDSInstancePortNumber",
+                                "href": "automation-aws-modify-rds-port.html"
+                            },
+                            {
+                                "title": "AWSSupport-ModifyRDSSnapshotPermission",
+                                "href": "automation-awssupport-modifyrdssnapshotpermission.html"
+                            },
+                            {
+                                "title": "AWSPremiumSupport-PostgreSQLWorkloadReview",
+                                "href": "automation-aws-postgresqlworkloadreview.html"
+                            },
+                            {
+                                "title": "AWS-RebootRdsInstance",
+                                "href": "automation-aws-rebootrdsinstance.html"
+                            },
+                            {
+                                "title": "AWSSupport-ShareRDSSnapshot",
+                                "href": "automation-aws-sharerdssnapshot.html"
+                            },
+                            {
+                                "title": "AWS-StartRdsInstance",
+                                "href": "automation-aws-startrdsinstance.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootConnectivityToRDS",
+                                "href": "automation-awssupport-troubleshootconnectivitytords.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon Redshift",
+                        "href": "automation-ref-rs.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-DeleteRedshiftCluster",
+                                "href": "automation-aws-delete-redshift.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DisablePublicAccessToRedshiftCluster",
+                                "href": "automation-aws-disable-redshift-public-access.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableRedshiftClusterAuditLogging",
+                                "href": "automation-aws-enable-redshift-audit.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableRedshiftClusterAutomatedSnapshot",
+                                "href": "automation-aws-enable-redshift-snapshot.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableRedshiftClusterEncryption",
+                                "href": "automation-aws-enable-redshift-encrypt.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableRedshiftClusterEnhancedVPCRouting",
+                                "href": "automation-aws-enable-redshift-enhanced-routing.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnforceSSLOnlyConnectionsToRedshiftCluster",
+                                "href": "automation-aws-enforce-redshift-ssl-only.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-ModifyRedshiftClusterMaintenanceSettings",
+                                "href": "automation-aws-modify-redshift-maintenance.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-ModifyRedshiftClusterNodeType",
+                                "href": "automation-aws-modify-redshift-cluster-node.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon S3",
+                        "href": "automation-ref-s3.html",
+                        "contents": [
+                            {
+                                "title": "AWS-ConfigureS3BucketLogging",
+                                "href": "automation-aws-configures3bucketlogging.html"
+                            },
+                            {
+                                "title": "AWS-ConfigureS3BucketVersioning",
+                                "href": "automation-aws-configures3bucketversioning.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-ConfigureS3BucketPublicAccessBlock",
+                                "href": "automation-aws-block-public-s3-bucket.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-ConfigureS3PublicAccessBlock",
+                                "href": "automation-aws-block-public-s3.html"
+                            },
+                            {
+                                "title": "AWS-DisableS3BucketPublicReadWrite",
+                                "href": "automation-aws-disables3bucketpublicreadwrite.html"
+                            },
+                            {
+                                "title": "AWS-EnableS3BucketEncryption",
+                                "href": "automation-aws-enableS3bucketencryption.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-RemovePrincipalStarFromS3BucketPolicy",
+                                "href": "automation-aws-remove-s3-wildcard.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-RestrictBucketSSLRequestsOnly",
+                                "href": "automation-aws-s3-deny-http.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootS3PublicRead",
+                                "href": "automation-awssupport-troubleshoots3publicread.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Secrets Manager",
+                        "href": "automation-ref-asm.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-DeleteSecret",
+                                "href": "automation-aws-delete-secret.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-RotateSecret",
+                                "href": "automation-aws-rotate-secret.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Security Hub",
+                        "href": "automation-ref-ash.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-EnableSecurityHub",
+                                "href": "automation-aws-enable-security-hub.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS Shield",
+                        "href": "automation-ref-shd.html",
+                        "contents": [
+                            {
+                                "title": "AWSPremiumSupport-DDoSResiliencyAssessment",
+                                "href": "automation-aws-ddosresiliencyassessment.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon SNS",
+                        "href": "automation-ref-sns.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-EncryptSNSTopic",
+                                "href": "automation-aws-encrypt-sns-topic.html"
+                            },
+                            {
+                                "title": "AWS-PublishSNSNotification",
+                                "href": "automation-aws-publishsnsnotification.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Systems Manager",
+                        "href": "automation-ref-sys.html",
+                        "contents": [
+                            {
+                                "title": "AWS-BulkDeleteAssociation",
+                                "href": "aws-bulkdeleteassociation.html"
+                            },
+                            {
+                                "title": "AWS-BulkEditOpsItems",
+                                "href": "automation-aws-bulk-edit-opsitems.html"
+                            },
+                            {
+                                "title": "AWS-BulkResolveOpsItems",
+                                "href": "automation-aws-bulk-resolve-opsitems.html"
+                            },
+                            {
+                                "title": "AWS-ConfigureMaintenanceWindows",
+                                "href": "aws-configuremaintenancewindows.html"
+                            },
+                            {
+                                "title": "AWS-CreateManagedLinuxInstance",
+                                "href": "automation-aws-createmanagedlinuxinstance.html"
+                            },
+                            {
+                                "title": "AWS-CreateManagedWindowsInstance",
+                                "href": "automation-aws-createmanagedwindowsinstance.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableCWLoggingForSessionManager",
+                                "href": "automation-aws-enable-cw-log-sm.html"
+                            },
+                            {
+                                "title": "AWS-ExportOpsDataToS3",
+                                "href": "automation-aws-exportopsdatatos3.html"
+                            },
+                            {
+                                "title": "AWS-ExportPatchReportToS3",
+                                "href": "automation-aws-exportpatchreporttos3.html"
+                            },
+                            {
+                                "title": "AWS-SetupInventory",
+                                "href": "automation-aws-setupinventory.html"
+                            },
+                            {
+                                "title": "AWS-SetupManagedInstance",
+                                "href": "automation-aws-setupmanagedinstance.html"
+                            },
+                            {
+                                "title": "AWS-SetupManagedRoleOnEC2Instance",
+                                "href": "automation-aws-setupmanagedroleonec2instance.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootManagedInstance",
+                                "href": "automation-awssupport-troubleshoot-managed-instance.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootSessionManager",
+                                "href": "automation-awssupport-troubleshoot-session-manager.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Third-party",
+                        "href": "automation-ref-third-party.html",
+                        "contents": [
+                            {
+                                "title": "AWS-CreateJiraIssue",
+                                "href": "automation-aws-createjiraissue.html"
+                            },
+                            {
+                                "title": "AWS-CreateServiceNowIncident",
+                                "href": "automation-aws-createservicenowincident.html"
+                            },
+                            {
+                                "title": "AWS-RunPacker",
+                                "href": "automation-aws-runpacker.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon VPC",
+                        "href": "automation-ref-vpc.html",
+                        "contents": [
+                            {
+                                "title": "AWSSupport-ConfigureDNSQueryLogging",
+                                "href": "automation-aws-configure-dns-query-logging.html"
+                            },
+                            {
+                                "title": "AWSSupport-ConfigureTrafficMirroring",
+                                "href": "automation-aws-configuretrafficmirroring.html"
+                            },
+                            {
+                                "title": "AWSSupport-ConnectivityTroubleshooter",
+                                "href": "automation-awssupport-connectivitytroubleshooter.html"
+                            },
+                            {
+                                "title": "AWSSupport-TroubleshootVPN",
+                                "href": "automation-aws-troubleshoot-vpn.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteEgressOnlyInternetGateway",
+                                "href": "automation-aws-delete-egress-igw.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteUnusedENI",
+                                "href": "automation-aws-delete-eni.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteUnusedSecurityGroup",
+                                "href": "automation-aws-delete-ec2-security-group.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteUnusedVPCNetworkACL",
+                                "href": "automation-aws-delete-vpc-nacl.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DeleteVPCFlowLog",
+                                "href": "automation-aws-delete-vpc-flow-log.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DetachAndDeleteInternetGateway",
+                                "href": "automation-aws-detach-delete-igw.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DetachAndDeleteVirtualPrivateGateway",
+                                "href": "automation-aws-detach-delete-vpg.html"
+                            },
+                            {
+                                "title": "AWS-DisablePublicAccessForSecurityGroup",
+                                "href": "automation-aws-disablepublicaccessforsecuritygroup.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-DisableSubnetAutoAssignPublicIP",
+                                "href": "automation-aws-disable-subnet-auto-public-ip.html"
+                            },
+                            {
+                                "title": "AWSSupport-EnableVPCFlowLogs",
+                                "href": "automation-aws-enable-vpc-flowlogs.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableVPCFlowLogsToCloudWatch",
+                                "href": "automation-aws-enable-flow-logs-cw.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableVPCFlowLogsToS3Bucket",
+                                "href": "automation-aws-enable-flow-logs-s3.html"
+                            },
+                            {
+                                "title": "AWS-ReleaseElasticIP",
+                                "href": "automation-aws-releaseelasticip.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-RemoveUnrestrictedSourceIngressRules",
+                                "href": "automation-aws-remove-unrestricted-source-ingress.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-RemoveVPCDefaultSecurityGroupRules",
+                                "href": "automation-aws-remove-default-secg-rules.html"
+                            },
+                            {
+                                "title": "AWSSupport-SetupIPMonitoringFromVPC",
+                                "href": "automation-awssupport-setupipmonitoringfromvpc.html"
+                            },
+                            {
+                                "title": "AWSSupport-TerminateIPMonitoringFromVPC",
+                                "href": "automation-awssupport-terminateipmonitoringfromvpc.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS WAF",
+                        "href": "automation-ref-waf.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-EnableWAFClassicLogging",
+                                "href": "automation-aws-enable-waf-logging.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableWAFClassicRegionalLogging",
+                                "href": "automation-aws-enable-waf-reg-logging.html"
+                            },
+                            {
+                                "title": "AWSConfigRemediation-EnableWAFV2Logging",
+                                "href": "automation-aws-enable-wafv2-logging.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon WorkSpaces",
+                        "href": "automation-ref-wsp.html",
+                        "contents": [
+                            {
+                                "title": "AWS-CreateWorkSpace",
+                                "href": "aws-create-workspace.html"
+                            },
+                            {
+                                "title": "AWSSupport-RecoverWorkSpace",
+                                "href": "automation-awssupport-recover-workspace.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "X-Ray",
+                        "href": "automation-ref-xray.html",
+                        "contents": [
+                            {
+                                "title": "AWSConfigRemediation-UpdateXRayKMSKey",
+                                "href": "automation-aws-update-xray-key.html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

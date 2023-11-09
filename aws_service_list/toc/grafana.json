@@ -1,1 +1,1622 @@
-{ "contents" : [ { "title" : "What is Amazon Managed Grafana?", "href" : "what-is-Amazon-Managed-Service-Grafana.html" }, { "title" : "Setting up", "href" : "Amazon-Managed-Grafana-setting-up.html" }, { "title" : "User authentication", "href" : "authentication-in-AMG.html", "contents" : [ { "title" : "SAML", "href" : "authentication-in-AMG-SAML.html", "contents" : [ { "title" : "Azure Active Directory", "href" : "AMG-SAML-providers-Azure.html" }, { "title" : "CyberArk", "href" : "AMG-SAML-providers-CyberArk.html" }, { "title" : "Okta", "href" : "AMG-SAML-providers-okta.html" }, { "title" : "OneLogin", "href" : "AMG-SAML-providers-onelogin.html" }, { "title" : "Ping Identity", "href" : "AMG-SAML-providers-pingone.html" } ] }, { "title" : "AWS IAM Identity Center", "href" : "authentication-in-AMG-SSO.html" } ] }, { "title" : "Getting started", "href" : "getting-started-with-AMG.html" }, { "title" : "Managing workspaces, users, and policies", "href" : "AMG-manage-workspaces-users.html", "contents" : [ { "title" : "About Grafana versions", "href" : "version-differences.html" }, { "title" : "Create a workspace", "href" : "AMG-create-workspace.html" }, { "title" : "Updating your workspace version", "href" : "AMG-workspace-version-update.html" }, { "title" : "Migrating content between workspaces", "href" : "AMG-workspace-content-migration.html" }, { "title" : "Managing user and group access", "href" : "AMG-manage-users-and-groups-AMG.html" }, { "title" : "Permissions for data sources and notification channels", "href" : "AMG-datasource-and-notification.html" }, { "title" : "Creating resources with AWS CloudFormation", "href" : "creating-resources-with-cloudformation.html" }, { "title" : "Managing network access", "href" : "AMG-configure-nac.html" }, { "title" : "Connecting to Amazon VPC", "href" : "AMG-configure-vpc.html", "contents" : [ { "title" : "Troubleshooting VPC", "href" : "AMG-configure-vpc-faq.html" } ] }, { "title" : "Configure a workspace", "href" : "AMG-configure-workspace.html" }, { "title" : "Deleting a workspace", "href" : "AMG-edit-delete-workspace.html" } ] }, { "title" : "Working in your Grafana workspace", "href" : "AMG-working-with-Grafana-workspace.html", "contents" : [ { "title" : "Users, teams, and permissions", "href" : "Grafana-administration-authorization.html", "contents" : [ { "title" : "Users", "href" : "Grafana-users.html" }, { "title" : "User roles", "href" : "Grafana-user-roles.html" }, { "title" : "Managing teams", "href" : "Grafana-teams.html" }, { "title" : "Using permissions", "href" : "Grafana-permissions.html", "contents" : [ { "title" : "Dashboard and folder permissions", "href" : "dashboard-and-folder-permissions.html" }, { "title" : "Data source permissions", "href" : "data-source-permissions.html" } ] } ] }, { "title" : "Getting started in your Grafana workspace console", "href" : "getting-started-grafanaui.html" }, { "title" : "Data sources", "href" : "AMG-data-sources.html", "contents" : [ { "title" : "Working with AWS Organizations", "href" : "AMG-and-Organizations.html" }, { "title" : "Built-in data sources", "href" : "AMG-data-sources-builtin.html", "contents" : [ { "title" : "Alertmanager", "href" : "data-source-alertmanager.html" }, { "title" : "Amazon CloudWatch", "href" : "using-amazon-cloudwatch-in-AMG.html", "contents" : [ { "title" : "Use AWS data source configuration to add CloudWatch as a data source", "href" : "adding-CloudWatch-AWS-config.html" }, { "title" : "Manually add CloudWatch as a data source", "href" : "adding--CloudWatch-manual.html" }, { "title" : "Using the CloudWatch data source", "href" : "CloudWatch-using.html", "contents" : [ { "title" : "Using the query editor", "href" : "CloudWatch-using-the-query-editor.html", "contents" : [ { "title" : "Using the metric query editor", "href" : "CloudWatch-using-the-metric-query-editor.html", "contents" : [ { "title" : "Using the metric search option", "href" : "CloudWatch-using-the-metric-search.html" }, { "title" : "Using the metric query option to query CloudWatch Metrics Insights data", "href" : "CloudWatch-using-the-metric-query.html" } ] }, { "title" : "Using the Amazon CloudWatch Logs query editor", "href" : "CloudWatch-using-the-logs-query-editor.html" } ] }, { "title" : "Curated dashboards", "href" : "CloudWatch-curated-dashboards.html" }, { "title" : "Templated queries", "href" : "cloudwatch-templated-queries.html" }, { "title" : "Using ec2_instance_attribute examples", "href" : "ec2_instance_attribute-examples.html" }, { "title" : "Using JSON format template variables", "href" : "cloudwatch-using-json-format-template-variables.html" }, { "title" : "Pricing", "href" : "pricing.html" }, { "title" : "Service quotas", "href" : "cloudwatch-service-quotas.html" }, { "title" : "Cross-account observability", "href" : "cloudwatch-cross-account.html" } ] } ] }, { "title" : "Amazon OpenSearch Service", "href" : "using-Amazon-OpenSearch-in-AMG.html", "contents" : [ { "title" : "Use AWS data source configuration to add OpenSearch Service as a data source", "href" : "ES-adding-AWS-config.html" }, { "title" : "Manually add Amazon OpenSearch Service as a data source", "href" : "ES-adding-the-data-source.html" }, { "title" : "Using the Amazon OpenSearch Service data source", "href" : "ES-use-datasource.html" }, { "title" : "OpenSearch Service Serverless", "href" : "datasources-opensearch-serverless.html" }, { "title" : "Traces support", "href" : "datasources-opensearch-traces.html" } ] }, { "title" : "AWS IoT SiteWise", "href" : "using-iotsitewise-in-AMG.html", "contents" : [ { "title" : "Use AWS data source configuration to add AWS IoT SiteWise as a data source", "href" : "IoTSiteWise-adding-AWS-config.html" }, { "title" : "Manually adding the AWS IoT SiteWise data source", "href" : "iotsitewise-add-the-data-source.html" }, { "title" : "Using the AWS IoT SiteWise data source", "href" : "IoTSiteWise-using.html" } ] }, { "title" : "AWS IoT TwinMaker", "href" : "AMG-iot-twinmaker.html", "contents" : [ { "title" : "Manually adding the AWS IoT TwinMaker data source", "href" : "twinmaker-add-the-data-source.html" }, { "title" : "Using the AWS IoT TwinMaker data source", "href" : "IoT-twinmaker-using.html" } ] }, { "title" : "Amazon Managed Service for Prometheus and open-source Prometheus", "href" : "prometheus-data-source.html", "contents" : [ { "title" : "Use AWS data source configuration to add Amazon Managed Service for Prometheus as a data source", "href" : "AMP-adding-AWS-config.html" }, { "title" : "Manually adding the Prometheus data source", "href" : "prometheus-manually-adding.html" }, { "title" : "Using the Prometheus data source", "href" : "using-prometheus-datasource.html" }, { "title" : "Visualize alerts from Amazon Managed Service for Prometheus", "href" : "amp-configure-alerts.html" } ] }, { "title" : "Amazon Timestream", "href" : "timestream-datasource.html", "contents" : [ { "title" : "Use AWS data source configuration to add Timestream as a data source", "href" : "Timestream-adding-AWS-config.html" }, { "title" : "Manually adding the Timestream data source", "href" : "timestream-add-the-data-source.html" }, { "title" : "Using the Timestream data source", "href" : "timestream-query-editor.html" } ] }, { "title" : "Amazon Athena", "href" : "AWS-Athena.html", "contents" : [ { "title" : "Prerequisites", "href" : "Athena-prereq.html" }, { "title" : "Use AWS data source configuration to add Amazon Athena as a data source", "href" : "Athena-adding-AWS-config.html" }, { "title" : "Manually adding the Athena data source", "href" : "Athena-add-the-data-source.html" }, { "title" : "Using Athena data source", "href" : "Athena-using-the-data-source.html" } ] }, { "title" : "Amazon Redshift", "href" : "AWS-Redshift.html", "contents" : [ { "title" : "Prerequisites", "href" : "Redshift-prereq.html" }, { "title" : "Use AWS data source configuration to add Amazon Redshift as a data source", "href" : "Redshift-configure.html" }, { "title" : "Manually adding the Amazon Redshift data source", "href" : "Redshift-add-the-data-source.html" }, { "title" : "Configuring Amazon Redshift", "href" : "Redshift-config.html" }, { "title" : "Using the Amazon Redshift data source", "href" : "Redshift-using-the-data-source.html" } ] }, { "title" : "AWS X-Ray", "href" : "x-ray-data-source.html", "contents" : [ { "title" : "Use AWS data source configuration to add X-Ray as a data source", "href" : "xray-adding-AWS-config.html" }, { "title" : "Manually adding the X-Ray data source", "href" : "xray-add-the-data-source.html" }, { "title" : "Using the X-Ray data source", "href" : "xray-using.html" } ] }, { "title" : "Azure Monitor", "href" : "using-azure-monitor-in-AMG.html" }, { "title" : "Cloudflare", "href" : "Cloudflare.html" }, { "title" : "GitHub", "href" : "ds-github.html" }, { "title" : "Graphite", "href" : "using-graphite-in-AMG.html" }, { "title" : "Google BigQuery", "href" : "AMG-datasource-bigquery.html" }, { "title" : "Google Cloud Monitoring", "href" : "using-google-cloud-monitoring-in-grafana.html" }, { "title" : "Google Sheets", "href" : "google-sheets-datasource.html" }, { "title" : "InfluxDB", "href" : "using-influxdb-in-AMG.html" }, { "title" : "Jaeger", "href" : "jaeger-data-source.html" }, { "title" : "JSON", "href" : "JSON-AMG-datasource.html" }, { "title" : "Loki", "href" : "using-loki-in-AMG.html" }, { "title" : "Microsoft SQL Server", "href" : "using-microsoft-sql-server-in-AMG.html" }, { "title" : "Moogsoft", "href" : "ds-moogsoft.html" }, { "title" : "MySQL", "href" : "using-mysql-in-AMG.html" }, { "title" : "OpenSearch", "href" : "using-opensearch-in-AMG.html" }, { "title" : "OpenTSDB", "href" : "using-opentsdb-in-AMG.html" }, { "title" : "Pixie", "href" : "ds-pixie.html" }, { "title" : "PostgreSQL", "href" : "using-postgresql-in-AMG.html" }, { "title" : "Redis", "href" : "AMG-datasource-redis.html" }, { "title" : "Tempo", "href" : "tempo-data-source.html" }, { "title" : "TestData", "href" : "testdata-data-source.html" }, { "title" : "Zabbix", "href" : "Zabbix.html" }, { "title" : "Zipkin", "href" : "zipkin-data-source.html" } ] }, { "title" : "Data sources available in Grafana Enterprise", "href" : "AMG-data-sources-enterprise.html", "contents" : [ { "title" : "AppDynamics", "href" : "appdynamics-AMG-datasource.html" }, { "title" : "Databricks", "href" : "AMG-databricks-datasource.html" }, { "title" : "Datadog", "href" : "AMG-datadog-datasource-plugin.html" }, { "title" : "Dynatrace", "href" : "dynatrace-AMG-datasource.html" }, { "title" : "GitLab", "href" : "gitlab-AMG-datasource.html" }, { "title" : "Honeycomb", "href" : "honeycomb-AMG-datasource.html" }, { "title" : "Jira", "href" : "jira-AMG-datasource.html" }, { "title" : "MongoDB", "href" : "AMG-mongodb-datasource.html" }, { "title" : "New Relic", "href" : "new-relic-data-source.html" }, { "title" : "Oracle Database", "href" : "oracle-datasource-AMG.html" }, { "title" : "Salesforce", "href" : "salesforce-AMG-datasource.html" }, { "title" : "SAP HANA", "href" : "saphana-AMG-datasource.html" }, { "title" : "ServiceNow", "href" : "grafana-enterprise-servicenow-datasource.html" }, { "title" : "Snowflake", "href" : "snowflake-datasource-for-AMG.html" }, { "title" : "Splunk", "href" : "splunk-datasource.html" }, { "title" : "Splunk Infrastructure Monitoring (Formerly SignalFX)", "href" : "AMG-datasource-splunkinfra.html" }, { "title" : "Wavefront (VMware Tanzu Observability by Wavefront)", "href" : "wavefront-datasource-for-AMG.html" } ] } ] }, { "title" : "Using Grafana version 9", "href" : "using-grafana-v9.html", "contents" : [ { "title" : "Dashboards", "href" : "v9-dashboards.html", "contents" : [ { "title" : "Using dashboards", "href" : "v9-dash-using-dashboards.html" }, { "title" : "Building dashboards", "href" : "v9-dash-building-dashboards.html", "contents" : [ { "title" : "Creating dashboards", "href" : "v9-dash-creating.html" }, { "title" : "Add or edit panels", "href" : "v9-dash-edit-panels.html" }, { "title" : "Modifying dashboard settings", "href" : "v9-dash-modify-settings.html" }, { "title" : "Dashboard URL variables", "href" : "v9-dash-dashboard-url-variables.html" }, { "title" : "Using library panels", "href" : "v9-dash-manage-library-panels.html" }, { "title" : "Managing dashboard version history", "href" : "v9-dash-manage-version-history.html" }, { "title" : "Managing dashboard links", "href" : "v9-dash-manage-dashboard-links.html" }, { "title" : "Dashboard JSON model", "href" : "v9-dash-dashboard-json-model.html" } ] }, { "title" : "Managing dashboards", "href" : "v9-dash-managing-dashboards.html" }, { "title" : "Sharing dashboards and panels", "href" : "v9-dash-sharing.html" }, { "title" : "Managing playlists", "href" : "v9-dash-managing-playlists.html" }, { "title" : "Variables", "href" : "v9-dash-variables.html", "contents" : [ { "title" : "Add and manage variables", "href" : "v9-dash-variable-add.html" }, { "title" : "Variable syntax", "href" : "v9-dash-variable-syntax.html" } ] }, { "title" : "Assessing dashboard usage", "href" : "v9-dash-assess-dashboard-usage.html" }, { "title" : "Searching dashboards", "href" : "v9-search.html" } ] }, { "title" : "Panels and visualizations", "href" : "v9-panels.html", "contents" : [ { "title" : "Panel editor overview", "href" : "v9-panels-editor-overview.html" }, { "title" : "Configure panel options", "href" : "v9-panels-configure-panel-options.html" }, { "title" : "Configure standard options", "href" : "v9-panels-configure-standard-options.html" }, { "title" : "Query and transform data", "href" : "v9-panels-query-xform.html", "contents" : [ { "title" : "Write expression queries", "href" : "v9-panels-query-xform-expressions.html" }, { "title" : "Share query results", "href" : "v9-panels-query-share.html" }, { "title" : "Transform data", "href" : "v9-panels-xform.html" }, { "title" : "Troubleshoot queries", "href" : "v9-panels-query-troubleshoot.html" } ] }, { "title" : "Configure thresholds", "href" : "v9-panels-configure-thresholds.html" }, { "title" : "Configure data links", "href" : "v9-panels-configure-data-links.html" }, { "title" : "Configure field overrides", "href" : "v9-panels-configure-overrides.html" }, { "title" : "Configure value mappings", "href" : "v9-panels-configure-value-mappings.html" }, { "title" : "Configure legend", "href" : "v9-panels-configure-legend.html" }, { "title" : "Calculation types", "href" : "v9-panels-calculation-types.html" }, { "title" : "Annotating visualizations", "href" : "v9-panels-annotate-visualizations.html" }, { "title" : "The panel inspect view", "href" : "v9-panels-panel-inspector.html" }, { "title" : "Visualizations", "href" : "v9-panels-viz.html", "contents" : [ { "title" : "Alert list panel", "href" : "v9-panels-alert-list.html" }, { "title" : "Annotations panel", "href" : "v9-panels-annotations.html" }, { "title" : "Bar chart panel", "href" : "v9-panels-bar-chart.html" }, { "title" : "Bar gauge", "href" : "v9-panels-bar-gauge.html" }, { "title" : "Candlestick panel", "href" : "v9-panels-candlestick.html" }, { "title" : "Canvas panel", "href" : "v9-panels-canvas.html" }, { "title" : "Clock panel", "href" : "v9-panels-clock.html" }, { "title" : "Dashboard list", "href" : "v9-panels-dashboard-list.html" }, { "title" : "Gauge panel", "href" : "v9-panels-gauge.html" }, { "title" : "Geomap panel", "href" : "v9-panels-geomap.html" }, { "title" : "Graph panel", "href" : "v9-panels-graph.html" }, { "title" : "Heatmap panel", "href" : "v9-panels-heatmap.html" }, { "title" : "Histogram panel", "href" : "v9-panels-histogram.html" }, { "title" : "Logs panel", "href" : "v9-panels-logs.html" }, { "title" : "News panel", "href" : "v9-panels-news.html" }, { "title" : "Node graph panel", "href" : "v9-panels-node-graph.html" }, { "title" : "Pie chart panel", "href" : "v9-panels-piechart.html" }, { "title" : "Plotly panel", "href" : "v9-panels-plotly.html" }, { "title" : "Sankey panel", "href" : "v9-panels-sankey.html" }, { "title" : "Scatter panel", "href" : "v9-panels-scatter.html" }, { "title" : "Stat panel", "href" : "v9-panels-stat.html" }, { "title" : "State timeline panel", "href" : "v9-panels-state-timeline.html" }, { "title" : "Status history panel", "href" : "v9-panels-status-history.html" }, { "title" : "Table panel", "href" : "v9-panels-table.html" }, { "title" : "Text panel", "href" : "v9-panels-text.html" }, { "title" : "Time series panel", "href" : "v9-panels-time-series.html", "contents" : [ { "title" : "Tooltip options", "href" : "v9-time-series-panel-tooltip.html" }, { "title" : "Legend options", "href" : "v9-time-series-panel-legend.html" }, { "title" : "Graph style options", "href" : "v9-time-series-graph.html" }, { "title" : "Axis options", "href" : "v9-time-series-axis.html" }, { "title" : "Color options", "href" : "v9-time-series-color.html" } ] }, { "title" : "Traces panel (Beta)", "href" : "v9-panels-traces.html" }, { "title" : "WindRose", "href" : "v9-panels-windrose.html" } ] } ] }, { "title" : "Explore", "href" : "v9-explore.html", "contents" : [ { "title" : "Query management in Explore", "href" : "v9-explore-manage.html" }, { "title" : "Logs in Explore", "href" : "v9-explore-logs.html" }, { "title" : "Tracing in Explore", "href" : "v9-explore-tracing.html" }, { "title" : "Inspector in Explore", "href" : "v9-explore-inspector.html" } ] }, { "title" : "Alerts", "href" : "v9-alerts.html", "contents" : [ { "title" : "Overview", "href" : "v9-alerting-overview.html" }, { "title" : "Explore alerting", "href" : "v9-alerting-explore.html", "contents" : [ { "title" : "Data sources", "href" : "v9-alerting-explore-datasources.html" }, { "title" : "Alert rules", "href" : "v9-alerting-explore-rules.html", "contents" : [ { "title" : "Alert rule types", "href" : "v9-alerting-explore-rules-types.html" }, { "title" : "Alert instances", "href" : "v9-alerting-rules-instances.html" }, { "title" : "Namespaces and groups", "href" : "v9-alerting-rules-grouping.html" }, { "title" : "Notification templating", "href" : "v9-alerting-rules-notification-templates.html" } ] }, { "title" : "Alerting on numeric data", "href" : "v9-alerting-explore-numeric.html" }, { "title" : "Labels and annotations", "href" : "v9-alerting-explore-labels.html", "contents" : [ { "title" : "Label matching", "href" : "v9-alerting-explore-labels-matching.html" }, { "title" : "Labels", "href" : "v9-alerting-explore-labels-alerting.html" }, { "title" : "Templating labels and annotations", "href" : "v9-alerting-explore-labels-templating.html" } ] }, { "title" : "States and health", "href" : "v9-alerting-explore-state.html" }, { "title" : "Contact points", "href" : "v9-alerting-explore-contacts.html" }, { "title" : "Notifications", "href" : "v9-alerting-explore-notifications.html" } ] }, { "title" : "Set up Alerting", "href" : "v9-alerting-setup.html", "contents" : [ { "title" : "Add an external Alertmanager", "href" : "v9-alerting-setup-alertmanager.html" }, { "title" : "Provisioning resources", "href" : "v9-alerting-setup-provision.html", "contents" : [ { "title" : "Using Terraform", "href" : "v9-alerting-setup-provision-terraform.html" }, { "title" : "View provisioned resources", "href" : "v9-alerting-setup-provision-view.html" } ] } ] }, { "title" : "Migrating to Grafana alerting", "href" : "v9-alerting-use-grafana-alerts.html" }, { "title" : "Manage alert rules", "href" : "v9-alerting-managerules.html", "contents" : [ { "title" : "Grafana managed alerts", "href" : "v9-alerting-managerules-grafana.html" }, { "title" : "Mimir or Loki manged rules", "href" : "v9-alerting-managerules-mimir-loki.html" }, { "title" : "Mimir or Loki managed recording rules", "href" : "v9-alerting-managerules-mimir-loki-recording.html" }, { "title" : "Mimir or Loki groups and namespaces", "href" : "v9-alerting-managerules-mimir-loki-groups.html" }, { "title" : "View and edit rules", "href" : "v9-alerting-managerules-view-edit.html" } ] }, { "title" : "Alert notifications", "href" : "v9-alerting-managenotifications.html", "contents" : [ { "title" : "Alertmanager", "href" : "v9-alerting-managenotifications-alertmanager.html" }, { "title" : "Contact points", "href" : "v9-alerting-contact-points.html" }, { "title" : "Notification policies", "href" : "v9-alerting-notification-policies.html" }, { "title" : "Customize notifications", "href" : "v9-alerting-notifications.html", "contents" : [ { "title" : "Go templating", "href" : "v9-alerting-notifications-go-templating.html" }, { "title" : "Notification templates", "href" : "v9-alerting-create-templates.html" }, { "title" : "Template reference", "href" : "v9-alerting-template-reference.html" } ] }, { "title" : "Silences", "href" : "v9-alerting-silences.html" }, { "title" : "Mute timings", "href" : "v9-alerting-notification-muting.html" }, { "title" : "View and filter by alert groups", "href" : "v9-alerting-viewfiltergroups.html" }, { "title" : "View notification errors", "href" : "v9-alerting-viewnotificationerrors.html" } ] } ] } ] }, { "title" : "Using Grafana version 8", "href" : "using-grafana-v8.html", "contents" : [ { "title" : "Panels", "href" : "Grafana-panels.html", "contents" : [ { "title" : "Adding or editing a panel", "href" : "add-a-panel-to-a-dashboard.html" }, { "title" : "Deleting a panel", "href" : "Deleting-a-panel.html" }, { "title" : "Queries", "href" : "panel-queries.html" }, { "title" : "Recorded queries", "href" : "recorded-queries.html" }, { "title" : "Transformations", "href" : "panel-transformations.html" }, { "title" : "Field options and overrides", "href" : "field-options-overrides.html" }, { "title" : "Panel editor", "href" : "AMG-panel-editor.html" }, { "title" : "Library panels", "href" : "AMG-library-panel.html" }, { "title" : "Visualizations", "href" : "AMG-visualizations.html", "contents" : [ { "title" : "Alert list panel", "href" : "alert-list-panel.html" }, { "title" : "Bar chart panel", "href" : "bar-chart-panel.html" }, { "title" : "Bar gauge panel", "href" : "alert-panel-bar-gauge-panel.html" }, { "title" : "Clock panel", "href" : "clock-panel.html" }, { "title" : "Dashboard list panel", "href" : "dashboard-list-panel.html" }, { "title" : "Gauge panel", "href" : "gauge-panel.html" }, { "title" : "Geomap panel", "href" : "AMG-Geomap.html" }, { "title" : "Graph panel", "href" : "graph-panel.html" }, { "title" : "Heatmap", "href" : "visualization-heatmap.html" }, { "title" : "Histogram panel", "href" : "histogram-panel.html" }, { "title" : "Logs panel", "href" : "logs-panel.html" }, { "title" : "News panel", "href" : "news-panel.html" }, { "title" : "Node graph panel (Beta)", "href" : "node-graph-panel.html" }, { "title" : "Pie chart panel", "href" : "pie-chart-panel.html" }, { "title" : "Plotly panel", "href" : "plotly-panel.html" }, { "title" : "Sankey panel", "href" : "sankey-panel.html" }, { "title" : "Scatter panel", "href" : "scatter-panel.html" }, { "title" : "Stat panel", "href" : "stat-panel.html" }, { "title" : "State timeline panel", "href" : "state-timeline-panel.html" }, { "title" : "Status history panel", "href" : "status-history-panel.html" }, { "title" : "Table panel", "href" : "table-panel.html" }, { "title" : "Text panel", "href" : "text-panel.html" }, { "title" : "Time series panel", "href" : "time-series-panel.html", "contents" : [ { "title" : "Graph time series as lines", "href" : "time-series-graph-lines.html" }, { "title" : "Graph time series as bars", "href" : "time-series-graph-bars.html" }, { "title" : "Graph time series as points", "href" : "time-series-graph-points.html" }, { "title" : "Change axis display", "href" : "time-series-change-axis.html" }, { "title" : "Graph stacked time series", "href" : "time-series-stacked.html", "contents" : [ { "title" : "Stack series in groups", "href" : "time-series-stacked-groups.html" } ] } ] }, { "title" : "Thresholds", "href" : "thresholds.html" }, { "title" : "WindRose", "href" : "windrose.html" }, { "title" : "Inspect a panel", "href" : "inspect-a-panel.html" }, { "title" : "Calculations list", "href" : "list-of-calculations.html" } ] } ] }, { "title" : "Dashboards", "href" : "dashboard-overview.html", "contents" : [ { "title" : "Annotations", "href" : "dashboard-annotations.html" }, { "title" : "Dashboard folders", "href" : "dashboard-folders.html" }, { "title" : "Playlist", "href" : "dashboard-playlist.html" }, { "title" : "Dashboard search", "href" : "dashboard-search.html" }, { "title" : "Sharing a dashboard", "href" : "share-a-dashboard.html" }, { "title" : "Sharing a panel", "href" : "dashboard-share-a-panel.html" }, { "title" : "Time range controls", "href" : "dashboard-time-range-controls.html" }, { "title" : "Exporting and importing dashboards", "href" : "dashboard-export-and-import.html" }, { "title" : "Dashboard version history", "href" : "dashboard-version-history.html" }, { "title" : "Keyboard shortcuts", "href" : "keyboard-shortcuts.html" }, { "title" : "Dashboard JSON model", "href" : "dashboard-json-model.html" }, { "title" : "Scripted dashboards", "href" : "scripted-dashboards.html" } ] }, { "title" : "Explore", "href" : "explore.html" }, { "title" : "Linking", "href" : "linking-in-Amazon-Managed-Service-for-Grafana.html", "contents" : [ { "title" : "Dashboard links", "href" : "dashboard-links.html" }, { "title" : "Panel links", "href" : "panel-links.html" }, { "title" : "Data links", "href" : "data-links.html" } ] }, { "title" : "Templates and variables", "href" : "templates-and-variables.html", "contents" : [ { "title" : "Variable types", "href" : "variables-types.html" } ] }, { "title" : "Grafana alerting", "href" : "alerts-overview.html", "contents" : [ { "title" : "What's new in Grafana alerting", "href" : "alerts-whats-new.html" }, { "title" : "Migrating to Grafana alerting", "href" : "alert-opt-in.html" }, { "title" : "Alerting fundamentals", "href" : "alert-fundamentals.html" }, { "title" : "Creating and managing Grafana alerting rules", "href" : "alert-rules.html" }, { "title" : "Alert groups", "href" : "alert-groups.html" }, { "title" : "Silencing alert notifications for Prometheus data sources", "href" : "alert-silences.html" }, { "title" : "Working with contact points", "href" : "alert-contact-points.html" }, { "title" : "Using messaging templates", "href" : "alert-message-templates.html" }, { "title" : "Working with notification policies", "href" : "alert-notifications.html" }, { "title" : "Classic alerts", "href" : "old-alerts-overview.html", "contents" : [ { "title" : "Alert notifications", "href" : "old-alert-notifications.html" }, { "title" : "Creating alerts", "href" : "old-create-alerts.html" }, { "title" : "Pausing an alert rule", "href" : "old-pause-an-alert-rule.html" }, { "title" : "Viewing existing alert rules", "href" : "old-view-existing-alert-rules.html" }, { "title" : "Notification templating", "href" : "old-alerts-notification-templating.html" }, { "title" : "Troubleshooting alerts", "href" : "old-troubleshoot-alerts.html" } ] } ] } ] }, { "title" : "Change your preferences", "href" : "change-your-grafana-preferences.html" } ] }, { "title" : "Using Grafana HTTP APIs", "href" : "Using-Grafana-APIs.html", "contents" : [ { "title" : "Authenticating with tokens", "href" : "authenticating-grafana-apis.html", "contents" : [ { "title" : "API keys (API tokens)", "href" : "using-api-keys.html" }, { "title" : "Service accounts", "href" : "service-accounts.html" } ] }, { "title" : "Alerting API", "href" : "Grafana-API-Alerting.html" }, { "title" : "Alerting Notification Channels API", "href" : "Grafana-API-AlertingNotificationChannels.html" }, { "title" : "Annotations API", "href" : "Grafana-API-Annotations.html" }, { "title" : "Authentication API", "href" : "Grafana-API-Authentication.html" }, { "title" : "Dashboard API", "href" : "Grafana-API-Dashboard.html" }, { "title" : "Dashboard Permissions API", "href" : "Grafana-API-DashboardPermissions.html" }, { "title" : "Dashboard Versions API", "href" : "Grafana-API-DashboardVersions.html" }, { "title" : "Data Source API", "href" : "Grafana-API-Datasource.html" }, { "title" : "Data Source Permissions API", "href" : "Grafana-API-DatasourcePermissions.html" }, { "title" : "External Group Synchronization API", "href" : "Grafana-API-ExternalGroupSynchronization.html" }, { "title" : "Folder API", "href" : "Grafana-API-Folder.html" }, { "title" : "Folder/Dashboard Search API", "href" : "Grafana-API-FolderDashboard-Search.html" }, { "title" : "Folder Permissions API", "href" : "Grafana-API-FolderPermissions.html" }, { "title" : "Organization API", "href" : "Grafana-API-Organization.html" }, { "title" : "Playlist API", "href" : "Grafana-API-Playlist.html" }, { "title" : "Preferences API", "href" : "Grafana-API-Preferences.html" }, { "title" : "Snapshot API", "href" : "Grafana-API-Snapshot.html" }, { "title" : "Team API", "href" : "Grafana-API-Team.html" }, { "title" : "User API", "href" : "Grafana-API-User.html" } ] }, { "title" : "Upgrade a workspace to Grafana Enterprise", "href" : "upgrade-to-Grafana-Enterprise.html" }, { "title" : "Tagging", "href" : "Tagging.html", "contents" : [ { "title" : "Tagging workspaces", "href" : "Tagging_workspaces.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon Managed Grafana works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html" } ] }, { "title" : "Permissions and policies for other AWS services", "href" : "AMG-manage-permissions.html" }, { "title" : "IAM permissions", "href" : "AMG-and-IAM.html" }, { "title" : "Compliance Validation", "href" : "AMG-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html" }, { "title" : "CloudTrail logs", "href" : "logging-using-cloudtrail.html" }, { "title" : "Security best practices", "href" : "AMG-Security-Best-Practices.html" }, { "title" : "Interface VPC endpoints", "href" : "VPC-endpoints.html" } ] }, { "title" : "Service quotas", "href" : "AMG_quotas.html" }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/grafana/latest/userguide/",
+    "service": "grafana",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon Managed Grafana?",
+                "href": "what-is-Amazon-Managed-Service-Grafana.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "Amazon-Managed-Grafana-setting-up.html"
+            },
+            {
+                "title": "User authentication",
+                "href": "authentication-in-AMG.html",
+                "contents": [
+                    {
+                        "title": "SAML",
+                        "href": "authentication-in-AMG-SAML.html",
+                        "contents": [
+                            {
+                                "title": "Azure Active Directory",
+                                "href": "AMG-SAML-providers-Azure.html"
+                            },
+                            {
+                                "title": "CyberArk",
+                                "href": "AMG-SAML-providers-CyberArk.html"
+                            },
+                            {
+                                "title": "Okta",
+                                "href": "AMG-SAML-providers-okta.html"
+                            },
+                            {
+                                "title": "OneLogin",
+                                "href": "AMG-SAML-providers-onelogin.html"
+                            },
+                            {
+                                "title": "Ping Identity",
+                                "href": "AMG-SAML-providers-pingone.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS IAM Identity Center",
+                        "href": "authentication-in-AMG-SSO.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started-with-AMG.html"
+            },
+            {
+                "title": "Managing workspaces, users, and policies",
+                "href": "AMG-manage-workspaces-users.html",
+                "contents": [
+                    {
+                        "title": "About Grafana versions",
+                        "href": "version-differences.html"
+                    },
+                    {
+                        "title": "Create a workspace",
+                        "href": "AMG-create-workspace.html"
+                    },
+                    {
+                        "title": "Updating your workspace version",
+                        "href": "AMG-workspace-version-update.html"
+                    },
+                    {
+                        "title": "Migrating content between workspaces",
+                        "href": "AMG-workspace-content-migration.html"
+                    },
+                    {
+                        "title": "Managing user and group access",
+                        "href": "AMG-manage-users-and-groups-AMG.html"
+                    },
+                    {
+                        "title": "Permissions for data sources and notification channels",
+                        "href": "AMG-datasource-and-notification.html"
+                    },
+                    {
+                        "title": "Creating resources with AWS CloudFormation",
+                        "href": "creating-resources-with-cloudformation.html"
+                    },
+                    {
+                        "title": "Managing network access",
+                        "href": "AMG-configure-nac.html"
+                    },
+                    {
+                        "title": "Connecting to Amazon VPC",
+                        "href": "AMG-configure-vpc.html",
+                        "contents": [
+                            {
+                                "title": "Troubleshooting VPC",
+                                "href": "AMG-configure-vpc-faq.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configure a workspace",
+                        "href": "AMG-configure-workspace.html"
+                    },
+                    {
+                        "title": "Deleting a workspace",
+                        "href": "AMG-edit-delete-workspace.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working in your Grafana workspace",
+                "href": "AMG-working-with-Grafana-workspace.html",
+                "contents": [
+                    {
+                        "title": "Users, teams, and permissions",
+                        "href": "Grafana-administration-authorization.html",
+                        "contents": [
+                            {
+                                "title": "Users",
+                                "href": "Grafana-users.html"
+                            },
+                            {
+                                "title": "User roles",
+                                "href": "Grafana-user-roles.html"
+                            },
+                            {
+                                "title": "Managing teams",
+                                "href": "Grafana-teams.html"
+                            },
+                            {
+                                "title": "Using permissions",
+                                "href": "Grafana-permissions.html",
+                                "contents": [
+                                    {
+                                        "title": "Dashboard and folder permissions",
+                                        "href": "dashboard-and-folder-permissions.html"
+                                    },
+                                    {
+                                        "title": "Data source permissions",
+                                        "href": "data-source-permissions.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Getting started in your Grafana workspace console",
+                        "href": "getting-started-grafanaui.html"
+                    },
+                    {
+                        "title": "Data sources",
+                        "href": "AMG-data-sources.html",
+                        "contents": [
+                            {
+                                "title": "Working with AWS Organizations",
+                                "href": "AMG-and-Organizations.html"
+                            },
+                            {
+                                "title": "Built-in data sources",
+                                "href": "AMG-data-sources-builtin.html",
+                                "contents": [
+                                    {
+                                        "title": "Alertmanager",
+                                        "href": "data-source-alertmanager.html"
+                                    },
+                                    {
+                                        "title": "Amazon CloudWatch",
+                                        "href": "using-amazon-cloudwatch-in-AMG.html",
+                                        "contents": [
+                                            {
+                                                "title": "Use AWS data source configuration to add CloudWatch as a data source",
+                                                "href": "adding-CloudWatch-AWS-config.html"
+                                            },
+                                            {
+                                                "title": "Manually add CloudWatch as a data source",
+                                                "href": "adding--CloudWatch-manual.html"
+                                            },
+                                            {
+                                                "title": "Using the CloudWatch data source",
+                                                "href": "CloudWatch-using.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Using the query editor",
+                                                        "href": "CloudWatch-using-the-query-editor.html",
+                                                        "contents": [
+                                                            {
+                                                                "title": "Using the metric query editor",
+                                                                "href": "CloudWatch-using-the-metric-query-editor.html",
+                                                                "contents": [
+                                                                    {
+                                                                        "title": "Using the metric search option",
+                                                                        "href": "CloudWatch-using-the-metric-search.html"
+                                                                    },
+                                                                    {
+                                                                        "title": "Using the metric query option to query CloudWatch Metrics Insights data",
+                                                                        "href": "CloudWatch-using-the-metric-query.html"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "title": "Using the Amazon CloudWatch Logs query editor",
+                                                                "href": "CloudWatch-using-the-logs-query-editor.html"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "title": "Curated dashboards",
+                                                        "href": "CloudWatch-curated-dashboards.html"
+                                                    },
+                                                    {
+                                                        "title": "Templated queries",
+                                                        "href": "cloudwatch-templated-queries.html"
+                                                    },
+                                                    {
+                                                        "title": "Using ec2_instance_attribute examples",
+                                                        "href": "ec2_instance_attribute-examples.html"
+                                                    },
+                                                    {
+                                                        "title": "Using JSON format template variables",
+                                                        "href": "cloudwatch-using-json-format-template-variables.html"
+                                                    },
+                                                    {
+                                                        "title": "Pricing",
+                                                        "href": "pricing.html"
+                                                    },
+                                                    {
+                                                        "title": "Service quotas",
+                                                        "href": "cloudwatch-service-quotas.html"
+                                                    },
+                                                    {
+                                                        "title": "Cross-account observability",
+                                                        "href": "cloudwatch-cross-account.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Amazon OpenSearch Service",
+                                        "href": "using-Amazon-OpenSearch-in-AMG.html",
+                                        "contents": [
+                                            {
+                                                "title": "Use AWS data source configuration to add OpenSearch Service as a data source",
+                                                "href": "ES-adding-AWS-config.html"
+                                            },
+                                            {
+                                                "title": "Manually add Amazon OpenSearch Service as a data source",
+                                                "href": "ES-adding-the-data-source.html"
+                                            },
+                                            {
+                                                "title": "Using the Amazon OpenSearch Service data source",
+                                                "href": "ES-use-datasource.html"
+                                            },
+                                            {
+                                                "title": "OpenSearch Service Serverless",
+                                                "href": "datasources-opensearch-serverless.html"
+                                            },
+                                            {
+                                                "title": "Traces support",
+                                                "href": "datasources-opensearch-traces.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "AWS IoT SiteWise",
+                                        "href": "using-iotsitewise-in-AMG.html",
+                                        "contents": [
+                                            {
+                                                "title": "Use AWS data source configuration to add AWS IoT SiteWise as a data source",
+                                                "href": "IoTSiteWise-adding-AWS-config.html"
+                                            },
+                                            {
+                                                "title": "Manually adding the AWS IoT SiteWise data source",
+                                                "href": "iotsitewise-add-the-data-source.html"
+                                            },
+                                            {
+                                                "title": "Using the AWS IoT SiteWise data source",
+                                                "href": "IoTSiteWise-using.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "AWS IoT TwinMaker",
+                                        "href": "AMG-iot-twinmaker.html",
+                                        "contents": [
+                                            {
+                                                "title": "Manually adding the AWS IoT TwinMaker data source",
+                                                "href": "twinmaker-add-the-data-source.html"
+                                            },
+                                            {
+                                                "title": "Using the AWS IoT TwinMaker data source",
+                                                "href": "IoT-twinmaker-using.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Amazon Managed Service for Prometheus and open-source Prometheus",
+                                        "href": "prometheus-data-source.html",
+                                        "contents": [
+                                            {
+                                                "title": "Use AWS data source configuration to add Amazon Managed Service for Prometheus as a data source",
+                                                "href": "AMP-adding-AWS-config.html"
+                                            },
+                                            {
+                                                "title": "Manually adding the Prometheus data source",
+                                                "href": "prometheus-manually-adding.html"
+                                            },
+                                            {
+                                                "title": "Using the Prometheus data source",
+                                                "href": "using-prometheus-datasource.html"
+                                            },
+                                            {
+                                                "title": "Visualize alerts from Amazon Managed Service for Prometheus",
+                                                "href": "amp-configure-alerts.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Amazon Timestream",
+                                        "href": "timestream-datasource.html",
+                                        "contents": [
+                                            {
+                                                "title": "Use AWS data source configuration to add Timestream as a data source",
+                                                "href": "Timestream-adding-AWS-config.html"
+                                            },
+                                            {
+                                                "title": "Manually adding the Timestream data source",
+                                                "href": "timestream-add-the-data-source.html"
+                                            },
+                                            {
+                                                "title": "Using the Timestream data source",
+                                                "href": "timestream-query-editor.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Amazon Athena",
+                                        "href": "AWS-Athena.html",
+                                        "contents": [
+                                            {
+                                                "title": "Prerequisites",
+                                                "href": "Athena-prereq.html"
+                                            },
+                                            {
+                                                "title": "Use AWS data source configuration to add Amazon Athena as a data source",
+                                                "href": "Athena-adding-AWS-config.html"
+                                            },
+                                            {
+                                                "title": "Manually adding the Athena data source",
+                                                "href": "Athena-add-the-data-source.html"
+                                            },
+                                            {
+                                                "title": "Using Athena data source",
+                                                "href": "Athena-using-the-data-source.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Amazon Redshift",
+                                        "href": "AWS-Redshift.html",
+                                        "contents": [
+                                            {
+                                                "title": "Prerequisites",
+                                                "href": "Redshift-prereq.html"
+                                            },
+                                            {
+                                                "title": "Use AWS data source configuration to add Amazon Redshift as a data source",
+                                                "href": "Redshift-configure.html"
+                                            },
+                                            {
+                                                "title": "Manually adding the Amazon Redshift data source",
+                                                "href": "Redshift-add-the-data-source.html"
+                                            },
+                                            {
+                                                "title": "Configuring Amazon Redshift",
+                                                "href": "Redshift-config.html"
+                                            },
+                                            {
+                                                "title": "Using the Amazon Redshift data source",
+                                                "href": "Redshift-using-the-data-source.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "AWS X-Ray",
+                                        "href": "x-ray-data-source.html",
+                                        "contents": [
+                                            {
+                                                "title": "Use AWS data source configuration to add X-Ray as a data source",
+                                                "href": "xray-adding-AWS-config.html"
+                                            },
+                                            {
+                                                "title": "Manually adding the X-Ray data source",
+                                                "href": "xray-add-the-data-source.html"
+                                            },
+                                            {
+                                                "title": "Using the X-Ray data source",
+                                                "href": "xray-using.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Azure Monitor",
+                                        "href": "using-azure-monitor-in-AMG.html"
+                                    },
+                                    {
+                                        "title": "Cloudflare",
+                                        "href": "Cloudflare.html"
+                                    },
+                                    {
+                                        "title": "GitHub",
+                                        "href": "ds-github.html"
+                                    },
+                                    {
+                                        "title": "Graphite",
+                                        "href": "using-graphite-in-AMG.html"
+                                    },
+                                    {
+                                        "title": "Google BigQuery",
+                                        "href": "AMG-datasource-bigquery.html"
+                                    },
+                                    {
+                                        "title": "Google Cloud Monitoring",
+                                        "href": "using-google-cloud-monitoring-in-grafana.html"
+                                    },
+                                    {
+                                        "title": "Google Sheets",
+                                        "href": "google-sheets-datasource.html"
+                                    },
+                                    {
+                                        "title": "InfluxDB",
+                                        "href": "using-influxdb-in-AMG.html"
+                                    },
+                                    {
+                                        "title": "Jaeger",
+                                        "href": "jaeger-data-source.html"
+                                    },
+                                    {
+                                        "title": "JSON",
+                                        "href": "JSON-AMG-datasource.html"
+                                    },
+                                    {
+                                        "title": "Loki",
+                                        "href": "using-loki-in-AMG.html"
+                                    },
+                                    {
+                                        "title": "Microsoft SQL Server",
+                                        "href": "using-microsoft-sql-server-in-AMG.html"
+                                    },
+                                    {
+                                        "title": "Moogsoft",
+                                        "href": "ds-moogsoft.html"
+                                    },
+                                    {
+                                        "title": "MySQL",
+                                        "href": "using-mysql-in-AMG.html"
+                                    },
+                                    {
+                                        "title": "OpenSearch",
+                                        "href": "using-opensearch-in-AMG.html"
+                                    },
+                                    {
+                                        "title": "OpenTSDB",
+                                        "href": "using-opentsdb-in-AMG.html"
+                                    },
+                                    {
+                                        "title": "Pixie",
+                                        "href": "ds-pixie.html"
+                                    },
+                                    {
+                                        "title": "PostgreSQL",
+                                        "href": "using-postgresql-in-AMG.html"
+                                    },
+                                    {
+                                        "title": "Redis",
+                                        "href": "AMG-datasource-redis.html"
+                                    },
+                                    {
+                                        "title": "Tempo",
+                                        "href": "tempo-data-source.html"
+                                    },
+                                    {
+                                        "title": "TestData",
+                                        "href": "testdata-data-source.html"
+                                    },
+                                    {
+                                        "title": "Zabbix",
+                                        "href": "Zabbix.html"
+                                    },
+                                    {
+                                        "title": "Zipkin",
+                                        "href": "zipkin-data-source.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Data sources available in Grafana Enterprise",
+                                "href": "AMG-data-sources-enterprise.html",
+                                "contents": [
+                                    {
+                                        "title": "AppDynamics",
+                                        "href": "appdynamics-AMG-datasource.html"
+                                    },
+                                    {
+                                        "title": "Databricks",
+                                        "href": "AMG-databricks-datasource.html"
+                                    },
+                                    {
+                                        "title": "Datadog",
+                                        "href": "AMG-datadog-datasource-plugin.html"
+                                    },
+                                    {
+                                        "title": "Dynatrace",
+                                        "href": "dynatrace-AMG-datasource.html"
+                                    },
+                                    {
+                                        "title": "GitLab",
+                                        "href": "gitlab-AMG-datasource.html"
+                                    },
+                                    {
+                                        "title": "Honeycomb",
+                                        "href": "honeycomb-AMG-datasource.html"
+                                    },
+                                    {
+                                        "title": "Jira",
+                                        "href": "jira-AMG-datasource.html"
+                                    },
+                                    {
+                                        "title": "MongoDB",
+                                        "href": "AMG-mongodb-datasource.html"
+                                    },
+                                    {
+                                        "title": "New Relic",
+                                        "href": "new-relic-data-source.html"
+                                    },
+                                    {
+                                        "title": "Oracle Database",
+                                        "href": "oracle-datasource-AMG.html"
+                                    },
+                                    {
+                                        "title": "Salesforce",
+                                        "href": "salesforce-AMG-datasource.html"
+                                    },
+                                    {
+                                        "title": "SAP HANA",
+                                        "href": "saphana-AMG-datasource.html"
+                                    },
+                                    {
+                                        "title": "ServiceNow",
+                                        "href": "grafana-enterprise-servicenow-datasource.html"
+                                    },
+                                    {
+                                        "title": "Snowflake",
+                                        "href": "snowflake-datasource-for-AMG.html"
+                                    },
+                                    {
+                                        "title": "Splunk",
+                                        "href": "splunk-datasource.html"
+                                    },
+                                    {
+                                        "title": "Splunk Infrastructure Monitoring (Formerly SignalFX)",
+                                        "href": "AMG-datasource-splunkinfra.html"
+                                    },
+                                    {
+                                        "title": "Wavefront (VMware Tanzu Observability by Wavefront)",
+                                        "href": "wavefront-datasource-for-AMG.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Grafana version 9",
+                        "href": "using-grafana-v9.html",
+                        "contents": [
+                            {
+                                "title": "Dashboards",
+                                "href": "v9-dashboards.html",
+                                "contents": [
+                                    {
+                                        "title": "Using dashboards",
+                                        "href": "v9-dash-using-dashboards.html"
+                                    },
+                                    {
+                                        "title": "Building dashboards",
+                                        "href": "v9-dash-building-dashboards.html",
+                                        "contents": [
+                                            {
+                                                "title": "Creating dashboards",
+                                                "href": "v9-dash-creating.html"
+                                            },
+                                            {
+                                                "title": "Add or edit panels",
+                                                "href": "v9-dash-edit-panels.html"
+                                            },
+                                            {
+                                                "title": "Modifying dashboard settings",
+                                                "href": "v9-dash-modify-settings.html"
+                                            },
+                                            {
+                                                "title": "Dashboard URL variables",
+                                                "href": "v9-dash-dashboard-url-variables.html"
+                                            },
+                                            {
+                                                "title": "Using library panels",
+                                                "href": "v9-dash-manage-library-panels.html"
+                                            },
+                                            {
+                                                "title": "Managing dashboard version history",
+                                                "href": "v9-dash-manage-version-history.html"
+                                            },
+                                            {
+                                                "title": "Managing dashboard links",
+                                                "href": "v9-dash-manage-dashboard-links.html"
+                                            },
+                                            {
+                                                "title": "Dashboard JSON model",
+                                                "href": "v9-dash-dashboard-json-model.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Managing dashboards",
+                                        "href": "v9-dash-managing-dashboards.html"
+                                    },
+                                    {
+                                        "title": "Sharing dashboards and panels",
+                                        "href": "v9-dash-sharing.html"
+                                    },
+                                    {
+                                        "title": "Managing playlists",
+                                        "href": "v9-dash-managing-playlists.html"
+                                    },
+                                    {
+                                        "title": "Variables",
+                                        "href": "v9-dash-variables.html",
+                                        "contents": [
+                                            {
+                                                "title": "Add and manage variables",
+                                                "href": "v9-dash-variable-add.html"
+                                            },
+                                            {
+                                                "title": "Variable syntax",
+                                                "href": "v9-dash-variable-syntax.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Assessing dashboard usage",
+                                        "href": "v9-dash-assess-dashboard-usage.html"
+                                    },
+                                    {
+                                        "title": "Searching dashboards",
+                                        "href": "v9-search.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Panels and visualizations",
+                                "href": "v9-panels.html",
+                                "contents": [
+                                    {
+                                        "title": "Panel editor overview",
+                                        "href": "v9-panels-editor-overview.html"
+                                    },
+                                    {
+                                        "title": "Configure panel options",
+                                        "href": "v9-panels-configure-panel-options.html"
+                                    },
+                                    {
+                                        "title": "Configure standard options",
+                                        "href": "v9-panels-configure-standard-options.html"
+                                    },
+                                    {
+                                        "title": "Query and transform data",
+                                        "href": "v9-panels-query-xform.html",
+                                        "contents": [
+                                            {
+                                                "title": "Write expression queries",
+                                                "href": "v9-panels-query-xform-expressions.html"
+                                            },
+                                            {
+                                                "title": "Share query results",
+                                                "href": "v9-panels-query-share.html"
+                                            },
+                                            {
+                                                "title": "Transform data",
+                                                "href": "v9-panels-xform.html"
+                                            },
+                                            {
+                                                "title": "Troubleshoot queries",
+                                                "href": "v9-panels-query-troubleshoot.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Configure thresholds",
+                                        "href": "v9-panels-configure-thresholds.html"
+                                    },
+                                    {
+                                        "title": "Configure data links",
+                                        "href": "v9-panels-configure-data-links.html"
+                                    },
+                                    {
+                                        "title": "Configure field overrides",
+                                        "href": "v9-panels-configure-overrides.html"
+                                    },
+                                    {
+                                        "title": "Configure value mappings",
+                                        "href": "v9-panels-configure-value-mappings.html"
+                                    },
+                                    {
+                                        "title": "Configure legend",
+                                        "href": "v9-panels-configure-legend.html"
+                                    },
+                                    {
+                                        "title": "Calculation types",
+                                        "href": "v9-panels-calculation-types.html"
+                                    },
+                                    {
+                                        "title": "Annotating visualizations",
+                                        "href": "v9-panels-annotate-visualizations.html"
+                                    },
+                                    {
+                                        "title": "The panel inspect view",
+                                        "href": "v9-panels-panel-inspector.html"
+                                    },
+                                    {
+                                        "title": "Visualizations",
+                                        "href": "v9-panels-viz.html",
+                                        "contents": [
+                                            {
+                                                "title": "Alert list panel",
+                                                "href": "v9-panels-alert-list.html"
+                                            },
+                                            {
+                                                "title": "Annotations panel",
+                                                "href": "v9-panels-annotations.html"
+                                            },
+                                            {
+                                                "title": "Bar chart panel",
+                                                "href": "v9-panels-bar-chart.html"
+                                            },
+                                            {
+                                                "title": "Bar gauge",
+                                                "href": "v9-panels-bar-gauge.html"
+                                            },
+                                            {
+                                                "title": "Candlestick panel",
+                                                "href": "v9-panels-candlestick.html"
+                                            },
+                                            {
+                                                "title": "Canvas panel",
+                                                "href": "v9-panels-canvas.html"
+                                            },
+                                            {
+                                                "title": "Clock panel",
+                                                "href": "v9-panels-clock.html"
+                                            },
+                                            {
+                                                "title": "Dashboard list",
+                                                "href": "v9-panels-dashboard-list.html"
+                                            },
+                                            {
+                                                "title": "Gauge panel",
+                                                "href": "v9-panels-gauge.html"
+                                            },
+                                            {
+                                                "title": "Geomap panel",
+                                                "href": "v9-panels-geomap.html"
+                                            },
+                                            {
+                                                "title": "Graph panel",
+                                                "href": "v9-panels-graph.html"
+                                            },
+                                            {
+                                                "title": "Heatmap panel",
+                                                "href": "v9-panels-heatmap.html"
+                                            },
+                                            {
+                                                "title": "Histogram panel",
+                                                "href": "v9-panels-histogram.html"
+                                            },
+                                            {
+                                                "title": "Logs panel",
+                                                "href": "v9-panels-logs.html"
+                                            },
+                                            {
+                                                "title": "News panel",
+                                                "href": "v9-panels-news.html"
+                                            },
+                                            {
+                                                "title": "Node graph panel",
+                                                "href": "v9-panels-node-graph.html"
+                                            },
+                                            {
+                                                "title": "Pie chart panel",
+                                                "href": "v9-panels-piechart.html"
+                                            },
+                                            {
+                                                "title": "Plotly panel",
+                                                "href": "v9-panels-plotly.html"
+                                            },
+                                            {
+                                                "title": "Sankey panel",
+                                                "href": "v9-panels-sankey.html"
+                                            },
+                                            {
+                                                "title": "Scatter panel",
+                                                "href": "v9-panels-scatter.html"
+                                            },
+                                            {
+                                                "title": "Stat panel",
+                                                "href": "v9-panels-stat.html"
+                                            },
+                                            {
+                                                "title": "State timeline panel",
+                                                "href": "v9-panels-state-timeline.html"
+                                            },
+                                            {
+                                                "title": "Status history panel",
+                                                "href": "v9-panels-status-history.html"
+                                            },
+                                            {
+                                                "title": "Table panel",
+                                                "href": "v9-panels-table.html"
+                                            },
+                                            {
+                                                "title": "Text panel",
+                                                "href": "v9-panels-text.html"
+                                            },
+                                            {
+                                                "title": "Time series panel",
+                                                "href": "v9-panels-time-series.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Tooltip options",
+                                                        "href": "v9-time-series-panel-tooltip.html"
+                                                    },
+                                                    {
+                                                        "title": "Legend options",
+                                                        "href": "v9-time-series-panel-legend.html"
+                                                    },
+                                                    {
+                                                        "title": "Graph style options",
+                                                        "href": "v9-time-series-graph.html"
+                                                    },
+                                                    {
+                                                        "title": "Axis options",
+                                                        "href": "v9-time-series-axis.html"
+                                                    },
+                                                    {
+                                                        "title": "Color options",
+                                                        "href": "v9-time-series-color.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Traces panel (Beta)",
+                                                "href": "v9-panels-traces.html"
+                                            },
+                                            {
+                                                "title": "WindRose",
+                                                "href": "v9-panels-windrose.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Explore",
+                                "href": "v9-explore.html",
+                                "contents": [
+                                    {
+                                        "title": "Query management in Explore",
+                                        "href": "v9-explore-manage.html"
+                                    },
+                                    {
+                                        "title": "Logs in Explore",
+                                        "href": "v9-explore-logs.html"
+                                    },
+                                    {
+                                        "title": "Tracing in Explore",
+                                        "href": "v9-explore-tracing.html"
+                                    },
+                                    {
+                                        "title": "Inspector in Explore",
+                                        "href": "v9-explore-inspector.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Alerts",
+                                "href": "v9-alerts.html",
+                                "contents": [
+                                    {
+                                        "title": "Overview",
+                                        "href": "v9-alerting-overview.html"
+                                    },
+                                    {
+                                        "title": "Explore alerting",
+                                        "href": "v9-alerting-explore.html",
+                                        "contents": [
+                                            {
+                                                "title": "Data sources",
+                                                "href": "v9-alerting-explore-datasources.html"
+                                            },
+                                            {
+                                                "title": "Alert rules",
+                                                "href": "v9-alerting-explore-rules.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Alert rule types",
+                                                        "href": "v9-alerting-explore-rules-types.html"
+                                                    },
+                                                    {
+                                                        "title": "Alert instances",
+                                                        "href": "v9-alerting-rules-instances.html"
+                                                    },
+                                                    {
+                                                        "title": "Namespaces and groups",
+                                                        "href": "v9-alerting-rules-grouping.html"
+                                                    },
+                                                    {
+                                                        "title": "Notification templating",
+                                                        "href": "v9-alerting-rules-notification-templates.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Alerting on numeric data",
+                                                "href": "v9-alerting-explore-numeric.html"
+                                            },
+                                            {
+                                                "title": "Labels and annotations",
+                                                "href": "v9-alerting-explore-labels.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Label matching",
+                                                        "href": "v9-alerting-explore-labels-matching.html"
+                                                    },
+                                                    {
+                                                        "title": "Labels",
+                                                        "href": "v9-alerting-explore-labels-alerting.html"
+                                                    },
+                                                    {
+                                                        "title": "Templating labels and annotations",
+                                                        "href": "v9-alerting-explore-labels-templating.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "States and health",
+                                                "href": "v9-alerting-explore-state.html"
+                                            },
+                                            {
+                                                "title": "Contact points",
+                                                "href": "v9-alerting-explore-contacts.html"
+                                            },
+                                            {
+                                                "title": "Notifications",
+                                                "href": "v9-alerting-explore-notifications.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Set up Alerting",
+                                        "href": "v9-alerting-setup.html",
+                                        "contents": [
+                                            {
+                                                "title": "Add an external Alertmanager",
+                                                "href": "v9-alerting-setup-alertmanager.html"
+                                            },
+                                            {
+                                                "title": "Provisioning resources",
+                                                "href": "v9-alerting-setup-provision.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Using Terraform",
+                                                        "href": "v9-alerting-setup-provision-terraform.html"
+                                                    },
+                                                    {
+                                                        "title": "View provisioned resources",
+                                                        "href": "v9-alerting-setup-provision-view.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Migrating to Grafana alerting",
+                                        "href": "v9-alerting-use-grafana-alerts.html"
+                                    },
+                                    {
+                                        "title": "Manage alert rules",
+                                        "href": "v9-alerting-managerules.html",
+                                        "contents": [
+                                            {
+                                                "title": "Grafana managed alerts",
+                                                "href": "v9-alerting-managerules-grafana.html"
+                                            },
+                                            {
+                                                "title": "Mimir or Loki manged rules",
+                                                "href": "v9-alerting-managerules-mimir-loki.html"
+                                            },
+                                            {
+                                                "title": "Mimir or Loki managed recording rules",
+                                                "href": "v9-alerting-managerules-mimir-loki-recording.html"
+                                            },
+                                            {
+                                                "title": "Mimir or Loki groups and namespaces",
+                                                "href": "v9-alerting-managerules-mimir-loki-groups.html"
+                                            },
+                                            {
+                                                "title": "View and edit rules",
+                                                "href": "v9-alerting-managerules-view-edit.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Alert notifications",
+                                        "href": "v9-alerting-managenotifications.html",
+                                        "contents": [
+                                            {
+                                                "title": "Alertmanager",
+                                                "href": "v9-alerting-managenotifications-alertmanager.html"
+                                            },
+                                            {
+                                                "title": "Contact points",
+                                                "href": "v9-alerting-contact-points.html"
+                                            },
+                                            {
+                                                "title": "Notification policies",
+                                                "href": "v9-alerting-notification-policies.html"
+                                            },
+                                            {
+                                                "title": "Customize notifications",
+                                                "href": "v9-alerting-notifications.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Go templating",
+                                                        "href": "v9-alerting-notifications-go-templating.html"
+                                                    },
+                                                    {
+                                                        "title": "Notification templates",
+                                                        "href": "v9-alerting-create-templates.html"
+                                                    },
+                                                    {
+                                                        "title": "Template reference",
+                                                        "href": "v9-alerting-template-reference.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Silences",
+                                                "href": "v9-alerting-silences.html"
+                                            },
+                                            {
+                                                "title": "Mute timings",
+                                                "href": "v9-alerting-notification-muting.html"
+                                            },
+                                            {
+                                                "title": "View and filter by alert groups",
+                                                "href": "v9-alerting-viewfiltergroups.html"
+                                            },
+                                            {
+                                                "title": "View notification errors",
+                                                "href": "v9-alerting-viewnotificationerrors.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Grafana version 8",
+                        "href": "using-grafana-v8.html",
+                        "contents": [
+                            {
+                                "title": "Panels",
+                                "href": "Grafana-panels.html",
+                                "contents": [
+                                    {
+                                        "title": "Adding or editing a panel",
+                                        "href": "add-a-panel-to-a-dashboard.html"
+                                    },
+                                    {
+                                        "title": "Deleting a panel",
+                                        "href": "Deleting-a-panel.html"
+                                    },
+                                    {
+                                        "title": "Queries",
+                                        "href": "panel-queries.html"
+                                    },
+                                    {
+                                        "title": "Recorded queries",
+                                        "href": "recorded-queries.html"
+                                    },
+                                    {
+                                        "title": "Transformations",
+                                        "href": "panel-transformations.html"
+                                    },
+                                    {
+                                        "title": "Field options and overrides",
+                                        "href": "field-options-overrides.html"
+                                    },
+                                    {
+                                        "title": "Panel editor",
+                                        "href": "AMG-panel-editor.html"
+                                    },
+                                    {
+                                        "title": "Library panels",
+                                        "href": "AMG-library-panel.html"
+                                    },
+                                    {
+                                        "title": "Visualizations",
+                                        "href": "AMG-visualizations.html",
+                                        "contents": [
+                                            {
+                                                "title": "Alert list panel",
+                                                "href": "alert-list-panel.html"
+                                            },
+                                            {
+                                                "title": "Bar chart panel",
+                                                "href": "bar-chart-panel.html"
+                                            },
+                                            {
+                                                "title": "Bar gauge panel",
+                                                "href": "alert-panel-bar-gauge-panel.html"
+                                            },
+                                            {
+                                                "title": "Clock panel",
+                                                "href": "clock-panel.html"
+                                            },
+                                            {
+                                                "title": "Dashboard list panel",
+                                                "href": "dashboard-list-panel.html"
+                                            },
+                                            {
+                                                "title": "Gauge panel",
+                                                "href": "gauge-panel.html"
+                                            },
+                                            {
+                                                "title": "Geomap panel",
+                                                "href": "AMG-Geomap.html"
+                                            },
+                                            {
+                                                "title": "Graph panel",
+                                                "href": "graph-panel.html"
+                                            },
+                                            {
+                                                "title": "Heatmap",
+                                                "href": "visualization-heatmap.html"
+                                            },
+                                            {
+                                                "title": "Histogram panel",
+                                                "href": "histogram-panel.html"
+                                            },
+                                            {
+                                                "title": "Logs panel",
+                                                "href": "logs-panel.html"
+                                            },
+                                            {
+                                                "title": "News panel",
+                                                "href": "news-panel.html"
+                                            },
+                                            {
+                                                "title": "Node graph panel (Beta)",
+                                                "href": "node-graph-panel.html"
+                                            },
+                                            {
+                                                "title": "Pie chart panel",
+                                                "href": "pie-chart-panel.html"
+                                            },
+                                            {
+                                                "title": "Plotly panel",
+                                                "href": "plotly-panel.html"
+                                            },
+                                            {
+                                                "title": "Sankey panel",
+                                                "href": "sankey-panel.html"
+                                            },
+                                            {
+                                                "title": "Scatter panel",
+                                                "href": "scatter-panel.html"
+                                            },
+                                            {
+                                                "title": "Stat panel",
+                                                "href": "stat-panel.html"
+                                            },
+                                            {
+                                                "title": "State timeline panel",
+                                                "href": "state-timeline-panel.html"
+                                            },
+                                            {
+                                                "title": "Status history panel",
+                                                "href": "status-history-panel.html"
+                                            },
+                                            {
+                                                "title": "Table panel",
+                                                "href": "table-panel.html"
+                                            },
+                                            {
+                                                "title": "Text panel",
+                                                "href": "text-panel.html"
+                                            },
+                                            {
+                                                "title": "Time series panel",
+                                                "href": "time-series-panel.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Graph time series as lines",
+                                                        "href": "time-series-graph-lines.html"
+                                                    },
+                                                    {
+                                                        "title": "Graph time series as bars",
+                                                        "href": "time-series-graph-bars.html"
+                                                    },
+                                                    {
+                                                        "title": "Graph time series as points",
+                                                        "href": "time-series-graph-points.html"
+                                                    },
+                                                    {
+                                                        "title": "Change axis display",
+                                                        "href": "time-series-change-axis.html"
+                                                    },
+                                                    {
+                                                        "title": "Graph stacked time series",
+                                                        "href": "time-series-stacked.html",
+                                                        "contents": [
+                                                            {
+                                                                "title": "Stack series in groups",
+                                                                "href": "time-series-stacked-groups.html"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Thresholds",
+                                                "href": "thresholds.html"
+                                            },
+                                            {
+                                                "title": "WindRose",
+                                                "href": "windrose.html"
+                                            },
+                                            {
+                                                "title": "Inspect a panel",
+                                                "href": "inspect-a-panel.html"
+                                            },
+                                            {
+                                                "title": "Calculations list",
+                                                "href": "list-of-calculations.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Dashboards",
+                                "href": "dashboard-overview.html",
+                                "contents": [
+                                    {
+                                        "title": "Annotations",
+                                        "href": "dashboard-annotations.html"
+                                    },
+                                    {
+                                        "title": "Dashboard folders",
+                                        "href": "dashboard-folders.html"
+                                    },
+                                    {
+                                        "title": "Playlist",
+                                        "href": "dashboard-playlist.html"
+                                    },
+                                    {
+                                        "title": "Dashboard search",
+                                        "href": "dashboard-search.html"
+                                    },
+                                    {
+                                        "title": "Sharing a dashboard",
+                                        "href": "share-a-dashboard.html"
+                                    },
+                                    {
+                                        "title": "Sharing a panel",
+                                        "href": "dashboard-share-a-panel.html"
+                                    },
+                                    {
+                                        "title": "Time range controls",
+                                        "href": "dashboard-time-range-controls.html"
+                                    },
+                                    {
+                                        "title": "Exporting and importing dashboards",
+                                        "href": "dashboard-export-and-import.html"
+                                    },
+                                    {
+                                        "title": "Dashboard version history",
+                                        "href": "dashboard-version-history.html"
+                                    },
+                                    {
+                                        "title": "Keyboard shortcuts",
+                                        "href": "keyboard-shortcuts.html"
+                                    },
+                                    {
+                                        "title": "Dashboard JSON model",
+                                        "href": "dashboard-json-model.html"
+                                    },
+                                    {
+                                        "title": "Scripted dashboards",
+                                        "href": "scripted-dashboards.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Explore",
+                                "href": "explore.html"
+                            },
+                            {
+                                "title": "Linking",
+                                "href": "linking-in-Amazon-Managed-Service-for-Grafana.html",
+                                "contents": [
+                                    {
+                                        "title": "Dashboard links",
+                                        "href": "dashboard-links.html"
+                                    },
+                                    {
+                                        "title": "Panel links",
+                                        "href": "panel-links.html"
+                                    },
+                                    {
+                                        "title": "Data links",
+                                        "href": "data-links.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Templates and variables",
+                                "href": "templates-and-variables.html",
+                                "contents": [
+                                    {
+                                        "title": "Variable types",
+                                        "href": "variables-types.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Grafana alerting",
+                                "href": "alerts-overview.html",
+                                "contents": [
+                                    {
+                                        "title": "What's new in Grafana alerting",
+                                        "href": "alerts-whats-new.html"
+                                    },
+                                    {
+                                        "title": "Migrating to Grafana alerting",
+                                        "href": "alert-opt-in.html"
+                                    },
+                                    {
+                                        "title": "Alerting fundamentals",
+                                        "href": "alert-fundamentals.html"
+                                    },
+                                    {
+                                        "title": "Creating and managing Grafana alerting rules",
+                                        "href": "alert-rules.html"
+                                    },
+                                    {
+                                        "title": "Alert groups",
+                                        "href": "alert-groups.html"
+                                    },
+                                    {
+                                        "title": "Silencing alert notifications for Prometheus data sources",
+                                        "href": "alert-silences.html"
+                                    },
+                                    {
+                                        "title": "Working with contact points",
+                                        "href": "alert-contact-points.html"
+                                    },
+                                    {
+                                        "title": "Using messaging templates",
+                                        "href": "alert-message-templates.html"
+                                    },
+                                    {
+                                        "title": "Working with notification policies",
+                                        "href": "alert-notifications.html"
+                                    },
+                                    {
+                                        "title": "Classic alerts",
+                                        "href": "old-alerts-overview.html",
+                                        "contents": [
+                                            {
+                                                "title": "Alert notifications",
+                                                "href": "old-alert-notifications.html"
+                                            },
+                                            {
+                                                "title": "Creating alerts",
+                                                "href": "old-create-alerts.html"
+                                            },
+                                            {
+                                                "title": "Pausing an alert rule",
+                                                "href": "old-pause-an-alert-rule.html"
+                                            },
+                                            {
+                                                "title": "Viewing existing alert rules",
+                                                "href": "old-view-existing-alert-rules.html"
+                                            },
+                                            {
+                                                "title": "Notification templating",
+                                                "href": "old-alerts-notification-templating.html"
+                                            },
+                                            {
+                                                "title": "Troubleshooting alerts",
+                                                "href": "old-troubleshoot-alerts.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Change your preferences",
+                        "href": "change-your-grafana-preferences.html"
+                    }
+                ]
+            },
+            {
+                "title": "Using Grafana HTTP APIs",
+                "href": "Using-Grafana-APIs.html",
+                "contents": [
+                    {
+                        "title": "Authenticating with tokens",
+                        "href": "authenticating-grafana-apis.html",
+                        "contents": [
+                            {
+                                "title": "API keys (API tokens)",
+                                "href": "using-api-keys.html"
+                            },
+                            {
+                                "title": "Service accounts",
+                                "href": "service-accounts.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Alerting API",
+                        "href": "Grafana-API-Alerting.html"
+                    },
+                    {
+                        "title": "Alerting Notification Channels API",
+                        "href": "Grafana-API-AlertingNotificationChannels.html"
+                    },
+                    {
+                        "title": "Annotations API",
+                        "href": "Grafana-API-Annotations.html"
+                    },
+                    {
+                        "title": "Authentication API",
+                        "href": "Grafana-API-Authentication.html"
+                    },
+                    {
+                        "title": "Dashboard API",
+                        "href": "Grafana-API-Dashboard.html"
+                    },
+                    {
+                        "title": "Dashboard Permissions API",
+                        "href": "Grafana-API-DashboardPermissions.html"
+                    },
+                    {
+                        "title": "Dashboard Versions API",
+                        "href": "Grafana-API-DashboardVersions.html"
+                    },
+                    {
+                        "title": "Data Source API",
+                        "href": "Grafana-API-Datasource.html"
+                    },
+                    {
+                        "title": "Data Source Permissions API",
+                        "href": "Grafana-API-DatasourcePermissions.html"
+                    },
+                    {
+                        "title": "External Group Synchronization API",
+                        "href": "Grafana-API-ExternalGroupSynchronization.html"
+                    },
+                    {
+                        "title": "Folder API",
+                        "href": "Grafana-API-Folder.html"
+                    },
+                    {
+                        "title": "Folder/Dashboard Search API",
+                        "href": "Grafana-API-FolderDashboard-Search.html"
+                    },
+                    {
+                        "title": "Folder Permissions API",
+                        "href": "Grafana-API-FolderPermissions.html"
+                    },
+                    {
+                        "title": "Organization API",
+                        "href": "Grafana-API-Organization.html"
+                    },
+                    {
+                        "title": "Playlist API",
+                        "href": "Grafana-API-Playlist.html"
+                    },
+                    {
+                        "title": "Preferences API",
+                        "href": "Grafana-API-Preferences.html"
+                    },
+                    {
+                        "title": "Snapshot API",
+                        "href": "Grafana-API-Snapshot.html"
+                    },
+                    {
+                        "title": "Team API",
+                        "href": "Grafana-API-Team.html"
+                    },
+                    {
+                        "title": "User API",
+                        "href": "Grafana-API-User.html"
+                    }
+                ]
+            },
+            {
+                "title": "Upgrade a workspace to Grafana Enterprise",
+                "href": "upgrade-to-Grafana-Enterprise.html"
+            },
+            {
+                "title": "Tagging",
+                "href": "Tagging.html",
+                "contents": [
+                    {
+                        "title": "Tagging workspaces",
+                        "href": "Tagging_workspaces.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon Managed Grafana works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Permissions and policies for other AWS services",
+                        "href": "AMG-manage-permissions.html"
+                    },
+                    {
+                        "title": "IAM permissions",
+                        "href": "AMG-and-IAM.html"
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "AMG-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "CloudTrail logs",
+                        "href": "logging-using-cloudtrail.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "AMG-Security-Best-Practices.html"
+                    },
+                    {
+                        "title": "Interface VPC endpoints",
+                        "href": "VPC-endpoints.html"
+                    }
+                ]
+            },
+            {
+                "title": "Service quotas",
+                "href": "AMG_quotas.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

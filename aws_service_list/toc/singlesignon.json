@@ -1,1 +1,682 @@
-{ "contents" : [ { "title" : "What is IAM Identity Center?", "href" : "what-is.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Prerequisites and considerations", "href" : "get-started-prereqs-considerations.html" }, { "title" : "Step 1: Enable IAM Identity Center", "href" : "get-started-enable-identity-center.html" }, { "title" : "Step 2: Choose your identity source", "href" : "get-started-choose-identity-source.html", "contents" : [ { "title" : "Connect Active Directory or another IdP and specify a user", "href" : "get-started-connect-id-source-ad-idp-specify-user.html" }, { "title" : "Use the default directory and create an IAM Identity Center user", "href" : "get-started-use-identity-center-directory-create-user-in-identity-center.html" } ] }, { "title" : "Step 3: Create an administrative permission set", "href" : "get-started-create-an-administrative-permission-set.html" }, { "title" : "Step 4: Set up AWS account access for an administrative user", "href" : "get-started-assign-account-access-admin-user.html" }, { "title" : "Step 5: Sign in to the AWS access portal", "href" : "get-started-sign-in-access-portal.html" }, { "title" : "Step 6: Create a permission set that applies least-privilege permissions", "href" : "get-started-create-permission-set-to-grant-least-privilege-permissions.html" }, { "title" : "Step 7: Set up AWS account access for additional users (optional)", "href" : "set-up-single-sign-on-access-to-accounts.html" }, { "title" : "Step 8: Set up access to your applications (optional)", "href" : "set-up-single-sign-on-access-to-applications.html" } ] }, { "title" : "Key concepts", "href" : "understanding-key-concepts.html", "contents" : [ { "title" : "Users, groups, and provisioning", "href" : "users-groups-provisioning.html" }, { "title" : "Identity Center enabled applications", "href" : "app-enablement.html" }, { "title" : "SAML federation", "href" : "samlfederationconcept.html" }, { "title" : "User authentications", "href" : "authconcept.html" }, { "title" : "OAuth 2.0", "href" : "oidc-concept.html" }, { "title" : "Permission sets", "href" : "permissionsetsconcept.html", "contents" : [ { "title" : "Predefined permissions", "href" : "permissionsetpredefined.html" }, { "title" : "Custom permissions", "href" : "permissionsetcustom.html" } ] } ] }, { "title" : "Workforce identities", "href" : "identities.html", "contents" : [ { "title" : "Use cases", "href" : "use-cases.html", "contents" : [ { "title" : "Enable single sign-on access to your AWS applications", "href" : "use-case-app-admin.html" }, { "title" : "Enable single sign-on access to your Amazon EC2 Windows instances", "href" : "use-case-ec2.html" } ] }, { "title" : "Manage your identity source", "href" : "manage-your-identity-source.html", "contents" : [ { "title" : "Considerations for changing your identity source", "href" : "manage-your-identity-source-considerations.html" }, { "title" : "Change your identity source", "href" : "manage-your-identity-source-change.html" }, { "title" : "Manage sign-in and attribute use for all identity source types", "href" : "manage-your-identity-source-attribute-use.html", "contents" : [ { "title" : "Manage IAM Identity Center integrated application sessions", "href" : "manage-app-session.html" }, { "title" : "Configure the duration of your users' AWS access portal sessions", "href" : "configure-user-session.html" }, { "title" : "Manage AWS access portal sessions", "href" : "manage-user-session.html" }, { "title" : "Supported user and group attributes", "href" : "supported-attributes.html" } ] }, { "title" : "Manage identities in IAM Identity Center", "href" : "manage-your-identity-source-sso.html", "contents" : [ { "title" : "Add users", "href" : "addusers.html" }, { "title" : "Add groups", "href" : "addgroups.html" }, { "title" : "Add users to groups", "href" : "adduserstogroups.html" }, { "title" : "Delete groups", "href" : "deletegroups.html" }, { "title" : "Delete users", "href" : "deleteusers.html" }, { "title" : "Disable user access", "href" : "disableuser.html" }, { "title" : "Edit user properties", "href" : "edituser.html" }, { "title" : "Reset an end user password", "href" : "reset-password-for-user.html" }, { "title" : "Send email OTP for users created from API", "href" : "userswithoutpwd.html" }, { "title" : "Password requirements", "href" : "password-requirements.html" } ] }, { "title" : "Connect to a Microsoft AD directory", "href" : "manage-your-identity-source-ad.html", "contents" : [ { "title" : "Connect a directory in AWS Managed Microsoft AD to IAM Identity Center", "href" : "connectawsad.html" }, { "title" : "Connect a self-managed directory in Active Directory to IAM Identity Center", "href" : "connectonpremad.html" }, { "title" : "Attribute mappings", "href" : "attributemappingsconcept.html", "contents" : [ { "title" : "Map attributes in IAM Identity Center to attributes in your AWS Managed Microsoft AD directory", "href" : "mapssoattributestocdattributes.html" } ] }, { "title" : "Provision users and groups from Active Directory", "href" : "provision-users-groups-AD.html", "contents" : [ { "title" : "IAM Identity Center configurable AD sync", "href" : "provision-users-from-ad-configurable-ADsync.html" }, { "title" : "IAM Identity Center AD sync", "href" : "provision-users-from-ad-ADsync.html" } ] } ] }, { "title" : "Connect to an external identity provider", "href" : "manage-your-identity-source-idp.html", "contents" : [ { "title" : "SCIM profile and SAML 2.0 implementation", "href" : "scim-profile-saml.html", "contents" : [ { "title" : "Automatic provisioning", "href" : "provision-automatically.html" }, { "title" : "Manual provisioning", "href" : "provision-manually.html" }, { "title" : "Manage Certificates", "href" : "managesamlcerts.html", "contents" : [ { "title" : "Rotate a SAML 2.0 certificate", "href" : "rotatesamlcert.html" }, { "title" : "Certificate expiration status indicators", "href" : "samlcertexpirationindicators.html" } ] } ] }, { "title" : "Supported identity providers", "href" : "supported-idps.html", "contents" : [ { "title" : "Azure AD", "href" : "azure-ad-idp.html" }, { "title" : "CyberArk", "href" : "cyberark-idp.html" }, { "title" : "Google Workspace", "href" : "google-idp.html" }, { "title" : "JumpCloud", "href" : "jumpcloud-idp.html" }, { "title" : "Okta", "href" : "okta-idp.html" }, { "title" : "OneLogin", "href" : "onelogin-idp.html" }, { "title" : "Ping Identity", "href" : "pingidentity.html", "contents" : [ { "title" : "PingFederate", "href" : "pingfederate-idp.html" }, { "title" : "PingOne", "href" : "pingone-idp.html" } ] } ] }, { "title" : "Other identity providers", "href" : "other-idps.html" } ] } ] }, { "title" : "Using the AWS access portal", "href" : "using-the-portal.html", "contents" : [ { "title" : "Tips for using the portal", "href" : "portaltips.html" }, { "title" : "Accepting the invitation to join IAM Identity Center", "href" : "howtoactivateaccount.html" }, { "title" : "Signing up in the AWS access portal", "href" : "howtosignup.html" }, { "title" : "Signing in to the AWS access portal", "href" : "howtosignin.html" }, { "title" : "Signing out of the AWS access portal", "href" : "howtosignout.html" }, { "title" : "Searching for an AWS account or application", "href" : "howtosearchforapp.html" }, { "title" : "Resetting your user password", "href" : "resetpassword-accessportal.html" }, { "title" : "AWS CLI and AWS SDK access", "href" : "howtogetcredentials.html" }, { "title" : "Bookmarking an IAM role", "href" : "howtobookmark.html" }, { "title" : "Registering a device for MFA", "href" : "user-device-registration.html" }, { "title" : "Customizing the AWS access portal URL", "href" : "howtochangeURL.html" } ] }, { "title" : "Multi-factor authentication", "href" : "enable-mfa.html", "contents" : [ { "title" : "Getting started", "href" : "mfa-getting-started.html", "contents" : [ { "title" : "Considerations before using MFA in IAM Identity Center", "href" : "mfa-considerations.html" }, { "title" : "Enable MFA", "href" : "mfa-enable-how-to.html" } ] }, { "title" : "Available MFA types", "href" : "mfa-types.html" }, { "title" : "How to manage MFA", "href" : "mfa-how-to.html", "contents" : [ { "title" : "Configure MFA types", "href" : "how-to-configure-mfa-types.html" }, { "title" : "Configure MFA device enforcement", "href" : "how-to-configure-mfa-device-enforcement.html" }, { "title" : "Register an MFA device", "href" : "how-to-register-device.html" }, { "title" : "Manage a user's MFA device", "href" : "how-to-manage-device.html" }, { "title" : "Allow users to register their own MFA devices", "href" : "how-to-allow-user-registration.html" }, { "title" : "Disable MFA for your IAM Identity Center directory", "href" : "how-to-disable-mfa.html" } ] } ] } ] }, { "title" : "Multi-account permissions", "href" : "manage-your-accounts.html", "contents" : [ { "title" : "Delegated administration", "href" : "delegated-admin.html" }, { "title" : "Temporary elevated access", "href" : "temporary-elevated-access.html" }, { "title" : "Single sign-on access to AWS accounts", "href" : "useraccess.html" }, { "title" : "Create and manage permission sets", "href" : "permissionsets.html", "contents" : [ { "title" : "Create a permission set", "href" : "howtocreatepermissionset.html" }, { "title" : "Delegate permission set administration", "href" : "permissionsetdelegation.html" }, { "title" : "Use IAM policies", "href" : "howtocmp.html" }, { "title" : "Configure permission set properties", "href" : "permproperties.html", "contents" : [ { "title" : "Set session duration", "href" : "howtosessionduration.html" }, { "title" : "Set relay state", "href" : "howtopermrelaystate.html" } ] }, { "title" : "Referencing permission sets in resource policies, Amazon EKS, and AWS KMS", "href" : "referencingpermissionsets.html" } ] }, { "title" : "Delete permission sets", "href" : "howtoremovepermissionset.html" }, { "title" : "Attribute-based access control", "href" : "abac.html", "contents" : [ { "title" : "Checklist: Configuring ABAC in AWS using IAM Identity Center", "href" : "abac-checklist.html" }, { "title" : "Attributes for access control", "href" : "attributesforaccesscontrol.html", "contents" : [ { "title" : "Enable and configure attributes for access control", "href" : "configure-abac.html" }, { "title" : "Create permission policies for ABAC in IAM Identity Center", "href" : "configure-abac-policies.html" } ] } ] }, { "title" : "IAM identity provider", "href" : "idp.html" }, { "title" : "Service-linked roles", "href" : "slrconcept.html" } ] }, { "title" : "Application assignments", "href" : "manage-your-applications.html", "contents" : [ { "title" : "Identity Center enabled applications", "href" : "awsapps.html" }, { "title" : "Cloud applications", "href" : "saasapps.html" }, { "title" : "Custom SAML 2.0 applications", "href" : "samlapps.html" }, { "title" : "Manage certificates", "href" : "managecerts.html", "contents" : [ { "title" : "Considerations before rotating a certificate", "href" : "rotatecertconsiderations.html" }, { "title" : "Rotate an IAM Identity Center certificate", "href" : "rotatecert.html" }, { "title" : "Certificate expiration status indicators", "href" : "certexpirationindicators.html" } ] }, { "title" : "Application properties", "href" : "appproperties.html" }, { "title" : "Assign user access to applications", "href" : "assignuserstoapp.html" }, { "title" : "Remove user access", "href" : "removeaccessfromapp.html" }, { "title" : "Map attributes in your application to IAM Identity Center attributes", "href" : "mapawsssoattributestoapp.html" } ] }, { "title" : "Resiliency design and Regional behavior", "href" : "resiliency-regional-behavior.html", "contents" : [ { "title" : "Set up emergency access to the AWS Management Console", "href" : "emergency-access.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Identity and access management for IAM Identity Center", "href" : "iam-auth-access.html", "contents" : [ { "title" : "Overview of managing access", "href" : "iam-auth-access-overview.html" }, { "title" : "Identity-based policies (IAM policies)", "href" : "iam-auth-access-using-id-policies.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html" } ] }, { "title" : "IAM Identity Center console and API authorization", "href" : "security-authorization.html" }, { "title" : "Logging and monitoring", "href" : "security-logging-and-monitoring.html", "contents" : [ { "title" : "Logging IAM Identity Center API calls with AWS CloudTrail", "href" : "logging-using-cloudtrail.html", "contents" : [ { "title" : "IAM Identity Center information in CloudTrail", "href" : "sso-info-in-cloudtrail.html" }, { "title" : "Understanding IAM Identity Center log file entries", "href" : "understanding-sso-entries.html" }, { "title" : "Understanding IAM Identity Center sign-in events", "href" : "understanding-sign-in-events.html" } ] }, { "title" : "Amazon CloudWatch Events", "href" : "cloudwatch-integration.html" } ] }, { "title" : "Compliance validation", "href" : "sso-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Tagging resources", "href" : "tagging.html" }, { "title" : "Integrating AWS CLI with IAM Identity Center", "href" : "integrating-aws-cli.html" }, { "title" : "Region availability", "href" : "regions.html" }, { "title" : "Quotas", "href" : "limits.html" }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/singlesignon/latest/userguide/",
+    "service": "singlesignon",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is IAM Identity Center?",
+                "href": "what-is.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Prerequisites and considerations",
+                        "href": "get-started-prereqs-considerations.html"
+                    },
+                    {
+                        "title": "Step 1: Enable IAM Identity Center",
+                        "href": "get-started-enable-identity-center.html"
+                    },
+                    {
+                        "title": "Step 2: Choose your identity source",
+                        "href": "get-started-choose-identity-source.html",
+                        "contents": [
+                            {
+                                "title": "Connect Active Directory or another IdP and specify a user",
+                                "href": "get-started-connect-id-source-ad-idp-specify-user.html"
+                            },
+                            {
+                                "title": "Use the default directory and create an IAM Identity Center user",
+                                "href": "get-started-use-identity-center-directory-create-user-in-identity-center.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Step 3: Create an administrative permission set",
+                        "href": "get-started-create-an-administrative-permission-set.html"
+                    },
+                    {
+                        "title": "Step 4: Set up AWS account access for an administrative user",
+                        "href": "get-started-assign-account-access-admin-user.html"
+                    },
+                    {
+                        "title": "Step 5: Sign in to the AWS access portal",
+                        "href": "get-started-sign-in-access-portal.html"
+                    },
+                    {
+                        "title": "Step 6: Create a permission set that applies least-privilege permissions",
+                        "href": "get-started-create-permission-set-to-grant-least-privilege-permissions.html"
+                    },
+                    {
+                        "title": "Step 7: Set up AWS account access for additional users (optional)",
+                        "href": "set-up-single-sign-on-access-to-accounts.html"
+                    },
+                    {
+                        "title": "Step 8: Set up access to your applications (optional)",
+                        "href": "set-up-single-sign-on-access-to-applications.html"
+                    }
+                ]
+            },
+            {
+                "title": "Key concepts",
+                "href": "understanding-key-concepts.html",
+                "contents": [
+                    {
+                        "title": "Users, groups, and provisioning",
+                        "href": "users-groups-provisioning.html"
+                    },
+                    {
+                        "title": "Identity Center enabled applications",
+                        "href": "app-enablement.html"
+                    },
+                    {
+                        "title": "SAML federation",
+                        "href": "samlfederationconcept.html"
+                    },
+                    {
+                        "title": "User authentications",
+                        "href": "authconcept.html"
+                    },
+                    {
+                        "title": "OAuth 2.0",
+                        "href": "oidc-concept.html"
+                    },
+                    {
+                        "title": "Permission sets",
+                        "href": "permissionsetsconcept.html",
+                        "contents": [
+                            {
+                                "title": "Predefined permissions",
+                                "href": "permissionsetpredefined.html"
+                            },
+                            {
+                                "title": "Custom permissions",
+                                "href": "permissionsetcustom.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Workforce identities",
+                "href": "identities.html",
+                "contents": [
+                    {
+                        "title": "Use cases",
+                        "href": "use-cases.html",
+                        "contents": [
+                            {
+                                "title": "Enable single sign-on access to your AWS applications",
+                                "href": "use-case-app-admin.html"
+                            },
+                            {
+                                "title": "Enable single sign-on access to your Amazon EC2 Windows instances",
+                                "href": "use-case-ec2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Manage your identity source",
+                        "href": "manage-your-identity-source.html",
+                        "contents": [
+                            {
+                                "title": "Considerations for changing your identity source",
+                                "href": "manage-your-identity-source-considerations.html"
+                            },
+                            {
+                                "title": "Change your identity source",
+                                "href": "manage-your-identity-source-change.html"
+                            },
+                            {
+                                "title": "Manage sign-in and attribute use for all identity source types",
+                                "href": "manage-your-identity-source-attribute-use.html",
+                                "contents": [
+                                    {
+                                        "title": "Manage IAM Identity Center integrated application sessions",
+                                        "href": "manage-app-session.html"
+                                    },
+                                    {
+                                        "title": "Configure the duration of your users' AWS access portal sessions",
+                                        "href": "configure-user-session.html"
+                                    },
+                                    {
+                                        "title": "Manage AWS access portal sessions",
+                                        "href": "manage-user-session.html"
+                                    },
+                                    {
+                                        "title": "Supported user and group attributes",
+                                        "href": "supported-attributes.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Manage identities in IAM Identity Center",
+                                "href": "manage-your-identity-source-sso.html",
+                                "contents": [
+                                    {
+                                        "title": "Add users",
+                                        "href": "addusers.html"
+                                    },
+                                    {
+                                        "title": "Add groups",
+                                        "href": "addgroups.html"
+                                    },
+                                    {
+                                        "title": "Add users to groups",
+                                        "href": "adduserstogroups.html"
+                                    },
+                                    {
+                                        "title": "Delete groups",
+                                        "href": "deletegroups.html"
+                                    },
+                                    {
+                                        "title": "Delete users",
+                                        "href": "deleteusers.html"
+                                    },
+                                    {
+                                        "title": "Disable user access",
+                                        "href": "disableuser.html"
+                                    },
+                                    {
+                                        "title": "Edit user properties",
+                                        "href": "edituser.html"
+                                    },
+                                    {
+                                        "title": "Reset an end user password",
+                                        "href": "reset-password-for-user.html"
+                                    },
+                                    {
+                                        "title": "Send email OTP for users created from API",
+                                        "href": "userswithoutpwd.html"
+                                    },
+                                    {
+                                        "title": "Password requirements",
+                                        "href": "password-requirements.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Connect to a Microsoft AD directory",
+                                "href": "manage-your-identity-source-ad.html",
+                                "contents": [
+                                    {
+                                        "title": "Connect a directory in AWS Managed Microsoft AD to IAM Identity Center",
+                                        "href": "connectawsad.html"
+                                    },
+                                    {
+                                        "title": "Connect a self-managed directory in Active Directory to IAM Identity Center",
+                                        "href": "connectonpremad.html"
+                                    },
+                                    {
+                                        "title": "Attribute mappings",
+                                        "href": "attributemappingsconcept.html",
+                                        "contents": [
+                                            {
+                                                "title": "Map attributes in IAM Identity Center to attributes in your AWS Managed Microsoft AD directory",
+                                                "href": "mapssoattributestocdattributes.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Provision users and groups from Active Directory",
+                                        "href": "provision-users-groups-AD.html",
+                                        "contents": [
+                                            {
+                                                "title": "IAM Identity Center configurable AD sync",
+                                                "href": "provision-users-from-ad-configurable-ADsync.html"
+                                            },
+                                            {
+                                                "title": "IAM Identity Center AD sync",
+                                                "href": "provision-users-from-ad-ADsync.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Connect to an external identity provider",
+                                "href": "manage-your-identity-source-idp.html",
+                                "contents": [
+                                    {
+                                        "title": "SCIM profile and SAML 2.0 implementation",
+                                        "href": "scim-profile-saml.html",
+                                        "contents": [
+                                            {
+                                                "title": "Automatic provisioning",
+                                                "href": "provision-automatically.html"
+                                            },
+                                            {
+                                                "title": "Manual provisioning",
+                                                "href": "provision-manually.html"
+                                            },
+                                            {
+                                                "title": "Manage Certificates",
+                                                "href": "managesamlcerts.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Rotate a SAML 2.0 certificate",
+                                                        "href": "rotatesamlcert.html"
+                                                    },
+                                                    {
+                                                        "title": "Certificate expiration status indicators",
+                                                        "href": "samlcertexpirationindicators.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Supported identity providers",
+                                        "href": "supported-idps.html",
+                                        "contents": [
+                                            {
+                                                "title": "Azure AD",
+                                                "href": "azure-ad-idp.html"
+                                            },
+                                            {
+                                                "title": "CyberArk",
+                                                "href": "cyberark-idp.html"
+                                            },
+                                            {
+                                                "title": "Google Workspace",
+                                                "href": "google-idp.html"
+                                            },
+                                            {
+                                                "title": "JumpCloud",
+                                                "href": "jumpcloud-idp.html"
+                                            },
+                                            {
+                                                "title": "Okta",
+                                                "href": "okta-idp.html"
+                                            },
+                                            {
+                                                "title": "OneLogin",
+                                                "href": "onelogin-idp.html"
+                                            },
+                                            {
+                                                "title": "Ping Identity",
+                                                "href": "pingidentity.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "PingFederate",
+                                                        "href": "pingfederate-idp.html"
+                                                    },
+                                                    {
+                                                        "title": "PingOne",
+                                                        "href": "pingone-idp.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Other identity providers",
+                                        "href": "other-idps.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using the AWS access portal",
+                        "href": "using-the-portal.html",
+                        "contents": [
+                            {
+                                "title": "Tips for using the portal",
+                                "href": "portaltips.html"
+                            },
+                            {
+                                "title": "Accepting the invitation to join IAM Identity Center",
+                                "href": "howtoactivateaccount.html"
+                            },
+                            {
+                                "title": "Signing up in the AWS access portal",
+                                "href": "howtosignup.html"
+                            },
+                            {
+                                "title": "Signing in to the AWS access portal",
+                                "href": "howtosignin.html"
+                            },
+                            {
+                                "title": "Signing out of the AWS access portal",
+                                "href": "howtosignout.html"
+                            },
+                            {
+                                "title": "Searching for an AWS account or application",
+                                "href": "howtosearchforapp.html"
+                            },
+                            {
+                                "title": "Resetting your user password",
+                                "href": "resetpassword-accessportal.html"
+                            },
+                            {
+                                "title": "AWS CLI and AWS SDK access",
+                                "href": "howtogetcredentials.html"
+                            },
+                            {
+                                "title": "Bookmarking an IAM role",
+                                "href": "howtobookmark.html"
+                            },
+                            {
+                                "title": "Registering a device for MFA",
+                                "href": "user-device-registration.html"
+                            },
+                            {
+                                "title": "Customizing the AWS access portal URL",
+                                "href": "howtochangeURL.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Multi-factor authentication",
+                        "href": "enable-mfa.html",
+                        "contents": [
+                            {
+                                "title": "Getting started",
+                                "href": "mfa-getting-started.html",
+                                "contents": [
+                                    {
+                                        "title": "Considerations before using MFA in IAM Identity Center",
+                                        "href": "mfa-considerations.html"
+                                    },
+                                    {
+                                        "title": "Enable MFA",
+                                        "href": "mfa-enable-how-to.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Available MFA types",
+                                "href": "mfa-types.html"
+                            },
+                            {
+                                "title": "How to manage MFA",
+                                "href": "mfa-how-to.html",
+                                "contents": [
+                                    {
+                                        "title": "Configure MFA types",
+                                        "href": "how-to-configure-mfa-types.html"
+                                    },
+                                    {
+                                        "title": "Configure MFA device enforcement",
+                                        "href": "how-to-configure-mfa-device-enforcement.html"
+                                    },
+                                    {
+                                        "title": "Register an MFA device",
+                                        "href": "how-to-register-device.html"
+                                    },
+                                    {
+                                        "title": "Manage a user's MFA device",
+                                        "href": "how-to-manage-device.html"
+                                    },
+                                    {
+                                        "title": "Allow users to register their own MFA devices",
+                                        "href": "how-to-allow-user-registration.html"
+                                    },
+                                    {
+                                        "title": "Disable MFA for your IAM Identity Center directory",
+                                        "href": "how-to-disable-mfa.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Multi-account permissions",
+                "href": "manage-your-accounts.html",
+                "contents": [
+                    {
+                        "title": "Delegated administration",
+                        "href": "delegated-admin.html"
+                    },
+                    {
+                        "title": "Temporary elevated access",
+                        "href": "temporary-elevated-access.html"
+                    },
+                    {
+                        "title": "Single sign-on access to AWS accounts",
+                        "href": "useraccess.html"
+                    },
+                    {
+                        "title": "Create and manage permission sets",
+                        "href": "permissionsets.html",
+                        "contents": [
+                            {
+                                "title": "Create a permission set",
+                                "href": "howtocreatepermissionset.html"
+                            },
+                            {
+                                "title": "Delegate permission set administration",
+                                "href": "permissionsetdelegation.html"
+                            },
+                            {
+                                "title": "Use IAM policies",
+                                "href": "howtocmp.html"
+                            },
+                            {
+                                "title": "Configure permission set properties",
+                                "href": "permproperties.html",
+                                "contents": [
+                                    {
+                                        "title": "Set session duration",
+                                        "href": "howtosessionduration.html"
+                                    },
+                                    {
+                                        "title": "Set relay state",
+                                        "href": "howtopermrelaystate.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Referencing permission sets in resource policies, Amazon EKS, and AWS KMS",
+                                "href": "referencingpermissionsets.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Delete permission sets",
+                        "href": "howtoremovepermissionset.html"
+                    },
+                    {
+                        "title": "Attribute-based access control",
+                        "href": "abac.html",
+                        "contents": [
+                            {
+                                "title": "Checklist: Configuring ABAC in AWS using IAM Identity Center",
+                                "href": "abac-checklist.html"
+                            },
+                            {
+                                "title": "Attributes for access control",
+                                "href": "attributesforaccesscontrol.html",
+                                "contents": [
+                                    {
+                                        "title": "Enable and configure attributes for access control",
+                                        "href": "configure-abac.html"
+                                    },
+                                    {
+                                        "title": "Create permission policies for ABAC in IAM Identity Center",
+                                        "href": "configure-abac-policies.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IAM identity provider",
+                        "href": "idp.html"
+                    },
+                    {
+                        "title": "Service-linked roles",
+                        "href": "slrconcept.html"
+                    }
+                ]
+            },
+            {
+                "title": "Application assignments",
+                "href": "manage-your-applications.html",
+                "contents": [
+                    {
+                        "title": "Identity Center enabled applications",
+                        "href": "awsapps.html"
+                    },
+                    {
+                        "title": "Cloud applications",
+                        "href": "saasapps.html"
+                    },
+                    {
+                        "title": "Custom SAML 2.0 applications",
+                        "href": "samlapps.html"
+                    },
+                    {
+                        "title": "Manage certificates",
+                        "href": "managecerts.html",
+                        "contents": [
+                            {
+                                "title": "Considerations before rotating a certificate",
+                                "href": "rotatecertconsiderations.html"
+                            },
+                            {
+                                "title": "Rotate an IAM Identity Center certificate",
+                                "href": "rotatecert.html"
+                            },
+                            {
+                                "title": "Certificate expiration status indicators",
+                                "href": "certexpirationindicators.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Application properties",
+                        "href": "appproperties.html"
+                    },
+                    {
+                        "title": "Assign user access to applications",
+                        "href": "assignuserstoapp.html"
+                    },
+                    {
+                        "title": "Remove user access",
+                        "href": "removeaccessfromapp.html"
+                    },
+                    {
+                        "title": "Map attributes in your application to IAM Identity Center attributes",
+                        "href": "mapawsssoattributestoapp.html"
+                    }
+                ]
+            },
+            {
+                "title": "Resiliency design and Regional behavior",
+                "href": "resiliency-regional-behavior.html",
+                "contents": [
+                    {
+                        "title": "Set up emergency access to the AWS Management Console",
+                        "href": "emergency-access.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Identity and access management for IAM Identity Center",
+                        "href": "iam-auth-access.html",
+                        "contents": [
+                            {
+                                "title": "Overview of managing access",
+                                "href": "iam-auth-access-overview.html"
+                            },
+                            {
+                                "title": "Identity-based policies (IAM policies)",
+                                "href": "iam-auth-access-using-id-policies.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IAM Identity Center console and API authorization",
+                        "href": "security-authorization.html"
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "security-logging-and-monitoring.html",
+                        "contents": [
+                            {
+                                "title": "Logging IAM Identity Center API calls with AWS CloudTrail",
+                                "href": "logging-using-cloudtrail.html",
+                                "contents": [
+                                    {
+                                        "title": "IAM Identity Center information in CloudTrail",
+                                        "href": "sso-info-in-cloudtrail.html"
+                                    },
+                                    {
+                                        "title": "Understanding IAM Identity Center log file entries",
+                                        "href": "understanding-sso-entries.html"
+                                    },
+                                    {
+                                        "title": "Understanding IAM Identity Center sign-in events",
+                                        "href": "understanding-sign-in-events.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Amazon CloudWatch Events",
+                                "href": "cloudwatch-integration.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "sso-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tagging resources",
+                "href": "tagging.html"
+            },
+            {
+                "title": "Integrating AWS CLI with IAM Identity Center",
+                "href": "integrating-aws-cli.html"
+            },
+            {
+                "title": "Region availability",
+                "href": "regions.html"
+            },
+            {
+                "title": "Quotas",
+                "href": "limits.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

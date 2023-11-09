@@ -1,1 +1,52 @@
-{ "contents" : [ { "title" : "What is the AWS Mobile SDK for Unity?", "href" : "what-is-unity-plugin.html" }, { "title" : "Set Up the AWS Mobile SDK for Unity", "href" : "setup-unity.html" }, { "title" : "Getting Started with the AWS Mobile SDK for Unity", "href" : "getting-started-unity.html" }, { "title" : "Amazon Cognito Identity", "href" : "cognito-identity.html" }, { "title" : "Amazon Cognito Sync", "href" : "cognito-sync.html" }, { "title" : "Amazon Mobile Analytics", "href" : "analytics.html" }, { "title" : "Amazon Simple Storage Service (S3)", "href" : "s3.html" }, { "title" : "Amazon DynamoDB", "href" : "dynamodb.html" }, { "title" : "Amazon Simple Notification Service", "href" : "sns.html" }, { "title" : "AWS Lambda", "href" : "lambda.html" }, { "title" : "Troubleshooting", "href" : "troubleshooting-unity.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/mobile/sdkforunity/developerguide/",
+    "service": "mobile",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is the AWS Mobile SDK for Unity?",
+                "href": "what-is-unity-plugin.html"
+            },
+            {
+                "title": "Set Up the AWS Mobile SDK for Unity",
+                "href": "setup-unity.html"
+            },
+            {
+                "title": "Getting Started with the AWS Mobile SDK for Unity",
+                "href": "getting-started-unity.html"
+            },
+            {
+                "title": "Amazon Cognito Identity",
+                "href": "cognito-identity.html"
+            },
+            {
+                "title": "Amazon Cognito Sync",
+                "href": "cognito-sync.html"
+            },
+            {
+                "title": "Amazon Mobile Analytics",
+                "href": "analytics.html"
+            },
+            {
+                "title": "Amazon Simple Storage Service (S3)",
+                "href": "s3.html"
+            },
+            {
+                "title": "Amazon DynamoDB",
+                "href": "dynamodb.html"
+            },
+            {
+                "title": "Amazon Simple Notification Service",
+                "href": "sns.html"
+            },
+            {
+                "title": "AWS Lambda",
+                "href": "lambda.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting-unity.html"
+            }
+        ]
+    }
+}

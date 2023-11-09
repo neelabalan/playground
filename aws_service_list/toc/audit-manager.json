@@ -1,1 +1,596 @@
-{ "contents" : [ { "title" : "What is AWS Audit Manager?", "href" : "what-is.html", "contents" : [ { "title" : "Concepts and terminology", "href" : "concepts.html" }, { "title" : "Evidence collection", "href" : "how-evidence-is-collected.html" }, { "title" : "Examples of controls", "href" : "examples-of-controls.html" }, { "title" : "Related services", "href" : "related-services.html" }, { "title" : "Using Audit Manager with an AWS SDK", "href" : "sdk-general-information-section.html" } ] }, { "title" : "Setting up", "href" : "setting-up.html", "contents" : [ { "title" : "Prerequisites", "href" : "setup-prerequisites.html" }, { "title" : "Enable Audit Manager", "href" : "setup-audit-manager.html" }, { "title" : "Recommendations", "href" : "setup-recommendations.html" }, { "title" : "What do I do next?", "href" : "whatnow-setup.html" } ] }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Tutorial for Audit Owners: Creating an assessment", "href" : "tutorial-for-audit-owners.html" }, { "title" : "Tutorial for Delegates: Reviewing a control set", "href" : "tutorial-for-delegates.html" } ] }, { "title" : "Using the dashboard", "href" : "dashboard.html" }, { "title" : "Assessments", "href" : "assessments.html", "contents" : [ { "title" : "Creating an assessment", "href" : "create-assessments.html" }, { "title" : "Accessing an assessment", "href" : "access-assessments.html" }, { "title" : "Editing an assessment", "href" : "edit-assessment.html" }, { "title" : "Reviewing an assessment", "href" : "review-assessments.html" }, { "title" : "Reviewing assessment controls", "href" : "review-controls.html" }, { "title" : "Reviewing evidence", "href" : "review-evidence.html" }, { "title" : "Adding manual evidence", "href" : "upload-evidence.html" }, { "title" : "Generating an assessment report", "href" : "generate-assessment-report.html" }, { "title" : "Changing an assessment status", "href" : "change-assessment-status-to-inactive.html" }, { "title" : "Deleting an assessment", "href" : "delete-assessment.html" } ] }, { "title" : "Delegations", "href" : "delegate.html", "contents" : [ { "title" : "For audit owners", "href" : "delegate-for-audit-owners.html", "contents" : [ { "title" : "Delegating a control set", "href" : "delegation-for-audit-owners-delegating-a-control-set.html" }, { "title" : "Accessing delegations", "href" : "delegation-for-audit-owners-reviewing-delegations.html" }, { "title" : "Deleting delegations", "href" : "delegation-for-audit-owners-cancel-delegations.html" } ] }, { "title" : "For delegates", "href" : "delegation-for-delegates.html", "contents" : [ { "title" : "Viewing notifications", "href" : "delegation-for-delegates-viewing-notifications.html" }, { "title" : "Reviewing controls and evidence", "href" : "delegation-for-delegates-reviewing-control-set-and-evidence.html" }, { "title" : "Adding comments", "href" : "delegation-for-delegates-add-comment.html" }, { "title" : "Marking a control as reviewed", "href" : "delegation-for-delegates-changing-control-status.html" }, { "title" : "Submitting a control set to the audit owner", "href" : "delegation-for-delegates-submitting-back-to-audit-owner.html" } ] } ] }, { "title" : "Assessment reports", "href" : "assessment-reports.html" }, { "title" : "Evidence finder", "href" : "evidence-finder.html", "contents" : [ { "title" : "Searching for evidence", "href" : "search-for-evidence-in-evidence-finder.html" }, { "title" : "Viewing results in evidence finder", "href" : "viewing-search-results-in-evidence-finder.html" }, { "title" : "Filter and grouping options", "href" : "evidence-finder-filters-and-groups.html" }, { "title" : "Example use cases", "href" : "example-use-cases-for-evidence-finder.html" } ] }, { "title" : "Download center", "href" : "download-center.html" }, { "title" : "Framework library", "href" : "framework-library.html", "contents" : [ { "title" : "Accessing a framework", "href" : "access-frameworks.html" }, { "title" : "Viewing framework details", "href" : "review-frameworks.html" }, { "title" : "Creating a custom framework", "href" : "custom-frameworks.html", "contents" : [ { "title" : "Create new", "href" : "create-custom-frameworks-from-scratch.html" }, { "title" : "Customize existing", "href" : "create-custom-frameworks-from-existing.html" } ] }, { "title" : "Editing a custom framework", "href" : "edit-custom-frameworks.html" }, { "title" : "Deleting a custom framework", "href" : "delete-custom-framework.html" }, { "title" : "Sharing a custom framework", "href" : "share-custom-framework.html", "contents" : [ { "title" : "Sharing concepts and terminology", "href" : "share-custom-framework-concepts-and-terminology.html" }, { "title" : "Sending a share request", "href" : "framework-sharing.html" }, { "title" : "Responding to a share request", "href" : "responding-to-shared-framework-requests.html" }, { "title" : "Deleting a share request", "href" : "deleting-shared-framework-requests.html" } ] }, { "title" : "Supported frameworks", "href" : "framework-overviews.html", "contents" : [ { "title" : "ACSC Essential Eight", "href" : "essential-eight.html" }, { "title" : "ACSC ISM", "href" : "acsc-information-security-manual.html" }, { "title" : "AWS Audit Manager Sample Framework", "href" : "Sample.html" }, { "title" : "AWS Control Tower Guardrails", "href" : "controltower.html" }, { "title" : "AWS License Manager", "href" : "Licensemanager.html" }, { "title" : "AWS Foundational Security Best Practices", "href" : "aws-foundational-security-best-practices.html" }, { "title" : "AWS Operational Best Practices", "href" : "OBP.html" }, { "title" : "AWS Well-Architected", "href" : "well-architected.html" }, { "title" : "CCCS Medium Cloud Control Profile", "href" : "cccs-medium.html" }, { "title" : "CIS AWS Foundations Benchmark v.1.2", "href" : "CIS-1-2.html" }, { "title" : "CIS AWS Foundations Benchmark v.1.3", "href" : "CIS-1-3.html" }, { "title" : "CIS AWS Foundations Benchmark v.1.4", "href" : "CIS-1-4.html" }, { "title" : "CIS Controls v7.1 IG1", "href" : "CIS-controls.html" }, { "title" : "CIS Controls v8 IG1", "href" : "CIS-controls-v8.html" }, { "title" : "FedRAMP Moderate Baseline", "href" : "fedramp-moderate.html" }, { "title" : "General Data Protection Regulation (GDPR)", "href" : "GDPR.html" }, { "title" : "Gramm-Leach-Bliley Act", "href" : "gramm-leach-bliley-act.html" }, { "title" : "GxP 21 CFR part 11", "href" : "GxP.html" }, { "title" : "GxP EU Annex 11", "href" : "GxP-EU-Annex-11.html" }, { "title" : "HIPAA Security Rule 2003", "href" : "HIPAA.html" }, { "title" : "HIPAA Final Omnibus Security Rule 2013", "href" : "HIPAA-omnibus-rule.html" }, { "title" : "ISO/IEC 27001:2013", "href" : "iso-27001-2013.html" }, { "title" : "NIST 800-53 (Rev. 5)", "href" : "NIST800-53r5.html" }, { "title" : "NIST CSF v1.1", "href" : "NIST-Cybersecurity-Framework-v1-1.html" }, { "title" : "NIST SP 800-171 (Rev. 2)", "href" : "NIST-800-171-r2-1.1.html" }, { "title" : "PCI DSS v3.2.1", "href" : "PCI.html" }, { "title" : "SOC 2", "href" : "SOC2.html" } ] } ] }, { "title" : "Control library", "href" : "control-library.html", "contents" : [ { "title" : "Accessing a control", "href" : "access-available-controls.html" }, { "title" : "Viewing control details", "href" : "control-library-review-controls.html" }, { "title" : "Creating a custom control", "href" : "create-controls.html", "contents" : [ { "title" : "Create new", "href" : "customize-control-from-scratch.html" }, { "title" : "Customize existing", "href" : "customize-control-from-existing.html" } ] }, { "title" : "Editing a custom control", "href" : "edit-controls.html" }, { "title" : "Deleting a custom control", "href" : "delete-controls.html" }, { "title" : "Changing evidence collection frequency", "href" : "change-evidence-collection-frequency.html" }, { "title" : "Control data sources", "href" : "control-data-sources.html", "contents" : [ { "title" : "AWS Config", "href" : "control-data-sources-config.html" }, { "title" : "AWS Security Hub", "href" : "control-data-sources-ash.html" }, { "title" : "AWS API calls", "href" : "control-data-sources-api.html" }, { "title" : "AWS CloudTrail", "href" : "control-data-sources-cloudtrail.html" } ] } ] }, { "title" : "Settings", "href" : "console-settings.html", "contents" : [ { "title" : "General settings", "href" : "general-settings.html" }, { "title" : "Assessment settings", "href" : "assessment-settings.html" }, { "title" : "Evidence finder settings", "href" : "evidence-finder-settings.html" } ] }, { "title" : "Notifications", "href" : "notifications.html" }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "Assessments and evidence collection", "href" : "evidence-collection-issues.html" }, { "title" : "Assessment reports", "href" : "assessment-report-issues.html" }, { "title" : "Controls and control sets", "href" : "control-issues.html" }, { "title" : "Dashboard", "href" : "dashboard-issues.html" }, { "title" : "Delegated administrators and AWS Organizations", "href" : "delegated-admin-issues.html" }, { "title" : "Evidence finder", "href" : "evidence-finder-issues.html" }, { "title" : "Framework sharing", "href" : "framework-sharing-issues.html" }, { "title" : "Notifications", "href" : "notification-issues.html" }, { "title" : "Permissions and access", "href" : "permissions-issues.html" } ] }, { "title" : "Quotas", "href" : "service-quotas.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS Audit Manager works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html" } ] }, { "title" : "Compliance validation", "href" : "compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "VPC endpoints (AWS PrivateLink)", "href" : "vpc-interface-endpoints.html" }, { "title" : "Logging and monitoring", "href" : "security-logging-and-monitoring.html", "contents" : [ { "title" : "Monitoring with Amazon EventBridge", "href" : "automating-with-eventbridge.html" }, { "title" : "CloudTrail logs", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Configuration and vulnerability", "href" : "vulnerability-analysis-and-management.html" } ] }, { "title" : "Tagging resources", "href" : "tagging.html" }, { "title" : "AWS CloudFormation resources", "href" : "creating-resources-with-cloudformation.html" }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/audit-manager/latest/userguide/",
+    "service": "audit-manager",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS Audit Manager?",
+                "href": "what-is.html",
+                "contents": [
+                    {
+                        "title": "Concepts and terminology",
+                        "href": "concepts.html"
+                    },
+                    {
+                        "title": "Evidence collection",
+                        "href": "how-evidence-is-collected.html"
+                    },
+                    {
+                        "title": "Examples of controls",
+                        "href": "examples-of-controls.html"
+                    },
+                    {
+                        "title": "Related services",
+                        "href": "related-services.html"
+                    },
+                    {
+                        "title": "Using Audit Manager with an AWS SDK",
+                        "href": "sdk-general-information-section.html"
+                    }
+                ]
+            },
+            {
+                "title": "Setting up",
+                "href": "setting-up.html",
+                "contents": [
+                    {
+                        "title": "Prerequisites",
+                        "href": "setup-prerequisites.html"
+                    },
+                    {
+                        "title": "Enable Audit Manager",
+                        "href": "setup-audit-manager.html"
+                    },
+                    {
+                        "title": "Recommendations",
+                        "href": "setup-recommendations.html"
+                    },
+                    {
+                        "title": "What do I do next?",
+                        "href": "whatnow-setup.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Tutorial for Audit Owners: Creating an assessment",
+                        "href": "tutorial-for-audit-owners.html"
+                    },
+                    {
+                        "title": "Tutorial for Delegates: Reviewing a control set",
+                        "href": "tutorial-for-delegates.html"
+                    }
+                ]
+            },
+            {
+                "title": "Using the dashboard",
+                "href": "dashboard.html"
+            },
+            {
+                "title": "Assessments",
+                "href": "assessments.html",
+                "contents": [
+                    {
+                        "title": "Creating an assessment",
+                        "href": "create-assessments.html"
+                    },
+                    {
+                        "title": "Accessing an assessment",
+                        "href": "access-assessments.html"
+                    },
+                    {
+                        "title": "Editing an assessment",
+                        "href": "edit-assessment.html"
+                    },
+                    {
+                        "title": "Reviewing an assessment",
+                        "href": "review-assessments.html"
+                    },
+                    {
+                        "title": "Reviewing assessment controls",
+                        "href": "review-controls.html"
+                    },
+                    {
+                        "title": "Reviewing evidence",
+                        "href": "review-evidence.html"
+                    },
+                    {
+                        "title": "Adding manual evidence",
+                        "href": "upload-evidence.html"
+                    },
+                    {
+                        "title": "Generating an assessment report",
+                        "href": "generate-assessment-report.html"
+                    },
+                    {
+                        "title": "Changing an assessment status",
+                        "href": "change-assessment-status-to-inactive.html"
+                    },
+                    {
+                        "title": "Deleting an assessment",
+                        "href": "delete-assessment.html"
+                    }
+                ]
+            },
+            {
+                "title": "Delegations",
+                "href": "delegate.html",
+                "contents": [
+                    {
+                        "title": "For audit owners",
+                        "href": "delegate-for-audit-owners.html",
+                        "contents": [
+                            {
+                                "title": "Delegating a control set",
+                                "href": "delegation-for-audit-owners-delegating-a-control-set.html"
+                            },
+                            {
+                                "title": "Accessing delegations",
+                                "href": "delegation-for-audit-owners-reviewing-delegations.html"
+                            },
+                            {
+                                "title": "Deleting delegations",
+                                "href": "delegation-for-audit-owners-cancel-delegations.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "For delegates",
+                        "href": "delegation-for-delegates.html",
+                        "contents": [
+                            {
+                                "title": "Viewing notifications",
+                                "href": "delegation-for-delegates-viewing-notifications.html"
+                            },
+                            {
+                                "title": "Reviewing controls and evidence",
+                                "href": "delegation-for-delegates-reviewing-control-set-and-evidence.html"
+                            },
+                            {
+                                "title": "Adding comments",
+                                "href": "delegation-for-delegates-add-comment.html"
+                            },
+                            {
+                                "title": "Marking a control as reviewed",
+                                "href": "delegation-for-delegates-changing-control-status.html"
+                            },
+                            {
+                                "title": "Submitting a control set to the audit owner",
+                                "href": "delegation-for-delegates-submitting-back-to-audit-owner.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Assessment reports",
+                "href": "assessment-reports.html"
+            },
+            {
+                "title": "Evidence finder",
+                "href": "evidence-finder.html",
+                "contents": [
+                    {
+                        "title": "Searching for evidence",
+                        "href": "search-for-evidence-in-evidence-finder.html"
+                    },
+                    {
+                        "title": "Viewing results in evidence finder",
+                        "href": "viewing-search-results-in-evidence-finder.html"
+                    },
+                    {
+                        "title": "Filter and grouping options",
+                        "href": "evidence-finder-filters-and-groups.html"
+                    },
+                    {
+                        "title": "Example use cases",
+                        "href": "example-use-cases-for-evidence-finder.html"
+                    }
+                ]
+            },
+            {
+                "title": "Download center",
+                "href": "download-center.html"
+            },
+            {
+                "title": "Framework library",
+                "href": "framework-library.html",
+                "contents": [
+                    {
+                        "title": "Accessing a framework",
+                        "href": "access-frameworks.html"
+                    },
+                    {
+                        "title": "Viewing framework details",
+                        "href": "review-frameworks.html"
+                    },
+                    {
+                        "title": "Creating a custom framework",
+                        "href": "custom-frameworks.html",
+                        "contents": [
+                            {
+                                "title": "Create new",
+                                "href": "create-custom-frameworks-from-scratch.html"
+                            },
+                            {
+                                "title": "Customize existing",
+                                "href": "create-custom-frameworks-from-existing.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Editing a custom framework",
+                        "href": "edit-custom-frameworks.html"
+                    },
+                    {
+                        "title": "Deleting a custom framework",
+                        "href": "delete-custom-framework.html"
+                    },
+                    {
+                        "title": "Sharing a custom framework",
+                        "href": "share-custom-framework.html",
+                        "contents": [
+                            {
+                                "title": "Sharing concepts and terminology",
+                                "href": "share-custom-framework-concepts-and-terminology.html"
+                            },
+                            {
+                                "title": "Sending a share request",
+                                "href": "framework-sharing.html"
+                            },
+                            {
+                                "title": "Responding to a share request",
+                                "href": "responding-to-shared-framework-requests.html"
+                            },
+                            {
+                                "title": "Deleting a share request",
+                                "href": "deleting-shared-framework-requests.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Supported frameworks",
+                        "href": "framework-overviews.html",
+                        "contents": [
+                            {
+                                "title": "ACSC Essential Eight",
+                                "href": "essential-eight.html"
+                            },
+                            {
+                                "title": "ACSC ISM",
+                                "href": "acsc-information-security-manual.html"
+                            },
+                            {
+                                "title": "AWS Audit Manager Sample Framework",
+                                "href": "Sample.html"
+                            },
+                            {
+                                "title": "AWS Control Tower Guardrails",
+                                "href": "controltower.html"
+                            },
+                            {
+                                "title": "AWS generative AI best practices for Amazon Bedrock",
+                                "href": "aws-generative-ai-best-practices.html"
+                            },
+                            {
+                                "title": "AWS License Manager",
+                                "href": "Licensemanager.html"
+                            },
+                            {
+                                "title": "AWS Foundational Security Best Practices",
+                                "href": "aws-foundational-security-best-practices.html"
+                            },
+                            {
+                                "title": "AWS Operational Best Practices",
+                                "href": "OBP.html"
+                            },
+                            {
+                                "title": "AWS Well-Architected",
+                                "href": "well-architected.html"
+                            },
+                            {
+                                "title": "CCCS Medium Cloud Control Profile",
+                                "href": "cccs-medium.html"
+                            },
+                            {
+                                "title": "CIS AWS Foundations Benchmark v.1.2",
+                                "href": "CIS-1-2.html"
+                            },
+                            {
+                                "title": "CIS AWS Foundations Benchmark v.1.3",
+                                "href": "CIS-1-3.html"
+                            },
+                            {
+                                "title": "CIS AWS Foundations Benchmark v.1.4",
+                                "href": "CIS-1-4.html"
+                            },
+                            {
+                                "title": "CIS Controls v7.1 IG1",
+                                "href": "CIS-controls.html"
+                            },
+                            {
+                                "title": "CIS Controls v8 IG1",
+                                "href": "CIS-controls-v8.html"
+                            },
+                            {
+                                "title": "FedRAMP Moderate Baseline",
+                                "href": "fedramp-moderate.html"
+                            },
+                            {
+                                "title": "General Data Protection Regulation (GDPR)",
+                                "href": "GDPR.html"
+                            },
+                            {
+                                "title": "Gramm-Leach-Bliley Act",
+                                "href": "gramm-leach-bliley-act.html"
+                            },
+                            {
+                                "title": "GxP 21 CFR part 11",
+                                "href": "GxP.html"
+                            },
+                            {
+                                "title": "GxP EU Annex 11",
+                                "href": "GxP-EU-Annex-11.html"
+                            },
+                            {
+                                "title": "HIPAA Security Rule 2003",
+                                "href": "HIPAA.html"
+                            },
+                            {
+                                "title": "HIPAA Final Omnibus Security Rule 2013",
+                                "href": "HIPAA-omnibus-rule.html"
+                            },
+                            {
+                                "title": "ISO/IEC 27001:2013",
+                                "href": "iso-27001-2013.html"
+                            },
+                            {
+                                "title": "NIST 800-53 (Rev. 5)",
+                                "href": "NIST800-53r5.html"
+                            },
+                            {
+                                "title": "NIST CSF v1.1",
+                                "href": "NIST-Cybersecurity-Framework-v1-1.html"
+                            },
+                            {
+                                "title": "NIST SP 800-171 (Rev. 2)",
+                                "href": "NIST-800-171-r2-1.1.html"
+                            },
+                            {
+                                "title": "PCI DSS v3.2.1",
+                                "href": "PCI.html"
+                            },
+                            {
+                                "title": "SOC 2",
+                                "href": "SOC2.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Control library",
+                "href": "control-library.html",
+                "contents": [
+                    {
+                        "title": "Accessing a control",
+                        "href": "access-available-controls.html"
+                    },
+                    {
+                        "title": "Viewing control details",
+                        "href": "control-library-review-controls.html"
+                    },
+                    {
+                        "title": "Creating a custom control",
+                        "href": "create-controls.html",
+                        "contents": [
+                            {
+                                "title": "Create new",
+                                "href": "customize-control-from-scratch.html"
+                            },
+                            {
+                                "title": "Customize existing",
+                                "href": "customize-control-from-existing.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Editing a custom control",
+                        "href": "edit-controls.html"
+                    },
+                    {
+                        "title": "Deleting a custom control",
+                        "href": "delete-controls.html"
+                    },
+                    {
+                        "title": "Changing evidence collection frequency",
+                        "href": "change-evidence-collection-frequency.html"
+                    },
+                    {
+                        "title": "Control data sources",
+                        "href": "control-data-sources.html",
+                        "contents": [
+                            {
+                                "title": "AWS Config",
+                                "href": "control-data-sources-config.html"
+                            },
+                            {
+                                "title": "AWS Security Hub",
+                                "href": "control-data-sources-ash.html"
+                            },
+                            {
+                                "title": "AWS API calls",
+                                "href": "control-data-sources-api.html"
+                            },
+                            {
+                                "title": "AWS CloudTrail",
+                                "href": "control-data-sources-cloudtrail.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Settings",
+                "href": "console-settings.html",
+                "contents": [
+                    {
+                        "title": "General settings",
+                        "href": "general-settings.html"
+                    },
+                    {
+                        "title": "Assessment settings",
+                        "href": "assessment-settings.html"
+                    },
+                    {
+                        "title": "Evidence finder settings",
+                        "href": "evidence-finder-settings.html"
+                    }
+                ]
+            },
+            {
+                "title": "Notifications",
+                "href": "notifications.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Assessments and evidence collection",
+                        "href": "evidence-collection-issues.html"
+                    },
+                    {
+                        "title": "Assessment reports",
+                        "href": "assessment-report-issues.html"
+                    },
+                    {
+                        "title": "Controls and control sets",
+                        "href": "control-issues.html"
+                    },
+                    {
+                        "title": "Dashboard",
+                        "href": "dashboard-issues.html"
+                    },
+                    {
+                        "title": "Delegated administrators and AWS Organizations",
+                        "href": "delegated-admin-issues.html"
+                    },
+                    {
+                        "title": "Evidence finder",
+                        "href": "evidence-finder-issues.html"
+                    },
+                    {
+                        "title": "Framework sharing",
+                        "href": "framework-sharing-issues.html"
+                    },
+                    {
+                        "title": "Notifications",
+                        "href": "notification-issues.html"
+                    },
+                    {
+                        "title": "Permissions and access",
+                        "href": "permissions-issues.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "service-quotas.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS Audit Manager works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "VPC endpoints (AWS PrivateLink)",
+                        "href": "vpc-interface-endpoints.html"
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "security-logging-and-monitoring.html",
+                        "contents": [
+                            {
+                                "title": "Monitoring with Amazon EventBridge",
+                                "href": "automating-with-eventbridge.html"
+                            },
+                            {
+                                "title": "CloudTrail logs",
+                                "href": "logging-using-cloudtrail.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuration and vulnerability",
+                        "href": "vulnerability-analysis-and-management.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tagging resources",
+                "href": "tagging.html"
+            },
+            {
+                "title": "AWS CloudFormation resources",
+                "href": "creating-resources-with-cloudformation.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

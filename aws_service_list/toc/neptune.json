@@ -1,1 +1,2204 @@
-{ "contents" : [ { "title" : "What is Neptune?", "href" : "intro.html" }, { "title" : "Latest Updates", "href" : "doc-history.html" }, { "title" : "Getting started", "href" : "graph-get-started.html", "contents" : [ { "title" : "Use graph notebooks", "href" : "graph-notebooks.html" }, { "title" : "Workbench magics", "href" : "notebooks-magics.html" }, { "title" : "Graph visualization", "href" : "notebooks-visualization.html" } ] }, { "title" : "Neptune setup", "href" : "neptune-setup.html", "contents" : [ { "title" : "DB instance types", "href" : "instance-types.html" }, { "title" : "Create a DB cluster", "href" : "get-started-create-cluster.html", "contents" : [ { "title" : "Prerequisites", "href" : "get-started-prereqs.html" }, { "title" : "Create the Cluster", "href" : "get-started-cfn-create.html" } ] }, { "title" : "Configure the VPC", "href" : "get-started-vpc.html" }, { "title" : "Connect to your graph", "href" : "get-started-connecting.html", "contents" : [ { "title" : "From within the VPC", "href" : "get-started-connect-ec2-same-vpc.html" }, { "title" : "From a different VPC", "href" : "get-started-connect-ec2-other-vpc.html" }, { "title" : "From a private network", "href" : "get-started-connect-private-net.html" } ] }, { "title" : "Neptune Security", "href" : "get-started-security.html" }, { "title" : "Access the graph", "href" : "get-started-access-graph.html", "contents" : [ { "title" : "Use Gremlin", "href" : "get-started-graph-gremlin.html" }, { "title" : "Use openCypher", "href" : "get-started-graph-opencypher.html" }, { "title" : "Use RDF/SPARQL", "href" : "get-started-graph-sparql.html" } ] }, { "title" : "Loading Data", "href" : "get-started-loading.html" }, { "title" : "Monitoring Neptune", "href" : "get-started-monitoring.html" }, { "title" : "Troubleshooting and Best Practices", "href" : "get-started-troubleshooting.html" } ] }, { "title" : "Global databases", "href" : "neptune-global-database.html", "contents" : [ { "title" : "Setup", "href" : "neptune-gdb-setup.html" }, { "title" : "Managing a Neptune global database", "href" : "neptune-gdb-managing.html" }, { "title" : "Using failover", "href" : "neptune-gdb-disaster-recovery.html" }, { "title" : "Monitoring Neptune global databases", "href" : "neptune-gdb-monitoring.html" } ] }, { "title" : "Neptune overview", "href" : "feature-overview.html", "contents" : [ { "title" : "Standards Compliance", "href" : "feature-overview-standards-compliance.html", "contents" : [ { "title" : "Gremlin standards compliance", "href" : "access-graph-gremlin-differences.html" }, { "title" : "SPARQL standards compliance", "href" : "feature-sparql-compliance.html" }, { "title" : "openCypher standards compliance", "href" : "feature-opencypher-compliance.html" } ] }, { "title" : "Graph Data Model", "href" : "feature-overview-data-model.html" }, { "title" : "Lookup cache", "href" : "feature-overview-lookup-cache.html" }, { "title" : "Transaction Semantics", "href" : "transactions.html", "contents" : [ { "title" : "Isolation Levels", "href" : "transactions-isolation-levels.html" }, { "title" : "Neptune Isolation Levels", "href" : "transactions-neptune.html" }, { "title" : "Transaction examples", "href" : "transactions-examples.html" }, { "title" : "Exceptions and Retries", "href" : "transactions-exceptions.html" } ] }, { "title" : "Clusters and Instances", "href" : "feature-overview-db-clusters.html" }, { "title" : "Storage, reliability and availability", "href" : "feature-overview-storage.html" }, { "title" : "Endpoint Connections", "href" : "feature-overview-endpoints.html", "contents" : [ { "title" : "Working with custom endpoints", "href" : "feature-custom-endpoint-membership.html" } ] }, { "title" : "Custom queryId", "href" : "features-query-id.html" }, { "title" : "Lab Mode", "href" : "features-lab-mode.html" }, { "title" : "Neptune DFE engine", "href" : "neptune-dfe-engine.html" }, { "title" : "DFE statistics", "href" : "neptune-dfe-statistics.html" }, { "title" : "Graph summary API", "href" : "neptune-graph-summary.html" }, { "title" : "JDBC connectivity", "href" : "neptune-jdbc.html" }, { "title" : "Neptune engine updates", "href" : "features-engine-updates.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data Protection", "href" : "data-protection.html", "contents" : [ { "title" : "Amazon VPC protection", "href" : "security-vpc.html" }, { "title" : "Encryption in Transit", "href" : "security-ssl.html" }, { "title" : "Encryption at Rest", "href" : "encrypt.html" } ] }, { "title" : "IAM overview", "href" : "iam-auth.html" }, { "title" : "Enabling IAM", "href" : "iam-auth-enable.html" }, { "title" : "Connecting and Signing", "href" : "iam-auth-connecting.html", "contents" : [ { "title" : "EC2 Prerequisites", "href" : "iam-auth-connect-prerq.html" }, { "title" : "Using the command line", "href" : "iam-auth-connect-command-line.html" }, { "title" : "Gremlin Console", "href" : "iam-auth-connecting-gremlin-console.html" }, { "title" : "Gremlin Java", "href" : "iam-auth-connecting-gremlin-java.html" }, { "title" : "SPARQL Java (RDF4J and Jena)", "href" : "iam-auth-connecting-sparql-java.html" }, { "title" : "SPARQL with Node.js", "href" : "iam-auth-connecting-sparql-node.html" }, { "title" : "Python Example", "href" : "iam-auth-connecting-python.html" } ] }, { "title" : "Using IAM Policies", "href" : "security-iam-access-manage.html", "contents" : [ { "title" : "Managed policies", "href" : "security-iam-access-managed-policies.html", "contents" : [ { "title" : "NeptuneReadOnlyAccess", "href" : "read-only-access-iam-managed-policy.html" }, { "title" : "NeptuneFullAccess", "href" : "full-access-iam-managed-policy.html" }, { "title" : "NeptuneConsoleFullAccess", "href" : "console-full-access-iam-managed-policy.html" } ] }, { "title" : "Condition Keys", "href" : "iam-condition-keys.html" }, { "title" : "Administrative policy statements", "href" : "iam-admin-policies.html", "contents" : [ { "title" : "Actions", "href" : "neptune-iam-admin-actions.html" }, { "title" : "Resources", "href" : "iam-admin-resources.html" }, { "title" : "Condition Keys", "href" : "iam-admin-condition-keys.html" }, { "title" : "Examples", "href" : "iam-admin-policy-examples.html" } ] }, { "title" : "Data-access policy statements", "href" : "iam-data-access-policies.html", "contents" : [ { "title" : "Actions", "href" : "iam-dp-actions.html" }, { "title" : "Resources", "href" : "iam-data-resources.html" }, { "title" : "Condition Keys", "href" : "iam-data-condition-keys.html" }, { "title" : "Examples", "href" : "iam-data-access-examples.html" } ] } ] }, { "title" : "Neptune Service-Linked Roles", "href" : "security-iam-service-linked-roles.html" }, { "title" : "Temporary Credentials", "href" : "iam-auth-temporary-credentials.html" }, { "title" : "Logging and Monitoring", "href" : "security-monitoring.html" }, { "title" : "Compliance Validation", "href" : "neptune-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" } ] }, { "title" : "Migrating to Neptune", "href" : "migrating.html", "contents" : [ { "title" : "Migrating from Neo4j", "href" : "migrating-from-neo4j.html", "contents" : [ { "title" : "Preparing for migration", "href" : "preparing-to-migrate-from-neo4j.html" }, { "title" : "Provisioning infrastructure", "href" : "migration-provisioning-infrastructure.html" }, { "title" : "Data migration", "href" : "migration-data-migration.html" }, { "title" : "Application migration", "href" : "migration-app-migration.html" }, { "title" : "Neptune compatibility", "href" : "migration-compatibility.html" }, { "title" : "Cypher rewrites", "href" : "migration-opencypher-rewrites.html" }, { "title" : "Migration resources", "href" : "migration-resources.html" } ] }, { "title" : "Migrating from TinkerPop", "href" : "migrating-from-tinkerpop.html" }, { "title" : "Migrating from RDF", "href" : "migrating-from-rdf.html" }, { "title" : "Using AWS DMS to migrate", "href" : "migrating-using-dms.html" }, { "title" : "Migrating from Blazegraph", "href" : "migrating-from-blazegraph.html" } ] }, { "title" : "Loading data", "href" : "load-data.html", "contents" : [ { "title" : "Neptune Bulk Loader", "href" : "bulk-load.html", "contents" : [ { "title" : "IAM Role and Amazon S3 Access", "href" : "bulk-load-tutorial-IAM.html", "contents" : [ { "title" : "Creating an IAM role to access Amazon S3", "href" : "bulk-load-tutorial-IAM-CreateRole.html" }, { "title" : "Adding the IAM Role to a Cluster", "href" : "bulk-load-tutorial-IAM-add-role-cluster.html" }, { "title" : "Creating the VPC Endpoint", "href" : "bulk-load-tutorial-vpc.html" }, { "title" : "Chaining IAM roles", "href" : "bulk-load-tutorial-chain-roles.html" } ] }, { "title" : "Data Formats", "href" : "bulk-load-tutorial-format.html", "contents" : [ { "title" : "Gremlin data format", "href" : "bulk-load-tutorial-format-gremlin.html" }, { "title" : "openCypher data format", "href" : "bulk-load-tutorial-format-opencypher.html" }, { "title" : "RDF data formats", "href" : "bulk-load-tutorial-format-rdf.html" } ] }, { "title" : "Loading Example", "href" : "bulk-load-data.html" }, { "title" : "Optimizing a bulk load", "href" : "bulk-load-optimize.html" }, { "title" : "Loader Reference", "href" : "load-api-reference.html", "contents" : [ { "title" : "Loader Command", "href" : "load-api-reference-load.html" }, { "title" : "Get-Status API", "href" : "load-api-reference-status.html", "contents" : [ { "title" : "Requests", "href" : "load-api-reference-status-requests.html" }, { "title" : "Responses", "href" : "load-api-reference-status-response.html" }, { "title" : "Examples", "href" : "load-api-reference-status-examples.html" }, { "title" : "errorLogs examples", "href" : "load-api-reference-error-logs-examples.html" } ] }, { "title" : "Cancel Job", "href" : "load-api-reference-cancel.html" } ] } ] }, { "title" : "Load data using DMS", "href" : "dms-neptune.html", "contents" : [ { "title" : "GraphMappingConfig", "href" : "dms-neptune-graph-mapping.html" }, { "title" : "Replicating to Neptune", "href" : "dms-neptune-replication.html" } ] } ] }, { "title" : "Querying", "href" : "access-graph-queries.html", "contents" : [ { "title" : "Query queuing", "href" : "access-graph-queuing.html" }, { "title" : "Gremlin", "href" : "access-graph-gremlin.html", "contents" : [ { "title" : "Installing the Gremlin console", "href" : "access-graph-gremlin-console.html" }, { "title" : "HTTPS REST", "href" : "access-graph-gremlin-rest.html", "contents" : [ { "title" : "Enable multi-part responses", "href" : "access-graph-gremlin-rest-trailing-headers.html" } ] }, { "title" : "Java", "href" : "access-graph-gremlin-client.html", "contents" : [ { "title" : "Using a Java client", "href" : "access-graph-gremlin-java.html" }, { "title" : "Java reconnect sample", "href" : "access-graph-gremlin-java-reconnect-example.html" } ] }, { "title" : "Python", "href" : "access-graph-gremlin-python.html" }, { "title" : ".NET", "href" : "access-graph-gremlin-dotnet.html" }, { "title" : "Node.js", "href" : "access-graph-gremlin-node-js.html" }, { "title" : "Go", "href" : "access-graph-gremlin-go.html" }, { "title" : "Query hints", "href" : "gremlin-query-hints.html", "contents" : [ { "title" : "repeatMode", "href" : "gremlin-query-hints-repeatMode.html" }, { "title" : "noReordering", "href" : "gremlin-query-hints-noReordering.html" }, { "title" : "typePromotion", "href" : "gremlin-query-hints-typePromotion.html" }, { "title" : "useDFE", "href" : "gremlin-query-hints-useDFE.html" }, { "title" : "Results cache query hints", "href" : "gremlin-query-hints-results-cache.html" } ] }, { "title" : "Query status", "href" : "gremlin-api-status.html" }, { "title" : "Query cancellation", "href" : "gremlin-api-status-cancel.html" }, { "title" : "Gremlin script-based sessions", "href" : "access-graph-gremlin-sessions.html" }, { "title" : "Gremlin transactions", "href" : "access-graph-gremlin-transactions.html" }, { "title" : "Using the Gremlin API", "href" : "gremlin-api-reference.html" }, { "title" : "Caching query results", "href" : "gremlin-results-cache.html" }, { "title" : "Efficient upserts from 3.6.x forward", "href" : "gremlin-efficient-upserts.html" }, { "title" : "Efficient upserts before 3.6.x", "href" : "gremlin-efficient-upserts-pre-3.6.html" }, { "title" : "Gremlin explain", "href" : "gremlin-explain.html", "contents" : [ { "title" : "Background information", "href" : "gremlin-explain-background.html", "contents" : [ { "title" : "Statements", "href" : "gremlin-explain-background-statements.html" }, { "title" : "Statement Indexes", "href" : "gremlin-explain-background-indexing-examples.html" }, { "title" : "Query processing", "href" : "gremlin-explain-background-querying.html" } ] }, { "title" : "Gremlin explain API", "href" : "gremlin-explain-api.html" }, { "title" : "Gremlin profile API", "href" : "gremlin-profile-api.html" }, { "title" : "Tuning Gremlin queries", "href" : "gremlin-traversal-tuning.html" }, { "title" : "Gremlin step support", "href" : "gremlin-step-support.html" } ] }, { "title" : "Gremlin and DFE", "href" : "gremlin-with-dfe.html" } ] }, { "title" : "openCypher", "href" : "access-graph-opencypher.html", "contents" : [ { "title" : "Status endpoint", "href" : "access-graph-opencypher-status.html" }, { "title" : "HTTPS endpoint", "href" : "access-graph-opencypher-queries.html" }, { "title" : "Using the Bolt protocol", "href" : "access-graph-opencypher-bolt.html" }, { "title" : "Parameterized examples", "href" : "opencypher-parameterized-queries.html" }, { "title" : "Data model", "href" : "access-graph-opencypher-data-model.html" }, { "title" : "openCypher explain", "href" : "access-graph-opencypher-explain.html", "contents" : [ { "title" : "Example: relationship lookup", "href" : "access-graph-opencypher-explain-example-2.html" }, { "title" : "Example: value function", "href" : "access-graph-opencypher-explain-example-3.html" }, { "title" : "Example: mathematical expression", "href" : "access-graph-opencypher-explain-example-4.html" }, { "title" : "Example: variable-length path", "href" : "access-graph-opencypher-explain-example-5.html" } ] }, { "title" : "Transactions", "href" : "access-graph-opencypher-transactions.html" }, { "title" : "Restrictions", "href" : "access-graph-opencypher-limitations.html" }, { "title" : "Exceptions", "href" : "access-graph-opencypher-exceptions.html" } ] }, { "title" : "SPARQL", "href" : "access-graph-sparql.html", "contents" : [ { "title" : "RDF4J Console", "href" : "access-graph-sparql-rdf4j-console.html" }, { "title" : "RDF4J Workbench", "href" : "access-graph-sparql-rdf4j-workbench.html" }, { "title" : "Java", "href" : "access-graph-sparql-java.html" }, { "title" : "HTTP API", "href" : "sparql-api-reference.html", "contents" : [ { "title" : "HTTP REST", "href" : "access-graph-sparql-http-rest.html" }, { "title" : "Optional HTTP trailing headers", "href" : "access-graph-sparql-http-trailing-headers.html" }, { "title" : "RDF media-type support", "href" : "sparql-media-type-support.html" }, { "title" : "SPARQL UPDATE LOAD", "href" : "sparql-api-reference-update-load.html" }, { "title" : "SPARQL UPDATE UNLOAD", "href" : "sparql-api-reference-unload.html" } ] }, { "title" : "Query hints", "href" : "sparql-query-hints.html", "contents" : [ { "title" : "joinOrder", "href" : "sparql-query-hints-joinOrder.html" }, { "title" : "evaluationStrategy", "href" : "sparql-query-hints-evaluationStrategy.html" }, { "title" : "queryTimeout", "href" : "sparql-query-hints-queryTimeout.html" }, { "title" : "rangeSafe", "href" : "sparql-query-hints-rangeSafe.html" }, { "title" : "queryId", "href" : "sparql-query-hints-queryId.html" }, { "title" : "useDFE", "href" : "sparql-query-hints-useDFE.html" }, { "title" : "DESCRIBE query hints", "href" : "sparql-query-hints-for-describe.html" } ] }, { "title" : "DESCRIBE and the default graph", "href" : "sparql-default-describe.html" }, { "title" : "Query status", "href" : "sparql-api-status.html" }, { "title" : "Query cancellation", "href" : "sparql-api-status-cancel.html" }, { "title" : "Graph store protocol", "href" : "sparql-graph-store-protocol.html" }, { "title" : "SPARQL explain", "href" : "sparql-explain.html", "contents" : [ { "title" : "SPARQL query engine", "href" : "sparql-explain-engine.html" }, { "title" : "Using SPARQL explain", "href" : "sparql-explain-using.html" }, { "title" : "explain Examples", "href" : "sparql-explain-examples.html" }, { "title" : "explain operators", "href" : "sparql-explain-operators.html" }, { "title" : "explain Limitations", "href" : "sparql-explain-limitations.html" } ] }, { "title" : "SPARQL SERVICE Extension", "href" : "sparql-service.html" } ] } ] }, { "title" : "Visualization tools", "href" : "visualization-tools.html", "contents" : [ { "title" : "Graph-explorer", "href" : "visualization-graph-explorer.html" }, { "title" : "Tom Sawyer Software", "href" : "visualization-tom-sawyer.html" }, { "title" : "Cambridge Intelligence", "href" : "visualization-cambridge-intelligence.html" }, { "title" : "Graphistry", "href" : "visualization-graphistry.html" }, { "title" : "metaphacts", "href" : "visualization-metaphacts.html" }, { "title" : "G.V( )", "href" : "visualization-GV.html" } ] }, { "title" : "Exporting data", "href" : "neptune-data-export.html", "contents" : [ { "title" : "neptune-export", "href" : "neptune-export.html" }, { "title" : "Neptune-Export service", "href" : "export-service.html" }, { "title" : "neptune-export utility", "href" : "export-utility.html" }, { "title" : "Exported files", "href" : "exported-files.html" }, { "title" : "Export parameters", "href" : "export-parameters.html", "contents" : [ { "title" : "params", "href" : "export-params-fields.html" }, { "title" : "Filtering examples", "href" : "export-filtering-examples.html" } ] }, { "title" : "Troubleshooting", "href" : "export-troubleshooting.html" } ] }, { "title" : "Managing Neptune", "href" : "manage-console.html", "contents" : [ { "title" : "Neptune Blue/Green solution", "href" : "neptune-BG-deployments.html" }, { "title" : "IAM user permissions", "href" : "manage-console-iam-user.html" }, { "title" : "Parameter groups", "href" : "parameter-groups.html" }, { "title" : "Parameters", "href" : "parameters.html" }, { "title" : "Launch using the console", "href" : "manage-console-launch-console.html" }, { "title" : "Stopping and starting a cluster", "href" : "manage-console-stop-start.html" }, { "title" : "Fast reset API", "href" : "manage-console-fast-reset.html" }, { "title" : "Adding reader instances", "href" : "manage-console-add-replicas.html" }, { "title" : "Creating a reader instance", "href" : "manage-console-create-replica.html" }, { "title" : "Modifying a DB Cluster", "href" : "manage-console-modify.html" }, { "title" : "Performance and Scaling", "href" : "manage-console-performance-scaling.html" }, { "title" : "Auto-scaling", "href" : "manage-console-autoscaling.html" }, { "title" : "Maintaining a DB Cluster", "href" : "manage-console-maintaining.html" }, { "title" : "Neptune Updates", "href" : "manage-console-updates.html" }, { "title" : "Update via CloudFormation", "href" : "cfn-engine-update.html", "contents" : [ { "title" : "1.2.0.1 to 1.2.0.2", "href" : "cfn-engine-update-1201-1202.html" }, { "title" : "1.1.1.0 to 1.2.0.2, default", "href" : "cfn-engine-update-1110-1202-default.html" }, { "title" : "1.1.1.0 to 1.2.0.2, custom", "href" : "cfn-engine-update-1110-1202-custom.html" }, { "title" : "1.1.1.0 to 1.2.0.2, mixed", "href" : "cfn-engine-update-1110-1202-mixed.html" } ] }, { "title" : "Cloning a DB Cluster", "href" : "manage-console-cloning.html" }, { "title" : "Managing Instances", "href" : "manage-console-instances.html", "contents" : [ { "title" : "T3 Burstable Instances", "href" : "manage-console-instances-t3.html" }, { "title" : "Modifying an Instance", "href" : "manage-console-instances-modify.html" }, { "title" : "Renaming a Neptune DB Instance", "href" : "manage-console-instances-rename.html" }, { "title" : "Rebooting a DB instance", "href" : "manage-console-instances-reboot.html" }, { "title" : "Deleting a DB Instance", "href" : "manage-console-instances-delete.html" } ] } ] }, { "title" : "Serverless", "href" : "neptune-serverless.html", "contents" : [ { "title" : "Capacity scaling", "href" : "neptune-serverless-capacity-scaling.html" }, { "title" : "Additional configuration", "href" : "neptune-serverless-configuration.html" }, { "title" : "Using Serverless", "href" : "neptune-serverless-using.html" } ] }, { "title" : "Neptune streams", "href" : "streams.html", "contents" : [ { "title" : "Using Streams", "href" : "streams-using.html" }, { "title" : "Streams Record Formats", "href" : "streams-change-formats.html" }, { "title" : "Streams Examples", "href" : "streams-examples.html" }, { "title" : "Neptune-to-Neptune Replication Setup", "href" : "streams-consumer-setup.html" }, { "title" : "Streams for disaster recovery", "href" : "streams-disaster-recovery.html" } ] }, { "title" : "Neptune full text search", "href" : "full-text-search.html", "contents" : [ { "title" : "Full-text search setup", "href" : "full-text-search-cfn-setup.html", "contents" : [ { "title" : "CloudFormation template", "href" : "full-text-search-cfn-create.html" }, { "title" : "Existing databases", "href" : "full-text-search-cfn-enabling.html" }, { "title" : "Updating the poller", "href" : "full-text-search-cfn-update-poller.html" }, { "title" : "Stopping and starting the poller", "href" : "full-text-search-using-pausing-poller.html" } ] }, { "title" : "Querying with fine-grained access control", "href" : "full-text-search-fgac.html" }, { "title" : "Use of Lucene syntax", "href" : "full-text-search-lucene.html" }, { "title" : "Neptune Full-text search data model", "href" : "full-text-search-model.html" }, { "title" : "Full-text search parameters", "href" : "full-text-search-parameters.html" }, { "title" : "Non-string indexing", "href" : "full-text-search-non-string-indexing.html", "contents" : [ { "title" : "Excluding fields", "href" : "full-text-search-non-string-indexing-filters.html" }, { "title" : "Datatype mappings", "href" : "full-text-search-non-string-indexing-mapping.html" }, { "title" : "Datatype validation", "href" : "full-text-search-data-validation.html" }, { "title" : "Sample queries", "href" : "full-text-search-non-string-examples.html" } ] }, { "title" : "Full-text-search query execution", "href" : "full-text-search-query-execution.html" }, { "title" : "Sample SPARQL full-text search queries", "href" : "full-text-search-sparql-examples.html" }, { "title" : "Sample Gremlin full-text search queries", "href" : "full-text-search-gremlin.html" }, { "title" : "Troubleshooting and metrics", "href" : "streams-consumer-troubleshooting.html" } ] }, { "title" : "AWS Lambda functions", "href" : "lambda-functions.html", "contents" : [ { "title" : "Creating a Lambda Function", "href" : "get-started-cfn-lambda.html" }, { "title" : "Lambda function examples", "href" : "lambda-functions-examples.html" } ] }, { "title" : "Neptune machine learning", "href" : "machine-learning.html", "contents" : [ { "title" : "Neptune ML setup", "href" : "machine-learning-setup.html", "contents" : [ { "title" : "Setup using AWS CloudFormation", "href" : "machine-learning-quick-start.html" }, { "title" : "Manual setup", "href" : "machine-learning-manual-setup.html" }, { "title" : "Using the AWS CLI", "href" : "machine-learning-cluster-setup.html" } ] }, { "title" : "Using Neptune ML", "href" : "machine-learning-overview.html" }, { "title" : "Instance selection", "href" : "machine-learning-on-graphs-instance-selection.html" }, { "title" : "Data export", "href" : "machine-learning-data-export.html", "contents" : [ { "title" : "targets", "href" : "machine-learning-neptune_ml-targets.html" }, { "title" : "features", "href" : "machine-learning-neptune_ml-features.html" }, { "title" : "Examples", "href" : "machine-learning-data-export-additionalParams-examples.html" } ] }, { "title" : "Data processing", "href" : "machine-learning-on-graphs-processing.html", "contents" : [ { "title" : "Feature encoding", "href" : "machine-learning-feature-encoding.html" }, { "title" : "Editing a training data file", "href" : "machine-learning-processing-training-config-file.html", "contents" : [ { "title" : "Sample file", "href" : "machine-learning-processing-training-config-file-example.html" }, { "title" : "File structure", "href" : "machine-learning-processing-training-config-file-structure.html" } ] } ] }, { "title" : "Model training", "href" : "machine-learning-on-graphs-model-training.html", "contents" : [ { "title" : "Models and training", "href" : "machine-learning-models-and-training.html" }, { "title" : "Customizing hyperparameters", "href" : "machine-learning-customizing-hyperparams.html" }, { "title" : "Training best practices", "href" : "machine-learning-improve-model-performance.html" } ] }, { "title" : "Model transform", "href" : "machine-learning-model-transform.html" }, { "title" : "Model artifacts", "href" : "machine-learning-model-artifacts.html" }, { "title" : "Custom models", "href" : "machine-learning-custom-models.html", "contents" : [ { "title" : "Custom model overview", "href" : "machine-learning-custom-model-overview.html" }, { "title" : "Custom model development", "href" : "machine-learning-custom-model-development.html" } ] }, { "title" : "Inference endpoint", "href" : "machine-learning-on-graphs-inference-endpoint.html" }, { "title" : "Inference queries", "href" : "machine-learning-inference-queries.html", "contents" : [ { "title" : "Gremlin inference queries", "href" : "machine-learning-gremlin-inference-queries.html", "contents" : [ { "title" : "Inference query predicates", "href" : "machine-learning-gremlin-inference-query-predicates.html" }, { "title" : "Node classification", "href" : "machine-learning-gremlin-vertex-classification-queries.html" }, { "title" : "Node regression", "href" : "machine-learning-gremlin-vertex-regression-queries.html" }, { "title" : "Edge classification", "href" : "machine-learning-gremlin-edge-classification-queries.html" }, { "title" : "Edge regression", "href" : "machine-learning-gremlin-edge-regression.html" }, { "title" : "Link prediction", "href" : "machine-learning-gremlin-link-prediction-queries.html" }, { "title" : "Exceptions list", "href" : "machine-learning-gremlin-exceptions.html" } ] }, { "title" : "SPARQL inference queries", "href" : "machine-learning-sparql-inference-queries.html", "contents" : [ { "title" : "SPARQL inference query predicates", "href" : "machine-learning-sparql-inference-query-predicates.html" }, { "title" : "Object classification", "href" : "machine-learning-sparql-inference-object-classification.html" }, { "title" : "Object regression", "href" : "machine-learning-sparql-inference-object-regression.html" }, { "title" : "Object prediction", "href" : "machine-learning-sparql-inference-object-prediction.html" }, { "title" : "Subject prediction", "href" : "machine-learning-sparql-inference-subject-prediction.html" }, { "title" : "Exceptions list", "href" : "machine-learning-sparql-exceptions.html" } ] } ] }, { "title" : "Neptune ML API", "href" : "machine-learning-api-reference.html", "contents" : [ { "title" : "The dataprocessing command", "href" : "machine-learning-api-dataprocessing.html" }, { "title" : "The modeltraining command", "href" : "machine-learning-api-modeltraining.html" }, { "title" : "The modeltransform command", "href" : "machine-learning-api-modeltransform.html" }, { "title" : "The endpoints command", "href" : "machine-learning-api-endpoints.html" }, { "title" : "Exceptions", "href" : "machine-learning-api-exceptions.html" } ] }, { "title" : "Limits", "href" : "machine-learning-limits.html" } ] }, { "title" : "Monitoring Neptune", "href" : "monitoring.html", "contents" : [ { "title" : "Instance Status", "href" : "access-graph-status.html" }, { "title" : "Using CloudWatch", "href" : "cloudwatch.html", "contents" : [ { "title" : "Monitor instance performance", "href" : "cloudwatch-monitoring-instances.html" }, { "title" : "Neptune Metrics", "href" : "cw-metrics.html" }, { "title" : "Neptune Dimensions", "href" : "cw-dimensions.html" } ] }, { "title" : "Audit Logs with Neptune", "href" : "auditing.html" }, { "title" : "Neptune CloudWatch Logs", "href" : "cloudwatch-logs.html" }, { "title" : "Notebook CloudWatch Logs", "href" : "notebook-logs.html" }, { "title" : "Slow-query logs", "href" : "slow-query-logs.html" }, { "title" : "Logging Neptune API Calls with AWS CloudTrail", "href" : "cloudtrail.html" }, { "title" : "Event Notifications", "href" : "events.html", "contents" : [ { "title" : "Categories and messages", "href" : "event-lists.html" }, { "title" : "Subscribing to events", "href" : "events-subscribing.html" }, { "title" : "Manage subscriptions", "href" : "events-manage.html" } ] }, { "title" : "Tagging Neptune Resources", "href" : "tagging.html", "contents" : [ { "title" : "Working with ARNs", "href" : "tagging-arns.html" } ] } ] }, { "title" : "Backing up and restoring", "href" : "backup-restore.html", "contents" : [ { "title" : "Backup and Restore Overview", "href" : "backup-restore-overview.html" }, { "title" : "Creating a Snapshot", "href" : "backup-restore-create-snapshot.html" }, { "title" : "Restoring from a Snapshot", "href" : "backup-restore-restore-snapshot.html" }, { "title" : "Copying a Snapshot", "href" : "backup-restore-copy-snapshot.html" }, { "title" : "Sharing a Snapshot", "href" : "backup-restore-share-snapshot.html" }, { "title" : "Deleting a Snapshot", "href" : "backup-restore-delete-snapshot.html" } ] }, { "title" : "Best practices", "href" : "best-practices.html", "contents" : [ { "title" : "Basic operational guidelines", "href" : "best-practices-general-basic.html" }, { "title" : "Gremlin (General)", "href" : "best-practices-gremlin.html", "contents" : [ { "title" : "GLV execution differences", "href" : "best-practices-gremlin-console-glv-differences.html" }, { "title" : "Optimize upsert queries", "href" : "best-practices-gremlin-upserts.html" }, { "title" : "Multithreaded Writes", "href" : "best-practices-gremlin-multithreaded-writes.html" }, { "title" : "Pruning Records", "href" : "best-practices-gremlin-prune.html" }, { "title" : "datetime( )", "href" : "best-practices-gremlin-datetime.html" }, { "title" : "Native Date and Time", "href" : "best-practices-gremlin-datetime-glv.html" } ] }, { "title" : "Gremlin (Java client)", "href" : "best-practices-gremlin-java-client.html", "contents" : [ { "title" : "Re-use the client object", "href" : "best-practices-gremlin-java-reuse.html" }, { "title" : "Separate Clients for Reading and Writing", "href" : "best-practices-gremlin-java-separate.html" }, { "title" : "Multiple replica endpoints", "href" : "best-practices-gremlin-java-multiple.html" }, { "title" : "Close the client when finished", "href" : "best-practices-gremlin-java-close-connections.html" }, { "title" : "New connection after failover", "href" : "best-practices-gremlin-java-new-connection.html" }, { "title" : "Set maxInProcessPerConnection = maxSimultaneousUsagePerConnection", "href" : "best-practices-gremlin-java-maxes.html" }, { "title" : "Send queries as bytecode", "href" : "best-practices-gremlin-java-bytecode.html" }, { "title" : "Completely consume query results", "href" : "best-practices-gremlin-java-resultset.html" }, { "title" : "Bulk add vertices and edges", "href" : "best-practices-gremlin-java-batch-add.html" }, { "title" : "Disable JVM DNS caching", "href" : "best-practices-gremlin-java-disable-dns-caching.html" }, { "title" : "Per-query timeouts", "href" : "best-practices-gremlin-java-per-query-timeout.html" }, { "title" : "Work around a bug in earlier versions", "href" : "best-practices-gremlin-java-keep-alive-bug.html" }, { "title" : "Handling a TimeoutException", "href" : "best-practices-gremlin-java-exceptions-TimeoutException.html" } ] }, { "title" : "openCypher and Bolt", "href" : "best-practices-opencypher.html" }, { "title" : "SPARQL", "href" : "best-practices-sparql.html" } ] }, { "title" : "Neptune Limits", "href" : "limits.html" }, { "title" : "Neptune integrations", "href" : "integrations.html" }, { "title" : "Tools and utilities", "href" : "tools.html", "contents" : [ { "title" : "GraphQL utility", "href" : "tools-graphql.html", "contents" : [ { "title" : "Using existing data", "href" : "tools-graphql-scan-existing.html" }, { "title" : "Using a schema with no directives", "href" : "tools-graphql-start-from-schema.html" }, { "title" : "Working with directives", "href" : "tools-graphql-schema-with-directives.html" }, { "title" : "Command-line arguments", "href" : "tools-graphql-cmd-line-args.html" } ] } ] }, { "title" : "Neptune Errors", "href" : "errors.html", "contents" : [ { "title" : "Engine Error Codes", "href" : "errors-engine-codes.html" }, { "title" : "API Errors", "href" : "CommonErrors.html" }, { "title" : "Loader Errors", "href" : "loader-message.html" } ] }, { "title" : "Engine releases", "href" : "engine-releases.html", "contents" : [ { "title" : "Neptune engine updates", "href" : "engine-updates.html" }, { "title" : "Release: 1.2.1.0 (2023-03-08)", "href" : "engine-releases-1.2.1.0.html", "contents" : [ { "title" : "Release: 1.2.1.0.R7 (2023-10-11)", "href" : "engine-releases-1.2.1.0.R7.html" }, { "title" : "Release: 1.2.1.0.R6 (2023-09-12)", "href" : "engine-releases-1.2.1.0.R6.html" }, { "title" : "Release: 1.2.1.0.R5 (2023-09-02)", "href" : "engine-releases-1.2.1.0.R5.html" }, { "title" : "Release: 1.2.1.0.R4 (2023-08-10)", "href" : "engine-releases-1.2.1.0.R4.html" }, { "title" : "Release: 1.2.1.0.R3 (2023-06-13)", "href" : "engine-releases-1.2.1.0.R3.html" }, { "title" : "Release: 1.2.1.0.R2 (2023-05-02)", "href" : "engine-releases-1.2.1.0.R2.html" } ] }, { "title" : "Release: 1.2.0.2 (2022-11-20)", "href" : "engine-releases-1.2.0.2.html", "contents" : [ { "title" : "Release: 1.2.0.2.R6 (2023-09-12)", "href" : "engine-releases-1.2.0.2.R6.html" }, { "title" : "Release: 1.2.0.2.R5 (2023-08-16)", "href" : "engine-releases-1.2.0.2.R5.html" }, { "title" : "Release: 1.2.0.2.R4 (2023-05-08)", "href" : "engine-releases-1.2.0.2.R4.html" }, { "title" : "Release: 1.2.0.2.R3 (2023-03-27)", "href" : "engine-releases-1.2.0.2.R3.html" }, { "title" : "Release: 1.2.0.2.R2 (2022-12-15)", "href" : "engine-releases-1.2.0.2.R2.html" } ] }, { "title" : "Release: 1.2.0.1 (2022-10-26)", "href" : "engine-releases-1.2.0.1.html", "contents" : [ { "title" : "Maintenance Release: 1.2.0.1.R3 (2023-09-27)", "href" : "engine-releases-1.2.0.1.R3.html" }, { "title" : "Maintenance Release: 1.2.0.1.R2 (2022-12-13)", "href" : "engine-releases-1.2.0.1.R2.html" } ] }, { "title" : "Release: 1.2.0.0 (2022-07-21)", "href" : "engine-releases-1.2.0.0.html", "contents" : [ { "title" : "Release: 1.2.0.0.R4 (2023-09-29)", "href" : "engine-releases-1.2.0.0.R4.html" }, { "title" : "Release: 1.2.0.0.R3 (2022-12-15)", "href" : "engine-releases-1.2.0.0.R3.html" }, { "title" : "Release: 1.2.0.0.R2 (2022-10-14)", "href" : "engine-releases-1.2.0.0.R2.html" } ] }, { "title" : "Release: 1.1.1.0 (2022-04-19)", "href" : "engine-releases-1.1.1.0.html", "contents" : [ { "title" : "Release: 1.1.1.0.R7 (2023-01-23)", "href" : "engine-releases-1.1.1.0.R7.html" }, { "title" : "Release: 1.1.1.0.R6 (2022-09-23)", "href" : "engine-releases-1.1.1.0.R6.html" }, { "title" : "Release: 1.1.1.0.R5 (2022-07-21)", "href" : "engine-releases-1.1.1.0.R5.html" }, { "title" : "Release: 1.1.1.0.R4 (2022-06-23)", "href" : "engine-releases-1.1.1.0.R4.html" }, { "title" : "Release: 1.1.1.0.R3 (2022-06-07)", "href" : "engine-releases-1.1.1.0.R3.html" }, { "title" : "Maintenance release: 1.1.1.0.R2 (2022-05-16)", "href" : "engine-releases-1.1.1.0.R2.html" } ] }, { "title" : "Release: 1.1.0.0 (2021-11-19)", "href" : "engine-releases-1.1.0.0.html", "contents" : [ { "title" : "Maintenance release: 1.1.0.0.R3 (2022-12-23)", "href" : "engine-releases-1.1.0.0.R3.html" }, { "title" : "Maintenance release: 1.1.0.0.R2 (2022-05-16)", "href" : "engine-releases-1.1.0.0.R2.html" } ] }, { "title" : "Release: 1.0.5.1 (2021-10-01)", "href" : "engine-releases-1.0.5.1.html", "contents" : [ { "title" : "Maintenance release: 1.0.5.1.R4 (2022-05-16)", "href" : "engine-releases-1.0.5.1.R4.html" }, { "title" : "Release: 1.0.5.1.R3 (2022-01-13)", "href" : "engine-releases-1.0.5.1.R3.html" }, { "title" : "Release: 1.0.5.1.R2 (2021-10-26)", "href" : "engine-releases-1.0.5.1.R2.html" } ] }, { "title" : "Release: 1.0.5.0 (2021-07-27)", "href" : "engine-releases-1.0.5.0.html", "contents" : [ { "title" : "Maintenance release: 1.0.5.0.R5 (2022-05-16)", "href" : "engine-releases-1.0.5.0.R5.html" }, { "title" : "Release: 1.0.5.0.R3 (2021-09-15)", "href" : "engine-releases-1.0.5.0.R3.html" }, { "title" : "Release: 1.0.5.0.R2 (2021-08-16)", "href" : "engine-releases-1.0.5.0.R2.html" } ] }, { "title" : "Release: 1.0.4.2 (2021-06-01)", "href" : "engine-releases-1.0.4.2.html", "contents" : [ { "title" : "Release: 1.0.4.2.R5 (2021-08-16)", "href" : "engine-releases-1.0.4.2.R5.html" }, { "title" : "Release: 1.0.4.2.R4 (2021-07-23)", "href" : "engine-releases-1.0.4.2.R4.html" }, { "title" : "Release: 1.0.4.2.R3 (2021-06-28)", "href" : "engine-releases-1.0.4.2.R3.html" }, { "title" : "Release: 1.0.4.2.R2 (2021-06-01)", "href" : "engine-releases-1.0.4.2.R2.html" }, { "title" : "Release: 1.0.4.2.R1 (2021-05-27)", "href" : "engine-releases-1.0.4.2.R1.html" } ] }, { "title" : "Release: 1.0.4.1 (2020-12-08)", "href" : "engine-releases-1.0.4.1.html", "contents" : [ { "title" : "Release: 1.0.4.1.R1.1 (2021-03-22)", "href" : "engine-releases-1.0.4.1.R1.1.html" }, { "title" : "Release: 1.0.4.1.R2 (2021-02-24)", "href" : "engine-releases-1.0.4.1.R2.html", "contents" : [ { "title" : "Release: 1.0.4.1.R2.1 (2021-03-11)", "href" : "engine-releases-1.0.4.1.R2.1.html" } ] } ] }, { "title" : "Release: 1.0.4.0 (2020-10-12)", "href" : "engine-releases-1.0.4.0.html", "contents" : [ { "title" : "Release: 1.0.4.0.R2 (2021-02-24)", "href" : "engine-releases-1.0.4.0.R2.html" } ] }, { "title" : "Release: 1.0.3.0 (2020-08-03)", "href" : "engine-releases-1.0.3.0.html", "contents" : [ { "title" : "Release: 1.0.3.0.R3 (2021-02-19)", "href" : "engine-releases-1.0.3.0.R3.html" }, { "title" : "Release: 1.0.3.0.R2 (2020-10-12)", "href" : "engine-releases-1.0.3.0.R2.html" } ] }, { "title" : "Release: 1.0.2.2 (2020-03-09)", "href" : "engine-releases-1.0.2.2.html", "contents" : [ { "title" : "Release: 1.0.2.2.R6 (2021-02-19)", "href" : "engine-releases-1.0.2.2.R6.html" }, { "title" : "Release: 1.0.2.2.R5 (2020-10-12)", "href" : "engine-releases-1.0.2.2.R5.html" }, { "title" : "Release: 1.0.2.2.R4 (2020-07-23)", "href" : "engine-releases-1.0.2.2.R4.html" }, { "title" : "Release: 1.0.2.2.R3 (2020-07-22)", "href" : "engine-releases-1.0.2.2.R3.html" }, { "title" : "Release: 1.0.2.2.R2 (2020-04-02)", "href" : "engine-releases-1.0.2.2.R2.html" } ] }, { "title" : "Release: 1.0.2.1 (2019-11-22)", "href" : "engine-releases-1.0.2.1.html", "contents" : [ { "title" : "Release: 1.0.2.1.R6 (2020-04-22)", "href" : "engine-releases-1.0.2.1.R6.html" }, { "title" : "Release: 1.0.2.1.R5 (2020-04-22)", "href" : "engine-releases-1.0.2.1.R5.html" }, { "title" : "Release: 1.0.2.1.R4 (2019-12-20)", "href" : "engine-releases-1.0.2.1.R4.html" }, { "title" : "Release: 1.0.2.1.R3 (2019-12-12)", "href" : "engine-releases-1.0.2.1.R3.html" }, { "title" : "Release: 1.0.2.1.R2 (2019-11-25)", "href" : "engine-releases-1.0.2.1.R2.html" } ] }, { "title" : "Release: 1.0.2.0 (2019-11-08)", "href" : "engine-releases-1.0.2.0.html", "contents" : [ { "title" : "Release: 1.0.2.0.R3 (2020-05-05)", "href" : "engine-releases-1.0.2.0.R3.html" }, { "title" : "Release: 1.0.2.0.R2 (2019-11-21)", "href" : "engine-releases-1.0.2.0.R2.html" } ] }, { "title" : "Release: 1.0.1.2 (2020-06-10)", "href" : "engine-releases-1.0.1.2.html" }, { "title" : "Release: 1.0.1.1 (2020-06-26)", "href" : "engine-releases-1.0.1.1.html" }, { "title" : "Release: 1.0.1.0 (2019-07-02)", "href" : "engine-releases-1.0.1.0.html", "contents" : [ { "title" : "Release 1.0.1.0.200502.0 (2019-10-31)", "href" : "engine-releases-1.0.1.0.200502.0.html" }, { "title" : "Release 1.0.1.0.200463.0 (2019-10-15)", "href" : "engine-releases-1.0.1.0.200463.0.html" }, { "title" : "Release 1.0.1.0.200457.0 (2019-09-19)", "href" : "engine-releases-1.0.1.0.200457.0.html" }, { "title" : "Release 1.0.1.0.200369.0 (2019-08-13)", "href" : "engine-releases-1.0.1.0.200369.0.html" }, { "title" : "Release 1.0.1.0.200366.0 (2019-07-26)", "href" : "engine-releases-1.0.1.0.200366.0.html" }, { "title" : "Release 1.0.1.0.200348.0 (2019-07-02)", "href" : "engine-releases-1.0.1.0.200348.0.html" }, { "title" : "Earlier Releases", "href" : "engine-releases-earlier.html", "contents" : [ { "title" : "Release 1.0.1.0.200310.0 (2019-06-12)", "href" : "engine-releases-1.0.1.0.200310.0.html" }, { "title" : "Release 1.0.1.0.200296.0 (2019-05-01)", "href" : "engine-releases-1.0.1.0.200296.0.html" }, { "title" : "Release 1.0.1.0.200267.0 (2019-01-21)", "href" : "engine-releases-1.0.1.0.200267.0.html" }, { "title" : "Release 1.0.1.0.200264.0 (2018-11-19)", "href" : "engine-releases-1.0.1.0.200264.0.html" }, { "title" : "Release 1.0.1.0.200258.0 (2018-11-08)", "href" : "engine-releases-1.0.1.0.200258.0.html" }, { "title" : "Release 1.0.1.0.200255.0 (2018-10-29)", "href" : "engine-releases-1.0.1.0.200255.0.html" }, { "title" : "Release 1.0.1.0.200237.0 (2018-09-06)", "href" : "engine-releases-1.0.1.0.200237.0.html" }, { "title" : "Release 1.0.1.0.200236.0 (2018-07-24)", "href" : "engine-releases-1.0.1.0.200236.0.html" }, { "title" : "Release 1.0.1.0.200233.0 (2018-06-22)", "href" : "engine-releases-1.0.1.0.200233.0.html" } ] } ] } ] }, { "title" : "Using Neptune APIs", "href" : "using-neptune-apis.html" }, { "title" : "Management API reference", "href" : "api.html", "contents" : [ { "title" : "Clusters", "href" : "api-clusters.html" }, { "title" : "Global databases", "href" : "api-global-dbs.html" }, { "title" : "Instances", "href" : "api-instances.html" }, { "title" : "Parameters", "href" : "api-parameters.html" }, { "title" : "Subnets", "href" : "api-subnets.html" }, { "title" : "Snapshots", "href" : "api-snapshots.html" }, { "title" : "Events", "href" : "api-events.html" }, { "title" : "Other", "href" : "api-other-apis.html" }, { "title" : "Datatypes", "href" : "api-datatypes.html" }, { "title" : "API Faults", "href" : "api-faults.html" } ] }, { "title" : "Data API reference", "href" : "data-api.html", "contents" : [ { "title" : "General", "href" : "data-api-dp-environment-APIs.html" }, { "title" : "Querying", "href" : "data-api-dp-queries.html" }, { "title" : "Bulk loader", "href" : "data-api-dp-loader.html" }, { "title" : "Streams", "href" : "data-api-dp-streams.html" }, { "title" : "Statistics", "href" : "data-api-dp-statistics.html" }, { "title" : "ML data processing", "href" : "data-api-dp-ml-data-processing.html" }, { "title" : "ML model training", "href" : "data-api-dp-ml-training.html" }, { "title" : "ML model transform", "href" : "data-api-dp-ml-transform.html" }, { "title" : "ML Inference endpoint", "href" : "data-api-dp-inference.html" }, { "title" : "Exceptions", "href" : "data-api-dp-errors.html" } ] } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/neptune/latest/userguide/",
+    "service": "neptune",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Neptune?",
+                "href": "intro.html"
+            },
+            {
+                "title": "Latest Updates",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "graph-get-started.html",
+                "contents": [
+                    {
+                        "title": "Use graph notebooks",
+                        "href": "graph-notebooks.html"
+                    },
+                    {
+                        "title": "Workbench magics",
+                        "href": "notebooks-magics.html"
+                    },
+                    {
+                        "title": "Graph visualization",
+                        "href": "notebooks-visualization.html"
+                    }
+                ]
+            },
+            {
+                "title": "Neptune setup",
+                "href": "neptune-setup.html",
+                "contents": [
+                    {
+                        "title": "DB instance types",
+                        "href": "instance-types.html"
+                    },
+                    {
+                        "title": "Create a DB cluster",
+                        "href": "get-started-create-cluster.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "get-started-prereqs.html"
+                            },
+                            {
+                                "title": "Create the Cluster",
+                                "href": "get-started-cfn-create.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configure the VPC",
+                        "href": "get-started-vpc.html"
+                    },
+                    {
+                        "title": "Connect to your graph",
+                        "href": "get-started-connecting.html",
+                        "contents": [
+                            {
+                                "title": "From within the VPC",
+                                "href": "get-started-connect-ec2-same-vpc.html"
+                            },
+                            {
+                                "title": "From a different VPC",
+                                "href": "get-started-connect-ec2-other-vpc.html"
+                            },
+                            {
+                                "title": "From a private network",
+                                "href": "get-started-connect-private-net.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Neptune Security",
+                        "href": "get-started-security.html"
+                    },
+                    {
+                        "title": "Access the graph",
+                        "href": "get-started-access-graph.html",
+                        "contents": [
+                            {
+                                "title": "Use Gremlin",
+                                "href": "get-started-graph-gremlin.html"
+                            },
+                            {
+                                "title": "Use openCypher",
+                                "href": "get-started-graph-opencypher.html"
+                            },
+                            {
+                                "title": "Use RDF/SPARQL",
+                                "href": "get-started-graph-sparql.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Loading Data",
+                        "href": "get-started-loading.html"
+                    },
+                    {
+                        "title": "Monitoring Neptune",
+                        "href": "get-started-monitoring.html"
+                    },
+                    {
+                        "title": "Troubleshooting and Best Practices",
+                        "href": "get-started-troubleshooting.html"
+                    }
+                ]
+            },
+            {
+                "title": "Global databases",
+                "href": "neptune-global-database.html",
+                "contents": [
+                    {
+                        "title": "Setup",
+                        "href": "neptune-gdb-setup.html"
+                    },
+                    {
+                        "title": "Managing a Neptune global database",
+                        "href": "neptune-gdb-managing.html"
+                    },
+                    {
+                        "title": "Using failover",
+                        "href": "neptune-gdb-disaster-recovery.html"
+                    },
+                    {
+                        "title": "Monitoring Neptune global databases",
+                        "href": "neptune-gdb-monitoring.html"
+                    }
+                ]
+            },
+            {
+                "title": "Neptune overview",
+                "href": "feature-overview.html",
+                "contents": [
+                    {
+                        "title": "Standards Compliance",
+                        "href": "feature-overview-standards-compliance.html",
+                        "contents": [
+                            {
+                                "title": "Gremlin standards compliance",
+                                "href": "access-graph-gremlin-differences.html"
+                            },
+                            {
+                                "title": "SPARQL standards compliance",
+                                "href": "feature-sparql-compliance.html"
+                            },
+                            {
+                                "title": "openCypher standards compliance",
+                                "href": "feature-opencypher-compliance.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Graph Data Model",
+                        "href": "feature-overview-data-model.html"
+                    },
+                    {
+                        "title": "Lookup cache",
+                        "href": "feature-overview-lookup-cache.html"
+                    },
+                    {
+                        "title": "Transaction Semantics",
+                        "href": "transactions.html",
+                        "contents": [
+                            {
+                                "title": "Isolation Levels",
+                                "href": "transactions-isolation-levels.html"
+                            },
+                            {
+                                "title": "Neptune Isolation Levels",
+                                "href": "transactions-neptune.html"
+                            },
+                            {
+                                "title": "Transaction examples",
+                                "href": "transactions-examples.html"
+                            },
+                            {
+                                "title": "Exceptions and Retries",
+                                "href": "transactions-exceptions.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Clusters and Instances",
+                        "href": "feature-overview-db-clusters.html"
+                    },
+                    {
+                        "title": "Storage, reliability and availability",
+                        "href": "feature-overview-storage.html"
+                    },
+                    {
+                        "title": "Endpoint Connections",
+                        "href": "feature-overview-endpoints.html",
+                        "contents": [
+                            {
+                                "title": "Working with custom endpoints",
+                                "href": "feature-custom-endpoint-membership.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Custom queryId",
+                        "href": "features-query-id.html"
+                    },
+                    {
+                        "title": "Lab Mode",
+                        "href": "features-lab-mode.html"
+                    },
+                    {
+                        "title": "Neptune DFE engine",
+                        "href": "neptune-dfe-engine.html"
+                    },
+                    {
+                        "title": "DFE statistics",
+                        "href": "neptune-dfe-statistics.html"
+                    },
+                    {
+                        "title": "Graph summary API",
+                        "href": "neptune-graph-summary.html"
+                    },
+                    {
+                        "title": "JDBC connectivity",
+                        "href": "neptune-jdbc.html"
+                    },
+                    {
+                        "title": "Neptune engine updates",
+                        "href": "features-engine-updates.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data Protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Amazon VPC protection",
+                                "href": "security-vpc.html"
+                            },
+                            {
+                                "title": "Encryption in Transit",
+                                "href": "security-ssl.html"
+                            },
+                            {
+                                "title": "Encryption at Rest",
+                                "href": "encrypt.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IAM overview",
+                        "href": "iam-auth.html"
+                    },
+                    {
+                        "title": "Enabling IAM",
+                        "href": "iam-auth-enable.html"
+                    },
+                    {
+                        "title": "Connecting and Signing",
+                        "href": "iam-auth-connecting.html",
+                        "contents": [
+                            {
+                                "title": "EC2 Prerequisites",
+                                "href": "iam-auth-connect-prerq.html"
+                            },
+                            {
+                                "title": "Using the command line",
+                                "href": "iam-auth-connect-command-line.html"
+                            },
+                            {
+                                "title": "Gremlin Console",
+                                "href": "iam-auth-connecting-gremlin-console.html"
+                            },
+                            {
+                                "title": "Gremlin Java",
+                                "href": "iam-auth-connecting-gremlin-java.html"
+                            },
+                            {
+                                "title": "SPARQL Java (RDF4J and Jena)",
+                                "href": "iam-auth-connecting-sparql-java.html"
+                            },
+                            {
+                                "title": "SPARQL with Node.js",
+                                "href": "iam-auth-connecting-sparql-node.html"
+                            },
+                            {
+                                "title": "Python Example",
+                                "href": "iam-auth-connecting-python.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using IAM Policies",
+                        "href": "security-iam-access-manage.html",
+                        "contents": [
+                            {
+                                "title": "Managed policies",
+                                "href": "security-iam-access-managed-policies.html",
+                                "contents": [
+                                    {
+                                        "title": "NeptuneReadOnlyAccess",
+                                        "href": "read-only-access-iam-managed-policy.html"
+                                    },
+                                    {
+                                        "title": "NeptuneFullAccess",
+                                        "href": "full-access-iam-managed-policy.html"
+                                    },
+                                    {
+                                        "title": "NeptuneConsoleFullAccess",
+                                        "href": "console-full-access-iam-managed-policy.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Condition Keys",
+                                "href": "iam-condition-keys.html"
+                            },
+                            {
+                                "title": "Administrative policy statements",
+                                "href": "iam-admin-policies.html",
+                                "contents": [
+                                    {
+                                        "title": "Actions",
+                                        "href": "neptune-iam-admin-actions.html"
+                                    },
+                                    {
+                                        "title": "Resources",
+                                        "href": "iam-admin-resources.html"
+                                    },
+                                    {
+                                        "title": "Condition Keys",
+                                        "href": "iam-admin-condition-keys.html"
+                                    },
+                                    {
+                                        "title": "Examples",
+                                        "href": "iam-admin-policy-examples.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Data-access policy statements",
+                                "href": "iam-data-access-policies.html",
+                                "contents": [
+                                    {
+                                        "title": "Actions",
+                                        "href": "iam-dp-actions.html"
+                                    },
+                                    {
+                                        "title": "Resources",
+                                        "href": "iam-data-resources.html"
+                                    },
+                                    {
+                                        "title": "Condition Keys",
+                                        "href": "iam-data-condition-keys.html"
+                                    },
+                                    {
+                                        "title": "Examples",
+                                        "href": "iam-data-access-examples.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Neptune Service-Linked Roles",
+                        "href": "security-iam-service-linked-roles.html"
+                    },
+                    {
+                        "title": "Temporary Credentials",
+                        "href": "iam-auth-temporary-credentials.html"
+                    },
+                    {
+                        "title": "Logging and Monitoring",
+                        "href": "security-monitoring.html"
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "neptune-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    }
+                ]
+            },
+            {
+                "title": "Migrating to Neptune",
+                "href": "migrating.html",
+                "contents": [
+                    {
+                        "title": "Migrating from Neo4j",
+                        "href": "migrating-from-neo4j.html",
+                        "contents": [
+                            {
+                                "title": "Preparing for migration",
+                                "href": "preparing-to-migrate-from-neo4j.html"
+                            },
+                            {
+                                "title": "Provisioning infrastructure",
+                                "href": "migration-provisioning-infrastructure.html"
+                            },
+                            {
+                                "title": "Data migration",
+                                "href": "migration-data-migration.html"
+                            },
+                            {
+                                "title": "Application migration",
+                                "href": "migration-app-migration.html"
+                            },
+                            {
+                                "title": "Neptune compatibility",
+                                "href": "migration-compatibility.html"
+                            },
+                            {
+                                "title": "Cypher rewrites",
+                                "href": "migration-opencypher-rewrites.html"
+                            },
+                            {
+                                "title": "Migration resources",
+                                "href": "migration-resources.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Migrating from TinkerPop",
+                        "href": "migrating-from-tinkerpop.html"
+                    },
+                    {
+                        "title": "Migrating from RDF",
+                        "href": "migrating-from-rdf.html"
+                    },
+                    {
+                        "title": "Using AWS DMS to migrate",
+                        "href": "migrating-using-dms.html"
+                    },
+                    {
+                        "title": "Migrating from Blazegraph",
+                        "href": "migrating-from-blazegraph.html"
+                    }
+                ]
+            },
+            {
+                "title": "Loading data",
+                "href": "load-data.html",
+                "contents": [
+                    {
+                        "title": "Neptune Bulk Loader",
+                        "href": "bulk-load.html",
+                        "contents": [
+                            {
+                                "title": "IAM Role and Amazon S3 Access",
+                                "href": "bulk-load-tutorial-IAM.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating an IAM role to access Amazon S3",
+                                        "href": "bulk-load-tutorial-IAM-CreateRole.html"
+                                    },
+                                    {
+                                        "title": "Adding the IAM Role to a Cluster",
+                                        "href": "bulk-load-tutorial-IAM-add-role-cluster.html"
+                                    },
+                                    {
+                                        "title": "Creating the VPC Endpoint",
+                                        "href": "bulk-load-tutorial-vpc.html"
+                                    },
+                                    {
+                                        "title": "Chaining IAM roles",
+                                        "href": "bulk-load-tutorial-chain-roles.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Data Formats",
+                                "href": "bulk-load-tutorial-format.html",
+                                "contents": [
+                                    {
+                                        "title": "Gremlin data format",
+                                        "href": "bulk-load-tutorial-format-gremlin.html"
+                                    },
+                                    {
+                                        "title": "openCypher data format",
+                                        "href": "bulk-load-tutorial-format-opencypher.html"
+                                    },
+                                    {
+                                        "title": "RDF data formats",
+                                        "href": "bulk-load-tutorial-format-rdf.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Loading Example",
+                                "href": "bulk-load-data.html"
+                            },
+                            {
+                                "title": "Optimizing a bulk load",
+                                "href": "bulk-load-optimize.html"
+                            },
+                            {
+                                "title": "Loader Reference",
+                                "href": "load-api-reference.html",
+                                "contents": [
+                                    {
+                                        "title": "Loader Command",
+                                        "href": "load-api-reference-load.html"
+                                    },
+                                    {
+                                        "title": "Get-Status API",
+                                        "href": "load-api-reference-status.html",
+                                        "contents": [
+                                            {
+                                                "title": "Requests",
+                                                "href": "load-api-reference-status-requests.html"
+                                            },
+                                            {
+                                                "title": "Responses",
+                                                "href": "load-api-reference-status-response.html"
+                                            },
+                                            {
+                                                "title": "Examples",
+                                                "href": "load-api-reference-status-examples.html"
+                                            },
+                                            {
+                                                "title": "errorLogs examples",
+                                                "href": "load-api-reference-error-logs-examples.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Cancel Job",
+                                        "href": "load-api-reference-cancel.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Load data using DMS",
+                        "href": "dms-neptune.html",
+                        "contents": [
+                            {
+                                "title": "GraphMappingConfig",
+                                "href": "dms-neptune-graph-mapping.html"
+                            },
+                            {
+                                "title": "Replicating to Neptune",
+                                "href": "dms-neptune-replication.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Querying",
+                "href": "access-graph-queries.html",
+                "contents": [
+                    {
+                        "title": "Query queuing",
+                        "href": "access-graph-queuing.html"
+                    },
+                    {
+                        "title": "Gremlin",
+                        "href": "access-graph-gremlin.html",
+                        "contents": [
+                            {
+                                "title": "Installing the Gremlin console",
+                                "href": "access-graph-gremlin-console.html"
+                            },
+                            {
+                                "title": "HTTPS REST",
+                                "href": "access-graph-gremlin-rest.html",
+                                "contents": [
+                                    {
+                                        "title": "Enable multi-part responses",
+                                        "href": "access-graph-gremlin-rest-trailing-headers.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Java",
+                                "href": "access-graph-gremlin-client.html",
+                                "contents": [
+                                    {
+                                        "title": "Using a Java client",
+                                        "href": "access-graph-gremlin-java.html"
+                                    },
+                                    {
+                                        "title": "Java reconnect sample",
+                                        "href": "access-graph-gremlin-java-reconnect-example.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Python",
+                                "href": "access-graph-gremlin-python.html"
+                            },
+                            {
+                                "title": ".NET",
+                                "href": "access-graph-gremlin-dotnet.html"
+                            },
+                            {
+                                "title": "Node.js",
+                                "href": "access-graph-gremlin-node-js.html"
+                            },
+                            {
+                                "title": "Go",
+                                "href": "access-graph-gremlin-go.html"
+                            },
+                            {
+                                "title": "Query hints",
+                                "href": "gremlin-query-hints.html",
+                                "contents": [
+                                    {
+                                        "title": "repeatMode",
+                                        "href": "gremlin-query-hints-repeatMode.html"
+                                    },
+                                    {
+                                        "title": "noReordering",
+                                        "href": "gremlin-query-hints-noReordering.html"
+                                    },
+                                    {
+                                        "title": "typePromotion",
+                                        "href": "gremlin-query-hints-typePromotion.html"
+                                    },
+                                    {
+                                        "title": "useDFE",
+                                        "href": "gremlin-query-hints-useDFE.html"
+                                    },
+                                    {
+                                        "title": "Results cache query hints",
+                                        "href": "gremlin-query-hints-results-cache.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Query status",
+                                "href": "gremlin-api-status.html"
+                            },
+                            {
+                                "title": "Query cancellation",
+                                "href": "gremlin-api-status-cancel.html"
+                            },
+                            {
+                                "title": "Gremlin script-based sessions",
+                                "href": "access-graph-gremlin-sessions.html"
+                            },
+                            {
+                                "title": "Gremlin transactions",
+                                "href": "access-graph-gremlin-transactions.html"
+                            },
+                            {
+                                "title": "Using the Gremlin API",
+                                "href": "gremlin-api-reference.html"
+                            },
+                            {
+                                "title": "Caching query results",
+                                "href": "gremlin-results-cache.html"
+                            },
+                            {
+                                "title": "Efficient upserts from 3.6.x forward",
+                                "href": "gremlin-efficient-upserts.html"
+                            },
+                            {
+                                "title": "Efficient upserts before 3.6.x",
+                                "href": "gremlin-efficient-upserts-pre-3.6.html"
+                            },
+                            {
+                                "title": "Gremlin explain",
+                                "href": "gremlin-explain.html",
+                                "contents": [
+                                    {
+                                        "title": "Background information",
+                                        "href": "gremlin-explain-background.html",
+                                        "contents": [
+                                            {
+                                                "title": "Statements",
+                                                "href": "gremlin-explain-background-statements.html"
+                                            },
+                                            {
+                                                "title": "Statement Indexes",
+                                                "href": "gremlin-explain-background-indexing-examples.html"
+                                            },
+                                            {
+                                                "title": "Query processing",
+                                                "href": "gremlin-explain-background-querying.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Gremlin explain API",
+                                        "href": "gremlin-explain-api.html"
+                                    },
+                                    {
+                                        "title": "Gremlin profile API",
+                                        "href": "gremlin-profile-api.html"
+                                    },
+                                    {
+                                        "title": "Tuning Gremlin queries",
+                                        "href": "gremlin-traversal-tuning.html"
+                                    },
+                                    {
+                                        "title": "Gremlin step support",
+                                        "href": "gremlin-step-support.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Gremlin and DFE",
+                                "href": "gremlin-with-dfe.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "openCypher",
+                        "href": "access-graph-opencypher.html",
+                        "contents": [
+                            {
+                                "title": "Status endpoint",
+                                "href": "access-graph-opencypher-status.html"
+                            },
+                            {
+                                "title": "HTTPS endpoint",
+                                "href": "access-graph-opencypher-queries.html"
+                            },
+                            {
+                                "title": "Using the Bolt protocol",
+                                "href": "access-graph-opencypher-bolt.html"
+                            },
+                            {
+                                "title": "Parameterized examples",
+                                "href": "opencypher-parameterized-queries.html"
+                            },
+                            {
+                                "title": "Data model",
+                                "href": "access-graph-opencypher-data-model.html"
+                            },
+                            {
+                                "title": "openCypher explain",
+                                "href": "access-graph-opencypher-explain.html",
+                                "contents": [
+                                    {
+                                        "title": "Example: relationship lookup",
+                                        "href": "access-graph-opencypher-explain-example-2.html"
+                                    },
+                                    {
+                                        "title": "Example: value function",
+                                        "href": "access-graph-opencypher-explain-example-3.html"
+                                    },
+                                    {
+                                        "title": "Example: mathematical expression",
+                                        "href": "access-graph-opencypher-explain-example-4.html"
+                                    },
+                                    {
+                                        "title": "Example: variable-length path",
+                                        "href": "access-graph-opencypher-explain-example-5.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Transactions",
+                                "href": "access-graph-opencypher-transactions.html"
+                            },
+                            {
+                                "title": "Restrictions",
+                                "href": "access-graph-opencypher-limitations.html"
+                            },
+                            {
+                                "title": "Exceptions",
+                                "href": "access-graph-opencypher-exceptions.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "SPARQL",
+                        "href": "access-graph-sparql.html",
+                        "contents": [
+                            {
+                                "title": "RDF4J Console",
+                                "href": "access-graph-sparql-rdf4j-console.html"
+                            },
+                            {
+                                "title": "RDF4J Workbench",
+                                "href": "access-graph-sparql-rdf4j-workbench.html"
+                            },
+                            {
+                                "title": "Java",
+                                "href": "access-graph-sparql-java.html"
+                            },
+                            {
+                                "title": "HTTP API",
+                                "href": "sparql-api-reference.html",
+                                "contents": [
+                                    {
+                                        "title": "HTTP REST",
+                                        "href": "access-graph-sparql-http-rest.html"
+                                    },
+                                    {
+                                        "title": "Optional HTTP trailing headers",
+                                        "href": "access-graph-sparql-http-trailing-headers.html"
+                                    },
+                                    {
+                                        "title": "RDF media-type support",
+                                        "href": "sparql-media-type-support.html"
+                                    },
+                                    {
+                                        "title": "SPARQL UPDATE LOAD",
+                                        "href": "sparql-api-reference-update-load.html"
+                                    },
+                                    {
+                                        "title": "SPARQL UPDATE UNLOAD",
+                                        "href": "sparql-api-reference-unload.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Query hints",
+                                "href": "sparql-query-hints.html",
+                                "contents": [
+                                    {
+                                        "title": "joinOrder",
+                                        "href": "sparql-query-hints-joinOrder.html"
+                                    },
+                                    {
+                                        "title": "evaluationStrategy",
+                                        "href": "sparql-query-hints-evaluationStrategy.html"
+                                    },
+                                    {
+                                        "title": "queryTimeout",
+                                        "href": "sparql-query-hints-queryTimeout.html"
+                                    },
+                                    {
+                                        "title": "rangeSafe",
+                                        "href": "sparql-query-hints-rangeSafe.html"
+                                    },
+                                    {
+                                        "title": "queryId",
+                                        "href": "sparql-query-hints-queryId.html"
+                                    },
+                                    {
+                                        "title": "useDFE",
+                                        "href": "sparql-query-hints-useDFE.html"
+                                    },
+                                    {
+                                        "title": "DESCRIBE query hints",
+                                        "href": "sparql-query-hints-for-describe.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "DESCRIBE and the default graph",
+                                "href": "sparql-default-describe.html"
+                            },
+                            {
+                                "title": "Query status",
+                                "href": "sparql-api-status.html"
+                            },
+                            {
+                                "title": "Query cancellation",
+                                "href": "sparql-api-status-cancel.html"
+                            },
+                            {
+                                "title": "Graph store protocol",
+                                "href": "sparql-graph-store-protocol.html"
+                            },
+                            {
+                                "title": "SPARQL explain",
+                                "href": "sparql-explain.html",
+                                "contents": [
+                                    {
+                                        "title": "SPARQL query engine",
+                                        "href": "sparql-explain-engine.html"
+                                    },
+                                    {
+                                        "title": "Using SPARQL explain",
+                                        "href": "sparql-explain-using.html"
+                                    },
+                                    {
+                                        "title": "explain Examples",
+                                        "href": "sparql-explain-examples.html"
+                                    },
+                                    {
+                                        "title": "explain operators",
+                                        "href": "sparql-explain-operators.html"
+                                    },
+                                    {
+                                        "title": "explain Limitations",
+                                        "href": "sparql-explain-limitations.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "SPARQL SERVICE Extension",
+                                "href": "sparql-service.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Visualization tools",
+                "href": "visualization-tools.html",
+                "contents": [
+                    {
+                        "title": "Graph-explorer",
+                        "href": "visualization-graph-explorer.html"
+                    },
+                    {
+                        "title": "Tom Sawyer Software",
+                        "href": "visualization-tom-sawyer.html"
+                    },
+                    {
+                        "title": "Cambridge Intelligence",
+                        "href": "visualization-cambridge-intelligence.html"
+                    },
+                    {
+                        "title": "Graphistry",
+                        "href": "visualization-graphistry.html"
+                    },
+                    {
+                        "title": "metaphacts",
+                        "href": "visualization-metaphacts.html"
+                    },
+                    {
+                        "title": "G.V( )",
+                        "href": "visualization-GV.html"
+                    }
+                ]
+            },
+            {
+                "title": "Exporting data",
+                "href": "neptune-data-export.html",
+                "contents": [
+                    {
+                        "title": "neptune-export",
+                        "href": "neptune-export.html"
+                    },
+                    {
+                        "title": "Neptune-Export service",
+                        "href": "export-service.html"
+                    },
+                    {
+                        "title": "neptune-export utility",
+                        "href": "export-utility.html"
+                    },
+                    {
+                        "title": "Exported files",
+                        "href": "exported-files.html"
+                    },
+                    {
+                        "title": "Export parameters",
+                        "href": "export-parameters.html",
+                        "contents": [
+                            {
+                                "title": "params",
+                                "href": "export-params-fields.html"
+                            },
+                            {
+                                "title": "Filtering examples",
+                                "href": "export-filtering-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "href": "export-troubleshooting.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing Neptune",
+                "href": "manage-console.html",
+                "contents": [
+                    {
+                        "title": "Neptune Blue/Green solution",
+                        "href": "neptune-BG-deployments.html"
+                    },
+                    {
+                        "title": "IAM user permissions",
+                        "href": "manage-console-iam-user.html"
+                    },
+                    {
+                        "title": "Parameter groups",
+                        "href": "parameter-groups.html"
+                    },
+                    {
+                        "title": "Parameters",
+                        "href": "parameters.html"
+                    },
+                    {
+                        "title": "Launch using the console",
+                        "href": "manage-console-launch-console.html"
+                    },
+                    {
+                        "title": "Stopping and starting a cluster",
+                        "href": "manage-console-stop-start.html"
+                    },
+                    {
+                        "title": "Fast reset API",
+                        "href": "manage-console-fast-reset.html"
+                    },
+                    {
+                        "title": "Adding reader instances",
+                        "href": "manage-console-add-replicas.html"
+                    },
+                    {
+                        "title": "Creating a reader instance",
+                        "href": "manage-console-create-replica.html"
+                    },
+                    {
+                        "title": "Modifying a DB Cluster",
+                        "href": "manage-console-modify.html"
+                    },
+                    {
+                        "title": "Performance and Scaling",
+                        "href": "manage-console-performance-scaling.html"
+                    },
+                    {
+                        "title": "Auto-scaling",
+                        "href": "manage-console-autoscaling.html"
+                    },
+                    {
+                        "title": "Maintaining a DB Cluster",
+                        "href": "manage-console-maintaining.html"
+                    },
+                    {
+                        "title": "Neptune Updates",
+                        "href": "manage-console-updates.html"
+                    },
+                    {
+                        "title": "Update via CloudFormation",
+                        "href": "cfn-engine-update.html",
+                        "contents": [
+                            {
+                                "title": "1.2.0.1 to 1.2.0.2",
+                                "href": "cfn-engine-update-1201-1202.html"
+                            },
+                            {
+                                "title": "1.1.1.0 to 1.2.0.2, default",
+                                "href": "cfn-engine-update-1110-1202-default.html"
+                            },
+                            {
+                                "title": "1.1.1.0 to 1.2.0.2, custom",
+                                "href": "cfn-engine-update-1110-1202-custom.html"
+                            },
+                            {
+                                "title": "1.1.1.0 to 1.2.0.2, mixed",
+                                "href": "cfn-engine-update-1110-1202-mixed.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Cloning a DB Cluster",
+                        "href": "manage-console-cloning.html"
+                    },
+                    {
+                        "title": "Managing Instances",
+                        "href": "manage-console-instances.html",
+                        "contents": [
+                            {
+                                "title": "T3 Burstable Instances",
+                                "href": "manage-console-instances-t3.html"
+                            },
+                            {
+                                "title": "Modifying an Instance",
+                                "href": "manage-console-instances-modify.html"
+                            },
+                            {
+                                "title": "Renaming a Neptune DB Instance",
+                                "href": "manage-console-instances-rename.html"
+                            },
+                            {
+                                "title": "Rebooting a DB instance",
+                                "href": "manage-console-instances-reboot.html"
+                            },
+                            {
+                                "title": "Deleting a DB Instance",
+                                "href": "manage-console-instances-delete.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Serverless",
+                "href": "neptune-serverless.html",
+                "contents": [
+                    {
+                        "title": "Capacity scaling",
+                        "href": "neptune-serverless-capacity-scaling.html"
+                    },
+                    {
+                        "title": "Additional configuration",
+                        "href": "neptune-serverless-configuration.html"
+                    },
+                    {
+                        "title": "Using Serverless",
+                        "href": "neptune-serverless-using.html"
+                    }
+                ]
+            },
+            {
+                "title": "Neptune streams",
+                "href": "streams.html",
+                "contents": [
+                    {
+                        "title": "Using Streams",
+                        "href": "streams-using.html"
+                    },
+                    {
+                        "title": "Streams Record Formats",
+                        "href": "streams-change-formats.html"
+                    },
+                    {
+                        "title": "Streams Examples",
+                        "href": "streams-examples.html"
+                    },
+                    {
+                        "title": "Neptune-to-Neptune Replication Setup",
+                        "href": "streams-consumer-setup.html"
+                    },
+                    {
+                        "title": "Streams for disaster recovery",
+                        "href": "streams-disaster-recovery.html"
+                    }
+                ]
+            },
+            {
+                "title": "Neptune full text search",
+                "href": "full-text-search.html",
+                "contents": [
+                    {
+                        "title": "Full-text search setup",
+                        "href": "full-text-search-cfn-setup.html",
+                        "contents": [
+                            {
+                                "title": "CloudFormation template",
+                                "href": "full-text-search-cfn-create.html"
+                            },
+                            {
+                                "title": "Existing databases",
+                                "href": "full-text-search-cfn-enabling.html"
+                            },
+                            {
+                                "title": "Updating the poller",
+                                "href": "full-text-search-cfn-update-poller.html"
+                            },
+                            {
+                                "title": "Stopping and starting the poller",
+                                "href": "full-text-search-using-pausing-poller.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Querying with fine-grained access control",
+                        "href": "full-text-search-fgac.html"
+                    },
+                    {
+                        "title": "Use of Lucene syntax",
+                        "href": "full-text-search-lucene.html"
+                    },
+                    {
+                        "title": "Neptune Full-text search data model",
+                        "href": "full-text-search-model.html"
+                    },
+                    {
+                        "title": "Full-text search parameters",
+                        "href": "full-text-search-parameters.html"
+                    },
+                    {
+                        "title": "Non-string indexing",
+                        "href": "full-text-search-non-string-indexing.html",
+                        "contents": [
+                            {
+                                "title": "Excluding fields",
+                                "href": "full-text-search-non-string-indexing-filters.html"
+                            },
+                            {
+                                "title": "Datatype mappings",
+                                "href": "full-text-search-non-string-indexing-mapping.html"
+                            },
+                            {
+                                "title": "Datatype validation",
+                                "href": "full-text-search-data-validation.html"
+                            },
+                            {
+                                "title": "Sample queries",
+                                "href": "full-text-search-non-string-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Full-text-search query execution",
+                        "href": "full-text-search-query-execution.html"
+                    },
+                    {
+                        "title": "Sample SPARQL full-text search queries",
+                        "href": "full-text-search-sparql-examples.html"
+                    },
+                    {
+                        "title": "Sample Gremlin full-text search queries",
+                        "href": "full-text-search-gremlin.html"
+                    },
+                    {
+                        "title": "Troubleshooting and metrics",
+                        "href": "streams-consumer-troubleshooting.html"
+                    }
+                ]
+            },
+            {
+                "title": "AWS Lambda functions",
+                "href": "lambda-functions.html",
+                "contents": [
+                    {
+                        "title": "Creating a Lambda Function",
+                        "href": "get-started-cfn-lambda.html"
+                    },
+                    {
+                        "title": "Lambda function examples",
+                        "href": "lambda-functions-examples.html"
+                    }
+                ]
+            },
+            {
+                "title": "Neptune machine learning",
+                "href": "machine-learning.html",
+                "contents": [
+                    {
+                        "title": "Neptune ML setup",
+                        "href": "machine-learning-setup.html",
+                        "contents": [
+                            {
+                                "title": "Setup using AWS CloudFormation",
+                                "href": "machine-learning-quick-start.html"
+                            },
+                            {
+                                "title": "Manual setup",
+                                "href": "machine-learning-manual-setup.html"
+                            },
+                            {
+                                "title": "Using the AWS CLI",
+                                "href": "machine-learning-cluster-setup.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Neptune ML",
+                        "href": "machine-learning-overview.html"
+                    },
+                    {
+                        "title": "Instance selection",
+                        "href": "machine-learning-on-graphs-instance-selection.html"
+                    },
+                    {
+                        "title": "Data export",
+                        "href": "machine-learning-data-export.html",
+                        "contents": [
+                            {
+                                "title": "targets",
+                                "href": "machine-learning-neptune_ml-targets.html"
+                            },
+                            {
+                                "title": "features",
+                                "href": "machine-learning-neptune_ml-features.html"
+                            },
+                            {
+                                "title": "Examples",
+                                "href": "machine-learning-data-export-additionalParams-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Data processing",
+                        "href": "machine-learning-on-graphs-processing.html",
+                        "contents": [
+                            {
+                                "title": "Feature encoding",
+                                "href": "machine-learning-feature-encoding.html"
+                            },
+                            {
+                                "title": "Editing a training data file",
+                                "href": "machine-learning-processing-training-config-file.html",
+                                "contents": [
+                                    {
+                                        "title": "Sample file",
+                                        "href": "machine-learning-processing-training-config-file-example.html"
+                                    },
+                                    {
+                                        "title": "File structure",
+                                        "href": "machine-learning-processing-training-config-file-structure.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Model training",
+                        "href": "machine-learning-on-graphs-model-training.html",
+                        "contents": [
+                            {
+                                "title": "Models and training",
+                                "href": "machine-learning-models-and-training.html"
+                            },
+                            {
+                                "title": "Customizing hyperparameters",
+                                "href": "machine-learning-customizing-hyperparams.html"
+                            },
+                            {
+                                "title": "Training best practices",
+                                "href": "machine-learning-improve-model-performance.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Model transform",
+                        "href": "machine-learning-model-transform.html"
+                    },
+                    {
+                        "title": "Model artifacts",
+                        "href": "machine-learning-model-artifacts.html"
+                    },
+                    {
+                        "title": "Custom models",
+                        "href": "machine-learning-custom-models.html",
+                        "contents": [
+                            {
+                                "title": "Custom model overview",
+                                "href": "machine-learning-custom-model-overview.html"
+                            },
+                            {
+                                "title": "Custom model development",
+                                "href": "machine-learning-custom-model-development.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Inference endpoint",
+                        "href": "machine-learning-on-graphs-inference-endpoint.html"
+                    },
+                    {
+                        "title": "Inference queries",
+                        "href": "machine-learning-inference-queries.html",
+                        "contents": [
+                            {
+                                "title": "Gremlin inference queries",
+                                "href": "machine-learning-gremlin-inference-queries.html",
+                                "contents": [
+                                    {
+                                        "title": "Inference query predicates",
+                                        "href": "machine-learning-gremlin-inference-query-predicates.html"
+                                    },
+                                    {
+                                        "title": "Node classification",
+                                        "href": "machine-learning-gremlin-vertex-classification-queries.html"
+                                    },
+                                    {
+                                        "title": "Node regression",
+                                        "href": "machine-learning-gremlin-vertex-regression-queries.html"
+                                    },
+                                    {
+                                        "title": "Edge classification",
+                                        "href": "machine-learning-gremlin-edge-classification-queries.html"
+                                    },
+                                    {
+                                        "title": "Edge regression",
+                                        "href": "machine-learning-gremlin-edge-regression.html"
+                                    },
+                                    {
+                                        "title": "Link prediction",
+                                        "href": "machine-learning-gremlin-link-prediction-queries.html"
+                                    },
+                                    {
+                                        "title": "Exceptions list",
+                                        "href": "machine-learning-gremlin-exceptions.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "SPARQL inference queries",
+                                "href": "machine-learning-sparql-inference-queries.html",
+                                "contents": [
+                                    {
+                                        "title": "SPARQL inference query predicates",
+                                        "href": "machine-learning-sparql-inference-query-predicates.html"
+                                    },
+                                    {
+                                        "title": "Object classification",
+                                        "href": "machine-learning-sparql-inference-object-classification.html"
+                                    },
+                                    {
+                                        "title": "Object regression",
+                                        "href": "machine-learning-sparql-inference-object-regression.html"
+                                    },
+                                    {
+                                        "title": "Object prediction",
+                                        "href": "machine-learning-sparql-inference-object-prediction.html"
+                                    },
+                                    {
+                                        "title": "Subject prediction",
+                                        "href": "machine-learning-sparql-inference-subject-prediction.html"
+                                    },
+                                    {
+                                        "title": "Exceptions list",
+                                        "href": "machine-learning-sparql-exceptions.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Neptune ML API",
+                        "href": "machine-learning-api-reference.html",
+                        "contents": [
+                            {
+                                "title": "The dataprocessing command",
+                                "href": "machine-learning-api-dataprocessing.html"
+                            },
+                            {
+                                "title": "The modeltraining command",
+                                "href": "machine-learning-api-modeltraining.html"
+                            },
+                            {
+                                "title": "The modeltransform command",
+                                "href": "machine-learning-api-modeltransform.html"
+                            },
+                            {
+                                "title": "The endpoints command",
+                                "href": "machine-learning-api-endpoints.html"
+                            },
+                            {
+                                "title": "Exceptions",
+                                "href": "machine-learning-api-exceptions.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Limits",
+                        "href": "machine-learning-limits.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring Neptune",
+                "href": "monitoring.html",
+                "contents": [
+                    {
+                        "title": "Instance Status",
+                        "href": "access-graph-status.html"
+                    },
+                    {
+                        "title": "Using CloudWatch",
+                        "href": "cloudwatch.html",
+                        "contents": [
+                            {
+                                "title": "Monitor instance performance",
+                                "href": "cloudwatch-monitoring-instances.html"
+                            },
+                            {
+                                "title": "Neptune Metrics",
+                                "href": "cw-metrics.html"
+                            },
+                            {
+                                "title": "Neptune Dimensions",
+                                "href": "cw-dimensions.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Audit Logs with Neptune",
+                        "href": "auditing.html"
+                    },
+                    {
+                        "title": "Neptune CloudWatch Logs",
+                        "href": "cloudwatch-logs.html"
+                    },
+                    {
+                        "title": "Notebook CloudWatch Logs",
+                        "href": "notebook-logs.html"
+                    },
+                    {
+                        "title": "Slow-query logs",
+                        "href": "slow-query-logs.html"
+                    },
+                    {
+                        "title": "Logging Neptune API Calls with AWS CloudTrail",
+                        "href": "cloudtrail.html"
+                    },
+                    {
+                        "title": "Event Notifications",
+                        "href": "events.html",
+                        "contents": [
+                            {
+                                "title": "Categories and messages",
+                                "href": "event-lists.html"
+                            },
+                            {
+                                "title": "Subscribing to events",
+                                "href": "events-subscribing.html"
+                            },
+                            {
+                                "title": "Manage subscriptions",
+                                "href": "events-manage.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tagging Neptune Resources",
+                        "href": "tagging.html",
+                        "contents": [
+                            {
+                                "title": "Working with ARNs",
+                                "href": "tagging-arns.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Backing up and restoring",
+                "href": "backup-restore.html",
+                "contents": [
+                    {
+                        "title": "Backup and Restore Overview",
+                        "href": "backup-restore-overview.html"
+                    },
+                    {
+                        "title": "Creating a Snapshot",
+                        "href": "backup-restore-create-snapshot.html"
+                    },
+                    {
+                        "title": "Restoring from a Snapshot",
+                        "href": "backup-restore-restore-snapshot.html"
+                    },
+                    {
+                        "title": "Copying a Snapshot",
+                        "href": "backup-restore-copy-snapshot.html"
+                    },
+                    {
+                        "title": "Sharing a Snapshot",
+                        "href": "backup-restore-share-snapshot.html"
+                    },
+                    {
+                        "title": "Deleting a Snapshot",
+                        "href": "backup-restore-delete-snapshot.html"
+                    }
+                ]
+            },
+            {
+                "title": "Best practices",
+                "href": "best-practices.html",
+                "contents": [
+                    {
+                        "title": "Basic operational guidelines",
+                        "href": "best-practices-general-basic.html"
+                    },
+                    {
+                        "title": "Gremlin (General)",
+                        "href": "best-practices-gremlin.html",
+                        "contents": [
+                            {
+                                "title": "GLV execution differences",
+                                "href": "best-practices-gremlin-console-glv-differences.html"
+                            },
+                            {
+                                "title": "Optimize upsert queries",
+                                "href": "best-practices-gremlin-upserts.html"
+                            },
+                            {
+                                "title": "Multithreaded Writes",
+                                "href": "best-practices-gremlin-multithreaded-writes.html"
+                            },
+                            {
+                                "title": "Pruning Records",
+                                "href": "best-practices-gremlin-prune.html"
+                            },
+                            {
+                                "title": "datetime( )",
+                                "href": "best-practices-gremlin-datetime.html"
+                            },
+                            {
+                                "title": "Native Date and Time",
+                                "href": "best-practices-gremlin-datetime-glv.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Gremlin (Java client)",
+                        "href": "best-practices-gremlin-java-client.html",
+                        "contents": [
+                            {
+                                "title": "Re-use the client object",
+                                "href": "best-practices-gremlin-java-reuse.html"
+                            },
+                            {
+                                "title": "Separate Clients for Reading and Writing",
+                                "href": "best-practices-gremlin-java-separate.html"
+                            },
+                            {
+                                "title": "Multiple replica endpoints",
+                                "href": "best-practices-gremlin-java-multiple.html"
+                            },
+                            {
+                                "title": "Close the client when finished",
+                                "href": "best-practices-gremlin-java-close-connections.html"
+                            },
+                            {
+                                "title": "New connection after failover",
+                                "href": "best-practices-gremlin-java-new-connection.html"
+                            },
+                            {
+                                "title": "Set maxInProcessPerConnection = maxSimultaneousUsagePerConnection",
+                                "href": "best-practices-gremlin-java-maxes.html"
+                            },
+                            {
+                                "title": "Send queries as bytecode",
+                                "href": "best-practices-gremlin-java-bytecode.html"
+                            },
+                            {
+                                "title": "Completely consume query results",
+                                "href": "best-practices-gremlin-java-resultset.html"
+                            },
+                            {
+                                "title": "Bulk add vertices and edges",
+                                "href": "best-practices-gremlin-java-batch-add.html"
+                            },
+                            {
+                                "title": "Disable JVM DNS caching",
+                                "href": "best-practices-gremlin-java-disable-dns-caching.html"
+                            },
+                            {
+                                "title": "Per-query timeouts",
+                                "href": "best-practices-gremlin-java-per-query-timeout.html"
+                            },
+                            {
+                                "title": "Work around a bug in earlier versions",
+                                "href": "best-practices-gremlin-java-keep-alive-bug.html"
+                            },
+                            {
+                                "title": "Handling a TimeoutException",
+                                "href": "best-practices-gremlin-java-exceptions-TimeoutException.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "openCypher and Bolt",
+                        "href": "best-practices-opencypher.html"
+                    },
+                    {
+                        "title": "SPARQL",
+                        "href": "best-practices-sparql.html"
+                    }
+                ]
+            },
+            {
+                "title": "Neptune Limits",
+                "href": "limits.html"
+            },
+            {
+                "title": "Neptune integrations",
+                "href": "integrations.html"
+            },
+            {
+                "title": "Tools and utilities",
+                "href": "tools.html",
+                "contents": [
+                    {
+                        "title": "GraphQL utility",
+                        "href": "tools-graphql.html",
+                        "contents": [
+                            {
+                                "title": "Using existing data",
+                                "href": "tools-graphql-scan-existing.html"
+                            },
+                            {
+                                "title": "Using a schema with no directives",
+                                "href": "tools-graphql-start-from-schema.html"
+                            },
+                            {
+                                "title": "Working with directives",
+                                "href": "tools-graphql-schema-with-directives.html"
+                            },
+                            {
+                                "title": "Command-line arguments",
+                                "href": "tools-graphql-cmd-line-args.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Neptune Errors",
+                "href": "errors.html",
+                "contents": [
+                    {
+                        "title": "Engine Error Codes",
+                        "href": "errors-engine-codes.html"
+                    },
+                    {
+                        "title": "API Errors",
+                        "href": "CommonErrors.html"
+                    },
+                    {
+                        "title": "Loader Errors",
+                        "href": "loader-message.html"
+                    }
+                ]
+            },
+            {
+                "title": "Engine releases",
+                "href": "engine-releases.html",
+                "contents": [
+                    {
+                        "title": "Neptune engine updates",
+                        "href": "engine-updates.html"
+                    },
+                    {
+                        "title": "Release: 1.2.1.0 (2023-03-08)",
+                        "href": "engine-releases-1.2.1.0.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.2.1.0.R7 (2023-10-11)",
+                                "href": "engine-releases-1.2.1.0.R7.html"
+                            },
+                            {
+                                "title": "Release: 1.2.1.0.R6 (2023-09-12)",
+                                "href": "engine-releases-1.2.1.0.R6.html"
+                            },
+                            {
+                                "title": "Release: 1.2.1.0.R5 (2023-09-02)",
+                                "href": "engine-releases-1.2.1.0.R5.html"
+                            },
+                            {
+                                "title": "Release: 1.2.1.0.R4 (2023-08-10)",
+                                "href": "engine-releases-1.2.1.0.R4.html"
+                            },
+                            {
+                                "title": "Release: 1.2.1.0.R3 (2023-06-13)",
+                                "href": "engine-releases-1.2.1.0.R3.html"
+                            },
+                            {
+                                "title": "Release: 1.2.1.0.R2 (2023-05-02)",
+                                "href": "engine-releases-1.2.1.0.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.2.0.2 (2022-11-20)",
+                        "href": "engine-releases-1.2.0.2.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.2.0.2.R6 (2023-09-12)",
+                                "href": "engine-releases-1.2.0.2.R6.html"
+                            },
+                            {
+                                "title": "Release: 1.2.0.2.R5 (2023-08-16)",
+                                "href": "engine-releases-1.2.0.2.R5.html"
+                            },
+                            {
+                                "title": "Release: 1.2.0.2.R4 (2023-05-08)",
+                                "href": "engine-releases-1.2.0.2.R4.html"
+                            },
+                            {
+                                "title": "Release: 1.2.0.2.R3 (2023-03-27)",
+                                "href": "engine-releases-1.2.0.2.R3.html"
+                            },
+                            {
+                                "title": "Release: 1.2.0.2.R2 (2022-12-15)",
+                                "href": "engine-releases-1.2.0.2.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.2.0.1 (2022-10-26)",
+                        "href": "engine-releases-1.2.0.1.html",
+                        "contents": [
+                            {
+                                "title": "Maintenance Release: 1.2.0.1.R3 (2023-09-27)",
+                                "href": "engine-releases-1.2.0.1.R3.html"
+                            },
+                            {
+                                "title": "Maintenance Release: 1.2.0.1.R2 (2022-12-13)",
+                                "href": "engine-releases-1.2.0.1.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.2.0.0 (2022-07-21)",
+                        "href": "engine-releases-1.2.0.0.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.2.0.0.R4 (2023-09-29)",
+                                "href": "engine-releases-1.2.0.0.R4.html"
+                            },
+                            {
+                                "title": "Release: 1.2.0.0.R3 (2022-12-15)",
+                                "href": "engine-releases-1.2.0.0.R3.html"
+                            },
+                            {
+                                "title": "Release: 1.2.0.0.R2 (2022-10-14)",
+                                "href": "engine-releases-1.2.0.0.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.1.1.0 (2022-04-19)",
+                        "href": "engine-releases-1.1.1.0.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.1.1.0.R7 (2023-01-23)",
+                                "href": "engine-releases-1.1.1.0.R7.html"
+                            },
+                            {
+                                "title": "Release: 1.1.1.0.R6 (2022-09-23)",
+                                "href": "engine-releases-1.1.1.0.R6.html"
+                            },
+                            {
+                                "title": "Release: 1.1.1.0.R5 (2022-07-21)",
+                                "href": "engine-releases-1.1.1.0.R5.html"
+                            },
+                            {
+                                "title": "Release: 1.1.1.0.R4 (2022-06-23)",
+                                "href": "engine-releases-1.1.1.0.R4.html"
+                            },
+                            {
+                                "title": "Release: 1.1.1.0.R3 (2022-06-07)",
+                                "href": "engine-releases-1.1.1.0.R3.html"
+                            },
+                            {
+                                "title": "Maintenance release: 1.1.1.0.R2 (2022-05-16)",
+                                "href": "engine-releases-1.1.1.0.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.1.0.0 (2021-11-19)",
+                        "href": "engine-releases-1.1.0.0.html",
+                        "contents": [
+                            {
+                                "title": "Maintenance release: 1.1.0.0.R3 (2022-12-23)",
+                                "href": "engine-releases-1.1.0.0.R3.html"
+                            },
+                            {
+                                "title": "Maintenance release: 1.1.0.0.R2 (2022-05-16)",
+                                "href": "engine-releases-1.1.0.0.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.0.5.1 (2021-10-01)",
+                        "href": "engine-releases-1.0.5.1.html",
+                        "contents": [
+                            {
+                                "title": "Maintenance release: 1.0.5.1.R4 (2022-05-16)",
+                                "href": "engine-releases-1.0.5.1.R4.html"
+                            },
+                            {
+                                "title": "Release: 1.0.5.1.R3 (2022-01-13)",
+                                "href": "engine-releases-1.0.5.1.R3.html"
+                            },
+                            {
+                                "title": "Release: 1.0.5.1.R2 (2021-10-26)",
+                                "href": "engine-releases-1.0.5.1.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.0.5.0 (2021-07-27)",
+                        "href": "engine-releases-1.0.5.0.html",
+                        "contents": [
+                            {
+                                "title": "Maintenance release: 1.0.5.0.R5 (2022-05-16)",
+                                "href": "engine-releases-1.0.5.0.R5.html"
+                            },
+                            {
+                                "title": "Release: 1.0.5.0.R3 (2021-09-15)",
+                                "href": "engine-releases-1.0.5.0.R3.html"
+                            },
+                            {
+                                "title": "Release: 1.0.5.0.R2 (2021-08-16)",
+                                "href": "engine-releases-1.0.5.0.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.0.4.2 (2021-06-01)",
+                        "href": "engine-releases-1.0.4.2.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.0.4.2.R5 (2021-08-16)",
+                                "href": "engine-releases-1.0.4.2.R5.html"
+                            },
+                            {
+                                "title": "Release: 1.0.4.2.R4 (2021-07-23)",
+                                "href": "engine-releases-1.0.4.2.R4.html"
+                            },
+                            {
+                                "title": "Release: 1.0.4.2.R3 (2021-06-28)",
+                                "href": "engine-releases-1.0.4.2.R3.html"
+                            },
+                            {
+                                "title": "Release: 1.0.4.2.R2 (2021-06-01)",
+                                "href": "engine-releases-1.0.4.2.R2.html"
+                            },
+                            {
+                                "title": "Release: 1.0.4.2.R1 (2021-05-27)",
+                                "href": "engine-releases-1.0.4.2.R1.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.0.4.1 (2020-12-08)",
+                        "href": "engine-releases-1.0.4.1.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.0.4.1.R1.1 (2021-03-22)",
+                                "href": "engine-releases-1.0.4.1.R1.1.html"
+                            },
+                            {
+                                "title": "Release: 1.0.4.1.R2 (2021-02-24)",
+                                "href": "engine-releases-1.0.4.1.R2.html",
+                                "contents": [
+                                    {
+                                        "title": "Release: 1.0.4.1.R2.1 (2021-03-11)",
+                                        "href": "engine-releases-1.0.4.1.R2.1.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.0.4.0 (2020-10-12)",
+                        "href": "engine-releases-1.0.4.0.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.0.4.0.R2 (2021-02-24)",
+                                "href": "engine-releases-1.0.4.0.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.0.3.0 (2020-08-03)",
+                        "href": "engine-releases-1.0.3.0.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.0.3.0.R3 (2021-02-19)",
+                                "href": "engine-releases-1.0.3.0.R3.html"
+                            },
+                            {
+                                "title": "Release: 1.0.3.0.R2 (2020-10-12)",
+                                "href": "engine-releases-1.0.3.0.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.0.2.2 (2020-03-09)",
+                        "href": "engine-releases-1.0.2.2.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.0.2.2.R6 (2021-02-19)",
+                                "href": "engine-releases-1.0.2.2.R6.html"
+                            },
+                            {
+                                "title": "Release: 1.0.2.2.R5 (2020-10-12)",
+                                "href": "engine-releases-1.0.2.2.R5.html"
+                            },
+                            {
+                                "title": "Release: 1.0.2.2.R4 (2020-07-23)",
+                                "href": "engine-releases-1.0.2.2.R4.html"
+                            },
+                            {
+                                "title": "Release: 1.0.2.2.R3 (2020-07-22)",
+                                "href": "engine-releases-1.0.2.2.R3.html"
+                            },
+                            {
+                                "title": "Release: 1.0.2.2.R2 (2020-04-02)",
+                                "href": "engine-releases-1.0.2.2.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.0.2.1 (2019-11-22)",
+                        "href": "engine-releases-1.0.2.1.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.0.2.1.R6 (2020-04-22)",
+                                "href": "engine-releases-1.0.2.1.R6.html"
+                            },
+                            {
+                                "title": "Release: 1.0.2.1.R5 (2020-04-22)",
+                                "href": "engine-releases-1.0.2.1.R5.html"
+                            },
+                            {
+                                "title": "Release: 1.0.2.1.R4 (2019-12-20)",
+                                "href": "engine-releases-1.0.2.1.R4.html"
+                            },
+                            {
+                                "title": "Release: 1.0.2.1.R3 (2019-12-12)",
+                                "href": "engine-releases-1.0.2.1.R3.html"
+                            },
+                            {
+                                "title": "Release: 1.0.2.1.R2 (2019-11-25)",
+                                "href": "engine-releases-1.0.2.1.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.0.2.0 (2019-11-08)",
+                        "href": "engine-releases-1.0.2.0.html",
+                        "contents": [
+                            {
+                                "title": "Release: 1.0.2.0.R3 (2020-05-05)",
+                                "href": "engine-releases-1.0.2.0.R3.html"
+                            },
+                            {
+                                "title": "Release: 1.0.2.0.R2 (2019-11-21)",
+                                "href": "engine-releases-1.0.2.0.R2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Release: 1.0.1.2 (2020-06-10)",
+                        "href": "engine-releases-1.0.1.2.html"
+                    },
+                    {
+                        "title": "Release: 1.0.1.1 (2020-06-26)",
+                        "href": "engine-releases-1.0.1.1.html"
+                    },
+                    {
+                        "title": "Release: 1.0.1.0 (2019-07-02)",
+                        "href": "engine-releases-1.0.1.0.html",
+                        "contents": [
+                            {
+                                "title": "Release 1.0.1.0.200502.0 (2019-10-31)",
+                                "href": "engine-releases-1.0.1.0.200502.0.html"
+                            },
+                            {
+                                "title": "Release 1.0.1.0.200463.0 (2019-10-15)",
+                                "href": "engine-releases-1.0.1.0.200463.0.html"
+                            },
+                            {
+                                "title": "Release 1.0.1.0.200457.0 (2019-09-19)",
+                                "href": "engine-releases-1.0.1.0.200457.0.html"
+                            },
+                            {
+                                "title": "Release 1.0.1.0.200369.0 (2019-08-13)",
+                                "href": "engine-releases-1.0.1.0.200369.0.html"
+                            },
+                            {
+                                "title": "Release 1.0.1.0.200366.0 (2019-07-26)",
+                                "href": "engine-releases-1.0.1.0.200366.0.html"
+                            },
+                            {
+                                "title": "Release 1.0.1.0.200348.0 (2019-07-02)",
+                                "href": "engine-releases-1.0.1.0.200348.0.html"
+                            },
+                            {
+                                "title": "Earlier Releases",
+                                "href": "engine-releases-earlier.html",
+                                "contents": [
+                                    {
+                                        "title": "Release 1.0.1.0.200310.0 (2019-06-12)",
+                                        "href": "engine-releases-1.0.1.0.200310.0.html"
+                                    },
+                                    {
+                                        "title": "Release 1.0.1.0.200296.0 (2019-05-01)",
+                                        "href": "engine-releases-1.0.1.0.200296.0.html"
+                                    },
+                                    {
+                                        "title": "Release 1.0.1.0.200267.0 (2019-01-21)",
+                                        "href": "engine-releases-1.0.1.0.200267.0.html"
+                                    },
+                                    {
+                                        "title": "Release 1.0.1.0.200264.0 (2018-11-19)",
+                                        "href": "engine-releases-1.0.1.0.200264.0.html"
+                                    },
+                                    {
+                                        "title": "Release 1.0.1.0.200258.0 (2018-11-08)",
+                                        "href": "engine-releases-1.0.1.0.200258.0.html"
+                                    },
+                                    {
+                                        "title": "Release 1.0.1.0.200255.0 (2018-10-29)",
+                                        "href": "engine-releases-1.0.1.0.200255.0.html"
+                                    },
+                                    {
+                                        "title": "Release 1.0.1.0.200237.0 (2018-09-06)",
+                                        "href": "engine-releases-1.0.1.0.200237.0.html"
+                                    },
+                                    {
+                                        "title": "Release 1.0.1.0.200236.0 (2018-07-24)",
+                                        "href": "engine-releases-1.0.1.0.200236.0.html"
+                                    },
+                                    {
+                                        "title": "Release 1.0.1.0.200233.0 (2018-06-22)",
+                                        "href": "engine-releases-1.0.1.0.200233.0.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Using Neptune APIs",
+                "href": "using-neptune-apis.html"
+            },
+            {
+                "title": "Management API reference",
+                "href": "api.html",
+                "contents": [
+                    {
+                        "title": "Clusters",
+                        "href": "api-clusters.html"
+                    },
+                    {
+                        "title": "Global databases",
+                        "href": "api-global-dbs.html"
+                    },
+                    {
+                        "title": "Instances",
+                        "href": "api-instances.html"
+                    },
+                    {
+                        "title": "Parameters",
+                        "href": "api-parameters.html"
+                    },
+                    {
+                        "title": "Subnets",
+                        "href": "api-subnets.html"
+                    },
+                    {
+                        "title": "Snapshots",
+                        "href": "api-snapshots.html"
+                    },
+                    {
+                        "title": "Events",
+                        "href": "api-events.html"
+                    },
+                    {
+                        "title": "Other",
+                        "href": "api-other-apis.html"
+                    },
+                    {
+                        "title": "Datatypes",
+                        "href": "api-datatypes.html"
+                    },
+                    {
+                        "title": "API Faults",
+                        "href": "api-faults.html"
+                    }
+                ]
+            },
+            {
+                "title": "Data API reference",
+                "href": "data-api.html",
+                "contents": [
+                    {
+                        "title": "General",
+                        "href": "data-api-dp-environment-APIs.html"
+                    },
+                    {
+                        "title": "Querying",
+                        "href": "data-api-dp-queries.html"
+                    },
+                    {
+                        "title": "Bulk loader",
+                        "href": "data-api-dp-loader.html"
+                    },
+                    {
+                        "title": "Streams",
+                        "href": "data-api-dp-streams.html"
+                    },
+                    {
+                        "title": "Statistics",
+                        "href": "data-api-dp-statistics.html"
+                    },
+                    {
+                        "title": "ML data processing",
+                        "href": "data-api-dp-ml-data-processing.html"
+                    },
+                    {
+                        "title": "ML model training",
+                        "href": "data-api-dp-ml-training.html"
+                    },
+                    {
+                        "title": "ML model transform",
+                        "href": "data-api-dp-ml-transform.html"
+                    },
+                    {
+                        "title": "ML Inference endpoint",
+                        "href": "data-api-dp-inference.html"
+                    },
+                    {
+                        "title": "Exceptions",
+                        "href": "data-api-dp-errors.html"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,1 +1,2678 @@
-{ "contents" : [ { "title" : "What is Amazon S3?", "href" : "Welcome.html" }, { "title" : "Getting started", "href" : "GetStartedWithS3.html", "contents" : [ { "title" : "Setting up", "href" : "setting-up-s3.html" }, { "title" : "Step 1: Create a bucket", "href" : "creating-bucket.html" }, { "title" : "Step 2: Upload an object", "href" : "uploading-an-object-bucket.html" }, { "title" : "Step 3: Download an object", "href" : "accessing-an-object.html" }, { "title" : "Step 4: Copy an object", "href" : "copying-an-object.html" }, { "title" : "Step 5: Delete the objects and bucket", "href" : "deleting-object-bucket.html" }, { "title" : "Next steps", "href" : "getting-started-next-steps.html" }, { "title" : "Access control", "href" : "access-control-best-practices.html" } ] }, { "title" : "Tutorials", "href" : "tutorials.html", "contents" : [ { "title" : "Transforming data with S3 Object Lambda", "href" : "tutorial-s3-object-lambda-uppercase.html" }, { "title" : "Detecting and redacting PII data", "href" : "tutorial-s3-object-lambda-redact-pii.html" }, { "title" : "Hosting video streaming", "href" : "tutorial-s3-cloudfront-route53-video-streaming.html" }, { "title" : "Batch-transcoding videos", "href" : "tutorial-s3-batchops-lambda-mediaconvert-video.html" }, { "title" : "Configuring a static website", "href" : "HostingWebsiteOnS3Setup.html" }, { "title" : "Configuring a static website using a custom domain", "href" : "website-hosting-custom-domain-walkthrough.html", "contents" : [ { "title" : "Speeding up your website with Amazon CloudFront", "href" : "website-hosting-cloudfront-walkthrough.html" }, { "title" : "Cleaning up example resources", "href" : "getting-started-cleanup.html" } ] } ] }, { "title" : "Working with buckets", "href" : "creating-buckets-s3.html", "contents" : [ { "title" : "Buckets overview", "href" : "UsingBucket.html" }, { "title" : "Naming rules", "href" : "bucketnamingrules.html" }, { "title" : "Creating a bucket", "href" : "create-bucket-overview.html" }, { "title" : "Viewing bucket properties", "href" : "view-bucket-properties.html" }, { "title" : "Methods for accessing a bucket", "href" : "access-bucket-intro.html" }, { "title" : "Emptying a bucket", "href" : "empty-bucket.html" }, { "title" : "Deleting a bucket", "href" : "delete-bucket.html" }, { "title" : "Setting default bucket encryption", "href" : "bucket-encryption.html", "contents" : [ { "title" : "Configuring default encryption", "href" : "default-bucket-encryption.html" }, { "title" : "Monitoring default encryption", "href" : "bucket-encryption-tracking.html" } ] }, { "title" : "Mountpoint for Amazon S3", "href" : "mountpoint.html", "contents" : [ { "title" : "Installation", "href" : "mountpoint-installation.html" }, { "title" : "Configuration and usage", "href" : "mountpoint-usage.html" }, { "title" : "Troubleshooting", "href" : "mountpoint-troubleshooting.html" } ] }, { "title" : "Configuring Transfer Acceleration", "href" : "transfer-acceleration.html", "contents" : [ { "title" : "Getting Started", "href" : "transfer-acceleration-getting-started.html" }, { "title" : "Enabling Transfer Acceleration", "href" : "transfer-acceleration-examples.html" }, { "title" : "Speed Comparison tool", "href" : "transfer-acceleration-speed-comparison.html" } ] }, { "title" : "Using Requester Pays", "href" : "RequesterPaysBuckets.html", "contents" : [ { "title" : "Configuring Requester Pays", "href" : "RequesterPaysExamples.html" }, { "title" : "Retrieving the requestPayment configuration", "href" : "BucketPayerValues.html" }, { "title" : "Downloading objects in Requester Pays buckets", "href" : "ObjectsinRequesterPaysBuckets.html" } ] }, { "title" : "Restrictions and limitations", "href" : "BucketRestrictions.html" } ] }, { "title" : "Working with objects", "href" : "uploading-downloading-objects.html", "contents" : [ { "title" : "Objects", "href" : "UsingObjects.html" }, { "title" : "Creating object keys", "href" : "object-keys.html" }, { "title" : "Working with metadata", "href" : "UsingMetadata.html", "contents" : [ { "title" : "Editing object metadata", "href" : "add-object-metadata.html" } ] }, { "title" : "Uploading objects", "href" : "upload-objects.html" }, { "title" : "Using multipart upload", "href" : "mpuoverview.html", "contents" : [ { "title" : "Configuring a lifecycle configuration", "href" : "mpu-abort-incomplete-mpu-lifecycle-config.html" }, { "title" : "Uploading an object using multipart upload", "href" : "mpu-upload-object.html" }, { "title" : "Uploading a directory", "href" : "HLuploadDirDotNet.html" }, { "title" : "Listing multipart uploads", "href" : "list-mpu.html" }, { "title" : "Tracking a multipart upload", "href" : "track-mpu.html" }, { "title" : "Aborting a multipart upload", "href" : "abort-mpu.html" }, { "title" : "Copying an object", "href" : "CopyingObjectsMPUapi.html" }, { "title" : "Multipart upload limits", "href" : "qfacts.html" } ] }, { "title" : "Copying objects", "href" : "copy-object.html" }, { "title" : "Downloading objects", "href" : "download-objects.html" }, { "title" : "Checking object integrity", "href" : "checking-object-integrity.html" }, { "title" : "Deleting objects", "href" : "DeletingObjects.html", "contents" : [ { "title" : "Deleting a single object", "href" : "delete-objects.html" }, { "title" : "Deleting multiple objects", "href" : "delete-multiple-objects.html" } ] }, { "title" : "Organizing and listing objects", "href" : "organizing-objects.html", "contents" : [ { "title" : "Using prefixes", "href" : "using-prefixes.html" }, { "title" : "Listing objects", "href" : "ListingKeysUsingAPIs.html" }, { "title" : "Using folders", "href" : "using-folders.html" }, { "title" : "Viewing an object overview", "href" : "view-object-overview.html" }, { "title" : "Viewing object properties", "href" : "view-object-properties.html" } ] }, { "title" : "Working with presigned URLs", "href" : "using-presigned-url.html", "contents" : [ { "title" : "Sharing objects with presigned URLs", "href" : "ShareObjectPreSignedURL.html" }, { "title" : "Uploading objects with presigned URLs", "href" : "PresignedUrlUploadObject.html" } ] }, { "title" : "Transforming objects", "href" : "transforming-objects.html", "contents" : [ { "title" : "Creating Object Lambda Access Points", "href" : "olap-create.html", "contents" : [ { "title" : "Automate S3 Object Lambda setup with AWS CloudFormation", "href" : "olap-using-cfn-template.html" } ] }, { "title" : "Using Amazon S3 Object Lambda Access Points", "href" : "olap-use.html" }, { "title" : "Security considerations", "href" : "olap-security.html", "contents" : [ { "title" : "Configuring IAM policies", "href" : "olap-policies.html" } ] }, { "title" : "Writing Lambda functions", "href" : "olap-writing-lambda.html", "contents" : [ { "title" : "Event context format and usage", "href" : "olap-event-context.html" }, { "title" : "Working with Range and partNumber headers", "href" : "range-get-olap.html" } ] }, { "title" : "Using AWS built functions", "href" : "olap-examples.html" }, { "title" : "Best practices and guidelines for S3 Object Lambda", "href" : "olap-best-practices.html" }, { "title" : "S3 Object Lambda tutorials", "href" : "olap-tutorials.html" }, { "title" : "Debugging S3 Object Lambda", "href" : "olap-debugging-lambda.html" } ] } ] }, { "title" : "Working with access points", "href" : "access-points.html", "contents" : [ { "title" : "Configuring IAM policies", "href" : "access-points-policies.html" }, { "title" : "Creating access points", "href" : "creating-access-points.html", "contents" : [ { "title" : "Creating an access point", "href" : "create-access-points.html" }, { "title" : "Creating access points restricted to a VPC", "href" : "access-points-vpc.html" }, { "title" : "Managing public access", "href" : "access-points-bpa-settings.html" } ] }, { "title" : "Using access points", "href" : "using-access-points.html", "contents" : [ { "title" : "Monitoring and logging", "href" : "access-points-monitoring-logging.html" }, { "title" : "Managing access points", "href" : "access-points-manage.html" }, { "title" : "Using a bucket-style alias for your access point", "href" : "access-points-alias.html" }, { "title" : "Using access points with Amazon S3 operations", "href" : "access-points-usage-examples.html" } ] }, { "title" : "Restrictions and limitations", "href" : "access-points-restrictions-limitations.html" } ] }, { "title" : "Working with Multi-Region Access Points", "href" : "MultiRegionAccessPoints.html", "contents" : [ { "title" : "Creating Multi-Region Access Points", "href" : "CreatingMultiRegionAccessPoints.html", "contents" : [ { "title" : "Rules for naming Amazon S3 Multi-Region Access Points", "href" : "multi-region-access-point-naming.html" }, { "title" : "Rules for choosing buckets for Amazon S3 Multi-Region Access Points", "href" : "multi-region-access-point-buckets.html" }, { "title" : "Create an Amazon S3 Multi-Region Access Point", "href" : "multi-region-access-point-create-examples.html" }, { "title" : "Blocking public access with Amazon S3 Multi-Region Access Points", "href" : "multi-region-access-point-block-public-access.html" }, { "title" : "Viewing Amazon S3 Multi-Region Access Points configuration details", "href" : "multi-region-access-point-view-examples.html" }, { "title" : "Deleting a Multi-Region Access Point", "href" : "multi-region-access-point-delete-examples.html" } ] }, { "title" : "Configuring Multi-Region Access Points", "href" : "MultiRegionAccessConfiguration.html", "contents" : [ { "title" : "Configuring AWS PrivateLink", "href" : "MultiRegionAccessPointsPrivateLink.html" }, { "title" : "Removing access to a Multi-Region Access Point from a VPC endpoint", "href" : "RemovingMultiRegionAccessPointAccess.html" } ] }, { "title" : "Using Multi-Region Access Points", "href" : "MultiRegionAccessPointRequests.html", "contents" : [ { "title" : "Permissions", "href" : "MultiRegionAccessPointPermissions.html" }, { "title" : "Restrictions and limitations", "href" : "MultiRegionAccessPointRestrictions.html" }, { "title" : "Request routing", "href" : "MultiRegionAccessPointRequestRouting.html" }, { "title" : "Failover configuration", "href" : "MrapFailover.html", "contents" : [ { "title" : "Amazon S3 Multi-Region Access Points routing states", "href" : "FailoverConfiguration.html" }, { "title" : "Using Amazon S3 Multi-Region Access Point failover controls", "href" : "UsingFailover.html" }, { "title" : "Amazon S3 Multi-Region Access Point failover controls errors", "href" : "mrap-failover-errors.html" } ] }, { "title" : "Bucket replication", "href" : "MultiRegionAccessPointBucketReplication.html", "contents" : [ { "title" : "Create one-way replication rules for your Multi-Region Access Point", "href" : "mrap-create-one-way-replication-rules.html" }, { "title" : "Create two-way replication rules for your Multi-Region Access Point", "href" : "mrap-create-two-way-replication-rules.html" }, { "title" : "View the replication rules for your Multi-Region Access Point", "href" : "mrap-view-replication-rules.html" } ] }, { "title" : "Supported API operations", "href" : "MrapOperations.html" }, { "title" : "Monitoring and logging", "href" : "MultiRegionAccessPointMonitoring.html" } ] } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "DataDurability.html" }, { "title" : "Data encryption", "href" : "UsingEncryption.html", "contents" : [ { "title" : "Server-side encryption", "href" : "serv-side-encryption.html", "contents" : [ { "title" : "Default encryption FAQ", "href" : "default-encryption-faq.html" }, { "title" : "Amazon S3 managed encryption keys (SSE-S3)", "href" : "UsingServerSideEncryption.html", "contents" : [ { "title" : "Specifying SSE-S3", "href" : "specifying-s3-encryption.html" } ] }, { "title" : "KMS keys stored in AWS KMS (SSE-KMS)", "href" : "UsingKMSEncryption.html", "contents" : [ { "title" : "Specifying SSE-KMS", "href" : "specifying-kms-encryption.html" }, { "title" : "Using Amazon S3 Bucket Keys", "href" : "bucket-key.html", "contents" : [ { "title" : "Configuring an S3 Bucket Key for your bucket", "href" : "configuring-bucket-key.html" }, { "title" : "Configuring an S3 Bucket Key for an object", "href" : "configuring-bucket-key-object.html" }, { "title" : "Viewing the settings for an S3 Bucket Key", "href" : "viewing-bucket-key-settings.html" } ] } ] }, { "title" : "Dual-layer server-side encryption (DSSE-KMS)", "href" : "UsingDSSEncryption.html", "contents" : [ { "title" : "Specifying DSSE-KMS", "href" : "specifying-dsse-encryption.html" } ] }, { "title" : "Customer-provided encryption keys (SSE-C)", "href" : "ServerSideEncryptionCustomerKeys.html" } ] }, { "title" : "Using client-side encryption", "href" : "UsingClientSideEncryption.html" } ] }, { "title" : "Internetwork privacy", "href" : "inter-network-traffic-privacy.html" }, { "title" : "AWS PrivateLink for Amazon S3", "href" : "privatelink-interface-endpoints.html" }, { "title" : "Identity and access management", "href" : "s3-access-control.html", "contents" : [ { "title" : "Overview", "href" : "access-control-overview.html" }, { "title" : "Access policy guidelines", "href" : "access-policy-alternatives-guidelines.html" }, { "title" : "Request authorization", "href" : "how-s3-evaluates-access-control.html", "contents" : [ { "title" : "For a bucket operation", "href" : "access-control-auth-workflow-bucket-operation.html" }, { "title" : "For an object operation", "href" : "access-control-auth-workflow-object-operation.html" } ] }, { "title" : "Bucket policies and user policies", "href" : "using-iam-policies.html", "contents" : [ { "title" : "Policies and Permissions", "href" : "access-policy-language-overview.html", "contents" : [ { "title" : "Resources", "href" : "s3-arn-format.html" }, { "title" : "Principals", "href" : "s3-bucket-user-policy-specifying-principal-intro.html" }, { "title" : "Actions", "href" : "using-with-s3-actions.html" }, { "title" : "Conditions", "href" : "amazon-s3-condition-keys.html", "contents" : [ { "title" : "Examples", "href" : "amazon-s3-policy-keys.html" } ] }, { "title" : "Actions, resources, and condition keys", "href" : "list_amazons3.html" } ] }, { "title" : "Bucket policies", "href" : "bucket-policies.html", "contents" : [ { "title" : "Adding a bucket policy", "href" : "add-bucket-policy.html" }, { "title" : "Controlling VPC access", "href" : "example-bucket-policies-vpc-endpoint.html" }, { "title" : "Bucket policy examples", "href" : "example-bucket-policies.html" } ] }, { "title" : "IAM user and role policies", "href" : "user-policies.html", "contents" : [ { "title" : "Controlling bucket access", "href" : "walkthrough1.html" }, { "title" : "User and role policy examples", "href" : "example-policies-s3.html" } ] }, { "title" : "Example walkthroughs", "href" : "example-walkthroughs-managing-access.html", "contents" : [ { "title" : "Setting up tools", "href" : "policy-eval-walkthrough-download-awscli.html" }, { "title" : "Granting permissions", "href" : "example-walkthroughs-managing-access-example1.html" }, { "title" : "Granting cross-account permissions", "href" : "example-walkthroughs-managing-access-example2.html" }, { "title" : "Granting object permissions", "href" : "example-walkthroughs-managing-access-example3.html" }, { "title" : "Granting cross-account object permissions", "href" : "example-walkthroughs-managing-access-example4.html" } ] }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html" } ] }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Managing access with ACLs", "href" : "acls.html", "contents" : [ { "title" : "ACL overview", "href" : "acl-overview.html" }, { "title" : "Finding the canonical ID", "href" : "finding-canonical-user-id.html" }, { "title" : "Configuring ACLs", "href" : "managing-acls.html" } ] }, { "title" : "Using CORS", "href" : "cors.html", "contents" : [ { "title" : "CORS configuration", "href" : "ManageCorsUsing.html" }, { "title" : "Configuring CORS", "href" : "enabling-cors-examples.html" } ] }, { "title" : "Blocking public access", "href" : "access-control-block-public-access.html", "contents" : [ { "title" : "Configuring account settings", "href" : "configuring-block-public-access-account.html" }, { "title" : "Configuring bucket and access point settings", "href" : "configuring-block-public-access-bucket.html" } ] }, { "title" : "Reviewing bucket access", "href" : "access-analyzer.html" }, { "title" : "Verifying bucket ownership", "href" : "bucket-owner-condition.html" } ] }, { "title" : "Controlling object ownership", "href" : "about-object-ownership.html", "contents" : [ { "title" : "Prerequisites for disabling ACLs", "href" : "object-ownership-migrating-acls-prerequisites.html" }, { "title" : "Creating a bucket", "href" : "object-ownership-new-bucket.html" }, { "title" : "Setting Object Ownership", "href" : "object-ownership-existing-bucket.html" }, { "title" : "Viewing Object Ownership settings", "href" : "object-ownership-retrieving.html" }, { "title" : "Disabling ACLs for all new buckets", "href" : "ensure-object-ownership.html" }, { "title" : "Troubleshooting", "href" : "object-ownership-error-responses.html" } ] }, { "title" : "Logging and monitoring", "href" : "s3-incident-response.html" }, { "title" : "Compliance Validation", "href" : "s3-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "network-isolation.html" }, { "title" : "Configuration and vulnerability analysis", "href" : "vulnerability-analysis-and-management.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" }, { "title" : "Monitoring data security", "href" : "monitoring-data-security.html" } ] }, { "title" : "Managing storage", "href" : "managing-storage.html", "contents" : [ { "title" : "Using S3 Versioning", "href" : "Versioning.html", "contents" : [ { "title" : "S3 Versioning", "href" : "versioning-workflows.html" }, { "title" : "Enabling versioning on buckets", "href" : "manage-versioning-examples.html" }, { "title" : "Configuring MFA delete", "href" : "MultiFactorAuthenticationDelete.html" }, { "title" : "Working with versioning-enabled objects", "href" : "manage-objects-versioned-bucket.html", "contents" : [ { "title" : "Adding objects", "href" : "AddingObjectstoVersioningEnabledBuckets.html" }, { "title" : "Listing objects", "href" : "list-obj-version-enabled-bucket.html" }, { "title" : "Retrieving object versions", "href" : "RetrievingObjectVersions.html", "contents" : [ { "title" : "Retrieving version metadata", "href" : "RetMetaOfObjVersion.html" }, { "title" : "Restoring previous versions", "href" : "RestoringPreviousVersions.html" } ] }, { "title" : "Deleting object versions", "href" : "DeletingObjectVersions.html", "contents" : [ { "title" : "Working with delete markers", "href" : "DeleteMarker.html" }, { "title" : "Managing delete markers", "href" : "ManagingDelMarkers.html" }, { "title" : "Deleting with MFA delete", "href" : "UsingMFADelete.html" } ] }, { "title" : "Configuring permissions", "href" : "VersionedObjectPermissionsandACLs.html" } ] }, { "title" : "Working with versioning-suspended objects", "href" : "VersionSuspendedBehavior.html", "contents" : [ { "title" : "Adding objects", "href" : "AddingObjectstoVersionSuspendedBuckets.html" }, { "title" : "Retrieving objects", "href" : "RetrievingObjectsfromVersioningSuspendedBuckets.html" }, { "title" : "Deleting objects", "href" : "DeletingObjectsfromVersioningSuspendedBuckets.html" } ] } ] }, { "title" : "Using AWS Backup for Amazon S3", "href" : "backup-for-s3.html" }, { "title" : "Working with archived objects", "href" : "archived-objects.html", "contents" : [ { "title" : "Archive retrieval options", "href" : "restoring-objects-retrieval-options.html" }, { "title" : "Restoring an archived object", "href" : "restoring-objects.html" } ] }, { "title" : "Using Object Lock", "href" : "object-lock.html", "contents" : [ { "title" : "S3 Object Lock", "href" : "object-lock-overview.html" }, { "title" : "Configuring Object Lock on the console", "href" : "object-lock-console.html" }, { "title" : "Managing Object Lock", "href" : "object-lock-managing.html" } ] }, { "title" : "Managing storage classes", "href" : "storage-class-intro.html" }, { "title" : "Amazon S3 Intelligent-Tiering", "href" : "intelligent-tiering.html", "contents" : [ { "title" : "How S3 Intelligent-Tiering works", "href" : "intelligent-tiering-overview.html" }, { "title" : "Using S3 Intelligent-Tiering", "href" : "using-intelligent-tiering.html" }, { "title" : "Managing S3 Intelligent-Tiering", "href" : "intelligent-tiering-managing.html" } ] }, { "title" : "Managing lifecycle", "href" : "object-lifecycle-mgmt.html", "contents" : [ { "title" : "Transitioning objects", "href" : "lifecycle-transition-general-considerations.html" }, { "title" : "Expiring objects", "href" : "lifecycle-expire-general-considerations.html" }, { "title" : "Setting lifecycle configuration", "href" : "how-to-set-lifecycle-configuration-intro.html" }, { "title" : "Using other bucket configurations", "href" : "lifecycle-and-other-bucket-config.html" }, { "title" : "Configuring Lifecycle event notifications", "href" : "lifecycle-configure-notification.html" }, { "title" : "Lifecycle configuration elements", "href" : "intro-lifecycle-rules.html" }, { "title" : "Examples of S3 Lifecycle configuration", "href" : "lifecycle-configuration-examples.html" } ] }, { "title" : "Managing inventory", "href" : "storage-inventory.html", "contents" : [ { "title" : "Configuring Amazon S3 Inventory", "href" : "configure-inventory.html" }, { "title" : "Setting up notifications for inventory completion", "href" : "storage-inventory-notification.html" }, { "title" : "Locating your inventory", "href" : "storage-inventory-location.html" }, { "title" : "Querying inventory with Athena", "href" : "storage-inventory-athena-query.html" }, { "title" : "Converting empty version ID strings to null strings", "href" : "inventory-configure-bops.html" }, { "title" : "Working with the Object ACL field", "href" : "objectacl.html" } ] }, { "title" : "Replicating objects", "href" : "replication.html", "contents" : [ { "title" : "What's replicated?", "href" : "replication-what-is-isnot-replicated.html" }, { "title" : "Setting up replication", "href" : "replication-how-setup.html", "contents" : [ { "title" : "Replication configuration", "href" : "replication-add-config.html" }, { "title" : "Setting up permissions", "href" : "setting-repl-config-perm-overview.html" }, { "title" : "Replication examples", "href" : "replication-example-walkthroughs.html", "contents" : [ { "title" : "Configuring for buckets in the same account", "href" : "replication-walkthrough1.html" }, { "title" : "Configuring for buckets in different accounts", "href" : "replication-walkthrough-2.html" }, { "title" : "Changing replica owner", "href" : "replication-walkthrough-3.html" }, { "title" : "Replicating encrypted objects", "href" : "replication-walkthrough-4.html" }, { "title" : "Using S3 Replication Time Control", "href" : "replication-walkthrough-5.html" }, { "title" : "Managing replication rules", "href" : "disable-replication.html" } ] } ] }, { "title" : "Replicate existing objects", "href" : "s3-batch-replication-batch.html", "contents" : [ { "title" : "Configuring IAM policies", "href" : "s3-batch-replication-policies.html" }, { "title" : "Batch Replication for a first replication rule or new destination", "href" : "s3-batch-replication-new-config.html" }, { "title" : "Batch Replication for existing replication rules", "href" : "s3-batch-replication-existing-config.html" } ] }, { "title" : "Additional configurations", "href" : "replication-additional-configs.html", "contents" : [ { "title" : "Monitoring progress", "href" : "replication-metrics.html", "contents" : [ { "title" : "Viewing replication metrics by using the Amazon S3 console", "href" : "viewing-replication-metrics.html" }, { "title" : "Amazon S3 replication failure reasons", "href" : "replication-failure-codes.html" } ] }, { "title" : "Using S3 Replication Time Control", "href" : "replication-time-control.html", "contents" : [ { "title" : "Best practices and guidelines for S3 RTC", "href" : "rtc-best-practices.html" } ] }, { "title" : "Replicating delete markers", "href" : "delete-marker-replication.html" }, { "title" : "Replicating metadata changes", "href" : "replication-for-metadata-changes.html" }, { "title" : "Changing the replica owner", "href" : "replication-change-owner.html" }, { "title" : "Replicating encrypted objects (SSE-C, SSE-S3, SSE-KMS, DSSE-KMS)", "href" : "replication-config-for-kms-objects.html" } ] }, { "title" : "Getting replication status", "href" : "replication-status.html" }, { "title" : "Additional considerations", "href" : "replication-and-other-bucket-configs.html" } ] }, { "title" : "Using object tags", "href" : "object-tagging.html", "contents" : [ { "title" : "Access control", "href" : "tagging-and-policies.html" }, { "title" : "Managing object tags", "href" : "tagging-managing.html" } ] }, { "title" : "Using cost allocation tags", "href" : "CostAllocTagging.html" }, { "title" : "Billing and usage reporting", "href" : "BucketBilling.html", "contents" : [ { "title" : "Billing reports", "href" : "aws-billing-reports.html" }, { "title" : "Usage report", "href" : "aws-usage-report.html" }, { "title" : "Understanding billing and usage reports", "href" : "aws-usage-report-understand.html" } ] }, { "title" : "Using Amazon S3 Select", "href" : "selecting-content-from-objects.html", "contents" : [ { "title" : "S3 Select examples", "href" : "using-select.html" }, { "title" : "SQL Reference", "href" : "s3-select-sql-reference.html", "contents" : [ { "title" : "SELECT command", "href" : "s3-select-sql-reference-select.html" }, { "title" : "Data types", "href" : "s3-select-sql-reference-data-types.html" }, { "title" : "Operators", "href" : "s3-select-sql-reference-operators.html" }, { "title" : "Reserved keywords", "href" : "s3-select-sql-reference-keyword-list.html" }, { "title" : "SQL functions", "href" : "s3-select-sql-reference-sql-functions.html", "contents" : [ { "title" : "Aggregate functions", "href" : "s3-select-sql-reference-aggregate.html" }, { "title" : "Conditional functions", "href" : "s3-select-sql-reference-conditional.html" }, { "title" : "Conversion functions", "href" : "s3-select-sql-reference-conversion.html" }, { "title" : "Date functions", "href" : "s3-select-sql-reference-date.html" }, { "title" : "String functions", "href" : "s3-select-sql-reference-string.html" } ] } ] } ] }, { "title" : "Using Batch Operations", "href" : "batch-ops.html", "contents" : [ { "title" : "Granting permissions", "href" : "batch-ops-iam-role-policies.html" }, { "title" : "Creating a job", "href" : "batch-ops-create-job.html" }, { "title" : "Supported operations", "href" : "batch-ops-operations.html", "contents" : [ { "title" : "Copy objects", "href" : "batch-ops-copy-object.html", "contents" : [ { "title" : "Examples that use Batch Operations to copy objects", "href" : "batch-ops-examples-copy.html", "contents" : [ { "title" : "Using an inventory report to copy objects across AWS accounts", "href" : "specify-batchjob-manifest-xaccount-inventory.html" }, { "title" : "Using a CSV manifest to copy objects across AWS accounts", "href" : "specify-batchjob-manifest-xaccount-csv.html" }, { "title" : "Using Batch Operations to encrypt objects with S3 Bucket Keys", "href" : "batch-ops-copy-example-bucket-key.html" } ] } ] }, { "title" : "Invoke AWS Lambda function", "href" : "batch-ops-invoke-lambda.html" }, { "title" : "Replace all object tags", "href" : "batch-ops-put-object-tagging.html" }, { "title" : "Delete all object tags", "href" : "batch-ops-delete-object-tagging.html" }, { "title" : "Replace access control list", "href" : "batch-ops-put-object-acl.html" }, { "title" : "Restore objects", "href" : "batch-ops-initiate-restore-object.html" }, { "title" : "Object Lock retention", "href" : "batch-ops-retention-date.html" }, { "title" : "Object Lock legal hold", "href" : "batch-ops-legal-hold.html" } ] }, { "title" : "Managing jobs", "href" : "batch-ops-managing-jobs.html", "contents" : [ { "title" : "Listing jobs", "href" : "batch-ops-list-jobs.html" }, { "title" : "Viewing job details", "href" : "batch-ops-job-details.html" }, { "title" : "Assigning job priority", "href" : "batch-ops-job-priority.html" } ] }, { "title" : "Tracking job status and completion reports", "href" : "batch-ops-job-status.html", "contents" : [ { "title" : "Examples of tracking using Amazon EventBridge", "href" : "batch-ops-examples-event-bridge-cloud-trail.html" }, { "title" : "Examples of completion reports", "href" : "batch-ops-examples-reports.html" } ] }, { "title" : "Using tags", "href" : "batch-ops-job-tags.html", "contents" : [ { "title" : "Creating a job", "href" : "batch-ops-tags-create.html" }, { "title" : "Deleting tags", "href" : "delete-job-tags.html" }, { "title" : "Putting job tags", "href" : "put-job-tags.html" }, { "title" : "Getting job tags", "href" : "get-job-tags.html" }, { "title" : "Controlling permissions", "href" : "batch-ops-job-tags-examples.html" } ] }, { "title" : "Managing S3 Object Lock", "href" : "managing-object-lock-batchops.html", "contents" : [ { "title" : "Enabling Object Lock", "href" : "batch-ops-object-lock.html" }, { "title" : "Setting retention", "href" : "batch-ops-object-lock-retention.html" }, { "title" : "Setting retention compliance", "href" : "batch-ops-compliance-mode.html" }, { "title" : "Setting retention governance", "href" : "batch-ops-governance-mode.html" }, { "title" : "Turning off legal hold", "href" : "batch-ops-legal-hold-off.html" } ] }, { "title" : "S3 Batch Operations tutorial", "href" : "batch-ops-tutorials.html" } ] } ] }, { "title" : "Monitoring Amazon S3", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Monitoring tools", "href" : "monitoring-automated-manual.html" }, { "title" : "Logging options", "href" : "logging-with-S3.html" }, { "title" : "Logging with CloudTrail", "href" : "cloudtrail-logging.html", "contents" : [ { "title" : "CloudTrail events", "href" : "cloudtrail-logging-s3-info.html" }, { "title" : "Example log files", "href" : "cloudtrail-logging-understanding-s3-entries.html" }, { "title" : "Enabling CloudTrail", "href" : "enable-cloudtrail-logging-for-s3.html" }, { "title" : "Identifying S3 requests", "href" : "cloudtrail-request-identification.html" } ] }, { "title" : "Logging server access", "href" : "ServerLogs.html", "contents" : [ { "title" : "Enabling server access logging", "href" : "enable-server-access-logging.html" }, { "title" : "Log format", "href" : "LogFormat.html" }, { "title" : "Deleting log files", "href" : "deleting-log-files-lifecycle.html" }, { "title" : "Identifying S3 requests", "href" : "using-s3-access-logs-to-identify-requests.html" } ] }, { "title" : "Monitoring metrics with CloudWatch", "href" : "cloudwatch-monitoring.html", "contents" : [ { "title" : "Metrics and dimensions", "href" : "metrics-dimensions.html" }, { "title" : "Accessing CloudWatch metrics", "href" : "cloudwatch-monitoring-accessing.html" }, { "title" : "CloudWatch metrics configurations", "href" : "metrics-configurations.html", "contents" : [ { "title" : "Creating a metrics configuration for all objects", "href" : "configure-request-metrics-bucket.html" }, { "title" : "Filtering by prefix, object tag, or access point", "href" : "metrics-configurations-filter.html" }, { "title" : "Deleting a metrics filter", "href" : "delete-request-metrics-filter.html" } ] } ] }, { "title" : "Amazon S3 Event Notifications", "href" : "EventNotifications.html", "contents" : [ { "title" : "Notification types and destinations", "href" : "notification-how-to-event-types-and-destinations.html" }, { "title" : "Using SQS, SNS, and Lambda", "href" : "how-to-enable-disable-notification-intro.html", "contents" : [ { "title" : "Granting permissions", "href" : "grant-destinations-permissions-to-s3.html" }, { "title" : "Enabling notifications in the S3 console", "href" : "enable-event-notifications.html" }, { "title" : "Walkthrough: Configuring SNS or SQS", "href" : "ways-to-add-notification-config-to-bucket.html" }, { "title" : "Configuring notifications using object key name filtering", "href" : "notification-how-to-filtering.html" }, { "title" : "Event message structure", "href" : "notification-content-structure.html" } ] }, { "title" : "Using EventBridge", "href" : "EventBridge.html", "contents" : [ { "title" : "EventBridge permissions", "href" : "ev-permissions.html" }, { "title" : "Enabling EventBridge", "href" : "enable-event-notifications-eventbridge.html" }, { "title" : "EventBridge event message structure", "href" : "ev-events.html" }, { "title" : "Amazon EventBridge mapping and troubleshooting", "href" : "ev-mapping-troubleshooting.html" } ] } ] } ] }, { "title" : "Using analytics and insights", "href" : "analytics-insights.html", "contents" : [ { "title" : "Storage Class Analysis", "href" : "analytics-storage-class.html", "contents" : [ { "title" : "Configuring storage class analysis", "href" : "configure-analytics-storage-class.html" } ] }, { "title" : "S3 Storage Lens", "href" : "storage_lens.html", "contents" : [ { "title" : "Understanding S3 Storage Lens", "href" : "storage_lens_basics_metrics_recommendations.html" }, { "title" : "Working with Organizations", "href" : "storage_lens_with_organizations.html" }, { "title" : "S3 Storage Lens permissions", "href" : "storage_lens_iam_permissions.html" }, { "title" : "Viewing storage metrics", "href" : "storage_lens_view_metrics.html", "contents" : [ { "title" : "Viewing metrics on the dashboards", "href" : "storage_lens_view_metrics_dashboard.html" }, { "title" : "Viewing metrics in a data export", "href" : "storage_lens_view_metrics_export.html", "contents" : [ { "title" : "Encrypting metrics exports", "href" : "storage_lens_encrypt_permissions.html" }, { "title" : "What is an export manifest?", "href" : "storage_lens_whatis_metrics_export_manifest.html" }, { "title" : "S3 Storage Lens export schema", "href" : "storage_lens_understanding_metrics_export_schema.html" } ] }, { "title" : "Monitor S3 Storage Lens metrics in CloudWatch", "href" : "storage_lens_view_metrics_cloudwatch.html", "contents" : [ { "title" : "S3 Storage Lens metrics and dimensions", "href" : "storage-lens-cloudwatch-metrics-dimensions.html" }, { "title" : "Enabling CloudWatch publishing", "href" : "storage-lens-cloudwatch-enable-publish-option.html" }, { "title" : "Using CloudWatch", "href" : "storage-lens-cloudwatch-monitoring-cloudwatch.html" } ] } ] }, { "title" : "Amazon S3 Storage Lens metrics use cases", "href" : "storage-lens-use-cases.html", "contents" : [ { "title" : "For cost optimization", "href" : "storage-lens-optimize-storage.html" }, { "title" : "For data protection", "href" : "storage-lens-data-protection.html" }, { "title" : "For Object Ownership", "href" : "storage-lens-access-management.html" }, { "title" : "For performance", "href" : "storage-lens-detailed-status-code.html" } ] }, { "title" : "Metrics glossary", "href" : "storage_lens_metrics_glossary.html" }, { "title" : "Working with S3 Storage Lens", "href" : "S3LensExamples.html", "contents" : [ { "title" : "Using the S3 console", "href" : "storage_lens_console.html", "contents" : [ { "title" : "Creating and updating dashboards", "href" : "storage_lens_console_creating_editing.html", "contents" : [ { "title" : "Creating a dashboard", "href" : "storage_lens_console_creating.html" }, { "title" : "Updating a dashboard", "href" : "storage_lens_console_editing.html" } ] }, { "title" : "Disabling or deleting a dashboard", "href" : "storage_lens_console_disabling_deleting.html", "contents" : [ { "title" : "Disabling a dashboard", "href" : "storage_lens_console_disabling.html" }, { "title" : "Deleting a dashboard", "href" : "storage_lens_console_deleting.html" } ] }, { "title" : "Working with AWS Organizations", "href" : "storage_lens_console_organizations.html", "contents" : [ { "title" : "Enabling trusted access in your organization", "href" : "storage_lens_console_organizations_enabling_trusted_access.html" }, { "title" : "Disabling trusted access in your organization", "href" : "storage_lens_console_organizations_disabling_trusted_access.html" }, { "title" : "Registering delegated admins", "href" : "storage_lens_console_organizations_registering_delegated_admins.html" }, { "title" : "Deregistering delegated admins", "href" : "storage_lens_console_organizations_deregistering_delegated_admins.html" } ] } ] }, { "title" : "Using the AWS CLI", "href" : "S3LensCLIExamples.html" }, { "title" : "Using the SDK for Java", "href" : "S3LensJavaExamples.html" } ] } ] }, { "title" : "Tracing requests using X-Ray", "href" : "tracing_requests_using_xray.html" } ] }, { "title" : "Hosting a static website", "href" : "WebsiteHosting.html", "contents" : [ { "title" : "Website endpoints", "href" : "WebsiteEndpoints.html" }, { "title" : "Enabling website hosting", "href" : "EnableWebsiteHosting.html" }, { "title" : "Configuring an index document", "href" : "IndexDocumentSupport.html" }, { "title" : "Configuring a custom error document", "href" : "CustomErrorDocSupport.html" }, { "title" : "Setting permissions for website access", "href" : "WebsiteAccessPermissionsReqd.html" }, { "title" : "Logging web traffic", "href" : "LoggingWebsiteTraffic.html" }, { "title" : "Configuring a redirect", "href" : "how-to-page-redirect.html" } ] }, { "title" : "Developing with Amazon S3", "href" : "developing-s3.html", "contents" : [ { "title" : "Making requests", "href" : "MakingRequests.html", "contents" : [ { "title" : "Making requests over IPv6", "href" : "ipv6-access.html", "contents" : [ { "title" : "Using dual-stack endpoints", "href" : "dual-stack-endpoints.html" } ] }, { "title" : "Making requests using the AWS SDKs", "href" : "MakingAuthenticatedRequests.html", "contents" : [ { "title" : "Using AWS account or IAM user credentials", "href" : "AuthUsingAcctOrUserCredentials.html" }, { "title" : "Using IAM user temporary credentials", "href" : "AuthUsingTempSessionToken.html" }, { "title" : "Using federated user temporary credentials", "href" : "AuthUsingTempFederationToken.html" } ] }, { "title" : "Making requests using the REST API", "href" : "RESTAPI.html", "contents" : [ { "title" : "Virtual hosting of buckets", "href" : "VirtualHosting.html" }, { "title" : "Request redirection and the REST API", "href" : "RESTRedirect.html" } ] } ] }, { "title" : "Using the AWS CLI", "href" : "setup-aws-cli.html" }, { "title" : "Using the AWS SDKs", "href" : "UsingAWSSDK.html", "contents" : [ { "title" : "Using the AWS SDK for Java", "href" : "UsingTheMPJavaAPI.html" }, { "title" : "Using the AWS SDK for .NET", "href" : "UsingTheMPDotNetAPI.html" }, { "title" : "Using the AWS SDK for PHP and Running PHP Examples", "href" : "UsingTheMPphpAPI.html" }, { "title" : "Using the AWS SDK for Ruby - Version 3", "href" : "UsingTheMPRubyAPI.html" }, { "title" : "Using the AWS SDK for Python (Boto)", "href" : "UsingTheBotoAPI.html" }, { "title" : "Using the AWS Mobile SDKs for iOS and Android", "href" : "using-mobile-sdks.html" }, { "title" : "Using the AWS Amplify JavaScript Library", "href" : "using-aws-amplify.html" }, { "title" : "Using the AWS SDK for JavaScript", "href" : "using-aws-javascript.html" } ] }, { "title" : "Using the REST API", "href" : "developing-rest-api.html", "contents" : [ { "title" : "Request routing", "href" : "UsingRouting.html" } ] }, { "title" : "Error handling", "href" : "HandlingErrors.html", "contents" : [ { "title" : "The REST error response", "href" : "UsingRESTError.html" }, { "title" : "The SOAP error response", "href" : "UsingSOAPError.html" }, { "title" : "Amazon S3 error best practices", "href" : "ErrorBestPractices.html" } ] }, { "title" : "Reference", "href" : "Appendices.html", "contents" : [ { "title" : "Appendix a: Using the SOAP API", "href" : "SOAPAPI3.html", "contents" : [ { "title" : "Common SOAP API elements", "href" : "UsingSOAPOperations.html" }, { "title" : "Authenticating SOAP requests", "href" : "SOAPAuthentication.html" }, { "title" : "Setting access policy with SOAP", "href" : "SOAPAccessPolicy.html" } ] }, { "title" : "Appendix b: Authenticating requests (AWS signature version 2)", "href" : "auth-request-sig-v2.html", "contents" : [ { "title" : "Authenticating requests using the REST API", "href" : "S3_Authentication2.html" }, { "title" : "Signing and authenticating REST requests", "href" : "RESTAuthentication.html" }, { "title" : "Browser-based uploads using POST", "href" : "UsingHTTPPOST.html", "contents" : [ { "title" : "HTML forms", "href" : "HTTPPOSTForms.html" }, { "title" : "Upload examples", "href" : "HTTPPOSTExamples.html" }, { "title" : "POST with adobe flash", "href" : "HTTPPOSTFlash.html" } ] } ] } ] } ] }, { "title" : "Optimizing Amazon S3 performance", "href" : "optimizing-performance.html", "contents" : [ { "title" : "Performance Guidelines", "href" : "optimizing-performance-guidelines.html" }, { "title" : "Performance Design Patterns", "href" : "optimizing-performance-design-patterns.html" } ] }, { "title" : "What is S3 on Outposts?", "href" : "S3onOutposts.html", "contents" : [ { "title" : "Setting up your Outpost", "href" : "OrderOutposts.html" }, { "title" : "How S3 on Outposts is different", "href" : "S3OnOutpostsRestrictionsLimitations.html" }, { "title" : "Getting started with S3 on Outposts", "href" : "S3OutpostsGS.html", "contents" : [ { "title" : "Setting up IAM", "href" : "S3OutpostsIAM.html" }, { "title" : "Using the S3 console", "href" : "S3OutpostsGSConsole.html" }, { "title" : "Using the AWS CLI and SDK for Java", "href" : "S3OutpostsGSCLIJava.html" } ] }, { "title" : "Networking for S3 on Outposts", "href" : "S3OutpostsNetworking.html" }, { "title" : "Working with S3 on Outposts buckets", "href" : "S3OutpostsWorkingBuckets.html", "contents" : [ { "title" : "Creating a bucket", "href" : "S3OutpostsCreateBucket.html" }, { "title" : "Adding tags", "href" : "S3OutpostsBucketTags.html" }, { "title" : "Using bucket policies", "href" : "S3OutpostsBucketPolicy.html", "contents" : [ { "title" : "Adding a bucket policy", "href" : "S3OutpostsBucketPolicyEdit.html" }, { "title" : "Viewing a bucket policy", "href" : "S3OutpostsBucketPolicyGet.html" }, { "title" : "Deleting a bucket policy", "href" : "S3OutpostsBucketPolicyDelete.html" } ] }, { "title" : "Listing buckets", "href" : "S3OutpostsListBuckets.html" }, { "title" : "Getting a bucket", "href" : "S3OutpostsGetBucket.html" }, { "title" : "Deleting your bucket", "href" : "S3OutpostsDeleteBucket.html" }, { "title" : "Working with access points", "href" : "S3OutpostsAccessPoints.html", "contents" : [ { "title" : "Creating an access point", "href" : "S3OutpostsCreateAccessPoint.html" }, { "title" : "Using a bucket-style alias for your access point", "href" : "s3-outposts-access-points-alias.html" }, { "title" : "Viewing access point configuration", "href" : "S3OutpostsAccessPointGet.html" }, { "title" : "Listing access points", "href" : "S3OutpostsAccessPointList.html" }, { "title" : "Deleting an access point", "href" : "S3OutpostsAccessPointsDelete.html" }, { "title" : "Adding an access point policy", "href" : "S3OutpostsAccessPointEditPolicy.html" }, { "title" : "Viewing an access point policy", "href" : "S3OutpostsAccessPointGetPolicy.html" } ] }, { "title" : "Working with endpoints", "href" : "S3OutpostsEndpointsWorking.html", "contents" : [ { "title" : "Creating an endpoint", "href" : "S3OutpostsCreateEndpoint.html" }, { "title" : "Listing endpoints", "href" : "S3OutpostsListEndpoints.html" }, { "title" : "Deleting an endpoint", "href" : "S3OutpostsDeleteEndpoints.html" } ] } ] }, { "title" : "Working with S3 on Outposts objects", "href" : "S3OutpostsWorkingObjects.html", "contents" : [ { "title" : "Copying an object", "href" : "S3OutpostsCopyObject.html" }, { "title" : "Getting an object", "href" : "S3OutpostsGetObject.html" }, { "title" : "Listing objects", "href" : "S3OutpostsListObjects.html" }, { "title" : "Deleting objects", "href" : "S3OutpostsDeleteObject.html" }, { "title" : "Using HeadBucket", "href" : "S3OutpostsHeadBucket.html" }, { "title" : "Performing a multipart upload", "href" : "S3OutpostsMPU.html" }, { "title" : "Using presigned URLs", "href" : "S3OutpostsPresignedURL.html", "contents" : [ { "title" : "Sharing objects", "href" : "S3OutpostsShareObjectPresignedURL.html" }, { "title" : "Uploading an object", "href" : "S3OutpostsPresignedUrlUploadObject.html" } ] } ] }, { "title" : "Security", "href" : "s3outposts-security.html", "contents" : [ { "title" : "Data encryption", "href" : "s3-outposts-data-encryption.html" }, { "title" : "AWS PrivateLink for S3 on Outposts", "href" : "s3-outposts-privatelink-interface-endpoints.html" }, { "title" : "Signature Version 4 (SigV4) policy keys", "href" : "s3-outposts-bucket-policy-s3-sigv4-conditions.html" }, { "title" : "AWS managed policies", "href" : "s3-outposts-aws-manpol.html" }, { "title" : "Using service-linked roles", "href" : "S3OutpostsServiceLinkedRoles.html" } ] }, { "title" : "Managing S3 on Outposts storage", "href" : "S3OutpostsManaging.html", "contents" : [ { "title" : "Managing S3 Versioning", "href" : "S3OutpostsManagingVersioning.html" }, { "title" : "Creating and managing a lifecycle configuration", "href" : "S3OutpostsLifecycleManaging.html", "contents" : [ { "title" : "Using the console", "href" : "S3OutpostsLifecycleConsole.html" }, { "title" : "Using the AWS CLI and SDK for Java", "href" : "S3OutpostsLifecycleCLIJava.html" } ] }, { "title" : "Replicating objects for S3 on Outposts", "href" : "S3OutpostsReplication.html", "contents" : [ { "title" : "Setting up replication", "href" : "outposts-replication-how-setup.html", "contents" : [ { "title" : "Prerequisites for creating replication rules", "href" : "outposts-replication-prerequisites-config.html" }, { "title" : "Creating replication rules on Outposts", "href" : "replication-between-outposts.html" } ] }, { "title" : "Managing your replication", "href" : "manage-outposts-replication.html", "contents" : [ { "title" : "Using EventBridge", "href" : "outposts-replication-eventbridge.html" } ] } ] }, { "title" : "Sharing S3 on Outposts", "href" : "outposts-sharing-with-ram.html" }, { "title" : "Other services", "href" : "S3OutpostsOtherServices.html" } ] }, { "title" : "Monitoring S3 on Outposts", "href" : "S3OutpostsMonitoring.html", "contents" : [ { "title" : "CloudWatch metrics", "href" : "S3OutpostsCapacity.html" }, { "title" : "Amazon CloudWatch Events", "href" : "S3OutpostsNotificationsCWE.html" }, { "title" : "CloudTrail logs", "href" : "S3OutpostsCloudtrail.html" } ] }, { "title" : "Developing with S3 on Outposts", "href" : "S3OutpostsDeveloping.html", "contents" : [ { "title" : "S3 on Outposts APIs", "href" : "S3OutpostsAPI.html" }, { "title" : "Configuring S3 control client", "href" : "S3OutpostsCongfigureS3ControlClientJava.html" } ] } ] }, { "title" : "Code examples", "href" : "service_code_examples.html", "contents" : [ { "title" : "Actions", "href" : "service_code_examples_actions.html", "contents" : [ { "title" : "Add CORS rules to a bucket", "href" : "example_s3_PutBucketCors_section.html" }, { "title" : "Add a lifecycle configuration to a bucket", "href" : "example_s3_PutBucketLifecycleConfiguration_section.html" }, { "title" : "Add a policy to a bucket", "href" : "example_s3_PutBucketPolicy_section.html" }, { "title" : "Cancel multipart uploads", "href" : "example_s3_CancelMultipartUpload_section.html" }, { "title" : "Complete a multipart upload", "href" : "example_s3_CompleteMultipartUpload_section.html" }, { "title" : "Copy an object from one bucket to another", "href" : "example_s3_CopyObject_section.html" }, { "title" : "Create a bucket", "href" : "example_s3_CreateBucket_section.html" }, { "title" : "Create a multipart upload", "href" : "example_s3_CreateMultipartUpload_section.html" }, { "title" : "Delete CORS rules from a bucket", "href" : "example_s3_DeleteBucketCors_section.html" }, { "title" : "Delete a policy from a bucket", "href" : "example_s3_DeleteBucketPolicy_section.html" }, { "title" : "Delete an empty bucket", "href" : "example_s3_DeleteBucket_section.html" }, { "title" : "Delete an object", "href" : "example_s3_DeleteObject_section.html" }, { "title" : "Delete multiple objects", "href" : "example_s3_DeleteObjects_section.html" }, { "title" : "Delete the lifecycle configuration of a bucket", "href" : "example_s3_DeleteBucketLifecycle_section.html" }, { "title" : "Delete the website configuration from a bucket", "href" : "example_s3_DeleteBucketWebsite_section.html" }, { "title" : "Determine the existence and content type of an object", "href" : "example_s3_HeadObject_section.html" }, { "title" : "Determine the existence of a bucket", "href" : "example_s3_HeadBucket_section.html" }, { "title" : "Download objects to a local directory", "href" : "example_s3_DownloadBucketToDirectory_section.html" }, { "title" : "Enable logging", "href" : "example_s3_ServiceAccessLogging_section.html" }, { "title" : "Enable notifications", "href" : "example_s3_PutBucketNotification_section.html" }, { "title" : "Enable transfer acceleration", "href" : "example_s3_TransferAcceleration_section.html" }, { "title" : "Get CORS rules for a bucket", "href" : "example_s3_GetBucketCors_section.html" }, { "title" : "Get an object from a bucket", "href" : "example_s3_GetObject_section.html" }, { "title" : "Get an object from a bucket if it has been modified", "href" : "example_s3_GetObject_IfModifiedSince_section.html" }, { "title" : "Get the ACL of a bucket", "href" : "example_s3_GetBucketAcl_section.html" }, { "title" : "Get the ACL of an object", "href" : "example_s3_GetObjectAcl_section.html" }, { "title" : "Get the Region location for a bucket", "href" : "example_s3_GetBucketLocation_section.html" }, { "title" : "Get the lifecycle configuration of a bucket", "href" : "example_s3_GetBucketLifecycleConfiguration_section.html" }, { "title" : "Get the policy for a bucket", "href" : "example_s3_GetBucketPolicy_section.html" }, { "title" : "Get the website configuration for a bucket", "href" : "example_s3_GetBucketWebsite_section.html" }, { "title" : "List buckets", "href" : "example_s3_ListBuckets_section.html" }, { "title" : "List in-progress multipart uploads", "href" : "example_s3_ListMultipartUploads_section.html" }, { "title" : "List object versions in a bucket", "href" : "example_s3_ListObjectVersions_section.html" }, { "title" : "List objects in a bucket", "href" : "example_s3_ListObjects_section.html" }, { "title" : "Restore an archived copy of an object", "href" : "example_s3_RestoreObject_section.html" }, { "title" : "Set a new ACL for a bucket", "href" : "example_s3_PutBucketAcl_section.html" }, { "title" : "Set the ACL of an object", "href" : "example_s3_PutObjectAcl_section.html" }, { "title" : "Set the website configuration for a bucket", "href" : "example_s3_PutBucketWebsite_section.html" }, { "title" : "Upload a single part of a multipart upload", "href" : "example_s3_UploadPart_section.html" }, { "title" : "Upload an object to a bucket", "href" : "example_s3_PutObject_section.html" }, { "title" : "Upload directory to a bucket", "href" : "example_s3_UploadDirectoryToBucket_section.html" } ] }, { "title" : "Scenarios", "href" : "service_code_examples_scenarios.html", "contents" : [ { "title" : "Create a presigned URL", "href" : "example_s3_Scenario_PresignedUrl_section.html" }, { "title" : "Create a web page that lists Amazon S3 objects", "href" : "example_s3_Scenario_ListObjectsWeb_section.html" }, { "title" : "Get started with buckets and objects", "href" : "example_s3_Scenario_GettingStarted_section.html" }, { "title" : "Get started with encryption", "href" : "example_s3_Encryption_section.html" }, { "title" : "Get started with tags", "href" : "example_s3_Scenario_Tagging_section.html" }, { "title" : "Manage access control lists (ACLs)", "href" : "example_s3_Scenario_ManageACLs_section.html" }, { "title" : "Manage versioned objects in batches with a Lambda function", "href" : "example_s3_Scenario_BatchObjectVersioning_section.html" }, { "title" : "Parse URIs", "href" : "example_s3_Scenario_URIParsing_section.html" }, { "title" : "Perform a multipart copy", "href" : "example_s3_MultipartCopy_section.html" }, { "title" : "Perform a multipart upload", "href" : "example_s3_Scenario_MultipartUpload_section.html" }, { "title" : "Upload or download large files", "href" : "example_s3_Scenario_UsingLargeFiles_section.html" }, { "title" : "Upload stream of unknown size", "href" : "example_s3_Scenario_UploadStream_section.html" }, { "title" : "Use checksums", "href" : "example_s3_Scenario_UseChecksums_section.html" }, { "title" : "Work with versioned objects", "href" : "example_s3_Scenario_ObjectVersioningUsage_section.html" } ] }, { "title" : "Serverless examples", "href" : "service_code_examples_serverless_examples.html", "contents" : [ { "title" : "Invoke a Lambda function from an Amazon S3 trigger", "href" : "example_serverless_S3_Lambda_section.html" } ] }, { "title" : "Cross-service examples", "href" : "service_code_examples_cross-service_examples.html", "contents" : [ { "title" : "Build an Amazon Transcribe app", "href" : "example_cross_TranscriptionApp_section.html" }, { "title" : "Convert text to speech and back to text", "href" : "example_cross_Telephone_section.html" }, { "title" : "Create a serverless application to manage photos", "href" : "example_cross_PAM_section.html" }, { "title" : "Create an Amazon Textract explorer application", "href" : "example_cross_TextractExplorer_section.html" }, { "title" : "Detect PPE in images", "href" : "example_cross_RekognitionPhotoAnalyzerPPE_section.html" }, { "title" : "Detect entities in text extracted from an image", "href" : "example_cross_TextractComprehendDetectEntities_section.html" }, { "title" : "Detect faces in an image", "href" : "example_cross_DetectFaces_section.html" }, { "title" : "Detect objects in images", "href" : "example_cross_RekognitionPhotoAnalyzer_section.html" }, { "title" : "Detect people and objects in a video", "href" : "example_cross_RekognitionVideoDetection_section.html" }, { "title" : "Save EXIF and other image information", "href" : "example_cross_DetectLabels_section.html" } ] } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "Troubleshoot Access Denied (403 Forbidden) errors", "href" : "troubleshoot-403-errors.html" }, { "title" : "Troubleshoot Batch Operations", "href" : "troubleshooting-batch-operations.html" }, { "title" : "Troubleshoot CORS", "href" : "cors-troubleshooting.html" }, { "title" : "Troubleshoot lifecycle issues", "href" : "troubleshoot-lifecycle.html" }, { "title" : "Troubleshoot replication", "href" : "replication-troubleshoot.html" }, { "title" : "Troubleshoot server access logging", "href" : "troubleshooting-server-access-logging.html" }, { "title" : "Troubleshoot versioning", "href" : "troubleshooting-versioning.html" }, { "title" : "Get Amazon S3 request IDs for AWS Support", "href" : "get-request-ids.html" } ] }, { "title" : "Document history", "href" : "WhatsNew.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/",
+    "service": "AmazonS3",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon S3?",
+                "href": "Welcome.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "GetStartedWithS3.html",
+                "contents": [
+                    {
+                        "title": "Setting up",
+                        "href": "setting-up-s3.html"
+                    },
+                    {
+                        "title": "Step 1: Create a bucket",
+                        "href": "creating-bucket.html"
+                    },
+                    {
+                        "title": "Step 2: Upload an object",
+                        "href": "uploading-an-object-bucket.html"
+                    },
+                    {
+                        "title": "Step 3: Download an object",
+                        "href": "accessing-an-object.html"
+                    },
+                    {
+                        "title": "Step 4: Copy an object",
+                        "href": "copying-an-object.html"
+                    },
+                    {
+                        "title": "Step 5: Delete the objects and bucket",
+                        "href": "deleting-object-bucket.html"
+                    },
+                    {
+                        "title": "Next steps",
+                        "href": "getting-started-next-steps.html"
+                    },
+                    {
+                        "title": "Access control",
+                        "href": "access-control-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tutorials",
+                "href": "tutorials.html",
+                "contents": [
+                    {
+                        "title": "Transforming data with S3 Object Lambda",
+                        "href": "tutorial-s3-object-lambda-uppercase.html"
+                    },
+                    {
+                        "title": "Detecting and redacting PII data",
+                        "href": "tutorial-s3-object-lambda-redact-pii.html"
+                    },
+                    {
+                        "title": "Hosting video streaming",
+                        "href": "tutorial-s3-cloudfront-route53-video-streaming.html"
+                    },
+                    {
+                        "title": "Batch-transcoding videos",
+                        "href": "tutorial-s3-batchops-lambda-mediaconvert-video.html"
+                    },
+                    {
+                        "title": "Configuring a static website",
+                        "href": "HostingWebsiteOnS3Setup.html"
+                    },
+                    {
+                        "title": "Configuring a static website using a custom domain",
+                        "href": "website-hosting-custom-domain-walkthrough.html",
+                        "contents": [
+                            {
+                                "title": "Speeding up your website with Amazon CloudFront",
+                                "href": "website-hosting-cloudfront-walkthrough.html"
+                            },
+                            {
+                                "title": "Cleaning up example resources",
+                                "href": "getting-started-cleanup.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Working with buckets",
+                "href": "creating-buckets-s3.html",
+                "contents": [
+                    {
+                        "title": "Buckets overview",
+                        "href": "UsingBucket.html"
+                    },
+                    {
+                        "title": "Naming rules",
+                        "href": "bucketnamingrules.html"
+                    },
+                    {
+                        "title": "Creating a bucket",
+                        "href": "create-bucket-overview.html"
+                    },
+                    {
+                        "title": "Viewing bucket properties",
+                        "href": "view-bucket-properties.html"
+                    },
+                    {
+                        "title": "Methods for accessing a bucket",
+                        "href": "access-bucket-intro.html"
+                    },
+                    {
+                        "title": "Emptying a bucket",
+                        "href": "empty-bucket.html"
+                    },
+                    {
+                        "title": "Deleting a bucket",
+                        "href": "delete-bucket.html"
+                    },
+                    {
+                        "title": "Setting default bucket encryption",
+                        "href": "bucket-encryption.html",
+                        "contents": [
+                            {
+                                "title": "Configuring default encryption",
+                                "href": "default-bucket-encryption.html"
+                            },
+                            {
+                                "title": "Monitoring default encryption",
+                                "href": "bucket-encryption-tracking.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Mountpoint for Amazon S3",
+                        "href": "mountpoint.html",
+                        "contents": [
+                            {
+                                "title": "Installation",
+                                "href": "mountpoint-installation.html"
+                            },
+                            {
+                                "title": "Configuration and usage",
+                                "href": "mountpoint-usage.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "mountpoint-troubleshooting.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuring Transfer Acceleration",
+                        "href": "transfer-acceleration.html",
+                        "contents": [
+                            {
+                                "title": "Getting Started",
+                                "href": "transfer-acceleration-getting-started.html"
+                            },
+                            {
+                                "title": "Enabling Transfer Acceleration",
+                                "href": "transfer-acceleration-examples.html"
+                            },
+                            {
+                                "title": "Speed Comparison tool",
+                                "href": "transfer-acceleration-speed-comparison.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Requester Pays",
+                        "href": "RequesterPaysBuckets.html",
+                        "contents": [
+                            {
+                                "title": "Configuring Requester Pays",
+                                "href": "RequesterPaysExamples.html"
+                            },
+                            {
+                                "title": "Retrieving the requestPayment configuration",
+                                "href": "BucketPayerValues.html"
+                            },
+                            {
+                                "title": "Downloading objects in Requester Pays buckets",
+                                "href": "ObjectsinRequesterPaysBuckets.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Restrictions and limitations",
+                        "href": "BucketRestrictions.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with objects",
+                "href": "uploading-downloading-objects.html",
+                "contents": [
+                    {
+                        "title": "Objects",
+                        "href": "UsingObjects.html"
+                    },
+                    {
+                        "title": "Creating object keys",
+                        "href": "object-keys.html"
+                    },
+                    {
+                        "title": "Working with metadata",
+                        "href": "UsingMetadata.html",
+                        "contents": [
+                            {
+                                "title": "Editing object metadata",
+                                "href": "add-object-metadata.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Uploading objects",
+                        "href": "upload-objects.html"
+                    },
+                    {
+                        "title": "Using multipart upload",
+                        "href": "mpuoverview.html",
+                        "contents": [
+                            {
+                                "title": "Configuring a lifecycle configuration",
+                                "href": "mpu-abort-incomplete-mpu-lifecycle-config.html"
+                            },
+                            {
+                                "title": "Uploading an object using multipart upload",
+                                "href": "mpu-upload-object.html"
+                            },
+                            {
+                                "title": "Uploading a directory",
+                                "href": "HLuploadDirDotNet.html"
+                            },
+                            {
+                                "title": "Listing multipart uploads",
+                                "href": "list-mpu.html"
+                            },
+                            {
+                                "title": "Tracking a multipart upload",
+                                "href": "track-mpu.html"
+                            },
+                            {
+                                "title": "Aborting a multipart upload",
+                                "href": "abort-mpu.html"
+                            },
+                            {
+                                "title": "Copying an object",
+                                "href": "CopyingObjectsMPUapi.html"
+                            },
+                            {
+                                "title": "Multipart upload limits",
+                                "href": "qfacts.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Copying objects",
+                        "href": "copy-object.html"
+                    },
+                    {
+                        "title": "Downloading objects",
+                        "href": "download-objects.html"
+                    },
+                    {
+                        "title": "Checking object integrity",
+                        "href": "checking-object-integrity.html"
+                    },
+                    {
+                        "title": "Deleting objects",
+                        "href": "DeletingObjects.html",
+                        "contents": [
+                            {
+                                "title": "Deleting a single object",
+                                "href": "delete-objects.html"
+                            },
+                            {
+                                "title": "Deleting multiple objects",
+                                "href": "delete-multiple-objects.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Organizing and listing objects",
+                        "href": "organizing-objects.html",
+                        "contents": [
+                            {
+                                "title": "Using prefixes",
+                                "href": "using-prefixes.html"
+                            },
+                            {
+                                "title": "Listing objects",
+                                "href": "ListingKeysUsingAPIs.html"
+                            },
+                            {
+                                "title": "Using folders",
+                                "href": "using-folders.html"
+                            },
+                            {
+                                "title": "Viewing an object overview",
+                                "href": "view-object-overview.html"
+                            },
+                            {
+                                "title": "Viewing object properties",
+                                "href": "view-object-properties.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with presigned URLs",
+                        "href": "using-presigned-url.html",
+                        "contents": [
+                            {
+                                "title": "Sharing objects with presigned URLs",
+                                "href": "ShareObjectPreSignedURL.html"
+                            },
+                            {
+                                "title": "Uploading objects with presigned URLs",
+                                "href": "PresignedUrlUploadObject.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Transforming objects",
+                        "href": "transforming-objects.html",
+                        "contents": [
+                            {
+                                "title": "Creating Object Lambda Access Points",
+                                "href": "olap-create.html",
+                                "contents": [
+                                    {
+                                        "title": "Automate S3 Object Lambda setup with AWS CloudFormation",
+                                        "href": "olap-using-cfn-template.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using Amazon S3 Object Lambda Access Points",
+                                "href": "olap-use.html"
+                            },
+                            {
+                                "title": "Security considerations",
+                                "href": "olap-security.html",
+                                "contents": [
+                                    {
+                                        "title": "Configuring IAM policies",
+                                        "href": "olap-policies.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Writing Lambda functions",
+                                "href": "olap-writing-lambda.html",
+                                "contents": [
+                                    {
+                                        "title": "Event context format and usage",
+                                        "href": "olap-event-context.html"
+                                    },
+                                    {
+                                        "title": "Working with Range and partNumber headers",
+                                        "href": "range-get-olap.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using AWS built functions",
+                                "href": "olap-examples.html"
+                            },
+                            {
+                                "title": "Best practices and guidelines for S3 Object Lambda",
+                                "href": "olap-best-practices.html"
+                            },
+                            {
+                                "title": "S3 Object Lambda tutorials",
+                                "href": "olap-tutorials.html"
+                            },
+                            {
+                                "title": "Debugging S3 Object Lambda",
+                                "href": "olap-debugging-lambda.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Working with access points",
+                "href": "access-points.html",
+                "contents": [
+                    {
+                        "title": "Configuring IAM policies",
+                        "href": "access-points-policies.html"
+                    },
+                    {
+                        "title": "Creating access points",
+                        "href": "creating-access-points.html",
+                        "contents": [
+                            {
+                                "title": "Creating an access point",
+                                "href": "create-access-points.html"
+                            },
+                            {
+                                "title": "Creating access points restricted to a VPC",
+                                "href": "access-points-vpc.html"
+                            },
+                            {
+                                "title": "Managing public access",
+                                "href": "access-points-bpa-settings.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using access points",
+                        "href": "using-access-points.html",
+                        "contents": [
+                            {
+                                "title": "Monitoring and logging",
+                                "href": "access-points-monitoring-logging.html"
+                            },
+                            {
+                                "title": "Managing access points",
+                                "href": "access-points-manage.html"
+                            },
+                            {
+                                "title": "Using a bucket-style alias for your access point",
+                                "href": "access-points-alias.html"
+                            },
+                            {
+                                "title": "Using access points with Amazon S3 operations",
+                                "href": "access-points-usage-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Restrictions and limitations",
+                        "href": "access-points-restrictions-limitations.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with Multi-Region Access Points",
+                "href": "MultiRegionAccessPoints.html",
+                "contents": [
+                    {
+                        "title": "Creating Multi-Region Access Points",
+                        "href": "CreatingMultiRegionAccessPoints.html",
+                        "contents": [
+                            {
+                                "title": "Rules for naming Amazon S3 Multi-Region Access Points",
+                                "href": "multi-region-access-point-naming.html"
+                            },
+                            {
+                                "title": "Rules for choosing buckets for Amazon S3 Multi-Region Access Points",
+                                "href": "multi-region-access-point-buckets.html"
+                            },
+                            {
+                                "title": "Create an Amazon S3 Multi-Region Access Point",
+                                "href": "multi-region-access-point-create-examples.html"
+                            },
+                            {
+                                "title": "Blocking public access with Amazon S3 Multi-Region Access Points",
+                                "href": "multi-region-access-point-block-public-access.html"
+                            },
+                            {
+                                "title": "Viewing Amazon S3 Multi-Region Access Points configuration details",
+                                "href": "multi-region-access-point-view-examples.html"
+                            },
+                            {
+                                "title": "Deleting a Multi-Region Access Point",
+                                "href": "multi-region-access-point-delete-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuring Multi-Region Access Points",
+                        "href": "MultiRegionAccessConfiguration.html",
+                        "contents": [
+                            {
+                                "title": "Configuring AWS PrivateLink",
+                                "href": "MultiRegionAccessPointsPrivateLink.html"
+                            },
+                            {
+                                "title": "Removing access to a Multi-Region Access Point from a VPC endpoint",
+                                "href": "RemovingMultiRegionAccessPointAccess.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Multi-Region Access Points",
+                        "href": "MultiRegionAccessPointRequests.html",
+                        "contents": [
+                            {
+                                "title": "Permissions",
+                                "href": "MultiRegionAccessPointPermissions.html"
+                            },
+                            {
+                                "title": "Restrictions and limitations",
+                                "href": "MultiRegionAccessPointRestrictions.html"
+                            },
+                            {
+                                "title": "Request routing",
+                                "href": "MultiRegionAccessPointRequestRouting.html"
+                            },
+                            {
+                                "title": "Failover configuration",
+                                "href": "MrapFailover.html",
+                                "contents": [
+                                    {
+                                        "title": "Amazon S3 Multi-Region Access Points routing states",
+                                        "href": "FailoverConfiguration.html"
+                                    },
+                                    {
+                                        "title": "Using Amazon S3 Multi-Region Access Point failover controls",
+                                        "href": "UsingFailover.html"
+                                    },
+                                    {
+                                        "title": "Amazon S3 Multi-Region Access Point failover controls errors",
+                                        "href": "mrap-failover-errors.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Bucket replication",
+                                "href": "MultiRegionAccessPointBucketReplication.html",
+                                "contents": [
+                                    {
+                                        "title": "Create one-way replication rules for your Multi-Region Access Point",
+                                        "href": "mrap-create-one-way-replication-rules.html"
+                                    },
+                                    {
+                                        "title": "Create two-way replication rules for your Multi-Region Access Point",
+                                        "href": "mrap-create-two-way-replication-rules.html"
+                                    },
+                                    {
+                                        "title": "View the replication rules for your Multi-Region Access Point",
+                                        "href": "mrap-view-replication-rules.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Supported API operations",
+                                "href": "MrapOperations.html"
+                            },
+                            {
+                                "title": "Monitoring and logging",
+                                "href": "MultiRegionAccessPointMonitoring.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "DataDurability.html"
+                    },
+                    {
+                        "title": "Data encryption",
+                        "href": "UsingEncryption.html",
+                        "contents": [
+                            {
+                                "title": "Server-side encryption",
+                                "href": "serv-side-encryption.html",
+                                "contents": [
+                                    {
+                                        "title": "Default encryption FAQ",
+                                        "href": "default-encryption-faq.html"
+                                    },
+                                    {
+                                        "title": "Amazon S3 managed encryption keys (SSE-S3)",
+                                        "href": "UsingServerSideEncryption.html",
+                                        "contents": [
+                                            {
+                                                "title": "Specifying SSE-S3",
+                                                "href": "specifying-s3-encryption.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "KMS keys stored in AWS KMS (SSE-KMS)",
+                                        "href": "UsingKMSEncryption.html",
+                                        "contents": [
+                                            {
+                                                "title": "Specifying SSE-KMS",
+                                                "href": "specifying-kms-encryption.html"
+                                            },
+                                            {
+                                                "title": "Using Amazon S3 Bucket Keys",
+                                                "href": "bucket-key.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Configuring an S3 Bucket Key for your bucket",
+                                                        "href": "configuring-bucket-key.html"
+                                                    },
+                                                    {
+                                                        "title": "Configuring an S3 Bucket Key for an object",
+                                                        "href": "configuring-bucket-key-object.html"
+                                                    },
+                                                    {
+                                                        "title": "Viewing the settings for an S3 Bucket Key",
+                                                        "href": "viewing-bucket-key-settings.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Dual-layer server-side encryption (DSSE-KMS)",
+                                        "href": "UsingDSSEncryption.html",
+                                        "contents": [
+                                            {
+                                                "title": "Specifying DSSE-KMS",
+                                                "href": "specifying-dsse-encryption.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Customer-provided encryption keys (SSE-C)",
+                                        "href": "ServerSideEncryptionCustomerKeys.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using client-side encryption",
+                                "href": "UsingClientSideEncryption.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Internetwork privacy",
+                        "href": "inter-network-traffic-privacy.html"
+                    },
+                    {
+                        "title": "AWS PrivateLink for Amazon S3",
+                        "href": "privatelink-interface-endpoints.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "s3-access-control.html",
+                        "contents": [
+                            {
+                                "title": "Overview",
+                                "href": "access-control-overview.html"
+                            },
+                            {
+                                "title": "Access policy guidelines",
+                                "href": "access-policy-alternatives-guidelines.html"
+                            },
+                            {
+                                "title": "Request authorization",
+                                "href": "how-s3-evaluates-access-control.html",
+                                "contents": [
+                                    {
+                                        "title": "For a bucket operation",
+                                        "href": "access-control-auth-workflow-bucket-operation.html"
+                                    },
+                                    {
+                                        "title": "For an object operation",
+                                        "href": "access-control-auth-workflow-object-operation.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Bucket policies and user policies",
+                                "href": "using-iam-policies.html",
+                                "contents": [
+                                    {
+                                        "title": "Policies and Permissions",
+                                        "href": "access-policy-language-overview.html",
+                                        "contents": [
+                                            {
+                                                "title": "Resources",
+                                                "href": "s3-arn-format.html"
+                                            },
+                                            {
+                                                "title": "Principals",
+                                                "href": "s3-bucket-user-policy-specifying-principal-intro.html"
+                                            },
+                                            {
+                                                "title": "Actions",
+                                                "href": "using-with-s3-actions.html"
+                                            },
+                                            {
+                                                "title": "Conditions",
+                                                "href": "amazon-s3-condition-keys.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Examples",
+                                                        "href": "amazon-s3-policy-keys.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Actions, resources, and condition keys",
+                                                "href": "list_amazons3.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Bucket policies",
+                                        "href": "bucket-policies.html",
+                                        "contents": [
+                                            {
+                                                "title": "Adding a bucket policy",
+                                                "href": "add-bucket-policy.html"
+                                            },
+                                            {
+                                                "title": "Controlling VPC access",
+                                                "href": "example-bucket-policies-vpc-endpoint.html"
+                                            },
+                                            {
+                                                "title": "Bucket policy examples",
+                                                "href": "example-bucket-policies.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "IAM user and role policies",
+                                        "href": "user-policies.html",
+                                        "contents": [
+                                            {
+                                                "title": "Controlling bucket access",
+                                                "href": "walkthrough1.html"
+                                            },
+                                            {
+                                                "title": "User and role policy examples",
+                                                "href": "example-policies-s3.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Example walkthroughs",
+                                        "href": "example-walkthroughs-managing-access.html",
+                                        "contents": [
+                                            {
+                                                "title": "Setting up tools",
+                                                "href": "policy-eval-walkthrough-download-awscli.html"
+                                            },
+                                            {
+                                                "title": "Granting permissions",
+                                                "href": "example-walkthroughs-managing-access-example1.html"
+                                            },
+                                            {
+                                                "title": "Granting cross-account permissions",
+                                                "href": "example-walkthroughs-managing-access-example2.html"
+                                            },
+                                            {
+                                                "title": "Granting object permissions",
+                                                "href": "example-walkthroughs-managing-access-example3.html"
+                                            },
+                                            {
+                                                "title": "Granting cross-account object permissions",
+                                                "href": "example-walkthroughs-managing-access-example4.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Using service-linked roles",
+                                        "href": "using-service-linked-roles.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Managing access with ACLs",
+                                "href": "acls.html",
+                                "contents": [
+                                    {
+                                        "title": "ACL overview",
+                                        "href": "acl-overview.html"
+                                    },
+                                    {
+                                        "title": "Finding the canonical ID",
+                                        "href": "finding-canonical-user-id.html"
+                                    },
+                                    {
+                                        "title": "Configuring ACLs",
+                                        "href": "managing-acls.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using CORS",
+                                "href": "cors.html",
+                                "contents": [
+                                    {
+                                        "title": "CORS configuration",
+                                        "href": "ManageCorsUsing.html"
+                                    },
+                                    {
+                                        "title": "Configuring CORS",
+                                        "href": "enabling-cors-examples.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Blocking public access",
+                                "href": "access-control-block-public-access.html",
+                                "contents": [
+                                    {
+                                        "title": "Configuring account settings",
+                                        "href": "configuring-block-public-access-account.html"
+                                    },
+                                    {
+                                        "title": "Configuring bucket and access point settings",
+                                        "href": "configuring-block-public-access-bucket.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Reviewing bucket access",
+                                "href": "access-analyzer.html"
+                            },
+                            {
+                                "title": "Verifying bucket ownership",
+                                "href": "bucket-owner-condition.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Controlling object ownership",
+                        "href": "about-object-ownership.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites for disabling ACLs",
+                                "href": "object-ownership-migrating-acls-prerequisites.html"
+                            },
+                            {
+                                "title": "Creating a bucket",
+                                "href": "object-ownership-new-bucket.html"
+                            },
+                            {
+                                "title": "Setting Object Ownership",
+                                "href": "object-ownership-existing-bucket.html"
+                            },
+                            {
+                                "title": "Viewing Object Ownership settings",
+                                "href": "object-ownership-retrieving.html"
+                            },
+                            {
+                                "title": "Disabling ACLs for all new buckets",
+                                "href": "ensure-object-ownership.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "object-ownership-error-responses.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "s3-incident-response.html"
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "s3-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "network-isolation.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "vulnerability-analysis-and-management.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    },
+                    {
+                        "title": "Monitoring data security",
+                        "href": "monitoring-data-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing storage",
+                "href": "managing-storage.html",
+                "contents": [
+                    {
+                        "title": "Using S3 Versioning",
+                        "href": "Versioning.html",
+                        "contents": [
+                            {
+                                "title": "S3 Versioning",
+                                "href": "versioning-workflows.html"
+                            },
+                            {
+                                "title": "Enabling versioning on buckets",
+                                "href": "manage-versioning-examples.html"
+                            },
+                            {
+                                "title": "Configuring MFA delete",
+                                "href": "MultiFactorAuthenticationDelete.html"
+                            },
+                            {
+                                "title": "Working with versioning-enabled objects",
+                                "href": "manage-objects-versioned-bucket.html",
+                                "contents": [
+                                    {
+                                        "title": "Adding objects",
+                                        "href": "AddingObjectstoVersioningEnabledBuckets.html"
+                                    },
+                                    {
+                                        "title": "Listing objects",
+                                        "href": "list-obj-version-enabled-bucket.html"
+                                    },
+                                    {
+                                        "title": "Retrieving object versions",
+                                        "href": "RetrievingObjectVersions.html",
+                                        "contents": [
+                                            {
+                                                "title": "Retrieving version metadata",
+                                                "href": "RetMetaOfObjVersion.html"
+                                            },
+                                            {
+                                                "title": "Restoring previous versions",
+                                                "href": "RestoringPreviousVersions.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Deleting object versions",
+                                        "href": "DeletingObjectVersions.html",
+                                        "contents": [
+                                            {
+                                                "title": "Working with delete markers",
+                                                "href": "DeleteMarker.html"
+                                            },
+                                            {
+                                                "title": "Managing delete markers",
+                                                "href": "ManagingDelMarkers.html"
+                                            },
+                                            {
+                                                "title": "Deleting with MFA delete",
+                                                "href": "UsingMFADelete.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Configuring permissions",
+                                        "href": "VersionedObjectPermissionsandACLs.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Working with versioning-suspended objects",
+                                "href": "VersionSuspendedBehavior.html",
+                                "contents": [
+                                    {
+                                        "title": "Adding objects",
+                                        "href": "AddingObjectstoVersionSuspendedBuckets.html"
+                                    },
+                                    {
+                                        "title": "Retrieving objects",
+                                        "href": "RetrievingObjectsfromVersioningSuspendedBuckets.html"
+                                    },
+                                    {
+                                        "title": "Deleting objects",
+                                        "href": "DeletingObjectsfromVersioningSuspendedBuckets.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using AWS Backup for Amazon S3",
+                        "href": "backup-for-s3.html"
+                    },
+                    {
+                        "title": "Working with archived objects",
+                        "href": "archived-objects.html",
+                        "contents": [
+                            {
+                                "title": "Archive retrieval options",
+                                "href": "restoring-objects-retrieval-options.html"
+                            },
+                            {
+                                "title": "Restoring an archived object",
+                                "href": "restoring-objects.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Object Lock",
+                        "href": "object-lock.html",
+                        "contents": [
+                            {
+                                "title": "S3 Object Lock",
+                                "href": "object-lock-overview.html"
+                            },
+                            {
+                                "title": "Configuring Object Lock on the console",
+                                "href": "object-lock-console.html"
+                            },
+                            {
+                                "title": "Managing Object Lock",
+                                "href": "object-lock-managing.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing storage classes",
+                        "href": "storage-class-intro.html"
+                    },
+                    {
+                        "title": "Amazon S3 Intelligent-Tiering",
+                        "href": "intelligent-tiering.html",
+                        "contents": [
+                            {
+                                "title": "How S3 Intelligent-Tiering works",
+                                "href": "intelligent-tiering-overview.html"
+                            },
+                            {
+                                "title": "Using S3 Intelligent-Tiering",
+                                "href": "using-intelligent-tiering.html"
+                            },
+                            {
+                                "title": "Managing S3 Intelligent-Tiering",
+                                "href": "intelligent-tiering-managing.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing lifecycle",
+                        "href": "object-lifecycle-mgmt.html",
+                        "contents": [
+                            {
+                                "title": "Transitioning objects",
+                                "href": "lifecycle-transition-general-considerations.html"
+                            },
+                            {
+                                "title": "Expiring objects",
+                                "href": "lifecycle-expire-general-considerations.html"
+                            },
+                            {
+                                "title": "Setting lifecycle configuration",
+                                "href": "how-to-set-lifecycle-configuration-intro.html"
+                            },
+                            {
+                                "title": "Using other bucket configurations",
+                                "href": "lifecycle-and-other-bucket-config.html"
+                            },
+                            {
+                                "title": "Configuring Lifecycle event notifications",
+                                "href": "lifecycle-configure-notification.html"
+                            },
+                            {
+                                "title": "Lifecycle configuration elements",
+                                "href": "intro-lifecycle-rules.html"
+                            },
+                            {
+                                "title": "Examples of S3 Lifecycle configuration",
+                                "href": "lifecycle-configuration-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing inventory",
+                        "href": "storage-inventory.html",
+                        "contents": [
+                            {
+                                "title": "Configuring Amazon S3 Inventory",
+                                "href": "configure-inventory.html"
+                            },
+                            {
+                                "title": "Setting up notifications for inventory completion",
+                                "href": "storage-inventory-notification.html"
+                            },
+                            {
+                                "title": "Locating your inventory",
+                                "href": "storage-inventory-location.html"
+                            },
+                            {
+                                "title": "Querying inventory with Athena",
+                                "href": "storage-inventory-athena-query.html"
+                            },
+                            {
+                                "title": "Converting empty version ID strings to null strings",
+                                "href": "inventory-configure-bops.html"
+                            },
+                            {
+                                "title": "Working with the Object ACL field",
+                                "href": "objectacl.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Replicating objects",
+                        "href": "replication.html",
+                        "contents": [
+                            {
+                                "title": "What's replicated?",
+                                "href": "replication-what-is-isnot-replicated.html"
+                            },
+                            {
+                                "title": "Setting up replication",
+                                "href": "replication-how-setup.html",
+                                "contents": [
+                                    {
+                                        "title": "Replication configuration",
+                                        "href": "replication-add-config.html"
+                                    },
+                                    {
+                                        "title": "Setting up permissions",
+                                        "href": "setting-repl-config-perm-overview.html"
+                                    },
+                                    {
+                                        "title": "Replication examples",
+                                        "href": "replication-example-walkthroughs.html",
+                                        "contents": [
+                                            {
+                                                "title": "Configuring for buckets in the same account",
+                                                "href": "replication-walkthrough1.html"
+                                            },
+                                            {
+                                                "title": "Configuring for buckets in different accounts",
+                                                "href": "replication-walkthrough-2.html"
+                                            },
+                                            {
+                                                "title": "Changing replica owner",
+                                                "href": "replication-walkthrough-3.html"
+                                            },
+                                            {
+                                                "title": "Replicating encrypted objects",
+                                                "href": "replication-walkthrough-4.html"
+                                            },
+                                            {
+                                                "title": "Using S3 Replication Time Control",
+                                                "href": "replication-walkthrough-5.html"
+                                            },
+                                            {
+                                                "title": "Managing replication rules",
+                                                "href": "disable-replication.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Replicate existing objects",
+                                "href": "s3-batch-replication-batch.html",
+                                "contents": [
+                                    {
+                                        "title": "Configuring IAM policies",
+                                        "href": "s3-batch-replication-policies.html"
+                                    },
+                                    {
+                                        "title": "Batch Replication for a first replication rule or new destination",
+                                        "href": "s3-batch-replication-new-config.html"
+                                    },
+                                    {
+                                        "title": "Batch Replication for existing replication rules",
+                                        "href": "s3-batch-replication-existing-config.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Additional configurations",
+                                "href": "replication-additional-configs.html",
+                                "contents": [
+                                    {
+                                        "title": "Monitoring progress",
+                                        "href": "replication-metrics.html",
+                                        "contents": [
+                                            {
+                                                "title": "Viewing replication metrics by using the Amazon S3 console",
+                                                "href": "viewing-replication-metrics.html"
+                                            },
+                                            {
+                                                "title": "Amazon S3 replication failure reasons",
+                                                "href": "replication-failure-codes.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Using S3 Replication Time Control",
+                                        "href": "replication-time-control.html",
+                                        "contents": [
+                                            {
+                                                "title": "Best practices and guidelines for S3 RTC",
+                                                "href": "rtc-best-practices.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Replicating delete markers",
+                                        "href": "delete-marker-replication.html"
+                                    },
+                                    {
+                                        "title": "Replicating metadata changes",
+                                        "href": "replication-for-metadata-changes.html"
+                                    },
+                                    {
+                                        "title": "Changing the replica owner",
+                                        "href": "replication-change-owner.html"
+                                    },
+                                    {
+                                        "title": "Replicating encrypted objects (SSE-C, SSE-S3, SSE-KMS, DSSE-KMS)",
+                                        "href": "replication-config-for-kms-objects.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Getting replication status",
+                                "href": "replication-status.html"
+                            },
+                            {
+                                "title": "Additional considerations",
+                                "href": "replication-and-other-bucket-configs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using object tags",
+                        "href": "object-tagging.html",
+                        "contents": [
+                            {
+                                "title": "Access control",
+                                "href": "tagging-and-policies.html"
+                            },
+                            {
+                                "title": "Managing object tags",
+                                "href": "tagging-managing.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using cost allocation tags",
+                        "href": "CostAllocTagging.html"
+                    },
+                    {
+                        "title": "Billing and usage reporting",
+                        "href": "BucketBilling.html",
+                        "contents": [
+                            {
+                                "title": "Billing reports",
+                                "href": "aws-billing-reports.html"
+                            },
+                            {
+                                "title": "Usage report",
+                                "href": "aws-usage-report.html"
+                            },
+                            {
+                                "title": "Understanding billing and usage reports",
+                                "href": "aws-usage-report-understand.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Amazon S3 Select",
+                        "href": "selecting-content-from-objects.html",
+                        "contents": [
+                            {
+                                "title": "S3 Select examples",
+                                "href": "using-select.html"
+                            },
+                            {
+                                "title": "SQL Reference",
+                                "href": "s3-select-sql-reference.html",
+                                "contents": [
+                                    {
+                                        "title": "SELECT command",
+                                        "href": "s3-select-sql-reference-select.html"
+                                    },
+                                    {
+                                        "title": "Data types",
+                                        "href": "s3-select-sql-reference-data-types.html"
+                                    },
+                                    {
+                                        "title": "Operators",
+                                        "href": "s3-select-sql-reference-operators.html"
+                                    },
+                                    {
+                                        "title": "Reserved keywords",
+                                        "href": "s3-select-sql-reference-keyword-list.html"
+                                    },
+                                    {
+                                        "title": "SQL functions",
+                                        "href": "s3-select-sql-reference-sql-functions.html",
+                                        "contents": [
+                                            {
+                                                "title": "Aggregate functions",
+                                                "href": "s3-select-sql-reference-aggregate.html"
+                                            },
+                                            {
+                                                "title": "Conditional functions",
+                                                "href": "s3-select-sql-reference-conditional.html"
+                                            },
+                                            {
+                                                "title": "Conversion functions",
+                                                "href": "s3-select-sql-reference-conversion.html"
+                                            },
+                                            {
+                                                "title": "Date functions",
+                                                "href": "s3-select-sql-reference-date.html"
+                                            },
+                                            {
+                                                "title": "String functions",
+                                                "href": "s3-select-sql-reference-string.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Batch Operations",
+                        "href": "batch-ops.html",
+                        "contents": [
+                            {
+                                "title": "Granting permissions",
+                                "href": "batch-ops-iam-role-policies.html"
+                            },
+                            {
+                                "title": "Creating a job",
+                                "href": "batch-ops-create-job.html"
+                            },
+                            {
+                                "title": "Supported operations",
+                                "href": "batch-ops-operations.html",
+                                "contents": [
+                                    {
+                                        "title": "Copy objects",
+                                        "href": "batch-ops-copy-object.html",
+                                        "contents": [
+                                            {
+                                                "title": "Examples that use Batch Operations to copy objects",
+                                                "href": "batch-ops-examples-copy.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Using an inventory report to copy objects across AWS accounts",
+                                                        "href": "specify-batchjob-manifest-xaccount-inventory.html"
+                                                    },
+                                                    {
+                                                        "title": "Using a CSV manifest to copy objects across AWS accounts",
+                                                        "href": "specify-batchjob-manifest-xaccount-csv.html"
+                                                    },
+                                                    {
+                                                        "title": "Using Batch Operations to encrypt objects with S3 Bucket Keys",
+                                                        "href": "batch-ops-copy-example-bucket-key.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Invoke AWS Lambda function",
+                                        "href": "batch-ops-invoke-lambda.html"
+                                    },
+                                    {
+                                        "title": "Replace all object tags",
+                                        "href": "batch-ops-put-object-tagging.html"
+                                    },
+                                    {
+                                        "title": "Delete all object tags",
+                                        "href": "batch-ops-delete-object-tagging.html"
+                                    },
+                                    {
+                                        "title": "Replace access control list",
+                                        "href": "batch-ops-put-object-acl.html"
+                                    },
+                                    {
+                                        "title": "Restore objects",
+                                        "href": "batch-ops-initiate-restore-object.html"
+                                    },
+                                    {
+                                        "title": "Object Lock retention",
+                                        "href": "batch-ops-retention-date.html"
+                                    },
+                                    {
+                                        "title": "Object Lock legal hold",
+                                        "href": "batch-ops-legal-hold.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Managing jobs",
+                                "href": "batch-ops-managing-jobs.html",
+                                "contents": [
+                                    {
+                                        "title": "Listing jobs",
+                                        "href": "batch-ops-list-jobs.html"
+                                    },
+                                    {
+                                        "title": "Viewing job details",
+                                        "href": "batch-ops-job-details.html"
+                                    },
+                                    {
+                                        "title": "Assigning job priority",
+                                        "href": "batch-ops-job-priority.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Tracking job status and completion reports",
+                                "href": "batch-ops-job-status.html",
+                                "contents": [
+                                    {
+                                        "title": "Examples of tracking using Amazon EventBridge",
+                                        "href": "batch-ops-examples-event-bridge-cloud-trail.html"
+                                    },
+                                    {
+                                        "title": "Examples of completion reports",
+                                        "href": "batch-ops-examples-reports.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using tags",
+                                "href": "batch-ops-job-tags.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating a job",
+                                        "href": "batch-ops-tags-create.html"
+                                    },
+                                    {
+                                        "title": "Deleting tags",
+                                        "href": "delete-job-tags.html"
+                                    },
+                                    {
+                                        "title": "Putting job tags",
+                                        "href": "put-job-tags.html"
+                                    },
+                                    {
+                                        "title": "Getting job tags",
+                                        "href": "get-job-tags.html"
+                                    },
+                                    {
+                                        "title": "Controlling permissions",
+                                        "href": "batch-ops-job-tags-examples.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Managing S3 Object Lock",
+                                "href": "managing-object-lock-batchops.html",
+                                "contents": [
+                                    {
+                                        "title": "Enabling Object Lock",
+                                        "href": "batch-ops-object-lock.html"
+                                    },
+                                    {
+                                        "title": "Setting retention",
+                                        "href": "batch-ops-object-lock-retention.html"
+                                    },
+                                    {
+                                        "title": "Setting retention compliance",
+                                        "href": "batch-ops-compliance-mode.html"
+                                    },
+                                    {
+                                        "title": "Setting retention governance",
+                                        "href": "batch-ops-governance-mode.html"
+                                    },
+                                    {
+                                        "title": "Turning off legal hold",
+                                        "href": "batch-ops-legal-hold-off.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "S3 Batch Operations tutorial",
+                                "href": "batch-ops-tutorials.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring Amazon S3",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Monitoring tools",
+                        "href": "monitoring-automated-manual.html"
+                    },
+                    {
+                        "title": "Logging options",
+                        "href": "logging-with-S3.html"
+                    },
+                    {
+                        "title": "Logging with CloudTrail",
+                        "href": "cloudtrail-logging.html",
+                        "contents": [
+                            {
+                                "title": "CloudTrail events",
+                                "href": "cloudtrail-logging-s3-info.html"
+                            },
+                            {
+                                "title": "Example log files",
+                                "href": "cloudtrail-logging-understanding-s3-entries.html"
+                            },
+                            {
+                                "title": "Enabling CloudTrail",
+                                "href": "enable-cloudtrail-logging-for-s3.html"
+                            },
+                            {
+                                "title": "Identifying S3 requests",
+                                "href": "cloudtrail-request-identification.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging server access",
+                        "href": "ServerLogs.html",
+                        "contents": [
+                            {
+                                "title": "Enabling server access logging",
+                                "href": "enable-server-access-logging.html"
+                            },
+                            {
+                                "title": "Log format",
+                                "href": "LogFormat.html"
+                            },
+                            {
+                                "title": "Deleting log files",
+                                "href": "deleting-log-files-lifecycle.html"
+                            },
+                            {
+                                "title": "Identifying S3 requests",
+                                "href": "using-s3-access-logs-to-identify-requests.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Monitoring metrics with CloudWatch",
+                        "href": "cloudwatch-monitoring.html",
+                        "contents": [
+                            {
+                                "title": "Metrics and dimensions",
+                                "href": "metrics-dimensions.html"
+                            },
+                            {
+                                "title": "Accessing CloudWatch metrics",
+                                "href": "cloudwatch-monitoring-accessing.html"
+                            },
+                            {
+                                "title": "CloudWatch metrics configurations",
+                                "href": "metrics-configurations.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating a metrics configuration for all objects",
+                                        "href": "configure-request-metrics-bucket.html"
+                                    },
+                                    {
+                                        "title": "Filtering by prefix, object tag, or access point",
+                                        "href": "metrics-configurations-filter.html"
+                                    },
+                                    {
+                                        "title": "Deleting a metrics filter",
+                                        "href": "delete-request-metrics-filter.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon S3 Event Notifications",
+                        "href": "EventNotifications.html",
+                        "contents": [
+                            {
+                                "title": "Notification types and destinations",
+                                "href": "notification-how-to-event-types-and-destinations.html"
+                            },
+                            {
+                                "title": "Using SQS, SNS, and Lambda",
+                                "href": "how-to-enable-disable-notification-intro.html",
+                                "contents": [
+                                    {
+                                        "title": "Granting permissions",
+                                        "href": "grant-destinations-permissions-to-s3.html"
+                                    },
+                                    {
+                                        "title": "Enabling notifications in the S3 console",
+                                        "href": "enable-event-notifications.html"
+                                    },
+                                    {
+                                        "title": "Walkthrough: Configuring SNS or SQS",
+                                        "href": "ways-to-add-notification-config-to-bucket.html"
+                                    },
+                                    {
+                                        "title": "Configuring notifications using object key name filtering",
+                                        "href": "notification-how-to-filtering.html"
+                                    },
+                                    {
+                                        "title": "Event message structure",
+                                        "href": "notification-content-structure.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using EventBridge",
+                                "href": "EventBridge.html",
+                                "contents": [
+                                    {
+                                        "title": "EventBridge permissions",
+                                        "href": "ev-permissions.html"
+                                    },
+                                    {
+                                        "title": "Enabling EventBridge",
+                                        "href": "enable-event-notifications-eventbridge.html"
+                                    },
+                                    {
+                                        "title": "EventBridge event message structure",
+                                        "href": "ev-events.html"
+                                    },
+                                    {
+                                        "title": "Amazon EventBridge mapping and troubleshooting",
+                                        "href": "ev-mapping-troubleshooting.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Using analytics and insights",
+                "href": "analytics-insights.html",
+                "contents": [
+                    {
+                        "title": "Storage Class Analysis",
+                        "href": "analytics-storage-class.html",
+                        "contents": [
+                            {
+                                "title": "Configuring storage class analysis",
+                                "href": "configure-analytics-storage-class.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "S3 Storage Lens",
+                        "href": "storage_lens.html",
+                        "contents": [
+                            {
+                                "title": "Understanding S3 Storage Lens",
+                                "href": "storage_lens_basics_metrics_recommendations.html"
+                            },
+                            {
+                                "title": "Working with Organizations",
+                                "href": "storage_lens_with_organizations.html"
+                            },
+                            {
+                                "title": "S3 Storage Lens permissions",
+                                "href": "storage_lens_iam_permissions.html"
+                            },
+                            {
+                                "title": "Viewing storage metrics",
+                                "href": "storage_lens_view_metrics.html",
+                                "contents": [
+                                    {
+                                        "title": "Viewing metrics on the dashboards",
+                                        "href": "storage_lens_view_metrics_dashboard.html"
+                                    },
+                                    {
+                                        "title": "Viewing metrics in a data export",
+                                        "href": "storage_lens_view_metrics_export.html",
+                                        "contents": [
+                                            {
+                                                "title": "Encrypting metrics exports",
+                                                "href": "storage_lens_encrypt_permissions.html"
+                                            },
+                                            {
+                                                "title": "What is an export manifest?",
+                                                "href": "storage_lens_whatis_metrics_export_manifest.html"
+                                            },
+                                            {
+                                                "title": "S3 Storage Lens export schema",
+                                                "href": "storage_lens_understanding_metrics_export_schema.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Monitor S3 Storage Lens metrics in CloudWatch",
+                                        "href": "storage_lens_view_metrics_cloudwatch.html",
+                                        "contents": [
+                                            {
+                                                "title": "S3 Storage Lens metrics and dimensions",
+                                                "href": "storage-lens-cloudwatch-metrics-dimensions.html"
+                                            },
+                                            {
+                                                "title": "Enabling CloudWatch publishing",
+                                                "href": "storage-lens-cloudwatch-enable-publish-option.html"
+                                            },
+                                            {
+                                                "title": "Using CloudWatch",
+                                                "href": "storage-lens-cloudwatch-monitoring-cloudwatch.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Amazon S3 Storage Lens metrics use cases",
+                                "href": "storage-lens-use-cases.html",
+                                "contents": [
+                                    {
+                                        "title": "For cost optimization",
+                                        "href": "storage-lens-optimize-storage.html"
+                                    },
+                                    {
+                                        "title": "For data protection",
+                                        "href": "storage-lens-data-protection.html"
+                                    },
+                                    {
+                                        "title": "For Object Ownership",
+                                        "href": "storage-lens-access-management.html"
+                                    },
+                                    {
+                                        "title": "For performance",
+                                        "href": "storage-lens-detailed-status-code.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Metrics glossary",
+                                "href": "storage_lens_metrics_glossary.html"
+                            },
+                            {
+                                "title": "Working with S3 Storage Lens",
+                                "href": "S3LensExamples.html",
+                                "contents": [
+                                    {
+                                        "title": "Using the S3 console",
+                                        "href": "storage_lens_console.html",
+                                        "contents": [
+                                            {
+                                                "title": "Creating and updating dashboards",
+                                                "href": "storage_lens_console_creating_editing.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Creating a dashboard",
+                                                        "href": "storage_lens_console_creating.html"
+                                                    },
+                                                    {
+                                                        "title": "Updating a dashboard",
+                                                        "href": "storage_lens_console_editing.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Disabling or deleting a dashboard",
+                                                "href": "storage_lens_console_disabling_deleting.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Disabling a dashboard",
+                                                        "href": "storage_lens_console_disabling.html"
+                                                    },
+                                                    {
+                                                        "title": "Deleting a dashboard",
+                                                        "href": "storage_lens_console_deleting.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Working with AWS Organizations",
+                                                "href": "storage_lens_console_organizations.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Enabling trusted access in your organization",
+                                                        "href": "storage_lens_console_organizations_enabling_trusted_access.html"
+                                                    },
+                                                    {
+                                                        "title": "Disabling trusted access in your organization",
+                                                        "href": "storage_lens_console_organizations_disabling_trusted_access.html"
+                                                    },
+                                                    {
+                                                        "title": "Registering delegated admins",
+                                                        "href": "storage_lens_console_organizations_registering_delegated_admins.html"
+                                                    },
+                                                    {
+                                                        "title": "Deregistering delegated admins",
+                                                        "href": "storage_lens_console_organizations_deregistering_delegated_admins.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Using the AWS CLI",
+                                        "href": "S3LensCLIExamples.html"
+                                    },
+                                    {
+                                        "title": "Using the SDK for Java",
+                                        "href": "S3LensJavaExamples.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tracing requests using X-Ray",
+                        "href": "tracing_requests_using_xray.html"
+                    }
+                ]
+            },
+            {
+                "title": "Hosting a static website",
+                "href": "WebsiteHosting.html",
+                "contents": [
+                    {
+                        "title": "Website endpoints",
+                        "href": "WebsiteEndpoints.html"
+                    },
+                    {
+                        "title": "Enabling website hosting",
+                        "href": "EnableWebsiteHosting.html"
+                    },
+                    {
+                        "title": "Configuring an index document",
+                        "href": "IndexDocumentSupport.html"
+                    },
+                    {
+                        "title": "Configuring a custom error document",
+                        "href": "CustomErrorDocSupport.html"
+                    },
+                    {
+                        "title": "Setting permissions for website access",
+                        "href": "WebsiteAccessPermissionsReqd.html"
+                    },
+                    {
+                        "title": "Logging web traffic",
+                        "href": "LoggingWebsiteTraffic.html"
+                    },
+                    {
+                        "title": "Configuring a redirect",
+                        "href": "how-to-page-redirect.html"
+                    }
+                ]
+            },
+            {
+                "title": "Developing with Amazon S3",
+                "href": "developing-s3.html",
+                "contents": [
+                    {
+                        "title": "Making requests",
+                        "href": "MakingRequests.html",
+                        "contents": [
+                            {
+                                "title": "Making requests over IPv6",
+                                "href": "ipv6-access.html",
+                                "contents": [
+                                    {
+                                        "title": "Using dual-stack endpoints",
+                                        "href": "dual-stack-endpoints.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Making requests using the AWS SDKs",
+                                "href": "MakingAuthenticatedRequests.html",
+                                "contents": [
+                                    {
+                                        "title": "Using AWS account or IAM user credentials",
+                                        "href": "AuthUsingAcctOrUserCredentials.html"
+                                    },
+                                    {
+                                        "title": "Using IAM user temporary credentials",
+                                        "href": "AuthUsingTempSessionToken.html"
+                                    },
+                                    {
+                                        "title": "Using federated user temporary credentials",
+                                        "href": "AuthUsingTempFederationToken.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Making requests using the REST API",
+                                "href": "RESTAPI.html",
+                                "contents": [
+                                    {
+                                        "title": "Virtual hosting of buckets",
+                                        "href": "VirtualHosting.html"
+                                    },
+                                    {
+                                        "title": "Request redirection and the REST API",
+                                        "href": "RESTRedirect.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using the AWS CLI",
+                        "href": "setup-aws-cli.html"
+                    },
+                    {
+                        "title": "Using the AWS SDKs",
+                        "href": "UsingAWSSDK.html",
+                        "contents": [
+                            {
+                                "title": "Using the AWS SDK for Java",
+                                "href": "UsingTheMPJavaAPI.html"
+                            },
+                            {
+                                "title": "Using the AWS SDK for .NET",
+                                "href": "UsingTheMPDotNetAPI.html"
+                            },
+                            {
+                                "title": "Using the AWS SDK for PHP and Running PHP Examples",
+                                "href": "UsingTheMPphpAPI.html"
+                            },
+                            {
+                                "title": "Using the AWS SDK for Ruby - Version 3",
+                                "href": "UsingTheMPRubyAPI.html"
+                            },
+                            {
+                                "title": "Using the AWS SDK for Python (Boto)",
+                                "href": "UsingTheBotoAPI.html"
+                            },
+                            {
+                                "title": "Using the AWS Mobile SDKs for iOS and Android",
+                                "href": "using-mobile-sdks.html"
+                            },
+                            {
+                                "title": "Using the AWS Amplify JavaScript Library",
+                                "href": "using-aws-amplify.html"
+                            },
+                            {
+                                "title": "Using the AWS SDK for JavaScript",
+                                "href": "using-aws-javascript.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using the REST API",
+                        "href": "developing-rest-api.html",
+                        "contents": [
+                            {
+                                "title": "Request routing",
+                                "href": "UsingRouting.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Error handling",
+                        "href": "HandlingErrors.html",
+                        "contents": [
+                            {
+                                "title": "The REST error response",
+                                "href": "UsingRESTError.html"
+                            },
+                            {
+                                "title": "The SOAP error response",
+                                "href": "UsingSOAPError.html"
+                            },
+                            {
+                                "title": "Amazon S3 error best practices",
+                                "href": "ErrorBestPractices.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Reference",
+                        "href": "Appendices.html",
+                        "contents": [
+                            {
+                                "title": "Appendix a: Using the SOAP API",
+                                "href": "SOAPAPI3.html",
+                                "contents": [
+                                    {
+                                        "title": "Common SOAP API elements",
+                                        "href": "UsingSOAPOperations.html"
+                                    },
+                                    {
+                                        "title": "Authenticating SOAP requests",
+                                        "href": "SOAPAuthentication.html"
+                                    },
+                                    {
+                                        "title": "Setting access policy with SOAP",
+                                        "href": "SOAPAccessPolicy.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Appendix b: Authenticating requests (AWS signature version 2)",
+                                "href": "auth-request-sig-v2.html",
+                                "contents": [
+                                    {
+                                        "title": "Authenticating requests using the REST API",
+                                        "href": "S3_Authentication2.html"
+                                    },
+                                    {
+                                        "title": "Signing and authenticating REST requests",
+                                        "href": "RESTAuthentication.html"
+                                    },
+                                    {
+                                        "title": "Browser-based uploads using POST",
+                                        "href": "UsingHTTPPOST.html",
+                                        "contents": [
+                                            {
+                                                "title": "HTML forms",
+                                                "href": "HTTPPOSTForms.html"
+                                            },
+                                            {
+                                                "title": "Upload examples",
+                                                "href": "HTTPPOSTExamples.html"
+                                            },
+                                            {
+                                                "title": "POST with adobe flash",
+                                                "href": "HTTPPOSTFlash.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Optimizing Amazon S3 performance",
+                "href": "optimizing-performance.html",
+                "contents": [
+                    {
+                        "title": "Performance Guidelines",
+                        "href": "optimizing-performance-guidelines.html"
+                    },
+                    {
+                        "title": "Performance Design Patterns",
+                        "href": "optimizing-performance-design-patterns.html"
+                    }
+                ]
+            },
+            {
+                "title": "What is S3 on Outposts?",
+                "href": "S3onOutposts.html",
+                "contents": [
+                    {
+                        "title": "Setting up your Outpost",
+                        "href": "OrderOutposts.html"
+                    },
+                    {
+                        "title": "How S3 on Outposts is different",
+                        "href": "S3OnOutpostsRestrictionsLimitations.html"
+                    },
+                    {
+                        "title": "Getting started with S3 on Outposts",
+                        "href": "S3OutpostsGS.html",
+                        "contents": [
+                            {
+                                "title": "Setting up IAM",
+                                "href": "S3OutpostsIAM.html"
+                            },
+                            {
+                                "title": "Using the S3 console",
+                                "href": "S3OutpostsGSConsole.html"
+                            },
+                            {
+                                "title": "Using the AWS CLI and SDK for Java",
+                                "href": "S3OutpostsGSCLIJava.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Networking for S3 on Outposts",
+                        "href": "S3OutpostsNetworking.html"
+                    },
+                    {
+                        "title": "Working with S3 on Outposts buckets",
+                        "href": "S3OutpostsWorkingBuckets.html",
+                        "contents": [
+                            {
+                                "title": "Creating a bucket",
+                                "href": "S3OutpostsCreateBucket.html"
+                            },
+                            {
+                                "title": "Adding tags",
+                                "href": "S3OutpostsBucketTags.html"
+                            },
+                            {
+                                "title": "Using bucket policies",
+                                "href": "S3OutpostsBucketPolicy.html",
+                                "contents": [
+                                    {
+                                        "title": "Adding a bucket policy",
+                                        "href": "S3OutpostsBucketPolicyEdit.html"
+                                    },
+                                    {
+                                        "title": "Viewing a bucket policy",
+                                        "href": "S3OutpostsBucketPolicyGet.html"
+                                    },
+                                    {
+                                        "title": "Deleting a bucket policy",
+                                        "href": "S3OutpostsBucketPolicyDelete.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Listing buckets",
+                                "href": "S3OutpostsListBuckets.html"
+                            },
+                            {
+                                "title": "Getting a bucket",
+                                "href": "S3OutpostsGetBucket.html"
+                            },
+                            {
+                                "title": "Deleting your bucket",
+                                "href": "S3OutpostsDeleteBucket.html"
+                            },
+                            {
+                                "title": "Working with access points",
+                                "href": "S3OutpostsAccessPoints.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating an access point",
+                                        "href": "S3OutpostsCreateAccessPoint.html"
+                                    },
+                                    {
+                                        "title": "Using a bucket-style alias for your access point",
+                                        "href": "s3-outposts-access-points-alias.html"
+                                    },
+                                    {
+                                        "title": "Viewing access point configuration",
+                                        "href": "S3OutpostsAccessPointGet.html"
+                                    },
+                                    {
+                                        "title": "Listing access points",
+                                        "href": "S3OutpostsAccessPointList.html"
+                                    },
+                                    {
+                                        "title": "Deleting an access point",
+                                        "href": "S3OutpostsAccessPointsDelete.html"
+                                    },
+                                    {
+                                        "title": "Adding an access point policy",
+                                        "href": "S3OutpostsAccessPointEditPolicy.html"
+                                    },
+                                    {
+                                        "title": "Viewing an access point policy",
+                                        "href": "S3OutpostsAccessPointGetPolicy.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Working with endpoints",
+                                "href": "S3OutpostsEndpointsWorking.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating an endpoint",
+                                        "href": "S3OutpostsCreateEndpoint.html"
+                                    },
+                                    {
+                                        "title": "Listing endpoints",
+                                        "href": "S3OutpostsListEndpoints.html"
+                                    },
+                                    {
+                                        "title": "Deleting an endpoint",
+                                        "href": "S3OutpostsDeleteEndpoints.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with S3 on Outposts objects",
+                        "href": "S3OutpostsWorkingObjects.html",
+                        "contents": [
+                            {
+                                "title": "Copying an object",
+                                "href": "S3OutpostsCopyObject.html"
+                            },
+                            {
+                                "title": "Getting an object",
+                                "href": "S3OutpostsGetObject.html"
+                            },
+                            {
+                                "title": "Listing objects",
+                                "href": "S3OutpostsListObjects.html"
+                            },
+                            {
+                                "title": "Deleting objects",
+                                "href": "S3OutpostsDeleteObject.html"
+                            },
+                            {
+                                "title": "Using HeadBucket",
+                                "href": "S3OutpostsHeadBucket.html"
+                            },
+                            {
+                                "title": "Performing a multipart upload",
+                                "href": "S3OutpostsMPU.html"
+                            },
+                            {
+                                "title": "Using presigned URLs",
+                                "href": "S3OutpostsPresignedURL.html",
+                                "contents": [
+                                    {
+                                        "title": "Sharing objects",
+                                        "href": "S3OutpostsShareObjectPresignedURL.html"
+                                    },
+                                    {
+                                        "title": "Uploading an object",
+                                        "href": "S3OutpostsPresignedUrlUploadObject.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Security",
+                        "href": "s3outposts-security.html",
+                        "contents": [
+                            {
+                                "title": "Data encryption",
+                                "href": "s3-outposts-data-encryption.html"
+                            },
+                            {
+                                "title": "AWS PrivateLink for S3 on Outposts",
+                                "href": "s3-outposts-privatelink-interface-endpoints.html"
+                            },
+                            {
+                                "title": "Signature Version 4 (SigV4) policy keys",
+                                "href": "s3-outposts-bucket-policy-s3-sigv4-conditions.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "s3-outposts-aws-manpol.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "S3OutpostsServiceLinkedRoles.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing S3 on Outposts storage",
+                        "href": "S3OutpostsManaging.html",
+                        "contents": [
+                            {
+                                "title": "Managing S3 Versioning",
+                                "href": "S3OutpostsManagingVersioning.html"
+                            },
+                            {
+                                "title": "Creating and managing a lifecycle configuration",
+                                "href": "S3OutpostsLifecycleManaging.html",
+                                "contents": [
+                                    {
+                                        "title": "Using the console",
+                                        "href": "S3OutpostsLifecycleConsole.html"
+                                    },
+                                    {
+                                        "title": "Using the AWS CLI and SDK for Java",
+                                        "href": "S3OutpostsLifecycleCLIJava.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Replicating objects for S3 on Outposts",
+                                "href": "S3OutpostsReplication.html",
+                                "contents": [
+                                    {
+                                        "title": "Setting up replication",
+                                        "href": "outposts-replication-how-setup.html",
+                                        "contents": [
+                                            {
+                                                "title": "Prerequisites for creating replication rules",
+                                                "href": "outposts-replication-prerequisites-config.html"
+                                            },
+                                            {
+                                                "title": "Creating replication rules on Outposts",
+                                                "href": "replication-between-outposts.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Managing your replication",
+                                        "href": "manage-outposts-replication.html",
+                                        "contents": [
+                                            {
+                                                "title": "Using EventBridge",
+                                                "href": "outposts-replication-eventbridge.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Sharing S3 on Outposts",
+                                "href": "outposts-sharing-with-ram.html"
+                            },
+                            {
+                                "title": "Other services",
+                                "href": "S3OutpostsOtherServices.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Monitoring S3 on Outposts",
+                        "href": "S3OutpostsMonitoring.html",
+                        "contents": [
+                            {
+                                "title": "CloudWatch metrics",
+                                "href": "S3OutpostsCapacity.html"
+                            },
+                            {
+                                "title": "Amazon CloudWatch Events",
+                                "href": "S3OutpostsNotificationsCWE.html"
+                            },
+                            {
+                                "title": "CloudTrail logs",
+                                "href": "S3OutpostsCloudtrail.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Developing with S3 on Outposts",
+                        "href": "S3OutpostsDeveloping.html",
+                        "contents": [
+                            {
+                                "title": "S3 on Outposts APIs",
+                                "href": "S3OutpostsAPI.html"
+                            },
+                            {
+                                "title": "Configuring S3 control client",
+                                "href": "S3OutpostsCongfigureS3ControlClientJava.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Code examples",
+                "href": "service_code_examples.html",
+                "contents": [
+                    {
+                        "title": "Actions",
+                        "href": "service_code_examples_actions.html",
+                        "contents": [
+                            {
+                                "title": "Add CORS rules to a bucket",
+                                "href": "example_s3_PutBucketCors_section.html"
+                            },
+                            {
+                                "title": "Add a lifecycle configuration to a bucket",
+                                "href": "example_s3_PutBucketLifecycleConfiguration_section.html"
+                            },
+                            {
+                                "title": "Add a policy to a bucket",
+                                "href": "example_s3_PutBucketPolicy_section.html"
+                            },
+                            {
+                                "title": "Cancel multipart uploads",
+                                "href": "example_s3_CancelMultipartUpload_section.html"
+                            },
+                            {
+                                "title": "Complete a multipart upload",
+                                "href": "example_s3_CompleteMultipartUpload_section.html"
+                            },
+                            {
+                                "title": "Copy an object from one bucket to another",
+                                "href": "example_s3_CopyObject_section.html"
+                            },
+                            {
+                                "title": "Create a bucket",
+                                "href": "example_s3_CreateBucket_section.html"
+                            },
+                            {
+                                "title": "Create a multipart upload",
+                                "href": "example_s3_CreateMultipartUpload_section.html"
+                            },
+                            {
+                                "title": "Delete CORS rules from a bucket",
+                                "href": "example_s3_DeleteBucketCors_section.html"
+                            },
+                            {
+                                "title": "Delete a policy from a bucket",
+                                "href": "example_s3_DeleteBucketPolicy_section.html"
+                            },
+                            {
+                                "title": "Delete an empty bucket",
+                                "href": "example_s3_DeleteBucket_section.html"
+                            },
+                            {
+                                "title": "Delete an object",
+                                "href": "example_s3_DeleteObject_section.html"
+                            },
+                            {
+                                "title": "Delete multiple objects",
+                                "href": "example_s3_DeleteObjects_section.html"
+                            },
+                            {
+                                "title": "Delete the lifecycle configuration of a bucket",
+                                "href": "example_s3_DeleteBucketLifecycle_section.html"
+                            },
+                            {
+                                "title": "Delete the website configuration from a bucket",
+                                "href": "example_s3_DeleteBucketWebsite_section.html"
+                            },
+                            {
+                                "title": "Determine the existence and content type of an object",
+                                "href": "example_s3_HeadObject_section.html"
+                            },
+                            {
+                                "title": "Determine the existence of a bucket",
+                                "href": "example_s3_HeadBucket_section.html"
+                            },
+                            {
+                                "title": "Download objects to a local directory",
+                                "href": "example_s3_DownloadBucketToDirectory_section.html"
+                            },
+                            {
+                                "title": "Enable logging",
+                                "href": "example_s3_ServiceAccessLogging_section.html"
+                            },
+                            {
+                                "title": "Enable notifications",
+                                "href": "example_s3_PutBucketNotification_section.html"
+                            },
+                            {
+                                "title": "Enable transfer acceleration",
+                                "href": "example_s3_TransferAcceleration_section.html"
+                            },
+                            {
+                                "title": "Get CORS rules for a bucket",
+                                "href": "example_s3_GetBucketCors_section.html"
+                            },
+                            {
+                                "title": "Get an object from a bucket",
+                                "href": "example_s3_GetObject_section.html"
+                            },
+                            {
+                                "title": "Get an object from a bucket if it has been modified",
+                                "href": "example_s3_GetObject_IfModifiedSince_section.html"
+                            },
+                            {
+                                "title": "Get the ACL of a bucket",
+                                "href": "example_s3_GetBucketAcl_section.html"
+                            },
+                            {
+                                "title": "Get the ACL of an object",
+                                "href": "example_s3_GetObjectAcl_section.html"
+                            },
+                            {
+                                "title": "Get the Region location for a bucket",
+                                "href": "example_s3_GetBucketLocation_section.html"
+                            },
+                            {
+                                "title": "Get the lifecycle configuration of a bucket",
+                                "href": "example_s3_GetBucketLifecycleConfiguration_section.html"
+                            },
+                            {
+                                "title": "Get the policy for a bucket",
+                                "href": "example_s3_GetBucketPolicy_section.html"
+                            },
+                            {
+                                "title": "Get the website configuration for a bucket",
+                                "href": "example_s3_GetBucketWebsite_section.html"
+                            },
+                            {
+                                "title": "List buckets",
+                                "href": "example_s3_ListBuckets_section.html"
+                            },
+                            {
+                                "title": "List in-progress multipart uploads",
+                                "href": "example_s3_ListMultipartUploads_section.html"
+                            },
+                            {
+                                "title": "List object versions in a bucket",
+                                "href": "example_s3_ListObjectVersions_section.html"
+                            },
+                            {
+                                "title": "List objects in a bucket",
+                                "href": "example_s3_ListObjects_section.html"
+                            },
+                            {
+                                "title": "Restore an archived copy of an object",
+                                "href": "example_s3_RestoreObject_section.html"
+                            },
+                            {
+                                "title": "Set a new ACL for a bucket",
+                                "href": "example_s3_PutBucketAcl_section.html"
+                            },
+                            {
+                                "title": "Set the ACL of an object",
+                                "href": "example_s3_PutObjectAcl_section.html"
+                            },
+                            {
+                                "title": "Set the website configuration for a bucket",
+                                "href": "example_s3_PutBucketWebsite_section.html"
+                            },
+                            {
+                                "title": "Unit and integration test with an SDK",
+                                "href": "example_cross_Testing_section.html"
+                            },
+                            {
+                                "title": "Upload a single part of a multipart upload",
+                                "href": "example_s3_UploadPart_section.html"
+                            },
+                            {
+                                "title": "Upload an object to a bucket",
+                                "href": "example_s3_PutObject_section.html"
+                            },
+                            {
+                                "title": "Upload directory to a bucket",
+                                "href": "example_s3_UploadDirectoryToBucket_section.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Scenarios",
+                        "href": "service_code_examples_scenarios.html",
+                        "contents": [
+                            {
+                                "title": "Create a presigned URL",
+                                "href": "example_s3_Scenario_PresignedUrl_section.html"
+                            },
+                            {
+                                "title": "Create a web page that lists Amazon S3 objects",
+                                "href": "example_s3_Scenario_ListObjectsWeb_section.html"
+                            },
+                            {
+                                "title": "Get started with buckets and objects",
+                                "href": "example_s3_Scenario_GettingStarted_section.html"
+                            },
+                            {
+                                "title": "Get started with encryption",
+                                "href": "example_s3_Encryption_section.html"
+                            },
+                            {
+                                "title": "Get started with tags",
+                                "href": "example_s3_Scenario_Tagging_section.html"
+                            },
+                            {
+                                "title": "Manage access control lists (ACLs)",
+                                "href": "example_s3_Scenario_ManageACLs_section.html"
+                            },
+                            {
+                                "title": "Manage versioned objects in batches with a Lambda function",
+                                "href": "example_s3_Scenario_BatchObjectVersioning_section.html"
+                            },
+                            {
+                                "title": "Parse URIs",
+                                "href": "example_s3_Scenario_URIParsing_section.html"
+                            },
+                            {
+                                "title": "Perform a multipart copy",
+                                "href": "example_s3_MultipartCopy_section.html"
+                            },
+                            {
+                                "title": "Perform a multipart upload",
+                                "href": "example_s3_Scenario_MultipartUpload_section.html"
+                            },
+                            {
+                                "title": "Upload or download large files",
+                                "href": "example_s3_Scenario_UsingLargeFiles_section.html"
+                            },
+                            {
+                                "title": "Upload stream of unknown size",
+                                "href": "example_s3_Scenario_UploadStream_section.html"
+                            },
+                            {
+                                "title": "Use checksums",
+                                "href": "example_s3_Scenario_UseChecksums_section.html"
+                            },
+                            {
+                                "title": "Work with versioned objects",
+                                "href": "example_s3_Scenario_ObjectVersioningUsage_section.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Serverless examples",
+                        "href": "service_code_examples_serverless_examples.html",
+                        "contents": [
+                            {
+                                "title": "Invoke a Lambda function from an Amazon S3 trigger",
+                                "href": "example_serverless_S3_Lambda_section.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Cross-service examples",
+                        "href": "service_code_examples_cross-service_examples.html",
+                        "contents": [
+                            {
+                                "title": "Build an Amazon Transcribe app",
+                                "href": "example_cross_TranscriptionApp_section.html"
+                            },
+                            {
+                                "title": "Convert text to speech and back to text",
+                                "href": "example_cross_Telephone_section.html"
+                            },
+                            {
+                                "title": "Create a serverless application to manage photos",
+                                "href": "example_cross_PAM_section.html"
+                            },
+                            {
+                                "title": "Create an Amazon Textract explorer application",
+                                "href": "example_cross_TextractExplorer_section.html"
+                            },
+                            {
+                                "title": "Detect PPE in images",
+                                "href": "example_cross_RekognitionPhotoAnalyzerPPE_section.html"
+                            },
+                            {
+                                "title": "Detect entities in text extracted from an image",
+                                "href": "example_cross_TextractComprehendDetectEntities_section.html"
+                            },
+                            {
+                                "title": "Detect faces in an image",
+                                "href": "example_cross_DetectFaces_section.html"
+                            },
+                            {
+                                "title": "Detect objects in images",
+                                "href": "example_cross_RekognitionPhotoAnalyzer_section.html"
+                            },
+                            {
+                                "title": "Detect people and objects in a video",
+                                "href": "example_cross_RekognitionVideoDetection_section.html"
+                            },
+                            {
+                                "title": "Save EXIF and other image information",
+                                "href": "example_cross_DetectLabels_section.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Troubleshoot Access Denied (403 Forbidden) errors",
+                        "href": "troubleshoot-403-errors.html"
+                    },
+                    {
+                        "title": "Troubleshoot Batch Operations",
+                        "href": "troubleshooting-batch-operations.html"
+                    },
+                    {
+                        "title": "Troubleshoot CORS",
+                        "href": "cors-troubleshooting.html"
+                    },
+                    {
+                        "title": "Troubleshoot lifecycle issues",
+                        "href": "troubleshoot-lifecycle.html"
+                    },
+                    {
+                        "title": "Troubleshoot replication",
+                        "href": "replication-troubleshoot.html"
+                    },
+                    {
+                        "title": "Troubleshoot server access logging",
+                        "href": "troubleshooting-server-access-logging.html"
+                    },
+                    {
+                        "title": "Troubleshoot versioning",
+                        "href": "troubleshooting-versioning.html"
+                    },
+                    {
+                        "title": "Get Amazon S3 request IDs for AWS Support",
+                        "href": "get-request-ids.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "WhatsNew.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

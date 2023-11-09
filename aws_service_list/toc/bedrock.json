@@ -1,1 +1,454 @@
-{ "contents" : [ { "title" : "What is Amazon Bedrock?", "href" : "what-is-bedrock.html" }, { "title" : "Set up", "href" : "setting-up.html" }, { "title" : "Model access", "href" : "model-access.html" }, { "title" : "Settings", "href" : "settings.html" }, { "title" : "Use the console", "href" : "using-console.html", "contents" : [ { "title" : "Base models", "href" : "foundation-models.html" }, { "title" : "Text playground", "href" : "text-playground.html" }, { "title" : "Chat playground", "href" : "chat-playground.html" }, { "title" : "Image playground", "href" : "image-playground.html" }, { "title" : "Examples library", "href" : "examples.html" } ] }, { "title" : "Use the API", "href" : "using-api.html", "contents" : [ { "title" : "API setup", "href" : "api-setup.html" }, { "title" : "API operations", "href" : "api-methods.html", "contents" : [ { "title" : "List the base models", "href" : "api-methods-list.html" }, { "title" : "Get details about a base model", "href" : "api-methods-getfm.html" }, { "title" : "Run inference", "href" : "api-methods-run.html", "contents" : [ { "title" : "Running inference on a model", "href" : "api-methods-run-inference.html" }, { "title" : "Base model IDs", "href" : "model-ids-arns.html" } ] }, { "title" : "Tag resources", "href" : "api-methods-tag.html" } ] } ] }, { "title" : "Inference parameters", "href" : "model-parameters.html" }, { "title" : "Prompt engineering guidelines", "href" : "prompt-engineering-guidelines.html", "contents" : [ { "title" : "Introduction", "href" : "introduction.html" }, { "title" : "What is a prompt?", "href" : "what-is-a-prompt.html" }, { "title" : "What is prompt engineering?", "href" : "what-is-prompt-engineering.html" }, { "title" : "General guidelines for Amazon Bedrock LLM users", "href" : "general-guidelines-for-bedrock-users.html" }, { "title" : "Prompt templates and examples for Amazon Bedrock text models", "href" : "prompt-templates-and-examples.html" } ] }, { "title" : "Embeddings", "href" : "embeddings.html" }, { "title" : "Custom models", "href" : "custom-models.html", "contents" : [ { "title" : "Fine-tuning", "href" : "fine-tuning.html" }, { "title" : "Prepare the datasets", "href" : "model-customization-prepare.html" }, { "title" : "Using the console", "href" : "model-customization-console.html", "contents" : [ { "title" : "Submit a job", "href" : "model-customization-submit.html" }, { "title" : "Monitor the job", "href" : "model-customization-monitor.html" }, { "title" : "Stop a job", "href" : "model-customization-stop.html" }, { "title" : "Analyze the job results", "href" : "model-customization-analyze.html" }, { "title" : "Use a fine-tuned model for inference", "href" : "model-customization-inference.html" } ] }, { "title" : "Using the API", "href" : "model-customization-api.html", "contents" : [ { "title" : "Set up an IAM role for model customization", "href" : "model-customization-iam-role.html" }, { "title" : "Submit a job", "href" : "model-customization-submit-api.html" }, { "title" : "Monitor a job", "href" : "model-customization-monitor-api.html" }, { "title" : "Stop a job", "href" : "model-customization-stop-api.html" }, { "title" : "Analyze a job", "href" : "model-customization-analyze-api.html" }, { "title" : "Retrieve information about your customized models", "href" : "model-customization-retrieve-api.html" } ] }, { "title" : "Guidelines", "href" : "model-customization-guidelines.html" }, { "title" : "Troubleshooting", "href" : "fine-tuning-troubleshooting.html" } ] }, { "title" : "Provisioned Throughput", "href" : "prov-throughput.html", "contents" : [ { "title" : "Model IDs", "href" : "prov-throughput-models.html" }, { "title" : "Procedures", "href" : "prov-thru-workflow.html" }, { "title" : "Permissions", "href" : "prov-thru-permissions.html" }, { "title" : "Console procedures", "href" : "prov-cap-console.html" }, { "title" : "API operations", "href" : "prov-thru-api.html" } ] }, { "title" : "Agents for Amazon Bedrock", "href" : "agents.html", "contents" : [ { "title" : "Building a knowledge base", "href" : "knowledge-base.html", "contents" : [ { "title" : "Create a service role and configure IAM permissions", "href" : "knowledge-base-permissions.html" }, { "title" : "Set up your data for ingestion", "href" : "knowledge-base-setup.html", "contents" : [ { "title" : "Create a vector index in Amazon OpenSearch Service", "href" : "knowledge-base-setup-oss.html" }, { "title" : "Create a vector index in Pinecone", "href" : "knowledge-base-setup-pinecone.html" }, { "title" : "Create a vector index in Redis Enterprise Cloud", "href" : "knowledge-base-setup-redis.html" } ] }, { "title" : "Create a knowledge base", "href" : "knowledge-base-create.html" }, { "title" : "Manage a knowledge base", "href" : "knowledge-base-manage.html" }, { "title" : "Add a knowledge base to an agent", "href" : "knowledge-base-add.html" } ] }, { "title" : "Building an agent", "href" : "agents-build.html", "contents" : [ { "title" : "Create a service role and configure IAM permissions", "href" : "agents-permissions.html" }, { "title" : "Create an agent", "href" : "agents-create.html" }, { "title" : "Edit your agent", "href" : "agents-edit.html" } ] }, { "title" : "Test your agent", "href" : "agents-test.html" }, { "title" : "Deploying an agent: versioning and aliases", "href" : "agents-deploy.html" }, { "title" : "Using the API", "href" : "agents-using-api.html" }, { "title" : "How Bedrock Agent works with IAM", "href" : "security_iam_service-with-iam-agent.html", "contents" : [ { "title" : "Identity-based policy examples for Bedrock Agent", "href" : "security_iam_id-based-policy-examples-agent.html" } ] } ] }, { "title" : "Tag resources", "href" : "tagging.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Data encryption", "href" : "data-encryption.html", "contents" : [ { "title" : "Encryption of model customization jobs", "href" : "encryption-custom-job.html" } ] }, { "title" : "Use VPC", "href" : "usingVPC.html" } ] }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon Bedrock works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Incident response", "href" : "security-incident-response.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Configuration and vulnerability analysis in Amazon Bedrock", "href" : "vulnerability-analysis-and-management.html" } ] }, { "title" : "Monitor Amazon Bedrock", "href" : "monitoring.html", "contents" : [ { "title" : "Monitor with CloudWatch", "href" : "monitoring-cw.html", "contents" : [ { "title" : "Logging CloudWatch metrics", "href" : "logging-cloudwatch-metrics.html" } ] }, { "title" : "Monitor events", "href" : "monitoring-eventbridge.html" }, { "title" : "CloudTrail logs", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Abuse detection", "href" : "abuse-detection.html" }, { "title" : "AWS PrivateLink", "href" : "vpc-interface-endpoints.html" }, { "title" : "Quotas", "href" : "quotas.html" }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/",
+    "service": "bedrock",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon Bedrock?",
+                "href": "what-is-bedrock.html"
+            },
+            {
+                "title": "Set up",
+                "href": "setting-up.html"
+            },
+            {
+                "title": "Model access",
+                "href": "model-access.html"
+            },
+            {
+                "title": "Settings",
+                "href": "settings.html"
+            },
+            {
+                "title": "Use the console",
+                "href": "using-console.html",
+                "contents": [
+                    {
+                        "title": "Base models",
+                        "href": "foundation-models.html"
+                    },
+                    {
+                        "title": "Text playground",
+                        "href": "text-playground.html"
+                    },
+                    {
+                        "title": "Chat playground",
+                        "href": "chat-playground.html"
+                    },
+                    {
+                        "title": "Image playground",
+                        "href": "image-playground.html"
+                    },
+                    {
+                        "title": "Examples library",
+                        "href": "examples.html"
+                    }
+                ]
+            },
+            {
+                "title": "Use the API",
+                "href": "using-api.html",
+                "contents": [
+                    {
+                        "title": "API setup",
+                        "href": "api-setup.html"
+                    },
+                    {
+                        "title": "API operations",
+                        "href": "api-methods.html",
+                        "contents": [
+                            {
+                                "title": "List the base models",
+                                "href": "api-methods-list.html"
+                            },
+                            {
+                                "title": "Get details about a base model",
+                                "href": "api-methods-getfm.html"
+                            },
+                            {
+                                "title": "Run inference",
+                                "href": "api-methods-run.html",
+                                "contents": [
+                                    {
+                                        "title": "Running inference on a model",
+                                        "href": "api-methods-run-inference.html"
+                                    },
+                                    {
+                                        "title": "Base model IDs",
+                                        "href": "model-ids-arns.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Tag resources",
+                                "href": "api-methods-tag.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Inference parameters",
+                "href": "model-parameters.html",
+                "contents": [
+                    {
+                        "title": "Amazon Titan models",
+                        "href": "model-parameters-titan.html"
+                    },
+                    {
+                        "title": "Anthropic Claude models",
+                        "href": "model-parameters-claude.html"
+                    },
+                    {
+                        "title": "AI21 Labs Jurassic-2 models",
+                        "href": "model-parameters-jurassic2.html"
+                    },
+                    {
+                        "title": "Cohere Command model",
+                        "href": "model-parameters-cohere.html"
+                    },
+                    {
+                        "title": "Stability.ai Diffusion models",
+                        "href": "model-parameters-diffusion.html"
+                    }
+                ]
+            },
+            {
+                "title": "Prompt engineering guidelines",
+                "href": "prompt-engineering-guidelines.html",
+                "contents": [
+                    {
+                        "title": "Introduction",
+                        "href": "introduction.html"
+                    },
+                    {
+                        "title": "What is a prompt?",
+                        "href": "what-is-a-prompt.html"
+                    },
+                    {
+                        "title": "What is prompt engineering?",
+                        "href": "what-is-prompt-engineering.html"
+                    },
+                    {
+                        "title": "General guidelines for Amazon Bedrock LLM users",
+                        "href": "general-guidelines-for-bedrock-users.html"
+                    },
+                    {
+                        "title": "Prompt templates and examples for Amazon Bedrock text models",
+                        "href": "prompt-templates-and-examples.html"
+                    }
+                ]
+            },
+            {
+                "title": "Embeddings",
+                "href": "embeddings.html"
+            },
+            {
+                "title": "Custom models",
+                "href": "custom-models.html",
+                "contents": [
+                    {
+                        "title": "Fine-tuning",
+                        "href": "fine-tuning.html"
+                    },
+                    {
+                        "title": "Prepare the datasets",
+                        "href": "model-customization-prepare.html"
+                    },
+                    {
+                        "title": "Using the console",
+                        "href": "model-customization-console.html",
+                        "contents": [
+                            {
+                                "title": "Submit a job",
+                                "href": "model-customization-submit.html"
+                            },
+                            {
+                                "title": "Monitor the job",
+                                "href": "model-customization-monitor.html"
+                            },
+                            {
+                                "title": "Stop a job",
+                                "href": "model-customization-stop.html"
+                            },
+                            {
+                                "title": "Analyze the job results",
+                                "href": "model-customization-analyze.html"
+                            },
+                            {
+                                "title": "Use a fine-tuned model for inference",
+                                "href": "model-customization-inference.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using the API",
+                        "href": "model-customization-api.html",
+                        "contents": [
+                            {
+                                "title": "Set up an IAM role for model customization",
+                                "href": "model-customization-iam-role.html"
+                            },
+                            {
+                                "title": "Submit a job",
+                                "href": "model-customization-submit-api.html"
+                            },
+                            {
+                                "title": "Monitor a job",
+                                "href": "model-customization-monitor-api.html"
+                            },
+                            {
+                                "title": "Stop a job",
+                                "href": "model-customization-stop-api.html"
+                            },
+                            {
+                                "title": "Analyze a job",
+                                "href": "model-customization-analyze-api.html"
+                            },
+                            {
+                                "title": "Retrieve information about your customized models",
+                                "href": "model-customization-retrieve-api.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Guidelines",
+                        "href": "model-customization-guidelines.html"
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "href": "fine-tuning-troubleshooting.html"
+                    }
+                ]
+            },
+            {
+                "title": "Provisioned Throughput",
+                "href": "prov-throughput.html",
+                "contents": [
+                    {
+                        "title": "Model IDs",
+                        "href": "prov-throughput-models.html"
+                    },
+                    {
+                        "title": "Procedures",
+                        "href": "prov-thru-workflow.html"
+                    },
+                    {
+                        "title": "Permissions",
+                        "href": "prov-thru-permissions.html"
+                    },
+                    {
+                        "title": "Console procedures",
+                        "href": "prov-cap-console.html"
+                    },
+                    {
+                        "title": "API operations",
+                        "href": "prov-thru-api.html"
+                    }
+                ]
+            },
+            {
+                "title": "Agents for Amazon Bedrock",
+                "href": "agents.html",
+                "contents": [
+                    {
+                        "title": "Building a knowledge base",
+                        "href": "knowledge-base.html",
+                        "contents": [
+                            {
+                                "title": "Create a service role and configure IAM permissions",
+                                "href": "knowledge-base-permissions.html"
+                            },
+                            {
+                                "title": "Set up your data for ingestion",
+                                "href": "knowledge-base-setup.html",
+                                "contents": [
+                                    {
+                                        "title": "Create a vector index in Amazon OpenSearch Service",
+                                        "href": "knowledge-base-setup-oss.html"
+                                    },
+                                    {
+                                        "title": "Create a vector index in Pinecone",
+                                        "href": "knowledge-base-setup-pinecone.html"
+                                    },
+                                    {
+                                        "title": "Create a vector index in Redis Enterprise Cloud",
+                                        "href": "knowledge-base-setup-redis.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Create a knowledge base",
+                                "href": "knowledge-base-create.html"
+                            },
+                            {
+                                "title": "Manage a knowledge base",
+                                "href": "knowledge-base-manage.html"
+                            },
+                            {
+                                "title": "Add a knowledge base to an agent",
+                                "href": "knowledge-base-add.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Building an agent",
+                        "href": "agents-build.html",
+                        "contents": [
+                            {
+                                "title": "Create a service role and configure IAM permissions",
+                                "href": "agents-permissions.html"
+                            },
+                            {
+                                "title": "Create an agent",
+                                "href": "agents-create.html"
+                            },
+                            {
+                                "title": "Edit your agent",
+                                "href": "agents-edit.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Test your agent",
+                        "href": "agents-test.html"
+                    },
+                    {
+                        "title": "Deploying an agent: versioning and aliases",
+                        "href": "agents-deploy.html"
+                    },
+                    {
+                        "title": "Using the API",
+                        "href": "agents-using-api.html"
+                    },
+                    {
+                        "title": "How Bedrock Agent works with IAM",
+                        "href": "security_iam_service-with-iam-agent.html",
+                        "contents": [
+                            {
+                                "title": "Identity-based policy examples for Bedrock Agent",
+                                "href": "security_iam_id-based-policy-examples-agent.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tag resources",
+                "href": "tagging.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Data encryption",
+                                "href": "data-encryption.html",
+                                "contents": [
+                                    {
+                                        "title": "Encryption of model customization jobs",
+                                        "href": "encryption-custom-job.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Use VPC",
+                                "href": "usingVPC.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon Bedrock works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Incident response",
+                        "href": "security-incident-response.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Cross-service confused deputy prevention",
+                        "href": "cross-service-confused-deputy-prevention.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis in Amazon Bedrock",
+                        "href": "vulnerability-analysis-and-management.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitor Amazon Bedrock",
+                "href": "monitoring.html",
+                "contents": [
+                    {
+                        "title": "Monitor with CloudWatch",
+                        "href": "monitoring-cw.html",
+                        "contents": [
+                            {
+                                "title": "Logging CloudWatch metrics",
+                                "href": "logging-cloudwatch-metrics.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Monitor events",
+                        "href": "monitoring-eventbridge.html"
+                    },
+                    {
+                        "title": "CloudTrail logs",
+                        "href": "logging-using-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Abuse detection",
+                "href": "abuse-detection.html"
+            },
+            {
+                "title": "AWS PrivateLink",
+                "href": "vpc-interface-endpoints.html"
+            },
+            {
+                "title": "Quotas",
+                "href": "quotas.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

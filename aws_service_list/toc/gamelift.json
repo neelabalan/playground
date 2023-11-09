@@ -1,1 +1,714 @@
-{ "contents" : [ { "title" : "What is Amazon GameLift?", "href" : "gamelift-intro.html", "contents" : [ { "title" : "How Amazon GameLift works", "href" : "gamelift-howitworks.html" }, { "title" : "How players connect to games", "href" : "game-sessions-intro.html" }, { "title" : "Game architecture with managed Amazon GameLift", "href" : "gamelift-architecture.html" } ] }, { "title" : "Setting up", "href" : "setting-up-intro.html", "contents" : [ { "title" : "Set up an account", "href" : "setting-up-aws-login.html", "contents" : [ { "title" : "IAM permission examples", "href" : "gamelift-iam-policy-examples.html" }, { "title" : "Set up an IAM service role", "href" : "setting-up-role.html" } ] }, { "title" : "Development support", "href" : "gamelift-supported.html" }, { "title" : "Manage your game hosting costs", "href" : "gamelift-billing-alerts.html" }, { "title" : "Amazon GameLift hosting locations", "href" : "gamelift-regions.html" } ] }, { "title" : "Getting started", "href" : "getting-started-intro.html" }, { "title" : "Managed hosting roadmap", "href" : "gamelift-quickstart-intro.html", "contents" : [ { "title" : "Prepare your game", "href" : "gamelift_quickstart_integration.html" }, { "title" : "Test your integration", "href" : "gamelift_quickstart_test.html" }, { "title" : "Plan and deploy your resources", "href" : "gamelift_quickstart_plan.html" }, { "title" : "Design your backend service", "href" : "gamelift_quickstart_customservers_designbackend.html", "contents" : [ { "title" : "Serverless backend", "href" : "gamelift_quickstart_customservers_designbackend_arch_serverless.html" }, { "title" : "WebSocket-based backend", "href" : "gamelift_quickstart_customservers_designbackend_arch_websockets.html" } ] }, { "title" : "Set up metrics and logging", "href" : "gamelift_quickstart_metrics.html" }, { "title" : "Launch checklists", "href" : "gamelift_quickstart_customservers_checklist.html", "contents" : [ { "title" : "Onboarding", "href" : "gamelift_quickstart_customservers_prepgameserver_checklist.html" }, { "title" : "Testing", "href" : "gamelift_quickstart_customservers_test_checklist.html" }, { "title" : "Launch", "href" : "gamelift_quickstart_customservers_launch_checklist.html" }, { "title" : "Post-launch", "href" : "gamelift_quickstart_customservers_launch_postchecklist.html" } ] } ] }, { "title" : "Preparing games for Amazon GameLift", "href" : "integration-intro.html", "contents" : [ { "title" : "Integrate games with custom game servers", "href" : "integration-custom-intro.html", "contents" : [ { "title" : "Amazon GameLift interactions", "href" : "gamelift-sdk-interactions.html" }, { "title" : "Integrate a game server", "href" : "gamelift-sdk-server.html", "contents" : [ { "title" : "Add Amazon GameLift to a game server", "href" : "gamelift-sdk-server-api.html" }, { "title" : "Communicate with other AWS resources", "href" : "gamelift-sdk-server-resources.html" } ] }, { "title" : "Integrate a game client", "href" : "gamelift-sdk-client.html", "contents" : [ { "title" : "Add Amazon GameLift to a game client", "href" : "gamelift-sdk-client-api.html" }, { "title" : "Generate player IDs", "href" : "player-sessions-player-identifiers.html" } ] }, { "title" : "Game engines and Amazon GameLift", "href" : "integration-engines.html", "contents" : [ { "title" : "O3DE: Add Amazon GameLift to your game", "href" : "game-client-intro.html" }, { "title" : "Integration with Unreal Engine", "href" : "integration-engines-setup-unreal.html" }, { "title" : "Integration with Unity", "href" : "integration-engines-unity-using.html" } ] }, { "title" : "Test your integration (server SDK 5)", "href" : "integration-testing.html" }, { "title" : "Test your integration (server SDK 4)", "href" : "integration-testing-local.html" } ] }, { "title" : "Integrating games with Realtime Servers", "href" : "realtime-intro.html", "contents" : [ { "title" : "Integrating a game client", "href" : "realtime-client.html" }, { "title" : "Customizing a Realtime script", "href" : "realtime-script.html" } ] }, { "title" : "Integrating games with the plugin for Unity", "href" : "unity-plug-in.html", "contents" : [ { "title" : "Installing and setting up the plug-in for Unity", "href" : "unity-plug-in-install.html" }, { "title" : "Testing your game locally", "href" : "unity-plug-in-test.html" }, { "title" : "Deploying a scenario", "href" : "unity-plug-in-scenario.html" }, { "title" : "Integrating games with Amazon GameLift in Unity", "href" : "unity-integration-intro.html", "contents" : [ { "title" : "Add Amazon GameLift to a game server project", "href" : "integration-unity-server.html" }, { "title" : "Add Amazon GameLift to a game client project", "href" : "integration-unity-client.html" } ] }, { "title" : "Importing and running a sample game", "href" : "unity-plug-in-sample-game.html" } ] }, { "title" : "Integrating games with the plugin for Unreal", "href" : "unreal-plugin.html", "contents" : [ { "title" : "Install the plugin for Unreal", "href" : "unreal-plugin-install.html" }, { "title" : "Set up an AWS user profile", "href" : "unreal-plugin-profiles.html" }, { "title" : "Set up your game with Anywhere", "href" : "unreal-plugin-anywhere.html" }, { "title" : "Deploy your game with managed Amazon EC2 fleets", "href" : "unreal-plugin-ec2.html" } ] }, { "title" : "Get fleet data", "href" : "gamelift-sdk-server-fleetinfo.html" }, { "title" : "Adding FlexMatch matchmaking", "href" : "gamelift-match-intro.html" } ] }, { "title" : "Managing hosting resources", "href" : "resources-intro.html", "contents" : [ { "title" : "Uploading builds and scripts", "href" : "gamelift-build-intro.html", "contents" : [ { "title" : "Upload a build", "href" : "gamelift-build-cli-uploading.html" }, { "title" : "Upload a script", "href" : "realtime-script-uploading.html" } ] }, { "title" : "Setting up fleets", "href" : "fleets-intro.html", "contents" : [ { "title" : "Fleet design guide", "href" : "fleets-design.html", "contents" : [ { "title" : "Choose compute resources", "href" : "gamelift-compute.html" }, { "title" : "Launch game servers", "href" : "fleets-multiprocess.html" }, { "title" : "Use Spot Instances", "href" : "spot-tasks.html" } ] }, { "title" : "Create a new fleet", "href" : "fleets-creating-all.html", "contents" : [ { "title" : "Create a Amazon GameLift managed EC2 fleet", "href" : "fleets-creating.html" }, { "title" : "Create an Anywhere fleet", "href" : "fleets-creating-anywhere.html" } ] }, { "title" : "Manage your fleets", "href" : "fleets-editing.html" }, { "title" : "Add an alias to a fleet", "href" : "aliases-creating.html" }, { "title" : "Debug fleet issues", "href" : "fleets-creating-debug.html" }, { "title" : "Remotely access fleet instances", "href" : "fleets-remote-access.html" } ] }, { "title" : "Scaling hosting capacity", "href" : "fleets-manage-capacity.html", "contents" : [ { "title" : "Set hosting capacity limits", "href" : "fleets-capacity-limits.html" }, { "title" : "Manually set fleet capacity", "href" : "fleets-updating-capacity.html" }, { "title" : "Auto scale fleet capacity", "href" : "fleets-autoscaling.html", "contents" : [ { "title" : "Target-based auto scaling", "href" : "fleets-autoscaling-target.html" }, { "title" : "Rule-based auto scaling", "href" : "fleets-autoscaling-rule.html" } ] } ] }, { "title" : "Setting up queues", "href" : "queues-intro.html", "contents" : [ { "title" : "Design a queue", "href" : "queues-design.html" }, { "title" : "Best practices", "href" : "queues-best-practices.html" }, { "title" : "Create a queue", "href" : "queues-creating.html" }, { "title" : "Set up event notification", "href" : "queue-notification.html" }, { "title" : "Tutorial: Queues for Spot Instances", "href" : "tutorial-queues-spot.html" } ] }, { "title" : "Manage resources with AWS CloudFormation", "href" : "resources-cloudformation.html" }, { "title" : "VPC peering", "href" : "vpc-peering.html" } ] }, { "title" : "Viewing game data", "href" : "gamelift-console-intro.html", "contents" : [ { "title" : "View your Amazon GameLift status", "href" : "gamelift-console-dashboard.html" }, { "title" : "View your builds", "href" : "gamelift-console-builds.html" }, { "title" : "View your scripts", "href" : "gamelift-console-scripts.html" }, { "title" : "View your fleets", "href" : "gamelift-console-fleets.html" }, { "title" : "View fleet details", "href" : "gamelift-console-fleets-metrics.html" }, { "title" : "View game and player info", "href" : "gamelift-console-game-player-sessions-metrics.html" }, { "title" : "View your aliases", "href" : "gamelift-console-aliases.html" }, { "title" : "View your queues", "href" : "queues-console.html" } ] }, { "title" : "Monitoring Amazon GameLift", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Monitor with CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "Logging API calls", "href" : "logging-using-cloudtrail.html" }, { "title" : "Logging server messages", "href" : "logging-server-messages.html", "contents" : [ { "title" : "Logging for custom servers", "href" : "logging-server-messages-custom.html" }, { "title" : "Logging for Realtime Servers", "href" : "logging-server-messages-rts.html" } ] } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon GameLift works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Logging and monitoring with Amazon GameLift", "href" : "logging-and-monitoring.html" }, { "title" : "Compliance validation", "href" : "gamelift-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Configuration and vulnerability analysis", "href" : "vulnerability-analysis-management.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" } ] }, { "title" : "Amazon GameLift reference guides", "href" : "reference-intro.html", "contents" : [ { "title" : "Service API reference (AWS SDK)", "href" : "reference-awssdk.html" }, { "title" : "Realtime Servers reference", "href" : "reference-rtssdk.html", "contents" : [ { "title" : "Realtime client API (C#) reference", "href" : "realtime-sdk-csharp-ref.html", "contents" : [ { "title" : "Actions", "href" : "realtime-sdk-csharp-ref-actions.html" }, { "title" : "Callbacks", "href" : "realtime-sdk-csharp-ref-callbacks.html" }, { "title" : "Data types", "href" : "realtime-sdk-csharp-ref-datatypes.html" } ] }, { "title" : "Realtime Servers script reference", "href" : "realtime-script-ref.html", "contents" : [ { "title" : "Script callbacks", "href" : "realtime-script-callbacks.html" }, { "title" : "Realtime Servers interface", "href" : "realtime-script-objects.html" } ] } ] }, { "title" : "Server SDK reference", "href" : "reference-serversdk.html", "contents" : [ { "title" : "Server SDK reference for C++", "href" : "integration-server-sdk-cpp-ref.html", "contents" : [ { "title" : "Server SDK reference 5.x for C++", "href" : "integration-server-sdk5-cpp.html", "contents" : [ { "title" : "Actions", "href" : "integration-server-sdk5-cpp-actions.html" }, { "title" : "Data types", "href" : "integration-server-sdk5-cpp-datatypes.html" } ] }, { "title" : "Server SDK reference 3.x for C++", "href" : "integration-server-sdk4-cpp.html", "contents" : [ { "title" : "Actions", "href" : "integration-server-sdk-cpp-ref-actions.html" }, { "title" : "Data types", "href" : "integration-server-sdk-cpp-ref-datatypes.html" } ] } ] }, { "title" : "Server SDK reference for C#", "href" : "integration-server-sdk-csharp-ref.html", "contents" : [ { "title" : "Server SDK reference 5.x for C# and Unity", "href" : "integration-server-sdk5-csharp.html", "contents" : [ { "title" : "Actions", "href" : "integration-server-sdk5-csharp-actions.html" }, { "title" : "Data types", "href" : "integration-server-sdk5-csharp-datatypes.html" } ] }, { "title" : "Server SDK reference 4.x for C#", "href" : "integration-server-sdk4-csharp.html", "contents" : [ { "title" : "Actions", "href" : "integration-server-sdk-csharp-ref-actions.html" }, { "title" : "Data types", "href" : "integration-server-sdk-csharp-ref-datatypes.html" } ] } ] }, { "title" : "Server SDK reference for Go", "href" : "integration-server-sdk-go-ref.html", "contents" : [ { "title" : "Actions", "href" : "integration-server-sdk-go-actions.html" }, { "title" : "Data types", "href" : "integration-server-sdk-go-datatypes.html" } ] }, { "title" : "Server SDK reference for Unreal Engine", "href" : "integration-server-sdk-unreal-ref.html", "contents" : [ { "title" : "Server SDK reference 5.x for Unreal Engine", "href" : "integration-server-sdk5-unreal.html", "contents" : [ { "title" : "Actions", "href" : "integration-server-sdk5-unreal-actions.html" }, { "title" : "Data types", "href" : "integration-server-sdk5-unreal-datatypes.html" } ] }, { "title" : "Server SDK reference 3.x for Unreal Engine", "href" : "integration-server-sdk3-unreal.html", "contents" : [ { "title" : "Actions", "href" : "integration-server-sdk-unreal-ref-actions.html" }, { "title" : "Data types", "href" : "integration-server-sdk-unreal-ref-datatypes.html" } ] } ] } ] }, { "title" : "Game session placement events", "href" : "queue-events.html" } ] }, { "title" : "Estimating price", "href" : "gamelift-calculator.html" }, { "title" : "Quotas and supported Regions", "href" : "limits-regions.html" }, { "title" : "Release notes and SDK versions", "href" : "release-notes.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/gamelift/latest/developerguide/",
+    "service": "gamelift",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon GameLift?",
+                "href": "gamelift-intro.html",
+                "contents": [
+                    {
+                        "title": "How Amazon GameLift works",
+                        "href": "gamelift-howitworks.html"
+                    },
+                    {
+                        "title": "How players connect to games",
+                        "href": "game-sessions-intro.html"
+                    },
+                    {
+                        "title": "Game architecture with managed Amazon GameLift",
+                        "href": "gamelift-architecture.html"
+                    }
+                ]
+            },
+            {
+                "title": "Setting up",
+                "href": "setting-up-intro.html",
+                "contents": [
+                    {
+                        "title": "Set up an account",
+                        "href": "setting-up-aws-login.html",
+                        "contents": [
+                            {
+                                "title": "IAM permission examples",
+                                "href": "gamelift-iam-policy-examples.html"
+                            },
+                            {
+                                "title": "Set up an IAM service role",
+                                "href": "setting-up-role.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Development support",
+                        "href": "gamelift-supported.html"
+                    },
+                    {
+                        "title": "Manage your game hosting costs",
+                        "href": "gamelift-billing-alerts.html"
+                    },
+                    {
+                        "title": "Amazon GameLift hosting locations",
+                        "href": "gamelift-regions.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started-intro.html"
+            },
+            {
+                "title": "Managed hosting roadmap",
+                "href": "gamelift-quickstart-intro.html",
+                "contents": [
+                    {
+                        "title": "Prepare your game",
+                        "href": "gamelift_quickstart_integration.html"
+                    },
+                    {
+                        "title": "Test your integration",
+                        "href": "gamelift_quickstart_test.html"
+                    },
+                    {
+                        "title": "Plan and deploy your resources",
+                        "href": "gamelift_quickstart_plan.html"
+                    },
+                    {
+                        "title": "Design your backend service",
+                        "href": "gamelift_quickstart_customservers_designbackend.html",
+                        "contents": [
+                            {
+                                "title": "Serverless backend",
+                                "href": "gamelift_quickstart_customservers_designbackend_arch_serverless.html"
+                            },
+                            {
+                                "title": "WebSocket-based backend",
+                                "href": "gamelift_quickstart_customservers_designbackend_arch_websockets.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Set up metrics and logging",
+                        "href": "gamelift_quickstart_metrics.html"
+                    },
+                    {
+                        "title": "Launch checklists",
+                        "href": "gamelift_quickstart_customservers_checklist.html",
+                        "contents": [
+                            {
+                                "title": "Onboarding",
+                                "href": "gamelift_quickstart_customservers_prepgameserver_checklist.html"
+                            },
+                            {
+                                "title": "Testing",
+                                "href": "gamelift_quickstart_customservers_test_checklist.html"
+                            },
+                            {
+                                "title": "Launch",
+                                "href": "gamelift_quickstart_customservers_launch_checklist.html"
+                            },
+                            {
+                                "title": "Post-launch",
+                                "href": "gamelift_quickstart_customservers_launch_postchecklist.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Preparing games for Amazon GameLift",
+                "href": "integration-intro.html",
+                "contents": [
+                    {
+                        "title": "Integrate games with custom game servers",
+                        "href": "integration-custom-intro.html",
+                        "contents": [
+                            {
+                                "title": "Amazon GameLift interactions",
+                                "href": "gamelift-sdk-interactions.html"
+                            },
+                            {
+                                "title": "Integrate a game server",
+                                "href": "gamelift-sdk-server.html",
+                                "contents": [
+                                    {
+                                        "title": "Add Amazon GameLift to a game server",
+                                        "href": "gamelift-sdk-server-api.html"
+                                    },
+                                    {
+                                        "title": "Communicate with other AWS resources",
+                                        "href": "gamelift-sdk-server-resources.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Integrate a game client",
+                                "href": "gamelift-sdk-client.html",
+                                "contents": [
+                                    {
+                                        "title": "Add Amazon GameLift to a game client",
+                                        "href": "gamelift-sdk-client-api.html"
+                                    },
+                                    {
+                                        "title": "Generate player IDs",
+                                        "href": "player-sessions-player-identifiers.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Game engines and Amazon GameLift",
+                                "href": "integration-engines.html",
+                                "contents": [
+                                    {
+                                        "title": "O3DE: Add Amazon GameLift to your game",
+                                        "href": "game-client-intro.html"
+                                    },
+                                    {
+                                        "title": "Integration with Unreal Engine",
+                                        "href": "integration-engines-setup-unreal.html"
+                                    },
+                                    {
+                                        "title": "Integration with Unity",
+                                        "href": "integration-engines-unity-using.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Test your integration (server SDK 5)",
+                                "href": "integration-testing.html"
+                            },
+                            {
+                                "title": "Test your integration (server SDK 4)",
+                                "href": "integration-testing-local.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Integrating games with Realtime Servers",
+                        "href": "realtime-intro.html",
+                        "contents": [
+                            {
+                                "title": "Integrating a game client",
+                                "href": "realtime-client.html"
+                            },
+                            {
+                                "title": "Customizing a Realtime script",
+                                "href": "realtime-script.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Integrating games with the plugin for Unity",
+                        "href": "unity-plug-in.html",
+                        "contents": [
+                            {
+                                "title": "Installing and setting up the plug-in for Unity",
+                                "href": "unity-plug-in-install.html"
+                            },
+                            {
+                                "title": "Testing your game locally",
+                                "href": "unity-plug-in-test.html"
+                            },
+                            {
+                                "title": "Deploying a scenario",
+                                "href": "unity-plug-in-scenario.html"
+                            },
+                            {
+                                "title": "Integrating games with Amazon GameLift in Unity",
+                                "href": "unity-integration-intro.html",
+                                "contents": [
+                                    {
+                                        "title": "Add Amazon GameLift to a game server project",
+                                        "href": "integration-unity-server.html"
+                                    },
+                                    {
+                                        "title": "Add Amazon GameLift to a game client project",
+                                        "href": "integration-unity-client.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Importing and running a sample game",
+                                "href": "unity-plug-in-sample-game.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Integrating games with the plugin for Unreal",
+                        "href": "unreal-plugin.html",
+                        "contents": [
+                            {
+                                "title": "Install the plugin for Unreal",
+                                "href": "unreal-plugin-install.html"
+                            },
+                            {
+                                "title": "Set up an AWS user profile",
+                                "href": "unreal-plugin-profiles.html"
+                            },
+                            {
+                                "title": "Set up your game with Anywhere",
+                                "href": "unreal-plugin-anywhere.html"
+                            },
+                            {
+                                "title": "Deploy your game with managed Amazon EC2 fleets",
+                                "href": "unreal-plugin-ec2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Get fleet data",
+                        "href": "gamelift-sdk-server-fleetinfo.html"
+                    },
+                    {
+                        "title": "Adding FlexMatch matchmaking",
+                        "href": "gamelift-match-intro.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing hosting resources",
+                "href": "resources-intro.html",
+                "contents": [
+                    {
+                        "title": "Uploading builds and scripts",
+                        "href": "gamelift-build-intro.html",
+                        "contents": [
+                            {
+                                "title": "Upload a build",
+                                "href": "gamelift-build-cli-uploading.html"
+                            },
+                            {
+                                "title": "Upload a script",
+                                "href": "realtime-script-uploading.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Setting up fleets",
+                        "href": "fleets-intro.html",
+                        "contents": [
+                            {
+                                "title": "Fleet design guide",
+                                "href": "fleets-design.html",
+                                "contents": [
+                                    {
+                                        "title": "Choose compute resources",
+                                        "href": "gamelift-compute.html"
+                                    },
+                                    {
+                                        "title": "Launch game servers",
+                                        "href": "fleets-multiprocess.html"
+                                    },
+                                    {
+                                        "title": "Use Spot Instances",
+                                        "href": "spot-tasks.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Create a new fleet",
+                                "href": "fleets-creating-all.html",
+                                "contents": [
+                                    {
+                                        "title": "Create a Amazon GameLift managed EC2 fleet",
+                                        "href": "fleets-creating.html"
+                                    },
+                                    {
+                                        "title": "Create an Anywhere fleet",
+                                        "href": "fleets-creating-anywhere.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Manage your fleets",
+                                "href": "fleets-editing.html"
+                            },
+                            {
+                                "title": "Add an alias to a fleet",
+                                "href": "aliases-creating.html"
+                            },
+                            {
+                                "title": "Debug fleet issues",
+                                "href": "fleets-creating-debug.html"
+                            },
+                            {
+                                "title": "Remotely access fleet instances",
+                                "href": "fleets-remote-access.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Scaling hosting capacity",
+                        "href": "fleets-manage-capacity.html",
+                        "contents": [
+                            {
+                                "title": "Set hosting capacity limits",
+                                "href": "fleets-capacity-limits.html"
+                            },
+                            {
+                                "title": "Manually set fleet capacity",
+                                "href": "fleets-updating-capacity.html"
+                            },
+                            {
+                                "title": "Auto scale fleet capacity",
+                                "href": "fleets-autoscaling.html",
+                                "contents": [
+                                    {
+                                        "title": "Target-based auto scaling",
+                                        "href": "fleets-autoscaling-target.html"
+                                    },
+                                    {
+                                        "title": "Rule-based auto scaling",
+                                        "href": "fleets-autoscaling-rule.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Setting up queues",
+                        "href": "queues-intro.html",
+                        "contents": [
+                            {
+                                "title": "Design a queue",
+                                "href": "queues-design.html"
+                            },
+                            {
+                                "title": "Best practices",
+                                "href": "queues-best-practices.html"
+                            },
+                            {
+                                "title": "Create a queue",
+                                "href": "queues-creating.html"
+                            },
+                            {
+                                "title": "Set up event notification",
+                                "href": "queue-notification.html"
+                            },
+                            {
+                                "title": "Tutorial: Queues for Spot Instances",
+                                "href": "tutorial-queues-spot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Manage resources with AWS CloudFormation",
+                        "href": "resources-cloudformation.html"
+                    },
+                    {
+                        "title": "VPC peering",
+                        "href": "vpc-peering.html"
+                    }
+                ]
+            },
+            {
+                "title": "Viewing game data",
+                "href": "gamelift-console-intro.html",
+                "contents": [
+                    {
+                        "title": "View your Amazon GameLift status",
+                        "href": "gamelift-console-dashboard.html"
+                    },
+                    {
+                        "title": "View your builds",
+                        "href": "gamelift-console-builds.html"
+                    },
+                    {
+                        "title": "View your scripts",
+                        "href": "gamelift-console-scripts.html"
+                    },
+                    {
+                        "title": "View your fleets",
+                        "href": "gamelift-console-fleets.html"
+                    },
+                    {
+                        "title": "View fleet details",
+                        "href": "gamelift-console-fleets-metrics.html"
+                    },
+                    {
+                        "title": "View game and player info",
+                        "href": "gamelift-console-game-player-sessions-metrics.html"
+                    },
+                    {
+                        "title": "View your aliases",
+                        "href": "gamelift-console-aliases.html"
+                    },
+                    {
+                        "title": "View your queues",
+                        "href": "queues-console.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring Amazon GameLift",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Monitor with CloudWatch",
+                        "href": "monitoring-cloudwatch.html"
+                    },
+                    {
+                        "title": "Logging API calls",
+                        "href": "logging-using-cloudtrail.html"
+                    },
+                    {
+                        "title": "Logging server messages",
+                        "href": "logging-server-messages.html",
+                        "contents": [
+                            {
+                                "title": "Logging for custom servers",
+                                "href": "logging-server-messages-custom.html"
+                            },
+                            {
+                                "title": "Logging for Realtime Servers",
+                                "href": "logging-server-messages-rts.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon GameLift works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring with Amazon GameLift",
+                        "href": "logging-and-monitoring.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "gamelift-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "vulnerability-analysis-management.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Amazon GameLift reference guides",
+                "href": "reference-intro.html",
+                "contents": [
+                    {
+                        "title": "Service API reference (AWS SDK)",
+                        "href": "reference-awssdk.html"
+                    },
+                    {
+                        "title": "Realtime Servers reference",
+                        "href": "reference-rtssdk.html",
+                        "contents": [
+                            {
+                                "title": "Realtime client API (C#) reference",
+                                "href": "realtime-sdk-csharp-ref.html",
+                                "contents": [
+                                    {
+                                        "title": "Actions",
+                                        "href": "realtime-sdk-csharp-ref-actions.html"
+                                    },
+                                    {
+                                        "title": "Callbacks",
+                                        "href": "realtime-sdk-csharp-ref-callbacks.html"
+                                    },
+                                    {
+                                        "title": "Data types",
+                                        "href": "realtime-sdk-csharp-ref-datatypes.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Realtime Servers script reference",
+                                "href": "realtime-script-ref.html",
+                                "contents": [
+                                    {
+                                        "title": "Script callbacks",
+                                        "href": "realtime-script-callbacks.html"
+                                    },
+                                    {
+                                        "title": "Realtime Servers interface",
+                                        "href": "realtime-script-objects.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Server SDK reference",
+                        "href": "reference-serversdk.html",
+                        "contents": [
+                            {
+                                "title": "Server SDK reference for C++",
+                                "href": "integration-server-sdk-cpp-ref.html",
+                                "contents": [
+                                    {
+                                        "title": "Server SDK reference 5.x for C++",
+                                        "href": "integration-server-sdk5-cpp.html",
+                                        "contents": [
+                                            {
+                                                "title": "Actions",
+                                                "href": "integration-server-sdk5-cpp-actions.html"
+                                            },
+                                            {
+                                                "title": "Data types",
+                                                "href": "integration-server-sdk5-cpp-datatypes.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Server SDK reference 3.x for C++",
+                                        "href": "integration-server-sdk4-cpp.html",
+                                        "contents": [
+                                            {
+                                                "title": "Actions",
+                                                "href": "integration-server-sdk-cpp-ref-actions.html"
+                                            },
+                                            {
+                                                "title": "Data types",
+                                                "href": "integration-server-sdk-cpp-ref-datatypes.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Server SDK reference for C#",
+                                "href": "integration-server-sdk-csharp-ref.html",
+                                "contents": [
+                                    {
+                                        "title": "Server SDK reference 5.x for C# and Unity",
+                                        "href": "integration-server-sdk5-csharp.html",
+                                        "contents": [
+                                            {
+                                                "title": "Actions",
+                                                "href": "integration-server-sdk5-csharp-actions.html"
+                                            },
+                                            {
+                                                "title": "Data types",
+                                                "href": "integration-server-sdk5-csharp-datatypes.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Server SDK reference 4.x for C#",
+                                        "href": "integration-server-sdk4-csharp.html",
+                                        "contents": [
+                                            {
+                                                "title": "Actions",
+                                                "href": "integration-server-sdk-csharp-ref-actions.html"
+                                            },
+                                            {
+                                                "title": "Data types",
+                                                "href": "integration-server-sdk-csharp-ref-datatypes.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Server SDK reference for Go",
+                                "href": "integration-server-sdk-go-ref.html",
+                                "contents": [
+                                    {
+                                        "title": "Actions",
+                                        "href": "integration-server-sdk-go-actions.html"
+                                    },
+                                    {
+                                        "title": "Data types",
+                                        "href": "integration-server-sdk-go-datatypes.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Server SDK reference for Unreal Engine",
+                                "href": "integration-server-sdk-unreal-ref.html",
+                                "contents": [
+                                    {
+                                        "title": "Server SDK reference 5.x for Unreal Engine",
+                                        "href": "integration-server-sdk5-unreal.html",
+                                        "contents": [
+                                            {
+                                                "title": "Actions",
+                                                "href": "integration-server-sdk5-unreal-actions.html"
+                                            },
+                                            {
+                                                "title": "Data types",
+                                                "href": "integration-server-sdk5-unreal-datatypes.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Server SDK reference 3.x for Unreal Engine",
+                                        "href": "integration-server-sdk3-unreal.html",
+                                        "contents": [
+                                            {
+                                                "title": "Actions",
+                                                "href": "integration-server-sdk-unreal-ref-actions.html"
+                                            },
+                                            {
+                                                "title": "Data types",
+                                                "href": "integration-server-sdk-unreal-ref-datatypes.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Game session placement events",
+                        "href": "queue-events.html"
+                    }
+                ]
+            },
+            {
+                "title": "Estimating price",
+                "href": "gamelift-calculator.html"
+            },
+            {
+                "title": "Quotas and supported Regions",
+                "href": "limits-regions.html"
+            },
+            {
+                "title": "Release notes and SDK versions",
+                "href": "release-notes.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

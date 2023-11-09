@@ -1,1 +1,402 @@
-{ "contents" : [ { "title" : "What is AWS Supply Chain?", "href" : "what-is-service.html" }, { "title" : "Managing the AWS Supply Chain dashboard", "href" : "viewing-dashboard.html" }, { "title" : "Connecting to a data source", "href" : "data-connections.html", "contents" : [ { "title" : "Terminology used in data lake", "href" : "data_lake_terminology.html" }, { "title" : "Prerequisites", "href" : "data_prerequisites-profiles.html" }, { "title" : "Uploading data to an Amazon S3 bucket", "href" : "manually-uploading-data.html" }, { "title" : "Using the Amazon S3 connector", "href" : "connecting-s3.html" }, { "title" : "Connecting to an EDI", "href" : "connecting-edi.html" }, { "title" : "Connecting to S/4 HANA", "href" : "connecting-sap-hana.html" }, { "title" : "Connecting to SAP ECC 6.0", "href" : "connecting-sap-ecc.html" }, { "title" : "Ingesting data", "href" : "ingesting-data.html" }, { "title" : "Viewing datasets", "href" : "viewing-datasets.html" } ] }, { "title" : "Insights", "href" : "insights.html", "contents" : [ { "title" : "Insight settings", "href" : "insight-settings.html" }, { "title" : "Viewing the network map", "href" : "viewing-network-map.html" }, { "title" : "Viewing inventory visibility", "href" : "viewing-inventory-visibility.html" }, { "title" : "Creating insight watchlist", "href" : "creating-insights.html" }, { "title" : "Viewing the generated insights", "href" : "viewing-insights.html" }, { "title" : "Resolving an inventory risk insight", "href" : "resolving-insights.html" }, { "title" : "Lead time insights", "href" : "resolving-lead-time-insights.html" } ] }, { "title" : "Collaboration", "href" : "collaboration.html" }, { "title" : "Notifications", "href" : "notifications.html" }, { "title" : "Demand Planning", "href" : "demand-planning.html", "contents" : [ { "title" : "Terminology", "href" : "servicename-terminology.html" }, { "title" : "Using Demand Planning for the first time", "href" : "onboarding.html" }, { "title" : "Prerequisites to generate forecast", "href" : "prerequisites.html" }, { "title" : "Creating a forecast and demand plan", "href" : "create_forecast.html" }, { "title" : "Overview", "href" : "overview.html" }, { "title" : "Viewing your forecast", "href" : "changing_category.html" }, { "title" : "Product lifecycle", "href" : "product_lifecycle.html" }, { "title" : "Product lineage", "href" : "product_lineage.html" }, { "title" : "Adding an override", "href" : "adding_overrides.html" }, { "title" : "Exporting files", "href" : "exporting.html" }, { "title" : "Publish demand plan", "href" : "publish_demand_plan.html" }, { "title" : "Modifying Demand Plan settings", "href" : "settings.html" } ] }, { "title" : "Data entities", "href" : "data-model.html", "contents" : [ { "title" : "Data entity columns used by Insights", "href" : "entities-insights.html" }, { "title" : "Data entity columns required by Demand Planning", "href" : "required_entities.html" }, { "title" : "Data entity columns optional in Demand Planning", "href" : "optional_entities.html" }, { "title" : "Organization", "href" : "organization.html", "contents" : [ { "title" : "company", "href" : "organization-company-entity.html" }, { "title" : "geography", "href" : "organization-geography-entity.html" }, { "title" : "trading_partner", "href" : "organization-trading-partner-entity.html" } ] }, { "title" : "Product", "href" : "product.html", "contents" : [ { "title" : "product", "href" : "product-product-entity.html" }, { "title" : "product_hierarchy", "href" : "product-hierarchy-entity.html" }, { "title" : "product_uom", "href" : "product-uom-entity.html" }, { "title" : "product_alternate", "href" : "product-alternate-entity.html" } ] }, { "title" : "Network", "href" : "network2.html", "contents" : [ { "title" : "site", "href" : "network-site-entity.html" }, { "title" : "transportation_lane", "href" : "network-transporation-lane-entity.html" } ] }, { "title" : "Vendor management", "href" : "vendor-management.html", "contents" : [ { "title" : "vendor_product", "href" : "vendor-management-product-entity.html" }, { "title" : "vendor_lead_time", "href" : "vendor-management-lead-time-entity.html" }, { "title" : "vendor_holiday", "href" : "vendor-management-holiday-entity.html" } ] }, { "title" : "Planning", "href" : "planning.html", "contents" : [ { "title" : "inv_policy", "href" : "planning-inv-policy-entity.html" }, { "title" : "segmentation", "href" : "planning-segmentation-entity.html" }, { "title" : "sourcing_rules", "href" : "planning-sourcing-rules-entity.html" }, { "title" : "sourcing_schedule", "href" : "planning-sourcing-schedule-entity.html" }, { "title" : "sourcing_schedule_details", "href" : "planning-sourcing-schedule-details-entity.html" }, { "title" : "reservation", "href" : "planning-reservation-entity.html" } ] }, { "title" : "Operation", "href" : "operation.html", "contents" : [ { "title" : "process_header", "href" : "operation-process-header-entity.html" }, { "title" : "process_operation", "href" : "operation-process-operation-entity.html" }, { "title" : "process_product", "href" : "operation-process-product-entity.html" } ] }, { "title" : "Inventory management", "href" : "inventory_mgmnt.html", "contents" : [ { "title" : "inv_level", "href" : "inventory_mgmnt-inv-level-entity.html" } ] }, { "title" : "Inbound", "href" : "replenishment.html", "contents" : [ { "title" : "inbound_order", "href" : "replenishment-inbound-order-entity.html" }, { "title" : "inbound_order_line", "href" : "replenishment-inbound-order-line-entity.html" }, { "title" : "inbound_order_line_schedule", "href" : "replenishment-inbound-order-line-schedule-entity.html" }, { "title" : "shipment", "href" : "replenishment-shipment-entity.html" }, { "title" : "shipment_stop", "href" : "replenishment-shipment-stop-entity.html" }, { "title" : "shipment_stop_order", "href" : "replenishment-shipment-stop-order-entity.html" } ] }, { "title" : "Outbound fulfillment", "href" : "outbound-fulfillment.html", "contents" : [ { "title" : "outbound_order_line", "href" : "outbound-fulfillment-order-line-entity.html" }, { "title" : "outbound_shipment", "href" : "outbound-fulfillment-shipment-entity.html" } ] }, { "title" : "Plan", "href" : "plan.html", "contents" : [ { "title" : "supply_plan", "href" : "supply-plan-entity.html" } ] }, { "title" : "Forecast", "href" : "forecast.html", "contents" : [ { "title" : "forecast", "href" : "forecast-forecast-entity.html" } ] }, { "title" : "Reference", "href" : "reference.html", "contents" : [ { "title" : "reference_field", "href" : "reference-fields-entity.html" }, { "title" : "calendar", "href" : "reference-calendar-entity.html" }, { "title" : "uom_conversion", "href" : "reference-uom-conversion-entity.html" } ] }, { "title" : "Insights", "href" : "work-order-plan-insights.html", "contents" : [ { "title" : "work_order_plan", "href" : "work-order-plan-entity.html" } ] } ] }, { "title" : "Administrative support", "href" : "admin-support-ug.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/aws-supply-chain/latest/userguide/",
+    "service": "aws-supply-chain",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS Supply Chain?",
+                "href": "what-is-service.html"
+            },
+            {
+                "title": "Managing the AWS Supply Chain dashboard",
+                "href": "viewing-dashboard.html"
+            },
+            {
+                "title": "Connecting to a data source",
+                "href": "data-connections.html",
+                "contents": [
+                    {
+                        "title": "Terminology used in data lake",
+                        "href": "data_lake_terminology.html"
+                    },
+                    {
+                        "title": "Prerequisites",
+                        "href": "data_prerequisites-profiles.html"
+                    },
+                    {
+                        "title": "Uploading data to an Amazon S3 bucket",
+                        "href": "manually-uploading-data.html"
+                    },
+                    {
+                        "title": "Using the Amazon S3 connector",
+                        "href": "connecting-s3.html"
+                    },
+                    {
+                        "title": "Connecting to an EDI",
+                        "href": "connecting-edi.html"
+                    },
+                    {
+                        "title": "Connecting to S/4 HANA",
+                        "href": "connecting-sap-hana.html"
+                    },
+                    {
+                        "title": "Connecting to SAP ECC 6.0",
+                        "href": "connecting-sap-ecc.html"
+                    },
+                    {
+                        "title": "Ingesting data",
+                        "href": "ingesting-data.html"
+                    },
+                    {
+                        "title": "Viewing datasets",
+                        "href": "viewing-datasets.html"
+                    }
+                ]
+            },
+            {
+                "title": "Insights",
+                "href": "insights.html",
+                "contents": [
+                    {
+                        "title": "Insight settings",
+                        "href": "insight-settings.html"
+                    },
+                    {
+                        "title": "Viewing the network map",
+                        "href": "viewing-network-map.html"
+                    },
+                    {
+                        "title": "Viewing inventory visibility",
+                        "href": "viewing-inventory-visibility.html"
+                    },
+                    {
+                        "title": "Creating insight watchlist",
+                        "href": "creating-insights.html"
+                    },
+                    {
+                        "title": "Viewing the generated insights",
+                        "href": "viewing-insights.html"
+                    },
+                    {
+                        "title": "Resolving an inventory risk insight",
+                        "href": "resolving-insights.html"
+                    },
+                    {
+                        "title": "Lead time insights",
+                        "href": "resolving-lead-time-insights.html"
+                    }
+                ]
+            },
+            {
+                "title": "Collaboration",
+                "href": "collaboration.html"
+            },
+            {
+                "title": "Notifications",
+                "href": "notifications.html"
+            },
+            {
+                "title": "Demand Planning",
+                "href": "demand-planning.html",
+                "contents": [
+                    {
+                        "title": "Terminology",
+                        "href": "servicename-terminology.html"
+                    },
+                    {
+                        "title": "Using Demand Planning for the first time",
+                        "href": "onboarding.html"
+                    },
+                    {
+                        "title": "Prerequisites to generate forecast",
+                        "href": "prerequisites.html"
+                    },
+                    {
+                        "title": "Creating a forecast and demand plan",
+                        "href": "create_forecast.html"
+                    },
+                    {
+                        "title": "Overview",
+                        "href": "overview.html"
+                    },
+                    {
+                        "title": "Viewing your forecast",
+                        "href": "changing_category.html"
+                    },
+                    {
+                        "title": "Product lifecycle",
+                        "href": "product_lifecycle.html"
+                    },
+                    {
+                        "title": "Product lineage",
+                        "href": "product_lineage.html"
+                    },
+                    {
+                        "title": "Adding an override",
+                        "href": "adding_overrides.html"
+                    },
+                    {
+                        "title": "Exporting files",
+                        "href": "exporting.html"
+                    },
+                    {
+                        "title": "Publish demand plan",
+                        "href": "publish_demand_plan.html"
+                    },
+                    {
+                        "title": "Modifying Demand Plan settings",
+                        "href": "settings.html"
+                    }
+                ]
+            },
+            {
+                "title": "Data entities",
+                "href": "data-model.html",
+                "contents": [
+                    {
+                        "title": "Data entity columns used by Insights",
+                        "href": "entities-insights.html"
+                    },
+                    {
+                        "title": "Data entity columns required by Demand Planning",
+                        "href": "required_entities.html"
+                    },
+                    {
+                        "title": "Data entity columns optional in Demand Planning",
+                        "href": "optional_entities.html"
+                    },
+                    {
+                        "title": "Organization",
+                        "href": "organization.html",
+                        "contents": [
+                            {
+                                "title": "company",
+                                "href": "organization-company-entity.html"
+                            },
+                            {
+                                "title": "geography",
+                                "href": "organization-geography-entity.html"
+                            },
+                            {
+                                "title": "trading_partner",
+                                "href": "organization-trading-partner-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Product",
+                        "href": "product.html",
+                        "contents": [
+                            {
+                                "title": "product",
+                                "href": "product-product-entity.html"
+                            },
+                            {
+                                "title": "product_hierarchy",
+                                "href": "product-hierarchy-entity.html"
+                            },
+                            {
+                                "title": "product_uom",
+                                "href": "product-uom-entity.html"
+                            },
+                            {
+                                "title": "product_alternate",
+                                "href": "product-alternate-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Network",
+                        "href": "network2.html",
+                        "contents": [
+                            {
+                                "title": "site",
+                                "href": "network-site-entity.html"
+                            },
+                            {
+                                "title": "transportation_lane",
+                                "href": "network-transporation-lane-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Vendor management",
+                        "href": "vendor-management.html",
+                        "contents": [
+                            {
+                                "title": "vendor_product",
+                                "href": "vendor-management-product-entity.html"
+                            },
+                            {
+                                "title": "vendor_lead_time",
+                                "href": "vendor-management-lead-time-entity.html"
+                            },
+                            {
+                                "title": "vendor_holiday",
+                                "href": "vendor-management-holiday-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Planning",
+                        "href": "planning.html",
+                        "contents": [
+                            {
+                                "title": "inv_policy",
+                                "href": "planning-inv-policy-entity.html"
+                            },
+                            {
+                                "title": "segmentation",
+                                "href": "planning-segmentation-entity.html"
+                            },
+                            {
+                                "title": "sourcing_rules",
+                                "href": "planning-sourcing-rules-entity.html"
+                            },
+                            {
+                                "title": "sourcing_schedule",
+                                "href": "planning-sourcing-schedule-entity.html"
+                            },
+                            {
+                                "title": "sourcing_schedule_details",
+                                "href": "planning-sourcing-schedule-details-entity.html"
+                            },
+                            {
+                                "title": "reservation",
+                                "href": "planning-reservation-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Operation",
+                        "href": "operation.html",
+                        "contents": [
+                            {
+                                "title": "process_header",
+                                "href": "operation-process-header-entity.html"
+                            },
+                            {
+                                "title": "process_operation",
+                                "href": "operation-process-operation-entity.html"
+                            },
+                            {
+                                "title": "process_product",
+                                "href": "operation-process-product-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Inventory management",
+                        "href": "inventory_mgmnt.html",
+                        "contents": [
+                            {
+                                "title": "inv_level",
+                                "href": "inventory_mgmnt-inv-level-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Inbound",
+                        "href": "replenishment.html",
+                        "contents": [
+                            {
+                                "title": "inbound_order",
+                                "href": "replenishment-inbound-order-entity.html"
+                            },
+                            {
+                                "title": "inbound_order_line",
+                                "href": "replenishment-inbound-order-line-entity.html"
+                            },
+                            {
+                                "title": "inbound_order_line_schedule",
+                                "href": "replenishment-inbound-order-line-schedule-entity.html"
+                            },
+                            {
+                                "title": "shipment",
+                                "href": "replenishment-shipment-entity.html"
+                            },
+                            {
+                                "title": "shipment_stop",
+                                "href": "replenishment-shipment-stop-entity.html"
+                            },
+                            {
+                                "title": "shipment_stop_order",
+                                "href": "replenishment-shipment-stop-order-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Outbound fulfillment",
+                        "href": "outbound-fulfillment.html",
+                        "contents": [
+                            {
+                                "title": "outbound_order_line",
+                                "href": "outbound-fulfillment-order-line-entity.html"
+                            },
+                            {
+                                "title": "outbound_shipment",
+                                "href": "outbound-fulfillment-shipment-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Plan",
+                        "href": "plan.html",
+                        "contents": [
+                            {
+                                "title": "supply_plan",
+                                "href": "supply-plan-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Forecast",
+                        "href": "forecast.html",
+                        "contents": [
+                            {
+                                "title": "forecast",
+                                "href": "forecast-forecast-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Reference",
+                        "href": "reference.html",
+                        "contents": [
+                            {
+                                "title": "reference_field",
+                                "href": "reference-fields-entity.html"
+                            },
+                            {
+                                "title": "calendar",
+                                "href": "reference-calendar-entity.html"
+                            },
+                            {
+                                "title": "uom_conversion",
+                                "href": "reference-uom-conversion-entity.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Insights",
+                        "href": "work-order-plan-insights.html",
+                        "contents": [
+                            {
+                                "title": "work_order_plan",
+                                "href": "work-order-plan-entity.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Administrative support",
+                "href": "admin-support-ug.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

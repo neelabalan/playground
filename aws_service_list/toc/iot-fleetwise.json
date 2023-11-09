@@ -1,1 +1,390 @@
-{ "contents" : [ { "title" : "What is AWS IoT FleetWise?", "href" : "what-is-iotfleetwise.html", "contents" : [ { "title" : "How AWS IoT FleetWise works", "href" : "how-iotfleetwise-works.html" } ] }, { "title" : "Setting up AWS IoT FleetWise", "href" : "setting-up.html", "contents" : [ { "title" : "Configuring settings", "href" : "configure-settings.html" } ] }, { "title" : "Quick start", "href" : "getting-started.html" }, { "title" : "Getting started (console)", "href" : "getting-started-console-tutorial.html" }, { "title" : "Ingesting data to the cloud", "href" : "data-ingestion.html" }, { "title" : "Modeling vehicles", "href" : "vehicle-modeling.html", "contents" : [ { "title" : "Signal catalogs", "href" : "signal-catalogs.html", "contents" : [ { "title" : "Configure signals", "href" : "define-signal.html" }, { "title" : "Create a signal catalog (AWS CLI)", "href" : "create-signal-catalog.html" }, { "title" : "Import a signal catalog", "href" : "import-signal.html", "contents" : [ { "title" : "Import a signal catalog (console)", "href" : "import-signal-catalog-console.html" }, { "title" : "Import a signal catalog (AWS CLI)", "href" : "import-signal-catalog.html" } ] }, { "title" : "Update a signal catalog (AWS CLI)", "href" : "update-signal-catalog.html" }, { "title" : "Delete a signal catalog (AWS CLI)", "href" : "delete-signal-catalog.html" }, { "title" : "Get signal catalog information (AWS CLI)", "href" : "get-signal-catalog-information.html" } ] }, { "title" : "Vehicle models", "href" : "vehicle-models.html", "contents" : [ { "title" : "Create a vehicle model", "href" : "create-vehicle-model.html", "contents" : [ { "title" : "Create a vehicle model (console)", "href" : "create-vehicle-model-console.html" }, { "title" : "Create a vehicle model (AWS CLI)", "href" : "create-vehicle-model-cli.html" } ] }, { "title" : "Update a vehicle model (AWS CLI)", "href" : "update-vehicle-model-cli.html" }, { "title" : "Delete a vehicle model", "href" : "delete-vehicle-model.html" }, { "title" : "Get vehicle model information (AWS CLI)", "href" : "get-vehicle-model-information.html" } ] }, { "title" : "Decoder manifests", "href" : "decoder-manifests.html", "contents" : [ { "title" : "Configure network interfaces and decoder signals", "href" : "configure-network-interfaces-decoder-signals.html" }, { "title" : "Create a decoder manifest", "href" : "create-decoder-manifest.html", "contents" : [ { "title" : "Create a decoder manifest (console)", "href" : "create-decoder-manifest-console.html" }, { "title" : "Create a decoder manifest (AWS CLI)", "href" : "create-decoder-manifest-cli.html" } ] }, { "title" : "Update a decoder manifest (AWS CLI)", "href" : "update-decoder-manifest.html" }, { "title" : "Delete a decoder manifest", "href" : "delete-decoder-manifest.html" }, { "title" : "Get decoder manifest information (AWS CLI)", "href" : "get-decoder-manifest-information.html" } ] } ] }, { "title" : "Vehicles", "href" : "vehicles.html", "contents" : [ { "title" : "Provision vehicles", "href" : "provision-vehicles.html" }, { "title" : "Reserved topics", "href" : "reserved-topics.html" }, { "title" : "Create a vehicle", "href" : "create-vehicle.html", "contents" : [ { "title" : "Create a vehicle (console)", "href" : "create-vehicle-console.html" }, { "title" : "Create a vehicle (AWS CLI)", "href" : "create-vehicle-cli.html" }, { "title" : "Create multiple vehicles (AWS CLI)", "href" : "create-vehicles-cli.html" } ] }, { "title" : "Update a vehicle (AWS CLI)", "href" : "update-vehicle-cli.html" }, { "title" : "Update multiple vehicles (AWS CLI)", "href" : "update-vehicles-cli.html" }, { "title" : "Delete a vehicle", "href" : "delete-vehicle.html" }, { "title" : "Get vehicle information (AWS CLI)", "href" : "get-vehicle-information-cli.html" } ] }, { "title" : "Fleets", "href" : "fleets.html", "contents" : [ { "title" : "Create a fleet (AWS CLI)", "href" : "create-fleet-cli.html" }, { "title" : "Associate a vehicle with a fleet (AWS CLI)", "href" : "associate-vehicle-cli.html" }, { "title" : "Disassociate a vehicle from a fleet (AWS CLI)", "href" : "disassociate-vehicle-cli.html" }, { "title" : "Update a fleet (AWS CLI)", "href" : "update-fleet-cli.html" }, { "title" : "Delete a fleet (AWS CLI)", "href" : "delete-fleet-cli.html" }, { "title" : "Get fleet information (AWS CLI)", "href" : "get-fleet-information-cli.html" } ] }, { "title" : "Campaigns", "href" : "campaigns.html", "contents" : [ { "title" : "Create a campaign", "href" : "create-campaign.html", "contents" : [ { "title" : "Create a campaign (console)", "href" : "create-campaign-console.html" }, { "title" : "Create a campaign (AWS CLI)", "href" : "create-campaign-cli.html" } ] }, { "title" : "Update a campaign (AWS CLI)", "href" : "update-campaign-cli.html" }, { "title" : "Delete a campaign", "href" : "delete-campaign.html" }, { "title" : "Get campaign information (AWS CLI)", "href" : "get-campaign-information-cli.html" } ] }, { "title" : "Processing and visualizing vehicle data", "href" : "process-visualize-data.html" }, { "title" : "AWS CLI and AWS SDKs", "href" : "sdk-cli.html" }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Data encryption", "href" : "data-encryption.html", "contents" : [ { "title" : "Encryption at rest", "href" : "encryption-at-rest.html" }, { "title" : "Key management", "href" : "key-management.html" } ] } ] }, { "title" : "Controlling access", "href" : "controlling-access.html" }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS IoT FleetWise works with IAM", "href" : "security_iam_service-with-iam.html", "contents" : [ { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html" } ] }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Compliance Validation", "href" : "SERVICENAME-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html", "contents" : [ { "title" : "Connecting to AWS IoT FleetWise through an interface VPC endpoint", "href" : "interface-vpc-endpoint.html" } ] }, { "title" : "Configuration and vulnerability analysis", "href" : "vulnerability-analysis-and-management.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" } ] }, { "title" : "Monitoring", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Monitoring with CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "Monitoring with CloudWatch Logs", "href" : "monitoring-cloudwatch-logs.html", "contents" : [ { "title" : "Configuring logging", "href" : "logging-cw.html" } ] }, { "title" : "CloudTrail logs", "href" : "logging-using-cloudtrail.html", "contents" : [ { "title" : "Understanding AWS IoT FleetWise log file entries", "href" : "understanding-iotfleetwise-entries.html" } ] } ] }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/",
+    "service": "iot-fleetwise",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS IoT FleetWise?",
+                "href": "what-is-iotfleetwise.html",
+                "contents": [
+                    {
+                        "title": "How AWS IoT FleetWise works",
+                        "href": "how-iotfleetwise-works.html"
+                    }
+                ]
+            },
+            {
+                "title": "Setting up AWS IoT FleetWise",
+                "href": "setting-up.html",
+                "contents": [
+                    {
+                        "title": "Configuring settings",
+                        "href": "configure-settings.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quick start",
+                "href": "getting-started.html"
+            },
+            {
+                "title": "Getting started (console)",
+                "href": "getting-started-console-tutorial.html"
+            },
+            {
+                "title": "Ingesting data to the cloud",
+                "href": "data-ingestion.html"
+            },
+            {
+                "title": "Modeling vehicles",
+                "href": "vehicle-modeling.html",
+                "contents": [
+                    {
+                        "title": "Signal catalogs",
+                        "href": "signal-catalogs.html",
+                        "contents": [
+                            {
+                                "title": "Configure signals",
+                                "href": "define-signal.html"
+                            },
+                            {
+                                "title": "Create a signal catalog (AWS CLI)",
+                                "href": "create-signal-catalog.html"
+                            },
+                            {
+                                "title": "Import a signal catalog",
+                                "href": "import-signal.html",
+                                "contents": [
+                                    {
+                                        "title": "Import a signal catalog (console)",
+                                        "href": "import-signal-catalog-console.html"
+                                    },
+                                    {
+                                        "title": "Import a signal catalog (AWS CLI)",
+                                        "href": "import-signal-catalog.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Update a signal catalog (AWS CLI)",
+                                "href": "update-signal-catalog.html"
+                            },
+                            {
+                                "title": "Delete a signal catalog (AWS CLI)",
+                                "href": "delete-signal-catalog.html"
+                            },
+                            {
+                                "title": "Get signal catalog information (AWS CLI)",
+                                "href": "get-signal-catalog-information.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Vehicle models",
+                        "href": "vehicle-models.html",
+                        "contents": [
+                            {
+                                "title": "Create a vehicle model",
+                                "href": "create-vehicle-model.html",
+                                "contents": [
+                                    {
+                                        "title": "Create a vehicle model (console)",
+                                        "href": "create-vehicle-model-console.html"
+                                    },
+                                    {
+                                        "title": "Create a vehicle model (AWS CLI)",
+                                        "href": "create-vehicle-model-cli.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Update a vehicle model (AWS CLI)",
+                                "href": "update-vehicle-model-cli.html"
+                            },
+                            {
+                                "title": "Delete a vehicle model",
+                                "href": "delete-vehicle-model.html"
+                            },
+                            {
+                                "title": "Get vehicle model information (AWS CLI)",
+                                "href": "get-vehicle-model-information.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Decoder manifests",
+                        "href": "decoder-manifests.html",
+                        "contents": [
+                            {
+                                "title": "Configure network interfaces and decoder signals",
+                                "href": "configure-network-interfaces-decoder-signals.html"
+                            },
+                            {
+                                "title": "Create a decoder manifest",
+                                "href": "create-decoder-manifest.html",
+                                "contents": [
+                                    {
+                                        "title": "Create a decoder manifest (console)",
+                                        "href": "create-decoder-manifest-console.html"
+                                    },
+                                    {
+                                        "title": "Create a decoder manifest (AWS CLI)",
+                                        "href": "create-decoder-manifest-cli.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Update a decoder manifest (AWS CLI)",
+                                "href": "update-decoder-manifest.html"
+                            },
+                            {
+                                "title": "Delete a decoder manifest",
+                                "href": "delete-decoder-manifest.html"
+                            },
+                            {
+                                "title": "Get decoder manifest information (AWS CLI)",
+                                "href": "get-decoder-manifest-information.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Vehicles",
+                "href": "vehicles.html",
+                "contents": [
+                    {
+                        "title": "Provision vehicles",
+                        "href": "provision-vehicles.html"
+                    },
+                    {
+                        "title": "Reserved topics",
+                        "href": "reserved-topics.html"
+                    },
+                    {
+                        "title": "Create a vehicle",
+                        "href": "create-vehicle.html",
+                        "contents": [
+                            {
+                                "title": "Create a vehicle (console)",
+                                "href": "create-vehicle-console.html"
+                            },
+                            {
+                                "title": "Create a vehicle (AWS CLI)",
+                                "href": "create-vehicle-cli.html"
+                            },
+                            {
+                                "title": "Create multiple vehicles (AWS CLI)",
+                                "href": "create-vehicles-cli.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Update a vehicle (AWS CLI)",
+                        "href": "update-vehicle-cli.html"
+                    },
+                    {
+                        "title": "Update multiple vehicles (AWS CLI)",
+                        "href": "update-vehicles-cli.html"
+                    },
+                    {
+                        "title": "Delete a vehicle",
+                        "href": "delete-vehicle.html"
+                    },
+                    {
+                        "title": "Get vehicle information (AWS CLI)",
+                        "href": "get-vehicle-information-cli.html"
+                    }
+                ]
+            },
+            {
+                "title": "Fleets",
+                "href": "fleets.html",
+                "contents": [
+                    {
+                        "title": "Create a fleet (AWS CLI)",
+                        "href": "create-fleet-cli.html"
+                    },
+                    {
+                        "title": "Associate a vehicle with a fleet (AWS CLI)",
+                        "href": "associate-vehicle-cli.html"
+                    },
+                    {
+                        "title": "Disassociate a vehicle from a fleet (AWS CLI)",
+                        "href": "disassociate-vehicle-cli.html"
+                    },
+                    {
+                        "title": "Update a fleet (AWS CLI)",
+                        "href": "update-fleet-cli.html"
+                    },
+                    {
+                        "title": "Delete a fleet (AWS CLI)",
+                        "href": "delete-fleet-cli.html"
+                    },
+                    {
+                        "title": "Get fleet information (AWS CLI)",
+                        "href": "get-fleet-information-cli.html"
+                    }
+                ]
+            },
+            {
+                "title": "Campaigns",
+                "href": "campaigns.html",
+                "contents": [
+                    {
+                        "title": "Create a campaign",
+                        "href": "create-campaign.html",
+                        "contents": [
+                            {
+                                "title": "Create a campaign (console)",
+                                "href": "create-campaign-console.html"
+                            },
+                            {
+                                "title": "Create a campaign (AWS CLI)",
+                                "href": "create-campaign-cli.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Update a campaign (AWS CLI)",
+                        "href": "update-campaign-cli.html"
+                    },
+                    {
+                        "title": "Delete a campaign",
+                        "href": "delete-campaign.html"
+                    },
+                    {
+                        "title": "Get campaign information (AWS CLI)",
+                        "href": "get-campaign-information-cli.html"
+                    }
+                ]
+            },
+            {
+                "title": "Processing and visualizing vehicle data",
+                "href": "process-visualize-data.html"
+            },
+            {
+                "title": "AWS CLI and AWS SDKs",
+                "href": "sdk-cli.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Data encryption",
+                                "href": "data-encryption.html",
+                                "contents": [
+                                    {
+                                        "title": "Encryption at rest",
+                                        "href": "encryption-at-rest.html"
+                                    },
+                                    {
+                                        "title": "Key management",
+                                        "href": "key-management.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Controlling access",
+                        "href": "controlling-access.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS IoT FleetWise works with IAM",
+                                "href": "security_iam_service-with-iam.html",
+                                "contents": [
+                                    {
+                                        "title": "Using service-linked roles",
+                                        "href": "using-service-linked-roles.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "SERVICENAME-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html",
+                        "contents": [
+                            {
+                                "title": "Connecting to AWS IoT FleetWise through an interface VPC endpoint",
+                                "href": "interface-vpc-endpoint.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "vulnerability-analysis-and-management.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Monitoring with CloudWatch",
+                        "href": "monitoring-cloudwatch.html"
+                    },
+                    {
+                        "title": "Monitoring with CloudWatch Logs",
+                        "href": "monitoring-cloudwatch-logs.html",
+                        "contents": [
+                            {
+                                "title": "Configuring logging",
+                                "href": "logging-cw.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CloudTrail logs",
+                        "href": "logging-using-cloudtrail.html",
+                        "contents": [
+                            {
+                                "title": "Understanding AWS IoT FleetWise log file entries",
+                                "href": "understanding-iotfleetwise-entries.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

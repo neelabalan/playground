@@ -1,1 +1,396 @@
-{ "contents" : [ { "title" : "About the AWS CLI", "href" : "cli-chap-welcome.html", "contents" : [ { "title" : "About the examples", "href" : "welcome-examples.html" }, { "title" : "Additional documentation and resources", "href" : "welcome-resources.html" } ] }, { "title" : "Install the AWS CLI", "href" : "cli-chap-install.html", "contents" : [ { "title" : "Amazon Linux", "href" : "install-linux-al2017.html" }, { "title" : "Linux", "href" : "install-linux.html" }, { "title" : "macOS", "href" : "install-macos.html" }, { "title" : "Windows", "href" : "install-windows.html" }, { "title" : "Virtualenv", "href" : "install-virtualenv.html" } ] }, { "title" : "Configure the AWS CLI", "href" : "cli-chap-configure.html", "contents" : [ { "title" : "Configuration and credential file settings", "href" : "cli-configure-files.html" }, { "title" : "Environment Variables", "href" : "cli-configure-envvars.html" }, { "title" : "Command line options", "href" : "cli-configure-options.html" }, { "title" : "Command completion", "href" : "cli-configure-completion.html" }, { "title" : "Retries", "href" : "cli-configure-retries.html" }, { "title" : "Use an HTTP proxy", "href" : "cli-configure-proxy.html" }, { "title" : "Endpoints", "href" : "cli-configure-endpoints.html" } ] }, { "title" : "Authentication and access credentials", "href" : "cli-chap-authentication.html", "contents" : [ { "title" : "Short-term credentials", "href" : "cli-authentication-short-term.html" }, { "title" : "IAM roles", "href" : "cli-configure-role.html" }, { "title" : "IAM users", "href" : "cli-authentication-user.html" }, { "title" : "Use credentials for Amazon EC2 instance metadata", "href" : "cli-configure-metadata.html" }, { "title" : "External credentials", "href" : "cli-configure-sourcing-external.html" } ] }, { "title" : "Use the AWS CLI", "href" : "cli-chap-using.html", "contents" : [ { "title" : "Get Help", "href" : "cli-usage-help.html" }, { "title" : "Command Structure", "href" : "cli-usage-commandstructure.html" }, { "title" : "Specify Parameter Values", "href" : "cli-usage-parameters.html", "contents" : [ { "title" : "Common Parameter Types", "href" : "cli-usage-parameters-types.html" }, { "title" : "Quotes with Strings", "href" : "cli-usage-parameters-quoting-strings.html" }, { "title" : "Parameters from Files", "href" : "cli-usage-parameters-file.html" }, { "title" : "Generate a CLI Skeleton Template", "href" : "cli-usage-skeleton.html" }, { "title" : "Shorthand Syntax", "href" : "cli-usage-shorthand.html" } ] }, { "title" : "Control Command Output", "href" : "cli-usage-output.html", "contents" : [ { "title" : "Output Format", "href" : "cli-usage-output-format.html" }, { "title" : "Pagination", "href" : "cli-usage-pagination.html" }, { "title" : "Filter output", "href" : "cli-usage-filter.html" } ] }, { "title" : "Return Codes", "href" : "cli-usage-returncodes.html" }, { "title" : "Aliases", "href" : "cli-usage-alias.html" } ] }, { "title" : "Code examples", "href" : "cli-chap-code-examples.html", "contents" : [ { "title" : "Guided command examples", "href" : "cli-chap-services.html", "contents" : [ { "title" : "DynamoDB", "href" : "cli-services-dynamodb.html" }, { "title" : "Amazon EC2", "href" : "cli-services-ec2.html", "contents" : [ { "title" : "Amazon EC2 Key Pairs", "href" : "cli-services-ec2-keypairs.html" }, { "title" : "Amazon EC2 Security Groups", "href" : "cli-services-ec2-sg.html" }, { "title" : "EC2 Instances", "href" : "cli-services-ec2-instances.html" }, { "title" : "Change EC2 type with bash scripting", "href" : "cli-services-ec2-instance-type-script.html" } ] }, { "title" : "S3 Glacier", "href" : "cli-services-glacier.html" }, { "title" : "IAM", "href" : "cli-services-iam.html", "contents" : [ { "title" : "Create IAM users and groups", "href" : "cli-services-iam-new-user-group.html" }, { "title" : "Attach an IAM managed policy to a user", "href" : "cli-services-iam-policy.html" }, { "title" : "Set an initial password for an IAM user", "href" : "cli-services-iam-set-pw.html" }, { "title" : "Create an access key for an IAM user", "href" : "cli-services-iam-create-creds.html" } ] }, { "title" : "Amazon S3", "href" : "cli-services-s3.html", "contents" : [ { "title" : "High-level (s3) commands", "href" : "cli-services-s3-commands.html" }, { "title" : "API-level (s3 api) commands", "href" : "cli-services-s3-apicommands.html" }, { "title" : "Bucket lifecycle scripting example (s3api)", "href" : "cli-services-s3-lifecycle-example.html" } ] }, { "title" : "Amazon SNS", "href" : "cli-services-sns.html" }, { "title" : "Amazon SWF", "href" : "cli-services-swf.html", "contents" : [ { "title" : "List of Amazon SWF Commands", "href" : "cli-services-swf-commands.html" }, { "title" : "Work with Amazon SWF Domains", "href" : "cli-services-swf-domains.html" } ] } ] }, { "title" : "Bash script examples", "href" : "bash_code_examples.html", "contents" : [ { "title" : "Actions and scenarios", "href" : "bash_code_examples_categorized.html", "contents" : [ { "title" : "DynamoDB", "href" : "bash_dynamodb_code_examples.html" }, { "title" : "HealthImaging", "href" : "bash_medical-imaging_code_examples.html" }, { "title" : "IAM", "href" : "bash_iam_code_examples.html" }, { "title" : "Amazon S3", "href" : "bash_s3_code_examples.html" }, { "title" : "AWS STS", "href" : "bash_sts_code_examples.html" } ] } ] } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data Protection", "href" : "data-protection.html" }, { "title" : "Identity and Access Management", "href" : "security-iam.html" }, { "title" : "Compliance Validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html" }, { "title" : "Enforcing a minimum TLS version", "href" : "cli-security-enforcing-tls.html" } ] }, { "title" : "Troubleshoot errors", "href" : "cli-chap-troubleshooting.html" }, { "title" : "Document History", "href" : "document-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/cli/latest/userguide/",
+    "service": "cli",
+    "toc": {
+        "contents": [
+            {
+                "title": "About the AWS CLI",
+                "href": "cli-chap-welcome.html",
+                "contents": [
+                    {
+                        "title": "About the examples",
+                        "href": "welcome-examples.html"
+                    },
+                    {
+                        "title": "Additional documentation and resources",
+                        "href": "welcome-resources.html"
+                    }
+                ]
+            },
+            {
+                "title": "Get started",
+                "href": "cli-chap-getting-started.html",
+                "contents": [
+                    {
+                        "title": "Prerequisites",
+                        "href": "getting-started-prereqs.html"
+                    },
+                    {
+                        "title": "Install/Update",
+                        "href": "getting-started-install.html"
+                    },
+                    {
+                        "title": "Past releases",
+                        "href": "getting-started-version.html"
+                    },
+                    {
+                        "title": "Build and install from source",
+                        "href": "getting-started-source-install.html"
+                    },
+                    {
+                        "title": "Amazon ECR Public/Docker",
+                        "href": "getting-started-docker.html"
+                    },
+                    {
+                        "title": "Setup",
+                        "href": "getting-started-quickstart.html"
+                    }
+                ]
+            },
+            {
+                "title": "Configure the AWS CLI",
+                "href": "cli-chap-configure.html",
+                "contents": [
+                    {
+                        "title": "Configuration and credential file settings",
+                        "href": "cli-configure-files.html"
+                    },
+                    {
+                        "title": "Environment Variables",
+                        "href": "cli-configure-envvars.html"
+                    },
+                    {
+                        "title": "Command line options",
+                        "href": "cli-configure-options.html"
+                    },
+                    {
+                        "title": "Command completion",
+                        "href": "cli-configure-completion.html"
+                    },
+                    {
+                        "title": "Retries",
+                        "href": "cli-configure-retries.html"
+                    },
+                    {
+                        "title": "Use an HTTP proxy",
+                        "href": "cli-configure-proxy.html"
+                    },
+                    {
+                        "title": "Endpoints",
+                        "href": "cli-configure-endpoints.html"
+                    }
+                ]
+            },
+            {
+                "title": "Authentication and access credentials",
+                "href": "cli-chap-authentication.html",
+                "contents": [
+                    {
+                        "title": "IAM Identity Center authentication",
+                        "href": "cli-configure-sso.html",
+                        "contents": [
+                            {
+                                "title": "Configure automatic token refresh",
+                                "href": "sso-configure-profile-token.html"
+                            },
+                            {
+                                "title": "Configure legacy non-refreshable",
+                                "href": "sso-configure-profile-legacy.html"
+                            },
+                            {
+                                "title": "Using an IAM Identity Center profile",
+                                "href": "sso-using-profile.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Short-term credentials",
+                        "href": "cli-authentication-short-term.html"
+                    },
+                    {
+                        "title": "IAM roles",
+                        "href": "cli-configure-role.html"
+                    },
+                    {
+                        "title": "IAM users",
+                        "href": "cli-authentication-user.html"
+                    },
+                    {
+                        "title": "Use credentials for Amazon EC2 instance metadata",
+                        "href": "cli-configure-metadata.html"
+                    },
+                    {
+                        "title": "External credentials",
+                        "href": "cli-configure-sourcing-external.html"
+                    }
+                ]
+            },
+            {
+                "title": "Use the AWS CLI",
+                "href": "cli-chap-using.html",
+                "contents": [
+                    {
+                        "title": "Get Help",
+                        "href": "cli-usage-help.html"
+                    },
+                    {
+                        "title": "Command Structure",
+                        "href": "cli-usage-commandstructure.html"
+                    },
+                    {
+                        "title": "Specify Parameter Values",
+                        "href": "cli-usage-parameters.html",
+                        "contents": [
+                            {
+                                "title": "Common Parameter Types",
+                                "href": "cli-usage-parameters-types.html"
+                            },
+                            {
+                                "title": "Quotes with Strings",
+                                "href": "cli-usage-parameters-quoting-strings.html"
+                            },
+                            {
+                                "title": "Parameters from Files",
+                                "href": "cli-usage-parameters-file.html"
+                            },
+                            {
+                                "title": "Generate a CLI Skeleton Template",
+                                "href": "cli-usage-skeleton.html"
+                            },
+                            {
+                                "title": "Shorthand Syntax",
+                                "href": "cli-usage-shorthand.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Auto-prompt",
+                        "href": "cli-usage-parameters-prompting.html"
+                    },
+                    {
+                        "title": "Control Command Output",
+                        "href": "cli-usage-output.html",
+                        "contents": [
+                            {
+                                "title": "Output Format",
+                                "href": "cli-usage-output-format.html"
+                            },
+                            {
+                                "title": "Pagination",
+                                "href": "cli-usage-pagination.html"
+                            },
+                            {
+                                "title": "Filter output",
+                                "href": "cli-usage-filter.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Return Codes",
+                        "href": "cli-usage-returncodes.html"
+                    },
+                    {
+                        "title": "Wizards",
+                        "href": "cli-usage-wizard.html"
+                    },
+                    {
+                        "title": "Aliases",
+                        "href": "cli-usage-alias.html"
+                    }
+                ]
+            },
+            {
+                "title": "Code examples",
+                "href": "cli-chap-code-examples.html",
+                "contents": [
+                    {
+                        "title": "Guided command examples",
+                        "href": "cli-chap-services.html",
+                        "contents": [
+                            {
+                                "title": "DynamoDB",
+                                "href": "cli-services-dynamodb.html"
+                            },
+                            {
+                                "title": "Amazon EC2",
+                                "href": "cli-services-ec2.html",
+                                "contents": [
+                                    {
+                                        "title": "Amazon EC2 Key Pairs",
+                                        "href": "cli-services-ec2-keypairs.html"
+                                    },
+                                    {
+                                        "title": "Amazon EC2 Security Groups",
+                                        "href": "cli-services-ec2-sg.html"
+                                    },
+                                    {
+                                        "title": "EC2 Instances",
+                                        "href": "cli-services-ec2-instances.html"
+                                    },
+                                    {
+                                        "title": "Change EC2 type with bash scripting",
+                                        "href": "cli-services-ec2-instance-type-script.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "S3 Glacier",
+                                "href": "cli-services-glacier.html"
+                            },
+                            {
+                                "title": "IAM",
+                                "href": "cli-services-iam.html",
+                                "contents": [
+                                    {
+                                        "title": "Create IAM users and groups",
+                                        "href": "cli-services-iam-new-user-group.html"
+                                    },
+                                    {
+                                        "title": "Attach an IAM managed policy to a user",
+                                        "href": "cli-services-iam-policy.html"
+                                    },
+                                    {
+                                        "title": "Set an initial password for an IAM user",
+                                        "href": "cli-services-iam-set-pw.html"
+                                    },
+                                    {
+                                        "title": "Create an access key for an IAM user",
+                                        "href": "cli-services-iam-create-creds.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Amazon S3",
+                                "href": "cli-services-s3.html",
+                                "contents": [
+                                    {
+                                        "title": "High-level (s3) commands",
+                                        "href": "cli-services-s3-commands.html"
+                                    },
+                                    {
+                                        "title": "API-level (s3 api) commands",
+                                        "href": "cli-services-s3-apicommands.html"
+                                    },
+                                    {
+                                        "title": "Bucket lifecycle scripting example (s3api)",
+                                        "href": "cli-services-s3-lifecycle-example.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Amazon SNS",
+                                "href": "cli-services-sns.html"
+                            },
+                            {
+                                "title": "Amazon SWF",
+                                "href": "cli-services-swf.html",
+                                "contents": [
+                                    {
+                                        "title": "List of Amazon SWF Commands",
+                                        "href": "cli-services-swf-commands.html"
+                                    },
+                                    {
+                                        "title": "Work with Amazon SWF Domains",
+                                        "href": "cli-services-swf-domains.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Bash script examples",
+                        "href": "bash_code_examples.html",
+                        "contents": [
+                            {
+                                "title": "Actions and scenarios",
+                                "href": "bash_code_examples_categorized.html",
+                                "contents": [
+                                    {
+                                        "title": "DynamoDB",
+                                        "href": "bash_dynamodb_code_examples.html"
+                                    },
+                                    {
+                                        "title": "HealthImaging",
+                                        "href": "bash_medical-imaging_code_examples.html"
+                                    },
+                                    {
+                                        "title": "IAM",
+                                        "href": "bash_iam_code_examples.html"
+                                    },
+                                    {
+                                        "title": "Amazon S3",
+                                        "href": "bash_s3_code_examples.html"
+                                    },
+                                    {
+                                        "title": "AWS STS",
+                                        "href": "bash_sts_code_examples.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data Protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html"
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Enforcing a minimum TLS version",
+                        "href": "cli-security-enforcing-tls.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshoot errors",
+                "href": "cli-chap-troubleshooting.html"
+            },
+            {
+                "title": "Migration guide",
+                "href": "cliv2-migration.html",
+                "contents": [
+                    {
+                        "title": "New features and changes",
+                        "href": "cliv2-migration-changes.html"
+                    },
+                    {
+                        "title": "Migration instructions",
+                        "href": "cliv2-migration-instructions.html"
+                    }
+                ]
+            },
+            {
+                "title": "Uninstall",
+                "href": "uninstall.html"
+            },
+            {
+                "title": "Document History",
+                "href": "document-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

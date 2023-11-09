@@ -1,1 +1,60 @@
-{ "contents" : [ { "title" : "What Is AWS Blockchain Templates?", "href" : "what-are-blockchain-templates.html" }, { "title" : "Setting Up", "href" : "blockchain-templates-setting-up.html" }, { "title" : "Getting Started", "href" : "blockchain-templates-getting-started.html", "contents" : [ { "title" : "Set Up Prerequisites", "href" : "blockchain-template-getting-started-prerequisites.html" }, { "title" : "Create the Ethereum Network", "href" : "blockchain-templates-create-stack.html" }, { "title" : "Connect to EthStats and EthExplorer Using the Bastion Host", "href" : "blockchain-bastion-host-connect.html" }, { "title" : "Clean Up Resources", "href" : "blockchain-templates-cleanup.html" } ] }, { "title" : "AWS Blockchain Templates and Features", "href" : "blockchain-template-features.html", "contents" : [ { "title" : "AWS Blockchain Template for Ethereum", "href" : "blockchain-templates-ethereum.html" }, { "title" : "AWS Blockchain Template for Hyperledger Fabric", "href" : "blockchain-templates-hyperledger.html" } ] }, { "title" : "Document History", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/blockchain-templates/latest/developerguide/",
+    "service": "blockchain-templates",
+    "toc": {
+        "contents": [
+            {
+                "title": "What Is AWS Blockchain Templates?",
+                "href": "what-are-blockchain-templates.html"
+            },
+            {
+                "title": "Setting Up",
+                "href": "blockchain-templates-setting-up.html"
+            },
+            {
+                "title": "Getting Started",
+                "href": "blockchain-templates-getting-started.html",
+                "contents": [
+                    {
+                        "title": "Set Up Prerequisites",
+                        "href": "blockchain-template-getting-started-prerequisites.html"
+                    },
+                    {
+                        "title": "Create the Ethereum Network",
+                        "href": "blockchain-templates-create-stack.html"
+                    },
+                    {
+                        "title": "Connect to EthStats and EthExplorer Using the Bastion Host",
+                        "href": "blockchain-bastion-host-connect.html"
+                    },
+                    {
+                        "title": "Clean Up Resources",
+                        "href": "blockchain-templates-cleanup.html"
+                    }
+                ]
+            },
+            {
+                "title": "AWS Blockchain Templates and Features",
+                "href": "blockchain-template-features.html",
+                "contents": [
+                    {
+                        "title": "AWS Blockchain Template for Ethereum",
+                        "href": "blockchain-templates-ethereum.html"
+                    },
+                    {
+                        "title": "AWS Blockchain Template for Hyperledger Fabric",
+                        "href": "blockchain-templates-hyperledger.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document History",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

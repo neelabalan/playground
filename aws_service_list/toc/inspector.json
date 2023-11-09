@@ -1,1 +1,232 @@
-{ "contents" : [ { "title" : "What is Amazon Inspector Classic?", "href" : "inspector_introduction.html", "contents" : [ { "title" : "Terminology and concepts", "href" : "inspector_concepts.html" }, { "title" : "Service limits", "href" : "inspector_limits.html" }, { "title" : "Pricing", "href" : "InspectorPricing.html" }, { "title" : "Supported operating systems and Regions", "href" : "inspector_supported_os_regions.html" } ] }, { "title" : "Moving to the new Amazon Inspector", "href" : "inspector-migration.html" }, { "title" : "Getting started", "href" : "inspector_getting-started.html" }, { "title" : "Tutorials", "href" : "inspector_tutorials.html", "contents" : [ { "title" : "Amazon Inspector Classic tutorial - Red Hat Enterprise Linux", "href" : "inspector_walkthrough.html" }, { "title" : "Amazon Inspector Classic tutorial - Ubuntu Server", "href" : "inspector_walkthrough_ubuntu.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Encryption at rest", "href" : "encryption-at-rest.html" }, { "title" : "Encryption in transit", "href" : "encryption-in-transit.html" } ] }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon Inspector Classic works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Using service-linked roles", "href" : "inspector_slr.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Logging and monitoring", "href" : "security-logging-and-monitoring.html" }, { "title" : "Incident response", "href" : "security-incident-response.html" }, { "title" : "Compliance validation", "href" : "inspector-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Configuration and vulnerability analysis", "href" : "security-vulnerability-analysis-management.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" } ] }, { "title" : "Amazon Inspector Classic agents", "href" : "inspector_agents.html", "contents" : [ { "title" : "Installing Amazon Inspector Classic agents", "href" : "inspector_installing-uninstalling-agents.html" }, { "title" : "Working with Amazon Inspector Classic agents on Linux-based operating systems", "href" : "inspector_agents-on-linux.html" }, { "title" : "Working with Amazon Inspector Classic agents on Windows-based operating systems", "href" : "inspector_agents-on-win.html" }, { "title" : "(Optional) Verify the signature of the Amazon Inspector Classic agent installation script on Linux-based operating systems", "href" : "inspector_verify-sig-agent-download-linux.html" }, { "title" : "(Optional) Verify the signature of the Amazon Inspector Classic agent installation script on Windows-based operating systems", "href" : "inspector_verify-sig-agent-download-win.html" } ] }, { "title" : "Amazon Inspector Classic assessment targets", "href" : "inspector_applications.html" }, { "title" : "Amazon Inspector Classic rules packages and rules", "href" : "inspector_rule-packages.html", "contents" : [ { "title" : "Network Reachability", "href" : "inspector_network-reachability.html" }, { "title" : "Common vulnerabilities and exposures", "href" : "inspector_cves.html" }, { "title" : "Center for Internet Security (CIS) Benchmarks", "href" : "inspector_cis.html" }, { "title" : "Security best practices for Amazon Inspector Classic", "href" : "inspector_security-best-practices.html" } ] }, { "title" : "Amazon Inspector Classic assessment templates and assessment runs", "href" : "inspector_assessments.html" }, { "title" : "Amazon Inspector Classic findings", "href" : "inspector_findings.html" }, { "title" : "Assessment reports", "href" : "inspector_reports.html" }, { "title" : "Exclusions in Amazon Inspector Classic", "href" : "inspector_exclusions.html" }, { "title" : "Amazon Inspector Classic rules packages for supported operating systems", "href" : "inspector_rule-packages_across_os.html" }, { "title" : "Logging Amazon Inspector Classic API calls with AWS CloudTrail", "href" : "logging-using-cloudtrail.html" }, { "title" : "Monitoring Amazon Inspector Classic using Amazon CloudWatch", "href" : "using-cloudwatch.html" }, { "title" : "Configuring Amazon Inspector Classic using AWS CloudFormation", "href" : "inspector_cloudformation-integration.html" }, { "title" : "Security Hub integration", "href" : "securityhub-integration.html" }, { "title" : "Amazon Inspector Classic ARNs", "href" : "inspector-arns.html", "contents" : [ { "title" : "ARNs for Amazon Inspector Classic resources", "href" : "inspector-arns-resources.html" }, { "title" : "Amazon Inspector Classic ARNS for rules packages", "href" : "inspector_rules-arns.html" } ] }, { "title" : "Document history", "href" : "document-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/inspector/v1/userguide/",
+    "service": "inspector",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon Inspector Classic?",
+                "href": "inspector_introduction.html",
+                "contents": [
+                    {
+                        "title": "Terminology and concepts",
+                        "href": "inspector_concepts.html"
+                    },
+                    {
+                        "title": "Service limits",
+                        "href": "inspector_limits.html"
+                    },
+                    {
+                        "title": "Pricing",
+                        "href": "InspectorPricing.html"
+                    },
+                    {
+                        "title": "Supported operating systems and Regions",
+                        "href": "inspector_supported_os_regions.html"
+                    }
+                ]
+            },
+            {
+                "title": "Moving to the new Amazon Inspector",
+                "href": "inspector-migration.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "inspector_getting-started.html"
+            },
+            {
+                "title": "Tutorials",
+                "href": "inspector_tutorials.html",
+                "contents": [
+                    {
+                        "title": "Amazon Inspector Classic tutorial - Red Hat Enterprise Linux",
+                        "href": "inspector_walkthrough.html"
+                    },
+                    {
+                        "title": "Amazon Inspector Classic tutorial - Ubuntu Server",
+                        "href": "inspector_walkthrough_ubuntu.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Encryption at rest",
+                                "href": "encryption-at-rest.html"
+                            },
+                            {
+                                "title": "Encryption in transit",
+                                "href": "encryption-in-transit.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon Inspector Classic works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "inspector_slr.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "security-logging-and-monitoring.html"
+                    },
+                    {
+                        "title": "Incident response",
+                        "href": "security-incident-response.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "inspector-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "security-vulnerability-analysis-management.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Amazon Inspector Classic agents",
+                "href": "inspector_agents.html",
+                "contents": [
+                    {
+                        "title": "Installing Amazon Inspector Classic agents",
+                        "href": "inspector_installing-uninstalling-agents.html"
+                    },
+                    {
+                        "title": "Working with Amazon Inspector Classic agents on Linux-based operating systems",
+                        "href": "inspector_agents-on-linux.html"
+                    },
+                    {
+                        "title": "Working with Amazon Inspector Classic agents on Windows-based operating systems",
+                        "href": "inspector_agents-on-win.html"
+                    },
+                    {
+                        "title": "(Optional) Verify the signature of the Amazon Inspector Classic agent installation script on Linux-based operating systems",
+                        "href": "inspector_verify-sig-agent-download-linux.html"
+                    },
+                    {
+                        "title": "(Optional) Verify the signature of the Amazon Inspector Classic agent installation script on Windows-based operating systems",
+                        "href": "inspector_verify-sig-agent-download-win.html"
+                    }
+                ]
+            },
+            {
+                "title": "Amazon Inspector Classic assessment targets",
+                "href": "inspector_applications.html"
+            },
+            {
+                "title": "Amazon Inspector Classic rules packages and rules",
+                "href": "inspector_rule-packages.html",
+                "contents": [
+                    {
+                        "title": "Network Reachability",
+                        "href": "inspector_network-reachability.html"
+                    },
+                    {
+                        "title": "Common vulnerabilities and exposures",
+                        "href": "inspector_cves.html"
+                    },
+                    {
+                        "title": "Center for Internet Security (CIS) Benchmarks",
+                        "href": "inspector_cis.html"
+                    },
+                    {
+                        "title": "Security best practices for Amazon Inspector Classic",
+                        "href": "inspector_security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Amazon Inspector Classic assessment templates and assessment runs",
+                "href": "inspector_assessments.html"
+            },
+            {
+                "title": "Amazon Inspector Classic findings",
+                "href": "inspector_findings.html"
+            },
+            {
+                "title": "Assessment reports",
+                "href": "inspector_reports.html"
+            },
+            {
+                "title": "Exclusions in Amazon Inspector Classic",
+                "href": "inspector_exclusions.html"
+            },
+            {
+                "title": "Amazon Inspector Classic rules packages for supported operating systems",
+                "href": "inspector_rule-packages_across_os.html"
+            },
+            {
+                "title": "Logging Amazon Inspector Classic API calls with AWS CloudTrail",
+                "href": "logging-using-cloudtrail.html"
+            },
+            {
+                "title": "Monitoring Amazon Inspector Classic using Amazon CloudWatch",
+                "href": "using-cloudwatch.html"
+            },
+            {
+                "title": "Configuring Amazon Inspector Classic using AWS CloudFormation",
+                "href": "inspector_cloudformation-integration.html"
+            },
+            {
+                "title": "Security Hub integration",
+                "href": "securityhub-integration.html"
+            },
+            {
+                "title": "Amazon Inspector Classic ARNs",
+                "href": "inspector-arns.html",
+                "contents": [
+                    {
+                        "title": "ARNs for Amazon Inspector Classic resources",
+                        "href": "inspector-arns-resources.html"
+                    },
+                    {
+                        "title": "Amazon Inspector Classic ARNS for rules packages",
+                        "href": "inspector_rules-arns.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "document-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

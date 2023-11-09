@@ -1,1 +1,352 @@
-{ "contents" : [ { "title" : "What is AWS Cost Management?", "href" : "what-is-costmanagement.html" }, { "title" : "Getting started", "href" : "billing-getting-started.html" }, { "title" : "AWS Cost Explorer", "href" : "ce-what-is.html", "contents" : [ { "title" : "Enabling Cost Explorer", "href" : "ce-enable.html", "contents" : [ { "title" : "Controlling access to Cost Explorer", "href" : "ce-access.html" } ] }, { "title" : "Getting started with Cost Explorer", "href" : "ce-getting-started.html" }, { "title" : "Exploring your data using Cost Explorer", "href" : "ce-exploring-data.html", "contents" : [ { "title" : "Using the Cost Explorer chart", "href" : "ce-chart.html", "contents" : [ { "title" : "Modifying your chart", "href" : "ce-modify.html", "contents" : [ { "title" : "Filtering data", "href" : "ce-filtering.html" }, { "title" : "Choosing advanced options", "href" : "ce-advanced.html" } ] }, { "title" : "Reading the Cost Explorer data table", "href" : "ce-table.html" }, { "title" : "Forecasting", "href" : "ce-forecast.html" } ] } ] }, { "title" : "Using the AWS Cost Explorer API", "href" : "ce-api.html", "contents" : [ { "title" : "Best practices for the AWS Cost Explorer API", "href" : "ce-api-best-practices.html" } ] } ] }, { "title" : "Reports", "href" : "ce-reports.html", "contents" : [ { "title" : "Using the default Cost Explorer reports", "href" : "ce-default-reports.html" }, { "title" : "Saving reports and results", "href" : "ce-saving.html", "contents" : [ { "title" : "Saving your configuration", "href" : "ce-bookmarks.html" }, { "title" : "Downloading the cost data CSV file", "href" : "ce-download-csv.html" }, { "title" : "Managing your saved Cost Explorer reports", "href" : "ce-custom-reports.html" } ] } ] }, { "title" : "AWS Budgets", "href" : "budgets-managing-costs.html", "contents" : [ { "title" : "Best practices for AWS Budgets", "href" : "budgets-best-practices.html" }, { "title" : "Creating a budget", "href" : "budgets-create.html", "contents" : [ { "title" : "Using a budget template (simplified)", "href" : "budget-templates.html" }, { "title" : "Customizing a budget (advanced)", "href" : "custom-budgets.html", "contents" : [ { "title" : "Creating a cost budget", "href" : "create-cost-budget.html" }, { "title" : "Creating a usage budget", "href" : "create-usage-budget.html" }, { "title" : "Creating a Savings Plans budget", "href" : "create-savingsplans-budget.html" }, { "title" : "Creating a reservation budget", "href" : "create-reservation-budget.html" } ] }, { "title" : "Budget methods", "href" : "budget-methods.html" }, { "title" : "Budget filters", "href" : "budgets-create-filters.html" } ] }, { "title" : "Viewing your budgets", "href" : "budgets-view.html" }, { "title" : "Editing a budget", "href" : "budgets-edit.html" }, { "title" : "Downloading a budget", "href" : "budgets-export.html" }, { "title" : "Copying a budget", "href" : "budgets-copy.html" }, { "title" : "Deleting a budget", "href" : "budgets-delete.html" }, { "title" : "Configuring AWS Budgets actions", "href" : "budgets-controls.html" }, { "title" : "Creating an Amazon SNS topic for budget notifications", "href" : "budgets-sns-policy.html" }, { "title" : "Receiving budget alerts in Amazon Chime and Slack", "href" : "sns-alert-chime.html" } ] }, { "title" : "AWS Budgets Reports", "href" : "reporting-cost-budget.html", "contents" : [ { "title" : "Creating an AWS Budgets report", "href" : "create-budget-report.html" }, { "title" : "Editing an AWS Budgets report", "href" : "edit-budget-report.html" }, { "title" : "Copying an AWS Budgets report", "href" : "copy-budget-report.html" }, { "title" : "Deleting an AWS Budgets report", "href" : "delete-budget-report.html" } ] }, { "title" : "AWS Cost Anomaly Detection", "href" : "manage-ad.html", "contents" : [ { "title" : "Setting up", "href" : "settingup-ad.html" }, { "title" : "Access control and examples", "href" : "accesscontrol-ad.html" }, { "title" : "Getting started", "href" : "getting-started-ad.html" }, { "title" : "Editing your alerts", "href" : "edit-alert-pref.html" }, { "title" : "Creating an Amazon SNS topic for anomaly notifications", "href" : "ad-SNS.html" }, { "title" : "Receiving anomaly alerts in Amazon Chime and Slack", "href" : "cad-alert-chime.html" }, { "title" : "Opting out", "href" : "opting-out-cad.html" } ] }, { "title" : "Rightsizing Recommendations", "href" : "ce-rightsizing.html", "contents" : [ { "title" : "Understanding your reservations with Cost Explorer", "href" : "ce-ris.html" }, { "title" : "RI Recommendations", "href" : "ri-recommendations.html" } ] }, { "title" : "Savings Plans", "href" : "manage-sp.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "Overview of managing access", "href" : "control-access-billing.html" }, { "title" : "How AWS Cost Management works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Using IAM policies for AWS Cost Management", "href" : "billing-permissions-ref.html" }, { "title" : "AWS Cost Management policy examples", "href" : "billing-example-policies.html" }, { "title" : "Migrating access control", "href" : "migrate-granularaccess-whatis.html", "contents" : [ { "title" : "How to use the affected policies tool", "href" : "migrate-security-iam-tool.html" } ] }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Logging and monitoring", "href" : "billing-security-logging.html", "contents" : [ { "title" : "Logging AWS Cost Management API calls with AWS CloudTrail", "href" : "logging-with-cloudtrail.html" } ] }, { "title" : "Compliance validation", "href" : "Billing-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Quotas and restrictions", "href" : "management-limits.html" }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/cost-management/latest/userguide/",
+    "service": "cost-management",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS Cost Management?",
+                "href": "what-is-costmanagement.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "billing-getting-started.html"
+            },
+            {
+                "title": "AWS Cost Explorer",
+                "href": "ce-what-is.html",
+                "contents": [
+                    {
+                        "title": "Enabling Cost Explorer",
+                        "href": "ce-enable.html",
+                        "contents": [
+                            {
+                                "title": "Controlling access to Cost Explorer",
+                                "href": "ce-access.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Getting started with Cost Explorer",
+                        "href": "ce-getting-started.html"
+                    },
+                    {
+                        "title": "Exploring your data using Cost Explorer",
+                        "href": "ce-exploring-data.html",
+                        "contents": [
+                            {
+                                "title": "Using the Cost Explorer chart",
+                                "href": "ce-chart.html",
+                                "contents": [
+                                    {
+                                        "title": "Modifying your chart",
+                                        "href": "ce-modify.html",
+                                        "contents": [
+                                            {
+                                                "title": "Filtering data",
+                                                "href": "ce-filtering.html"
+                                            },
+                                            {
+                                                "title": "Choosing advanced options",
+                                                "href": "ce-advanced.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Reading the Cost Explorer data table",
+                                        "href": "ce-table.html"
+                                    },
+                                    {
+                                        "title": "Forecasting",
+                                        "href": "ce-forecast.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using the AWS Cost Explorer API",
+                        "href": "ce-api.html",
+                        "contents": [
+                            {
+                                "title": "Best practices for the AWS Cost Explorer API",
+                                "href": "ce-api-best-practices.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Reports",
+                "href": "ce-reports.html",
+                "contents": [
+                    {
+                        "title": "Using the default Cost Explorer reports",
+                        "href": "ce-default-reports.html"
+                    },
+                    {
+                        "title": "Saving reports and results",
+                        "href": "ce-saving.html",
+                        "contents": [
+                            {
+                                "title": "Saving your configuration",
+                                "href": "ce-bookmarks.html"
+                            },
+                            {
+                                "title": "Downloading the cost data CSV file",
+                                "href": "ce-download-csv.html"
+                            },
+                            {
+                                "title": "Managing your saved Cost Explorer reports",
+                                "href": "ce-custom-reports.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "AWS Budgets",
+                "href": "budgets-managing-costs.html",
+                "contents": [
+                    {
+                        "title": "Best practices for AWS Budgets",
+                        "href": "budgets-best-practices.html"
+                    },
+                    {
+                        "title": "Creating a budget",
+                        "href": "budgets-create.html",
+                        "contents": [
+                            {
+                                "title": "Using a budget template (simplified)",
+                                "href": "budget-templates.html"
+                            },
+                            {
+                                "title": "Customizing a budget (advanced)",
+                                "href": "custom-budgets.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating a cost budget",
+                                        "href": "create-cost-budget.html"
+                                    },
+                                    {
+                                        "title": "Creating a usage budget",
+                                        "href": "create-usage-budget.html"
+                                    },
+                                    {
+                                        "title": "Creating a Savings Plans budget",
+                                        "href": "create-savingsplans-budget.html"
+                                    },
+                                    {
+                                        "title": "Creating a reservation budget",
+                                        "href": "create-reservation-budget.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Budget methods",
+                                "href": "budget-methods.html"
+                            },
+                            {
+                                "title": "Budget filters",
+                                "href": "budgets-create-filters.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Viewing your budgets",
+                        "href": "budgets-view.html"
+                    },
+                    {
+                        "title": "Editing a budget",
+                        "href": "budgets-edit.html"
+                    },
+                    {
+                        "title": "Downloading a budget",
+                        "href": "budgets-export.html"
+                    },
+                    {
+                        "title": "Copying a budget",
+                        "href": "budgets-copy.html"
+                    },
+                    {
+                        "title": "Deleting a budget",
+                        "href": "budgets-delete.html"
+                    },
+                    {
+                        "title": "Configuring AWS Budgets actions",
+                        "href": "budgets-controls.html"
+                    },
+                    {
+                        "title": "Creating an Amazon SNS topic for budget notifications",
+                        "href": "budgets-sns-policy.html"
+                    },
+                    {
+                        "title": "Receiving budget alerts in Amazon Chime and Slack",
+                        "href": "sns-alert-chime.html"
+                    }
+                ]
+            },
+            {
+                "title": "AWS Budgets Reports",
+                "href": "reporting-cost-budget.html",
+                "contents": [
+                    {
+                        "title": "Creating an AWS Budgets report",
+                        "href": "create-budget-report.html"
+                    },
+                    {
+                        "title": "Editing an AWS Budgets report",
+                        "href": "edit-budget-report.html"
+                    },
+                    {
+                        "title": "Copying an AWS Budgets report",
+                        "href": "copy-budget-report.html"
+                    },
+                    {
+                        "title": "Deleting an AWS Budgets report",
+                        "href": "delete-budget-report.html"
+                    }
+                ]
+            },
+            {
+                "title": "AWS Cost Anomaly Detection",
+                "href": "manage-ad.html",
+                "contents": [
+                    {
+                        "title": "Setting up",
+                        "href": "settingup-ad.html"
+                    },
+                    {
+                        "title": "Access control and examples",
+                        "href": "accesscontrol-ad.html"
+                    },
+                    {
+                        "title": "Getting started",
+                        "href": "getting-started-ad.html"
+                    },
+                    {
+                        "title": "Editing your alerts",
+                        "href": "edit-alert-pref.html"
+                    },
+                    {
+                        "title": "Creating an Amazon SNS topic for anomaly notifications",
+                        "href": "ad-SNS.html"
+                    },
+                    {
+                        "title": "Receiving anomaly alerts in Amazon Chime and Slack",
+                        "href": "cad-alert-chime.html"
+                    },
+                    {
+                        "title": "Opting out",
+                        "href": "opting-out-cad.html"
+                    }
+                ]
+            },
+            {
+                "title": "Rightsizing Recommendations",
+                "href": "ce-rightsizing.html",
+                "contents": [
+                    {
+                        "title": "Understanding your reservations with Cost Explorer",
+                        "href": "ce-ris.html"
+                    },
+                    {
+                        "title": "RI Recommendations",
+                        "href": "ri-recommendations.html"
+                    }
+                ]
+            },
+            {
+                "title": "Savings Plans",
+                "href": "manage-sp.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "Overview of managing access",
+                                "href": "control-access-billing.html"
+                            },
+                            {
+                                "title": "How AWS Cost Management works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Using IAM policies for AWS Cost Management",
+                                "href": "billing-permissions-ref.html"
+                            },
+                            {
+                                "title": "AWS Cost Management policy examples",
+                                "href": "billing-example-policies.html"
+                            },
+                            {
+                                "title": "Migrating access control",
+                                "href": "migrate-granularaccess-whatis.html",
+                                "contents": [
+                                    {
+                                        "title": "How to use the affected policies tool",
+                                        "href": "migrate-security-iam-tool.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "billing-security-logging.html",
+                        "contents": [
+                            {
+                                "title": "Logging AWS Cost Management API calls with AWS CloudTrail",
+                                "href": "logging-with-cloudtrail.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "Billing-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas and restrictions",
+                "href": "management-limits.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

@@ -1,1 +1,154 @@
-{ "contents" : [ { "title" : "What is EventBridge Scheduler?", "href" : "what-is-scheduler.html" }, { "title" : "Setting up", "href" : "setting-up.html" }, { "title" : "Getting started", "href" : "getting-started.html" }, { "title" : "Schedule types", "href" : "schedule-types.html" }, { "title" : "Managing a schedule", "href" : "managing-schedule.html", "contents" : [ { "title" : "Changing the schedule state", "href" : "managing-schedule-state.html" }, { "title" : "Configuring flexible time windows", "href" : "managing-schedule-flexible-time-windows.html" }, { "title" : "Configuring a dead-letter queue", "href" : "configuring-schedule-dlq.html" }, { "title" : "Deleting a schedule", "href" : "managing-schedule-delete.html" } ] }, { "title" : "Managing a schedule group", "href" : "managing-schedule-group.html", "contents" : [ { "title" : "Creating a schedule group", "href" : "managing-schedule-group-create.html" }, { "title" : "Deleting a schedule group", "href" : "managing-schedule-group-delete.html" } ] }, { "title" : "Managing targets", "href" : "managing-targets.html", "contents" : [ { "title" : "Using templated targets", "href" : "managing-targets-templated.html" }, { "title" : "Using universal targets", "href" : "managing-targets-universal.html" }, { "title" : "Adding context attributes", "href" : "managing-schedule-context-attributes.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Managing access", "href" : "security-iam.html", "contents" : [ { "title" : "How EventBridge Scheduler works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Using identity-based policies", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Encryption at rest", "href" : "encryption-rest.html" }, { "title" : "Encryption in transit", "href" : "encryption-transit.html" } ] }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html" } ] }, { "title" : "Monitoring and metrics", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Monitoring with CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "Monitoring with CloudTrail logs", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Quotas", "href" : "scheduler-quotas.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/scheduler/latest/UserGuide/",
+    "service": "scheduler",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is EventBridge Scheduler?",
+                "href": "what-is-scheduler.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "setting-up.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html"
+            },
+            {
+                "title": "Schedule types",
+                "href": "schedule-types.html"
+            },
+            {
+                "title": "Managing a schedule",
+                "href": "managing-schedule.html",
+                "contents": [
+                    {
+                        "title": "Changing the schedule state",
+                        "href": "managing-schedule-state.html"
+                    },
+                    {
+                        "title": "Configuring flexible time windows",
+                        "href": "managing-schedule-flexible-time-windows.html"
+                    },
+                    {
+                        "title": "Configuring a dead-letter queue",
+                        "href": "configuring-schedule-dlq.html"
+                    },
+                    {
+                        "title": "Deleting a schedule",
+                        "href": "managing-schedule-delete.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing a schedule group",
+                "href": "managing-schedule-group.html",
+                "contents": [
+                    {
+                        "title": "Creating a schedule group",
+                        "href": "managing-schedule-group-create.html"
+                    },
+                    {
+                        "title": "Deleting a schedule group",
+                        "href": "managing-schedule-group-delete.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing targets",
+                "href": "managing-targets.html",
+                "contents": [
+                    {
+                        "title": "Using templated targets",
+                        "href": "managing-targets-templated.html"
+                    },
+                    {
+                        "title": "Using universal targets",
+                        "href": "managing-targets-universal.html"
+                    },
+                    {
+                        "title": "Adding context attributes",
+                        "href": "managing-schedule-context-attributes.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Managing access",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How EventBridge Scheduler works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Using identity-based policies",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Encryption at rest",
+                                "href": "encryption-rest.html"
+                            },
+                            {
+                                "title": "Encryption in transit",
+                                "href": "encryption-transit.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring and metrics",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Monitoring with CloudWatch",
+                        "href": "monitoring-cloudwatch.html"
+                    },
+                    {
+                        "title": "Monitoring with CloudTrail logs",
+                        "href": "logging-using-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "scheduler-quotas.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

@@ -1,1 +1,268 @@
-{ "contents" : [ { "title" : "What Is AWS App Mesh?", "href" : "what-is-app-mesh.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "App Mesh and Amazon ECS", "href" : "getting-started-ecs.html" }, { "title" : "App Mesh and Kubernetes", "href" : "getting-started-kubernetes.html" }, { "title" : "App Mesh and Amazon EC2", "href" : "getting-started-ec2.html" }, { "title" : "App Mesh Roadmap", "href" : "roadmap.html" }, { "title" : "App Mesh Examples", "href" : "examples.html" } ] }, { "title" : "Concepts", "href" : "concepts.html", "contents" : [ { "title" : "Meshes", "href" : "meshes.html" }, { "title" : "Virtual services", "href" : "virtual_services.html" }, { "title" : "Virtual gateways", "href" : "virtual_gateways.html", "contents" : [ { "title" : "Gateway routes", "href" : "gateway-routes.html" } ] }, { "title" : "Virtual nodes", "href" : "virtual_nodes.html" }, { "title" : "Virtual routers", "href" : "virtual_routers.html", "contents" : [ { "title" : "Routes", "href" : "routes.html" } ] } ] }, { "title" : "Envoy", "href" : "envoy.html", "contents" : [ { "title" : "Envoy configuration variables", "href" : "envoy-config.html" }, { "title" : "Envoy defaults set by App Mesh", "href" : "envoy-defaults.html" }, { "title" : "Updating/migrating to Envoy 1.17", "href" : "1.17-migration.html" }, { "title" : "Agent for Envoy", "href" : "appnet-agent.html" } ] }, { "title" : "Observability", "href" : "observability.html", "contents" : [ { "title" : "Logging", "href" : "envoy-logs.html" }, { "title" : "Envoy metrics", "href" : "envoy-metrics.html", "contents" : [ { "title" : "Exporting metrics", "href" : "metrics.html" } ] }, { "title" : "Tracing", "href" : "tracing.html" } ] }, { "title" : "Tooling", "href" : "tooling.html" }, { "title" : "Working with shared meshes", "href" : "sharing.html" }, { "title" : "Working with other services", "href" : "appmesh-integrations.html", "contents" : [ { "title" : "Creating App Mesh resources with AWS CloudFormation", "href" : "creating-resources-with-cloudformation.html" }, { "title" : "App Mesh on AWS Outposts", "href" : "app-mesh-on-outposts.html" } ] }, { "title" : "Best practices", "href" : "best-practices.html" }, { "title" : "Securing Applications", "href" : "security.html", "contents" : [ { "title" : "Transport Layer Security (TLS)", "href" : "tls.html" }, { "title" : "Mutual TLS Authentication", "href" : "mutual-tls.html" }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS App Mesh works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-Based Policy Examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html" }, { "title" : "Envoy Proxy authorization", "href" : "proxy-authorization.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Logging with AWS CloudTrail", "href" : "logging-using-cloudtrail.html" }, { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Compliance validation", "href" : "compliance.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html", "contents" : [ { "title" : "Interface VPC Endpoints (AWS PrivateLink)", "href" : "vpc-endpoints.html" } ] }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Configuration and vulnerability analysis", "href" : "configuration-vulnerability-analysis.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "Best practices", "href" : "troubleshooting-best-practices.html" }, { "title" : "Setup", "href" : "troubleshooting-setup.html" }, { "title" : "Connectivity", "href" : "troubleshooting-connectivity.html" }, { "title" : "Scaling", "href" : "troubleshooting-scaling.html" }, { "title" : "Observability", "href" : "troubleshooting-observability.html" }, { "title" : "Security", "href" : "troubleshooting-security.html" }, { "title" : "Kubernetes", "href" : "troubleshooting-kubernetes.html" } ] }, { "title" : "Preview Channel", "href" : "preview.html" }, { "title" : "Service quotas", "href" : "service-quotas.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/app-mesh/latest/userguide/",
+    "service": "app-mesh",
+    "toc": {
+        "contents": [
+            {
+                "title": "What Is AWS App Mesh?",
+                "href": "what-is-app-mesh.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "App Mesh and Amazon ECS",
+                        "href": "getting-started-ecs.html"
+                    },
+                    {
+                        "title": "App Mesh and Kubernetes",
+                        "href": "getting-started-kubernetes.html"
+                    },
+                    {
+                        "title": "App Mesh and Amazon EC2",
+                        "href": "getting-started-ec2.html"
+                    },
+                    {
+                        "title": "App Mesh Roadmap",
+                        "href": "roadmap.html"
+                    },
+                    {
+                        "title": "App Mesh Examples",
+                        "href": "examples.html"
+                    }
+                ]
+            },
+            {
+                "title": "Concepts",
+                "href": "concepts.html",
+                "contents": [
+                    {
+                        "title": "Meshes",
+                        "href": "meshes.html"
+                    },
+                    {
+                        "title": "Virtual services",
+                        "href": "virtual_services.html"
+                    },
+                    {
+                        "title": "Virtual gateways",
+                        "href": "virtual_gateways.html",
+                        "contents": [
+                            {
+                                "title": "Gateway routes",
+                                "href": "gateway-routes.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Virtual nodes",
+                        "href": "virtual_nodes.html"
+                    },
+                    {
+                        "title": "Virtual routers",
+                        "href": "virtual_routers.html",
+                        "contents": [
+                            {
+                                "title": "Routes",
+                                "href": "routes.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Envoy",
+                "href": "envoy.html",
+                "contents": [
+                    {
+                        "title": "Envoy configuration variables",
+                        "href": "envoy-config.html"
+                    },
+                    {
+                        "title": "Envoy defaults set by App Mesh",
+                        "href": "envoy-defaults.html"
+                    },
+                    {
+                        "title": "Updating/migrating to Envoy 1.17",
+                        "href": "1.17-migration.html"
+                    },
+                    {
+                        "title": "Agent for Envoy",
+                        "href": "appnet-agent.html"
+                    }
+                ]
+            },
+            {
+                "title": "Observability",
+                "href": "observability.html",
+                "contents": [
+                    {
+                        "title": "Logging",
+                        "href": "envoy-logs.html"
+                    },
+                    {
+                        "title": "Envoy metrics",
+                        "href": "envoy-metrics.html",
+                        "contents": [
+                            {
+                                "title": "Exporting metrics",
+                                "href": "metrics.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tracing",
+                        "href": "tracing.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tooling",
+                "href": "tooling.html"
+            },
+            {
+                "title": "Working with shared meshes",
+                "href": "sharing.html"
+            },
+            {
+                "title": "Working with other services",
+                "href": "appmesh-integrations.html",
+                "contents": [
+                    {
+                        "title": "Creating App Mesh resources with AWS CloudFormation",
+                        "href": "creating-resources-with-cloudformation.html"
+                    },
+                    {
+                        "title": "App Mesh on AWS Outposts",
+                        "href": "app-mesh-on-outposts.html"
+                    }
+                ]
+            },
+            {
+                "title": "Best practices",
+                "href": "best-practices.html"
+            },
+            {
+                "title": "Securing Applications",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Transport Layer Security (TLS)",
+                        "href": "tls.html"
+                    },
+                    {
+                        "title": "Mutual TLS Authentication",
+                        "href": "mutual-tls.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS App Mesh works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-Based Policy Examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            },
+                            {
+                                "title": "Envoy Proxy authorization",
+                                "href": "proxy-authorization.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging with AWS CloudTrail",
+                        "href": "logging-using-cloudtrail.html"
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html",
+                        "contents": [
+                            {
+                                "title": "Interface VPC Endpoints (AWS PrivateLink)",
+                                "href": "vpc-endpoints.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "configuration-vulnerability-analysis.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Best practices",
+                        "href": "troubleshooting-best-practices.html"
+                    },
+                    {
+                        "title": "Setup",
+                        "href": "troubleshooting-setup.html"
+                    },
+                    {
+                        "title": "Connectivity",
+                        "href": "troubleshooting-connectivity.html"
+                    },
+                    {
+                        "title": "Scaling",
+                        "href": "troubleshooting-scaling.html"
+                    },
+                    {
+                        "title": "Observability",
+                        "href": "troubleshooting-observability.html"
+                    },
+                    {
+                        "title": "Security",
+                        "href": "troubleshooting-security.html"
+                    },
+                    {
+                        "title": "Kubernetes",
+                        "href": "troubleshooting-kubernetes.html"
+                    }
+                ]
+            },
+            {
+                "title": "Preview Channel",
+                "href": "preview.html"
+            },
+            {
+                "title": "Service quotas",
+                "href": "service-quotas.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

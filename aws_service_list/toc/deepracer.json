@@ -1,1 +1,392 @@
-{ "contents" : [ { "title" : "What is AWS DeepRacer?", "href" : "what-is-deepracer.html", "contents" : [ { "title" : "Explore reinforcement learning", "href" : "deepracer-is-a-learning-environment-for-reinforcement-learning.html" }, { "title" : "Concepts and terminology", "href" : "deepracer-basic-concept.html" } ] }, { "title" : "How it works", "href" : "deepracer-how-it-works.html", "contents" : [ { "title" : "Reinforcement learning", "href" : "deepracer-how-it-works-overview-reinforcement-learning.html" }, { "title" : "Action space and reward function", "href" : "deepracer-how-it-works-action-space.html" }, { "title" : "Training algorithms", "href" : "deepracer-how-it-works-reinforcement-learning-algorithm.html" }, { "title" : "AWS DeepRacer workflow", "href" : "deepracer-how-it-works-solution-workflow.html" }, { "title" : "Simulated-to-real performance gaps", "href" : "deepracer-how-it-works-virtual-to-physical.html" } ] }, { "title" : "Get started", "href" : "deepracer-get-started.html", "contents" : [ { "title" : "Train your first model", "href" : "deepracer-get-started-training-model.html" }, { "title" : "Evaluate models in simulation", "href" : "deepracer-get-started-test-in-simulator.html" } ] }, { "title" : "Train and evaluate models", "href" : "create-deepracer-project.html", "contents" : [ { "title" : "Understanding racing types and enabling sensors", "href" : "deepracer-choose-race-type.html" }, { "title" : "Train and evaluate models using AWS DeepRacer console", "href" : "deepracer-console-train-evaluate-models.html" }, { "title" : "Reward function reference", "href" : "deepracer-reward-function-reference.html", "contents" : [ { "title" : "Reward function input parameters", "href" : "deepracer-reward-function-input.html" }, { "title" : "Reward function examples", "href" : "deepracer-reward-function-examples.html" } ] } ] }, { "title" : "Operate your vehicle", "href" : "operate-deepracer-vehicle.html", "contents" : [ { "title" : "Get to know your vehicle", "href" : "deepracer-prep-vehicle.html", "contents" : [ { "title" : "LED indicators", "href" : "deepracer-vehicle-led-indicators.html" }, { "title" : "Device spare parts", "href" : "deepracer-vehicle-chassis-parts.html" } ] }, { "title" : "Set up your vehicle", "href" : "deepracer-set-up-vehicle.html" }, { "title" : "Launch device console", "href" : "deepracer-set-up-vehicle-test-drive.html" }, { "title" : "Calibrate your vehicle", "href" : "deepracer-calibrate-vehicle.html" }, { "title" : "Upload your model", "href" : "deepracer-upload-model-to-vehicle.html" }, { "title" : "Drive your vehicle", "href" : "deepracer-drive-your-vehicle.html" }, { "title" : "Inspect and manage vehicle settings", "href" : "deepracer-manage-vehicle-settings.html" }, { "title" : "View vehicle logs", "href" : "deepracer-drive-vehicle-logs.html" } ] }, { "title" : "Update and restore your AWS DeepRacer device", "href" : "deepracer-ubuntu-update.html" }, { "title" : "Build your physical track", "href" : "deepracer-build-your-track.html", "contents" : [ { "title" : "Materials and tools", "href" : "deepracer-build-your-track-materials-and-tools.html" }, { "title" : "Lay your track", "href" : "deepracer-build-your-track-construction.html" }, { "title" : "Track design templates", "href" : "deepracer-track-examples.html" } ] }, { "title" : "Join a race", "href" : "deepracer-racing-series.html", "contents" : [ { "title" : "Join a Virtual Circuit race", "href" : "deepracer-submit-model-to-leaderboard.html" }, { "title" : "Join a community race", "href" : "deepracer-join-community-race.html" }, { "title" : "Participate in a LIVE race", "href" : "deepracer-participate-live-race.html" } ] }, { "title" : "Organize a race", "href" : "deepracer-race-organizer.html", "contents" : [ { "title" : "", "href" : "deepracer-community-race-topics.html" }, { "title" : "Create a race quick start", "href" : "deepracer-create-community-race.html" }, { "title" : "Customize a race", "href" : "customize-community-race.html" }, { "title" : "Run a LIVE race", "href" : "deepracer-moderate-live-community-race.html" }, { "title" : "Broadcast a LIVE race", "href" : "deepracer-broadcast-live-community-race.html" }, { "title" : "Manage a race", "href" : "deepracer-manage-community-races.html" } ] }, { "title" : "Organize an event", "href" : "organize-an-event.html", "contents" : [ { "title" : "How events work and what to expect", "href" : "how-events-work-and-what-to-expect.html" }, { "title" : "Getting started with your event", "href" : "getting-started-with-your-event.html" } ] }, { "title" : "Multi-user mode", "href" : "multi-user-mode.html", "contents" : [ { "title" : "Admin setup", "href" : "deepracer-multi-user-admin-set-up.html" }, { "title" : "Participant setup", "href" : "deepracer-multi-user-racer-experience.html" } ] }, { "title" : "Educator tools", "href" : "educator.html", "contents" : [ { "title" : "Create a student race", "href" : "deepracer-create-student-community-race.html" }, { "title" : "Customize a student race", "href" : "customize-student-community-race.html" }, { "title" : "Manage a student race", "href" : "deepracer-manage-student-community-races.html" } ] }, { "title" : "Security", "href" : "deepracer-setup.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "AWS DeepRacer-Dependent Services", "href" : "deepracer-dependent-aws-services.html" }, { "title" : "Required IAM roles", "href" : "deepracer-understand-required-permissions-and-iam-roles.html" }, { "title" : "AWS Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS DeepRacer works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] } ] }, { "title" : "Tagging", "href" : "deepracer-tagging.html", "contents" : [ { "title" : "Add, view, and edit tags for a new resource", "href" : "tags-new.html" }, { "title" : "Add, view, and edit tags for an existing resource", "href" : "tags-exisiting.html" } ] }, { "title" : "Troubleshoot common issues", "href" : "deepracer-troubleshooting.html", "contents" : [ { "title" : "How to resolve common AWS DeepRacer LIVE issues", "href" : "deepracer-troubleshooting-deepracer-live.html" }, { "title" : "Why can't I connect to the device console with USB connection between my computer and vehicle?", "href" : "deepracer-troubleshooting-connect-to-deepracer.aws.html" }, { "title" : "How to switch AWS DeepRacer compute module power source from battery to a power outlet", "href" : "deepracer-troubleshooting-switch-battery-to-wall-power.html" }, { "title" : "How to use a USB flash drive to connect AWS DeepRacer to your Wi-Fi network", "href" : "deepracer-troubleshooting-wifi-connection-first-time.html" }, { "title" : "How to charge the vehicle's drive module battery", "href" : "deepracer-troubleshooting-charge-vehicle-battery-first-time.html" }, { "title" : "How to charge the vehicle's compute module battery", "href" : "deepracer-troubleshooting-charge-compute-battery.html" }, { "title" : "My battery is charged but my vehicle doesn't move", "href" : "deepracer-troubleshooting-immobile-vehicle-with-charged-battery.html" }, { "title" : "Troubleshoot vehicle battery lockout", "href" : "deepracer-prevent-vehicle-battery-lockout.html", "contents" : [ { "title" : "How to prevent vehicle battery lockout", "href" : "deepracer-prevent-vehicle-battery-lockout-actual.html" }, { "title" : "How to unlock AWS DeepRacer vehicle batteries", "href" : "deepracer-troubleshooting-unlock-dead-vehicle-batteries.html" } ] }, { "title" : "How to wrap a Dell battery connector cable when installing a LiDAR sensor", "href" : "deepracer-troubleshooting-dell-battery-evo-wrap.html" }, { "title" : "How to maintain your vehicle's connection", "href" : "deepracer-troubleshooting-maintain-vehicle-connection.html" }, { "title" : "How to get your device's Mac address", "href" : "deepracer-troubleshooting-get-mac-address.html" }, { "title" : "How to recover device controller default password", "href" : "deepracer-troubleshooting-recover-device-web-server-password.html" }, { "title" : "How to manually update your device", "href" : "deepracer-troubleshooting-manual-update-device.html" }, { "title" : "How to diagnose and resolve common device operational issues", "href" : "deepracer-troubleshooting-device-operation-issues.html" } ] }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/deepracer/latest/developerguide/",
+    "service": "deepracer",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS DeepRacer?",
+                "href": "what-is-deepracer.html",
+                "contents": [
+                    {
+                        "title": "Explore reinforcement learning",
+                        "href": "deepracer-is-a-learning-environment-for-reinforcement-learning.html"
+                    },
+                    {
+                        "title": "Concepts and terminology",
+                        "href": "deepracer-basic-concept.html"
+                    }
+                ]
+            },
+            {
+                "title": "How it works",
+                "href": "deepracer-how-it-works.html",
+                "contents": [
+                    {
+                        "title": "Reinforcement learning",
+                        "href": "deepracer-how-it-works-overview-reinforcement-learning.html"
+                    },
+                    {
+                        "title": "Action space and reward function",
+                        "href": "deepracer-how-it-works-action-space.html"
+                    },
+                    {
+                        "title": "Training algorithms",
+                        "href": "deepracer-how-it-works-reinforcement-learning-algorithm.html"
+                    },
+                    {
+                        "title": "AWS DeepRacer workflow",
+                        "href": "deepracer-how-it-works-solution-workflow.html"
+                    },
+                    {
+                        "title": "Simulated-to-real performance gaps",
+                        "href": "deepracer-how-it-works-virtual-to-physical.html"
+                    }
+                ]
+            },
+            {
+                "title": "Get started",
+                "href": "deepracer-get-started.html",
+                "contents": [
+                    {
+                        "title": "Train your first model",
+                        "href": "deepracer-get-started-training-model.html"
+                    },
+                    {
+                        "title": "Evaluate models in simulation",
+                        "href": "deepracer-get-started-test-in-simulator.html"
+                    }
+                ]
+            },
+            {
+                "title": "Train and evaluate models",
+                "href": "create-deepracer-project.html",
+                "contents": [
+                    {
+                        "title": "Understanding racing types and enabling sensors",
+                        "href": "deepracer-choose-race-type.html"
+                    },
+                    {
+                        "title": "Train and evaluate models using AWS DeepRacer console",
+                        "href": "deepracer-console-train-evaluate-models.html"
+                    },
+                    {
+                        "title": "Reward function reference",
+                        "href": "deepracer-reward-function-reference.html",
+                        "contents": [
+                            {
+                                "title": "Reward function input parameters",
+                                "href": "deepracer-reward-function-input.html"
+                            },
+                            {
+                                "title": "Reward function examples",
+                                "href": "deepracer-reward-function-examples.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Operate your vehicle",
+                "href": "operate-deepracer-vehicle.html",
+                "contents": [
+                    {
+                        "title": "Get to know your vehicle",
+                        "href": "deepracer-prep-vehicle.html",
+                        "contents": [
+                            {
+                                "title": "LED indicators",
+                                "href": "deepracer-vehicle-led-indicators.html"
+                            },
+                            {
+                                "title": "Device spare parts",
+                                "href": "deepracer-vehicle-chassis-parts.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Set up your vehicle",
+                        "href": "deepracer-set-up-vehicle.html"
+                    },
+                    {
+                        "title": "Launch device console",
+                        "href": "deepracer-set-up-vehicle-test-drive.html"
+                    },
+                    {
+                        "title": "Calibrate your vehicle",
+                        "href": "deepracer-calibrate-vehicle.html"
+                    },
+                    {
+                        "title": "Upload your model",
+                        "href": "deepracer-upload-model-to-vehicle.html"
+                    },
+                    {
+                        "title": "Drive your vehicle",
+                        "href": "deepracer-drive-your-vehicle.html"
+                    },
+                    {
+                        "title": "Inspect and manage vehicle settings",
+                        "href": "deepracer-manage-vehicle-settings.html"
+                    },
+                    {
+                        "title": "View vehicle logs",
+                        "href": "deepracer-drive-vehicle-logs.html"
+                    }
+                ]
+            },
+            {
+                "title": "Update and restore your AWS DeepRacer device",
+                "href": "deepracer-ubuntu-update.html"
+            },
+            {
+                "title": "Build your physical track",
+                "href": "deepracer-build-your-track.html",
+                "contents": [
+                    {
+                        "title": "Materials and tools",
+                        "href": "deepracer-build-your-track-materials-and-tools.html"
+                    },
+                    {
+                        "title": "Lay your track",
+                        "href": "deepracer-build-your-track-construction.html"
+                    },
+                    {
+                        "title": "Track design templates",
+                        "href": "deepracer-track-examples.html"
+                    }
+                ]
+            },
+            {
+                "title": "Join a race",
+                "href": "deepracer-racing-series.html",
+                "contents": [
+                    {
+                        "title": "Join a Virtual Circuit race",
+                        "href": "deepracer-submit-model-to-leaderboard.html"
+                    },
+                    {
+                        "title": "Join a community race",
+                        "href": "deepracer-join-community-race.html"
+                    },
+                    {
+                        "title": "Participate in a LIVE race",
+                        "href": "deepracer-participate-live-race.html"
+                    }
+                ]
+            },
+            {
+                "title": "Organize a race",
+                "href": "deepracer-race-organizer.html",
+                "contents": [
+                    {
+                        "title": "",
+                        "href": "deepracer-community-race-topics.html"
+                    },
+                    {
+                        "title": "Create a race quick start",
+                        "href": "deepracer-create-community-race.html"
+                    },
+                    {
+                        "title": "Customize a race",
+                        "href": "customize-community-race.html"
+                    },
+                    {
+                        "title": "Run a LIVE race",
+                        "href": "deepracer-moderate-live-community-race.html"
+                    },
+                    {
+                        "title": "Broadcast a LIVE race",
+                        "href": "deepracer-broadcast-live-community-race.html"
+                    },
+                    {
+                        "title": "Manage a race",
+                        "href": "deepracer-manage-community-races.html"
+                    }
+                ]
+            },
+            {
+                "title": "Organize an event",
+                "href": "organize-an-event.html",
+                "contents": [
+                    {
+                        "title": "How events work and what to expect",
+                        "href": "how-events-work-and-what-to-expect.html"
+                    },
+                    {
+                        "title": "Getting started with your event",
+                        "href": "getting-started-with-your-event.html"
+                    }
+                ]
+            },
+            {
+                "title": "Multi-user mode",
+                "href": "multi-user-mode.html",
+                "contents": [
+                    {
+                        "title": "Admin setup",
+                        "href": "deepracer-multi-user-admin-set-up.html"
+                    },
+                    {
+                        "title": "Participant setup",
+                        "href": "deepracer-multi-user-racer-experience.html"
+                    }
+                ]
+            },
+            {
+                "title": "Educator tools",
+                "href": "educator.html",
+                "contents": [
+                    {
+                        "title": "Create a student race",
+                        "href": "deepracer-create-student-community-race.html"
+                    },
+                    {
+                        "title": "Customize a student race",
+                        "href": "customize-student-community-race.html"
+                    },
+                    {
+                        "title": "Manage a student race",
+                        "href": "deepracer-manage-student-community-races.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "deepracer-setup.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "AWS DeepRacer-Dependent Services",
+                        "href": "deepracer-dependent-aws-services.html"
+                    },
+                    {
+                        "title": "Required IAM roles",
+                        "href": "deepracer-understand-required-permissions-and-iam-roles.html"
+                    },
+                    {
+                        "title": "AWS Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS DeepRacer works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tagging",
+                "href": "deepracer-tagging.html",
+                "contents": [
+                    {
+                        "title": "Add, view, and edit tags for a new resource",
+                        "href": "tags-new.html"
+                    },
+                    {
+                        "title": "Add, view, and edit tags for an existing resource",
+                        "href": "tags-exisiting.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshoot common issues",
+                "href": "deepracer-troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "How to resolve common AWS DeepRacer LIVE issues",
+                        "href": "deepracer-troubleshooting-deepracer-live.html"
+                    },
+                    {
+                        "title": "Why can't I connect to the device console with USB connection between my computer and vehicle?",
+                        "href": "deepracer-troubleshooting-connect-to-deepracer.aws.html"
+                    },
+                    {
+                        "title": "How to switch AWS DeepRacer compute module power source from battery to a power outlet",
+                        "href": "deepracer-troubleshooting-switch-battery-to-wall-power.html"
+                    },
+                    {
+                        "title": "How to use a USB flash drive to connect AWS DeepRacer to your Wi-Fi network",
+                        "href": "deepracer-troubleshooting-wifi-connection-first-time.html"
+                    },
+                    {
+                        "title": "How to charge the vehicle's drive module battery",
+                        "href": "deepracer-troubleshooting-charge-vehicle-battery-first-time.html"
+                    },
+                    {
+                        "title": "How to charge the vehicle's compute module battery",
+                        "href": "deepracer-troubleshooting-charge-compute-battery.html"
+                    },
+                    {
+                        "title": "My battery is charged but my vehicle doesn't move",
+                        "href": "deepracer-troubleshooting-immobile-vehicle-with-charged-battery.html"
+                    },
+                    {
+                        "title": "Troubleshoot vehicle battery lockout",
+                        "href": "deepracer-prevent-vehicle-battery-lockout.html",
+                        "contents": [
+                            {
+                                "title": "How to prevent vehicle battery lockout",
+                                "href": "deepracer-prevent-vehicle-battery-lockout-actual.html"
+                            },
+                            {
+                                "title": "How to unlock AWS DeepRacer vehicle batteries",
+                                "href": "deepracer-troubleshooting-unlock-dead-vehicle-batteries.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "How to wrap a Dell battery connector cable when installing a LiDAR sensor",
+                        "href": "deepracer-troubleshooting-dell-battery-evo-wrap.html"
+                    },
+                    {
+                        "title": "How to maintain your vehicle's connection",
+                        "href": "deepracer-troubleshooting-maintain-vehicle-connection.html"
+                    },
+                    {
+                        "title": "How to get your device's Mac address",
+                        "href": "deepracer-troubleshooting-get-mac-address.html"
+                    },
+                    {
+                        "title": "How to recover device controller default password",
+                        "href": "deepracer-troubleshooting-recover-device-web-server-password.html"
+                    },
+                    {
+                        "title": "How to manually update your device",
+                        "href": "deepracer-troubleshooting-manual-update-device.html"
+                    },
+                    {
+                        "title": "How to diagnose and resolve common device operational issues",
+                        "href": "deepracer-troubleshooting-device-operation-issues.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

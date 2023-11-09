@@ -1,1 +1,238 @@
-{ "contents" : [ { "title" : "What is AWS RAM?", "href" : "what-is.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Terms and concepts", "href" : "getting-started-terms-and-concepts.html" }, { "title" : "Sharing your resources", "href" : "getting-started-sharing.html" }, { "title" : "Using shared resources", "href" : "getting-started-shared.html" } ] }, { "title" : "Working with shared resources", "href" : "working-with.html", "contents" : [ { "title" : "Regional and global resources", "href" : "working-with-regional-vs-global.html" }, { "title" : "Resources owned by you", "href" : "working-with-sharing.html", "contents" : [ { "title" : "Viewing resource shares you created", "href" : "working-with-sharing-view-rs.html" }, { "title" : "Creating a resource share", "href" : "working-with-sharing-create.html" }, { "title" : "Updating a resource share", "href" : "working-with-sharing-update.html" }, { "title" : "Viewing your shared resources", "href" : "working-with-sharing-view-sr.html" }, { "title" : "Viewing principals you share with", "href" : "working-with-sharing-view-principals.html" }, { "title" : "Deleting a resource share", "href" : "working-with-sharing-delete.html" } ] }, { "title" : "Resources shared with you", "href" : "working-with-shared.html", "contents" : [ { "title" : "Accepting and rejecting invitations", "href" : "working-with-shared-invitations.html" }, { "title" : "Viewing resource shares shared with you", "href" : "working-with-shared-view-rs.html" }, { "title" : "Viewing resources shared with you", "href" : "working-with-shared-view-sr.html" }, { "title" : "View principals sharing with you", "href" : "working-with-shared-view-principals.html" }, { "title" : "Leaving a resource share", "href" : "working-with-shared-leave.html" } ] }, { "title" : "Availability Zone IDs", "href" : "working-with-az-ids.html" } ] }, { "title" : "Shareable resources", "href" : "shareable.html" }, { "title" : "Managing permissions in AWS RAM", "href" : "security-ram-permissions.html", "contents" : [ { "title" : "Viewing managed permissions", "href" : "working-with-sharing-view-permissions.html" }, { "title" : "Creating and using customer managed permissions", "href" : "create-customer-managed-permissions.html" }, { "title" : "Updating managed permission versions", "href" : "working-with-sharing-update-permissions.html" }, { "title" : "Customer managed permission considerations", "href" : "managed-permission-considerations.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "security-data-protection.html" }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS RAM works with IAM", "href" : "security-iam-policies.html" }, { "title" : "AWS managed policies", "href" : "security-iam-managed-policies.html" }, { "title" : "Using Service-Linked Roles", "href" : "security-iam-service-linked-roles.html" }, { "title" : "Example IAM policies", "href" : "security-iam-policies-examples.html" }, { "title" : "Example SCPs", "href" : "scp.html" }, { "title" : "Disable sharing with Organizations", "href" : "security-disable-sharing-with-orgs.html" } ] }, { "title" : "Logging and monitoring", "href" : "security-monitoring.html", "contents" : [ { "title" : "Monitoring using CloudWatch Events", "href" : "using-cloudwatch-events.html" }, { "title" : "Logging AWS RAM API calls with AWS CloudTrail", "href" : "cloudtrail-logging.html" } ] }, { "title" : "Resilience", "href" : "security-disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "security-infrastructure.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "Error: Account ID doesn't exist", "href" : "tshoot-no-slr.html" }, { "title" : "Error: Access Denied Exception", "href" : "tshoot-access-denied.html" }, { "title" : "Error: Unknown Resource Exception", "href" : "tshoot-unknown-resource.html" }, { "title" : "Error: Sharing outside an organization not permitted", "href" : "tshoot-sharing-outside-org.html" }, { "title" : "Error: Can't see shared resources", "href" : "tshoot-cant-see-shared.html" }, { "title" : "Error: Limit Exceeded Exception", "href" : "tshoot-limits-exceeded.html" }, { "title" : "No invitations received", "href" : "tshoot-shared-org-no-invite.html" }, { "title" : "Can't share a VPC", "href" : "tshoot-subnet-limits.html" } ] }, { "title" : "Service quotas", "href" : "service-quotas.html" }, { "title" : "Using the AWS SDKs", "href" : "sdk-general-info.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/ram/latest/userguide/",
+    "service": "ram",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS RAM?",
+                "href": "what-is.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Terms and concepts",
+                        "href": "getting-started-terms-and-concepts.html"
+                    },
+                    {
+                        "title": "Sharing your resources",
+                        "href": "getting-started-sharing.html"
+                    },
+                    {
+                        "title": "Using shared resources",
+                        "href": "getting-started-shared.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with shared resources",
+                "href": "working-with.html",
+                "contents": [
+                    {
+                        "title": "Regional and global resources",
+                        "href": "working-with-regional-vs-global.html"
+                    },
+                    {
+                        "title": "Resources owned by you",
+                        "href": "working-with-sharing.html",
+                        "contents": [
+                            {
+                                "title": "Viewing resource shares you created",
+                                "href": "working-with-sharing-view-rs.html"
+                            },
+                            {
+                                "title": "Creating a resource share",
+                                "href": "working-with-sharing-create.html"
+                            },
+                            {
+                                "title": "Updating a resource share",
+                                "href": "working-with-sharing-update.html"
+                            },
+                            {
+                                "title": "Viewing your shared resources",
+                                "href": "working-with-sharing-view-sr.html"
+                            },
+                            {
+                                "title": "Viewing principals you share with",
+                                "href": "working-with-sharing-view-principals.html"
+                            },
+                            {
+                                "title": "Deleting a resource share",
+                                "href": "working-with-sharing-delete.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Resources shared with you",
+                        "href": "working-with-shared.html",
+                        "contents": [
+                            {
+                                "title": "Accepting and rejecting invitations",
+                                "href": "working-with-shared-invitations.html"
+                            },
+                            {
+                                "title": "Viewing resource shares shared with you",
+                                "href": "working-with-shared-view-rs.html"
+                            },
+                            {
+                                "title": "Viewing resources shared with you",
+                                "href": "working-with-shared-view-sr.html"
+                            },
+                            {
+                                "title": "View principals sharing with you",
+                                "href": "working-with-shared-view-principals.html"
+                            },
+                            {
+                                "title": "Leaving a resource share",
+                                "href": "working-with-shared-leave.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Availability Zone IDs",
+                        "href": "working-with-az-ids.html"
+                    }
+                ]
+            },
+            {
+                "title": "Shareable resources",
+                "href": "shareable.html"
+            },
+            {
+                "title": "Managing permissions in AWS RAM",
+                "href": "security-ram-permissions.html",
+                "contents": [
+                    {
+                        "title": "Viewing managed permissions",
+                        "href": "working-with-sharing-view-permissions.html"
+                    },
+                    {
+                        "title": "Creating and using customer managed permissions",
+                        "href": "create-customer-managed-permissions.html"
+                    },
+                    {
+                        "title": "Updating managed permission versions",
+                        "href": "working-with-sharing-update-permissions.html"
+                    },
+                    {
+                        "title": "Customer managed permission considerations",
+                        "href": "managed-permission-considerations.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "security-data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS RAM works with IAM",
+                                "href": "security-iam-policies.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-managed-policies.html"
+                            },
+                            {
+                                "title": "Using Service-Linked Roles",
+                                "href": "security-iam-service-linked-roles.html"
+                            },
+                            {
+                                "title": "Example IAM policies",
+                                "href": "security-iam-policies-examples.html"
+                            },
+                            {
+                                "title": "Example SCPs",
+                                "href": "scp.html"
+                            },
+                            {
+                                "title": "Disable sharing with Organizations",
+                                "href": "security-disable-sharing-with-orgs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "security-monitoring.html",
+                        "contents": [
+                            {
+                                "title": "Monitoring using CloudWatch Events",
+                                "href": "using-cloudwatch-events.html"
+                            },
+                            {
+                                "title": "Logging AWS RAM API calls with AWS CloudTrail",
+                                "href": "cloudtrail-logging.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "security-disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "security-infrastructure.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Error: Account ID doesn't exist",
+                        "href": "tshoot-no-slr.html"
+                    },
+                    {
+                        "title": "Error: Access Denied Exception",
+                        "href": "tshoot-access-denied.html"
+                    },
+                    {
+                        "title": "Error: Unknown Resource Exception",
+                        "href": "tshoot-unknown-resource.html"
+                    },
+                    {
+                        "title": "Error: Sharing outside an organization not permitted",
+                        "href": "tshoot-sharing-outside-org.html"
+                    },
+                    {
+                        "title": "Error: Can't see shared resources",
+                        "href": "tshoot-cant-see-shared.html"
+                    },
+                    {
+                        "title": "Error: Limit Exceeded Exception",
+                        "href": "tshoot-limits-exceeded.html"
+                    },
+                    {
+                        "title": "No invitations received",
+                        "href": "tshoot-shared-org-no-invite.html"
+                    },
+                    {
+                        "title": "Can't share a VPC",
+                        "href": "tshoot-subnet-limits.html"
+                    }
+                ]
+            },
+            {
+                "title": "Service quotas",
+                "href": "service-quotas.html"
+            },
+            {
+                "title": "Using the AWS SDKs",
+                "href": "sdk-general-info.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

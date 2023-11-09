@@ -1,1 +1,440 @@
-{ "contents" : [ { "title" : "What is AWS Proton?", "href" : "Welcome.html" }, { "title" : "Setting up", "href" : "ag-setting-up.html", "contents" : [ { "title" : "Setting up with IAM", "href" : "ag-setting-up-iam.html" }, { "title" : "Setting up with AWS Proton", "href" : "setting-up-for-service.html" } ] }, { "title" : "Getting started", "href" : "ag-getting-started.html", "contents" : [ { "title" : "Prerequisites", "href" : "getting-started-prerequisites.html" }, { "title" : "Getting started workflow", "href" : "ag-admin-workflow.html" }, { "title" : "Getting started with the console", "href" : "ag-getting-started-console.html" }, { "title" : "Getting started with the CLI", "href" : "ag-getting-started-cli.html" }, { "title" : "Template library", "href" : "ag-getting-started-templates.html" } ] }, { "title" : "How AWS Proton works", "href" : "ag-works.html", "contents" : [ { "title" : "Objects", "href" : "ag-works-objects.html" }, { "title" : "Provisioning methods", "href" : "ag-works-prov-methods.html" }, { "title" : "AWS Proton terminology", "href" : "terminology.html" } ] }, { "title" : "Template authoring and bundles", "href" : "ag-template-authoring.html", "contents" : [ { "title" : "Parameters", "href" : "parameters.html", "contents" : [ { "title" : "Environment CloudFormation IaC parameters", "href" : "env-parameters.html" }, { "title" : "Service CloudFormation IaC parameters", "href" : "svc-parameters.html" }, { "title" : "Component CloudFormation IaC parameters", "href" : "comp-parameters.html" }, { "title" : "CloudFormation parameter filters", "href" : "parameter-filters.html" }, { "title" : "CodeBuild provisioning parameters", "href" : "parameters-codebuild.html" }, { "title" : "Terraform IaC parameters", "href" : "env-parameters-tform.html" } ] }, { "title" : "Infrastructure as code files", "href" : "ag-infrastructure-tmp-files.html", "contents" : [ { "title" : "AWS CloudFormation IaC files", "href" : "ag-infrastructure-tmp-files-cloudformation.html" }, { "title" : "CodeBuild bundle", "href" : "ag-infrastructure-tmp-files-codebuild.html" }, { "title" : "Terraform IaC files", "href" : "ag-infrastructure-tmp-files-terraform.html" } ] }, { "title" : "Schema file", "href" : "ag-schema.html" }, { "title" : "Manifest and wrap up", "href" : "ag-wrap-up.html" }, { "title" : "Template bundle considerations", "href" : "template-considerations.html" } ] }, { "title" : "Templates", "href" : "ag-templates.html", "contents" : [ { "title" : "Versions", "href" : "ag-template-versions.html" }, { "title" : "Publish", "href" : "template-create.html" }, { "title" : "View templates", "href" : "template-view.html" }, { "title" : "Update a template", "href" : "template-update.html" }, { "title" : "Delete templates", "href" : "template-delete.html" }, { "title" : "Template sync configurations", "href" : "ag-template-sync-configs.html", "contents" : [ { "title" : "Create", "href" : "create-template-sync.html" }, { "title" : "View", "href" : "view-template-sync.html" }, { "title" : "Edit", "href" : "update-template-sync.html" }, { "title" : "Delete", "href" : "delete-template-sync.html" } ] }, { "title" : "Service sync configurations", "href" : "ag-service-sync-configs.html", "contents" : [ { "title" : "Create", "href" : "create-service-sync.html" }, { "title" : "View", "href" : "get-service-sync.html" }, { "title" : "Edit", "href" : "update-service-sync.html" }, { "title" : "Delete", "href" : "delete-service-sync.html" } ] } ] }, { "title" : "Environments", "href" : "ag-environments.html", "contents" : [ { "title" : "IAM Roles", "href" : "ag-environment-roles.html" }, { "title" : "Create", "href" : "ag-create-env.html" }, { "title" : "View", "href" : "ag-env-view.html" }, { "title" : "Update", "href" : "ag-env-update.html" }, { "title" : "Delete", "href" : "ag-env-delete.html" }, { "title" : "Account connections", "href" : "ag-env-account-connections.html" }, { "title" : "Customer-managed", "href" : "ag-env-customer-managed.html" }, { "title" : "CodeBuild provisioning role creation", "href" : "ag-env-codebuild-provisioning-role-creation.html" } ] }, { "title" : "Services", "href" : "ag-services.html", "contents" : [ { "title" : "Create", "href" : "ag-create-svc.html" }, { "title" : "View", "href" : "ag-svc-view.html" }, { "title" : "Edit", "href" : "ag-svc-update.html" }, { "title" : "Delete", "href" : "ag-svc-delete.html" }, { "title" : "View instances", "href" : "ag-svc-instance-view.html" }, { "title" : "Update instance", "href" : "ag-svc-instance-update.html" }, { "title" : "Update pipeline", "href" : "ag-svc-pipeline-update.html" } ] }, { "title" : "Components", "href" : "ag-components.html", "contents" : [ { "title" : "Component states", "href" : "ag-components-states.html" }, { "title" : "Component IaC files", "href" : "ag-components-iac.html" }, { "title" : "Component AWS CloudFormation example", "href" : "ag-components-example-cfn.html" } ] }, { "title" : "Repositories", "href" : "ag-repositories.html", "contents" : [ { "title" : "Create a repository link", "href" : "ag-create-repo.html" }, { "title" : "View linked repository data", "href" : "ag-repo-view.html" }, { "title" : "Delete a repository link", "href" : "ag-repo-delete.html" } ] }, { "title" : "Monitoring", "href" : "monitoring.html", "contents" : [ { "title" : "Automate AWS Proton with EventBridge", "href" : "event-bridge.html" }, { "title" : "EventBridgeTutorial: Send Amazon Simple Notification Service alerts for AWS Proton service status changes", "href" : "event-tutorial-sns.html" }, { "title" : "AWS Proton dashboard", "href" : "monitoring-dashboard.html" } ] }, { "title" : "Security", "href" : "ag-security.html", "contents" : [ { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS Proton works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Policy examples", "href" : "security_iam_policy-examples.html", "contents" : [ { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Service role policy examples", "href" : "security_iam_service-role-policy-examples.html" }, { "title" : "Condition-key based policy examples", "href" : "security_iam_condition-key-based-policy-examples.html" } ] }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html", "contents" : [ { "title" : "Sync roles", "href" : "using-service-linked-roles-sync.html" }, { "title" : "CodeBuild role", "href" : "using-service-linked-roles-codebuild.html" } ] }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Configuration and vulnerability analysis", "href" : "vulnerability-analysis-and-management.html" }, { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Logging and monitoring", "href" : "security-logging-and-monitoring.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Codebuild custom support", "href" : "vpc-codebuild-custom-support.html" } ] }, { "title" : "Tagging", "href" : "resources.html" }, { "title" : "Troubleshooting", "href" : "ag-troubleshooting.html" }, { "title" : "AWS Proton quotas", "href" : "ag-limits.html" }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/proton/latest/userguide/",
+    "service": "proton",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS Proton?",
+                "href": "Welcome.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "ag-setting-up.html",
+                "contents": [
+                    {
+                        "title": "Setting up with IAM",
+                        "href": "ag-setting-up-iam.html"
+                    },
+                    {
+                        "title": "Setting up with AWS Proton",
+                        "href": "setting-up-for-service.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "ag-getting-started.html",
+                "contents": [
+                    {
+                        "title": "Prerequisites",
+                        "href": "getting-started-prerequisites.html"
+                    },
+                    {
+                        "title": "Getting started workflow",
+                        "href": "ag-admin-workflow.html"
+                    },
+                    {
+                        "title": "Getting started with the console",
+                        "href": "ag-getting-started-console.html"
+                    },
+                    {
+                        "title": "Getting started with the CLI",
+                        "href": "ag-getting-started-cli.html"
+                    },
+                    {
+                        "title": "Template library",
+                        "href": "ag-getting-started-templates.html"
+                    }
+                ]
+            },
+            {
+                "title": "How AWS Proton works",
+                "href": "ag-works.html",
+                "contents": [
+                    {
+                        "title": "Objects",
+                        "href": "ag-works-objects.html"
+                    },
+                    {
+                        "title": "Provisioning methods",
+                        "href": "ag-works-prov-methods.html"
+                    },
+                    {
+                        "title": "AWS Proton terminology",
+                        "href": "terminology.html"
+                    }
+                ]
+            },
+            {
+                "title": "Template authoring and bundles",
+                "href": "ag-template-authoring.html",
+                "contents": [
+                    {
+                        "title": "Parameters",
+                        "href": "parameters.html",
+                        "contents": [
+                            {
+                                "title": "Environment CloudFormation IaC parameters",
+                                "href": "env-parameters.html"
+                            },
+                            {
+                                "title": "Service CloudFormation IaC parameters",
+                                "href": "svc-parameters.html"
+                            },
+                            {
+                                "title": "Component CloudFormation IaC parameters",
+                                "href": "comp-parameters.html"
+                            },
+                            {
+                                "title": "CloudFormation parameter filters",
+                                "href": "parameter-filters.html"
+                            },
+                            {
+                                "title": "CodeBuild provisioning parameters",
+                                "href": "parameters-codebuild.html"
+                            },
+                            {
+                                "title": "Terraform IaC parameters",
+                                "href": "env-parameters-tform.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Infrastructure as code files",
+                        "href": "ag-infrastructure-tmp-files.html",
+                        "contents": [
+                            {
+                                "title": "AWS CloudFormation IaC files",
+                                "href": "ag-infrastructure-tmp-files-cloudformation.html"
+                            },
+                            {
+                                "title": "CodeBuild bundle",
+                                "href": "ag-infrastructure-tmp-files-codebuild.html"
+                            },
+                            {
+                                "title": "Terraform IaC files",
+                                "href": "ag-infrastructure-tmp-files-terraform.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Schema file",
+                        "href": "ag-schema.html"
+                    },
+                    {
+                        "title": "Manifest and wrap up",
+                        "href": "ag-wrap-up.html"
+                    },
+                    {
+                        "title": "Template bundle considerations",
+                        "href": "template-considerations.html"
+                    }
+                ]
+            },
+            {
+                "title": "Templates",
+                "href": "ag-templates.html",
+                "contents": [
+                    {
+                        "title": "Versions",
+                        "href": "ag-template-versions.html"
+                    },
+                    {
+                        "title": "Publish",
+                        "href": "template-create.html"
+                    },
+                    {
+                        "title": "View templates",
+                        "href": "template-view.html"
+                    },
+                    {
+                        "title": "Update a template",
+                        "href": "template-update.html"
+                    },
+                    {
+                        "title": "Delete templates",
+                        "href": "template-delete.html"
+                    },
+                    {
+                        "title": "Template sync configurations",
+                        "href": "ag-template-sync-configs.html",
+                        "contents": [
+                            {
+                                "title": "Create",
+                                "href": "create-template-sync.html"
+                            },
+                            {
+                                "title": "View",
+                                "href": "view-template-sync.html"
+                            },
+                            {
+                                "title": "Edit",
+                                "href": "update-template-sync.html"
+                            },
+                            {
+                                "title": "Delete",
+                                "href": "delete-template-sync.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Service sync configurations",
+                        "href": "ag-service-sync-configs.html",
+                        "contents": [
+                            {
+                                "title": "Create",
+                                "href": "create-service-sync.html"
+                            },
+                            {
+                                "title": "View",
+                                "href": "get-service-sync.html"
+                            },
+                            {
+                                "title": "Edit",
+                                "href": "update-service-sync.html"
+                            },
+                            {
+                                "title": "Delete",
+                                "href": "delete-service-sync.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Environments",
+                "href": "ag-environments.html",
+                "contents": [
+                    {
+                        "title": "IAM Roles",
+                        "href": "ag-environment-roles.html"
+                    },
+                    {
+                        "title": "Create",
+                        "href": "ag-create-env.html"
+                    },
+                    {
+                        "title": "View",
+                        "href": "ag-env-view.html"
+                    },
+                    {
+                        "title": "Update",
+                        "href": "ag-env-update.html"
+                    },
+                    {
+                        "title": "Delete",
+                        "href": "ag-env-delete.html"
+                    },
+                    {
+                        "title": "Account connections",
+                        "href": "ag-env-account-connections.html"
+                    },
+                    {
+                        "title": "Customer-managed",
+                        "href": "ag-env-customer-managed.html"
+                    },
+                    {
+                        "title": "CodeBuild provisioning role creation",
+                        "href": "ag-env-codebuild-provisioning-role-creation.html"
+                    }
+                ]
+            },
+            {
+                "title": "Services",
+                "href": "ag-services.html",
+                "contents": [
+                    {
+                        "title": "Create",
+                        "href": "ag-create-svc.html"
+                    },
+                    {
+                        "title": "View",
+                        "href": "ag-svc-view.html"
+                    },
+                    {
+                        "title": "Edit",
+                        "href": "ag-svc-update.html"
+                    },
+                    {
+                        "title": "Delete",
+                        "href": "ag-svc-delete.html"
+                    },
+                    {
+                        "title": "View instances",
+                        "href": "ag-svc-instance-view.html"
+                    },
+                    {
+                        "title": "Update instance",
+                        "href": "ag-svc-instance-update.html"
+                    },
+                    {
+                        "title": "Update pipeline",
+                        "href": "ag-svc-pipeline-update.html"
+                    }
+                ]
+            },
+            {
+                "title": "Components",
+                "href": "ag-components.html",
+                "contents": [
+                    {
+                        "title": "Component states",
+                        "href": "ag-components-states.html"
+                    },
+                    {
+                        "title": "Component IaC files",
+                        "href": "ag-components-iac.html"
+                    },
+                    {
+                        "title": "Component AWS CloudFormation example",
+                        "href": "ag-components-example-cfn.html"
+                    }
+                ]
+            },
+            {
+                "title": "Repositories",
+                "href": "ag-repositories.html",
+                "contents": [
+                    {
+                        "title": "Create a repository link",
+                        "href": "ag-create-repo.html"
+                    },
+                    {
+                        "title": "View linked repository data",
+                        "href": "ag-repo-view.html"
+                    },
+                    {
+                        "title": "Delete a repository link",
+                        "href": "ag-repo-delete.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring.html",
+                "contents": [
+                    {
+                        "title": "Automate AWS Proton with EventBridge",
+                        "href": "event-bridge.html"
+                    },
+                    {
+                        "title": "EventBridgeTutorial: Send Amazon Simple Notification Service alerts for AWS Proton service status changes",
+                        "href": "event-tutorial-sns.html"
+                    },
+                    {
+                        "title": "AWS Proton dashboard",
+                        "href": "monitoring-dashboard.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "ag-security.html",
+                "contents": [
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS Proton works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Policy examples",
+                                "href": "security_iam_policy-examples.html",
+                                "contents": [
+                                    {
+                                        "title": "Identity-based policy examples",
+                                        "href": "security_iam_id-based-policy-examples.html"
+                                    },
+                                    {
+                                        "title": "Service role policy examples",
+                                        "href": "security_iam_service-role-policy-examples.html"
+                                    },
+                                    {
+                                        "title": "Condition-key based policy examples",
+                                        "href": "security_iam_condition-key-based-policy-examples.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html",
+                                "contents": [
+                                    {
+                                        "title": "Sync roles",
+                                        "href": "using-service-linked-roles-sync.html"
+                                    },
+                                    {
+                                        "title": "CodeBuild role",
+                                        "href": "using-service-linked-roles-codebuild.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "vulnerability-analysis-and-management.html"
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "security-logging-and-monitoring.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    },
+                    {
+                        "title": "Cross-service confused deputy prevention",
+                        "href": "cross-service-confused-deputy-prevention.html"
+                    },
+                    {
+                        "title": "Codebuild custom support",
+                        "href": "vpc-codebuild-custom-support.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tagging",
+                "href": "resources.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "ag-troubleshooting.html"
+            },
+            {
+                "title": "AWS Proton quotas",
+                "href": "ag-limits.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

@@ -1,1 +1,306 @@
-{ "contents" : [ { "title" : "What is AWS License Manager?", "href" : "license-manager.html" }, { "title" : "How License Manager works", "href" : "license-manager-overview.html" }, { "title" : "Getting started", "href" : "getting-started.html" }, { "title" : "Working with License Manager", "href" : "using-license-manager.html", "contents" : [ { "title" : "Self-managed licenses", "href" : "license-configurations.html", "contents" : [ { "title" : "Parameters and rules", "href" : "config-overview.html" }, { "title" : "Build rules from vendor licenses", "href" : "licenses-to-rules.html" }, { "title" : "Create a self-managed license", "href" : "create-license-configuration.html" }, { "title" : "Share a self-managed license", "href" : "share-license-configuration.html" }, { "title" : "Edit a self-managed license", "href" : "modify-license-configuration.html" }, { "title" : "Deactivate a self-managed license", "href" : "deactivate-license-configuration.html" }, { "title" : "Delete a self-managed license", "href" : "delete-license-configuration.html" } ] }, { "title" : "License rules", "href" : "license-rules.html" }, { "title" : "Usage reports", "href" : "license-reporting.html" }, { "title" : "License type conversions", "href" : "license-conversion.html", "contents" : [ { "title" : "Eligible license types", "href" : "conversion-types.html", "contents" : [ { "title" : "Windows and SQL Server", "href" : "conversion-types-windows.html" }, { "title" : "Linux", "href" : "conversion-types-linux.html" } ] }, { "title" : "Prerequisites", "href" : "conversion-prerequisites.html" }, { "title" : "Convert a license type", "href" : "conversion-procedures.html", "contents" : [ { "title" : "Windows and SQL Server", "href" : "conversion-procedures-windows.html" }, { "title" : "Linux", "href" : "conversion-procedures-linux.html" } ] }, { "title" : "Tenancy conversion", "href" : "conversion-tenancy.html" }, { "title" : "Troubleshooting", "href" : "conversion-troubleshooting.html" } ] }, { "title" : "Host resource groups", "href" : "host-resource-groups.html" }, { "title" : "Inventory search", "href" : "inventory.html", "contents" : [ { "title" : "Working with inventory search", "href" : "discovery.html" }, { "title" : "Automated discovery of inventory", "href" : "automated-discovery.html" } ] }, { "title" : "Granted licenses", "href" : "granted-licenses.html" }, { "title" : "Seller issued licenses", "href" : "seller-issued-licenses.html" }, { "title" : "User-based subscriptions", "href" : "user-based-subscriptions.html", "contents" : [ { "title" : "Prerequisites", "href" : "user-based-subscriptions-prerequisites.html" }, { "title" : "Considerations", "href" : "user-based-subscriptions-considerations.html" }, { "title" : "Supported software", "href" : "user-based-subscriptions-software.html" }, { "title" : "Getting started", "href" : "user-based-subscriptions-getting-started.html" }, { "title" : "Modifying directory settings", "href" : "user-based-subscriptions-modify-ad.html" }, { "title" : "Modifying VPC settings", "href" : "user-based-subscriptions-modify-vpc.html" }, { "title" : "Disassociating users", "href" : "user-based-subscriptions-disassociate-users.html" }, { "title" : "Unsubscribing users", "href" : "user-based-subscriptions-unsubscribe-users.html" }, { "title" : "Terminating instances", "href" : "user-based-subscriptions-terminate-instances.html" }, { "title" : "Removing a directory", "href" : "user-based-subscriptions-remove-ad.html" }, { "title" : "Troubleshooting", "href" : "user-based-subscriptions-troubleshoot.html" } ] }, { "title" : "Linux subscriptions", "href" : "linux-subscriptions.html", "contents" : [ { "title" : "Managing discovery", "href" : "linux-subscriptions-manage-discovery.html" }, { "title" : "Viewing instances", "href" : "linux-subscriptions-instances-view.html" }, { "title" : "Billing information", "href" : "linux-subscriptions-billing-information.html" }, { "title" : "Usage metrics and alarms", "href" : "linux-subscriptions-usage-alarms.html" } ] }, { "title" : "Settings", "href" : "settings.html" }, { "title" : "Dashboard", "href" : "dashboard.html" } ] }, { "title" : "Monitoring License Manager", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Monitoring with CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "Logging API calls with CloudTrail", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and access management", "href" : "identity-access-management.html" }, { "title" : "Service-linked roles", "href" : "using-service-linked-roles.html", "contents" : [ { "title" : "Core role", "href" : "license-manager-role-core.html" }, { "title" : "Management account role", "href" : "management-role.html" }, { "title" : "Member account role", "href" : "member-role.html" }, { "title" : "User-based subscription role", "href" : "user-based-subscription-role.html" }, { "title" : "Linux subscriptions role", "href" : "linux-subscriptions-role.html" } ] }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "License signing", "href" : "license-signing.html" }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "VPC endpoints (AWS PrivateLink)", "href" : "interface-vpc-endpoints.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/license-manager/latest/userguide/",
+    "service": "license-manager",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS License Manager?",
+                "href": "license-manager.html"
+            },
+            {
+                "title": "How License Manager works",
+                "href": "license-manager-overview.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html"
+            },
+            {
+                "title": "Working with License Manager",
+                "href": "using-license-manager.html",
+                "contents": [
+                    {
+                        "title": "Self-managed licenses",
+                        "href": "license-configurations.html",
+                        "contents": [
+                            {
+                                "title": "Parameters and rules",
+                                "href": "config-overview.html"
+                            },
+                            {
+                                "title": "Build rules from vendor licenses",
+                                "href": "licenses-to-rules.html"
+                            },
+                            {
+                                "title": "Create a self-managed license",
+                                "href": "create-license-configuration.html"
+                            },
+                            {
+                                "title": "Share a self-managed license",
+                                "href": "share-license-configuration.html"
+                            },
+                            {
+                                "title": "Edit a self-managed license",
+                                "href": "modify-license-configuration.html"
+                            },
+                            {
+                                "title": "Deactivate a self-managed license",
+                                "href": "deactivate-license-configuration.html"
+                            },
+                            {
+                                "title": "Delete a self-managed license",
+                                "href": "delete-license-configuration.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "License rules",
+                        "href": "license-rules.html"
+                    },
+                    {
+                        "title": "Usage reports",
+                        "href": "license-reporting.html"
+                    },
+                    {
+                        "title": "License type conversions",
+                        "href": "license-conversion.html",
+                        "contents": [
+                            {
+                                "title": "Eligible license types",
+                                "href": "conversion-types.html",
+                                "contents": [
+                                    {
+                                        "title": "Windows and SQL Server",
+                                        "href": "conversion-types-windows.html"
+                                    },
+                                    {
+                                        "title": "Linux",
+                                        "href": "conversion-types-linux.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Prerequisites",
+                                "href": "conversion-prerequisites.html"
+                            },
+                            {
+                                "title": "Convert a license type",
+                                "href": "conversion-procedures.html",
+                                "contents": [
+                                    {
+                                        "title": "Windows and SQL Server",
+                                        "href": "conversion-procedures-windows.html"
+                                    },
+                                    {
+                                        "title": "Linux",
+                                        "href": "conversion-procedures-linux.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Tenancy conversion",
+                                "href": "conversion-tenancy.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "conversion-troubleshooting.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Host resource groups",
+                        "href": "host-resource-groups.html"
+                    },
+                    {
+                        "title": "Inventory search",
+                        "href": "inventory.html",
+                        "contents": [
+                            {
+                                "title": "Working with inventory search",
+                                "href": "discovery.html"
+                            },
+                            {
+                                "title": "Automated discovery of inventory",
+                                "href": "automated-discovery.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Granted licenses",
+                        "href": "granted-licenses.html"
+                    },
+                    {
+                        "title": "Seller issued licenses",
+                        "href": "seller-issued-licenses.html"
+                    },
+                    {
+                        "title": "User-based subscriptions",
+                        "href": "user-based-subscriptions.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "user-based-subscriptions-prerequisites.html"
+                            },
+                            {
+                                "title": "Considerations",
+                                "href": "user-based-subscriptions-considerations.html"
+                            },
+                            {
+                                "title": "Supported software",
+                                "href": "user-based-subscriptions-software.html"
+                            },
+                            {
+                                "title": "Getting started",
+                                "href": "user-based-subscriptions-getting-started.html"
+                            },
+                            {
+                                "title": "Modifying directory settings",
+                                "href": "user-based-subscriptions-modify-ad.html"
+                            },
+                            {
+                                "title": "Modifying VPC settings",
+                                "href": "user-based-subscriptions-modify-vpc.html"
+                            },
+                            {
+                                "title": "Disassociating users",
+                                "href": "user-based-subscriptions-disassociate-users.html"
+                            },
+                            {
+                                "title": "Unsubscribing users",
+                                "href": "user-based-subscriptions-unsubscribe-users.html"
+                            },
+                            {
+                                "title": "Terminating instances",
+                                "href": "user-based-subscriptions-terminate-instances.html"
+                            },
+                            {
+                                "title": "Removing a directory",
+                                "href": "user-based-subscriptions-remove-ad.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "user-based-subscriptions-troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Linux subscriptions",
+                        "href": "linux-subscriptions.html",
+                        "contents": [
+                            {
+                                "title": "Managing discovery",
+                                "href": "linux-subscriptions-manage-discovery.html"
+                            },
+                            {
+                                "title": "Viewing instances",
+                                "href": "linux-subscriptions-instances-view.html"
+                            },
+                            {
+                                "title": "Billing information",
+                                "href": "linux-subscriptions-billing-information.html"
+                            },
+                            {
+                                "title": "Usage metrics and alarms",
+                                "href": "linux-subscriptions-usage-alarms.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Settings",
+                        "href": "settings.html"
+                    },
+                    {
+                        "title": "Dashboard",
+                        "href": "dashboard.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring License Manager",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Monitoring with CloudWatch",
+                        "href": "monitoring-cloudwatch.html"
+                    },
+                    {
+                        "title": "Logging API calls with CloudTrail",
+                        "href": "logging-using-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "identity-access-management.html"
+                    },
+                    {
+                        "title": "Service-linked roles",
+                        "href": "using-service-linked-roles.html",
+                        "contents": [
+                            {
+                                "title": "Core role",
+                                "href": "license-manager-role-core.html"
+                            },
+                            {
+                                "title": "Management account role",
+                                "href": "management-role.html"
+                            },
+                            {
+                                "title": "Member account role",
+                                "href": "member-role.html"
+                            },
+                            {
+                                "title": "User-based subscription role",
+                                "href": "user-based-subscription-role.html"
+                            },
+                            {
+                                "title": "Linux subscriptions role",
+                                "href": "linux-subscriptions-role.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS managed policies",
+                        "href": "security-iam-awsmanpol.html"
+                    },
+                    {
+                        "title": "License signing",
+                        "href": "license-signing.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "VPC endpoints (AWS PrivateLink)",
+                        "href": "interface-vpc-endpoints.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

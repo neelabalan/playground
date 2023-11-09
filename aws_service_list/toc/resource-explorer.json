@@ -1,1 +1,224 @@
-{ "contents" : [ { "title" : "Resource Explorer", "href" : "welcome.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Terms and concepts", "href" : "getting-started-terms-and-concepts.html" }, { "title" : "Prerequisites", "href" : "getting-started-setting-up-prereqs.html" }, { "title" : "Setting up Resource Explorer", "href" : "getting-started-setting-up.html" } ] }, { "title" : "Managing Resource Explorer", "href" : "manage-service.html", "contents" : [ { "title" : "Checking Regions", "href" : "manage-service-check.html" }, { "title" : "Turning on a Region", "href" : "manage-service-turn-on-region.html" }, { "title" : "About opt-in Regions", "href" : "opt-in-region-considerations.html" }, { "title" : "Turning on cross-Region search", "href" : "manage-aggregator-region.html", "contents" : [ { "title" : "Creating the aggregator index", "href" : "manage-aggregator-region-turn-on.html" }, { "title" : "Demoting the aggregator index", "href" : "manage-aggregator-region-turn-off.html" } ] }, { "title" : "Supporting console unified search", "href" : "manage-service-unified-search.html" }, { "title" : "Turning off one AWS Region", "href" : "manage-service-turn-off-region.html" }, { "title" : "Turning off all AWS Regions", "href" : "manage-service-turn-off.html" }, { "title" : "Deploying to an organization", "href" : "manage-service-all-org-with-stacksets.html" } ] }, { "title" : "Managing views", "href" : "manage-views.html", "contents" : [ { "title" : "About views", "href" : "manage-views-about.html" }, { "title" : "Creating views", "href" : "manage-views-create.html" }, { "title" : "Granting access to views", "href" : "manage-views-grant-access.html" }, { "title" : "Setting a default view", "href" : "manage-views-set-default.html" }, { "title" : "Tagging views", "href" : "manage-views-tag.html" }, { "title" : "Deleting views", "href" : "manage-views-delete.html" } ] }, { "title" : "Searching for resources", "href" : "using-search.html" }, { "title" : "Search query syntax", "href" : "using-search-query-syntax.html" }, { "title" : "Example queries", "href" : "using-search-query-examples.html" }, { "title" : "Unified search", "href" : "using-unified-search.html" }, { "title" : "Using AWS Chatbot", "href" : "using-chatbot.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Identity and access management", "href" : "security_iam.html", "contents" : [ { "title" : "Resource Explorer and IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Example SCPs", "href" : "security_iam_scp.html" }, { "title" : "AWS managed policies", "href" : "security_iam_awsmanpol.html" }, { "title" : "Using service-linked roles", "href" : "security_iam_service-linked-roles.html" }, { "title" : "Troubleshooting permissions", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Monitoring", "href" : "monitoring-overview.html", "contents" : [ { "title" : "CloudTrail logs", "href" : "monitoring-cloudtrail.html" } ] }, { "title" : "Working with CloudFormation", "href" : "cloudformation-support.html" }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "Setup issues", "href" : "troubleshooting_setup.html" }, { "title" : "Search issues", "href" : "troubleshooting_search.html" } ] }, { "title" : "Supported resource types", "href" : "supported-resource-types.html" }, { "title" : "Quotas", "href" : "quotas.html" }, { "title" : "Working with AWS SDKs", "href" : "sdk-general-information-section.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/resource-explorer/latest/userguide/",
+    "service": "resource-explorer",
+    "toc": {
+        "contents": [
+            {
+                "title": "Resource Explorer",
+                "href": "welcome.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Terms and concepts",
+                        "href": "getting-started-terms-and-concepts.html"
+                    },
+                    {
+                        "title": "Prerequisites",
+                        "href": "getting-started-setting-up-prereqs.html"
+                    },
+                    {
+                        "title": "Setting up Resource Explorer",
+                        "href": "getting-started-setting-up.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing Resource Explorer",
+                "href": "manage-service.html",
+                "contents": [
+                    {
+                        "title": "Checking Regions",
+                        "href": "manage-service-check.html"
+                    },
+                    {
+                        "title": "Turning on a Region",
+                        "href": "manage-service-turn-on-region.html"
+                    },
+                    {
+                        "title": "About opt-in Regions",
+                        "href": "opt-in-region-considerations.html"
+                    },
+                    {
+                        "title": "Turning on cross-Region search",
+                        "href": "manage-aggregator-region.html",
+                        "contents": [
+                            {
+                                "title": "Creating the aggregator index",
+                                "href": "manage-aggregator-region-turn-on.html"
+                            },
+                            {
+                                "title": "Demoting the aggregator index",
+                                "href": "manage-aggregator-region-turn-off.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Supporting console unified search",
+                        "href": "manage-service-unified-search.html"
+                    },
+                    {
+                        "title": "Turning off one AWS Region",
+                        "href": "manage-service-turn-off-region.html"
+                    },
+                    {
+                        "title": "Turning off all AWS Regions",
+                        "href": "manage-service-turn-off.html"
+                    },
+                    {
+                        "title": "Deploying to an organization",
+                        "href": "manage-service-all-org-with-stacksets.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing views",
+                "href": "manage-views.html",
+                "contents": [
+                    {
+                        "title": "About views",
+                        "href": "manage-views-about.html"
+                    },
+                    {
+                        "title": "Creating views",
+                        "href": "manage-views-create.html"
+                    },
+                    {
+                        "title": "Granting access to views",
+                        "href": "manage-views-grant-access.html"
+                    },
+                    {
+                        "title": "Setting a default view",
+                        "href": "manage-views-set-default.html"
+                    },
+                    {
+                        "title": "Tagging views",
+                        "href": "manage-views-tag.html"
+                    },
+                    {
+                        "title": "Deleting views",
+                        "href": "manage-views-delete.html"
+                    }
+                ]
+            },
+            {
+                "title": "Searching for resources",
+                "href": "using-search.html"
+            },
+            {
+                "title": "Search query syntax",
+                "href": "using-search-query-syntax.html"
+            },
+            {
+                "title": "Example queries",
+                "href": "using-search-query-examples.html"
+            },
+            {
+                "title": "Unified search",
+                "href": "using-unified-search.html"
+            },
+            {
+                "title": "Using AWS Chatbot",
+                "href": "using-chatbot.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Identity and access management",
+                        "href": "security_iam.html",
+                        "contents": [
+                            {
+                                "title": "Resource Explorer and IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Example SCPs",
+                                "href": "security_iam_scp.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security_iam_awsmanpol.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "security_iam_service-linked-roles.html"
+                            },
+                            {
+                                "title": "Troubleshooting permissions",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "CloudTrail logs",
+                        "href": "monitoring-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with CloudFormation",
+                "href": "cloudformation-support.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Setup issues",
+                        "href": "troubleshooting_setup.html"
+                    },
+                    {
+                        "title": "Search issues",
+                        "href": "troubleshooting_search.html"
+                    }
+                ]
+            },
+            {
+                "title": "Supported resource types",
+                "href": "supported-resource-types.html"
+            },
+            {
+                "title": "Quotas",
+                "href": "quotas.html"
+            },
+            {
+                "title": "Working with AWS SDKs",
+                "href": "sdk-general-information-section.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

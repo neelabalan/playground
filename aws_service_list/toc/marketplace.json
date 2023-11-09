@@ -1,1 +1,644 @@
-{ "contents" : [ { "title" : "What is AWS Marketplace?", "href" : "what-is-marketplace.html" }, { "title" : "Getting started as a seller", "href" : "user-guide-for-sellers.html", "contents" : [ { "title" : "Seller registration process", "href" : "seller-registration-process.html" }, { "title" : "Seller toolkit", "href" : "additional-seller-tools.html", "contents" : [ { "title" : "AWS Marketplace Commerce Analytics Service", "href" : "commerce-analytics-service.html" }, { "title" : "AWS Marketplace Field Demonstration Program", "href" : "field-demonstration-program.html" }, { "title" : "More resources in AWS Marketplace Management Portal", "href" : "more-seller-resources.html" } ] } ] }, { "title" : "Preparing your product", "href" : "product-preparation.html", "contents" : [ { "title" : "Product pricing", "href" : "pricing.html", "contents" : [ { "title" : "Product refunds", "href" : "refunds.html" } ] }, { "title" : "Regions and countries", "href" : "regions-and-countries.html" }, { "title" : "Private offers", "href" : "private-offers-overview.html", "contents" : [ { "title" : "Flexible payment scheduler", "href" : "flexible-payment-scheduler.html" }, { "title" : "Channel partner private offers", "href" : "channel-partner-offers.html", "contents" : [ { "title" : "Creating a resell opportunity as an ISV", "href" : "channel-partner-isv-info.html" }, { "title" : "Creating a private offer as a channel partner", "href" : "channel-partner-info.html" } ] }, { "title" : "Private offer upgrades and renewals", "href" : "private-offers-upgrades-and-renewals.html" } ] }, { "title" : "Standardized contracts", "href" : "standardized-license-terms.html" }, { "title" : "Categories and metadata", "href" : "categories-and-metadata.html" }, { "title" : "AMI and container product usage instructions", "href" : "ami-container-product-usage-instructions.html" }, { "title" : "Search engine optimization for products", "href" : "search-engine-optimization.html" } ] }, { "title" : "AMI-based products", "href" : "ami-products.html", "contents" : [ { "title" : "Understanding AMI-based products", "href" : "ami-getting-started.html" }, { "title" : "Single-AMI products", "href" : "ami-single-ami-products.html" }, { "title" : "AMI-based delivery using CloudFormation", "href" : "cloudformation.html", "contents" : [ { "title" : "Adding serverless application components", "href" : "cloudformation-serverless-application.html" } ] }, { "title" : "Private images", "href" : "private-images.html" }, { "title" : "Best practices for building AMIs", "href" : "best-practices-for-building-your-amis.html" }, { "title" : "AMI product pricing", "href" : "pricing-ami-products.html", "contents" : [ { "title" : "Custom metering pricing for AMI products", "href" : "custom-metering-pricing-ami-products.html" }, { "title" : "Contract pricing for AMI products", "href" : "ami-contracts.html" } ] }, { "title" : "AMI product billing, metering, and licensing integrations", "href" : "ami-product-billing-metering-licensing-integrations.html", "contents" : [ { "title" : "Custom metering for AMI products with AWS Marketplace Metering Service", "href" : "custom-metering-with-mp-metering-service.html" }, { "title" : "Contract pricing for AMI products with AWS License Manager", "href" : "ami-license-manager-integration.html" } ] }, { "title" : "Amazon SNS notifications for AMI products", "href" : "ami-notification.html" }, { "title" : "AMI product checklist", "href" : "aws-marketplace-listing-checklist.html" }, { "title" : "AMI-based product requirements", "href" : "product-and-ami-policies.html" } ] }, { "title" : "Container-based products", "href" : "container-based-products.html", "contents" : [ { "title" : "Getting started with container products", "href" : "container-product-getting-started.html" }, { "title" : "Container-based product requirements", "href" : "container-product-policies.html" }, { "title" : "Container products pricing", "href" : "pricing-container-products.html" }, { "title" : "Container product billing, metering, and licensing integrations", "href" : "container-products-billing-integration.html", "contents" : [ { "title" : "Hourly metering with AWS Marketplace Metering Service", "href" : "container-metering-registerusage.html", "contents" : [ { "title" : "Java integration example", "href" : "java-integration-example-registerusage.html" } ] }, { "title" : "Custom metering for container products", "href" : "container-metering-meterusage.html", "contents" : [ { "title" : "Java integration example", "href" : "java-integration-example-meterusage.html" } ] }, { "title" : "Contract pricing for Container products with AWS License Manager", "href" : "container-license-manager-integration.html", "contents" : [ { "title" : "Integrating an AWS Marketplace for Containers Anywhere product with License Manager", "href" : "container-anywhere-license-manager-integration.html" } ] } ] }, { "title" : "Amazon SNS notifications for container products", "href" : "container-notification.html" } ] }, { "title" : "Machine learning products", "href" : "machine-learning-products.html", "contents" : [ { "title" : "Security and intellectual property", "href" : "ml-security-and-intellectual-property.html" }, { "title" : "Machine learning product pricing", "href" : "machine-learning-pricing.html" }, { "title" : "Prepare your product in SageMaker", "href" : "ml-prepare-your-product-in-sagemaker.html", "contents" : [ { "title" : "Packaging your code into images", "href" : "ml-packaging-your-code-into-images.html", "contents" : [ { "title" : "Model package images", "href" : "ml-model-package-images.html" }, { "title" : "Algorithm images", "href" : "ml-algorithm-images.html" } ] }, { "title" : "Uploading your images", "href" : "ml-uploading-your-images.html" }, { "title" : "Creating your Amazon SageMaker resource", "href" : "ml-creating-your-amazon-sagemaker-resource.html" } ] }, { "title" : "Publishing your product in AWS Marketplace", "href" : "ml-publishing-your-product-in-aws-marketplace.html" }, { "title" : "Requirements and best practices for creating machine learning products", "href" : "ml-listing-requirements-and-best-practices.html" }, { "title" : "Service restrictions and quotas", "href" : "ml-service-restrictions-and-limits.html" }, { "title" : "Troubleshooting", "href" : "ml-troubleshooting.html" }, { "title" : "Reporting", "href" : "ml-reporting.html" } ] }, { "title" : "SaaS-based products", "href" : "saas-products.html", "contents" : [ { "title" : "Getting started with SaaS products", "href" : "saas-getting-started.html", "contents" : [ { "title" : "SaaS product lifecycle", "href" : "saas-product-lifecycle.html" }, { "title" : "Creating a SaaS product", "href" : "saas-create-product.html" }, { "title" : "Create an initial SaaS product page", "href" : "saas-create-product-page.html" }, { "title" : "SaaS product settings", "href" : "saas-product-settings.html" }, { "title" : "Integrate your SaaS subscription product", "href" : "saas-integrate-subscription.html" }, { "title" : "Integrate your SaaS contract product", "href" : "saas-integrate-contract.html" }, { "title" : "Integrate your SaaS contract with pay-as-you-go product", "href" : "saas-integrate-contract-with-pay.html" }, { "title" : "Deploy a serverless SaaS integration solution", "href" : "deploy-serverless-saas.html" } ] }, { "title" : "Plan your SaaS product", "href" : "saas-prepare.html" }, { "title" : "SaaS product guidelines", "href" : "saas-guidelines.html" }, { "title" : "SaaS product pricing", "href" : "saas-pricing-models.html", "contents" : [ { "title" : "Pricing for SaaS subscriptions", "href" : "saas-subscriptions.html" }, { "title" : "Pricing for SaaS contracts", "href" : "saas-contracts.html" } ] }, { "title" : "SaaS free trials", "href" : "saas-free-trials.html" }, { "title" : "SaaS customer onboarding", "href" : "saas-product-customer-setup.html" }, { "title" : "Amazon SNS notifications for SaaS products", "href" : "saas-notification.html" }, { "title" : "Accessing the AWS Marketplace Metering and Entitlement Service APIs", "href" : "saas-integration-metering-and-entitlement-apis.html", "contents" : [ { "title" : "Metering for usage", "href" : "metering-for-usage.html" }, { "title" : "Checking entitlements", "href" : "checking-entitlements.html" }, { "title" : "SaaS product integration checklist", "href" : "aws-marketplace-integration-checklist.html" } ] }, { "title" : "Reporting", "href" : "saas-reporting.html" }, { "title" : "SaaS code examples", "href" : "saas-code-examples.html" }, { "title" : "Using AWS PrivateLink with AWS Marketplace", "href" : "privatelink.html" } ] }, { "title" : "Professional services products", "href" : "proserv-products.html", "contents" : [ { "title" : "Getting started with professional services products", "href" : "proserv-getting-started.html" }, { "title" : "Product details", "href" : "proserv-product-details.html" }, { "title" : "Product requirements", "href" : "proserv-product-guidelines.html" }, { "title" : "Professional services product pricing", "href" : "pricing-proserv-products.html" } ] }, { "title" : "Data products", "href" : "data-products.html" }, { "title" : "Submitting your product", "href" : "product-submission.html" }, { "title" : "Marketing your product", "href" : "product-marketing.html" }, { "title" : "Notifications", "href" : "notifications.html", "contents" : [ { "title" : "Email notifications", "href" : "email-notifications.html" }, { "title" : "Amazon EventBridge notifications", "href" : "notifications-eventbridge.html", "contents" : [ { "title" : "AWS Marketplace Catalog API Amazon EventBridge events", "href" : "seller-eventbridge.html" } ] }, { "title" : "Amazon Simple Notification Service notifications", "href" : "notifications-sns.html" } ] }, { "title" : "Seller reports, data feeds, and dashboards", "href" : "reports-and-data-feed.html", "contents" : [ { "title" : "Seller delivery data feeds service", "href" : "data-feed-service.html", "contents" : [ { "title" : "Data feed tables overview", "href" : "data-feed-joining.html" }, { "title" : "Data feed query examples", "href" : "data-feed-full-examples.html" }, { "title" : "Data feeds", "href" : "data-feeds.html", "contents" : [ { "title" : "Account data feed", "href" : "data-feed-account.html" }, { "title" : "Address data feed", "href" : "data-feed-address.html" }, { "title" : "Billing event data feed", "href" : "data-feed-billing-event.html" }, { "title" : "Legacy mapping data feed", "href" : "data-feed-legacy-mapping.html" }, { "title" : "Offer data feed", "href" : "data-feed-offer.html" }, { "title" : "Offer product data feed", "href" : "data-feed-offer-product.html" }, { "title" : "Offer target data feed", "href" : "data-feed-offer-target.html" }, { "title" : "Product data feed", "href" : "data-feed-product.html" }, { "title" : "Tax item data feed", "href" : "data-feed-tax-item.html" } ] } ] }, { "title" : "Seller reports", "href" : "Reporting.html", "contents" : [ { "title" : "Daily business report", "href" : "daily-business-report.html" }, { "title" : "Daily customer subscriber report", "href" : "daily-customer-subscriber-report.html" }, { "title" : "Disbursement report", "href" : "monthly-disbursement-report.html" }, { "title" : "Monthly billed revenue report", "href" : "monthly-billed-revenue-report.html" }, { "title" : "Sales compensation report", "href" : "sales-compensation-report.html" }, { "title" : "US sales and use tax report", "href" : "u.s.-sales-and-use-tax-report.html" } ] }, { "title" : "Supplementary reports", "href" : "supplementary-reports.html" }, { "title" : "Seller dashboards", "href" : "dashboards.html", "contents" : [ { "title" : "Billed revenue dashboard", "href" : "billed-revenue-dashboard.html" }, { "title" : "Collections and disbursement dashboard", "href" : "collections-disbursement-dashboard.html" }, { "title" : "Agreements and renewals dashboard", "href" : "agreements-renewals-dashboard.html" } ] } ] }, { "title" : "AWS Marketplace Vendor Insights", "href" : "vendor-insights.html", "contents" : [ { "title" : "Understanding AWS Marketplace Vendor Insights", "href" : "vendor-insights-understanding.html" }, { "title" : "Setting up as a seller", "href" : "vendor-insights-setting-up.html" }, { "title" : "Viewing your profile", "href" : "vendor-insights-profile.html" }, { "title" : "Managing snapshots", "href" : "vendor-insights-snapshot.html" }, { "title" : "Controlling access", "href" : "vendor-insights-seller-controlling-access.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "IAM for AWS Marketplace", "href" : "marketplace-management-portal-user-access.html" }, { "title" : "Policies and permissions for AWS Marketplace sellers", "href" : "detailed-management-portal-permissions.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "AWS Marketplace Commerce Analytics Service account permissions", "href" : "set-aws-iam-cas-permissions.html" }, { "title" : "Amazon SQS permissions", "href" : "set-aws-iam-sqs-permissions.html" }, { "title" : "AWS Marketplace metering and entitlement API permissions", "href" : "iam-user-policy-for-aws-marketplace-actions.html" }, { "title" : "Logging AWS Marketplace API calls with AWS CloudTrail", "href" : "logging-aws-marketplace-api-calls-with-aws-cloudtrail.html" } ] }, { "title" : "Document history", "href" : "document-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/marketplace/latest/userguide/",
+    "service": "marketplace",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS Marketplace?",
+                "href": "what-is-marketplace.html"
+            },
+            {
+                "title": "Getting started as a seller",
+                "href": "user-guide-for-sellers.html",
+                "contents": [
+                    {
+                        "title": "Seller registration process",
+                        "href": "seller-registration-process.html"
+                    },
+                    {
+                        "title": "Seller toolkit",
+                        "href": "additional-seller-tools.html",
+                        "contents": [
+                            {
+                                "title": "AWS Marketplace Commerce Analytics Service",
+                                "href": "commerce-analytics-service.html"
+                            },
+                            {
+                                "title": "AWS Marketplace Field Demonstration Program",
+                                "href": "field-demonstration-program.html"
+                            },
+                            {
+                                "title": "More resources in AWS Marketplace Management Portal",
+                                "href": "more-seller-resources.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Preparing your product",
+                "href": "product-preparation.html",
+                "contents": [
+                    {
+                        "title": "Product pricing",
+                        "href": "pricing.html",
+                        "contents": [
+                            {
+                                "title": "Product refunds",
+                                "href": "refunds.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Regions and countries",
+                        "href": "regions-and-countries.html"
+                    },
+                    {
+                        "title": "Private offers",
+                        "href": "private-offers-overview.html",
+                        "contents": [
+                            {
+                                "title": "Flexible payment scheduler",
+                                "href": "flexible-payment-scheduler.html"
+                            },
+                            {
+                                "title": "Channel partner private offers",
+                                "href": "channel-partner-offers.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating a resell opportunity as an ISV",
+                                        "href": "channel-partner-isv-info.html"
+                                    },
+                                    {
+                                        "title": "Creating a private offer as a channel partner",
+                                        "href": "channel-partner-info.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Private offer upgrades and renewals",
+                                "href": "private-offers-upgrades-and-renewals.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Standardized contracts",
+                        "href": "standardized-license-terms.html"
+                    },
+                    {
+                        "title": "Categories and metadata",
+                        "href": "categories-and-metadata.html"
+                    },
+                    {
+                        "title": "AMI and container product usage instructions",
+                        "href": "ami-container-product-usage-instructions.html"
+                    },
+                    {
+                        "title": "Search engine optimization for products",
+                        "href": "search-engine-optimization.html"
+                    }
+                ]
+            },
+            {
+                "title": "AMI-based products",
+                "href": "ami-products.html",
+                "contents": [
+                    {
+                        "title": "Understanding AMI-based products",
+                        "href": "ami-getting-started.html"
+                    },
+                    {
+                        "title": "Single-AMI products",
+                        "href": "ami-single-ami-products.html"
+                    },
+                    {
+                        "title": "AMI-based delivery using CloudFormation",
+                        "href": "cloudformation.html",
+                        "contents": [
+                            {
+                                "title": "Adding serverless application components",
+                                "href": "cloudformation-serverless-application.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Private images",
+                        "href": "private-images.html"
+                    },
+                    {
+                        "title": "Best practices for building AMIs",
+                        "href": "best-practices-for-building-your-amis.html"
+                    },
+                    {
+                        "title": "AMI product pricing",
+                        "href": "pricing-ami-products.html",
+                        "contents": [
+                            {
+                                "title": "Custom metering pricing for AMI products",
+                                "href": "custom-metering-pricing-ami-products.html"
+                            },
+                            {
+                                "title": "Contract pricing for AMI products",
+                                "href": "ami-contracts.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AMI product billing, metering, and licensing integrations",
+                        "href": "ami-product-billing-metering-licensing-integrations.html",
+                        "contents": [
+                            {
+                                "title": "Custom metering for AMI products with AWS Marketplace Metering Service",
+                                "href": "custom-metering-with-mp-metering-service.html"
+                            },
+                            {
+                                "title": "Contract pricing for AMI products with AWS License Manager",
+                                "href": "ami-license-manager-integration.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon SNS notifications for AMI products",
+                        "href": "ami-notification.html"
+                    },
+                    {
+                        "title": "AMI product checklist",
+                        "href": "aws-marketplace-listing-checklist.html"
+                    },
+                    {
+                        "title": "AMI-based product requirements",
+                        "href": "product-and-ami-policies.html"
+                    }
+                ]
+            },
+            {
+                "title": "Container-based products",
+                "href": "container-based-products.html",
+                "contents": [
+                    {
+                        "title": "Getting started with container products",
+                        "href": "container-product-getting-started.html"
+                    },
+                    {
+                        "title": "Container-based product requirements",
+                        "href": "container-product-policies.html"
+                    },
+                    {
+                        "title": "Container products pricing",
+                        "href": "pricing-container-products.html"
+                    },
+                    {
+                        "title": "Container product billing, metering, and licensing integrations",
+                        "href": "container-products-billing-integration.html",
+                        "contents": [
+                            {
+                                "title": "Hourly metering with AWS Marketplace Metering Service",
+                                "href": "container-metering-registerusage.html",
+                                "contents": [
+                                    {
+                                        "title": "Java integration example",
+                                        "href": "java-integration-example-registerusage.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Custom metering for container products",
+                                "href": "container-metering-meterusage.html",
+                                "contents": [
+                                    {
+                                        "title": "Java integration example",
+                                        "href": "java-integration-example-meterusage.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Contract pricing for Container products with AWS License Manager",
+                                "href": "container-license-manager-integration.html",
+                                "contents": [
+                                    {
+                                        "title": "Integrating an AWS Marketplace for Containers Anywhere product with License Manager",
+                                        "href": "container-anywhere-license-manager-integration.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon SNS notifications for container products",
+                        "href": "container-notification.html"
+                    }
+                ]
+            },
+            {
+                "title": "Machine learning products",
+                "href": "machine-learning-products.html",
+                "contents": [
+                    {
+                        "title": "Security and intellectual property",
+                        "href": "ml-security-and-intellectual-property.html"
+                    },
+                    {
+                        "title": "Machine learning product pricing",
+                        "href": "machine-learning-pricing.html"
+                    },
+                    {
+                        "title": "Prepare your product in SageMaker",
+                        "href": "ml-prepare-your-product-in-sagemaker.html",
+                        "contents": [
+                            {
+                                "title": "Packaging your code into images",
+                                "href": "ml-packaging-your-code-into-images.html",
+                                "contents": [
+                                    {
+                                        "title": "Model package images",
+                                        "href": "ml-model-package-images.html"
+                                    },
+                                    {
+                                        "title": "Algorithm images",
+                                        "href": "ml-algorithm-images.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Uploading your images",
+                                "href": "ml-uploading-your-images.html"
+                            },
+                            {
+                                "title": "Creating your Amazon SageMaker resource",
+                                "href": "ml-creating-your-amazon-sagemaker-resource.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Publishing your product in AWS Marketplace",
+                        "href": "ml-publishing-your-product-in-aws-marketplace.html"
+                    },
+                    {
+                        "title": "Requirements and best practices for creating machine learning products",
+                        "href": "ml-listing-requirements-and-best-practices.html"
+                    },
+                    {
+                        "title": "Service restrictions and quotas",
+                        "href": "ml-service-restrictions-and-limits.html"
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "href": "ml-troubleshooting.html"
+                    },
+                    {
+                        "title": "Reporting",
+                        "href": "ml-reporting.html"
+                    }
+                ]
+            },
+            {
+                "title": "SaaS-based products",
+                "href": "saas-products.html",
+                "contents": [
+                    {
+                        "title": "Getting started with SaaS products",
+                        "href": "saas-getting-started.html",
+                        "contents": [
+                            {
+                                "title": "SaaS product lifecycle",
+                                "href": "saas-product-lifecycle.html"
+                            },
+                            {
+                                "title": "Creating a SaaS product",
+                                "href": "saas-create-product.html"
+                            },
+                            {
+                                "title": "Create an initial SaaS product page",
+                                "href": "saas-create-product-page.html"
+                            },
+                            {
+                                "title": "SaaS product settings",
+                                "href": "saas-product-settings.html"
+                            },
+                            {
+                                "title": "Integrate your SaaS subscription product",
+                                "href": "saas-integrate-subscription.html"
+                            },
+                            {
+                                "title": "Integrate your SaaS contract product",
+                                "href": "saas-integrate-contract.html"
+                            },
+                            {
+                                "title": "Integrate your SaaS contract with pay-as-you-go product",
+                                "href": "saas-integrate-contract-with-pay.html"
+                            },
+                            {
+                                "title": "Deploy a serverless SaaS integration solution",
+                                "href": "deploy-serverless-saas.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Plan your SaaS product",
+                        "href": "saas-prepare.html"
+                    },
+                    {
+                        "title": "SaaS product guidelines",
+                        "href": "saas-guidelines.html"
+                    },
+                    {
+                        "title": "SaaS product pricing",
+                        "href": "saas-pricing-models.html",
+                        "contents": [
+                            {
+                                "title": "Pricing for SaaS subscriptions",
+                                "href": "saas-subscriptions.html"
+                            },
+                            {
+                                "title": "Pricing for SaaS contracts",
+                                "href": "saas-contracts.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "SaaS free trials",
+                        "href": "saas-free-trials.html"
+                    },
+                    {
+                        "title": "SaaS customer onboarding",
+                        "href": "saas-product-customer-setup.html"
+                    },
+                    {
+                        "title": "Amazon SNS notifications for SaaS products",
+                        "href": "saas-notification.html"
+                    },
+                    {
+                        "title": "Accessing the AWS Marketplace Metering and Entitlement Service APIs",
+                        "href": "saas-integration-metering-and-entitlement-apis.html",
+                        "contents": [
+                            {
+                                "title": "Metering for usage",
+                                "href": "metering-for-usage.html"
+                            },
+                            {
+                                "title": "Checking entitlements",
+                                "href": "checking-entitlements.html"
+                            },
+                            {
+                                "title": "SaaS product integration checklist",
+                                "href": "aws-marketplace-integration-checklist.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Reporting",
+                        "href": "saas-reporting.html"
+                    },
+                    {
+                        "title": "SaaS code examples",
+                        "href": "saas-code-examples.html"
+                    },
+                    {
+                        "title": "Using AWS PrivateLink with AWS Marketplace",
+                        "href": "privatelink.html"
+                    }
+                ]
+            },
+            {
+                "title": "Professional services products",
+                "href": "proserv-products.html",
+                "contents": [
+                    {
+                        "title": "Getting started with professional services products",
+                        "href": "proserv-getting-started.html"
+                    },
+                    {
+                        "title": "Product details",
+                        "href": "proserv-product-details.html"
+                    },
+                    {
+                        "title": "Product requirements",
+                        "href": "proserv-product-guidelines.html"
+                    },
+                    {
+                        "title": "Professional services product pricing",
+                        "href": "pricing-proserv-products.html"
+                    }
+                ]
+            },
+            {
+                "title": "Data products",
+                "href": "data-products.html"
+            },
+            {
+                "title": "Submitting your product",
+                "href": "product-submission.html"
+            },
+            {
+                "title": "Marketing your product",
+                "href": "product-marketing.html"
+            },
+            {
+                "title": "Notifications",
+                "href": "notifications.html",
+                "contents": [
+                    {
+                        "title": "Email notifications",
+                        "href": "email-notifications.html"
+                    },
+                    {
+                        "title": "Amazon EventBridge notifications",
+                        "href": "notifications-eventbridge.html",
+                        "contents": [
+                            {
+                                "title": "AWS Marketplace Catalog API Amazon EventBridge events",
+                                "href": "seller-eventbridge.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon Simple Notification Service notifications",
+                        "href": "notifications-sns.html"
+                    }
+                ]
+            },
+            {
+                "title": "Seller reports, data feeds, and dashboards",
+                "href": "reports-and-data-feed.html",
+                "contents": [
+                    {
+                        "title": "Seller delivery data feeds service",
+                        "href": "data-feed-service.html",
+                        "contents": [
+                            {
+                                "title": "Data feed tables overview",
+                                "href": "data-feed-joining.html"
+                            },
+                            {
+                                "title": "Data feed query examples",
+                                "href": "data-feed-full-examples.html"
+                            },
+                            {
+                                "title": "Data feeds",
+                                "href": "data-feeds.html",
+                                "contents": [
+                                    {
+                                        "title": "Account data feed",
+                                        "href": "data-feed-account.html"
+                                    },
+                                    {
+                                        "title": "Address data feed",
+                                        "href": "data-feed-address.html"
+                                    },
+                                    {
+                                        "title": "Billing event data feed",
+                                        "href": "data-feed-billing-event.html"
+                                    },
+                                    {
+                                        "title": "Legacy mapping data feed",
+                                        "href": "data-feed-legacy-mapping.html"
+                                    },
+                                    {
+                                        "title": "Offer data feed",
+                                        "href": "data-feed-offer.html"
+                                    },
+                                    {
+                                        "title": "Offer product data feed",
+                                        "href": "data-feed-offer-product.html"
+                                    },
+                                    {
+                                        "title": "Offer target data feed",
+                                        "href": "data-feed-offer-target.html"
+                                    },
+                                    {
+                                        "title": "Product data feed",
+                                        "href": "data-feed-product.html"
+                                    },
+                                    {
+                                        "title": "Tax item data feed",
+                                        "href": "data-feed-tax-item.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Seller reports",
+                        "href": "Reporting.html",
+                        "contents": [
+                            {
+                                "title": "Daily business report",
+                                "href": "daily-business-report.html"
+                            },
+                            {
+                                "title": "Daily customer subscriber report",
+                                "href": "daily-customer-subscriber-report.html"
+                            },
+                            {
+                                "title": "Disbursement report",
+                                "href": "monthly-disbursement-report.html"
+                            },
+                            {
+                                "title": "Monthly billed revenue report",
+                                "href": "monthly-billed-revenue-report.html"
+                            },
+                            {
+                                "title": "Sales compensation report",
+                                "href": "sales-compensation-report.html"
+                            },
+                            {
+                                "title": "US sales and use tax report",
+                                "href": "u.s.-sales-and-use-tax-report.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Supplementary reports",
+                        "href": "supplementary-reports.html"
+                    },
+                    {
+                        "title": "Seller dashboards",
+                        "href": "dashboards.html",
+                        "contents": [
+                            {
+                                "title": "Billed revenue dashboard",
+                                "href": "billed-revenue-dashboard.html"
+                            },
+                            {
+                                "title": "Collections and disbursement dashboard",
+                                "href": "collections-disbursement-dashboard.html"
+                            },
+                            {
+                                "title": "Agreements and renewals dashboard",
+                                "href": "agreements-renewals-dashboard.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "AWS Marketplace Vendor Insights",
+                "href": "vendor-insights.html",
+                "contents": [
+                    {
+                        "title": "Understanding AWS Marketplace Vendor Insights",
+                        "href": "vendor-insights-understanding.html"
+                    },
+                    {
+                        "title": "Setting up as a seller",
+                        "href": "vendor-insights-setting-up.html"
+                    },
+                    {
+                        "title": "Viewing your profile",
+                        "href": "vendor-insights-profile.html"
+                    },
+                    {
+                        "title": "Managing snapshots",
+                        "href": "vendor-insights-snapshot.html"
+                    },
+                    {
+                        "title": "Controlling access",
+                        "href": "vendor-insights-seller-controlling-access.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "IAM for AWS Marketplace",
+                        "href": "marketplace-management-portal-user-access.html"
+                    },
+                    {
+                        "title": "Policies and permissions for AWS Marketplace sellers",
+                        "href": "detailed-management-portal-permissions.html"
+                    },
+                    {
+                        "title": "AWS managed policies",
+                        "href": "security-iam-awsmanpol.html"
+                    },
+                    {
+                        "title": "AWS Marketplace Commerce Analytics Service account permissions",
+                        "href": "set-aws-iam-cas-permissions.html"
+                    },
+                    {
+                        "title": "Amazon SQS permissions",
+                        "href": "set-aws-iam-sqs-permissions.html"
+                    },
+                    {
+                        "title": "AWS Marketplace metering and entitlement API permissions",
+                        "href": "iam-user-policy-for-aws-marketplace-actions.html"
+                    },
+                    {
+                        "title": "Logging AWS Marketplace API calls with AWS CloudTrail",
+                        "href": "logging-aws-marketplace-api-calls-with-aws-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "document-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

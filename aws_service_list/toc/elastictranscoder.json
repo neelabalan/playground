@@ -1,1 +1,334 @@
-{ "contents" : [ { "title" : "What is Amazon Elastic Transcoder?", "href" : "introduction.html", "contents" : [ { "title" : "Accessing Elastic Transcoder", "href" : "accessing.html" }, { "title" : "Limits on Pipelines, Jobs, and Presets", "href" : "limits.html" } ] }, { "title" : "Getting Started", "href" : "getting-started.html", "contents" : [ { "title" : "Create a Bucket", "href" : "gs-2-create-s3-buckets.html" }, { "title" : "Create a Pipeline", "href" : "gs-3-create-a-pipeline.html" }, { "title" : "Create a Preset", "href" : "gs-4-create-a-preset.html" }, { "title" : "Create a Job", "href" : "gs-5-create-a-job.html" }, { "title" : "Monitor Progress", "href" : "gs-6-monitor-progress.html" } ] }, { "title" : "Working with Pipelines", "href" : "working-with-pipelines.html", "contents" : [ { "title" : "Creating a Pipeline", "href" : "creating-pipelines.html" }, { "title" : "Pausing and Reactivating Pipelines", "href" : "updating-pipeline-status.html" }, { "title" : "Updating Pipeline Notifications", "href" : "updating-pipeline-notifications.html" }, { "title" : "Listing and Viewing Pipelines", "href" : "listing-pipelines.html" }, { "title" : "Deleting a Pipeline", "href" : "deleting-a-pipeline.html" }, { "title" : "Pipeline Settings", "href" : "pipeline-settings.html" } ] }, { "title" : "Working with Jobs", "href" : "working-with-jobs.html", "contents" : [ { "title" : "Creating a Job", "href" : "creating-jobs.html" }, { "title" : "Listing and Viewing Jobs", "href" : "listing-jobs.html" }, { "title" : "Canceling a Job", "href" : "canceling-a-job.html" }, { "title" : "Job Settings", "href" : "job-settings.html" } ] }, { "title" : "Working with Presets", "href" : "working-with-presets.html", "contents" : [ { "title" : "Creating a Preset", "href" : "creating-presets.html" }, { "title" : "Listing and Viewing Presets", "href" : "listing-presets.html" }, { "title" : "Modifying Presets", "href" : "changing-presets.html" }, { "title" : "Deleting a Preset", "href" : "deleting-a-preset.html" }, { "title" : "Preset Settings", "href" : "preset-settings.html" } ] }, { "title" : "Amazon S3 Bucket Organization", "href" : "organize-s3.html" }, { "title" : "Securing Your Content", "href" : "security.html", "contents" : [ { "title" : "Controlling Access", "href" : "access-control.html" }, { "title" : "Data Encryption Options", "href" : "encryption.html", "contents" : [ { "title" : "Using Client-side Encryption with Elastic Transcoder", "href" : "encrypted-tutorial.html" }, { "title" : "HLS Content Protection", "href" : "content-protection.html" }, { "title" : "DRM", "href" : "drm.html" } ] } ] }, { "title" : "Notifications", "href" : "notifications.html" }, { "title" : "Clip Stitching", "href" : "clip-stitching.html" }, { "title" : "Captions", "href" : "captions.html" }, { "title" : "Watermarks", "href" : "watermarks.html" }, { "title" : "Digital Audio", "href" : "audio.html" }, { "title" : "System Presets", "href" : "system-presets.html" }, { "title" : "Sizing Policy and Aspect Ratios", "href" : "aspect-ratios.html" }, { "title" : "Monitoring", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Monitoring Tools", "href" : "monitoring-automated-manual.html" }, { "title" : "Monitoring with Amazon CloudWatch", "href" : "monitoring-cloudwatch.html", "contents" : [ { "title" : "Metrics and Dimensions", "href" : "metrics-dimensions.html" }, { "title" : "Creating Alarms", "href" : "creating-alarms.html" } ] } ] }, { "title" : "Logging Elastic Transcoder API Calls with AWS CloudTrail", "href" : "logging-using-cloudtrail.html" }, { "title" : "AWS SDK Sample Code", "href" : "sample-code.html" }, { "title" : "API Reference", "href" : "api-reference.html", "contents" : [ { "title" : "Using the AWS SDKs", "href" : "using-sdks.html" }, { "title" : "Making HTTP Requests", "href" : "making-http-requests.html" }, { "title" : "Signing Requests", "href" : "signing-requests.html" }, { "title" : "Handling Errors", "href" : "error-handling.html" }, { "title" : "Pipeline Operations", "href" : "operations-pipelines.html", "contents" : [ { "title" : "Create Pipeline", "href" : "create-pipeline.html" }, { "title" : "List Pipelines", "href" : "list-pipelines.html" }, { "title" : "Read Pipeline", "href" : "get-pipeline.html" }, { "title" : "Update Pipeline", "href" : "update-pipeline.html" }, { "title" : "Update Pipeline Status", "href" : "update-pipeline-status.html" }, { "title" : "Update Pipeline Notifications", "href" : "update-pipeline-notifications.html" }, { "title" : "Delete Pipeline", "href" : "delete-pipeline.html" }, { "title" : "Test Role", "href" : "test-pipeline-role.html" } ] }, { "title" : "Job Operations", "href" : "operations-jobs.html", "contents" : [ { "title" : "Create Job", "href" : "create-job.html" }, { "title" : "List Jobs by Pipeline", "href" : "list-jobs-by-pipeline.html" }, { "title" : "List Jobs by Status", "href" : "list-jobs-by-status.html" }, { "title" : "Read Job", "href" : "get-job.html" }, { "title" : "Cancel Job", "href" : "cancel-job.html" } ] }, { "title" : "Preset Operations", "href" : "operations-presets.html", "contents" : [ { "title" : "Create Preset", "href" : "create-preset.html" }, { "title" : "List Presets", "href" : "list-presets.html" }, { "title" : "Read Preset", "href" : "get-preset.html" }, { "title" : "Delete Preset", "href" : "delete-preset.html" } ] } ] }, { "title" : "Document History", "href" : "history.html" }, { "title" : "AWS Glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/elastictranscoder/latest/developerguide/",
+    "service": "elastictranscoder",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon Elastic Transcoder?",
+                "href": "introduction.html",
+                "contents": [
+                    {
+                        "title": "Accessing Elastic Transcoder",
+                        "href": "accessing.html"
+                    },
+                    {
+                        "title": "Limits on Pipelines, Jobs, and Presets",
+                        "href": "limits.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting Started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Create a Bucket",
+                        "href": "gs-2-create-s3-buckets.html"
+                    },
+                    {
+                        "title": "Create a Pipeline",
+                        "href": "gs-3-create-a-pipeline.html"
+                    },
+                    {
+                        "title": "Create a Preset",
+                        "href": "gs-4-create-a-preset.html"
+                    },
+                    {
+                        "title": "Create a Job",
+                        "href": "gs-5-create-a-job.html"
+                    },
+                    {
+                        "title": "Monitor Progress",
+                        "href": "gs-6-monitor-progress.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with Pipelines",
+                "href": "working-with-pipelines.html",
+                "contents": [
+                    {
+                        "title": "Creating a Pipeline",
+                        "href": "creating-pipelines.html"
+                    },
+                    {
+                        "title": "Pausing and Reactivating Pipelines",
+                        "href": "updating-pipeline-status.html"
+                    },
+                    {
+                        "title": "Updating Pipeline Notifications",
+                        "href": "updating-pipeline-notifications.html"
+                    },
+                    {
+                        "title": "Listing and Viewing Pipelines",
+                        "href": "listing-pipelines.html"
+                    },
+                    {
+                        "title": "Deleting a Pipeline",
+                        "href": "deleting-a-pipeline.html"
+                    },
+                    {
+                        "title": "Pipeline Settings",
+                        "href": "pipeline-settings.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with Jobs",
+                "href": "working-with-jobs.html",
+                "contents": [
+                    {
+                        "title": "Creating a Job",
+                        "href": "creating-jobs.html"
+                    },
+                    {
+                        "title": "Listing and Viewing Jobs",
+                        "href": "listing-jobs.html"
+                    },
+                    {
+                        "title": "Canceling a Job",
+                        "href": "canceling-a-job.html"
+                    },
+                    {
+                        "title": "Job Settings",
+                        "href": "job-settings.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with Presets",
+                "href": "working-with-presets.html",
+                "contents": [
+                    {
+                        "title": "Creating a Preset",
+                        "href": "creating-presets.html"
+                    },
+                    {
+                        "title": "Listing and Viewing Presets",
+                        "href": "listing-presets.html"
+                    },
+                    {
+                        "title": "Modifying Presets",
+                        "href": "changing-presets.html"
+                    },
+                    {
+                        "title": "Deleting a Preset",
+                        "href": "deleting-a-preset.html"
+                    },
+                    {
+                        "title": "Preset Settings",
+                        "href": "preset-settings.html"
+                    }
+                ]
+            },
+            {
+                "title": "Amazon S3 Bucket Organization",
+                "href": "organize-s3.html"
+            },
+            {
+                "title": "Securing Your Content",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Controlling Access",
+                        "href": "access-control.html"
+                    },
+                    {
+                        "title": "Data Encryption Options",
+                        "href": "encryption.html",
+                        "contents": [
+                            {
+                                "title": "Using Client-side Encryption with Elastic Transcoder",
+                                "href": "encrypted-tutorial.html"
+                            },
+                            {
+                                "title": "HLS Content Protection",
+                                "href": "content-protection.html"
+                            },
+                            {
+                                "title": "DRM",
+                                "href": "drm.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Notifications",
+                "href": "notifications.html"
+            },
+            {
+                "title": "Clip Stitching",
+                "href": "clip-stitching.html"
+            },
+            {
+                "title": "Captions",
+                "href": "captions.html"
+            },
+            {
+                "title": "Watermarks",
+                "href": "watermarks.html"
+            },
+            {
+                "title": "Digital Audio",
+                "href": "audio.html"
+            },
+            {
+                "title": "System Presets",
+                "href": "system-presets.html"
+            },
+            {
+                "title": "Sizing Policy and Aspect Ratios",
+                "href": "aspect-ratios.html"
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Monitoring Tools",
+                        "href": "monitoring-automated-manual.html"
+                    },
+                    {
+                        "title": "Monitoring with Amazon CloudWatch",
+                        "href": "monitoring-cloudwatch.html",
+                        "contents": [
+                            {
+                                "title": "Metrics and Dimensions",
+                                "href": "metrics-dimensions.html"
+                            },
+                            {
+                                "title": "Creating Alarms",
+                                "href": "creating-alarms.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Logging Elastic Transcoder API Calls with AWS CloudTrail",
+                "href": "logging-using-cloudtrail.html"
+            },
+            {
+                "title": "AWS SDK Sample Code",
+                "href": "sample-code.html"
+            },
+            {
+                "title": "API Reference",
+                "href": "api-reference.html",
+                "contents": [
+                    {
+                        "title": "Using the AWS SDKs",
+                        "href": "using-sdks.html"
+                    },
+                    {
+                        "title": "Making HTTP Requests",
+                        "href": "making-http-requests.html"
+                    },
+                    {
+                        "title": "Signing Requests",
+                        "href": "signing-requests.html"
+                    },
+                    {
+                        "title": "Handling Errors",
+                        "href": "error-handling.html"
+                    },
+                    {
+                        "title": "Pipeline Operations",
+                        "href": "operations-pipelines.html",
+                        "contents": [
+                            {
+                                "title": "Create Pipeline",
+                                "href": "create-pipeline.html"
+                            },
+                            {
+                                "title": "List Pipelines",
+                                "href": "list-pipelines.html"
+                            },
+                            {
+                                "title": "Read Pipeline",
+                                "href": "get-pipeline.html"
+                            },
+                            {
+                                "title": "Update Pipeline",
+                                "href": "update-pipeline.html"
+                            },
+                            {
+                                "title": "Update Pipeline Status",
+                                "href": "update-pipeline-status.html"
+                            },
+                            {
+                                "title": "Update Pipeline Notifications",
+                                "href": "update-pipeline-notifications.html"
+                            },
+                            {
+                                "title": "Delete Pipeline",
+                                "href": "delete-pipeline.html"
+                            },
+                            {
+                                "title": "Test Role",
+                                "href": "test-pipeline-role.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Job Operations",
+                        "href": "operations-jobs.html",
+                        "contents": [
+                            {
+                                "title": "Create Job",
+                                "href": "create-job.html"
+                            },
+                            {
+                                "title": "List Jobs by Pipeline",
+                                "href": "list-jobs-by-pipeline.html"
+                            },
+                            {
+                                "title": "List Jobs by Status",
+                                "href": "list-jobs-by-status.html"
+                            },
+                            {
+                                "title": "Read Job",
+                                "href": "get-job.html"
+                            },
+                            {
+                                "title": "Cancel Job",
+                                "href": "cancel-job.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Preset Operations",
+                        "href": "operations-presets.html",
+                        "contents": [
+                            {
+                                "title": "Create Preset",
+                                "href": "create-preset.html"
+                            },
+                            {
+                                "title": "List Presets",
+                                "href": "list-presets.html"
+                            },
+                            {
+                                "title": "Read Preset",
+                                "href": "get-preset.html"
+                            },
+                            {
+                                "title": "Delete Preset",
+                                "href": "delete-preset.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Document History",
+                "href": "history.html"
+            },
+            {
+                "title": "AWS Glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

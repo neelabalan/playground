@@ -1,1 +1,476 @@
-{ "contents" : [ { "title" : "Welcome", "href" : "welcome.html" }, { "title" : "Quick start", "href" : "getting-started.html", "contents" : [ { "title" : "Creating a web app", "href" : "qs-web.html" }, { "title" : "Creating an Android app", "href" : "qs-android.html" } ] }, { "title" : "Amazon Location concepts", "href" : "how-it-works.html", "contents" : [ { "title" : "Overview", "href" : "overview.html" }, { "title" : "Maps", "href" : "map-concepts.html" }, { "title" : "Places search", "href" : "places-concepts.html" }, { "title" : "Routes", "href" : "route-concepts.html" }, { "title" : "Geofences and Trackers", "href" : "geofence-tracker-concepts.html" }, { "title" : "Common use cases", "href" : "common-usecases.html", "contents" : [ { "title" : "User engagement and geomarketing applications", "href" : "user-engagement-geomarketing.html" }, { "title" : "Asset tracking applications", "href" : "asset-tracking.html" }, { "title" : "Delivery applications", "href" : "delivery.html" } ] }, { "title" : "Data providers", "href" : "what-is-data-provider.html", "contents" : [ { "title" : "Esri", "href" : "esri.html" }, { "title" : "GrabMaps", "href" : "grab.html" }, { "title" : "HERE Technologies", "href" : "HERE.html" }, { "title" : "Open Data", "href" : "open-data.html" }, { "title" : "Features by data provider", "href" : "data-provider-features.html" }, { "title" : "Terms of use and data attribution", "href" : "data-attribution.html" } ] }, { "title" : "Regions and endpoints", "href" : "location-regions.html" }, { "title" : "Service quotas", "href" : "location-quotas.html" } ] }, { "title" : "Developing with Amazon Location", "href" : "dev-overview.html", "contents" : [ { "title" : "Scenarios and use cases", "href" : "dev-usecases.html" }, { "title" : "SDKs and tools", "href" : "dev-sdks.html", "contents" : [ { "title" : "SDKs by language", "href" : "dev-by-language.html" }, { "title" : "MapLibre", "href" : "dev-maplibre.html" }, { "title" : "Amazon Location SDK", "href" : "dev-location-libraries.html" } ] }, { "title" : "Amazon Location APIs", "href" : "location-actions.html", "contents" : [ { "title" : "Error message updates", "href" : "location-actions-errorupdates.html" } ] }, { "title" : "Code examples", "href" : "samples.html" } ] }, { "title" : "How to use Amazon Location", "href" : "using-amazon-location.html", "contents" : [ { "title" : "Account prerequisites", "href" : "gs-prereqs.html" }, { "title" : "Using maps", "href" : "using-maps.html", "contents" : [ { "title" : "Prerequisites", "href" : "map-prerequisites.html" }, { "title" : "Displaying maps", "href" : "display-map.html", "contents" : [ { "title" : "Tutorial: MapLibre", "href" : "tutorial-maplibre.html", "contents" : [ { "title" : "MapLibre GL JS", "href" : "tutorial-maplibre-gl-js.html" }, { "title" : "MapLibre Native SDK for Android", "href" : "tutorial-maplibre-android.html" }, { "title" : "MapLibre Native SDK for iOS", "href" : "tutorial-maplibre-ios.html" } ] }, { "title" : "Tutorial: Amplify JS", "href" : "tutorial-map-amplify.html" }, { "title" : "Tutorial: Tangram", "href" : "tutorial-tangram.html", "contents" : [ { "title" : "Tangram", "href" : "tutorial-tangram-js.html" }, { "title" : "Tangram ES for Android", "href" : "tutorial-tangram-es-android.html" }, { "title" : "Tangram ES for iOS", "href" : "tutorial-tangram-es-ios.html" } ] } ] }, { "title" : "Drawing on a map", "href" : "drawing-on-a-map.html" }, { "title" : "Settings extents for a map", "href" : "setting-map-extents.html" }, { "title" : "Managing map resources", "href" : "managing-maps.html" } ] }, { "title" : "Places search", "href" : "searching-for-places.html", "contents" : [ { "title" : "Prerequisites", "href" : "places-prerequisites.html" }, { "title" : "Geocoding", "href" : "search-place-index-geocoding.html" }, { "title" : "Reverse geocoding", "href" : "search-place-index-reverse-geocode.html" }, { "title" : "Autocomplete", "href" : "search-place-index-autocomplete.html" }, { "title" : "Using place IDs", "href" : "search-using-placeids.html" }, { "title" : "Categories and filtering", "href" : "category-filtering.html" }, { "title" : "Tutorial: Database enrichment", "href" : "database-address-validation.html" }, { "title" : "Managing place index resources", "href" : "managing-place-indexes.html" } ] }, { "title" : "Calculating routes", "href" : "calculating-routes.html", "contents" : [ { "title" : "Prerequisites", "href" : "routes-prerequisites.html" }, { "title" : "Calculate route", "href" : "calculate-route.html" }, { "title" : "Route planning", "href" : "calculate-route-matrix.html" }, { "title" : "Positions not located on a road", "href" : "snap-to-nearby-road.html" }, { "title" : "Departure time", "href" : "departure-time.html" }, { "title" : "Travel mode", "href" : "travel-mode.html" }, { "title" : "Managing route resources", "href" : "managing-route-calculators.html" } ] }, { "title" : "Geofencing and tracking", "href" : "geofence-an-area.html", "contents" : [ { "title" : "Step 1: Add geofences", "href" : "add-geofences.html" }, { "title" : "Step 2: Start tracking", "href" : "start-tracking.html" }, { "title" : "Step 3: Link a tracker to a geofence collection", "href" : "associate-consumer.html" }, { "title" : "Step 4: Evaluate device positions against geofences", "href" : "evaluate-geofences.html" }, { "title" : "Reacting to events with EventBridge", "href" : "location-events.html" }, { "title" : "Tracking using AWS IoT and MQTT", "href" : "tracking-using-mqtt.html", "contents" : [ { "title" : "Using AWS Lambda with MQTT", "href" : "tracking-using-mqtt-with-lambda.html" } ] }, { "title" : "Managing geofence resources", "href" : "managing-geofence-collections.html" }, { "title" : "Managing tracker resources", "href" : "managing-trackers.html" } ] }, { "title" : "Tagging your resources", "href" : "tagging.html" }, { "title" : "Grant access to Amazon Location", "href" : "how-to-access.html", "contents" : [ { "title" : "Using API keys", "href" : "using-apikeys.html" }, { "title" : "Using Amazon Cognito", "href" : "authenticating-using-cognito.html" } ] }, { "title" : "Monitoring Amazon Location Service", "href" : "monitoring.html", "contents" : [ { "title" : "Monitoring with CloudWatch", "href" : "monitoring-using-cloudwatch.html" }, { "title" : "Using CloudTrail with Amazon Location", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Using AWS CloudFormation to create resources", "href" : "creating-resources-with-cloudformation.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Data privacy", "href" : "data-privacy.html" }, { "title" : "Data retention", "href" : "data-retention.html" }, { "title" : "Data at rest encryption", "href" : "encryption-at-rest.html" }, { "title" : "Data in transit encryption", "href" : "encryption-in-transit.html" } ] }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon Location Service works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "How Amazon Location Service works with unauthenticated users", "href" : "security_iam_unauthenticated-users.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Incident response", "href" : "incident-response.html", "contents" : [ { "title" : "Logging and Monitoring", "href" : "security-logging-and-monitoring.html" } ] }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Configuration and vulnerability analysis", "href" : "vulnerability-analysis-and-management.html" }, { "title" : "Confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" }, { "title" : "Best practices", "href" : "best-practices.html" } ] }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/location/latest/developerguide/",
+    "service": "location",
+    "toc": {
+        "contents": [
+            {
+                "title": "Welcome",
+                "href": "welcome.html"
+            },
+            {
+                "title": "Quick start",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Creating a web app",
+                        "href": "qs-web.html"
+                    },
+                    {
+                        "title": "Creating an Android app",
+                        "href": "qs-android.html"
+                    }
+                ]
+            },
+            {
+                "title": "Amazon Location concepts",
+                "href": "how-it-works.html",
+                "contents": [
+                    {
+                        "title": "Overview",
+                        "href": "overview.html"
+                    },
+                    {
+                        "title": "Maps",
+                        "href": "map-concepts.html"
+                    },
+                    {
+                        "title": "Places search",
+                        "href": "places-concepts.html"
+                    },
+                    {
+                        "title": "Routes",
+                        "href": "route-concepts.html"
+                    },
+                    {
+                        "title": "Geofences and Trackers",
+                        "href": "geofence-tracker-concepts.html"
+                    },
+                    {
+                        "title": "Common use cases",
+                        "href": "common-usecases.html",
+                        "contents": [
+                            {
+                                "title": "User engagement and geomarketing applications",
+                                "href": "user-engagement-geomarketing.html"
+                            },
+                            {
+                                "title": "Asset tracking applications",
+                                "href": "asset-tracking.html"
+                            },
+                            {
+                                "title": "Delivery applications",
+                                "href": "delivery.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Data providers",
+                        "href": "what-is-data-provider.html",
+                        "contents": [
+                            {
+                                "title": "Esri",
+                                "href": "esri.html"
+                            },
+                            {
+                                "title": "GrabMaps",
+                                "href": "grab.html"
+                            },
+                            {
+                                "title": "HERE Technologies",
+                                "href": "HERE.html"
+                            },
+                            {
+                                "title": "Open Data",
+                                "href": "open-data.html"
+                            },
+                            {
+                                "title": "Features by data provider",
+                                "href": "data-provider-features.html"
+                            },
+                            {
+                                "title": "Terms of use and data attribution",
+                                "href": "data-attribution.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Regions and endpoints",
+                        "href": "location-regions.html"
+                    },
+                    {
+                        "title": "Service quotas",
+                        "href": "location-quotas.html"
+                    }
+                ]
+            },
+            {
+                "title": "Developing with Amazon Location",
+                "href": "dev-overview.html",
+                "contents": [
+                    {
+                        "title": "Scenarios and use cases",
+                        "href": "dev-usecases.html"
+                    },
+                    {
+                        "title": "SDKs and tools",
+                        "href": "dev-sdks.html",
+                        "contents": [
+                            {
+                                "title": "SDKs by language",
+                                "href": "dev-by-language.html"
+                            },
+                            {
+                                "title": "MapLibre",
+                                "href": "dev-maplibre.html"
+                            },
+                            {
+                                "title": "Amazon Location SDK",
+                                "href": "dev-location-libraries.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon Location APIs",
+                        "href": "location-actions.html",
+                        "contents": [
+                            {
+                                "title": "Error message updates",
+                                "href": "location-actions-errorupdates.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Code examples",
+                        "href": "samples.html"
+                    }
+                ]
+            },
+            {
+                "title": "How to use Amazon Location",
+                "href": "using-amazon-location.html",
+                "contents": [
+                    {
+                        "title": "Account prerequisites",
+                        "href": "gs-prereqs.html"
+                    },
+                    {
+                        "title": "Using maps",
+                        "href": "using-maps.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "map-prerequisites.html"
+                            },
+                            {
+                                "title": "Displaying maps",
+                                "href": "display-map.html",
+                                "contents": [
+                                    {
+                                        "title": "Tutorial: MapLibre",
+                                        "href": "tutorial-maplibre.html",
+                                        "contents": [
+                                            {
+                                                "title": "MapLibre GL JS",
+                                                "href": "tutorial-maplibre-gl-js.html"
+                                            },
+                                            {
+                                                "title": "MapLibre Native SDK for Android",
+                                                "href": "tutorial-maplibre-android.html"
+                                            },
+                                            {
+                                                "title": "MapLibre Native SDK for iOS",
+                                                "href": "tutorial-maplibre-ios.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Tutorial: Amplify JS",
+                                        "href": "tutorial-map-amplify.html"
+                                    },
+                                    {
+                                        "title": "Tutorial: Tangram",
+                                        "href": "tutorial-tangram.html",
+                                        "contents": [
+                                            {
+                                                "title": "Tangram",
+                                                "href": "tutorial-tangram-js.html"
+                                            },
+                                            {
+                                                "title": "Tangram ES for Android",
+                                                "href": "tutorial-tangram-es-android.html"
+                                            },
+                                            {
+                                                "title": "Tangram ES for iOS",
+                                                "href": "tutorial-tangram-es-ios.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Drawing on a map",
+                                "href": "drawing-on-a-map.html"
+                            },
+                            {
+                                "title": "Settings extents for a map",
+                                "href": "setting-map-extents.html"
+                            },
+                            {
+                                "title": "Managing map resources",
+                                "href": "managing-maps.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Places search",
+                        "href": "searching-for-places.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "places-prerequisites.html"
+                            },
+                            {
+                                "title": "Geocoding",
+                                "href": "search-place-index-geocoding.html"
+                            },
+                            {
+                                "title": "Reverse geocoding",
+                                "href": "search-place-index-reverse-geocode.html"
+                            },
+                            {
+                                "title": "Autocomplete",
+                                "href": "search-place-index-autocomplete.html"
+                            },
+                            {
+                                "title": "Using place IDs",
+                                "href": "search-using-placeids.html"
+                            },
+                            {
+                                "title": "Categories and filtering",
+                                "href": "category-filtering.html"
+                            },
+                            {
+                                "title": "Tutorial: Database enrichment",
+                                "href": "database-address-validation.html"
+                            },
+                            {
+                                "title": "Managing place index resources",
+                                "href": "managing-place-indexes.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Calculating routes",
+                        "href": "calculating-routes.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "routes-prerequisites.html"
+                            },
+                            {
+                                "title": "Calculate route",
+                                "href": "calculate-route.html"
+                            },
+                            {
+                                "title": "Route planning",
+                                "href": "calculate-route-matrix.html"
+                            },
+                            {
+                                "title": "Positions not located on a road",
+                                "href": "snap-to-nearby-road.html"
+                            },
+                            {
+                                "title": "Departure time",
+                                "href": "departure-time.html"
+                            },
+                            {
+                                "title": "Travel mode",
+                                "href": "travel-mode.html"
+                            },
+                            {
+                                "title": "Managing route resources",
+                                "href": "managing-route-calculators.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Geofencing and tracking",
+                        "href": "geofence-an-area.html",
+                        "contents": [
+                            {
+                                "title": "Step 1: Add geofences",
+                                "href": "add-geofences.html"
+                            },
+                            {
+                                "title": "Step 2: Start tracking",
+                                "href": "start-tracking.html"
+                            },
+                            {
+                                "title": "Step 3: Link a tracker to a geofence collection",
+                                "href": "associate-consumer.html"
+                            },
+                            {
+                                "title": "Step 4: Evaluate device positions against geofences",
+                                "href": "evaluate-geofences.html"
+                            },
+                            {
+                                "title": "Reacting to events with EventBridge",
+                                "href": "location-events.html"
+                            },
+                            {
+                                "title": "Tracking using AWS IoT and MQTT",
+                                "href": "tracking-using-mqtt.html",
+                                "contents": [
+                                    {
+                                        "title": "Using AWS Lambda with MQTT",
+                                        "href": "tracking-using-mqtt-with-lambda.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Managing geofence resources",
+                                "href": "managing-geofence-collections.html"
+                            },
+                            {
+                                "title": "Managing tracker resources",
+                                "href": "managing-trackers.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tagging your resources",
+                        "href": "tagging.html"
+                    },
+                    {
+                        "title": "Grant access to Amazon Location",
+                        "href": "how-to-access.html",
+                        "contents": [
+                            {
+                                "title": "Using API keys",
+                                "href": "using-apikeys.html"
+                            },
+                            {
+                                "title": "Using Amazon Cognito",
+                                "href": "authenticating-using-cognito.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Monitoring Amazon Location Service",
+                        "href": "monitoring.html",
+                        "contents": [
+                            {
+                                "title": "Monitoring with CloudWatch",
+                                "href": "monitoring-using-cloudwatch.html"
+                            },
+                            {
+                                "title": "Using CloudTrail with Amazon Location",
+                                "href": "logging-using-cloudtrail.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using AWS CloudFormation to create resources",
+                        "href": "creating-resources-with-cloudformation.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Data privacy",
+                                "href": "data-privacy.html"
+                            },
+                            {
+                                "title": "Data retention",
+                                "href": "data-retention.html"
+                            },
+                            {
+                                "title": "Data at rest encryption",
+                                "href": "encryption-at-rest.html"
+                            },
+                            {
+                                "title": "Data in transit encryption",
+                                "href": "encryption-in-transit.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon Location Service works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "How Amazon Location Service works with unauthenticated users",
+                                "href": "security_iam_unauthenticated-users.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Incident response",
+                        "href": "incident-response.html",
+                        "contents": [
+                            {
+                                "title": "Logging and Monitoring",
+                                "href": "security-logging-and-monitoring.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "vulnerability-analysis-and-management.html"
+                    },
+                    {
+                        "title": "Confused deputy prevention",
+                        "href": "cross-service-confused-deputy-prevention.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    },
+                    {
+                        "title": "Best practices",
+                        "href": "best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

@@ -1,1 +1,834 @@
-{ "contents" : [ { "title" : "What Is Amazon AppStream 2.0?", "href" : "what-is-appstream.html" }, { "title" : "Setting Up", "href" : "setting-up.html" }, { "title" : "Get Started: Set Up With Sample Applications", "href" : "getting-started.html" }, { "title" : "Networking and Access", "href" : "managing-network.html", "contents" : [ { "title" : "Internet Access", "href" : "internet-access.html" }, { "title" : "VPC Requirements", "href" : "appstream-vpc.html", "contents" : [ { "title" : "VPC Setup Recommendations", "href" : "vpc-setup-recommendations.html" }, { "title" : "Configure a VPC with Private Subnets and a NAT Gateway", "href" : "managing-network-internet-NAT-gateway.html", "contents" : [ { "title" : "Create and Configure a New VPC", "href" : "create-configure-new-vpc-with-private-public-subnets-nat.html" }, { "title" : "Add a NAT Gateway to an Existing VPC", "href" : "add-nat-gateway-existing-vpc.html" }, { "title" : "Enable Internet Access for Your Fleet, Image Builder, or App Block Builder", "href" : "managing-network-manual-enable-internet-access.html" } ] }, { "title" : "Configure a VPC with a Public Subnet", "href" : "managing-network-default-internet-access.html" }, { "title" : "Use the Default VPC and Public Subnet", "href" : "default-vpc-with-public-subnet.html" } ] }, { "title" : "Amazon S3 VPC Endpoints", "href" : "managing-network-vpce-iam-policy.html" }, { "title" : "AppStream 2.0 Connections to Your VPC", "href" : "appstream2-port-requirements-appstream2.html" }, { "title" : "User Connections to AppStream 2.0", "href" : "user-connections-to-appstream2.html", "contents" : [ { "title" : "Bandwidth Recommendations", "href" : "bandwidth-recommendations-user-connections.html" }, { "title" : "IP Address and Port Requirements", "href" : "client-application-ports.html" }, { "title" : "Allowed Domains", "href" : "allowed-domains.html" } ] } ] }, { "title" : "Image Builders", "href" : "managing-image-builders.html", "contents" : [ { "title" : "Launch an Image Builder", "href" : "tutorial-image-builder-create.html" }, { "title" : "Connect to an Image Builder", "href" : "managing-image-builders-connect.html" }, { "title" : "Image Builder Actions", "href" : "managing-image-builders-actions.html" }, { "title" : "Instance Metadata for Image Builders", "href" : "user-instance-metadata-image-builders.html" }, { "title" : "Install AMD Driver on Graphics Design Instances", "href" : "AMD-driver.html" }, { "title" : "Base Image and Managed Image Update Release Notes", "href" : "base-image-version-history.html" } ] }, { "title" : "Images", "href" : "managing-images.html", "contents" : [ { "title" : "Default Settings and Application Launch Performance", "href" : "customizing-appstream-images.html" }, { "title" : "Manage AppStream 2.0 Agent Versions", "href" : "base-images-agent.html" }, { "title" : "Agent Release Notes", "href" : "agent-software-versions.html" }, { "title" : "Tutorial: Create a Custom Image by Using the Console", "href" : "tutorial-image-builder.html" }, { "title" : "Administer Your Images", "href" : "administer-images.html" }, { "title" : "Create Your AppStream 2.0 Image Programmatically", "href" : "programmatically-create-image.html" }, { "title" : "Create Your Linux-Based Images", "href" : "create-linux-based-images.html", "contents" : [ { "title" : "Creating Default Application Settings for Your Users", "href" : "create-default-app-settings.html" }, { "title" : "Creating Default Environment Variables for Your Linux Users", "href" : "create-default-variables-linux.html" }, { "title" : "Optimizing the Launch Performance of Your Linux Applications", "href" : "optimize-launch-performance.html" }, { "title" : "Creating Session Scripts", "href" : "create-session-scripts.html" }, { "title" : "Using the Image Assistant CLI Tool for Linux", "href" : "image-assistant-cli.html" }, { "title" : "Enabling and Disabling Webcam Support", "href" : "webcam-support.html" }, { "title" : "Tutorial: Create a Custom Linux-Based Image", "href" : "tutorial-create-linux-image.html" }, { "title" : "Tutorial: Enable Japanese Support", "href" : "enable-japanese-support-linux.html" } ] }, { "title" : "Use Session Scripts to Manage Your Users' Streaming Experience", "href" : "use-session-scripts.html" } ] }, { "title" : "Applications Manager", "href" : "app-blocks-applications.html", "contents" : [ { "title" : "App Blocks", "href" : "app-blocks.html", "contents" : [ { "title" : "Custom App Blocks", "href" : "custom-app-blocks.html", "contents" : [ { "title" : "Create the VHD", "href" : "create-vhd.html" }, { "title" : "Create the Setup Script for the VHD", "href" : "create-setup-script.html" }, { "title" : "Create a Custom App Block", "href" : "create-app-block.html" }, { "title" : "Update the App Block, VHD, and Setup Script", "href" : "update-app-block.html" } ] }, { "title" : "AppStream 2.0 App Blocks", "href" : "appstream-app-blocks.html", "contents" : [ { "title" : "Overview", "href" : "appstream-app-blocks-overview.html" }, { "title" : "Unsupported Applications", "href" : "appstream-app-blocks-unsupported.html" }, { "title" : "Create an AppStream 2.0 App Block", "href" : "appstream-app-blocks-create.html" }, { "title" : "Activate an App Block", "href" : "appstream-app-blocks-activate.html" }, { "title" : "Create an App Block with an Existing App Package", "href" : "appstream-app-blocks-create-VHD.html" }, { "title" : "Test an App Block", "href" : "appstream-app-blocks-test.html" }, { "title" : "Associate or Disassociate an App Block", "href" : "appstream-app-blocks-associate.html" } ] }, { "title" : "Unsupported Applications", "href" : "app-blocks-unsupported.html" } ] }, { "title" : "App Block Builder", "href" : "app-block-builder.html", "contents" : [ { "title" : "Create an App Block Builder", "href" : "create-app-block-builder.html" }, { "title" : "Connect to an App Block Builder", "href" : "connect-app-block-builder.html" }, { "title" : "App Block Builder Actions", "href" : "app-block-builder-actions.html" } ] }, { "title" : "Applications", "href" : "applications-elastic.html" }, { "title" : "Store Application Icon, Setup Script, Session Script, and VHD in an S3 Bucket", "href" : "store-s3-bucket.html" }, { "title" : "Associate Applications to Elastic Fleets", "href" : "associate-elastic.html" }, { "title" : "Additional Resources", "href" : "additional-resources-app-blocks.html" } ] }, { "title" : "Fleets and Stacks", "href" : "managing-stacks-fleets.html", "contents" : [ { "title" : "Fleet Types", "href" : "fleet-type.html" }, { "title" : "Instance Families", "href" : "instance-types.html" }, { "title" : "Create a Fleet and Stack", "href" : "set-up-stacks-fleets.html" }, { "title" : "Customize a Fleet", "href" : "customize-fleets.html" }, { "title" : "Update a Fleet", "href" : "update-fleets-new-image.html" }, { "title" : "Fleet Auto Scaling", "href" : "autoscaling.html" }, { "title" : "Multi-Session Recommendations", "href" : "multi-session-recs.html" } ] }, { "title" : "User Authentication", "href" : "authentication-authorization.html", "contents" : [ { "title" : "AppStream 2.0 User Pools", "href" : "user-pool.html", "contents" : [ { "title" : "User Pool Administration", "href" : "user-pool-admin.html" } ] }, { "title" : "SAML 2.0 Integration", "href" : "external-identity-providers.html", "contents" : [ { "title" : "Setting Up SAML", "href" : "external-identity-providers-setting-up-saml.html" }, { "title" : "AppStream 2.0 Integration with SAML 2.0", "href" : "external-identity-providers-further-info.html" } ] } ] }, { "title" : "Using Active Directory", "href" : "active-directory.html", "contents" : [ { "title" : "Active Directory Domains", "href" : "active-directory-overview.html" }, { "title" : "Before You Begin", "href" : "active-directory-prerequisites.html" }, { "title" : "Tutorial: Setting Up", "href" : "active-directory-directory-setup.html" }, { "title" : "Certificate-Based Authentication", "href" : "certificate-based-authentication.html", "contents" : [ { "title" : "Prerequisites", "href" : "certificate-based-authentication-prereq.html" }, { "title" : "Enable Certificate-based Authentication", "href" : "certificate-based-authentication-enable.html" }, { "title" : "Manage Certificate-based Authentication", "href" : "certificate-based-authentication-manage.html" } ] }, { "title" : "Administration", "href" : "active-directory-admin.html" }, { "title" : "More Info", "href" : "active-directory-more-info.html" } ] }, { "title" : "Add Your Custom Branding to AppStream 2.0", "href" : "branding.html" }, { "title" : "Embed AppStream 2.0 Streaming Sessions", "href" : "embed-streaming-sessions.html" }, { "title" : "Administer Persistent Storage", "href" : "persistent-storage.html", "contents" : [ { "title" : "Administer Home Folders", "href" : "home-folders.html" }, { "title" : "Administer Google Drive", "href" : "google-drive.html" }, { "title" : "Administer OneDrive for Business", "href" : "onedrive.html" } ] }, { "title" : "Enable Application Settings Persistence for Your Users", "href" : "app-settings-persistence.html", "contents" : [ { "title" : "How Application Settings Persistence Works", "href" : "how-it-works-app-settings-persistence.html" }, { "title" : "Enabling Application Settings Persistence", "href" : "enabling-app-settings-persistence.html" }, { "title" : "Administer the VHDs for Your Users' Application Settings", "href" : "administer-app-settings-vhds.html" } ] }, { "title" : "Enable Regional Settings for Your Users", "href" : "configure-regional-settings-admins-users.html", "contents" : [ { "title" : "Configure Default Regional Settings for Your Users", "href" : "configure-default-regional-settings.html" }, { "title" : "Enable Your Users to Configure Their Regional Settings", "href" : "regional-settings.html" } ] }, { "title" : "Manage Application Entitlements", "href" : "manage-application-entitlements.html", "contents" : [ { "title" : "Attribute-Based Application Entitlements", "href" : "application-entitlements-saml.html" }, { "title" : "Dynamic Application Framework", "href" : "dynamic-app-framework.html", "contents" : [ { "title" : "Example API Operations WorkFlow", "href" : "manage-app-entitlement-sample-api-workflow.html" }, { "title" : "Use the Dynamic Application Framework", "href" : "build-dynamic-app-provider.html" }, { "title" : "Enable and Test Dynamic App Providers", "href" : "enable-test-dynamic-app-providers.html" }, { "title" : "Additional Resources", "href" : "additional-resources-dynamic-app-providers.html" } ] } ] }, { "title" : "Provide User Access", "href" : "accessing-as-user.html", "contents" : [ { "title" : "Provide Access Through a Web Browser", "href" : "access-through-web-browser-admin.html", "contents" : [ { "title" : "Requirements and Features", "href" : "requirements-and-features-web-browser-admin.html" }, { "title" : "Configure a Connection Method for Your Users", "href" : "configure-connection-method-web-access-admin.html" } ] }, { "title" : "Provide Access Through the Client", "href" : "client-application.html", "contents" : [ { "title" : "Requirements and Features", "href" : "client-system-requirements-feature-support.html" }, { "title" : "Install and Configure the AppStream 2.0 Client", "href" : "install-configure-client.html", "contents" : [ { "title" : "Have Your Users Install the Client Themselves", "href" : "user-install-client.html" }, { "title" : "Install the AppStream 2.0 Client And Customize the Client Experience for Your Users", "href" : "install-client-configure-settings.html" }, { "title" : "Update the AppStream 2.0 Enterprise Deployment Tool, Client, and USB Driver Manually", "href" : "update-enterprise-deployment-tool-client-usb-driver-manually.html" }, { "title" : "Qualify USB Devices for Use with Streaming Applications", "href" : "qualify-usb-devices.html" }, { "title" : "Configure a Connection Method for Your Users", "href" : "use-client-start-streaming-session.html" }, { "title" : "Share a USB Device with a Streaming Session", "href" : "share-usb-devices-with-session.html" }, { "title" : "Redirect a Streaming Session from the Web Browser to the AppStream 2.0 Client", "href" : "redirect-streaming-session-from-web-to-client.html" }, { "title" : "Enable File System Redirection", "href" : "enable-file-system-redirection.html" }, { "title" : "Enable Local Printer Redirection for Your AppStream 2.0 Users", "href" : "enable-local-printer-redirection.html" } ] }, { "title" : "Client Release Notes", "href" : "client-release-versions.html" } ] } ] }, { "title" : "Tagging Your Resources", "href" : "tagging-basic.html" }, { "title" : "Monitoring and Reporting", "href" : "configure-monitoring-reporting.html", "contents" : [ { "title" : "Monitoring Resources", "href" : "monitoring.html", "contents" : [ { "title" : "Viewing Fleet Usage Using the Console", "href" : "monitoring-console.html" }, { "title" : "Viewing Instance and Session Performance Metrics Using the Console", "href" : "monitoring-instance-session-performance.html" }, { "title" : "AppStream 2.0 Metrics and Dimensions", "href" : "monitoring-with-cloudwatch.html" } ] }, { "title" : "Usage Reports", "href" : "configure-usage-reports.html", "contents" : [ { "title" : "Enable Usage Reports", "href" : "enable-usage-reports.html" }, { "title" : "Usage Reports Fields", "href" : "usage-reports-fields.html" }, { "title" : "Create Custom Reports", "href" : "configure-custom-reports-analyze-usage-data.html" } ] }, { "title" : "Logging AppStream 2.0 API Calls", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data Protection", "href" : "data-protection.html" }, { "title" : "Identity and Access Management", "href" : "controlling-access.html", "contents" : [ { "title" : "Network Access", "href" : "network-access-to-streaming-instances.html" }, { "title" : "Access to AppStream 2.0 Resources", "href" : "controlling-administrator-access-with-policies-roles.html", "contents" : [ { "title" : "AWS Managed Policies Required to Access AppStream 2.0 Resources", "href" : "managed-policies-required-to-access-appstream-resources.html" }, { "title" : "Roles Required for AppStream 2.0 , Application Auto Scaling, and AWS Certificate Manager Private CA", "href" : "roles-required-for-appstream.html" }, { "title" : "Checking for the AmazonAppStreamServiceAccess Service Role and Policies", "href" : "controlling-access-checking-for-iam-service-access.html" }, { "title" : "Checking for the ApplicationAutoScalingForAmazonAppStreamAccess Service Role and Policies", "href" : "controlling-access-checking-for-iam-autoscaling.html" }, { "title" : "Checking for the AWSServiceRoleForApplicationAutoScaling_AppStreamFleet Service-Linked Role and Policies", "href" : "controlling-access-checking-for-iam-service-linked-role-application-autoscaling-appstream-fleet.html" }, { "title" : "Checking for the AmazonAppStreamPCAAccess Service Role and Policies", "href" : "controlling-access-checking-for-AppStreamPCAAccess.html" } ] }, { "title" : "Access to Application Auto Scaling", "href" : "autoscaling-iam-policy.html" }, { "title" : "Access to the S3 Bucket for Home Folders and Application Settings Persistence", "href" : "s3-iam-policy.html" }, { "title" : "Access to Applications and Scripts on Streaming Instances", "href" : "using-iam-roles-to-grant-permissions-to-applications-scripts-streaming-instances.html" } ] }, { "title" : "Logging and Monitoring", "href" : "logging-monitoring-alerting.html" }, { "title" : "Compliance Validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html", "contents" : [ { "title" : "Network Isolation", "href" : "network-isolation.html" }, { "title" : "Isolation on Physical Hosts", "href" : "physical-isolation.html" }, { "title" : "Controlling Network Traffic", "href" : "control-network-traffic.html" }, { "title" : "Interface VPC Endpoints", "href" : "interface-vpc-endpoints.html", "contents" : [ { "title" : "Creating and Streaming from Interface VPC Endpoints", "href" : "creating-streaming-from-interface-vpc-endpoints.html" }, { "title" : "Access the AppStream 2.0 API and CLI Through an Interface VPC Endpoint", "href" : "access-api-cli-through-interface-vpc-endpoint.html" } ] }, { "title" : "FIPS Endpoints", "href" : "protecting-data-in-transit-FIPS-endpoints.html" } ] }, { "title" : "Security Groups", "href" : "managing-network-security-groups.html" }, { "title" : "Update Management", "href" : "update-management.html" }, { "title" : "Confused Deputy Prevention", "href" : "confused-deputy.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "General Troubleshooting", "href" : "troubleshooting-general.html" }, { "title" : "Troubleshooting Image Builders", "href" : "troubleshooting-image-builder.html" }, { "title" : "Troubleshooting Fleets", "href" : "troubleshooting-fleets.html" }, { "title" : "Troubleshooting Active Directory", "href" : "troubleshooting-active-directory.html" }, { "title" : "Troubleshooting AppStream 2.0 User Issues", "href" : "troubleshooting-user-issues.html" }, { "title" : "Troubleshooting Persistent Storage Issues", "href" : "troubleshooting-persistent-storage.html" }, { "title" : "Troubleshooting Notification Codes", "href" : "troubleshooting-notification-codes.html" } ] }, { "title" : "Quotas", "href" : "limits.html" }, { "title" : "Guidance for AppStream 2.0 Users", "href" : "user-guidance.html", "contents" : [ { "title" : "Access Methods and Clients", "href" : "clients-access-methods-user.html", "contents" : [ { "title" : "Web Browser Access", "href" : "web-browser-user.html" }, { "title" : "Client for Windows", "href" : "client-application-windows-user.html" } ] }, { "title" : "File Storage Options", "href" : "file-folder-storage-user.html", "contents" : [ { "title" : "Use Home Folders", "href" : "home-folders-end-user.html" }, { "title" : "Use Google Drive", "href" : "google-drive-end-user.html" }, { "title" : "Use OneDrive for Business", "href" : "onedrive-end-user.html" } ] }, { "title" : "Regional Settings", "href" : "regional-settings-end-user.html" } ] }, { "title" : "Extension SDK Developer Guide", "href" : "extension-sdk.html" }, { "title" : "Document History", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+    "service": "appstream2",
+    "toc": {
+        "contents": [
+            {
+                "title": "What Is Amazon AppStream 2.0?",
+                "href": "what-is-appstream.html"
+            },
+            {
+                "title": "Setting Up",
+                "href": "setting-up.html"
+            },
+            {
+                "title": "Get Started: Set Up With Sample Applications",
+                "href": "getting-started.html"
+            },
+            {
+                "title": "Networking and Access",
+                "href": "managing-network.html",
+                "contents": [
+                    {
+                        "title": "Internet Access",
+                        "href": "internet-access.html"
+                    },
+                    {
+                        "title": "VPC Requirements",
+                        "href": "appstream-vpc.html",
+                        "contents": [
+                            {
+                                "title": "VPC Setup Recommendations",
+                                "href": "vpc-setup-recommendations.html"
+                            },
+                            {
+                                "title": "Configure a VPC with Private Subnets and a NAT Gateway",
+                                "href": "managing-network-internet-NAT-gateway.html",
+                                "contents": [
+                                    {
+                                        "title": "Create and Configure a New VPC",
+                                        "href": "create-configure-new-vpc-with-private-public-subnets-nat.html"
+                                    },
+                                    {
+                                        "title": "Add a NAT Gateway to an Existing VPC",
+                                        "href": "add-nat-gateway-existing-vpc.html"
+                                    },
+                                    {
+                                        "title": "Enable Internet Access for Your Fleet, Image Builder, or App Block Builder",
+                                        "href": "managing-network-manual-enable-internet-access.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Configure a VPC with a Public Subnet",
+                                "href": "managing-network-default-internet-access.html"
+                            },
+                            {
+                                "title": "Use the Default VPC and Public Subnet",
+                                "href": "default-vpc-with-public-subnet.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon S3 VPC Endpoints",
+                        "href": "managing-network-vpce-iam-policy.html"
+                    },
+                    {
+                        "title": "AppStream 2.0 Connections to Your VPC",
+                        "href": "appstream2-port-requirements-appstream2.html"
+                    },
+                    {
+                        "title": "User Connections to AppStream 2.0",
+                        "href": "user-connections-to-appstream2.html",
+                        "contents": [
+                            {
+                                "title": "Bandwidth Recommendations",
+                                "href": "bandwidth-recommendations-user-connections.html"
+                            },
+                            {
+                                "title": "IP Address and Port Requirements",
+                                "href": "client-application-ports.html"
+                            },
+                            {
+                                "title": "Allowed Domains",
+                                "href": "allowed-domains.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Image Builders",
+                "href": "managing-image-builders.html",
+                "contents": [
+                    {
+                        "title": "Launch an Image Builder",
+                        "href": "tutorial-image-builder-create.html"
+                    },
+                    {
+                        "title": "Connect to an Image Builder",
+                        "href": "managing-image-builders-connect.html"
+                    },
+                    {
+                        "title": "Image Builder Actions",
+                        "href": "managing-image-builders-actions.html"
+                    },
+                    {
+                        "title": "Instance Metadata for Image Builders",
+                        "href": "user-instance-metadata-image-builders.html"
+                    },
+                    {
+                        "title": "Install AMD Driver on Graphics Design Instances",
+                        "href": "AMD-driver.html"
+                    },
+                    {
+                        "title": "Base Image and Managed Image Update Release Notes",
+                        "href": "base-image-version-history.html"
+                    }
+                ]
+            },
+            {
+                "title": "Images",
+                "href": "managing-images.html",
+                "contents": [
+                    {
+                        "title": "Default Settings and Application Launch Performance",
+                        "href": "customizing-appstream-images.html"
+                    },
+                    {
+                        "title": "Manage AppStream 2.0 Agent Versions",
+                        "href": "base-images-agent.html"
+                    },
+                    {
+                        "title": "Agent Release Notes",
+                        "href": "agent-software-versions.html"
+                    },
+                    {
+                        "title": "Tutorial: Create a Custom Image by Using the Console",
+                        "href": "tutorial-image-builder.html"
+                    },
+                    {
+                        "title": "Administer Your Images",
+                        "href": "administer-images.html"
+                    },
+                    {
+                        "title": "Create Your AppStream 2.0 Image Programmatically",
+                        "href": "programmatically-create-image.html"
+                    },
+                    {
+                        "title": "Create Your Linux-Based Images",
+                        "href": "create-linux-based-images.html",
+                        "contents": [
+                            {
+                                "title": "Creating Default Application Settings for Your Users",
+                                "href": "create-default-app-settings.html"
+                            },
+                            {
+                                "title": "Creating Default Environment Variables for Your Linux Users",
+                                "href": "create-default-variables-linux.html"
+                            },
+                            {
+                                "title": "Optimizing the Launch Performance of Your Linux Applications",
+                                "href": "optimize-launch-performance.html"
+                            },
+                            {
+                                "title": "Creating Session Scripts",
+                                "href": "create-session-scripts.html"
+                            },
+                            {
+                                "title": "Using the Image Assistant CLI Tool for Linux",
+                                "href": "image-assistant-cli.html"
+                            },
+                            {
+                                "title": "Enabling and Disabling Webcam Support",
+                                "href": "webcam-support.html"
+                            },
+                            {
+                                "title": "Tutorial: Create a Custom Linux-Based Image",
+                                "href": "tutorial-create-linux-image.html"
+                            },
+                            {
+                                "title": "Tutorial: Enable Japanese Support",
+                                "href": "enable-japanese-support-linux.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Use Session Scripts to Manage Your Users' Streaming Experience",
+                        "href": "use-session-scripts.html"
+                    }
+                ]
+            },
+            {
+                "title": "Applications Manager",
+                "href": "app-blocks-applications.html",
+                "contents": [
+                    {
+                        "title": "App Blocks",
+                        "href": "app-blocks.html",
+                        "contents": [
+                            {
+                                "title": "Custom App Blocks",
+                                "href": "custom-app-blocks.html",
+                                "contents": [
+                                    {
+                                        "title": "Create the VHD",
+                                        "href": "create-vhd.html"
+                                    },
+                                    {
+                                        "title": "Create the Setup Script for the VHD",
+                                        "href": "create-setup-script.html"
+                                    },
+                                    {
+                                        "title": "Create a Custom App Block",
+                                        "href": "create-app-block.html"
+                                    },
+                                    {
+                                        "title": "Update the App Block, VHD, and Setup Script",
+                                        "href": "update-app-block.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "AppStream 2.0 App Blocks",
+                                "href": "appstream-app-blocks.html",
+                                "contents": [
+                                    {
+                                        "title": "Overview",
+                                        "href": "appstream-app-blocks-overview.html"
+                                    },
+                                    {
+                                        "title": "Unsupported Applications",
+                                        "href": "appstream-app-blocks-unsupported.html"
+                                    },
+                                    {
+                                        "title": "Create an AppStream 2.0 App Block",
+                                        "href": "appstream-app-blocks-create.html"
+                                    },
+                                    {
+                                        "title": "Activate an App Block",
+                                        "href": "appstream-app-blocks-activate.html"
+                                    },
+                                    {
+                                        "title": "Create an App Block with an Existing App Package",
+                                        "href": "appstream-app-blocks-create-VHD.html"
+                                    },
+                                    {
+                                        "title": "Test an App Block",
+                                        "href": "appstream-app-blocks-test.html"
+                                    },
+                                    {
+                                        "title": "Associate or Disassociate an App Block",
+                                        "href": "appstream-app-blocks-associate.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Unsupported Applications",
+                                "href": "app-blocks-unsupported.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "App Block Builder",
+                        "href": "app-block-builder.html",
+                        "contents": [
+                            {
+                                "title": "Create an App Block Builder",
+                                "href": "create-app-block-builder.html"
+                            },
+                            {
+                                "title": "Connect to an App Block Builder",
+                                "href": "connect-app-block-builder.html"
+                            },
+                            {
+                                "title": "App Block Builder Actions",
+                                "href": "app-block-builder-actions.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Applications",
+                        "href": "applications-elastic.html"
+                    },
+                    {
+                        "title": "Store Application Icon, Setup Script, Session Script, and VHD in an S3 Bucket",
+                        "href": "store-s3-bucket.html"
+                    },
+                    {
+                        "title": "Associate Applications to Elastic Fleets",
+                        "href": "associate-elastic.html"
+                    },
+                    {
+                        "title": "Additional Resources",
+                        "href": "additional-resources-app-blocks.html"
+                    }
+                ]
+            },
+            {
+                "title": "Fleets and Stacks",
+                "href": "managing-stacks-fleets.html",
+                "contents": [
+                    {
+                        "title": "Fleet Types",
+                        "href": "fleet-type.html"
+                    },
+                    {
+                        "title": "Instance Families",
+                        "href": "instance-types.html"
+                    },
+                    {
+                        "title": "Create a Fleet and Stack",
+                        "href": "set-up-stacks-fleets.html"
+                    },
+                    {
+                        "title": "Customize a Fleet",
+                        "href": "customize-fleets.html"
+                    },
+                    {
+                        "title": "Update a Fleet",
+                        "href": "update-fleets-new-image.html"
+                    },
+                    {
+                        "title": "Fleet Auto Scaling",
+                        "href": "autoscaling.html"
+                    },
+                    {
+                        "title": "Multi-Session Recommendations",
+                        "href": "multi-session-recs.html"
+                    }
+                ]
+            },
+            {
+                "title": "User Authentication",
+                "href": "authentication-authorization.html",
+                "contents": [
+                    {
+                        "title": "AppStream 2.0 User Pools",
+                        "href": "user-pool.html",
+                        "contents": [
+                            {
+                                "title": "User Pool Administration",
+                                "href": "user-pool-admin.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "SAML 2.0 Integration",
+                        "href": "external-identity-providers.html",
+                        "contents": [
+                            {
+                                "title": "Setting Up SAML",
+                                "href": "external-identity-providers-setting-up-saml.html"
+                            },
+                            {
+                                "title": "AppStream 2.0 Integration with SAML 2.0",
+                                "href": "external-identity-providers-further-info.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Using Active Directory",
+                "href": "active-directory.html",
+                "contents": [
+                    {
+                        "title": "Active Directory Domains",
+                        "href": "active-directory-overview.html"
+                    },
+                    {
+                        "title": "Before You Begin",
+                        "href": "active-directory-prerequisites.html"
+                    },
+                    {
+                        "title": "Tutorial: Setting Up",
+                        "href": "active-directory-directory-setup.html"
+                    },
+                    {
+                        "title": "Certificate-Based Authentication",
+                        "href": "certificate-based-authentication.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "certificate-based-authentication-prereq.html"
+                            },
+                            {
+                                "title": "Enable Certificate-based Authentication",
+                                "href": "certificate-based-authentication-enable.html"
+                            },
+                            {
+                                "title": "Manage Certificate-based Authentication",
+                                "href": "certificate-based-authentication-manage.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Administration",
+                        "href": "active-directory-admin.html"
+                    },
+                    {
+                        "title": "More Info",
+                        "href": "active-directory-more-info.html"
+                    }
+                ]
+            },
+            {
+                "title": "Add Your Custom Branding to AppStream 2.0",
+                "href": "branding.html"
+            },
+            {
+                "title": "Embed AppStream 2.0 Streaming Sessions",
+                "href": "embed-streaming-sessions.html"
+            },
+            {
+                "title": "Administer Persistent Storage",
+                "href": "persistent-storage.html",
+                "contents": [
+                    {
+                        "title": "Administer Home Folders",
+                        "href": "home-folders.html"
+                    },
+                    {
+                        "title": "Administer Google Drive",
+                        "href": "google-drive.html"
+                    },
+                    {
+                        "title": "Administer OneDrive for Business",
+                        "href": "onedrive.html"
+                    }
+                ]
+            },
+            {
+                "title": "Enable Application Settings Persistence for Your Users",
+                "href": "app-settings-persistence.html",
+                "contents": [
+                    {
+                        "title": "How Application Settings Persistence Works",
+                        "href": "how-it-works-app-settings-persistence.html"
+                    },
+                    {
+                        "title": "Enabling Application Settings Persistence",
+                        "href": "enabling-app-settings-persistence.html"
+                    },
+                    {
+                        "title": "Administer the VHDs for Your Users' Application Settings",
+                        "href": "administer-app-settings-vhds.html"
+                    }
+                ]
+            },
+            {
+                "title": "Enable Regional Settings for Your Users",
+                "href": "configure-regional-settings-admins-users.html",
+                "contents": [
+                    {
+                        "title": "Configure Default Regional Settings for Your Users",
+                        "href": "configure-default-regional-settings.html"
+                    },
+                    {
+                        "title": "Enable Your Users to Configure Their Regional Settings",
+                        "href": "regional-settings.html"
+                    }
+                ]
+            },
+            {
+                "title": "Manage Application Entitlements",
+                "href": "manage-application-entitlements.html",
+                "contents": [
+                    {
+                        "title": "Attribute-Based Application Entitlements",
+                        "href": "application-entitlements-saml.html"
+                    },
+                    {
+                        "title": "Dynamic Application Framework",
+                        "href": "dynamic-app-framework.html",
+                        "contents": [
+                            {
+                                "title": "Example API Operations WorkFlow",
+                                "href": "manage-app-entitlement-sample-api-workflow.html"
+                            },
+                            {
+                                "title": "Use the Dynamic Application Framework",
+                                "href": "build-dynamic-app-provider.html"
+                            },
+                            {
+                                "title": "Enable and Test Dynamic App Providers",
+                                "href": "enable-test-dynamic-app-providers.html"
+                            },
+                            {
+                                "title": "Additional Resources",
+                                "href": "additional-resources-dynamic-app-providers.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Provide User Access",
+                "href": "accessing-as-user.html",
+                "contents": [
+                    {
+                        "title": "Provide Access Through a Web Browser",
+                        "href": "access-through-web-browser-admin.html",
+                        "contents": [
+                            {
+                                "title": "Requirements and Features",
+                                "href": "requirements-and-features-web-browser-admin.html"
+                            },
+                            {
+                                "title": "Configure a Connection Method for Your Users",
+                                "href": "configure-connection-method-web-access-admin.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Provide Access Through the Client",
+                        "href": "client-application.html",
+                        "contents": [
+                            {
+                                "title": "Requirements and Features",
+                                "href": "client-system-requirements-feature-support.html"
+                            },
+                            {
+                                "title": "Install and Configure the AppStream 2.0 Client",
+                                "href": "install-configure-client.html",
+                                "contents": [
+                                    {
+                                        "title": "Have Your Users Install the Client Themselves",
+                                        "href": "user-install-client.html"
+                                    },
+                                    {
+                                        "title": "Install the AppStream 2.0 Client And Customize the Client Experience for Your Users",
+                                        "href": "install-client-configure-settings.html"
+                                    },
+                                    {
+                                        "title": "Update the AppStream 2.0 Enterprise Deployment Tool, Client, and USB Driver Manually",
+                                        "href": "update-enterprise-deployment-tool-client-usb-driver-manually.html"
+                                    },
+                                    {
+                                        "title": "Qualify USB Devices for Use with Streaming Applications",
+                                        "href": "qualify-usb-devices.html"
+                                    },
+                                    {
+                                        "title": "Configure a Connection Method for Your Users",
+                                        "href": "use-client-start-streaming-session.html"
+                                    },
+                                    {
+                                        "title": "Share a USB Device with a Streaming Session",
+                                        "href": "share-usb-devices-with-session.html"
+                                    },
+                                    {
+                                        "title": "Redirect a Streaming Session from the Web Browser to the AppStream 2.0 Client",
+                                        "href": "redirect-streaming-session-from-web-to-client.html"
+                                    },
+                                    {
+                                        "title": "Enable File System Redirection",
+                                        "href": "enable-file-system-redirection.html"
+                                    },
+                                    {
+                                        "title": "Enable Local Printer Redirection for Your AppStream 2.0 Users",
+                                        "href": "enable-local-printer-redirection.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Client Release Notes",
+                                "href": "client-release-versions.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tagging Your Resources",
+                "href": "tagging-basic.html"
+            },
+            {
+                "title": "Monitoring and Reporting",
+                "href": "configure-monitoring-reporting.html",
+                "contents": [
+                    {
+                        "title": "Monitoring Resources",
+                        "href": "monitoring.html",
+                        "contents": [
+                            {
+                                "title": "Viewing Fleet Usage Using the Console",
+                                "href": "monitoring-console.html"
+                            },
+                            {
+                                "title": "Viewing Instance and Session Performance Metrics Using the Console",
+                                "href": "monitoring-instance-session-performance.html"
+                            },
+                            {
+                                "title": "AppStream 2.0 Metrics and Dimensions",
+                                "href": "monitoring-with-cloudwatch.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Usage Reports",
+                        "href": "configure-usage-reports.html",
+                        "contents": [
+                            {
+                                "title": "Enable Usage Reports",
+                                "href": "enable-usage-reports.html"
+                            },
+                            {
+                                "title": "Usage Reports Fields",
+                                "href": "usage-reports-fields.html"
+                            },
+                            {
+                                "title": "Create Custom Reports",
+                                "href": "configure-custom-reports-analyze-usage-data.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging AppStream 2.0 API Calls",
+                        "href": "logging-using-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data Protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "controlling-access.html",
+                        "contents": [
+                            {
+                                "title": "Network Access",
+                                "href": "network-access-to-streaming-instances.html"
+                            },
+                            {
+                                "title": "Access to AppStream 2.0 Resources",
+                                "href": "controlling-administrator-access-with-policies-roles.html",
+                                "contents": [
+                                    {
+                                        "title": "AWS Managed Policies Required to Access AppStream 2.0 Resources",
+                                        "href": "managed-policies-required-to-access-appstream-resources.html"
+                                    },
+                                    {
+                                        "title": "Roles Required for AppStream 2.0 , Application Auto Scaling, and AWS Certificate Manager Private CA",
+                                        "href": "roles-required-for-appstream.html"
+                                    },
+                                    {
+                                        "title": "Checking for the AmazonAppStreamServiceAccess Service Role and Policies",
+                                        "href": "controlling-access-checking-for-iam-service-access.html"
+                                    },
+                                    {
+                                        "title": "Checking for the ApplicationAutoScalingForAmazonAppStreamAccess Service Role and Policies",
+                                        "href": "controlling-access-checking-for-iam-autoscaling.html"
+                                    },
+                                    {
+                                        "title": "Checking for the AWSServiceRoleForApplicationAutoScaling_AppStreamFleet Service-Linked Role and Policies",
+                                        "href": "controlling-access-checking-for-iam-service-linked-role-application-autoscaling-appstream-fleet.html"
+                                    },
+                                    {
+                                        "title": "Checking for the AmazonAppStreamPCAAccess Service Role and Policies",
+                                        "href": "controlling-access-checking-for-AppStreamPCAAccess.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Access to Application Auto Scaling",
+                                "href": "autoscaling-iam-policy.html"
+                            },
+                            {
+                                "title": "Access to the S3 Bucket for Home Folders and Application Settings Persistence",
+                                "href": "s3-iam-policy.html"
+                            },
+                            {
+                                "title": "Access to Applications and Scripts on Streaming Instances",
+                                "href": "using-iam-roles-to-grant-permissions-to-applications-scripts-streaming-instances.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and Monitoring",
+                        "href": "logging-monitoring-alerting.html"
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html",
+                        "contents": [
+                            {
+                                "title": "Network Isolation",
+                                "href": "network-isolation.html"
+                            },
+                            {
+                                "title": "Isolation on Physical Hosts",
+                                "href": "physical-isolation.html"
+                            },
+                            {
+                                "title": "Controlling Network Traffic",
+                                "href": "control-network-traffic.html"
+                            },
+                            {
+                                "title": "Interface VPC Endpoints",
+                                "href": "interface-vpc-endpoints.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating and Streaming from Interface VPC Endpoints",
+                                        "href": "creating-streaming-from-interface-vpc-endpoints.html"
+                                    },
+                                    {
+                                        "title": "Access the AppStream 2.0 API and CLI Through an Interface VPC Endpoint",
+                                        "href": "access-api-cli-through-interface-vpc-endpoint.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "FIPS Endpoints",
+                                "href": "protecting-data-in-transit-FIPS-endpoints.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Security Groups",
+                        "href": "managing-network-security-groups.html"
+                    },
+                    {
+                        "title": "Update Management",
+                        "href": "update-management.html"
+                    },
+                    {
+                        "title": "Confused Deputy Prevention",
+                        "href": "confused-deputy.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "General Troubleshooting",
+                        "href": "troubleshooting-general.html"
+                    },
+                    {
+                        "title": "Troubleshooting Image Builders",
+                        "href": "troubleshooting-image-builder.html"
+                    },
+                    {
+                        "title": "Troubleshooting Fleets",
+                        "href": "troubleshooting-fleets.html"
+                    },
+                    {
+                        "title": "Troubleshooting Active Directory",
+                        "href": "troubleshooting-active-directory.html"
+                    },
+                    {
+                        "title": "Troubleshooting AppStream 2.0 User Issues",
+                        "href": "troubleshooting-user-issues.html"
+                    },
+                    {
+                        "title": "Troubleshooting Persistent Storage Issues",
+                        "href": "troubleshooting-persistent-storage.html"
+                    },
+                    {
+                        "title": "Troubleshooting Notification Codes",
+                        "href": "troubleshooting-notification-codes.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "limits.html"
+            },
+            {
+                "title": "Guidance for AppStream 2.0 Users",
+                "href": "user-guidance.html",
+                "contents": [
+                    {
+                        "title": "Access Methods and Clients",
+                        "href": "clients-access-methods-user.html",
+                        "contents": [
+                            {
+                                "title": "Web Browser Access",
+                                "href": "web-browser-user.html"
+                            },
+                            {
+                                "title": "Client for Windows",
+                                "href": "client-application-windows-user.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "File Storage Options",
+                        "href": "file-folder-storage-user.html",
+                        "contents": [
+                            {
+                                "title": "Use Home Folders",
+                                "href": "home-folders-end-user.html"
+                            },
+                            {
+                                "title": "Use Google Drive",
+                                "href": "google-drive-end-user.html"
+                            },
+                            {
+                                "title": "Use OneDrive for Business",
+                                "href": "onedrive-end-user.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Regional Settings",
+                        "href": "regional-settings-end-user.html"
+                    }
+                ]
+            },
+            {
+                "title": "Extension SDK Developer Guide",
+                "href": "extension-sdk.html"
+            },
+            {
+                "title": "Document History",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

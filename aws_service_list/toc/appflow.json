@@ -1,1 +1,496 @@
-{ "contents" : [ { "title" : "What is Amazon AppFlow?", "href" : "what-is-appflow.html" }, { "title" : "Getting started", "href" : "getting-started.html" }, { "title" : "Tutorial: Transfer data between applications", "href" : "flow-tutorial.html", "contents" : [ { "title" : "Step 1: Upload data to Amazon S3", "href" : "flow-tutorial-set-up-source.html" }, { "title" : "Step 2: Connect to an application", "href" : "flow-tutorial-connection.html" }, { "title" : "Step 3: Transfer data from Amazon S3 to a SaaS destination", "href" : "flow-tutorial-s3-salesforce.html" }, { "title" : "Step 4: Transfer data from a SaaS source to Amazon S3", "href" : "flow-tutorial-salesforce-s3.html" }, { "title" : "Step 5: Clean up", "href" : "flow-tutorial-clean-up.html" } ] }, { "title" : "Supported applications", "href" : "app-specific.html", "contents" : [ { "title" : "Adobe Analytics", "href" : "connectors-adobeanalytics.html" }, { "title" : "AfterShip", "href" : "connectors-aftership.html" }, { "title" : "Amazon Connect", "href" : "connectors-amazon-connect.html" }, { "title" : "Amazon EventBridge", "href" : "EventBridge.html" }, { "title" : "Amazon Honeycode", "href" : "honeycode.html" }, { "title" : "Amazon Lookout for Metrics", "href" : "lookout.html" }, { "title" : "Amazon RDS for PostgreSQL", "href" : "connectors-amazon-rds-postgres-sql.html" }, { "title" : "Amazon Redshift", "href" : "redshift.html" }, { "title" : "Amazon S3", "href" : "s3.html" }, { "title" : "Amplitude", "href" : "amplitude.html" }, { "title" : "Asana", "href" : "connectors-asana.html" }, { "title" : "BambooHR", "href" : "connectors-bamboohr.html" }, { "title" : "Blackbaud Raiser's Edge NXT", "href" : "connectors-blackbaudraisersedgenxt.html" }, { "title" : "Braintree", "href" : "connectors-braintree.html" }, { "title" : "CircleCI", "href" : "connectors-circleci.html" }, { "title" : "Coupa", "href" : "connectors-coupa.html" }, { "title" : "Datadog", "href" : "datadog.html" }, { "title" : "Delighted", "href" : "connectors-delighted.html" }, { "title" : "DocuSign Monitor", "href" : "connectors-docusign-monitor.html" }, { "title" : "Domo", "href" : "connectors-domo.html" }, { "title" : "Dynatrace", "href" : "dynatrace.html" }, { "title" : "Facebook Ads", "href" : "connectors-facebook-ads.html" }, { "title" : "Facebook Page Insights", "href" : "connectors-facebook-page-insights.html" }, { "title" : "Freshdesk", "href" : "connectors-freshdesk.html" }, { "title" : "Freshsales", "href" : "connectors-freshsales.html" }, { "title" : "GitHub", "href" : "connectors-github.html" }, { "title" : "GitLab", "href" : "connectors-gitlab.html" }, { "title" : "Google Ads", "href" : "connectors-google-ads.html" }, { "title" : "Google Analytics", "href" : "google-analytics.html" }, { "title" : "Google Analytics 4", "href" : "connectors-google-analytics-4.html" }, { "title" : "Google BigQuery", "href" : "connectors-googlebigquery.html" }, { "title" : "Google Calendar", "href" : "connectors-google-calendar.html" }, { "title" : "Google Search Console", "href" : "connectors-google-search-console.html" }, { "title" : "Google Sheets", "href" : "connectors-google-sheets.html" }, { "title" : "HubSpot", "href" : "connectors-hubspot.html" }, { "title" : "Infor Nexus", "href" : "infor-nexus.html" }, { "title" : "Instagram Ads", "href" : "connectors-instagram-ads.html" }, { "title" : "Intercom", "href" : "connectors-intercom.html" }, { "title" : "JDBC", "href" : "connectors-jdbc.html" }, { "title" : "Jira Cloud", "href" : "connectors-jira-cloud.html" }, { "title" : "Kustomer", "href" : "connectors-kustomer.html" }, { "title" : "LinkedIn Ads", "href" : "connectors-linkedin-ads.html" }, { "title" : "LinkedIn Pages", "href" : "connectors-linkedin-pages.html" }, { "title" : "Mailchimp", "href" : "connectors-mailchimp.html" }, { "title" : "Marketo", "href" : "marketo.html" }, { "title" : "Microsoft Dynamics 365", "href" : "connectors-microsoft-dynamics-365.html" }, { "title" : "Microsoft SharePoint Online", "href" : "connectors-microsoft-sharepoint-online.html" }, { "title" : "Microsoft Teams", "href" : "connectors-microsoft-teams.html" }, { "title" : "Mixpanel", "href" : "connectors-mixpanel.html" }, { "title" : "Okta", "href" : "connectors-okta.html" }, { "title" : "Oracle HCM", "href" : "connectors-oracle-hcm.html" }, { "title" : "PayPal", "href" : "connectors-paypal.html" }, { "title" : "Pendo", "href" : "connectors-pendo.html" }, { "title" : "Pipedrive", "href" : "connectors-pipedrive.html" }, { "title" : "Productboard", "href" : "connectors-productboard.html" }, { "title" : "QuickBooks Online", "href" : "connectors-quickbooks-online.html" }, { "title" : "Recharge", "href" : "connectors-recharge.html" }, { "title" : "Salesforce", "href" : "salesforce.html" }, { "title" : "Salesforce Marketing Cloud", "href" : "connectors-salesforce-marketing-cloud.html" }, { "title" : "Salesforce Pardot", "href" : "pardot.html" }, { "title" : "SAP OData", "href" : "sapodata.html" }, { "title" : "SendGrid", "href" : "connectors-sendgrid.html" }, { "title" : "ServiceNow", "href" : "servicenow.html" }, { "title" : "Singular", "href" : "singular.html" }, { "title" : "Slack", "href" : "slack.html" }, { "title" : "Smartsheet", "href" : "connectors-smartsheet.html" }, { "title" : "Snapchat Ads", "href" : "connectors-snapchat-ads.html" }, { "title" : "Snowflake", "href" : "snowflake.html" }, { "title" : "Stripe", "href" : "connectors-stripe.html" }, { "title" : "Trend Micro", "href" : "trend-micro.html" }, { "title" : "Typeform", "href" : "connectors-typeform.html" }, { "title" : "Upsolver", "href" : "upsolver.html" }, { "title" : "Veeva", "href" : "veeva.html" }, { "title" : "WooCommerce", "href" : "connectors-woocommerce.html" }, { "title" : "Zendesk", "href" : "zendesk.html" }, { "title" : "Zendesk Chat", "href" : "connectors-zendesk-chat.html" }, { "title" : "Zendesk Sell", "href" : "connectors-zendesk-sell.html" }, { "title" : "Zendesk Sunshine", "href" : "connectors-zendesk-sunshine.html" }, { "title" : "Zoho CRM", "href" : "connectors-zoho-crm.html" }, { "title" : "Zoom", "href" : "connectors-zoom.html" } ] }, { "title" : "Managing connections", "href" : "connections.html" }, { "title" : "Flows", "href" : "flows.html", "contents" : [ { "title" : "Creating flows", "href" : "create-flow.html", "contents" : [ { "title" : "Create a flow using the AWS console", "href" : "create-flow-console.html" }, { "title" : "Create a flow using the AWS CLI", "href" : "create-flow-cli.html" }, { "title" : "Create a flow using the Amazon AppFlow APIs", "href" : "create-flow-api.html" }, { "title" : "Create a flow using CloudFormation resources", "href" : "create-flow-cfn.html" } ] }, { "title" : "Managing flows", "href" : "flows-manage.html" }, { "title" : "Cataloging flow output", "href" : "flows-catalog.html" }, { "title" : "Partitioning and aggregating", "href" : "flows-partition.html" }, { "title" : "Flow triggers", "href" : "flow-triggers.html" }, { "title" : "Private flows", "href" : "private-flows.html" }, { "title" : "Flow notifications", "href" : "flow-notifications.html" }, { "title" : "General information", "href" : "general.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon AppFlow works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Service role policies", "href" : "security_iam_service-role-policies.html" }, { "title" : "Amazon S3 Bucket Policies for Amazon AppFlow", "href" : "s3-policies-management.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Quotas", "href" : "service-quotas.html" }, { "title" : "CloudTrail logs", "href" : "appflow-cloudtrail-logs.html" }, { "title" : "Monitoring with CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/appflow/latest/userguide/",
+    "service": "appflow",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon AppFlow?",
+                "href": "what-is-appflow.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html"
+            },
+            {
+                "title": "Tutorial: Transfer data between applications",
+                "href": "flow-tutorial.html",
+                "contents": [
+                    {
+                        "title": "Step 1: Upload data to Amazon S3",
+                        "href": "flow-tutorial-set-up-source.html"
+                    },
+                    {
+                        "title": "Step 2: Connect to an application",
+                        "href": "flow-tutorial-connection.html"
+                    },
+                    {
+                        "title": "Step 3: Transfer data from Amazon S3 to a SaaS destination",
+                        "href": "flow-tutorial-s3-salesforce.html"
+                    },
+                    {
+                        "title": "Step 4: Transfer data from a SaaS source to Amazon S3",
+                        "href": "flow-tutorial-salesforce-s3.html"
+                    },
+                    {
+                        "title": "Step 5: Clean up",
+                        "href": "flow-tutorial-clean-up.html"
+                    }
+                ]
+            },
+            {
+                "title": "Supported applications",
+                "href": "app-specific.html",
+                "contents": [
+                    {
+                        "title": "Adobe Analytics",
+                        "href": "connectors-adobeanalytics.html"
+                    },
+                    {
+                        "title": "AfterShip",
+                        "href": "connectors-aftership.html"
+                    },
+                    {
+                        "title": "Amazon Connect",
+                        "href": "connectors-amazon-connect.html"
+                    },
+                    {
+                        "title": "Amazon EventBridge",
+                        "href": "EventBridge.html"
+                    },
+                    {
+                        "title": "Amazon Honeycode",
+                        "href": "honeycode.html"
+                    },
+                    {
+                        "title": "Amazon Lookout for Metrics",
+                        "href": "lookout.html"
+                    },
+                    {
+                        "title": "Amazon RDS for PostgreSQL",
+                        "href": "connectors-amazon-rds-postgres-sql.html"
+                    },
+                    {
+                        "title": "Amazon Redshift",
+                        "href": "redshift.html"
+                    },
+                    {
+                        "title": "Amazon S3",
+                        "href": "s3.html"
+                    },
+                    {
+                        "title": "Amplitude",
+                        "href": "amplitude.html"
+                    },
+                    {
+                        "title": "Asana",
+                        "href": "connectors-asana.html"
+                    },
+                    {
+                        "title": "BambooHR",
+                        "href": "connectors-bamboohr.html"
+                    },
+                    {
+                        "title": "Blackbaud Raiser's Edge NXT",
+                        "href": "connectors-blackbaudraisersedgenxt.html"
+                    },
+                    {
+                        "title": "Braintree",
+                        "href": "connectors-braintree.html"
+                    },
+                    {
+                        "title": "CircleCI",
+                        "href": "connectors-circleci.html"
+                    },
+                    {
+                        "title": "Coupa",
+                        "href": "connectors-coupa.html"
+                    },
+                    {
+                        "title": "Datadog",
+                        "href": "datadog.html"
+                    },
+                    {
+                        "title": "Delighted",
+                        "href": "connectors-delighted.html"
+                    },
+                    {
+                        "title": "DocuSign Monitor",
+                        "href": "connectors-docusign-monitor.html"
+                    },
+                    {
+                        "title": "Domo",
+                        "href": "connectors-domo.html"
+                    },
+                    {
+                        "title": "Dynatrace",
+                        "href": "dynatrace.html"
+                    },
+                    {
+                        "title": "Facebook Ads",
+                        "href": "connectors-facebook-ads.html"
+                    },
+                    {
+                        "title": "Facebook Page Insights",
+                        "href": "connectors-facebook-page-insights.html"
+                    },
+                    {
+                        "title": "Freshdesk",
+                        "href": "connectors-freshdesk.html"
+                    },
+                    {
+                        "title": "Freshsales",
+                        "href": "connectors-freshsales.html"
+                    },
+                    {
+                        "title": "GitHub",
+                        "href": "connectors-github.html"
+                    },
+                    {
+                        "title": "GitLab",
+                        "href": "connectors-gitlab.html"
+                    },
+                    {
+                        "title": "Google Ads",
+                        "href": "connectors-google-ads.html"
+                    },
+                    {
+                        "title": "Google Analytics",
+                        "href": "google-analytics.html"
+                    },
+                    {
+                        "title": "Google Analytics 4",
+                        "href": "connectors-google-analytics-4.html"
+                    },
+                    {
+                        "title": "Google BigQuery",
+                        "href": "connectors-googlebigquery.html"
+                    },
+                    {
+                        "title": "Google Calendar",
+                        "href": "connectors-google-calendar.html"
+                    },
+                    {
+                        "title": "Google Search Console",
+                        "href": "connectors-google-search-console.html"
+                    },
+                    {
+                        "title": "Google Sheets",
+                        "href": "connectors-google-sheets.html"
+                    },
+                    {
+                        "title": "HubSpot",
+                        "href": "connectors-hubspot.html"
+                    },
+                    {
+                        "title": "Infor Nexus",
+                        "href": "infor-nexus.html"
+                    },
+                    {
+                        "title": "Instagram Ads",
+                        "href": "connectors-instagram-ads.html"
+                    },
+                    {
+                        "title": "Intercom",
+                        "href": "connectors-intercom.html"
+                    },
+                    {
+                        "title": "JDBC",
+                        "href": "connectors-jdbc.html"
+                    },
+                    {
+                        "title": "Jira Cloud",
+                        "href": "connectors-jira-cloud.html"
+                    },
+                    {
+                        "title": "Kustomer",
+                        "href": "connectors-kustomer.html"
+                    },
+                    {
+                        "title": "LinkedIn Ads",
+                        "href": "connectors-linkedin-ads.html"
+                    },
+                    {
+                        "title": "LinkedIn Pages",
+                        "href": "connectors-linkedin-pages.html"
+                    },
+                    {
+                        "title": "Mailchimp",
+                        "href": "connectors-mailchimp.html"
+                    },
+                    {
+                        "title": "Marketo",
+                        "href": "marketo.html"
+                    },
+                    {
+                        "title": "Microsoft Dynamics 365",
+                        "href": "connectors-microsoft-dynamics-365.html"
+                    },
+                    {
+                        "title": "Microsoft SharePoint Online",
+                        "href": "connectors-microsoft-sharepoint-online.html"
+                    },
+                    {
+                        "title": "Microsoft Teams",
+                        "href": "connectors-microsoft-teams.html"
+                    },
+                    {
+                        "title": "Mixpanel",
+                        "href": "connectors-mixpanel.html"
+                    },
+                    {
+                        "title": "Okta",
+                        "href": "connectors-okta.html"
+                    },
+                    {
+                        "title": "Oracle HCM",
+                        "href": "connectors-oracle-hcm.html"
+                    },
+                    {
+                        "title": "PayPal",
+                        "href": "connectors-paypal.html"
+                    },
+                    {
+                        "title": "Pendo",
+                        "href": "connectors-pendo.html"
+                    },
+                    {
+                        "title": "Pipedrive",
+                        "href": "connectors-pipedrive.html"
+                    },
+                    {
+                        "title": "Productboard",
+                        "href": "connectors-productboard.html"
+                    },
+                    {
+                        "title": "QuickBooks Online",
+                        "href": "connectors-quickbooks-online.html"
+                    },
+                    {
+                        "title": "Recharge",
+                        "href": "connectors-recharge.html"
+                    },
+                    {
+                        "title": "Salesforce",
+                        "href": "salesforce.html"
+                    },
+                    {
+                        "title": "Salesforce Marketing Cloud",
+                        "href": "connectors-salesforce-marketing-cloud.html"
+                    },
+                    {
+                        "title": "Salesforce Pardot",
+                        "href": "pardot.html"
+                    },
+                    {
+                        "title": "SAP OData",
+                        "href": "sapodata.html"
+                    },
+                    {
+                        "title": "SendGrid",
+                        "href": "connectors-sendgrid.html"
+                    },
+                    {
+                        "title": "ServiceNow",
+                        "href": "servicenow.html"
+                    },
+                    {
+                        "title": "Singular",
+                        "href": "singular.html"
+                    },
+                    {
+                        "title": "Slack",
+                        "href": "slack.html"
+                    },
+                    {
+                        "title": "Smartsheet",
+                        "href": "connectors-smartsheet.html"
+                    },
+                    {
+                        "title": "Snapchat Ads",
+                        "href": "connectors-snapchat-ads.html"
+                    },
+                    {
+                        "title": "Snowflake",
+                        "href": "snowflake.html"
+                    },
+                    {
+                        "title": "Stripe",
+                        "href": "connectors-stripe.html"
+                    },
+                    {
+                        "title": "Trend Micro",
+                        "href": "trend-micro.html"
+                    },
+                    {
+                        "title": "Typeform",
+                        "href": "connectors-typeform.html"
+                    },
+                    {
+                        "title": "Upsolver",
+                        "href": "upsolver.html"
+                    },
+                    {
+                        "title": "Veeva",
+                        "href": "veeva.html"
+                    },
+                    {
+                        "title": "WooCommerce",
+                        "href": "connectors-woocommerce.html"
+                    },
+                    {
+                        "title": "Zendesk",
+                        "href": "zendesk.html"
+                    },
+                    {
+                        "title": "Zendesk Chat",
+                        "href": "connectors-zendesk-chat.html"
+                    },
+                    {
+                        "title": "Zendesk Sell",
+                        "href": "connectors-zendesk-sell.html"
+                    },
+                    {
+                        "title": "Zendesk Sunshine",
+                        "href": "connectors-zendesk-sunshine.html"
+                    },
+                    {
+                        "title": "Zoho CRM",
+                        "href": "connectors-zoho-crm.html"
+                    },
+                    {
+                        "title": "Zoom",
+                        "href": "connectors-zoom.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing connections",
+                "href": "connections.html"
+            },
+            {
+                "title": "Flows",
+                "href": "flows.html",
+                "contents": [
+                    {
+                        "title": "Creating flows",
+                        "href": "create-flow.html",
+                        "contents": [
+                            {
+                                "title": "Create a flow using the AWS console",
+                                "href": "create-flow-console.html"
+                            },
+                            {
+                                "title": "Create a flow using the AWS CLI",
+                                "href": "create-flow-cli.html"
+                            },
+                            {
+                                "title": "Create a flow using the Amazon AppFlow APIs",
+                                "href": "create-flow-api.html"
+                            },
+                            {
+                                "title": "Create a flow using CloudFormation resources",
+                                "href": "create-flow-cfn.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing flows",
+                        "href": "flows-manage.html"
+                    },
+                    {
+                        "title": "Cataloging flow output",
+                        "href": "flows-catalog.html"
+                    },
+                    {
+                        "title": "Partitioning and aggregating",
+                        "href": "flows-partition.html"
+                    },
+                    {
+                        "title": "Flow triggers",
+                        "href": "flow-triggers.html"
+                    },
+                    {
+                        "title": "Private flows",
+                        "href": "private-flows.html"
+                    },
+                    {
+                        "title": "Flow notifications",
+                        "href": "flow-notifications.html"
+                    },
+                    {
+                        "title": "General information",
+                        "href": "general.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon AppFlow works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Service role policies",
+                                "href": "security_iam_service-role-policies.html"
+                            },
+                            {
+                                "title": "Amazon S3 Bucket Policies for Amazon AppFlow",
+                                "href": "s3-policies-management.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "service-quotas.html"
+            },
+            {
+                "title": "CloudTrail logs",
+                "href": "appflow-cloudtrail-logs.html"
+            },
+            {
+                "title": "Monitoring with CloudWatch",
+                "href": "monitoring-cloudwatch.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

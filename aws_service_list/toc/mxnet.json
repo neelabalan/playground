@@ -1,1 +1,12 @@
-{ "contents" : [ { "title" : "What Is Apache MXNet?", "href" : "whatis.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/mxnet/latest/dg/",
+    "service": "mxnet",
+    "toc": {
+        "contents": [
+            {
+                "title": "What Is Apache MXNet?",
+                "href": "whatis.html"
+            }
+        ]
+    }
+}

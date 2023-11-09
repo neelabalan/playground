@@ -1,1 +1,82 @@
-{ "contents" : [ { "title" : "Getting started", "href" : "workspaces-user-getting-started.html" }, { "title" : "Manage your WorkSpace", "href" : "manage_workspace_client.html" }, { "title" : "Peripheral device support", "href" : "peripheral_devices.html" }, { "title" : "High DPI display support", "href" : "high_dpi_support.html" }, { "title" : "Smart card support", "href" : "smart_card_support.html" }, { "title" : "Amazon Connect audio optimization support", "href" : "amazon_connect_support.html" }, { "title" : "Language and keyboard support", "href" : "language_keyboard.html" }, { "title" : "USB redirection", "href" : "usb-redirection.html" }, { "title" : "Clients", "href" : "amazon-workspaces-clients.html", "contents" : [ { "title" : "Android/Chromebook", "href" : "amazon-workspaces-android-client.html" }, { "title" : "iPad", "href" : "amazon-workspaces-ipad-client.html" }, { "title" : "Linux", "href" : "amazon-workspaces-linux-client.html" }, { "title" : "macOS", "href" : "amazon-workspaces-osx-client.html" }, { "title" : "PCoIP zero client", "href" : "amazon-workspaces-pcoip-zero-client.html" }, { "title" : "Web Access", "href" : "amazon-workspaces-web-access.html" }, { "title" : "Windows", "href" : "amazon-workspaces-windows-client.html" } ] }, { "title" : "Printing", "href" : "printing.html" }, { "title" : "Troubleshooting", "href" : "client_troubleshooting.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/workspaces/latest/userguide/",
+    "service": "workspaces",
+    "toc": {
+        "contents": [
+            {
+                "title": "Getting started",
+                "href": "workspaces-user-getting-started.html"
+            },
+            {
+                "title": "Manage your WorkSpace",
+                "href": "manage_workspace_client.html"
+            },
+            {
+                "title": "Peripheral device support",
+                "href": "peripheral_devices.html"
+            },
+            {
+                "title": "High DPI display support",
+                "href": "high_dpi_support.html"
+            },
+            {
+                "title": "Smart card support",
+                "href": "smart_card_support.html"
+            },
+            {
+                "title": "Amazon Connect audio optimization support",
+                "href": "amazon_connect_support.html"
+            },
+            {
+                "title": "Language and keyboard support",
+                "href": "language_keyboard.html"
+            },
+            {
+                "title": "USB redirection",
+                "href": "usb-redirection.html"
+            },
+            {
+                "title": "Clients",
+                "href": "amazon-workspaces-clients.html",
+                "contents": [
+                    {
+                        "title": "Android/Chromebook",
+                        "href": "amazon-workspaces-android-client.html"
+                    },
+                    {
+                        "title": "iPad",
+                        "href": "amazon-workspaces-ipad-client.html"
+                    },
+                    {
+                        "title": "Linux",
+                        "href": "amazon-workspaces-linux-client.html"
+                    },
+                    {
+                        "title": "macOS",
+                        "href": "amazon-workspaces-osx-client.html"
+                    },
+                    {
+                        "title": "PCoIP zero client",
+                        "href": "amazon-workspaces-pcoip-zero-client.html"
+                    },
+                    {
+                        "title": "Web Access",
+                        "href": "amazon-workspaces-web-access.html"
+                    },
+                    {
+                        "title": "Windows",
+                        "href": "amazon-workspaces-windows-client.html"
+                    }
+                ]
+            },
+            {
+                "title": "Printing",
+                "href": "printing.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "client_troubleshooting.html"
+            }
+        ]
+    }
+}

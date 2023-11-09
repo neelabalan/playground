@@ -1,1 +1,326 @@
-{ "contents" : [ { "title" : "What is AWS Direct Connect?", "href" : "Welcome.html", "contents" : [ { "title" : "Accessing a remote AWS Region", "href" : "remote_regions.html" }, { "title" : "Routing policies and BGP communities", "href" : "routing-and-bgp.html", "contents" : [ { "title" : "Private virtual interface routing example", "href" : "private-transit-vif-example.html" } ] } ] }, { "title" : "Using the AWS Direct Connect Resiliency Toolkit to get started", "href" : "resiliency_toolkit.html", "contents" : [ { "title" : "Maximum resiliency", "href" : "maximum_resiliency.html" }, { "title" : "High resiliency", "href" : "high_resiliency.html" }, { "title" : "Development and test", "href" : "dev-test-resiliency.html" }, { "title" : "Classic", "href" : "getting_started.html" }, { "title" : "AWS Direct Connect Failover Test", "href" : "resiliency_failover.html" } ] }, { "title" : "MAC Security", "href" : "MACsec.html", "contents" : [ { "title" : "Get started with MACsec on dedicated connections", "href" : "direct-connect-mac-sec-getting-started.html" } ] }, { "title" : "Connections", "href" : "WorkingWithConnections.html", "contents" : [ { "title" : "Dedicated connections", "href" : "dedicated_connection.html", "contents" : [ { "title" : "Update a connection", "href" : "updateconnection.html" }, { "title" : "Associate a MACsec CKN/CAK with a connection", "href" : "associate-key-connection.html" }, { "title" : "Remove the association between a MACsec secret key and a connection", "href" : "disassociate-key-connection.html" } ] }, { "title" : "Hosted connections", "href" : "hosted_connection.html" }, { "title" : "View your connection details", "href" : "viewdetails.html" }, { "title" : "Delete connections", "href" : "deleteconnection.html" } ] }, { "title" : "Cross connects", "href" : "Colocation.html" }, { "title" : "Virtual interfaces", "href" : "WorkingWithVirtualInterfaces.html", "contents" : [ { "title" : "Create a virtual interface", "href" : "create-vif.html" }, { "title" : "View virtual interface details", "href" : "viewvifdetails.html" }, { "title" : "Add or delete a BGP peer", "href" : "add-peer-to-vif.html" }, { "title" : "Set network MTU for private virtual interfaces or transit virtual interfaces", "href" : "set-jumbo-frames-vif.html" }, { "title" : "Add or remove virtual interface tags", "href" : "modify-tags-vif.html" }, { "title" : "Delete virtual interfaces", "href" : "deletevif.html" }, { "title" : "Create a hosted virtual interface", "href" : "createhostedvirtualinterface.html" }, { "title" : "Accept a hosted virtual interface", "href" : "accepthostedvirtualinterface.html" }, { "title" : "Migrate a virtual interface", "href" : "migratevirtualinterface.html" } ] }, { "title" : "LAGs", "href" : "lags.html", "contents" : [ { "title" : "Create a LAG", "href" : "create-lag.html" }, { "title" : "View your LAG details", "href" : "view-lag.html" }, { "title" : "Update a LAG", "href" : "update-lag.html" }, { "title" : "Associate a connection with a LAG", "href" : "associate-connection-with-lag.html" }, { "title" : "Disassociate a connection from a LAG", "href" : "disassociate-connection-from-lag.html" }, { "title" : "Associate a MACsec CKN/CAK with a LAG", "href" : "associate-key-lag.html" }, { "title" : "Remove the association between a MACsec secret key and a LAG", "href" : "disassociate-key-lag.html" }, { "title" : "Delete LAGs", "href" : "delete-lag.html" } ] }, { "title" : "Working with Direct Connect gateways", "href" : "direct-connect-gateways.html", "contents" : [ { "title" : "Direct Connect gateways", "href" : "direct-connect-gateways-intro.html" }, { "title" : "Virtual private gateway associations", "href" : "virtualgateways.html", "contents" : [ { "title" : "Associating a virtual private gateway across accounts", "href" : "multi-account-associate-vgw.html" } ] }, { "title" : "Transit gateway associations", "href" : "direct-connect-transit-gateways.html", "contents" : [ { "title" : "Associating a transit gateway across accounts", "href" : "multi-account-associate-tgw.html" } ] }, { "title" : "Allowed prefixes interactions", "href" : "allowed-to-prefixes.html", "contents" : [ { "title" : "Example: Allowed to prefixes in a transit gateway configuration", "href" : "prefix-example.html" } ] } ] }, { "title" : "Tagging resources", "href" : "using-tags.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Internetwork traffic privacy", "href" : "encryption-at-rest.html" }, { "title" : "Encryption", "href" : "encryption-in-transit.html" } ] }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How Direct Connect works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html", "contents" : [ { "title" : "Tag-based policy examples", "href" : "security_iam_resource-based-policy-examples.html" } ] }, { "title" : "Service-linked roles", "href" : "using-service-linked-roles.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Logging and monitoring", "href" : "dc-incident-response.html" }, { "title" : "Compliance validation", "href" : "DirectConnect-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Using the AWS CLI", "href" : "using-cli.html" }, { "title" : "Logging API calls", "href" : "logging_dc_api_calls.html" }, { "title" : "Monitoring", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Monitoring with Amazon CloudWatch", "href" : "monitoring-cloudwatch.html" } ] }, { "title" : "Quotas", "href" : "limits.html" }, { "title" : "Troubleshooting", "href" : "Troubleshooting.html" }, { "title" : "Document history", "href" : "AboutThisGuide.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/",
+    "service": "directconnect",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS Direct Connect?",
+                "href": "Welcome.html",
+                "contents": [
+                    {
+                        "title": "Accessing a remote AWS Region",
+                        "href": "remote_regions.html"
+                    },
+                    {
+                        "title": "Routing policies and BGP communities",
+                        "href": "routing-and-bgp.html",
+                        "contents": [
+                            {
+                                "title": "Private virtual interface routing example",
+                                "href": "private-transit-vif-example.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Using the AWS Direct Connect Resiliency Toolkit to get started",
+                "href": "resiliency_toolkit.html",
+                "contents": [
+                    {
+                        "title": "Maximum resiliency",
+                        "href": "maximum_resiliency.html"
+                    },
+                    {
+                        "title": "High resiliency",
+                        "href": "high_resiliency.html"
+                    },
+                    {
+                        "title": "Development and test",
+                        "href": "dev-test-resiliency.html"
+                    },
+                    {
+                        "title": "Classic",
+                        "href": "getting_started.html"
+                    },
+                    {
+                        "title": "AWS Direct Connect Failover Test",
+                        "href": "resiliency_failover.html"
+                    }
+                ]
+            },
+            {
+                "title": "MAC Security",
+                "href": "MACsec.html",
+                "contents": [
+                    {
+                        "title": "Get started with MACsec on dedicated connections",
+                        "href": "direct-connect-mac-sec-getting-started.html"
+                    }
+                ]
+            },
+            {
+                "title": "Connections",
+                "href": "WorkingWithConnections.html",
+                "contents": [
+                    {
+                        "title": "Dedicated connections",
+                        "href": "dedicated_connection.html",
+                        "contents": [
+                            {
+                                "title": "Update a connection",
+                                "href": "updateconnection.html"
+                            },
+                            {
+                                "title": "Associate a MACsec CKN/CAK with a connection",
+                                "href": "associate-key-connection.html"
+                            },
+                            {
+                                "title": "Remove the association between a MACsec secret key and a connection",
+                                "href": "disassociate-key-connection.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Hosted connections",
+                        "href": "hosted_connection.html"
+                    },
+                    {
+                        "title": "View your connection details",
+                        "href": "viewdetails.html"
+                    },
+                    {
+                        "title": "Delete connections",
+                        "href": "deleteconnection.html"
+                    }
+                ]
+            },
+            {
+                "title": "Cross connects",
+                "href": "Colocation.html"
+            },
+            {
+                "title": "Virtual interfaces",
+                "href": "WorkingWithVirtualInterfaces.html",
+                "contents": [
+                    {
+                        "title": "Create a virtual interface",
+                        "href": "create-vif.html"
+                    },
+                    {
+                        "title": "View virtual interface details",
+                        "href": "viewvifdetails.html"
+                    },
+                    {
+                        "title": "Add or delete a BGP peer",
+                        "href": "add-peer-to-vif.html"
+                    },
+                    {
+                        "title": "Set network MTU for private virtual interfaces or transit virtual interfaces",
+                        "href": "set-jumbo-frames-vif.html"
+                    },
+                    {
+                        "title": "Add or remove virtual interface tags",
+                        "href": "modify-tags-vif.html"
+                    },
+                    {
+                        "title": "Delete virtual interfaces",
+                        "href": "deletevif.html"
+                    },
+                    {
+                        "title": "Create a hosted virtual interface",
+                        "href": "createhostedvirtualinterface.html"
+                    },
+                    {
+                        "title": "Accept a hosted virtual interface",
+                        "href": "accepthostedvirtualinterface.html"
+                    },
+                    {
+                        "title": "Migrate a virtual interface",
+                        "href": "migratevirtualinterface.html"
+                    }
+                ]
+            },
+            {
+                "title": "LAGs",
+                "href": "lags.html",
+                "contents": [
+                    {
+                        "title": "Create a LAG",
+                        "href": "create-lag.html"
+                    },
+                    {
+                        "title": "View your LAG details",
+                        "href": "view-lag.html"
+                    },
+                    {
+                        "title": "Update a LAG",
+                        "href": "update-lag.html"
+                    },
+                    {
+                        "title": "Associate a connection with a LAG",
+                        "href": "associate-connection-with-lag.html"
+                    },
+                    {
+                        "title": "Disassociate a connection from a LAG",
+                        "href": "disassociate-connection-from-lag.html"
+                    },
+                    {
+                        "title": "Associate a MACsec CKN/CAK with a LAG",
+                        "href": "associate-key-lag.html"
+                    },
+                    {
+                        "title": "Remove the association between a MACsec secret key and a LAG",
+                        "href": "disassociate-key-lag.html"
+                    },
+                    {
+                        "title": "Delete LAGs",
+                        "href": "delete-lag.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with Direct Connect gateways",
+                "href": "direct-connect-gateways.html",
+                "contents": [
+                    {
+                        "title": "Direct Connect gateways",
+                        "href": "direct-connect-gateways-intro.html"
+                    },
+                    {
+                        "title": "Virtual private gateway associations",
+                        "href": "virtualgateways.html",
+                        "contents": [
+                            {
+                                "title": "Associating a virtual private gateway across accounts",
+                                "href": "multi-account-associate-vgw.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Transit gateway associations",
+                        "href": "direct-connect-transit-gateways.html",
+                        "contents": [
+                            {
+                                "title": "Associating a transit gateway across accounts",
+                                "href": "multi-account-associate-tgw.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Allowed prefixes interactions",
+                        "href": "allowed-to-prefixes.html",
+                        "contents": [
+                            {
+                                "title": "Example: Allowed to prefixes in a transit gateway configuration",
+                                "href": "prefix-example.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tagging resources",
+                "href": "using-tags.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Internetwork traffic privacy",
+                                "href": "encryption-at-rest.html"
+                            },
+                            {
+                                "title": "Encryption",
+                                "href": "encryption-in-transit.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Direct Connect works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html",
+                                "contents": [
+                                    {
+                                        "title": "Tag-based policy examples",
+                                        "href": "security_iam_resource-based-policy-examples.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "dc-incident-response.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "DirectConnect-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Using the AWS CLI",
+                "href": "using-cli.html"
+            },
+            {
+                "title": "Logging API calls",
+                "href": "logging_dc_api_calls.html"
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Monitoring with Amazon CloudWatch",
+                        "href": "monitoring-cloudwatch.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "limits.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "Troubleshooting.html"
+            },
+            {
+                "title": "Document history",
+                "href": "AboutThisGuide.html"
+            }
+        ]
+    }
+}

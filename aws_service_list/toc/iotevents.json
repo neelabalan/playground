@@ -1,1 +1,270 @@
-{ "contents" : [ { "title" : "What is AWS IoT Events?", "href" : "what-is-iotevents.html" }, { "title" : "Setting up", "href" : "iotevents-start.html" }, { "title" : "Getting started", "href" : "iotevents-getting-started.html", "contents" : [ { "title" : "Prerequisites", "href" : "iotevents-getting-started-prereqs.html" }, { "title" : "Create an input", "href" : "create-input-overview.html", "contents" : [ { "title" : "Create an input in the Navigation Pane", "href" : "create-input-for-models.html" }, { "title" : "Create an input in the Detector Model", "href" : "iotevents-detector-input.html" } ] }, { "title" : "Create a detector model", "href" : "iotevents-detector-model.html" }, { "title" : "Send inputs to test the detector model", "href" : "iotevents-iot-rules-engine.html" } ] }, { "title" : "Best practices", "href" : "best-practices.html" }, { "title" : "Tutorials", "href" : "iotevents-tutorials.html", "contents" : [ { "title" : "Using AWS IoT Events to monitor your IoT devices", "href" : "iotevents-how-to-use.html" }, { "title" : "Simple step-by-step example", "href" : "iotevents-simple-example.html" }, { "title" : "Detector model restrictions and limitations", "href" : "iotevents-restrictions-detector-model.html" }, { "title" : "A commented example: HVAC temperature control", "href" : "iotevents-commented-example.html" } ] }, { "title" : "Supported actions", "href" : "iotevents-supported-actions.html", "contents" : [ { "title" : "Using built-in actions", "href" : "built-in-actions.html" }, { "title" : "Working with other AWS services", "href" : "iotevents-other-aws-services.html" } ] }, { "title" : "Expressions", "href" : "iotevents-expressions.html", "contents" : [ { "title" : "Usage", "href" : "expression-usage.html" } ] }, { "title" : "Detector model examples", "href" : "iotevents-examples.html", "contents" : [ { "title" : "HVAC temperature control", "href" : "iotevents-examples-hvac.html" }, { "title" : "Cranes", "href" : "iotevents-examples-cranes.html" }, { "title" : "Event detection with sensors and applications", "href" : "iotevents-examples-edwsaa.html" }, { "title" : "Device HeartBeat", "href" : "iotevents-examples-dhb.html" }, { "title" : "ISA alarm", "href" : "iotevents-examples-bisaa.html" }, { "title" : "Simple alarm", "href" : "iotevents-examples-bsa.html" } ] }, { "title" : "Monitoring with alarms", "href" : "iotevents-alarms.html", "contents" : [ { "title" : "Creating an alarm model", "href" : "create-alarm-model.html", "contents" : [ { "title" : "Creating an alarm model (console)", "href" : "create-alarm-model-console.html" } ] }, { "title" : "Responding to alarms", "href" : "respond-to-alarms.html" }, { "title" : "Managing alarm notifications", "href" : "lambda-support.html", "contents" : [ { "title" : "Using the Lambda function provided by AWS IoT Events", "href" : "use-alarm-notifications.html" }, { "title" : "Managing recipients", "href" : "sso-authorization-recipients.html" } ] } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS IoT Events works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Monitoring", "href" : "monitoring_overview.html", "contents" : [ { "title" : "Monitoring tools", "href" : "monitoring_automated_manual.html" }, { "title" : "Monitoring with Amazon CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "Logging AWS IoT Events API calls with AWS CloudTrail", "href" : "iotevents-using-cloudtrail.html", "contents" : [ { "title" : "Understanding AWS IoT Events log file entries", "href" : "understanding-aws-iotevents-entries.html" } ] } ] }, { "title" : "Compliance validation", "href" : "iotevents-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Quotas", "href" : "iotevents-quotas.html" }, { "title" : "Tagging", "href" : "tagging-iotevents.html" }, { "title" : "Troubleshooting", "href" : "iotevents-troubleshooting.html", "contents" : [ { "title" : "Common AWS IoT Events issues and solutions", "href" : "iotevents-error-messages.html" }, { "title" : "Troubleshooting a detector model", "href" : "iotevents-analyze-api.html", "contents" : [ { "title" : "Diagnostic information", "href" : "analyze-diagnostic-information.html" }, { "title" : "Analyzing a detector model (Console)", "href" : "analyze-api-console.html" }, { "title" : "Analyzing a detector model (AWS CLI)", "href" : "analyze-api-api.html" } ] } ] }, { "title" : "Commands", "href" : "iotevents-commands.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/iotevents/latest/developerguide/",
+    "service": "iotevents",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS IoT Events?",
+                "href": "what-is-iotevents.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "iotevents-start.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "iotevents-getting-started.html",
+                "contents": [
+                    {
+                        "title": "Prerequisites",
+                        "href": "iotevents-getting-started-prereqs.html"
+                    },
+                    {
+                        "title": "Create an input",
+                        "href": "create-input-overview.html",
+                        "contents": [
+                            {
+                                "title": "Create an input in the Navigation Pane",
+                                "href": "create-input-for-models.html"
+                            },
+                            {
+                                "title": "Create an input in the Detector Model",
+                                "href": "iotevents-detector-input.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Create a detector model",
+                        "href": "iotevents-detector-model.html"
+                    },
+                    {
+                        "title": "Send inputs to test the detector model",
+                        "href": "iotevents-iot-rules-engine.html"
+                    }
+                ]
+            },
+            {
+                "title": "Best practices",
+                "href": "best-practices.html"
+            },
+            {
+                "title": "Tutorials",
+                "href": "iotevents-tutorials.html",
+                "contents": [
+                    {
+                        "title": "Using AWS IoT Events to monitor your IoT devices",
+                        "href": "iotevents-how-to-use.html"
+                    },
+                    {
+                        "title": "Simple step-by-step example",
+                        "href": "iotevents-simple-example.html"
+                    },
+                    {
+                        "title": "Detector model restrictions and limitations",
+                        "href": "iotevents-restrictions-detector-model.html"
+                    },
+                    {
+                        "title": "A commented example: HVAC temperature control",
+                        "href": "iotevents-commented-example.html"
+                    }
+                ]
+            },
+            {
+                "title": "Supported actions",
+                "href": "iotevents-supported-actions.html",
+                "contents": [
+                    {
+                        "title": "Using built-in actions",
+                        "href": "built-in-actions.html"
+                    },
+                    {
+                        "title": "Working with other AWS services",
+                        "href": "iotevents-other-aws-services.html"
+                    }
+                ]
+            },
+            {
+                "title": "Expressions",
+                "href": "iotevents-expressions.html",
+                "contents": [
+                    {
+                        "title": "Usage",
+                        "href": "expression-usage.html"
+                    }
+                ]
+            },
+            {
+                "title": "Detector model examples",
+                "href": "iotevents-examples.html",
+                "contents": [
+                    {
+                        "title": "HVAC temperature control",
+                        "href": "iotevents-examples-hvac.html"
+                    },
+                    {
+                        "title": "Cranes",
+                        "href": "iotevents-examples-cranes.html"
+                    },
+                    {
+                        "title": "Event detection with sensors and applications",
+                        "href": "iotevents-examples-edwsaa.html"
+                    },
+                    {
+                        "title": "Device HeartBeat",
+                        "href": "iotevents-examples-dhb.html"
+                    },
+                    {
+                        "title": "ISA alarm",
+                        "href": "iotevents-examples-bisaa.html"
+                    },
+                    {
+                        "title": "Simple alarm",
+                        "href": "iotevents-examples-bsa.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring with alarms",
+                "href": "iotevents-alarms.html",
+                "contents": [
+                    {
+                        "title": "Creating an alarm model",
+                        "href": "create-alarm-model.html",
+                        "contents": [
+                            {
+                                "title": "Creating an alarm model (console)",
+                                "href": "create-alarm-model-console.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Responding to alarms",
+                        "href": "respond-to-alarms.html"
+                    },
+                    {
+                        "title": "Managing alarm notifications",
+                        "href": "lambda-support.html",
+                        "contents": [
+                            {
+                                "title": "Using the Lambda function provided by AWS IoT Events",
+                                "href": "use-alarm-notifications.html"
+                            },
+                            {
+                                "title": "Managing recipients",
+                                "href": "sso-authorization-recipients.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS IoT Events works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Monitoring",
+                        "href": "monitoring_overview.html",
+                        "contents": [
+                            {
+                                "title": "Monitoring tools",
+                                "href": "monitoring_automated_manual.html"
+                            },
+                            {
+                                "title": "Monitoring with Amazon CloudWatch",
+                                "href": "monitoring-cloudwatch.html"
+                            },
+                            {
+                                "title": "Logging AWS IoT Events API calls with AWS CloudTrail",
+                                "href": "iotevents-using-cloudtrail.html",
+                                "contents": [
+                                    {
+                                        "title": "Understanding AWS IoT Events log file entries",
+                                        "href": "understanding-aws-iotevents-entries.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "iotevents-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "iotevents-quotas.html"
+            },
+            {
+                "title": "Tagging",
+                "href": "tagging-iotevents.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "iotevents-troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Common AWS IoT Events issues and solutions",
+                        "href": "iotevents-error-messages.html"
+                    },
+                    {
+                        "title": "Troubleshooting a detector model",
+                        "href": "iotevents-analyze-api.html",
+                        "contents": [
+                            {
+                                "title": "Diagnostic information",
+                                "href": "analyze-diagnostic-information.html"
+                            },
+                            {
+                                "title": "Analyzing a detector model (Console)",
+                                "href": "analyze-api-console.html"
+                            },
+                            {
+                                "title": "Analyzing a detector model (AWS CLI)",
+                                "href": "analyze-api-api.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Commands",
+                "href": "iotevents-commands.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

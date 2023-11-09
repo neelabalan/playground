@@ -1,1 +1,420 @@
-{ "contents" : [ { "title" : "What is Amazon Managed Service for Prometheus?", "href" : "what-is-Amazon-Managed-Service-Prometheus.html" }, { "title" : "Setting up", "href" : "AMP-setting-up.html" }, { "title" : "Getting started", "href" : "AMP-getting-started.html", "contents" : [ { "title" : "Create a workspace", "href" : "AMP-onboard-create-workspace.html" }, { "title" : "Ingest Prometheus metrics to the workspace", "href" : "AMP-onboard-ingest-metrics.html", "contents" : [ { "title" : "Secure the ingestion of your metrics", "href" : "AMP-secure-metric-ingestion.html" }, { "title" : "Ingestion methods", "href" : "AMP-ingest-methods.html", "contents" : [ { "title" : "Quick start: Ingest from a new Prometheus server with Helm", "href" : "AMP-onboard-ingest-metrics-new-Prometheus.html" }, { "title" : "Ingest from Prometheus in Kubernetes on Amazon EC2", "href" : "AMP-onboard-ingest-metrics-existing-Prometheus.html" }, { "title" : "Ingest from Prometheus in Kubernetes on Fargate", "href" : "AMP-onboard-ingest-metrics-existing-Prometheus-fargate.html" }, { "title" : "Ingest from ADOT on EKS", "href" : "AMP-onboard-ingest-metrics-OpenTelemetry.html" }, { "title" : "Ingest from ADOT on Amazon ECS", "href" : "AMP-onboard-ingest-metrics-OpenTelemetry-ECS.html" }, { "title" : "Ingest from an Amazon EC2 instance", "href" : "AMP-onboard-ingest-metrics-remote-write-EC2.html" } ] }, { "title" : "High-availability data", "href" : "AMP-ingest-high-availability.html", "contents" : [ { "title" : "Deduplicating high availability metrics", "href" : "AMP-ingest-dedupe.html", "contents" : [ { "title" : "Send high-availability data with Prometheus", "href" : "Send-high-availability-data.html" }, { "title" : "Send high-availability with the Prometheus Operator", "href" : "Send-high-availability-data-operator.html" }, { "title" : "Send high availability data with ADOT", "href" : "Send-high-availability-data-ADOT.html" }, { "title" : "Send high-availability data with the Prometheus community Helm chart", "href" : "Send-high-availability-prom-community.html" }, { "title" : "FAQ: High availability configuration", "href" : "HA_FAQ.html" } ] }, { "title" : "Cross-region availability", "href" : "AMP-send-to-multiple-workspaces.html" } ] } ] }, { "title" : "Query your Prometheus metrics", "href" : "AMP-onboard-query.html", "contents" : [ { "title" : "Set up Amazon Managed Grafana", "href" : "AMP-onboard-amg.html" }, { "title" : "Set up Grafana open source", "href" : "AMP-onboard-query-standalone-grafana.html" }, { "title" : "Set up Grafana running in Amazon EKS", "href" : "AMP-onboard-query-grafana-7.3.html" }, { "title" : "Query using Prometheus-compatible APIs", "href" : "AMP-onboard-query-APIs.html", "contents" : [ { "title" : "Using awscurl to query Prometheus-compatible APIs", "href" : "AMP-compatible-APIs.html" } ] }, { "title" : "Query stats information in query API response", "href" : "AMP-stats.html" } ] }, { "title" : "Understand and optimize costs", "href" : "AMP-costs-FAQ.html" } ] }, { "title" : "Managing workspaces", "href" : "AMP-manage-ingest-query.html" }, { "title" : "Recording rules and alerting rules", "href" : "AMP-Ruler.html", "contents" : [ { "title" : "Necessary IAM permissions", "href" : "AMP-ruler-IAM-permissions.html" }, { "title" : "Creating a rules file", "href" : "AMP-ruler-rulesfile.html" }, { "title" : "Uploading a rules configuration file to Amazon Managed Service for Prometheus", "href" : "AMP-rules-upload.html" }, { "title" : "Editing a rules configuration file", "href" : "AMP-rules-edit.html" }, { "title" : "Troubleshooting Ruler", "href" : "Troubleshooting-rule-fail-error.html" } ] }, { "title" : "Alert Manager", "href" : "AMP-alert-manager.html", "contents" : [ { "title" : "Necessary IAM permissions", "href" : "AMP-alertmanager-IAM-permissions.html" }, { "title" : "Creating an alert manager configuration file", "href" : "AMP-alertmanager-config.html" }, { "title" : "Setting up your alert receiver", "href" : "AMP-alertmanager-receiver.html", "contents" : [ { "title" : "(Optional) Creating a new Amazon SNS topic", "href" : "AMP-alertmanager-receiver-createtopic.html" }, { "title" : "Giving Amazon Managed Service for Prometheus permission to send messages to your Amazon SNS topic", "href" : "AMP-alertmanager-receiver-AMPpermission.html" }, { "title" : "Specifying your Amazon SNS topic in the alert manager configuration file", "href" : "AMP-alertmanager-receiver-config.html" }, { "title" : "(Optional) Configuring alert manager to output JSON to Amazon SNS", "href" : "AMP-alertmanager-receiver-JSON.html" }, { "title" : "(Optional) Sending from Amazon SNS to other destinations", "href" : "AMP-alertmanager-SNS-otherdestinations.html" }, { "title" : "SNS receiver message validation and truncation rules", "href" : "AMP-alertmanager-receiver-validation-truncation.html" } ] }, { "title" : "Uploading your alert manager configuration file", "href" : "AMP-alertmanager-upload.html" }, { "title" : "Integrating alerts with Grafana", "href" : "integrating-grafana.html" }, { "title" : "Troubleshooting Alert Manager", "href" : "Troubleshooting-alerting.html", "contents" : [ { "title" : "Empty content warning", "href" : "Troubleshooting-alerting-empty.html" }, { "title" : "Non ASCII warning", "href" : "Troubleshooting-alerting-non-ASCII.html" }, { "title" : "Invalid key/value warning", "href" : "Troubleshooting-alerting-invalid-keyvalue.html" }, { "title" : "Message limit warning", "href" : "Troubleshooting-alerting-msg-limit.html" }, { "title" : "No resource based policy error", "href" : "Troubleshooting-alerting-no-policy.html" } ] } ] }, { "title" : "Logging and monitoring", "href" : "logging-and-monitoring.html", "contents" : [ { "title" : "CloudWatch metrics", "href" : "AMP-CW-usage-metrics.html", "contents" : [ { "title" : "Setting a CloudWatch alarm", "href" : "AMP-CW-examples.html" } ] }, { "title" : "CloudWatch Logs", "href" : "CW-logs.html", "contents" : [ { "title" : "Setting CloudWatch Logs logging configuration", "href" : "CW-logs-config.html" } ] } ] }, { "title" : "Integrations", "href" : "integrations.html", "contents" : [ { "title" : "Amazon EKS cost monitoring", "href" : "integrating-kubecost.html" }, { "title" : "AWS Observability Accelerator", "href" : "obs_accelerator.html" }, { "title" : "AWS Controllers for Kubernetes", "href" : "integrating-ack.html" }, { "title" : "Amazon CloudWatch metrics with Kinesis Data Firehose", "href" : "integrating-cw-firehose.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon Managed Service for Prometheus works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "IAM permissions and policies", "href" : "AMP-and-IAM.html" }, { "title" : "Compliance Validation", "href" : "AMP-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html" }, { "title" : "Set up IAM roles for service accounts", "href" : "set-up-irsa.html" }, { "title" : "Interface VPC endpoints", "href" : "AMP-and-interface-VPC.html" }, { "title" : "CloudTrail logs", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Troubleshooting", "href" : "AMP-troubleshooting.html" }, { "title" : "Tagging", "href" : "AMP_tagging.html", "contents" : [ { "title" : "Tagging workspaces", "href" : "tagging-workspaces.html", "contents" : [ { "title" : "Add a tag to a workspace", "href" : "how-to-tag-workspace-add.html" }, { "title" : "View tags for a workspace", "href" : "how-to-tag-workspace-list.html" }, { "title" : "Edit tags for a workspace", "href" : "how-to-tag-workspace-update.html" }, { "title" : "Remove a tag from a workspace", "href" : "how-to-tag-workspace-delete.html" } ] }, { "title" : "Tagging rule groups namespaces", "href" : "tagging-rulegroupsnamespaces.html", "contents" : [ { "title" : "Add a tag to a rule groups namespace", "href" : "how-to-tag-rule-groups-namespace-add.html" }, { "title" : "View tags for a rule groups namespace", "href" : "how-to-tag-rule-groups-namespace-list.html" }, { "title" : "Edit tags for a rule groups namespace", "href" : "how-to-tag-rule-groups-namespace-update.html" }, { "title" : "Remove a tag from a rule groups namespace", "href" : "how-to-tag-rule-groups-namespace-delete.html" } ] } ] }, { "title" : "Service quotas", "href" : "AMP_quotas.html" }, { "title" : "API Reference", "href" : "AMP-APIReference.html" }, { "title" : "Document History", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/prometheus/latest/userguide/",
+    "service": "prometheus",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon Managed Service for Prometheus?",
+                "href": "what-is-Amazon-Managed-Service-Prometheus.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "AMP-setting-up.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "AMP-getting-started.html",
+                "contents": [
+                    {
+                        "title": "Create a workspace",
+                        "href": "AMP-onboard-create-workspace.html"
+                    },
+                    {
+                        "title": "Ingest Prometheus metrics to the workspace",
+                        "href": "AMP-onboard-ingest-metrics.html",
+                        "contents": [
+                            {
+                                "title": "Secure the ingestion of your metrics",
+                                "href": "AMP-secure-metric-ingestion.html"
+                            },
+                            {
+                                "title": "Ingestion methods",
+                                "href": "AMP-ingest-methods.html",
+                                "contents": [
+                                    {
+                                        "title": "Quick start: Ingest from a new Prometheus server with Helm",
+                                        "href": "AMP-onboard-ingest-metrics-new-Prometheus.html"
+                                    },
+                                    {
+                                        "title": "Ingest from Prometheus in Kubernetes on Amazon EC2",
+                                        "href": "AMP-onboard-ingest-metrics-existing-Prometheus.html"
+                                    },
+                                    {
+                                        "title": "Ingest from Prometheus in Kubernetes on Fargate",
+                                        "href": "AMP-onboard-ingest-metrics-existing-Prometheus-fargate.html"
+                                    },
+                                    {
+                                        "title": "Ingest from ADOT on EKS",
+                                        "href": "AMP-onboard-ingest-metrics-OpenTelemetry.html"
+                                    },
+                                    {
+                                        "title": "Ingest from ADOT on Amazon ECS",
+                                        "href": "AMP-onboard-ingest-metrics-OpenTelemetry-ECS.html"
+                                    },
+                                    {
+                                        "title": "Ingest from an Amazon EC2 instance",
+                                        "href": "AMP-onboard-ingest-metrics-remote-write-EC2.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "High-availability data",
+                                "href": "AMP-ingest-high-availability.html",
+                                "contents": [
+                                    {
+                                        "title": "Deduplicating high availability metrics",
+                                        "href": "AMP-ingest-dedupe.html",
+                                        "contents": [
+                                            {
+                                                "title": "Send high-availability data with Prometheus",
+                                                "href": "Send-high-availability-data.html"
+                                            },
+                                            {
+                                                "title": "Send high-availability with the Prometheus Operator",
+                                                "href": "Send-high-availability-data-operator.html"
+                                            },
+                                            {
+                                                "title": "Send high availability data with ADOT",
+                                                "href": "Send-high-availability-data-ADOT.html"
+                                            },
+                                            {
+                                                "title": "Send high-availability data with the Prometheus community Helm chart",
+                                                "href": "Send-high-availability-prom-community.html"
+                                            },
+                                            {
+                                                "title": "FAQ: High availability configuration",
+                                                "href": "HA_FAQ.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Cross-region availability",
+                                        "href": "AMP-send-to-multiple-workspaces.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Query your Prometheus metrics",
+                        "href": "AMP-onboard-query.html",
+                        "contents": [
+                            {
+                                "title": "Set up Amazon Managed Grafana",
+                                "href": "AMP-onboard-amg.html"
+                            },
+                            {
+                                "title": "Set up Grafana open source",
+                                "href": "AMP-onboard-query-standalone-grafana.html"
+                            },
+                            {
+                                "title": "Set up Grafana running in Amazon EKS",
+                                "href": "AMP-onboard-query-grafana-7.3.html"
+                            },
+                            {
+                                "title": "Query using Prometheus-compatible APIs",
+                                "href": "AMP-onboard-query-APIs.html",
+                                "contents": [
+                                    {
+                                        "title": "Using awscurl to query Prometheus-compatible APIs",
+                                        "href": "AMP-compatible-APIs.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Query stats information in query API response",
+                                "href": "AMP-stats.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Understand and optimize costs",
+                        "href": "AMP-costs-FAQ.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing workspaces",
+                "href": "AMP-manage-ingest-query.html"
+            },
+            {
+                "title": "Recording rules and alerting rules",
+                "href": "AMP-Ruler.html",
+                "contents": [
+                    {
+                        "title": "Necessary IAM permissions",
+                        "href": "AMP-ruler-IAM-permissions.html"
+                    },
+                    {
+                        "title": "Creating a rules file",
+                        "href": "AMP-ruler-rulesfile.html"
+                    },
+                    {
+                        "title": "Uploading a rules configuration file to Amazon Managed Service for Prometheus",
+                        "href": "AMP-rules-upload.html"
+                    },
+                    {
+                        "title": "Editing a rules configuration file",
+                        "href": "AMP-rules-edit.html"
+                    },
+                    {
+                        "title": "Troubleshooting Ruler",
+                        "href": "Troubleshooting-rule-fail-error.html"
+                    }
+                ]
+            },
+            {
+                "title": "Alert Manager",
+                "href": "AMP-alert-manager.html",
+                "contents": [
+                    {
+                        "title": "Necessary IAM permissions",
+                        "href": "AMP-alertmanager-IAM-permissions.html"
+                    },
+                    {
+                        "title": "Creating an alert manager configuration file",
+                        "href": "AMP-alertmanager-config.html"
+                    },
+                    {
+                        "title": "Setting up your alert receiver",
+                        "href": "AMP-alertmanager-receiver.html",
+                        "contents": [
+                            {
+                                "title": "(Optional) Creating a new Amazon SNS topic",
+                                "href": "AMP-alertmanager-receiver-createtopic.html"
+                            },
+                            {
+                                "title": "Giving Amazon Managed Service for Prometheus permission to send messages to your Amazon SNS topic",
+                                "href": "AMP-alertmanager-receiver-AMPpermission.html"
+                            },
+                            {
+                                "title": "Specifying your Amazon SNS topic in the alert manager configuration file",
+                                "href": "AMP-alertmanager-receiver-config.html"
+                            },
+                            {
+                                "title": "(Optional) Configuring alert manager to output JSON to Amazon SNS",
+                                "href": "AMP-alertmanager-receiver-JSON.html"
+                            },
+                            {
+                                "title": "(Optional) Sending from Amazon SNS to other destinations",
+                                "href": "AMP-alertmanager-SNS-otherdestinations.html"
+                            },
+                            {
+                                "title": "SNS receiver message validation and truncation rules",
+                                "href": "AMP-alertmanager-receiver-validation-truncation.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Uploading your alert manager configuration file",
+                        "href": "AMP-alertmanager-upload.html"
+                    },
+                    {
+                        "title": "Integrating alerts with Grafana",
+                        "href": "integrating-grafana.html"
+                    },
+                    {
+                        "title": "Troubleshooting Alert Manager",
+                        "href": "Troubleshooting-alerting.html",
+                        "contents": [
+                            {
+                                "title": "Empty content warning",
+                                "href": "Troubleshooting-alerting-empty.html"
+                            },
+                            {
+                                "title": "Non ASCII warning",
+                                "href": "Troubleshooting-alerting-non-ASCII.html"
+                            },
+                            {
+                                "title": "Invalid key/value warning",
+                                "href": "Troubleshooting-alerting-invalid-keyvalue.html"
+                            },
+                            {
+                                "title": "Message limit warning",
+                                "href": "Troubleshooting-alerting-msg-limit.html"
+                            },
+                            {
+                                "title": "No resource based policy error",
+                                "href": "Troubleshooting-alerting-no-policy.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Logging and monitoring",
+                "href": "logging-and-monitoring.html",
+                "contents": [
+                    {
+                        "title": "CloudWatch metrics",
+                        "href": "AMP-CW-usage-metrics.html",
+                        "contents": [
+                            {
+                                "title": "Setting a CloudWatch alarm",
+                                "href": "AMP-CW-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CloudWatch Logs",
+                        "href": "CW-logs.html",
+                        "contents": [
+                            {
+                                "title": "Setting CloudWatch Logs logging configuration",
+                                "href": "CW-logs-config.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Integrations",
+                "href": "integrations.html",
+                "contents": [
+                    {
+                        "title": "Amazon EKS cost monitoring",
+                        "href": "integrating-kubecost.html"
+                    },
+                    {
+                        "title": "AWS Observability Accelerator",
+                        "href": "obs_accelerator.html"
+                    },
+                    {
+                        "title": "AWS Controllers for Kubernetes",
+                        "href": "integrating-ack.html"
+                    },
+                    {
+                        "title": "Amazon CloudWatch metrics with Kinesis Data Firehose",
+                        "href": "integrating-cw-firehose.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon Managed Service for Prometheus works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IAM permissions and policies",
+                        "href": "AMP-and-IAM.html"
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "AMP-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Set up IAM roles for service accounts",
+                        "href": "set-up-irsa.html"
+                    },
+                    {
+                        "title": "Interface VPC endpoints",
+                        "href": "AMP-and-interface-VPC.html"
+                    },
+                    {
+                        "title": "CloudTrail logs",
+                        "href": "logging-using-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "AMP-troubleshooting.html"
+            },
+            {
+                "title": "Tagging",
+                "href": "AMP_tagging.html",
+                "contents": [
+                    {
+                        "title": "Tagging workspaces",
+                        "href": "tagging-workspaces.html",
+                        "contents": [
+                            {
+                                "title": "Add a tag to a workspace",
+                                "href": "how-to-tag-workspace-add.html"
+                            },
+                            {
+                                "title": "View tags for a workspace",
+                                "href": "how-to-tag-workspace-list.html"
+                            },
+                            {
+                                "title": "Edit tags for a workspace",
+                                "href": "how-to-tag-workspace-update.html"
+                            },
+                            {
+                                "title": "Remove a tag from a workspace",
+                                "href": "how-to-tag-workspace-delete.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tagging rule groups namespaces",
+                        "href": "tagging-rulegroupsnamespaces.html",
+                        "contents": [
+                            {
+                                "title": "Add a tag to a rule groups namespace",
+                                "href": "how-to-tag-rule-groups-namespace-add.html"
+                            },
+                            {
+                                "title": "View tags for a rule groups namespace",
+                                "href": "how-to-tag-rule-groups-namespace-list.html"
+                            },
+                            {
+                                "title": "Edit tags for a rule groups namespace",
+                                "href": "how-to-tag-rule-groups-namespace-update.html"
+                            },
+                            {
+                                "title": "Remove a tag from a rule groups namespace",
+                                "href": "how-to-tag-rule-groups-namespace-delete.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Service quotas",
+                "href": "AMP_quotas.html"
+            },
+            {
+                "title": "API Reference",
+                "href": "AMP-APIReference.html"
+            },
+            {
+                "title": "Document History",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

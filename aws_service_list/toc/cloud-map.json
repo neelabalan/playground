@@ -1,1 +1,206 @@
-{ "contents" : [ { "title" : "What Is AWS Cloud Map?", "href" : "what-is-cloud-map.html", "contents" : [ { "title" : "Accessing AWS Cloud Map", "href" : "welcome-accessing-cloud-map.html" }, { "title" : "AWS Identity and Access Management", "href" : "IAMRoute53.html" }, { "title" : "AWS Cloud Map Pricing", "href" : "cloud-map-pricing.html" }, { "title" : "AWS Cloud Map and AWS Cloud Compliance", "href" : "compliance.html" } ] }, { "title" : "Setting Up", "href" : "setting-up-cloud-map.html" }, { "title" : "Using AWS Cloud Map", "href" : "using-cloud-map.html", "contents" : [ { "title" : "Configuring AWS Cloud Map", "href" : "configuring-cloud-map.html", "contents" : [ { "title" : "Working with Namespaces", "href" : "working-with-namespaces.html", "contents" : [ { "title" : "Creating Namespaces", "href" : "creating-namespaces.html" }, { "title" : "Values That You Specify When You Create Namespaces", "href" : "namespaces-values.html" }, { "title" : "Viewing a List of Namespaces", "href" : "listing-namespaces.html" }, { "title" : "Deleting Namespaces", "href" : "deleting-namespaces.html" } ] }, { "title" : "Working with Services", "href" : "working-with-services.html", "contents" : [ { "title" : "Creating Services", "href" : "creating-services.html" }, { "title" : "Updating Services", "href" : "editing-services.html" }, { "title" : "Values That You Specify When You Create Services", "href" : "services-values.html" }, { "title" : "Viewing a List of Services That You Created in a Namespace", "href" : "listing-services.html" }, { "title" : "Deleting Services", "href" : "deleting-services.html" } ] }, { "title" : "Working with Service Instances", "href" : "working-with-instances.html", "contents" : [ { "title" : "Registering Instances", "href" : "registering-instances.html" }, { "title" : "Values That You Specify When You Register or Update Instances", "href" : "instances-values.html" }, { "title" : "Updating Instances", "href" : "updating-instances.html" }, { "title" : "Viewing a List of Service Instances", "href" : "listing-instances.html" }, { "title" : "Deregistering Service Instances", "href" : "deregistering-instances.html" } ] }, { "title" : "AWS Cloud Map Features That Aren't Available on the AWS Cloud Map Console", "href" : "configuring-cloud-map-feature-not-available.html" } ] } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "AWS Identity and Access Management", "href" : "auth-and-access-control.html", "contents" : [ { "title" : "Overview of Managing Access", "href" : "access-control-overview.html" }, { "title" : "Using IAM Policies for AWS Cloud Map", "href" : "access-control-managing-permissions.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html", "contents" : [ { "title" : "Customer Managed Policy Examples", "href" : "access-policy-examples-for-sdk-cli.html" } ] }, { "title" : "AWS Cloud Map API Permissions Reference", "href" : "cloud-map-api-permissions-ref.html" } ] }, { "title" : "Logging and Monitoring", "href" : "logging-monitoring.html" }, { "title" : "Compliance Validation", "href" : "cloud-map-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html", "contents" : [ { "title" : "AWS PrivateLink", "href" : "vpc-interface-endpoints.html" } ] } ] }, { "title" : "Tagging your resources", "href" : "using-tags.html" }, { "title" : "AWS Cloud Map quotas", "href" : "cloud-map-limits.html", "contents" : [ { "title" : "API request throttling quota", "href" : "throttling.html" } ] }, { "title" : "Related Information", "href" : "cloud-map-related-information.html" }, { "title" : "Document History", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/cloud-map/latest/dg/",
+    "service": "cloud-map",
+    "toc": {
+        "contents": [
+            {
+                "title": "What Is AWS Cloud Map?",
+                "href": "what-is-cloud-map.html",
+                "contents": [
+                    {
+                        "title": "Accessing AWS Cloud Map",
+                        "href": "welcome-accessing-cloud-map.html"
+                    },
+                    {
+                        "title": "AWS Identity and Access Management",
+                        "href": "IAMRoute53.html"
+                    },
+                    {
+                        "title": "AWS Cloud Map Pricing",
+                        "href": "cloud-map-pricing.html"
+                    },
+                    {
+                        "title": "AWS Cloud Map and AWS Cloud Compliance",
+                        "href": "compliance.html"
+                    }
+                ]
+            },
+            {
+                "title": "Setting Up",
+                "href": "setting-up-cloud-map.html"
+            },
+            {
+                "title": "Using AWS Cloud Map",
+                "href": "using-cloud-map.html",
+                "contents": [
+                    {
+                        "title": "Configuring AWS Cloud Map",
+                        "href": "configuring-cloud-map.html",
+                        "contents": [
+                            {
+                                "title": "Working with Namespaces",
+                                "href": "working-with-namespaces.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating Namespaces",
+                                        "href": "creating-namespaces.html"
+                                    },
+                                    {
+                                        "title": "Values That You Specify When You Create Namespaces",
+                                        "href": "namespaces-values.html"
+                                    },
+                                    {
+                                        "title": "Viewing a List of Namespaces",
+                                        "href": "listing-namespaces.html"
+                                    },
+                                    {
+                                        "title": "Deleting Namespaces",
+                                        "href": "deleting-namespaces.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Working with Services",
+                                "href": "working-with-services.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating Services",
+                                        "href": "creating-services.html"
+                                    },
+                                    {
+                                        "title": "Updating Services",
+                                        "href": "editing-services.html"
+                                    },
+                                    {
+                                        "title": "Values That You Specify When You Create Services",
+                                        "href": "services-values.html"
+                                    },
+                                    {
+                                        "title": "Viewing a List of Services That You Created in a Namespace",
+                                        "href": "listing-services.html"
+                                    },
+                                    {
+                                        "title": "Deleting Services",
+                                        "href": "deleting-services.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Working with Service Instances",
+                                "href": "working-with-instances.html",
+                                "contents": [
+                                    {
+                                        "title": "Registering Instances",
+                                        "href": "registering-instances.html"
+                                    },
+                                    {
+                                        "title": "Values That You Specify When You Register or Update Instances",
+                                        "href": "instances-values.html"
+                                    },
+                                    {
+                                        "title": "Updating Instances",
+                                        "href": "updating-instances.html"
+                                    },
+                                    {
+                                        "title": "Viewing a List of Service Instances",
+                                        "href": "listing-instances.html"
+                                    },
+                                    {
+                                        "title": "Deregistering Service Instances",
+                                        "href": "deregistering-instances.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "AWS Cloud Map Features That Aren't Available on the AWS Cloud Map Console",
+                                "href": "configuring-cloud-map-feature-not-available.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "AWS Identity and Access Management",
+                        "href": "auth-and-access-control.html",
+                        "contents": [
+                            {
+                                "title": "Overview of Managing Access",
+                                "href": "access-control-overview.html"
+                            },
+                            {
+                                "title": "Using IAM Policies for AWS Cloud Map",
+                                "href": "access-control-managing-permissions.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html",
+                                "contents": [
+                                    {
+                                        "title": "Customer Managed Policy Examples",
+                                        "href": "access-policy-examples-for-sdk-cli.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "AWS Cloud Map API Permissions Reference",
+                                "href": "cloud-map-api-permissions-ref.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and Monitoring",
+                        "href": "logging-monitoring.html"
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "cloud-map-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html",
+                        "contents": [
+                            {
+                                "title": "AWS PrivateLink",
+                                "href": "vpc-interface-endpoints.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tagging your resources",
+                "href": "using-tags.html"
+            },
+            {
+                "title": "AWS Cloud Map quotas",
+                "href": "cloud-map-limits.html",
+                "contents": [
+                    {
+                        "title": "API request throttling quota",
+                        "href": "throttling.html"
+                    }
+                ]
+            },
+            {
+                "title": "Related Information",
+                "href": "cloud-map-related-information.html"
+            },
+            {
+                "title": "Document History",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

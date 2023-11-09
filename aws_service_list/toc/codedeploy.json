@@ -1,1 +1,1034 @@
-{ "contents" : [ { "title" : "What is CodeDeploy?", "href" : "welcome.html", "contents" : [ { "title" : "Primary components", "href" : "primary-components.html" }, { "title" : "Deployments", "href" : "deployment-steps.html", "contents" : [ { "title" : "Deployments on an AWS Lambda Compute Platform", "href" : "deployment-steps-lambda.html" }, { "title" : "Deployments on an Amazon ECS Compute Platform", "href" : "deployment-steps-ecs.html" }, { "title" : "Deployments on an EC2/On-Premises Compute Platform", "href" : "deployment-steps-server.html" } ] }, { "title" : "Application specification files", "href" : "application-specification-files.html" } ] }, { "title" : "Getting started", "href" : "getting-started-codedeploy.html", "contents" : [ { "title" : "Step 1: Setting up", "href" : "getting-started-setting-up.html" }, { "title" : "Step 2: Create a service role", "href" : "getting-started-create-service-role.html" }, { "title" : "Step 3: Limit the CodeDeploy user's permissions", "href" : "getting-started-policy.html" }, { "title" : "Step 4: Create an IAM instance profile", "href" : "getting-started-create-iam-instance-profile.html" } ] }, { "title" : "Product and service integrations", "href" : "integrations.html", "contents" : [ { "title" : "Integration with other AWS services", "href" : "integrations-aws.html", "contents" : [ { "title" : "Amazon EC2 Auto Scaling", "href" : "integrations-aws-auto-scaling.html" }, { "title" : "Elastic Load Balancing", "href" : "integrations-aws-elastic-load-balancing.html" } ] }, { "title" : "Integration with partner products and services", "href" : "integrations-partners.html", "contents" : [ { "title" : "GitHub", "href" : "integrations-partners-github.html" } ] }, { "title" : "Integration examples from the community", "href" : "integrations-community.html" } ] }, { "title" : "Tutorials", "href" : "tutorials.html", "contents" : [ { "title" : "Tutorial: Deploy WordPress to a non-Windows instance", "href" : "tutorials-wordpress.html", "contents" : [ { "title" : "Step 1: Launch an Amazon EC2 instance", "href" : "tutorials-wordpress-launch-instance.html" }, { "title" : "Step 2: Configure your source content", "href" : "tutorials-wordpress-configure-content.html" }, { "title" : "Step 3: Upload your application to Amazon S3", "href" : "tutorials-wordpress-upload-application.html" }, { "title" : "Step 4: Deploy your application", "href" : "tutorials-wordpress-deploy-application.html" }, { "title" : "Step 5: Update and redeploy your application", "href" : "tutorials-wordpress-update-and-redeploy-application.html" }, { "title" : "Step 6: Clean up", "href" : "tutorials-wordpress-clean-up.html" } ] }, { "title" : "Tutorial: Deploy a Hello World application to a Windows Server instance", "href" : "tutorials-windows.html", "contents" : [ { "title" : "Step 1: Launch an Amazon EC2 instance", "href" : "tutorials-windows-launch-instance.html" }, { "title" : "Step 2: Configure your source content", "href" : "tutorials-windows-configure-content.html" }, { "title" : "Step 3: Upload your application to Amazon S3", "href" : "tutorials-windows-upload-application.html" }, { "title" : "Step 4: Deploy your application", "href" : "tutorials-windows-deploy-application.html" }, { "title" : "Step 5: Update and redeploy your application", "href" : "tutorials-windows-update-and-redeploy-application.html" }, { "title" : "Step 6: Clean up", "href" : "tutorials-windows-clean-up.html" } ] }, { "title" : "Tutorial: Deploy an application to an on-premises instance", "href" : "tutorials-on-premises-instance.html", "contents" : [ { "title" : "Prerequisites", "href" : "tutorials-on-premises-instance-prerequisites.html" }, { "title" : "Step 1: Configure the on-premises instance", "href" : "tutorials-on-premises-instance-1-configure-instance.html" }, { "title" : "Step 2: Create a sample application revision", "href" : "tutorials-on-premises-instance-2-create-sample-revision.html" }, { "title" : "Step 3: Bundle and upload your application revision to Amazon S3", "href" : "tutorials-on-premises-instance-3-bundle-sample-revision.html" }, { "title" : "Step 4: Deploy your application revision", "href" : "tutorials-on-premises-instance-4-deploy-sample-revision.html" }, { "title" : "Step 5: Verify your deployment", "href" : "tutorials-on-premises-instance-5-verify-deployment.html" }, { "title" : "Step 6: Clean up resources", "href" : "tutorials-on-premises-instance-6-clean-up-resources.html" } ] }, { "title" : "Tutorial: Deploy to an Auto Scaling group", "href" : "tutorials-auto-scaling-group.html", "contents" : [ { "title" : "Prerequisites", "href" : "tutorials-auto-scaling-group-prerequisites.html" }, { "title" : "Step 1: Create and configure the Auto Scaling group", "href" : "tutorials-auto-scaling-group-create-auto-scaling-group.html" }, { "title" : "Step 2: Deploy the application to the Auto Scaling group", "href" : "tutorials-auto-scaling-group-create-deployment.html" }, { "title" : "Step 3: Check your results", "href" : "tutorials-auto-scaling-group-verify.html" }, { "title" : "Step 4: Increase the number of Amazon EC2 instances in the Auto Scaling group", "href" : "tutorials-auto-scaling-group-scale-up.html" }, { "title" : "Step 5: Check your results again", "href" : "tutorials-auto-scaling-group-reverify.html" }, { "title" : "Step 6: Clean up", "href" : "tutorials-auto-scaling-group-clean-up.html" } ] }, { "title" : "Tutorial: Deploy an application from GitHub", "href" : "tutorials-github.html", "contents" : [ { "title" : "Prerequisites", "href" : "tutorials-github-prerequisites.html" }, { "title" : "Step 1: Set up a GitHub account", "href" : "tutorials-github-create-github-account.html" }, { "title" : "Step 2: Create a GitHub repository", "href" : "tutorials-github-create-github-repository.html" }, { "title" : "Step 3: Upload a sample application to your GitHub repository", "href" : "tutorials-github-upload-sample-revision.html" }, { "title" : "Step 4: Provision an instance", "href" : "tutorials-github-provision-instance.html" }, { "title" : "Step 5: Create an application and deployment group", "href" : "tutorials-github-create-application.html" }, { "title" : "Step 6: Deploy the application to the instance", "href" : "tutorials-github-deploy-application.html" }, { "title" : "Step 7: Monitor and verify the deployment", "href" : "tutorials-github-verify.html" }, { "title" : "Step 8: Clean up", "href" : "tutorials-github-clean-up.html" } ] }, { "title" : "Tutorial: Deploy an application into Amazon ECS", "href" : "tutorial-ecs-deployment.html", "contents" : [ { "title" : "Prerequisites", "href" : "tutorial-ecs-prereqs.html" }, { "title" : "Step 1: Update your Amazon ECS application", "href" : "tutorial-ecs-update-the-ecs-application.html" }, { "title" : "Step 2: Create the AppSpec file", "href" : "tutorial-ecs-create-appspec-file.html" }, { "title" : "Step 3: Use the CodeDeploy console to deploy your application", "href" : "tutorial-ecs-deployment-deploy.html" }, { "title" : "Step 4: Clean up", "href" : "tutorial-ecs-clean-up.html" } ] }, { "title" : "Tutorial: Deploy an Amazon ECS service with a validation test", "href" : "tutorial-ecs-deployment-with-hooks.html", "contents" : [ { "title" : "Prerequisites", "href" : "tutorial-ecs-with-hooks-prereqs.html" }, { "title" : "Step 1: Create a test listener", "href" : "tutorial-ecs-with-hooks-create-second-listener.html" }, { "title" : "Step 2: Update your Amazon ECS application", "href" : "tutorial-ecs-with-hooks-update-the-ecs-application.html" }, { "title" : "Step 3: Create a lifecycle hook Lambda function", "href" : "tutorial-ecs-with-hooks-create-hooks.html" }, { "title" : "Step 4: Update your AppSpec file", "href" : "tutorial-ecs-with-hooks-create-appspec-file.html" }, { "title" : "Step 5: Use the CodeDeploy console to deploy your Amazon ECS service", "href" : "tutorial-ecs-with-hooks-deployment.html" }, { "title" : "Step 6: View your Lambda hook function output in CloudWatch Logs", "href" : "tutorial-ecs-with-hooks-view-cw-logs.html" }, { "title" : "Step 7: Clean up", "href" : "tutoria-ecs-with-hooks-clean-up.html" } ] }, { "title" : "Tutorial: Deploy a Lambda function using AWS SAM", "href" : "tutorial-lambda-sam.html", "contents" : [ { "title" : "Prerequisites", "href" : "tutorial-lambda-sam-prereqs.html" }, { "title" : "Step 1: Set up your infrastructure", "href" : "tutorial-lambda-sam-setup-infrastructure.html", "contents" : [ { "title" : "Create your files", "href" : "tutorial-lambda-create-files.html", "contents" : [ { "title" : "Create your AWS SAM template", "href" : "tutorial-lambda-sam-template.html" }, { "title" : "Create a file for your Lambda function", "href" : "tutorial-lambda-sam-create-lambda-function.html" }, { "title" : "Create a file for your BeforeAllowTraffic Lambda function", "href" : "tutorial-lambda-sam-create-lambda-before-traffic.html" }, { "title" : "Create a file for your AfterAllowTraffic Lambda function", "href" : "tutorial-lambda-sam-create-lambda-after-traffic.html" } ] }, { "title" : "Package the AWS SAM application", "href" : "tutorial-lambda-sam-package.html" }, { "title" : "Deploy the AWS SAM application", "href" : "tutorial-lambda-sam-deploy.html" }, { "title" : "(Optional) inspect and test your infrastructure", "href" : "tutorial-lambda-sam-confirm-components.html" } ] }, { "title" : "Step 2: Update the Lambda function", "href" : "tutorial-lambda-sam-update-function.html" }, { "title" : "Step 3: Deploy the updated Lambda function", "href" : "tutorial-lambda-sam-deploy-update.html" }, { "title" : "Step 4: View your deployment results", "href" : "tutorial-lambda-sam-deploy-view-results.html" }, { "title" : "Step 5: Clean up", "href" : "tutorial-lambda-clean-up.html" } ] } ] }, { "title" : "Working with the CodeDeploy agent", "href" : "codedeploy-agent.html", "contents" : [ { "title" : "Managing CodeDeploy agent operations", "href" : "codedeploy-agent-operations.html", "contents" : [ { "title" : "Verify the CodeDeploy agent is running", "href" : "codedeploy-agent-operations-verify.html" }, { "title" : "Determine the version of the CodeDeploy agent", "href" : "codedeploy-agent-operations-version.html" }, { "title" : "Install the CodeDeploy agent", "href" : "codedeploy-agent-operations-install.html", "contents" : [ { "title" : "Install the CodeDeploy agent using AWS Systems Manager", "href" : "codedeploy-agent-operations-install-ssm.html" }, { "title" : "Install the CodeDeploy agent using the command line", "href" : "codedeploy-agent-operations-install-cli.html", "contents" : [ { "title" : "Install the CodeDeploy agent for Amazon Linux or RHEL", "href" : "codedeploy-agent-operations-install-linux.html" }, { "title" : "Install the CodeDeploy agent for Ubuntu Server", "href" : "codedeploy-agent-operations-install-ubuntu.html" }, { "title" : "Install the CodeDeploy agent for Windows Server", "href" : "codedeploy-agent-operations-install-windows.html" } ] } ] }, { "title" : "Update the CodeDeploy agent", "href" : "codedeploy-agent-operations-update.html", "contents" : [ { "title" : "Update the CodeDeploy agent on Amazon Linux or RHEL", "href" : "codedeploy-agent-operations-update-linux.html" }, { "title" : "Update the CodeDeploy agent on Ubuntu Server", "href" : "codedeploy-agent-operations-update-ubuntu.html" }, { "title" : "Update the CodeDeploy agent on Windows Server", "href" : "codedeploy-agent-operations-update-windows.html" } ] }, { "title" : "Uninstall the CodeDeploy agent", "href" : "codedeploy-agent-operations-uninstall.html" }, { "title" : "Send CodeDeploy agent logs to CloudWatch", "href" : "codedeploy-agent-operations-cloudwatch-agent.html" } ] } ] }, { "title" : "Working with instances", "href" : "instances.html", "contents" : [ { "title" : "Tagging instances for CodeDeploy deployments", "href" : "instances-tagging.html" }, { "title" : "Working with Amazon EC2 instances", "href" : "instances-ec2.html", "contents" : [ { "title" : "Create an Amazon EC2 instance for CodeDeploy", "href" : "instances-ec2-create.html" }, { "title" : "Create an Amazon EC2 instance (AWS CloudFormation template)", "href" : "instances-ec2-create-cloudformation-template.html" }, { "title" : "Configure an Amazon EC2 instance", "href" : "instances-ec2-configure.html" } ] }, { "title" : "Working with on-premises instances", "href" : "instances-on-premises.html", "contents" : [ { "title" : "Prerequisites for configuring an on-premises instance", "href" : "instances-on-premises-prerequisites.html" }, { "title" : "Register an on-premises instance", "href" : "on-premises-instances-register.html", "contents" : [ { "title" : "Use the register-on-premises-instance command (IAM Session ARN) to register an on-premises instance", "href" : "register-on-premises-instance-iam-session-arn.html" }, { "title" : "Use the register command (IAM user ARN) to register an on-premises instance", "href" : "instances-on-premises-register-instance.html" }, { "title" : "Use the register-on-premises-instance command (IAM user ARN) to register an on-premises instance", "href" : "register-on-premises-instance-iam-user-arn.html" } ] }, { "title" : "Managing on-premises instances operations", "href" : "on-premises-instances-operations.html", "contents" : [ { "title" : "Get information about a single on-premises instance", "href" : "on-premises-instances-operations-view-details-single.html" }, { "title" : "Get information about multiple on-premises instances", "href" : "on-premises-instances-operations-view-details-multiple.html" }, { "title" : "Manually remove on-premises instance tags from an on-premises instance", "href" : "on-premises-instances-operations-remove-tags.html" }, { "title" : "Automatically uninstall the CodeDeploy agent and remove the configuration file from an on-premises instance", "href" : "on-premises-instances-operations-uninstall-agent.html" }, { "title" : "Automatically deregister an on-premises instance", "href" : "on-premises-instances-operations-deregister-automatically.html" }, { "title" : "Manually deregister an on-premises instance", "href" : "on-premises-instances-operations-deregister-manually.html" } ] } ] }, { "title" : "View instance details", "href" : "instances-view-details.html" }, { "title" : "Instance health", "href" : "instances-health.html" } ] }, { "title" : "Working with deployment configurations", "href" : "deployment-configurations.html", "contents" : [ { "title" : "Create a deployment configuration", "href" : "deployment-configurations-create.html" }, { "title" : "View deployment configuration details", "href" : "deployment-configurations-view-details.html" }, { "title" : "Delete a deployment configuration", "href" : "deployment-configurations-delete.html" } ] }, { "title" : "Working with applications", "href" : "applications.html", "contents" : [ { "title" : "Create an application", "href" : "applications-create.html", "contents" : [ { "title" : "Create an application for an in-place deployment (console)", "href" : "applications-create-in-place.html" }, { "title" : "Create an application for a blue/green deployment (console)", "href" : "applications-create-blue-green.html" }, { "title" : "Create an application for an Amazon ECS service deployment (console)", "href" : "applications-create-ecs.html" }, { "title" : "Create an application for an AWS Lambda function deployment (console)", "href" : "applications-create-lambda.html" }, { "title" : "Create an application (CLI)", "href" : "applications-create-cli.html" } ] }, { "title" : "View application details", "href" : "applications-view-details.html" }, { "title" : "Create a notification rule", "href" : "notification-rule-create.html" }, { "title" : "Rename an application", "href" : "applications-rename.html" }, { "title" : "Delete an application", "href" : "applications-delete.html" } ] }, { "title" : "Working with deployment groups", "href" : "deployment-groups.html", "contents" : [ { "title" : "Create a deployment group", "href" : "deployment-groups-create.html", "contents" : [ { "title" : "Create a deployment group for an in-place deployment (console)", "href" : "deployment-groups-create-in-place.html" }, { "title" : "Create a deployment group for an EC2/On-Premises blue/green deployment (console)", "href" : "deployment-groups-create-blue-green.html" }, { "title" : "Create a deployment group for an Amazon ECS deployment (console)", "href" : "deployment-groups-create-ecs.html" }, { "title" : "Set up a load balancer in Elastic Load Balancing for CodeDeploy Amazon EC2 deployments", "href" : "deployment-groups-create-load-balancer.html" }, { "title" : "Set up a load balancer, target groups, and listeners for CodeDeploy Amazon ECS deployments", "href" : "deployment-groups-create-load-balancer-for-ecs.html" }, { "title" : "Create a deployment group (CLI)", "href" : "deployment-groups-create-cli.html" } ] }, { "title" : "View deployment group details", "href" : "deployment-groups-view-details.html" }, { "title" : "Change deployment group settings", "href" : "deployment-groups-edit.html" }, { "title" : "Configure advanced options for a deployment group", "href" : "deployment-groups-configure-advanced-options.html" }, { "title" : "Delete a deployment group", "href" : "deployment-groups-delete.html" } ] }, { "title" : "Working with application revisions", "href" : "application-revisions.html", "contents" : [ { "title" : "Plan a revision", "href" : "application-revisions-plan.html" }, { "title" : "Add an AppSpec File", "href" : "application-revisions-appspec-file.html" }, { "title" : "Choose a repository type", "href" : "application-revisions-repository-type.html" }, { "title" : "Push a revision", "href" : "application-revisions-push.html" }, { "title" : "View application revision details", "href" : "application-revisions-view-details.html" }, { "title" : "Register an application revision", "href" : "application-revisions-register.html" } ] }, { "title" : "Working with deployments", "href" : "deployments.html", "contents" : [ { "title" : "Create a deployment", "href" : "deployments-create.html", "contents" : [ { "title" : "Deployment prerequisites", "href" : "deployments-create-prerequisites.html" }, { "title" : "Create an Amazon ECS Compute Platform deployment (console)", "href" : "deployments-create-console-ecs.html" }, { "title" : "Create an AWS Lambda Compute Platform deployment (console)", "href" : "deployments-create-console-lambda.html" }, { "title" : "Create an EC2/On-Premises Compute Platform deployment (console)", "href" : "deployments-create-console.html", "contents" : [ { "title" : "Specify information about a revision stored in an Amazon S3 bucket", "href" : "deployments-create-console-s3.html" }, { "title" : "Specify information about a revision stored in a GitHub repository", "href" : "deployments-create-console-github.html" } ] }, { "title" : "Create an Amazon ECS Compute Platform deployment (CLI)", "href" : "deployments-create-ecs-cli.html" }, { "title" : "Create an AWS Lambda Compute Platform deployment (CLI)", "href" : "deployments-create-lambda-cli.html" }, { "title" : "Create an EC2/On-Premises Compute Platform deployment (CLI)", "href" : "deployments-create-cli.html", "contents" : [ { "title" : "Connect a CodeDeploy application to a GitHub repository", "href" : "deployments-create-cli-github.html" } ] }, { "title" : "Create an Amazon ECS blue/green deployment through AWS CloudFormation", "href" : "deployments-create-ecs-cfn.html" } ] }, { "title" : "View deployment details", "href" : "deployments-view-details.html" }, { "title" : "View deployment log data", "href" : "deployments-view-logs.html" }, { "title" : "Stop a deployment", "href" : "deployments-stop.html" }, { "title" : "Redeploy and roll back a deployment", "href" : "deployments-rollback-and-redeploy.html" }, { "title" : "Deploy an application in a different AWS account", "href" : "deployments-cross-account.html" }, { "title" : "Validate a deployment package on a local machine", "href" : "deployments-local.html" } ] }, { "title" : "Monitoring deployments", "href" : "monitoring.html", "contents" : [ { "title" : "Monitoring deployments with Amazon CloudWatch tools", "href" : "monitoring-cloudwatch.html", "contents" : [ { "title" : "Monitoring deployments with CloudWatch alarms", "href" : "monitoring-create-alarms.html", "contents" : [ { "title" : "Grant CloudWatch permissions to a service role", "href" : "monitoring-create-alarms-grant-permissions.html" } ] }, { "title" : "Monitoring deployments with Amazon CloudWatch Events", "href" : "monitoring-cloudwatch-events.html" } ] }, { "title" : "Monitoring deployments with AWS CloudTrail", "href" : "monitoring-cloudtrail.html" }, { "title" : "Monitoring deployments with Amazon SNS event notifications", "href" : "monitoring-sns-event-notifications.html", "contents" : [ { "title" : "Grant Amazon SNS permissions to a service role", "href" : "monitoring-sns-event-notifications-permisssions.html" }, { "title" : "Create a trigger for a CodeDeploy event", "href" : "monitoring-sns-event-notifications-create-trigger.html" }, { "title" : "Edit a trigger in a deployment group", "href" : "monitoring-sns-event-notifications-edit-trigger.html" }, { "title" : "Delete a trigger from a deployment group", "href" : "monitoring-sns-event-notifications-delete-trigger.html" }, { "title" : "JSON data formats for triggers", "href" : "monitoring-sns-event-notifications-json-format.html" } ] } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS CodeDeploy works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "AWS managed (predefined) policies for CodeDeploy", "href" : "managed-policies.html" }, { "title" : "CodeDeploy updates to AWS managed policies", "href" : "managed-policies-updates.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" }, { "title" : "CodeDeploy permissions reference", "href" : "auth-and-access-control-permissions-reference.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "security_confused_deputy.html" } ] }, { "title" : "Incident response", "href" : "incident-response.html" }, { "title" : "Compliance validation", "href" : "CodeDeploy-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Reference", "href" : "reference.html", "contents" : [ { "title" : "AppSpec file reference", "href" : "reference-appspec-file.html", "contents" : [ { "title" : "AppSpec File structure", "href" : "reference-appspec-file-structure.html", "contents" : [ { "title" : "AppSpec 'files' section (EC2/On-Premises deployments only)", "href" : "reference-appspec-file-structure-files.html" }, { "title" : "AppSpec 'resources' section (Amazon ECS and AWS Lambda deployments only)", "href" : "reference-appspec-file-structure-resources.html" }, { "title" : "AppSpec 'permissions' section (EC2/On-Premises deployments only)", "href" : "reference-appspec-file-structure-permissions.html" }, { "title" : "AppSpec 'hooks' section", "href" : "reference-appspec-file-structure-hooks.html" } ] }, { "title" : "AppSpec File example", "href" : "reference-appspec-file-example.html" }, { "title" : "Validate your AppSpec File and file location", "href" : "reference-appspec-file-validate.html" } ] }, { "title" : "Agent configuration reference", "href" : "reference-agent-configuration.html" }, { "title" : "AWS CloudFormation template reference", "href" : "reference-cloudformation-templates.html" }, { "title" : "Use CodeDeploy with Amazon Virtual Private Cloud", "href" : "vpc-endpoints.html" }, { "title" : "Resource kit reference", "href" : "resource-kit.html" }, { "title" : "Quotas", "href" : "limits.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "General troubleshooting issues", "href" : "troubleshooting-general.html" }, { "title" : "Troubleshoot EC2/On-Premises deployment issues", "href" : "troubleshooting-deployments.html" }, { "title" : "Troubleshoot Amazon ECS deployment issues", "href" : "troubleshooting-ecs.html" }, { "title" : "Troubleshoot AWS Lambda deployment issues", "href" : "troubleshooting-deployments-lambda.html" }, { "title" : "Troubleshoot deployment group issues", "href" : "troubleshooting-deployment-groups.html" }, { "title" : "Troubleshoot instance issues", "href" : "troubleshooting-ec2-instances.html" }, { "title" : "Troubleshoot GitHub token issues", "href" : "troubleshooting-github-token-issues.html" }, { "title" : "Troubleshoot Amazon EC2 Auto Scaling issues", "href" : "troubleshooting-auto-scaling.html" }, { "title" : "Error codes", "href" : "error-codes.html" } ] }, { "title" : "Resources", "href" : "resources.html" }, { "title" : "Document history", "href" : "document-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/codedeploy/latest/userguide/",
+    "service": "codedeploy",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is CodeDeploy?",
+                "href": "welcome.html",
+                "contents": [
+                    {
+                        "title": "Primary components",
+                        "href": "primary-components.html"
+                    },
+                    {
+                        "title": "Deployments",
+                        "href": "deployment-steps.html",
+                        "contents": [
+                            {
+                                "title": "Deployments on an AWS Lambda Compute Platform",
+                                "href": "deployment-steps-lambda.html"
+                            },
+                            {
+                                "title": "Deployments on an Amazon ECS Compute Platform",
+                                "href": "deployment-steps-ecs.html"
+                            },
+                            {
+                                "title": "Deployments on an EC2/On-Premises Compute Platform",
+                                "href": "deployment-steps-server.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Application specification files",
+                        "href": "application-specification-files.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started-codedeploy.html",
+                "contents": [
+                    {
+                        "title": "Step 1: Setting up",
+                        "href": "getting-started-setting-up.html"
+                    },
+                    {
+                        "title": "Step 2: Create a service role",
+                        "href": "getting-started-create-service-role.html"
+                    },
+                    {
+                        "title": "Step 3: Limit the CodeDeploy user's permissions",
+                        "href": "getting-started-policy.html"
+                    },
+                    {
+                        "title": "Step 4: Create an IAM instance profile",
+                        "href": "getting-started-create-iam-instance-profile.html"
+                    }
+                ]
+            },
+            {
+                "title": "Product and service integrations",
+                "href": "integrations.html",
+                "contents": [
+                    {
+                        "title": "Integration with other AWS services",
+                        "href": "integrations-aws.html",
+                        "contents": [
+                            {
+                                "title": "Amazon EC2 Auto Scaling",
+                                "href": "integrations-aws-auto-scaling.html"
+                            },
+                            {
+                                "title": "Elastic Load Balancing",
+                                "href": "integrations-aws-elastic-load-balancing.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Integration with partner products and services",
+                        "href": "integrations-partners.html",
+                        "contents": [
+                            {
+                                "title": "GitHub",
+                                "href": "integrations-partners-github.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Integration examples from the community",
+                        "href": "integrations-community.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tutorials",
+                "href": "tutorials.html",
+                "contents": [
+                    {
+                        "title": "Tutorial: Deploy WordPress to a non-Windows instance",
+                        "href": "tutorials-wordpress.html",
+                        "contents": [
+                            {
+                                "title": "Step 1: Launch an Amazon EC2 instance",
+                                "href": "tutorials-wordpress-launch-instance.html"
+                            },
+                            {
+                                "title": "Step 2: Configure your source content",
+                                "href": "tutorials-wordpress-configure-content.html"
+                            },
+                            {
+                                "title": "Step 3: Upload your application to Amazon S3",
+                                "href": "tutorials-wordpress-upload-application.html"
+                            },
+                            {
+                                "title": "Step 4: Deploy your application",
+                                "href": "tutorials-wordpress-deploy-application.html"
+                            },
+                            {
+                                "title": "Step 5: Update and redeploy your application",
+                                "href": "tutorials-wordpress-update-and-redeploy-application.html"
+                            },
+                            {
+                                "title": "Step 6: Clean up",
+                                "href": "tutorials-wordpress-clean-up.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tutorial: Deploy a Hello World application to a Windows Server instance",
+                        "href": "tutorials-windows.html",
+                        "contents": [
+                            {
+                                "title": "Step 1: Launch an Amazon EC2 instance",
+                                "href": "tutorials-windows-launch-instance.html"
+                            },
+                            {
+                                "title": "Step 2: Configure your source content",
+                                "href": "tutorials-windows-configure-content.html"
+                            },
+                            {
+                                "title": "Step 3: Upload your application to Amazon S3",
+                                "href": "tutorials-windows-upload-application.html"
+                            },
+                            {
+                                "title": "Step 4: Deploy your application",
+                                "href": "tutorials-windows-deploy-application.html"
+                            },
+                            {
+                                "title": "Step 5: Update and redeploy your application",
+                                "href": "tutorials-windows-update-and-redeploy-application.html"
+                            },
+                            {
+                                "title": "Step 6: Clean up",
+                                "href": "tutorials-windows-clean-up.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tutorial: Deploy an application to an on-premises instance",
+                        "href": "tutorials-on-premises-instance.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "tutorials-on-premises-instance-prerequisites.html"
+                            },
+                            {
+                                "title": "Step 1: Configure the on-premises instance",
+                                "href": "tutorials-on-premises-instance-1-configure-instance.html"
+                            },
+                            {
+                                "title": "Step 2: Create a sample application revision",
+                                "href": "tutorials-on-premises-instance-2-create-sample-revision.html"
+                            },
+                            {
+                                "title": "Step 3: Bundle and upload your application revision to Amazon S3",
+                                "href": "tutorials-on-premises-instance-3-bundle-sample-revision.html"
+                            },
+                            {
+                                "title": "Step 4: Deploy your application revision",
+                                "href": "tutorials-on-premises-instance-4-deploy-sample-revision.html"
+                            },
+                            {
+                                "title": "Step 5: Verify your deployment",
+                                "href": "tutorials-on-premises-instance-5-verify-deployment.html"
+                            },
+                            {
+                                "title": "Step 6: Clean up resources",
+                                "href": "tutorials-on-premises-instance-6-clean-up-resources.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tutorial: Deploy to an Auto Scaling group",
+                        "href": "tutorials-auto-scaling-group.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "tutorials-auto-scaling-group-prerequisites.html"
+                            },
+                            {
+                                "title": "Step 1: Create and configure the Auto Scaling group",
+                                "href": "tutorials-auto-scaling-group-create-auto-scaling-group.html"
+                            },
+                            {
+                                "title": "Step 2: Deploy the application to the Auto Scaling group",
+                                "href": "tutorials-auto-scaling-group-create-deployment.html"
+                            },
+                            {
+                                "title": "Step 3: Check your results",
+                                "href": "tutorials-auto-scaling-group-verify.html"
+                            },
+                            {
+                                "title": "Step 4: Increase the number of Amazon EC2 instances in the Auto Scaling group",
+                                "href": "tutorials-auto-scaling-group-scale-up.html"
+                            },
+                            {
+                                "title": "Step 5: Check your results again",
+                                "href": "tutorials-auto-scaling-group-reverify.html"
+                            },
+                            {
+                                "title": "Step 6: Clean up",
+                                "href": "tutorials-auto-scaling-group-clean-up.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tutorial: Deploy an application from GitHub",
+                        "href": "tutorials-github.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "tutorials-github-prerequisites.html"
+                            },
+                            {
+                                "title": "Step 1: Set up a GitHub account",
+                                "href": "tutorials-github-create-github-account.html"
+                            },
+                            {
+                                "title": "Step 2: Create a GitHub repository",
+                                "href": "tutorials-github-create-github-repository.html"
+                            },
+                            {
+                                "title": "Step 3: Upload a sample application to your GitHub repository",
+                                "href": "tutorials-github-upload-sample-revision.html"
+                            },
+                            {
+                                "title": "Step 4: Provision an instance",
+                                "href": "tutorials-github-provision-instance.html"
+                            },
+                            {
+                                "title": "Step 5: Create an application and deployment group",
+                                "href": "tutorials-github-create-application.html"
+                            },
+                            {
+                                "title": "Step 6: Deploy the application to the instance",
+                                "href": "tutorials-github-deploy-application.html"
+                            },
+                            {
+                                "title": "Step 7: Monitor and verify the deployment",
+                                "href": "tutorials-github-verify.html"
+                            },
+                            {
+                                "title": "Step 8: Clean up",
+                                "href": "tutorials-github-clean-up.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tutorial: Deploy an application into Amazon ECS",
+                        "href": "tutorial-ecs-deployment.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "tutorial-ecs-prereqs.html"
+                            },
+                            {
+                                "title": "Step 1: Update your Amazon ECS application",
+                                "href": "tutorial-ecs-update-the-ecs-application.html"
+                            },
+                            {
+                                "title": "Step 2: Create the AppSpec file",
+                                "href": "tutorial-ecs-create-appspec-file.html"
+                            },
+                            {
+                                "title": "Step 3: Use the CodeDeploy console to deploy your application",
+                                "href": "tutorial-ecs-deployment-deploy.html"
+                            },
+                            {
+                                "title": "Step 4: Clean up",
+                                "href": "tutorial-ecs-clean-up.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tutorial: Deploy an Amazon ECS service with a validation test",
+                        "href": "tutorial-ecs-deployment-with-hooks.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "tutorial-ecs-with-hooks-prereqs.html"
+                            },
+                            {
+                                "title": "Step 1: Create a test listener",
+                                "href": "tutorial-ecs-with-hooks-create-second-listener.html"
+                            },
+                            {
+                                "title": "Step 2: Update your Amazon ECS application",
+                                "href": "tutorial-ecs-with-hooks-update-the-ecs-application.html"
+                            },
+                            {
+                                "title": "Step 3: Create a lifecycle hook Lambda function",
+                                "href": "tutorial-ecs-with-hooks-create-hooks.html"
+                            },
+                            {
+                                "title": "Step 4: Update your AppSpec file",
+                                "href": "tutorial-ecs-with-hooks-create-appspec-file.html"
+                            },
+                            {
+                                "title": "Step 5: Use the CodeDeploy console to deploy your Amazon ECS service",
+                                "href": "tutorial-ecs-with-hooks-deployment.html"
+                            },
+                            {
+                                "title": "Step 6: View your Lambda hook function output in CloudWatch Logs",
+                                "href": "tutorial-ecs-with-hooks-view-cw-logs.html"
+                            },
+                            {
+                                "title": "Step 7: Clean up",
+                                "href": "tutoria-ecs-with-hooks-clean-up.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tutorial: Deploy a Lambda function using AWS SAM",
+                        "href": "tutorial-lambda-sam.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "tutorial-lambda-sam-prereqs.html"
+                            },
+                            {
+                                "title": "Step 1: Set up your infrastructure",
+                                "href": "tutorial-lambda-sam-setup-infrastructure.html",
+                                "contents": [
+                                    {
+                                        "title": "Create your files",
+                                        "href": "tutorial-lambda-create-files.html",
+                                        "contents": [
+                                            {
+                                                "title": "Create your AWS SAM template",
+                                                "href": "tutorial-lambda-sam-template.html"
+                                            },
+                                            {
+                                                "title": "Create a file for your Lambda function",
+                                                "href": "tutorial-lambda-sam-create-lambda-function.html"
+                                            },
+                                            {
+                                                "title": "Create a file for your BeforeAllowTraffic Lambda function",
+                                                "href": "tutorial-lambda-sam-create-lambda-before-traffic.html"
+                                            },
+                                            {
+                                                "title": "Create a file for your AfterAllowTraffic Lambda function",
+                                                "href": "tutorial-lambda-sam-create-lambda-after-traffic.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Package the AWS SAM application",
+                                        "href": "tutorial-lambda-sam-package.html"
+                                    },
+                                    {
+                                        "title": "Deploy the AWS SAM application",
+                                        "href": "tutorial-lambda-sam-deploy.html"
+                                    },
+                                    {
+                                        "title": "(Optional) inspect and test your infrastructure",
+                                        "href": "tutorial-lambda-sam-confirm-components.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Step 2: Update the Lambda function",
+                                "href": "tutorial-lambda-sam-update-function.html"
+                            },
+                            {
+                                "title": "Step 3: Deploy the updated Lambda function",
+                                "href": "tutorial-lambda-sam-deploy-update.html"
+                            },
+                            {
+                                "title": "Step 4: View your deployment results",
+                                "href": "tutorial-lambda-sam-deploy-view-results.html"
+                            },
+                            {
+                                "title": "Step 5: Clean up",
+                                "href": "tutorial-lambda-clean-up.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Working with the CodeDeploy agent",
+                "href": "codedeploy-agent.html",
+                "contents": [
+                    {
+                        "title": "Managing CodeDeploy agent operations",
+                        "href": "codedeploy-agent-operations.html",
+                        "contents": [
+                            {
+                                "title": "Verify the CodeDeploy agent is running",
+                                "href": "codedeploy-agent-operations-verify.html"
+                            },
+                            {
+                                "title": "Determine the version of the CodeDeploy agent",
+                                "href": "codedeploy-agent-operations-version.html"
+                            },
+                            {
+                                "title": "Install the CodeDeploy agent",
+                                "href": "codedeploy-agent-operations-install.html",
+                                "contents": [
+                                    {
+                                        "title": "Install the CodeDeploy agent using AWS Systems Manager",
+                                        "href": "codedeploy-agent-operations-install-ssm.html"
+                                    },
+                                    {
+                                        "title": "Install the CodeDeploy agent using the command line",
+                                        "href": "codedeploy-agent-operations-install-cli.html",
+                                        "contents": [
+                                            {
+                                                "title": "Install the CodeDeploy agent for Amazon Linux or RHEL",
+                                                "href": "codedeploy-agent-operations-install-linux.html"
+                                            },
+                                            {
+                                                "title": "Install the CodeDeploy agent for Ubuntu Server",
+                                                "href": "codedeploy-agent-operations-install-ubuntu.html"
+                                            },
+                                            {
+                                                "title": "Install the CodeDeploy agent for Windows Server",
+                                                "href": "codedeploy-agent-operations-install-windows.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Update the CodeDeploy agent",
+                                "href": "codedeploy-agent-operations-update.html",
+                                "contents": [
+                                    {
+                                        "title": "Update the CodeDeploy agent on Amazon Linux or RHEL",
+                                        "href": "codedeploy-agent-operations-update-linux.html"
+                                    },
+                                    {
+                                        "title": "Update the CodeDeploy agent on Ubuntu Server",
+                                        "href": "codedeploy-agent-operations-update-ubuntu.html"
+                                    },
+                                    {
+                                        "title": "Update the CodeDeploy agent on Windows Server",
+                                        "href": "codedeploy-agent-operations-update-windows.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Uninstall the CodeDeploy agent",
+                                "href": "codedeploy-agent-operations-uninstall.html"
+                            },
+                            {
+                                "title": "Send CodeDeploy agent logs to CloudWatch",
+                                "href": "codedeploy-agent-operations-cloudwatch-agent.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Working with instances",
+                "href": "instances.html",
+                "contents": [
+                    {
+                        "title": "Tagging instances for CodeDeploy deployments",
+                        "href": "instances-tagging.html"
+                    },
+                    {
+                        "title": "Working with Amazon EC2 instances",
+                        "href": "instances-ec2.html",
+                        "contents": [
+                            {
+                                "title": "Create an Amazon EC2 instance for CodeDeploy",
+                                "href": "instances-ec2-create.html"
+                            },
+                            {
+                                "title": "Create an Amazon EC2 instance (AWS CloudFormation template)",
+                                "href": "instances-ec2-create-cloudformation-template.html"
+                            },
+                            {
+                                "title": "Configure an Amazon EC2 instance",
+                                "href": "instances-ec2-configure.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with on-premises instances",
+                        "href": "instances-on-premises.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites for configuring an on-premises instance",
+                                "href": "instances-on-premises-prerequisites.html"
+                            },
+                            {
+                                "title": "Register an on-premises instance",
+                                "href": "on-premises-instances-register.html",
+                                "contents": [
+                                    {
+                                        "title": "Use the register-on-premises-instance command (IAM Session ARN) to register an on-premises instance",
+                                        "href": "register-on-premises-instance-iam-session-arn.html"
+                                    },
+                                    {
+                                        "title": "Use the register command (IAM user ARN) to register an on-premises instance",
+                                        "href": "instances-on-premises-register-instance.html"
+                                    },
+                                    {
+                                        "title": "Use the register-on-premises-instance command (IAM user ARN) to register an on-premises instance",
+                                        "href": "register-on-premises-instance-iam-user-arn.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Managing on-premises instances operations",
+                                "href": "on-premises-instances-operations.html",
+                                "contents": [
+                                    {
+                                        "title": "Get information about a single on-premises instance",
+                                        "href": "on-premises-instances-operations-view-details-single.html"
+                                    },
+                                    {
+                                        "title": "Get information about multiple on-premises instances",
+                                        "href": "on-premises-instances-operations-view-details-multiple.html"
+                                    },
+                                    {
+                                        "title": "Manually remove on-premises instance tags from an on-premises instance",
+                                        "href": "on-premises-instances-operations-remove-tags.html"
+                                    },
+                                    {
+                                        "title": "Automatically uninstall the CodeDeploy agent and remove the configuration file from an on-premises instance",
+                                        "href": "on-premises-instances-operations-uninstall-agent.html"
+                                    },
+                                    {
+                                        "title": "Automatically deregister an on-premises instance",
+                                        "href": "on-premises-instances-operations-deregister-automatically.html"
+                                    },
+                                    {
+                                        "title": "Manually deregister an on-premises instance",
+                                        "href": "on-premises-instances-operations-deregister-manually.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "View instance details",
+                        "href": "instances-view-details.html"
+                    },
+                    {
+                        "title": "Instance health",
+                        "href": "instances-health.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with deployment configurations",
+                "href": "deployment-configurations.html",
+                "contents": [
+                    {
+                        "title": "Create a deployment configuration",
+                        "href": "deployment-configurations-create.html"
+                    },
+                    {
+                        "title": "View deployment configuration details",
+                        "href": "deployment-configurations-view-details.html"
+                    },
+                    {
+                        "title": "Delete a deployment configuration",
+                        "href": "deployment-configurations-delete.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with applications",
+                "href": "applications.html",
+                "contents": [
+                    {
+                        "title": "Create an application",
+                        "href": "applications-create.html",
+                        "contents": [
+                            {
+                                "title": "Create an application for an in-place deployment (console)",
+                                "href": "applications-create-in-place.html"
+                            },
+                            {
+                                "title": "Create an application for a blue/green deployment (console)",
+                                "href": "applications-create-blue-green.html"
+                            },
+                            {
+                                "title": "Create an application for an Amazon ECS service deployment (console)",
+                                "href": "applications-create-ecs.html"
+                            },
+                            {
+                                "title": "Create an application for an AWS Lambda function deployment (console)",
+                                "href": "applications-create-lambda.html"
+                            },
+                            {
+                                "title": "Create an application (CLI)",
+                                "href": "applications-create-cli.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "View application details",
+                        "href": "applications-view-details.html"
+                    },
+                    {
+                        "title": "Create a notification rule",
+                        "href": "notification-rule-create.html"
+                    },
+                    {
+                        "title": "Rename an application",
+                        "href": "applications-rename.html"
+                    },
+                    {
+                        "title": "Delete an application",
+                        "href": "applications-delete.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with deployment groups",
+                "href": "deployment-groups.html",
+                "contents": [
+                    {
+                        "title": "Create a deployment group",
+                        "href": "deployment-groups-create.html",
+                        "contents": [
+                            {
+                                "title": "Create a deployment group for an in-place deployment (console)",
+                                "href": "deployment-groups-create-in-place.html"
+                            },
+                            {
+                                "title": "Create a deployment group for an EC2/On-Premises blue/green deployment (console)",
+                                "href": "deployment-groups-create-blue-green.html"
+                            },
+                            {
+                                "title": "Create a deployment group for an Amazon ECS deployment (console)",
+                                "href": "deployment-groups-create-ecs.html"
+                            },
+                            {
+                                "title": "Set up a load balancer in Elastic Load Balancing for CodeDeploy Amazon EC2 deployments",
+                                "href": "deployment-groups-create-load-balancer.html"
+                            },
+                            {
+                                "title": "Set up a load balancer, target groups, and listeners for CodeDeploy Amazon ECS deployments",
+                                "href": "deployment-groups-create-load-balancer-for-ecs.html"
+                            },
+                            {
+                                "title": "Create a deployment group (CLI)",
+                                "href": "deployment-groups-create-cli.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "View deployment group details",
+                        "href": "deployment-groups-view-details.html"
+                    },
+                    {
+                        "title": "Change deployment group settings",
+                        "href": "deployment-groups-edit.html"
+                    },
+                    {
+                        "title": "Configure advanced options for a deployment group",
+                        "href": "deployment-groups-configure-advanced-options.html"
+                    },
+                    {
+                        "title": "Delete a deployment group",
+                        "href": "deployment-groups-delete.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with application revisions",
+                "href": "application-revisions.html",
+                "contents": [
+                    {
+                        "title": "Plan a revision",
+                        "href": "application-revisions-plan.html"
+                    },
+                    {
+                        "title": "Add an AppSpec File",
+                        "href": "application-revisions-appspec-file.html"
+                    },
+                    {
+                        "title": "Choose a repository type",
+                        "href": "application-revisions-repository-type.html"
+                    },
+                    {
+                        "title": "Push a revision",
+                        "href": "application-revisions-push.html"
+                    },
+                    {
+                        "title": "View application revision details",
+                        "href": "application-revisions-view-details.html"
+                    },
+                    {
+                        "title": "Register an application revision",
+                        "href": "application-revisions-register.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with deployments",
+                "href": "deployments.html",
+                "contents": [
+                    {
+                        "title": "Create a deployment",
+                        "href": "deployments-create.html",
+                        "contents": [
+                            {
+                                "title": "Deployment prerequisites",
+                                "href": "deployments-create-prerequisites.html"
+                            },
+                            {
+                                "title": "Create an Amazon ECS Compute Platform deployment (console)",
+                                "href": "deployments-create-console-ecs.html"
+                            },
+                            {
+                                "title": "Create an AWS Lambda Compute Platform deployment (console)",
+                                "href": "deployments-create-console-lambda.html"
+                            },
+                            {
+                                "title": "Create an EC2/On-Premises Compute Platform deployment (console)",
+                                "href": "deployments-create-console.html",
+                                "contents": [
+                                    {
+                                        "title": "Specify information about a revision stored in an Amazon S3 bucket",
+                                        "href": "deployments-create-console-s3.html"
+                                    },
+                                    {
+                                        "title": "Specify information about a revision stored in a GitHub repository",
+                                        "href": "deployments-create-console-github.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Create an Amazon ECS Compute Platform deployment (CLI)",
+                                "href": "deployments-create-ecs-cli.html"
+                            },
+                            {
+                                "title": "Create an AWS Lambda Compute Platform deployment (CLI)",
+                                "href": "deployments-create-lambda-cli.html"
+                            },
+                            {
+                                "title": "Create an EC2/On-Premises Compute Platform deployment (CLI)",
+                                "href": "deployments-create-cli.html",
+                                "contents": [
+                                    {
+                                        "title": "Connect a CodeDeploy application to a GitHub repository",
+                                        "href": "deployments-create-cli-github.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Create an Amazon ECS blue/green deployment through AWS CloudFormation",
+                                "href": "deployments-create-ecs-cfn.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "View deployment details",
+                        "href": "deployments-view-details.html"
+                    },
+                    {
+                        "title": "View deployment log data",
+                        "href": "deployments-view-logs.html"
+                    },
+                    {
+                        "title": "Stop a deployment",
+                        "href": "deployments-stop.html"
+                    },
+                    {
+                        "title": "Redeploy and roll back a deployment",
+                        "href": "deployments-rollback-and-redeploy.html"
+                    },
+                    {
+                        "title": "Deploy an application in a different AWS account",
+                        "href": "deployments-cross-account.html"
+                    },
+                    {
+                        "title": "Validate a deployment package on a local machine",
+                        "href": "deployments-local.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring deployments",
+                "href": "monitoring.html",
+                "contents": [
+                    {
+                        "title": "Monitoring deployments with Amazon CloudWatch tools",
+                        "href": "monitoring-cloudwatch.html",
+                        "contents": [
+                            {
+                                "title": "Monitoring deployments with CloudWatch alarms",
+                                "href": "monitoring-create-alarms.html",
+                                "contents": [
+                                    {
+                                        "title": "Grant CloudWatch permissions to a service role",
+                                        "href": "monitoring-create-alarms-grant-permissions.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Monitoring deployments with Amazon CloudWatch Events",
+                                "href": "monitoring-cloudwatch-events.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Monitoring deployments with AWS CloudTrail",
+                        "href": "monitoring-cloudtrail.html"
+                    },
+                    {
+                        "title": "Monitoring deployments with Amazon SNS event notifications",
+                        "href": "monitoring-sns-event-notifications.html",
+                        "contents": [
+                            {
+                                "title": "Grant Amazon SNS permissions to a service role",
+                                "href": "monitoring-sns-event-notifications-permisssions.html"
+                            },
+                            {
+                                "title": "Create a trigger for a CodeDeploy event",
+                                "href": "monitoring-sns-event-notifications-create-trigger.html"
+                            },
+                            {
+                                "title": "Edit a trigger in a deployment group",
+                                "href": "monitoring-sns-event-notifications-edit-trigger.html"
+                            },
+                            {
+                                "title": "Delete a trigger from a deployment group",
+                                "href": "monitoring-sns-event-notifications-delete-trigger.html"
+                            },
+                            {
+                                "title": "JSON data formats for triggers",
+                                "href": "monitoring-sns-event-notifications-json-format.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS CodeDeploy works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "AWS managed (predefined) policies for CodeDeploy",
+                                "href": "managed-policies.html"
+                            },
+                            {
+                                "title": "CodeDeploy updates to AWS managed policies",
+                                "href": "managed-policies-updates.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            },
+                            {
+                                "title": "CodeDeploy permissions reference",
+                                "href": "auth-and-access-control-permissions-reference.html"
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention",
+                                "href": "security_confused_deputy.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Incident response",
+                        "href": "incident-response.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "CodeDeploy-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Reference",
+                "href": "reference.html",
+                "contents": [
+                    {
+                        "title": "AppSpec file reference",
+                        "href": "reference-appspec-file.html",
+                        "contents": [
+                            {
+                                "title": "AppSpec File structure",
+                                "href": "reference-appspec-file-structure.html",
+                                "contents": [
+                                    {
+                                        "title": "AppSpec 'files' section (EC2/On-Premises deployments only)",
+                                        "href": "reference-appspec-file-structure-files.html"
+                                    },
+                                    {
+                                        "title": "AppSpec 'resources' section (Amazon ECS and AWS Lambda deployments only)",
+                                        "href": "reference-appspec-file-structure-resources.html"
+                                    },
+                                    {
+                                        "title": "AppSpec 'permissions' section (EC2/On-Premises deployments only)",
+                                        "href": "reference-appspec-file-structure-permissions.html"
+                                    },
+                                    {
+                                        "title": "AppSpec 'hooks' section",
+                                        "href": "reference-appspec-file-structure-hooks.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "AppSpec File example",
+                                "href": "reference-appspec-file-example.html"
+                            },
+                            {
+                                "title": "Validate your AppSpec File and file location",
+                                "href": "reference-appspec-file-validate.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Agent configuration reference",
+                        "href": "reference-agent-configuration.html"
+                    },
+                    {
+                        "title": "AWS CloudFormation template reference",
+                        "href": "reference-cloudformation-templates.html"
+                    },
+                    {
+                        "title": "Use CodeDeploy with Amazon Virtual Private Cloud",
+                        "href": "vpc-endpoints.html"
+                    },
+                    {
+                        "title": "Resource kit reference",
+                        "href": "resource-kit.html"
+                    },
+                    {
+                        "title": "Quotas",
+                        "href": "limits.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "General troubleshooting issues",
+                        "href": "troubleshooting-general.html"
+                    },
+                    {
+                        "title": "Troubleshoot EC2/On-Premises deployment issues",
+                        "href": "troubleshooting-deployments.html"
+                    },
+                    {
+                        "title": "Troubleshoot Amazon ECS deployment issues",
+                        "href": "troubleshooting-ecs.html"
+                    },
+                    {
+                        "title": "Troubleshoot AWS Lambda deployment issues",
+                        "href": "troubleshooting-deployments-lambda.html"
+                    },
+                    {
+                        "title": "Troubleshoot deployment group issues",
+                        "href": "troubleshooting-deployment-groups.html"
+                    },
+                    {
+                        "title": "Troubleshoot instance issues",
+                        "href": "troubleshooting-ec2-instances.html"
+                    },
+                    {
+                        "title": "Troubleshoot GitHub token issues",
+                        "href": "troubleshooting-github-token-issues.html"
+                    },
+                    {
+                        "title": "Troubleshoot Amazon EC2 Auto Scaling issues",
+                        "href": "troubleshooting-auto-scaling.html"
+                    },
+                    {
+                        "title": "Error codes",
+                        "href": "error-codes.html"
+                    }
+                ]
+            },
+            {
+                "title": "Resources",
+                "href": "resources.html"
+            },
+            {
+                "title": "Document history",
+                "href": "document-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

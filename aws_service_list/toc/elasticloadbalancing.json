@@ -1,1 +1,76 @@
-{ "contents" : [ { "title" : "What is Elastic Load Balancing?", "href" : "what-is-load-balancing.html" }, { "title" : "How Elastic Load Balancing works", "href" : "how-elastic-load-balancing-works.html" }, { "title" : "Getting started", "href" : "load-balancer-getting-started.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and access management", "href" : "load-balancer-authentication-access-control.html", "contents" : [ { "title" : "How Elastic Load Balancing works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "API permissions", "href" : "elb-api-permissions.html" }, { "title" : "Resource tagging API permissions", "href" : "tagging-resources-during-creation.html" }, { "title" : "Service-linked role", "href" : "elb-service-linked-roles.html" }, { "title" : "AWS managed policies", "href" : "managed-policies.html" } ] }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "AWS PrivateLink", "href" : "load-balancer-vpc-endpoints.html" } ] }, { "title" : "Migrate your Classic Load Balancer", "href" : "migrate-classic-load-balancer.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/",
+    "service": "elasticloadbalancing",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Elastic Load Balancing?",
+                "href": "what-is-load-balancing.html"
+            },
+            {
+                "title": "How Elastic Load Balancing works",
+                "href": "how-elastic-load-balancing-works.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "load-balancer-getting-started.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "load-balancer-authentication-access-control.html",
+                        "contents": [
+                            {
+                                "title": "How Elastic Load Balancing works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "API permissions",
+                                "href": "elb-api-permissions.html"
+                            },
+                            {
+                                "title": "Resource tagging API permissions",
+                                "href": "tagging-resources-during-creation.html"
+                            },
+                            {
+                                "title": "Service-linked role",
+                                "href": "elb-service-linked-roles.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "managed-policies.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "AWS PrivateLink",
+                        "href": "load-balancer-vpc-endpoints.html"
+                    }
+                ]
+            },
+            {
+                "title": "Migrate your Classic Load Balancer",
+                "href": "migrate-classic-load-balancer.html"
+            }
+        ]
+    }
+}

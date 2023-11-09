@@ -1,1 +1,894 @@
-{ "contents" : [ { "title" : "What is Amazon EKS?", "href" : "what-is-eks.html", "contents" : [ { "title" : "Common use cases", "href" : "common-use-cases.html" }, { "title" : "Architecture", "href" : "eks-architecture.html" }, { "title" : "Deployment options", "href" : "eks-deployment-options.html" } ] }, { "title" : "Getting started with Amazon EKS", "href" : "getting-started.html", "contents" : [ { "title" : "Installing kubectl", "href" : "install-kubectl.html" }, { "title" : "Installing eksctl", "href" : "eksctl.html" }, { "title" : "Create your first cluster – eksctl", "href" : "getting-started-eksctl.html" }, { "title" : "Create your first cluster – AWS Management Console", "href" : "getting-started-console.html" } ] }, { "title" : "Clusters", "href" : "clusters.html", "contents" : [ { "title" : "Creating a cluster", "href" : "create-cluster.html" }, { "title" : "Updating Kubernetes version", "href" : "update-cluster.html" }, { "title" : "Deleting a cluster", "href" : "delete-cluster.html" }, { "title" : "Configuring endpoint access", "href" : "cluster-endpoint.html" }, { "title" : "Enabling secret encryption", "href" : "enable-kms.html" }, { "title" : "Enabling Windows support", "href" : "windows-support.html" }, { "title" : "Private cluster requirements", "href" : "private-clusters.html" }, { "title" : "Kubernetes versions", "href" : "kubernetes-versions.html", "contents" : [ { "title" : "Standard support versions", "href" : "kubernetes-versions-standard.html" }, { "title" : "Extended support versions", "href" : "kubernetes-versions-extended.html" } ] }, { "title" : "Platform versions", "href" : "platform-versions.html" }, { "title" : "Autoscaling", "href" : "autoscaling.html" } ] }, { "title" : "Nodes", "href" : "eks-compute.html", "contents" : [ { "title" : "Managed node groups", "href" : "managed-node-groups.html", "contents" : [ { "title" : "Creating a managed node group", "href" : "create-managed-node-group.html" }, { "title" : "Updating a managed node group", "href" : "update-managed-node-group.html", "contents" : [ { "title" : "Managed node update behavior", "href" : "managed-node-update-behavior.html" } ] }, { "title" : "Node taints on managed node groups", "href" : "node-taints-managed-node-groups.html" }, { "title" : "Customizing managed nodes with launch templates", "href" : "launch-templates.html" }, { "title" : "Deleting a managed node group", "href" : "delete-managed-node-group.html" } ] }, { "title" : "Self-managed nodes", "href" : "worker.html", "contents" : [ { "title" : "Amazon Linux", "href" : "launch-workers.html", "contents" : [ { "title" : "Capacity Blocks for ML", "href" : "capacity-blocks.html" } ] }, { "title" : "Bottlerocket", "href" : "launch-node-bottlerocket.html" }, { "title" : "Windows", "href" : "launch-windows-workers.html" }, { "title" : "Updates", "href" : "update-workers.html", "contents" : [ { "title" : "Migrating to a new node group", "href" : "migrate-stack.html" }, { "title" : "Updating an existing node group", "href" : "update-stack.html" } ] } ] }, { "title" : "AWS Fargate", "href" : "fargate.html", "contents" : [ { "title" : "Getting started with Fargate", "href" : "fargate-getting-started.html" }, { "title" : "Fargate profile", "href" : "fargate-profile.html" }, { "title" : "Fargate Pod configuration", "href" : "fargate-pod-configuration.html" }, { "title" : "Fargate OS patching", "href" : "fargate-pod-patching.html" }, { "title" : "Fargate metrics", "href" : "monitoring-fargate-usage.html" }, { "title" : "Fargate logging", "href" : "fargate-logging.html" } ] }, { "title" : "Instance types", "href" : "choosing-instance-type.html" }, { "title" : "Amazon EKS optimized AMIs", "href" : "eks-optimized-amis.html", "contents" : [ { "title" : "Dockershim deprecation", "href" : "dockershim-deprecation.html" }, { "title" : "Amazon Linux", "href" : "eks-optimized-ami.html", "contents" : [ { "title" : "View versions", "href" : "eks-linux-ami-versions.html" }, { "title" : "Retrieve IDs", "href" : "retrieve-ami-id.html" }, { "title" : "Create a custom Amazon Linux AMI", "href" : "eks-ami-build-scripts.html", "contents" : [ { "title" : "Xilinx accelerated transcoding device support (VT1)", "href" : "vt1.html" }, { "title" : "Habana Deep Learning (DL1) device support", "href" : "dl1.html" } ] } ] }, { "title" : "Bottlerocket", "href" : "eks-optimized-ami-bottlerocket.html", "contents" : [ { "title" : "Retrieve IDs", "href" : "retrieve-ami-id-bottlerocket.html" }, { "title" : "Compliance support", "href" : "bottlerocket-compliance-support.html" } ] }, { "title" : "Ubuntu Linux", "href" : "eks-partner-amis.html" }, { "title" : "Windows", "href" : "eks-optimized-windows-ami.html", "contents" : [ { "title" : "View versions", "href" : "eks-ami-versions-windows.html" }, { "title" : "Retrieve IDs", "href" : "retrieve-windows-ami-id.html" }, { "title" : "Create a custom Windows AMI", "href" : "eks-custom-ami-windows.html" } ] } ] } ] }, { "title" : "Storage", "href" : "storage.html", "contents" : [ { "title" : "Amazon EBS CSI driver", "href" : "ebs-csi.html", "contents" : [ { "title" : "Create an IAM role", "href" : "csi-iam-role.html" }, { "title" : "Manage the Amazon EKS add-on", "href" : "managing-ebs-csi.html" }, { "title" : "Deploy a sample application", "href" : "ebs-sample-app.html" }, { "title" : "CSI migration FAQ", "href" : "ebs-csi-migration-faq.html" } ] }, { "title" : "Amazon EFS CSI driver", "href" : "efs-csi.html" }, { "title" : "Amazon FSx for Lustre CSI driver", "href" : "fsx-csi.html" }, { "title" : "Amazon FSx for NetApp ONTAP CSI driver", "href" : "fsx-ontap.html" }, { "title" : "Amazon FSx for OpenZFS CSI driver", "href" : "fsx-openzfs-csi.html" }, { "title" : "Amazon File Cache CSI driver", "href" : "file-cache-csi.html" } ] }, { "title" : "Networking", "href" : "eks-networking.html", "contents" : [ { "title" : "VPC and subnet requirements", "href" : "network_reqs.html" }, { "title" : "Creating a VPC", "href" : "creating-a-vpc.html" }, { "title" : "Security group requirements", "href" : "sec-group-reqs.html" }, { "title" : "Add-ons", "href" : "eks-networking-add-ons.html", "contents" : [ { "title" : "Amazon VPC CNI plugin for Kubernetes", "href" : "managing-vpc-cni.html", "contents" : [ { "title" : "Configure plugin for IAM account", "href" : "cni-iam-role.html" }, { "title" : "Use cases", "href" : "pod-networking-use-cases.html", "contents" : [ { "title" : "IPv6", "href" : "cni-ipv6.html" }, { "title" : "SNAT", "href" : "external-snat.html" }, { "title" : "Kubernetes network policies", "href" : "cni-network-policy.html" }, { "title" : "Custom networking", "href" : "cni-custom-network.html" }, { "title" : "Increase available IP addresses", "href" : "cni-increase-ip-addresses.html" }, { "title" : "Security groups for pods", "href" : "security-groups-for-pods.html" }, { "title" : "Multiple network interfaces for Pods", "href" : "pod-multiple-network-interfaces.html" } ] }, { "title" : "Alternate compatible CNI plugins", "href" : "alternate-cni-plugins.html" } ] }, { "title" : "AWS Load Balancer Controller", "href" : "aws-load-balancer-controller.html" }, { "title" : "CoreDNS", "href" : "managing-coredns.html" }, { "title" : "kube-proxy", "href" : "managing-kube-proxy.html" }, { "title" : "Calico network policy engine", "href" : "calico.html" } ] }, { "title" : "AWS PrivateLink", "href" : "vpc-interface-endpoints.html" } ] }, { "title" : "Workloads", "href" : "eks-workloads.html", "contents" : [ { "title" : "Sample application deployment", "href" : "sample-deployment.html" }, { "title" : "Vertical Pod Autoscaler", "href" : "vertical-pod-autoscaler.html" }, { "title" : "Horizontal Pod Autoscaler", "href" : "horizontal-pod-autoscaler.html" }, { "title" : "Network load balancing", "href" : "network-load-balancing.html" }, { "title" : "Application load balancing", "href" : "alb-ingress.html" }, { "title" : "Restrict service external IP address assignment", "href" : "restrict-service-external-ip.html" }, { "title" : "Copy an image to a repository", "href" : "copy-image-to-repository.html" }, { "title" : "Amazon container image registries", "href" : "add-ons-images.html" }, { "title" : "Amazon EKS add-ons", "href" : "eks-add-ons.html", "contents" : [ { "title" : "Managing add-ons", "href" : "managing-add-ons.html" }, { "title" : "Kubernetes field management", "href" : "kubernetes-field-management.html" } ] }, { "title" : "Verify container images", "href" : "image-verification.html" }, { "title" : "Machine learning training", "href" : "node-efa.html" }, { "title" : "Machine learning inference", "href" : "inferentia-support.html" } ] }, { "title" : "Cluster authentication", "href" : "cluster-auth.html", "contents" : [ { "title" : "Enabling IAM principal access", "href" : "add-user-role.html" }, { "title" : "OIDC identity provider authentication", "href" : "authenticate-oidc-identity-provider.html" }, { "title" : "Creating kubeconfig file", "href" : "create-kubeconfig.html" }, { "title" : "Installing aws-iam-authenticator", "href" : "install-aws-iam-authenticator.html" }, { "title" : "Default Kubernetes roles and users", "href" : "default-roles-users.html" } ] }, { "title" : "Cluster management", "href" : "eks-managing.html", "contents" : [ { "title" : "Cost monitoring", "href" : "cost-monitoring.html" }, { "title" : "Metrics server", "href" : "metrics-server.html" }, { "title" : "Using Helm", "href" : "helm.html" }, { "title" : "Tagging your resources", "href" : "eks-using-tags.html" }, { "title" : "Service quotas", "href" : "service-quotas.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Certificate signing", "href" : "cert-signing.html" }, { "title" : "Kubernetes service accounts", "href" : "service-accounts.html", "contents" : [ { "title" : "IAM roles for service accounts", "href" : "iam-roles-for-service-accounts.html", "contents" : [ { "title" : "Creating an IAM OIDC provider", "href" : "enable-iam-roles-for-service-accounts.html" }, { "title" : "Configuring role and service account", "href" : "associate-service-account-role.html" }, { "title" : "Configuring Pods", "href" : "pod-configuration.html" }, { "title" : "Configuring AWS STS endpoint", "href" : "configure-sts-endpoint.html" }, { "title" : "Cross-account IAM permissions", "href" : "cross-account-access.html" }, { "title" : "Supported SDKs", "href" : "iam-roles-for-service-accounts-minimum-sdk.html" } ] } ] }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon EKS works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html", "contents" : [ { "title" : "Amazon EKS cluster role", "href" : "using-service-linked-roles-eks.html" }, { "title" : "Amazon EKS node groups role", "href" : "using-service-linked-roles-eks-nodegroups.html" }, { "title" : "Amazon EKS Fargate profile role", "href" : "using-service-linked-roles-eks-fargate.html" }, { "title" : "Amazon EKS cluster connector role", "href" : "using-service-linked-roles-eks-connector.html" }, { "title" : "Amazon EKS local cluster role", "href" : "using-service-linked-roles-eks-outpost.html" } ] }, { "title" : "Cluster IAM role", "href" : "service_IAM_role.html" }, { "title" : "Node IAM role", "href" : "create-node-role.html" }, { "title" : "Pod execution IAM role", "href" : "pod-execution-role.html" }, { "title" : "Connector IAM role", "href" : "connector_IAM_role.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Compliance validation", "href" : "compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Configuration and vulnerability analysis", "href" : "configuration-vulnerability-analysis.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" }, { "title" : "Pod security policy", "href" : "pod-security-policy.html" }, { "title" : "1.25 Pod security policy removal FAQ", "href" : "pod-security-policy-removal-faq.html" }, { "title" : "Managing Kubernetes secrets", "href" : "manage-secrets.html" }, { "title" : "Amazon EKS Connector considerations", "href" : "security-connector.html" } ] }, { "title" : "View Kubernetes resources", "href" : "view-kubernetes-resources.html" }, { "title" : "Observability", "href" : "eks-observe.html", "contents" : [ { "title" : "Configuring logging", "href" : "control-plane-logs.html" }, { "title" : "Prometheus metrics", "href" : "prometheus.html" }, { "title" : "Logging Amazon EKS API calls with AWS CloudTrail", "href" : "logging-using-cloudtrail.html", "contents" : [ { "title" : "Amazon EKS information in CloudTrail", "href" : "service-name-info-in-cloudtrail.html" }, { "title" : "Understanding Amazon EKS log file entries", "href" : "understanding-service-name-entries.html" }, { "title" : "Enable Auto Scaling group metrics collection", "href" : "enable-asg-metrics.html" } ] }, { "title" : "Amazon EKS add-on support for ADOT Operator", "href" : "opentelemetry.html", "contents" : [ { "title" : "ADOT prerequisites and considerations", "href" : "adot-reqts.html" }, { "title" : "Create an IAM role", "href" : "adot-iam.html" }, { "title" : "Manage the ADOT Operator", "href" : "adot-manage.html" }, { "title" : "Deploy a sample application", "href" : "sample-app.html" }, { "title" : "Deploy the ADOT Collector", "href" : "deploy-collector.html", "contents" : [ { "title" : "Deploy the ADOT Collector advanced configuration", "href" : "deploy-collector-advanced-configuration.html" }, { "title" : "Deploy the ADOT Collector for Amazon Managed Service for Prometheus", "href" : "deploy-deployment.html" }, { "title" : "Deploy the ADOT Collector for CloudWatch", "href" : "configure-cw.html" }, { "title" : "Deploy ADOT for X-Ray", "href" : "configure-xray.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting-adot.html" } ] } ] }, { "title" : "Working with other services", "href" : "eks-integrations.html", "contents" : [ { "title" : "Creating Amazon EKS resources with AWS CloudFormation", "href" : "creating-resources-with-cloudformation.html" }, { "title" : "Amazon EKS and AWS Local Zones", "href" : "local-zones.html" }, { "title" : "Deep Learning Containers", "href" : "deep-learning-containers.html" }, { "title" : "Amazon VPC Lattice", "href" : "integration-vpc-lattice.html" }, { "title" : "AWS Resilience Hub", "href" : "integration-resilience-hub.html" }, { "title" : "Amazon GuardDuty", "href" : "integration-guardduty.html" }, { "title" : "Amazon Detective", "href" : "integration-detective.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" }, { "title" : "Amazon EKS Connector", "href" : "eks-connector.html", "contents" : [ { "title" : "Connecting a cluster", "href" : "connecting-cluster.html" }, { "title" : "Granting access to an IAM principal to view Kubernetes resources on a cluster", "href" : "connector-grant-access.html" }, { "title" : "Deregister a cluster", "href" : "deregister-connected-cluster.html" }, { "title" : "Amazon EKS Connector Troubleshooting", "href" : "troubleshooting-connector.html" }, { "title" : "Frequently asked questions", "href" : "tsc-faq.html" } ] }, { "title" : "Amazon EKS on AWS Outposts", "href" : "eks-outposts.html", "contents" : [ { "title" : "Local clusters", "href" : "eks-outposts-local-cluster-overview.html", "contents" : [ { "title" : "Creating a local cluster", "href" : "eks-outposts-local-cluster-create.html" }, { "title" : "Platform versions", "href" : "eks-outposts-platform-versions.html" }, { "title" : "VPC and subnet requirements", "href" : "eks-outposts-vpc-subnet-requirements.html" }, { "title" : "Network disconnects", "href" : "eks-outposts-network-disconnects.html" }, { "title" : "Capacity considerations", "href" : "eks-outposts-capacity-considerations.html" }, { "title" : "Troubleshooting", "href" : "eks-outposts-troubleshooting.html" } ] }, { "title" : "Launching nodes", "href" : "eks-outposts-self-managed-nodes.html" } ] }, { "title" : "Related projects", "href" : "related-projects.html" }, { "title" : "Amazon EKS new features and roadmap", "href" : "roadmap.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/eks/latest/userguide/",
+    "service": "eks",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon EKS?",
+                "href": "what-is-eks.html",
+                "contents": [
+                    {
+                        "title": "Common use cases",
+                        "href": "common-use-cases.html"
+                    },
+                    {
+                        "title": "Architecture",
+                        "href": "eks-architecture.html"
+                    },
+                    {
+                        "title": "Deployment options",
+                        "href": "eks-deployment-options.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started with Amazon EKS",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Installing kubectl",
+                        "href": "install-kubectl.html"
+                    },
+                    {
+                        "title": "Installing eksctl",
+                        "href": "eksctl.html"
+                    },
+                    {
+                        "title": "Create your first cluster \u2013 eksctl",
+                        "href": "getting-started-eksctl.html"
+                    },
+                    {
+                        "title": "Create your first cluster \u2013 AWS Management Console",
+                        "href": "getting-started-console.html"
+                    }
+                ]
+            },
+            {
+                "title": "Clusters",
+                "href": "clusters.html",
+                "contents": [
+                    {
+                        "title": "Creating a cluster",
+                        "href": "create-cluster.html"
+                    },
+                    {
+                        "title": "Updating Kubernetes version",
+                        "href": "update-cluster.html"
+                    },
+                    {
+                        "title": "Deleting a cluster",
+                        "href": "delete-cluster.html"
+                    },
+                    {
+                        "title": "Configuring endpoint access",
+                        "href": "cluster-endpoint.html"
+                    },
+                    {
+                        "title": "Enabling secret encryption",
+                        "href": "enable-kms.html"
+                    },
+                    {
+                        "title": "Enabling Windows support",
+                        "href": "windows-support.html"
+                    },
+                    {
+                        "title": "Private cluster requirements",
+                        "href": "private-clusters.html"
+                    },
+                    {
+                        "title": "Kubernetes versions",
+                        "href": "kubernetes-versions.html",
+                        "contents": [
+                            {
+                                "title": "Standard support versions",
+                                "href": "kubernetes-versions-standard.html"
+                            },
+                            {
+                                "title": "Extended support versions",
+                                "href": "kubernetes-versions-extended.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Platform versions",
+                        "href": "platform-versions.html"
+                    },
+                    {
+                        "title": "Autoscaling",
+                        "href": "autoscaling.html"
+                    }
+                ]
+            },
+            {
+                "title": "Nodes",
+                "href": "eks-compute.html",
+                "contents": [
+                    {
+                        "title": "Managed node groups",
+                        "href": "managed-node-groups.html",
+                        "contents": [
+                            {
+                                "title": "Creating a managed node group",
+                                "href": "create-managed-node-group.html"
+                            },
+                            {
+                                "title": "Updating a managed node group",
+                                "href": "update-managed-node-group.html",
+                                "contents": [
+                                    {
+                                        "title": "Managed node update behavior",
+                                        "href": "managed-node-update-behavior.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Node taints on managed node groups",
+                                "href": "node-taints-managed-node-groups.html"
+                            },
+                            {
+                                "title": "Customizing managed nodes with launch templates",
+                                "href": "launch-templates.html"
+                            },
+                            {
+                                "title": "Deleting a managed node group",
+                                "href": "delete-managed-node-group.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Self-managed nodes",
+                        "href": "worker.html",
+                        "contents": [
+                            {
+                                "title": "Amazon Linux",
+                                "href": "launch-workers.html",
+                                "contents": [
+                                    {
+                                        "title": "Capacity Blocks for ML",
+                                        "href": "capacity-blocks.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Bottlerocket",
+                                "href": "launch-node-bottlerocket.html"
+                            },
+                            {
+                                "title": "Windows",
+                                "href": "launch-windows-workers.html"
+                            },
+                            {
+                                "title": "Updates",
+                                "href": "update-workers.html",
+                                "contents": [
+                                    {
+                                        "title": "Migrating to a new node group",
+                                        "href": "migrate-stack.html"
+                                    },
+                                    {
+                                        "title": "Updating an existing node group",
+                                        "href": "update-stack.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS Fargate",
+                        "href": "fargate.html",
+                        "contents": [
+                            {
+                                "title": "Getting started with Fargate",
+                                "href": "fargate-getting-started.html"
+                            },
+                            {
+                                "title": "Fargate profile",
+                                "href": "fargate-profile.html"
+                            },
+                            {
+                                "title": "Fargate Pod configuration",
+                                "href": "fargate-pod-configuration.html"
+                            },
+                            {
+                                "title": "Fargate OS patching",
+                                "href": "fargate-pod-patching.html"
+                            },
+                            {
+                                "title": "Fargate metrics",
+                                "href": "monitoring-fargate-usage.html"
+                            },
+                            {
+                                "title": "Fargate logging",
+                                "href": "fargate-logging.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Instance types",
+                        "href": "choosing-instance-type.html"
+                    },
+                    {
+                        "title": "Amazon EKS optimized AMIs",
+                        "href": "eks-optimized-amis.html",
+                        "contents": [
+                            {
+                                "title": "Dockershim deprecation",
+                                "href": "dockershim-deprecation.html"
+                            },
+                            {
+                                "title": "Amazon Linux",
+                                "href": "eks-optimized-ami.html",
+                                "contents": [
+                                    {
+                                        "title": "View versions",
+                                        "href": "eks-linux-ami-versions.html"
+                                    },
+                                    {
+                                        "title": "Retrieve IDs",
+                                        "href": "retrieve-ami-id.html"
+                                    },
+                                    {
+                                        "title": "Create a custom Amazon Linux AMI",
+                                        "href": "eks-ami-build-scripts.html",
+                                        "contents": [
+                                            {
+                                                "title": "Xilinx accelerated transcoding device support (VT1)",
+                                                "href": "vt1.html"
+                                            },
+                                            {
+                                                "title": "Habana Deep Learning (DL1) device support",
+                                                "href": "dl1.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Bottlerocket",
+                                "href": "eks-optimized-ami-bottlerocket.html",
+                                "contents": [
+                                    {
+                                        "title": "Retrieve IDs",
+                                        "href": "retrieve-ami-id-bottlerocket.html"
+                                    },
+                                    {
+                                        "title": "Compliance support",
+                                        "href": "bottlerocket-compliance-support.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Ubuntu Linux",
+                                "href": "eks-partner-amis.html"
+                            },
+                            {
+                                "title": "Windows",
+                                "href": "eks-optimized-windows-ami.html",
+                                "contents": [
+                                    {
+                                        "title": "View versions",
+                                        "href": "eks-ami-versions-windows.html"
+                                    },
+                                    {
+                                        "title": "Retrieve IDs",
+                                        "href": "retrieve-windows-ami-id.html"
+                                    },
+                                    {
+                                        "title": "Create a custom Windows AMI",
+                                        "href": "eks-custom-ami-windows.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Storage",
+                "href": "storage.html",
+                "contents": [
+                    {
+                        "title": "Amazon EBS CSI driver",
+                        "href": "ebs-csi.html",
+                        "contents": [
+                            {
+                                "title": "Create an IAM role",
+                                "href": "csi-iam-role.html"
+                            },
+                            {
+                                "title": "Manage the Amazon EKS add-on",
+                                "href": "managing-ebs-csi.html"
+                            },
+                            {
+                                "title": "Deploy a sample application",
+                                "href": "ebs-sample-app.html"
+                            },
+                            {
+                                "title": "CSI migration FAQ",
+                                "href": "ebs-csi-migration-faq.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon EFS CSI driver",
+                        "href": "efs-csi.html"
+                    },
+                    {
+                        "title": "Amazon FSx for Lustre CSI driver",
+                        "href": "fsx-csi.html"
+                    },
+                    {
+                        "title": "Amazon FSx for NetApp ONTAP CSI driver",
+                        "href": "fsx-ontap.html"
+                    },
+                    {
+                        "title": "Amazon FSx for OpenZFS CSI driver",
+                        "href": "fsx-openzfs-csi.html"
+                    },
+                    {
+                        "title": "Amazon File Cache CSI driver",
+                        "href": "file-cache-csi.html"
+                    }
+                ]
+            },
+            {
+                "title": "Networking",
+                "href": "eks-networking.html",
+                "contents": [
+                    {
+                        "title": "VPC and subnet requirements",
+                        "href": "network_reqs.html"
+                    },
+                    {
+                        "title": "Creating a VPC",
+                        "href": "creating-a-vpc.html"
+                    },
+                    {
+                        "title": "Security group requirements",
+                        "href": "sec-group-reqs.html"
+                    },
+                    {
+                        "title": "Add-ons",
+                        "href": "eks-networking-add-ons.html",
+                        "contents": [
+                            {
+                                "title": "Amazon VPC CNI plugin for Kubernetes",
+                                "href": "managing-vpc-cni.html",
+                                "contents": [
+                                    {
+                                        "title": "Configure plugin for IAM account",
+                                        "href": "cni-iam-role.html"
+                                    },
+                                    {
+                                        "title": "Use cases",
+                                        "href": "pod-networking-use-cases.html",
+                                        "contents": [
+                                            {
+                                                "title": "IPv6",
+                                                "href": "cni-ipv6.html"
+                                            },
+                                            {
+                                                "title": "SNAT",
+                                                "href": "external-snat.html"
+                                            },
+                                            {
+                                                "title": "Kubernetes network policies",
+                                                "href": "cni-network-policy.html"
+                                            },
+                                            {
+                                                "title": "Custom networking",
+                                                "href": "cni-custom-network.html"
+                                            },
+                                            {
+                                                "title": "Increase available IP addresses",
+                                                "href": "cni-increase-ip-addresses.html"
+                                            },
+                                            {
+                                                "title": "Security groups for pods",
+                                                "href": "security-groups-for-pods.html"
+                                            },
+                                            {
+                                                "title": "Multiple network interfaces for Pods",
+                                                "href": "pod-multiple-network-interfaces.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Alternate compatible CNI plugins",
+                                        "href": "alternate-cni-plugins.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "AWS Load Balancer Controller",
+                                "href": "aws-load-balancer-controller.html"
+                            },
+                            {
+                                "title": "CoreDNS",
+                                "href": "managing-coredns.html"
+                            },
+                            {
+                                "title": "kube-proxy",
+                                "href": "managing-kube-proxy.html"
+                            },
+                            {
+                                "title": "Calico network policy engine",
+                                "href": "calico.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS PrivateLink",
+                        "href": "vpc-interface-endpoints.html"
+                    }
+                ]
+            },
+            {
+                "title": "Workloads",
+                "href": "eks-workloads.html",
+                "contents": [
+                    {
+                        "title": "Sample application deployment",
+                        "href": "sample-deployment.html"
+                    },
+                    {
+                        "title": "Vertical Pod Autoscaler",
+                        "href": "vertical-pod-autoscaler.html"
+                    },
+                    {
+                        "title": "Horizontal Pod Autoscaler",
+                        "href": "horizontal-pod-autoscaler.html"
+                    },
+                    {
+                        "title": "Network load balancing",
+                        "href": "network-load-balancing.html"
+                    },
+                    {
+                        "title": "Application load balancing",
+                        "href": "alb-ingress.html"
+                    },
+                    {
+                        "title": "Restrict service external IP address assignment",
+                        "href": "restrict-service-external-ip.html"
+                    },
+                    {
+                        "title": "Copy an image to a repository",
+                        "href": "copy-image-to-repository.html"
+                    },
+                    {
+                        "title": "Amazon container image registries",
+                        "href": "add-ons-images.html"
+                    },
+                    {
+                        "title": "Amazon EKS add-ons",
+                        "href": "eks-add-ons.html",
+                        "contents": [
+                            {
+                                "title": "Managing add-ons",
+                                "href": "managing-add-ons.html"
+                            },
+                            {
+                                "title": "Kubernetes field management",
+                                "href": "kubernetes-field-management.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Verify container images",
+                        "href": "image-verification.html"
+                    },
+                    {
+                        "title": "Machine learning training",
+                        "href": "node-efa.html"
+                    },
+                    {
+                        "title": "Machine learning inference",
+                        "href": "inferentia-support.html"
+                    }
+                ]
+            },
+            {
+                "title": "Cluster authentication",
+                "href": "cluster-auth.html",
+                "contents": [
+                    {
+                        "title": "Enabling IAM principal access",
+                        "href": "add-user-role.html"
+                    },
+                    {
+                        "title": "OIDC identity provider authentication",
+                        "href": "authenticate-oidc-identity-provider.html"
+                    },
+                    {
+                        "title": "Creating kubeconfig file",
+                        "href": "create-kubeconfig.html"
+                    },
+                    {
+                        "title": "Installing aws-iam-authenticator",
+                        "href": "install-aws-iam-authenticator.html"
+                    },
+                    {
+                        "title": "Default Kubernetes roles and users",
+                        "href": "default-roles-users.html"
+                    }
+                ]
+            },
+            {
+                "title": "Cluster management",
+                "href": "eks-managing.html",
+                "contents": [
+                    {
+                        "title": "Cost monitoring",
+                        "href": "cost-monitoring.html"
+                    },
+                    {
+                        "title": "Metrics server",
+                        "href": "metrics-server.html"
+                    },
+                    {
+                        "title": "Using Helm",
+                        "href": "helm.html"
+                    },
+                    {
+                        "title": "Tagging your resources",
+                        "href": "eks-using-tags.html"
+                    },
+                    {
+                        "title": "Service quotas",
+                        "href": "service-quotas.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Certificate signing",
+                        "href": "cert-signing.html"
+                    },
+                    {
+                        "title": "Kubernetes service accounts",
+                        "href": "service-accounts.html",
+                        "contents": [
+                            {
+                                "title": "IAM roles for service accounts",
+                                "href": "iam-roles-for-service-accounts.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating an IAM OIDC provider",
+                                        "href": "enable-iam-roles-for-service-accounts.html"
+                                    },
+                                    {
+                                        "title": "Configuring role and service account",
+                                        "href": "associate-service-account-role.html"
+                                    },
+                                    {
+                                        "title": "Configuring Pods",
+                                        "href": "pod-configuration.html"
+                                    },
+                                    {
+                                        "title": "Configuring AWS STS endpoint",
+                                        "href": "configure-sts-endpoint.html"
+                                    },
+                                    {
+                                        "title": "Cross-account IAM permissions",
+                                        "href": "cross-account-access.html"
+                                    },
+                                    {
+                                        "title": "Supported SDKs",
+                                        "href": "iam-roles-for-service-accounts-minimum-sdk.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon EKS works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html",
+                                "contents": [
+                                    {
+                                        "title": "Amazon EKS cluster role",
+                                        "href": "using-service-linked-roles-eks.html"
+                                    },
+                                    {
+                                        "title": "Amazon EKS node groups role",
+                                        "href": "using-service-linked-roles-eks-nodegroups.html"
+                                    },
+                                    {
+                                        "title": "Amazon EKS Fargate profile role",
+                                        "href": "using-service-linked-roles-eks-fargate.html"
+                                    },
+                                    {
+                                        "title": "Amazon EKS cluster connector role",
+                                        "href": "using-service-linked-roles-eks-connector.html"
+                                    },
+                                    {
+                                        "title": "Amazon EKS local cluster role",
+                                        "href": "using-service-linked-roles-eks-outpost.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Cluster IAM role",
+                                "href": "service_IAM_role.html"
+                            },
+                            {
+                                "title": "Node IAM role",
+                                "href": "create-node-role.html"
+                            },
+                            {
+                                "title": "Pod execution IAM role",
+                                "href": "pod-execution-role.html"
+                            },
+                            {
+                                "title": "Connector IAM role",
+                                "href": "connector_IAM_role.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "configuration-vulnerability-analysis.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    },
+                    {
+                        "title": "Pod security policy",
+                        "href": "pod-security-policy.html"
+                    },
+                    {
+                        "title": "1.25 Pod security policy removal FAQ",
+                        "href": "pod-security-policy-removal-faq.html"
+                    },
+                    {
+                        "title": "Managing Kubernetes secrets",
+                        "href": "manage-secrets.html"
+                    },
+                    {
+                        "title": "Amazon EKS Connector considerations",
+                        "href": "security-connector.html"
+                    }
+                ]
+            },
+            {
+                "title": "View Kubernetes resources",
+                "href": "view-kubernetes-resources.html"
+            },
+            {
+                "title": "Observability",
+                "href": "eks-observe.html",
+                "contents": [
+                    {
+                        "title": "Amazon CloudWatch",
+                        "href": "cloudwatch.html"
+                    },
+                    {
+                        "title": "Configuring logging",
+                        "href": "control-plane-logs.html"
+                    },
+                    {
+                        "title": "Prometheus metrics",
+                        "href": "prometheus.html"
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "href": "troubleshooting-adot.html"
+                    },
+                    {
+                        "title": "Logging Amazon EKS API calls with AWS CloudTrail",
+                        "href": "logging-using-cloudtrail.html",
+                        "contents": [
+                            {
+                                "title": "Amazon EKS information in CloudTrail",
+                                "href": "service-name-info-in-cloudtrail.html"
+                            },
+                            {
+                                "title": "Understanding Amazon EKS log file entries",
+                                "href": "understanding-service-name-entries.html"
+                            },
+                            {
+                                "title": "Enable Auto Scaling group metrics collection",
+                                "href": "enable-asg-metrics.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon EKS add-on support for ADOT Operator",
+                        "href": "opentelemetry.html",
+                        "contents": [
+                            {
+                                "title": "ADOT prerequisites and considerations",
+                                "href": "adot-reqts.html"
+                            },
+                            {
+                                "title": "Create an IAM role",
+                                "href": "adot-iam.html"
+                            },
+                            {
+                                "title": "Manage the ADOT Operator",
+                                "href": "adot-manage.html"
+                            },
+                            {
+                                "title": "Deploy a sample application",
+                                "href": "sample-app.html"
+                            },
+                            {
+                                "title": "Deploy the ADOT Collector",
+                                "href": "deploy-collector.html",
+                                "contents": [
+                                    {
+                                        "title": "Deploy the ADOT Collector advanced configuration",
+                                        "href": "deploy-collector-advanced-configuration.html"
+                                    },
+                                    {
+                                        "title": "Deploy the ADOT Collector for Amazon Managed Service for Prometheus",
+                                        "href": "deploy-deployment.html"
+                                    },
+                                    {
+                                        "title": "Deploy the ADOT Collector for CloudWatch",
+                                        "href": "configure-cw.html"
+                                    },
+                                    {
+                                        "title": "Deploy ADOT for X-Ray",
+                                        "href": "configure-xray.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Working with other services",
+                "href": "eks-integrations.html",
+                "contents": [
+                    {
+                        "title": "Creating Amazon EKS resources with AWS CloudFormation",
+                        "href": "creating-resources-with-cloudformation.html"
+                    },
+                    {
+                        "title": "Amazon EKS and AWS Local Zones",
+                        "href": "local-zones.html"
+                    },
+                    {
+                        "title": "Deep Learning Containers",
+                        "href": "deep-learning-containers.html"
+                    },
+                    {
+                        "title": "Amazon VPC Lattice",
+                        "href": "integration-vpc-lattice.html"
+                    },
+                    {
+                        "title": "AWS Resilience Hub",
+                        "href": "integration-resilience-hub.html"
+                    },
+                    {
+                        "title": "Amazon GuardDuty",
+                        "href": "integration-guardduty.html"
+                    },
+                    {
+                        "title": "Amazon Detective",
+                        "href": "integration-detective.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            },
+            {
+                "title": "Amazon EKS Connector",
+                "href": "eks-connector.html",
+                "contents": [
+                    {
+                        "title": "Connecting a cluster",
+                        "href": "connecting-cluster.html"
+                    },
+                    {
+                        "title": "Granting access to an IAM principal to view Kubernetes resources on a cluster",
+                        "href": "connector-grant-access.html"
+                    },
+                    {
+                        "title": "Deregister a cluster",
+                        "href": "deregister-connected-cluster.html"
+                    },
+                    {
+                        "title": "Amazon EKS Connector Troubleshooting",
+                        "href": "troubleshooting-connector.html"
+                    },
+                    {
+                        "title": "Frequently asked questions",
+                        "href": "tsc-faq.html"
+                    }
+                ]
+            },
+            {
+                "title": "Amazon EKS on AWS Outposts",
+                "href": "eks-outposts.html",
+                "contents": [
+                    {
+                        "title": "Local clusters",
+                        "href": "eks-outposts-local-cluster-overview.html",
+                        "contents": [
+                            {
+                                "title": "Creating a local cluster",
+                                "href": "eks-outposts-local-cluster-create.html"
+                            },
+                            {
+                                "title": "Platform versions",
+                                "href": "eks-outposts-platform-versions.html"
+                            },
+                            {
+                                "title": "VPC and subnet requirements",
+                                "href": "eks-outposts-vpc-subnet-requirements.html"
+                            },
+                            {
+                                "title": "Network disconnects",
+                                "href": "eks-outposts-network-disconnects.html"
+                            },
+                            {
+                                "title": "Capacity considerations",
+                                "href": "eks-outposts-capacity-considerations.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "eks-outposts-troubleshooting.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Launching nodes",
+                        "href": "eks-outposts-self-managed-nodes.html"
+                    }
+                ]
+            },
+            {
+                "title": "Related projects",
+                "href": "related-projects.html"
+            },
+            {
+                "title": "Amazon EKS new features and roadmap",
+                "href": "roadmap.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

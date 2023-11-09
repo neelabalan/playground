@@ -1,1 +1,2610 @@
-{ "contents" : [ { "title" : "What is Amazon Route 53?", "href" : "Welcome.html", "contents" : [ { "title" : "How domain registration works", "href" : "welcome-domain-registration.html" }, { "title" : "How internet traffic is routed to your website or web application", "href" : "welcome-dns-service.html" }, { "title" : "How Amazon Route 53 checks the health of your resources", "href" : "welcome-health-checks.html" }, { "title" : "Amazon Route 53 concepts", "href" : "route-53-concepts.html" }, { "title" : "How to get started with Amazon Route 53", "href" : "welcome-how-to-get-started.html" }, { "title" : "Related services", "href" : "welcome-related-services.html" }, { "title" : "Accessing Amazon Route 53", "href" : "welcome-accessing-route-53.html" }, { "title" : "AWS Identity and Access Management", "href" : "IAMRoute53.html" }, { "title" : "Amazon Route 53 pricing and billing", "href" : "Route53Pricing.html" }, { "title" : "Working with AWS SDKs", "href" : "sdk-general-information-section.html" } ] }, { "title" : "Setting up", "href" : "setting-up-route-53.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Use your domain for a static website", "href" : "getting-started-s3.html" }, { "title" : "Use an Amazon CloudFront distribution to serve a static website", "href" : "getting-started-cloudfront-overview.html" } ] }, { "title" : "Integration with other services", "href" : "integration-with-other-services.html" }, { "title" : "DNS domain name format", "href" : "DomainNameFormat.html" }, { "title" : "Registering and managing domains", "href" : "registrar.html", "contents" : [ { "title" : "Registering new domains", "href" : "domain-register-update.html", "contents" : [ { "title" : "Registering a new domain", "href" : "domain-register.html" }, { "title" : "Values that you specify when you register or transfer a domain", "href" : "domain-register-values-specify.html" }, { "title" : "Values that Amazon Route 53 returns when you register a domain", "href" : "domain-register-values-returned.html" }, { "title" : "Viewing the status of a domain registration", "href" : "domain-view-status.html" } ] }, { "title" : "Updating domain settings", "href" : "domain-update-settings.html", "contents" : [ { "title" : "Updating contact information and ownership for a domain", "href" : "domain-update-contacts.html" }, { "title" : "Enabling or disabling privacy protection for contact information for a domain", "href" : "domain-privacy-protection.html" }, { "title" : "Enabling or disabling automatic renewal for a domain", "href" : "domain-enable-disable-auto-renewal.html" }, { "title" : "Locking a domain to prevent unauthorized transfer to another registrar", "href" : "domain-lock.html" }, { "title" : "Extending the registration period for a domain", "href" : "domain-extend.html" }, { "title" : "Updating name servers to use another registrar", "href" : "domain-register-other-dns-service.html" }, { "title" : "Adding or changing name servers and glue records for a domain", "href" : "domain-name-servers-glue-records.html" } ] }, { "title" : "Renewing registration for a domain", "href" : "domain-renew.html" }, { "title" : "Restoring an expired or deleted domain", "href" : "domain-restore-expired.html" }, { "title" : "Replacing the hosted zone for a domain", "href" : "domain-replace-hosted-zone.html" }, { "title" : "Transferring domains", "href" : "domain-transfer.html", "contents" : [ { "title" : "Transferring domain registration to Route 53", "href" : "domain-transfer-to-route-53.html" }, { "title" : "Viewing the status of a domain transfer", "href" : "domain-transfer-to-route-53-status.html" }, { "title" : "How transferring a domain to Route 53 affects the expiration date", "href" : "domain-transfer-to-route-53-expiration.html" }, { "title" : "Transferring a domain to a different AWS account", "href" : "domain-transfer-between-aws-accounts.html" }, { "title" : "Transferring a domain from Route 53", "href" : "domain-transfer-from-route-53.html" } ] }, { "title" : "Resending authorization and confirmation emails", "href" : "domain-click-email-link.html" }, { "title" : "Configuring DNSSEC for a domain", "href" : "domain-configure-dnssec.html" }, { "title" : "Finding your registrar", "href" : "find-your-registrar.html", "contents" : [ { "title" : "Viewing information about domains", "href" : "domain-whois-rdap.html" } ] }, { "title" : "Deleting a domain name registration", "href" : "domain-delete.html" }, { "title" : "Contacting AWS Support about domain registration issues", "href" : "domain-contact-support.html" }, { "title" : "Downloading a domain billing report", "href" : "domain-billing-report.html" }, { "title" : "Domains that you can register with Amazon Route 53", "href" : "registrar-tld-list.html", "contents" : [ { "title" : "Generic top-level domains", "href" : "registrar-tld-list-generic.html", "contents" : [ { "title" : ".ac", "href" : "ac-xref.html" }, { "title" : ".academy", "href" : "academy.html" }, { "title" : ".accountants", "href" : "accountants.html" }, { "title" : ".actor", "href" : "actor.html" }, { "title" : ".adult", "href" : "adult.html" }, { "title" : ".agency", "href" : "agency.html" }, { "title" : ".airforce", "href" : "airforce.html" }, { "title" : ".apartments", "href" : "apartments.html" }, { "title" : ".associates", "href" : "associates.html" }, { "title" : ".auction", "href" : "auction.html" }, { "title" : ".audio", "href" : "audio.html" }, { "title" : ".band", "href" : "band.html" }, { "title" : ".bargains", "href" : "bargains.html" }, { "title" : ".bet", "href" : "bet.html" }, { "title" : ".bike", "href" : "bike.html" }, { "title" : ".bingo", "href" : "bingo.html" }, { "title" : ".biz", "href" : "biz.html" }, { "title" : ".black", "href" : "black.html" }, { "title" : ".blue", "href" : "blue.html" }, { "title" : ".boutique", "href" : "boutique.html" }, { "title" : ".builders", "href" : "builders.html" }, { "title" : ".business", "href" : "business.html" }, { "title" : ".buzz", "href" : "buzz.html" }, { "title" : ".cab", "href" : "cab.html" }, { "title" : ".cafe", "href" : "cafe.html" }, { "title" : ".camera", "href" : "camera.html" }, { "title" : ".camp", "href" : "camp.html" }, { "title" : ".capital", "href" : "capital.html" }, { "title" : ".cards", "href" : "cards.html" }, { "title" : ".care", "href" : "care.html" }, { "title" : ".careers", "href" : "careers.html" }, { "title" : ".cash", "href" : "cash.html" }, { "title" : ".casino", "href" : "casino.html" }, { "title" : ".catering", "href" : "catering.html" }, { "title" : ".cc", "href" : "cc-xref.html" }, { "title" : ".center", "href" : "center.html" }, { "title" : ".ceo", "href" : "ceo.html" }, { "title" : ".chat", "href" : "chat.html" }, { "title" : ".cheap", "href" : "cheap.html" }, { "title" : ".church", "href" : "church.html" }, { "title" : ".city", "href" : "city.html" }, { "title" : ".claims", "href" : "claims.html" }, { "title" : ".cleaning", "href" : "cleaning.html" }, { "title" : ".click", "href" : "click.html" }, { "title" : ".clinic", "href" : "clinic.html" }, { "title" : ".clothing", "href" : "clothing.html" }, { "title" : ".cloud", "href" : "cloud.html" }, { "title" : ".club", "href" : "club.html" }, { "title" : ".coach", "href" : "coach.html" }, { "title" : ".codes", "href" : "codes.html" }, { "title" : ".coffee", "href" : "coffee.html" }, { "title" : ".college", "href" : "college.html" }, { "title" : ".com", "href" : "com.html" }, { "title" : ".community", "href" : "community.html" }, { "title" : ".company", "href" : "company.html" }, { "title" : ".computer", "href" : "computer.html" }, { "title" : ".condos", "href" : "condos.html" }, { "title" : ".construction", "href" : "construction.html" }, { "title" : ".consulting", "href" : "consulting.html" }, { "title" : ".contractors", "href" : "contractors.html" }, { "title" : ".cool", "href" : "cool.html" }, { "title" : ".coupons", "href" : "coupons.html" }, { "title" : ".credit", "href" : "credit.html" }, { "title" : ".creditcard", "href" : "creditcard.html" }, { "title" : ".cruises", "href" : "cruises.html" }, { "title" : ".dance", "href" : "dance.html" }, { "title" : ".dating", "href" : "dating.html" }, { "title" : ".deals", "href" : "deals.html" }, { "title" : ".degree", "href" : "degree.html" }, { "title" : ".delivery", "href" : "delivery.html" }, { "title" : ".democrat", "href" : "democrat.html" }, { "title" : ".dental", "href" : "dental.html" }, { "title" : ".diamonds", "href" : "diamonds.html" }, { "title" : ".diet", "href" : "diet.html" }, { "title" : ".digital", "href" : "digital.html" }, { "title" : ".direct", "href" : "direct.html" }, { "title" : ".directory", "href" : "directory.html" }, { "title" : ".discount", "href" : "discount.html" }, { "title" : ".dog", "href" : "dog.html" }, { "title" : ".domains", "href" : "domains.html" }, { "title" : ".education", "href" : "education.html" }, { "title" : ".email", "href" : "email.html" }, { "title" : ".energy", "href" : "energy.html" }, { "title" : ".engineering", "href" : "engineering.html" }, { "title" : ".enterprises", "href" : "enterprises.html" }, { "title" : ".equipment", "href" : "equipment.html" }, { "title" : ".estate", "href" : "estate.html" }, { "title" : ".events", "href" : "events.html" }, { "title" : ".exchange", "href" : "exchange.html" }, { "title" : ".expert", "href" : "expert.html" }, { "title" : ".exposed", "href" : "exposed.html" }, { "title" : ".express", "href" : "express.html" }, { "title" : ".fail", "href" : "fail.html" }, { "title" : ".farm", "href" : "farm.html" }, { "title" : ".finance", "href" : "finance.html" }, { "title" : ".financial", "href" : "financial.html" }, { "title" : ".fish", "href" : "fish.html" }, { "title" : ".fitness", "href" : "fitness.html" }, { "title" : ".flights", "href" : "flights.html" }, { "title" : ".florist", "href" : "florist.html" }, { "title" : ".flowers", "href" : "flowers.html" }, { "title" : ".fm", "href" : "fm-xref.html" }, { "title" : ".football", "href" : "football.html" }, { "title" : ".forsale", "href" : "forsale.html" }, { "title" : ".foundation", "href" : "foundation.html" }, { "title" : ".fund", "href" : "fund.html" }, { "title" : ".furniture", "href" : "furniture.html" }, { "title" : ".futbol", "href" : "futbol.html" }, { "title" : ".fyi", "href" : "fyi.html" }, { "title" : ".gallery", "href" : "gallery.html" }, { "title" : ".games", "href" : "games.html" }, { "title" : ".gift", "href" : "gift.html" }, { "title" : ".gifts", "href" : "gifts.html" }, { "title" : ".gives", "href" : "gives.html" }, { "title" : ".glass", "href" : "glass.html" }, { "title" : ".global", "href" : "global.html" }, { "title" : ".gmbh", "href" : "gmbh.html" }, { "title" : ".gold", "href" : "gold.html" }, { "title" : ".golf", "href" : "golf.html" }, { "title" : ".graphics", "href" : "graphics.html" }, { "title" : ".gratis", "href" : "gratis.html" }, { "title" : ".green", "href" : "green.html" }, { "title" : ".gripe", "href" : "gripe.html" }, { "title" : ".group", "href" : "group.html" }, { "title" : ".guide", "href" : "guide.html" }, { "title" : ".guitars", "href" : "guitars.html" }, { "title" : ".guru", "href" : "guru.html" }, { "title" : ".haus", "href" : "haus.html" }, { "title" : ".healthcare", "href" : "healthcare.html" }, { "title" : ".help", "href" : "help.html" }, { "title" : ".hiv", "href" : "hiv.html" }, { "title" : ".hockey", "href" : "hockey.html" }, { "title" : ".holdings", "href" : "holdings.html" }, { "title" : ".holiday", "href" : "holiday.html" }, { "title" : ".host", "href" : "host.html" }, { "title" : ".hosting", "href" : "hosting.html" }, { "title" : ".house", "href" : "house.html" }, { "title" : ".im", "href" : "im-xref.html" }, { "title" : ".immo", "href" : "immo.html" }, { "title" : ".immobilien", "href" : "immobilien.html" }, { "title" : ".industries", "href" : "industries.html" }, { "title" : ".info", "href" : "info.html" }, { "title" : ".ink", "href" : "ink.html" }, { "title" : ".institute", "href" : "institute.html" }, { "title" : ".insure", "href" : "insure.html" }, { "title" : ".international", "href" : "international.html" }, { "title" : ".investments", "href" : "investments.html" }, { "title" : ".io", "href" : "io-xref.html" }, { "title" : ".irish", "href" : "irish.html" }, { "title" : ".jewelry", "href" : "jewelry.html" }, { "title" : ".juegos", "href" : "juegos.html" }, { "title" : ".kaufen", "href" : "kaufen.html" }, { "title" : ".kim", "href" : "kim.html" }, { "title" : ".kitchen", "href" : "kitchen.html" }, { "title" : ".kiwi", "href" : "kiwi.html" }, { "title" : ".land", "href" : "land.html" }, { "title" : ".lease", "href" : "lease.html" }, { "title" : ".legal", "href" : "legal.html" }, { "title" : ".lgbt", "href" : "lgbt.html" }, { "title" : ".life", "href" : "life.html" }, { "title" : ".lighting", "href" : "lighting.html" }, { "title" : ".limited", "href" : "limited.html" }, { "title" : ".limo", "href" : "limo.html" }, { "title" : ".link", "href" : "link.html" }, { "title" : ".live", "href" : "live.html" }, { "title" : ".loan", "href" : "loan.html" }, { "title" : ".loans", "href" : "loans.html" }, { "title" : ".lol", "href" : "lol.html" }, { "title" : ".maison", "href" : "maison.html" }, { "title" : ".management", "href" : "management.html" }, { "title" : ".marketing", "href" : "marketing.html" }, { "title" : ".mba", "href" : "mba.html" }, { "title" : ".media", "href" : "media.html" }, { "title" : ".memorial", "href" : "memorial.html" }, { "title" : ".mobi", "href" : "mobi.html" }, { "title" : ".moda", "href" : "moda.html" }, { "title" : ".money", "href" : "money.html" }, { "title" : ".mortgage", "href" : "mortgage.html" }, { "title" : ".movie", "href" : "movie.html" }, { "title" : ".name", "href" : "name.html" }, { "title" : ".net", "href" : "net.html" }, { "title" : ".network", "href" : "network.html" }, { "title" : ".news", "href" : "news.html" }, { "title" : ".ninja", "href" : "ninja.html" }, { "title" : ".onl", "href" : "onl.html" }, { "title" : ".online", "href" : "online.html" }, { "title" : ".org", "href" : "org.html" }, { "title" : ".partners", "href" : "partners.html" }, { "title" : ".parts", "href" : "parts.html" }, { "title" : ".photo", "href" : "photo.html" }, { "title" : ".photography", "href" : "photography.html" }, { "title" : ".photos", "href" : "photos.html" }, { "title" : ".pics", "href" : "pics.html" }, { "title" : ".pictures", "href" : "pictures.html" }, { "title" : ".pink", "href" : "pink.html" }, { "title" : ".pizza", "href" : "pizza.html" }, { "title" : ".place", "href" : "place.html" }, { "title" : ".plumbing", "href" : "plumbing.html" }, { "title" : ".plus", "href" : "plus.html" }, { "title" : ".poker", "href" : "poker.html" }, { "title" : ".porn", "href" : "porn.html" }, { "title" : ".press", "href" : "press.html" }, { "title" : ".pro", "href" : "pro.html" }, { "title" : ".productions", "href" : "productions.html" }, { "title" : ".properties", "href" : "properties.html" }, { "title" : ".property", "href" : "property.html" }, { "title" : ".pub", "href" : "pub.html" }, { "title" : ".qpon", "href" : "qpon.html" }, { "title" : ".recipes", "href" : "recipes.html" }, { "title" : ".red", "href" : "red.html" }, { "title" : ".reise", "href" : "reise.html" }, { "title" : ".reisen", "href" : "reisen.html" }, { "title" : ".rentals", "href" : "rentals.html" }, { "title" : ".repair", "href" : "repair.html" }, { "title" : ".report", "href" : "report.html" }, { "title" : ".republican", "href" : "republican.html" }, { "title" : ".restaurant", "href" : "restaurant.html" }, { "title" : ".reviews", "href" : "reviews.html" }, { "title" : ".rip", "href" : "rip.html" }, { "title" : ".rocks", "href" : "rocks.html" }, { "title" : ".run", "href" : "run.html" }, { "title" : ".sale", "href" : "sale.html" }, { "title" : ".sarl", "href" : "sarl.html" }, { "title" : ".school", "href" : "school.html" }, { "title" : ".schule", "href" : "schule.html" }, { "title" : ".services", "href" : "services.html" }, { "title" : ".sex", "href" : "sex.html" }, { "title" : ".sexy", "href" : "sexy.html" }, { "title" : ".shiksha", "href" : "shiksha.html" }, { "title" : ".shoes", "href" : "shoes.html" }, { "title" : ".show", "href" : "show.html" }, { "title" : ".singles", "href" : "singles.html" }, { "title" : ".site", "href" : "site.html" }, { "title" : ".soccer", "href" : "soccer.html" }, { "title" : ".social", "href" : "social.html" }, { "title" : ".solar", "href" : "solar.html" }, { "title" : ".solutions", "href" : "solutions.html" }, { "title" : ".space", "href" : "space.html" }, { "title" : ".store", "href" : "store.html" }, { "title" : ".studio", "href" : "studio.html" }, { "title" : ".style", "href" : "style.html" }, { "title" : ".sucks", "href" : "sucks.html" }, { "title" : ".supplies", "href" : "supplies.html" }, { "title" : ".supply", "href" : "supply.html" }, { "title" : ".support", "href" : "support.html" }, { "title" : ".surgery", "href" : "surgery.html" }, { "title" : ".systems", "href" : "systems.html" }, { "title" : ".tattoo", "href" : "tattoo.html" }, { "title" : ".tax", "href" : "tax.html" }, { "title" : ".taxi", "href" : "taxi.html" }, { "title" : ".team", "href" : "team.html" }, { "title" : ".tech", "href" : "tech.html" }, { "title" : ".technology", "href" : "technology.html" }, { "title" : ".tennis", "href" : "tennis.html" }, { "title" : ".theater", "href" : "theater.html" }, { "title" : ".tienda", "href" : "tienda.html" }, { "title" : ".tips", "href" : "tips.html" }, { "title" : ".tires", "href" : "tires.html" }, { "title" : ".today", "href" : "today.html" }, { "title" : ".tools", "href" : "tools.html" }, { "title" : ".tours", "href" : "tours.html" }, { "title" : ".town", "href" : "town.html" }, { "title" : ".toys", "href" : "toys.html" }, { "title" : ".trade", "href" : "trade.html" }, { "title" : ".training", "href" : "training.html" }, { "title" : ".tv", "href" : "tv.html" }, { "title" : ".university", "href" : "university.html" }, { "title" : ".uno", "href" : "uno.html" }, { "title" : ".vacations", "href" : "vacations.html" }, { "title" : ".vegas", "href" : "vegas.html" }, { "title" : ".ventures", "href" : "ventures.html" }, { "title" : ".vg", "href" : "vg-xref.html" }, { "title" : ".viajes", "href" : "viajes.html" }, { "title" : ".video", "href" : "video.html" }, { "title" : ".villas", "href" : "villas.html" }, { "title" : ".vision", "href" : "vision.html" }, { "title" : ".voyage", "href" : "voyage.html" }, { "title" : ".watch", "href" : "watch.html" }, { "title" : ".website", "href" : "website.html" }, { "title" : ".wedding", "href" : "wedding.html" }, { "title" : ".wiki", "href" : "wiki.html" }, { "title" : ".wine", "href" : "wine.html" }, { "title" : ".works", "href" : "works.html" }, { "title" : ".world", "href" : "world.html" }, { "title" : ".wtf", "href" : "wtf.html" }, { "title" : ".xyz", "href" : "xyz.html" }, { "title" : ".zone", "href" : "zone.html" } ] }, { "title" : "Geographic top-level domains", "href" : "registrar-tld-list-geographic.html", "contents" : [ { "title" : "Africa", "href" : "registrar-tld-list-africa.html", "contents" : [ { "title" : ".ac (Ascension Island)", "href" : "ac.html" }, { "title" : ".co.za (South Africa)", "href" : "co.za.html" }, { "title" : ".sh (Saint Helena)", "href" : "sh.html" } ] }, { "title" : "Americas", "href" : "registrar-tld-list-americas.html", "contents" : [ { "title" : ".ca (Canada)", "href" : "ca.html" }, { "title" : ".cl (Chile)", "href" : "cl.html" }, { "title" : ".co (Colombia)", "href" : "co.html" }, { "title" : ".com.ar (Argentina)", "href" : "com.ar.html" }, { "title" : ".com.br (Brazil)", "href" : "com.br.html" }, { "title" : ".com.mx (Mexico)", "href" : "com.mx.html" }, { "title" : ".mx (Mexico)", "href" : "mx.html" }, { "title" : ".us (United States)", "href" : "us.html" }, { "title" : ".vc (Saint Vincent and the Grenadines)", "href" : "vc.html" }, { "title" : ".vg (British Virgin Islands)", "href" : "vg.html" } ] }, { "title" : "Asia/Oceania", "href" : "registrar-tld-list-asiaoceania.html", "contents" : [ { "title" : ".au (Australia)", "href" : "au.html" }, { "title" : ".cc (Cocos (Keeling) Islands)", "href" : "cc.html" }, { "title" : ".co.nz (New Zealand)", "href" : "co.nz.html" }, { "title" : ".com.au (Australia)", "href" : "com.au.html" }, { "title" : ".com.sg (Republic of Singapore)", "href" : "com.sg.html" }, { "title" : ".fm (Federated States of Micronesia)", "href" : "fm.html" }, { "title" : ".in (India)", "href" : "in.html" }, { "title" : ".jp (Japan)", "href" : "jp.html" }, { "title" : ".io (British Indian Ocean Territory)", "href" : "io.html" }, { "title" : ".net.au (Australia)", "href" : "net.au.html" }, { "title" : ".net.nz (New Zealand)", "href" : "net.nz.html" }, { "title" : ".org.nz (New Zealand)", "href" : "org.nz.html" }, { "title" : ".qa (Qatar)", "href" : "qa.html" }, { "title" : ".ru (Russian Federation)", "href" : "ru.html" }, { "title" : ".sg (Republic of Singapore)", "href" : "sg.html" } ] }, { "title" : "Europe", "href" : "registrar-tld-list-europe.html", "contents" : [ { "title" : ".be (Belgium)", "href" : "be.html" }, { "title" : ".berlin (city of Berlin in Germany)", "href" : "berlin.html" }, { "title" : ".ch (Switzerland)", "href" : "ch.html" }, { "title" : ".co.uk (United Kingdom)", "href" : "co.uk.html" }, { "title" : ".cz (Czech Republic)", "href" : "cz.html" }, { "title" : ".de (Germany)", "href" : "de.html" }, { "title" : ".es (Spain)", "href" : "es.html" }, { "title" : ".eu (European Union)", "href" : "eu.html" }, { "title" : ".fi (Finland)", "href" : "fi.html" }, { "title" : ".fr (France)", "href" : "fr.html" }, { "title" : ".gg (Guernsey)", "href" : "gg.html" }, { "title" : ".im (Isle of Man)", "href" : "im.html" }, { "title" : ".it (Italy)", "href" : "it.html" }, { "title" : ".me (Montenegro)", "href" : "me.html" }, { "title" : ".me.uk (United Kingdom)", "href" : "me.uk.html" }, { "title" : ".nl (the Netherlands)", "href" : "nl.html" }, { "title" : ".org.uk (United Kingdom)", "href" : "org.uk.html" }, { "title" : ".ruhr (Ruhr region, western part of Germany)", "href" : "ruhr.html" }, { "title" : ".se (Sweden)", "href" : "se.html" }, { "title" : ".uk (United Kingdom)", "href" : "uk.html" }, { "title" : ".wien (city of Vienna in Austria)", "href" : "wien.html" } ] } ] } ] } ] }, { "title" : "Configuring Amazon Route 53 as your DNS service", "href" : "dns-configuring.html", "contents" : [ { "title" : "Making Route 53 the DNS service for an existing domain", "href" : "MigratingDNS.html", "contents" : [ { "title" : "Making Route 53 the DNS service for a domain that's in use", "href" : "migrate-dns-domain-in-use.html" }, { "title" : "Making Route 53 the DNS service for an inactive domain", "href" : "migrate-dns-domain-inactive.html" } ] }, { "title" : "Configuring DNS routing for a new domain", "href" : "dns-configuring-new-domain.html" }, { "title" : "Routing traffic to your resources", "href" : "dns-routing-traffic-to-resources.html", "contents" : [ { "title" : "Routing traffic for subdomains", "href" : "dns-routing-traffic-for-subdomains.html" } ] }, { "title" : "Working with hosted zones", "href" : "hosted-zones-working-with.html", "contents" : [ { "title" : "Working with public hosted zones", "href" : "AboutHZWorkingWith.html", "contents" : [ { "title" : "Considerations when working with public hosted zones", "href" : "hosted-zone-public-considerations.html" }, { "title" : "Creating a public hosted zone", "href" : "CreatingHostedZone.html" }, { "title" : "Getting the name servers for a public hosted zone", "href" : "GetInfoAboutHostedZone.html" }, { "title" : "Listing public hosted zones", "href" : "ListInfoOnHostedZone.html" }, { "title" : "Viewing DNS query metrics for a public hosted zone", "href" : "hosted-zone-public-viewing-query-metrics.html" }, { "title" : "Deleting a public hosted zone", "href" : "DeleteHostedZone.html" }, { "title" : "Checking DNS responses from Route 53", "href" : "dns-test.html" }, { "title" : "Configuring white-label name servers", "href" : "white-label-name-servers.html" }, { "title" : "NS and SOA records that Amazon Route 53 creates for a public hosted zone", "href" : "SOA-NSrecords.html" } ] }, { "title" : "Working with private hosted zones", "href" : "hosted-zones-private.html", "contents" : [ { "title" : "Considerations when working with a private hosted zone", "href" : "hosted-zone-private-considerations.html" }, { "title" : "Creating a private hosted zone", "href" : "hosted-zone-private-creating.html" }, { "title" : "Listing private hosted zones", "href" : "hosted-zone-private-listing.html" }, { "title" : "Associating more VPCs with a private hosted zone", "href" : "hosted-zone-private-associate-vpcs.html" }, { "title" : "Associating an Amazon VPC and a private hosted zone that you created with different AWS accounts", "href" : "hosted-zone-private-associate-vpcs-different-accounts.html" }, { "title" : "Disassociating VPCs from a private hosted zone", "href" : "hosted-zone-private-disassociate-vpcs.html" }, { "title" : "Deleting a private hosted zone", "href" : "hosted-zone-private-deleting.html" } ] }, { "title" : "Migrating a hosted zone to a different AWS account", "href" : "hosted-zones-migrating.html" } ] }, { "title" : "Working with records", "href" : "rrsets-working-with.html", "contents" : [ { "title" : "Choosing a routing policy", "href" : "routing-policy.html", "contents" : [ { "title" : "Simple routing", "href" : "routing-policy-simple.html" }, { "title" : "Failover routing", "href" : "routing-policy-failover.html" }, { "title" : "Geolocation routing", "href" : "routing-policy-geo.html", "contents" : [ { "title" : "Geolocation routing in private hosted zones", "href" : "routing-policy-geo-phz.html" } ] }, { "title" : "Geoproximity routing (traffic flow only)", "href" : "routing-policy-geoproximity.html" }, { "title" : "Latency-based routing", "href" : "routing-policy-latency.html", "contents" : [ { "title" : "Latency-based routing in private hosted zones", "href" : "routing-policy-latency-phz.html" } ] }, { "title" : "IP-based routing", "href" : "routing-policy-ipbased.html", "contents" : [ { "title" : "Creating a CIDR collection with CIDR locations and blocks", "href" : "resource-record-sets-creating-cidr-collection.html" }, { "title" : "Working with CIDR locations and blocks", "href" : "resource-record-sets-working-with-cidr-locations.html" }, { "title" : "Deleting a CIDR collection", "href" : "resource-record-sets-delete-cidr-collection.html" }, { "title" : "Moving a geolocation to IP-based routing", "href" : "resource-record-sets-move-geolocation-to-cidr.html" } ] }, { "title" : "Multivalue answer routing", "href" : "routing-policy-multivalue.html" }, { "title" : "Weighted routing", "href" : "routing-policy-weighted.html" }, { "title" : "How Amazon Route 53 uses EDNS0 to estimate the location of a user", "href" : "routing-policy-edns0.html" } ] }, { "title" : "Choosing between alias and non-alias records", "href" : "resource-record-sets-choosing-alias-non-alias.html" }, { "title" : "Supported DNS record types", "href" : "ResourceRecordTypes.html" }, { "title" : "Creating records by using the Amazon Route 53 console", "href" : "resource-record-sets-creating.html" }, { "title" : "Resource record set permissions", "href" : "resource-record-sets-permissions.html" }, { "title" : "Values you specify", "href" : "resource-record-sets-values.html", "contents" : [ { "title" : "Common values", "href" : "resource-record-sets-values-shared.html" }, { "title" : "Common values for alias records", "href" : "resource-record-sets-values-alias-common.html" }, { "title" : "Simple records values", "href" : "resource-record-sets-values-basic.html" }, { "title" : "Simple alias records values", "href" : "resource-record-sets-values-alias.html" }, { "title" : "Failover records values", "href" : "resource-record-sets-values-failover.html" }, { "title" : "Failover alias records values", "href" : "resource-record-sets-values-failover-alias.html" }, { "title" : "Geolocation records values", "href" : "resource-record-sets-values-geo.html" }, { "title" : "Geolocation alias records values", "href" : "resource-record-sets-values-geo-alias.html" }, { "title" : "Latency records values", "href" : "resource-record-sets-values-latency.html" }, { "title" : "Latency alias records values", "href" : "resource-record-sets-values-latency-alias.html" }, { "title" : "IP-based records values", "href" : "resource-record-sets-values-ipbased.html" }, { "title" : "IP-based alias records values", "href" : "resource-record-sets-values-ipbased-alias.html" }, { "title" : "Multivalue answer records values", "href" : "resource-record-sets-values-multivalue.html" }, { "title" : "Weighted records values", "href" : "resource-record-sets-values-weighted.html" }, { "title" : "Weighted alias records values", "href" : "resource-record-sets-values-weighted-alias.html" } ] }, { "title" : "Creating records by importing a zone file", "href" : "resource-record-sets-creating-import.html" }, { "title" : "Editing records", "href" : "resource-record-sets-editing.html" }, { "title" : "Deleting records", "href" : "resource-record-sets-deleting.html" }, { "title" : "Listing records", "href" : "resource-record-sets-listing.html" } ] }, { "title" : "Using traffic flow to route DNS traffic", "href" : "traffic-flow.html", "contents" : [ { "title" : "Creating and managing traffic policies", "href" : "traffic-policies.html" }, { "title" : "Creating and managing policy records", "href" : "traffic-policy-records.html" } ] }, { "title" : "Configuring DNSSEC signing", "href" : "dns-configuring-dnssec.html", "contents" : [ { "title" : "Enabling DNSSEC signing and establishing a chain of trust", "href" : "dns-configuring-dnssec-enable-signing.html" }, { "title" : "Disabling DNSSEC signing", "href" : "dns-configuring-dnssec-disable.html" }, { "title" : "Working with customer managed keys", "href" : "dns-configuring-dnssec-cmk-requirements.html" }, { "title" : "Working with key-signing keys (KSKs)", "href" : "dns-configuring-dnssec-ksk.html" }, { "title" : "KMS key and ZSK management in Route 53", "href" : "dns-configuring-dnssec-zsk-management.html" }, { "title" : "DNSSEC proofs of nonexistence in Route 53", "href" : "dns-configuring-dnssec-proof-of-nonexistence.html" }, { "title" : "Troubleshooting DNSSEC signing", "href" : "dns-configuring-dnssec-troubleshoot.html" } ] }, { "title" : "Using AWS Cloud Map to create records and health checks", "href" : "autonaming.html" }, { "title" : "DNS constraints and behaviors", "href" : "DNSBehavior.html" } ] }, { "title" : "What is Route 53 Resolver?", "href" : "resolver.html", "contents" : [ { "title" : "Resolving DNS queries between VPCs and your network", "href" : "resolver-overview-DSN-queries-to-vpc.html" }, { "title" : "Getting started with Route 53 Resolver", "href" : "resolver-getting-started.html" }, { "title" : "Forwarding inbound DNS queries to your VPCs", "href" : "resolver-forwarding-inbound-queries.html" }, { "title" : "Forwarding outbound DNS queries to your network", "href" : "resolver-forwarding-outbound-queries.html" }, { "title" : "Managing inbound endpoints", "href" : "resolver-forwarding-inbound-queries-managing.html" }, { "title" : "Managing outbound endpoints", "href" : "resolver-forwarding-outbound-queries-managing.html" }, { "title" : "Managing forwarding rules", "href" : "resolver-rules-managing.html", "contents" : [ { "title" : "Forwarding rules for reverse DNS queries in Resolver", "href" : "resolver-automatic-forwarding-rules-reverse-dns.html" } ] }, { "title" : "Enabling DNSSEC validation", "href" : "resolver-dnssec-validation.html" } ] }, { "title" : "Routing internet traffic to your AWS resources", "href" : "routing-to-aws-resources.html", "contents" : [ { "title" : "Amazon API Gateway API", "href" : "routing-to-api-gateway.html" }, { "title" : "Amazon CloudFront distribution", "href" : "routing-to-cloudfront-distribution.html" }, { "title" : "Amazon EC2 instance", "href" : "routing-to-ec2-instance.html" }, { "title" : "App Runner service", "href" : "routing-to-app-runner.html" }, { "title" : "AWS Elastic Beanstalk environment", "href" : "routing-to-beanstalk-environment.html" }, { "title" : "ELB load balancer", "href" : "routing-to-elb-load-balancer.html" }, { "title" : "Amazon S3 bucket", "href" : "RoutingToS3Bucket.html" }, { "title" : "Amazon Virtual Private Cloud interface endpoint", "href" : "routing-to-vpc-interface-endpoint.html" }, { "title" : "Amazon WorkMail", "href" : "routing-to-workmail.html" }, { "title" : "Other AWS resources", "href" : "routing-to-additional-aws-resources.html" } ] }, { "title" : "Creating health checks and configuring DNS failover", "href" : "dns-failover.html", "contents" : [ { "title" : "Types of health checks", "href" : "health-checks-types.html" }, { "title" : "How Route 53 determines whether a health check is healthy", "href" : "dns-failover-determining-health-of-endpoints.html" }, { "title" : "Creating, updating, and deleting health checks", "href" : "health-checks-creating-deleting.html", "contents" : [ { "title" : "Creating and updating health checks", "href" : "health-checks-creating.html" }, { "title" : "Values that you specify when you create or update health checks", "href" : "health-checks-creating-values.html" }, { "title" : "Values that Route 53 displays when you create a health check", "href" : "health-checks-creating-values-displayed.html" }, { "title" : "Updating health checks when you change CloudWatch alarm settings", "href" : "health-checks-updating-cloudwatch-alarm-settings.html" }, { "title" : "Deleting health checks", "href" : "health-checks-deleting.html" }, { "title" : "Updating or deleting health checks when DNS failover is configured", "href" : "health-checks-updating-deleting-tasks.html" }, { "title" : "Configuring router and firewall rules for health checks", "href" : "dns-failover-router-firewall-rules.html" } ] }, { "title" : "Monitoring health check status and getting notifications", "href" : "health-checks-monitor-view-status.html", "contents" : [ { "title" : "Viewing health check status and the reason for health check failures", "href" : "health-checks-view-status.html" }, { "title" : "Monitoring the latency between health checkers and your endpoint", "href" : "monitoring-health-check-latency.html" }, { "title" : "Monitoring health checks using CloudWatch", "href" : "monitoring-health-checks.html" } ] }, { "title" : "Configuring DNS failover", "href" : "dns-failover-configuring.html", "contents" : [ { "title" : "Task list for configuring DNS failover", "href" : "dns-failover-how-to.html" }, { "title" : "How health checks work in simple configurations", "href" : "dns-failover-simple-configs.html" }, { "title" : "How health checks work in complex configurations", "href" : "dns-failover-complex-configs.html" }, { "title" : "How Route 53 chooses records when health checking is configured", "href" : "health-checks-how-route-53-chooses-records.html" }, { "title" : "Active-active and active-passive failover", "href" : "dns-failover-types.html" }, { "title" : "Configuring failover in a private hosted zone", "href" : "dns-failover-private-hosted-zones.html" }, { "title" : "How Route 53 averts failover problems", "href" : "dns-failover-problems.html" } ] }, { "title" : "Naming and tagging health checks", "href" : "health-checks-tagging.html" }, { "title" : "Using API versions before 2012-12-12", "href" : "dns-failover-using-old-apis.html" } ] }, { "title" : "Route 53 Resolver DNS Firewall", "href" : "resolver-dns-firewall.html", "contents" : [ { "title" : "How Route 53 Resolver DNS Firewall works", "href" : "resolver-dns-firewall-overview.html" }, { "title" : "Getting started with Route 53 Resolver DNS Firewall", "href" : "resolver-dns-firewall-getting-started.html" }, { "title" : "DNS Firewall rule groups and rules", "href" : "resolver-dns-firewall-rule-groups.html", "contents" : [ { "title" : "Rule group settings in DNS Firewall", "href" : "resolver-dns-firewall-rule-group-settings.html" }, { "title" : "Rule settings in DNS Firewall", "href" : "resolver-dns-firewall-rule-settings.html" }, { "title" : "Rule actions in DNS Firewall", "href" : "resolver-dns-firewall-rule-actions.html" }, { "title" : "Managing rule groups and rules in DNS Firewall", "href" : "resolver-dns-firewall-rule-group-managing.html" } ] }, { "title" : "Route 53 Resolver DNS Firewall domain lists", "href" : "resolver-dns-firewall-domain-lists.html", "contents" : [ { "title" : "Managed Domain Lists", "href" : "resolver-dns-firewall-managed-domain-lists.html" }, { "title" : "Managing your own domain lists", "href" : "resolver-dns-firewall-user-managed-domain-lists.html" }, { "title" : "Configuring query logging for DNS Firewall", "href" : "firewall-resolver-query-logs-configuring.html" } ] }, { "title" : "Sharing rule groups between accounts", "href" : "resolver-dns-firewall-rule-group-sharing.html" }, { "title" : "Enabling DNS Firewall protections for your VPC", "href" : "resolver-dns-firewall-vpc-protections.html", "contents" : [ { "title" : "Managing associations between your VPC and firewall rule groups", "href" : "resolver-dns-firewall-vpc-associating-rule-group.html" }, { "title" : "DNS Firewall VPC configuration", "href" : "resolver-dns-firewall-vpc-configuration.html" } ] } ] }, { "title" : "What is Amazon Route 53 on Outposts?", "href" : "outpost-resolver.html", "contents" : [ { "title" : "Getting started with Route 53 Resolver on AWS Outposts", "href" : "outpost-resolver-getting-started.html" }, { "title" : "Creating inbound endpoints", "href" : "outpost-resolver-add-inbound-endpoints.html" }, { "title" : "Creating outbound endpoints", "href" : "outpost-resolver-add-outbound-endpoints.html" }, { "title" : "Creating forwarding rules for outbound endpoints", "href" : "outpost-resolver-add-resolver-rules.html" }, { "title" : "Managing Resolver on Outpost", "href" : "outpost-resolver-manage.html" }, { "title" : "Managing inbound endpoints on Resolver on Outpost", "href" : "outpost-resolver-manage-inbound.html" }, { "title" : "Managing outbound endpoints on Resolver on Outpost", "href" : "outpost-resolver-manage-outbound-outpost.html" } ] }, { "title" : "Creating AWS CloudFormation resources", "href" : "creating-resources-with-cloudformation.html" }, { "title" : "Code examples", "href" : "service_code_examples.html", "contents" : [ { "title" : "Route 53 examples", "href" : "service_code_examples_route-53.html", "contents" : [ { "title" : "Actions", "href" : "service_code_examples_route-53_actions.html", "contents" : [ { "title" : "Get a list of the public and private hosted zones", "href" : "example_route-53_ListHostedZones_section.html" } ] } ] }, { "title" : "Route 53 domain registration examples", "href" : "service_code_examples_route53-domains.html", "contents" : [ { "title" : "Actions", "href" : "service_code_examples_route53-domains_actions.html", "contents" : [ { "title" : "Check domain availability", "href" : "example_route-53_CheckDomainAvailability_section.html" }, { "title" : "Check domain transferability", "href" : "example_route-53_CheckDomainTransferability_section.html" }, { "title" : "Get domain details", "href" : "example_route-53_GetDomainDetails_section.html" }, { "title" : "Get operation details", "href" : "example_route-53_GetOperationDetails_section.html" }, { "title" : "Get suggested domain names", "href" : "example_route-53_GetDomainSuggestions_section.html" }, { "title" : "List domain prices", "href" : "example_route-53_ListPrices_section.html" }, { "title" : "List domains", "href" : "example_route-53_ListDomains_section.html" }, { "title" : "List operations", "href" : "example_route-53_ListOperations_section.html" }, { "title" : "Register a domain", "href" : "example_route-53_RegisterDomain_section.html" }, { "title" : "View billing", "href" : "example_route-53_ViewBilling_section.html" } ] }, { "title" : "Scenarios", "href" : "service_code_examples_route53-domains_scenarios.html", "contents" : [ { "title" : "Get started with domains", "href" : "example_route-53_Scenario_GetStartedRoute53Domains_section.html" } ] } ] } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Protection from dangling delegation records", "href" : "protection-from-dangling-dns.html" } ] }, { "title" : "Identity and access management", "href" : "auth-and-access-control.html", "contents" : [ { "title" : "Overview of managing access", "href" : "access-control-overview.html" }, { "title" : "Using IAM policies for Route 53", "href" : "access-control-managing-permissions.html" }, { "title" : "Using Service-Linked Roles", "href" : "using-service-linked-roles.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol-route53.html" }, { "title" : "Using IAM policy conditions to manage resource record sets", "href" : "specifying-rrset-conditions.html" }, { "title" : "Route 53 API permissions reference", "href" : "r53-api-permissions-ref.html" } ] }, { "title" : "Logging and monitoring", "href" : "logging-monitoring.html" }, { "title" : "Compliance validation", "href" : "route-53-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Monitoring", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Public DNS query logging", "href" : "query-logs.html" }, { "title" : "Resolver query logging", "href" : "resolver-query-logs.html", "contents" : [ { "title" : "Resources that you can send Resolver query logs to", "href" : "resolver-query-logs-choosing-target-resource.html" }, { "title" : "Managing configurations", "href" : "resolver-query-logging-configurations-managing.html", "contents" : [ { "title" : "Values that appear in Resolver query logs", "href" : "resolver-query-logs-format.html" }, { "title" : "Resolver query log example", "href" : "resolver-query-logs-example-json.html", "contents" : [ { "title" : "Sharing Resolver query logging configs with other accounts", "href" : "query-logging-configurations-managing-sharing.html" } ] } ] } ] }, { "title" : "Monitoring domain registrations", "href" : "monitoring-domain-registrations.html" }, { "title" : "Monitoring your resources with Amazon Route 53 health checks and Amazon CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "Monitoring hosted zones using Amazon CloudWatch", "href" : "monitoring-hosted-zones-with-cloudwatch.html" }, { "title" : "Monitoring Route 53 Resolver endpoints with Amazon CloudWatch", "href" : "monitoring-resolver-with-cloudwatch.html" }, { "title" : "Monitoring Route 53 Resolver DNS Firewall rule groups with Amazon CloudWatch", "href" : "monitoring-resolver-dns-firewall-with-cloudwatch.html" }, { "title" : "Logging Amazon Route 53 API calls with AWS CloudTrail", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting-route-53.html", "contents" : [ { "title" : "My domain is unavailable on the internet", "href" : "troubleshooting-domain-unavailable.html" }, { "title" : "My domain is suspended (status is ClientHold)", "href" : "troubleshooting-domain-suspended.html" }, { "title" : "Transferring my domain to Amazon Route 53 failed", "href" : "troubleshooting-domain-transfer-failed.html" }, { "title" : "I changed DNS settings, but they haven't taken effect", "href" : "troubleshooting-new-dns-settings-not-in-effect.html" }, { "title" : "My browser displays a \"Server not found\" error", "href" : "troubleshooting-server-not-found.html" }, { "title" : "I can't route traffic to an Amazon S3 bucket that's configured for website hosting", "href" : "troubleshooting-s3-bucket-website-hosting.html" }, { "title" : "I was billed twice for the same hosted zone", "href" : "troubleshooting-billed-twice.html" }, { "title" : "My AWS account is closed, suspended, or terminated, and my domain is registered with Route 53", "href" : "troubleshooting-account-closed.html" } ] }, { "title" : "IP address ranges", "href" : "route-53-ip-addresses.html" }, { "title" : "Tagging resources", "href" : "tagging-resources.html" }, { "title" : "Tutorials", "href" : "Tutorials.html", "contents" : [ { "title" : "Using Amazon Route 53 as the DNS service for subdomains without migrating the parent domain", "href" : "creating-migrating.html", "contents" : [ { "title" : "Creating a subdomain that uses Amazon Route 53 as the DNS service without migrating the parent domain", "href" : "CreatingNewSubdomain.html" }, { "title" : "Migrating DNS service for a subdomain to Amazon Route 53 without migrating the parent domain", "href" : "MigratingSubdomain.html" } ] }, { "title" : "Transitioning to latency-based routing in Amazon Route 53", "href" : "TutorialTransitionToLBR.html" }, { "title" : "Adding another Region to your latency-based routing in Amazon Route 53", "href" : "TutorialAddingLBRRegion.html" }, { "title" : "Using latency and weighted records in Amazon Route 53 to route traffic to multiple Amazon EC2 instances in a Region", "href" : "TutorialLBRMultipleEC2InRegion.html" }, { "title" : "Managing over 100 weighted records in Amazon Route 53", "href" : "TutorialManagingOver100WRR.html" }, { "title" : "Weighting fault-tolerant multi-record answers in Amazon Route 53", "href" : "TutorialWeightedFTMR.html" } ] }, { "title" : "Best practices", "href" : "best-practices.html", "contents" : [ { "title" : "Best practices for Amazon Route 53 DNS", "href" : "best-practices-dns.html" }, { "title" : "Best practices for Resolver", "href" : "best-practices-resolver.html", "contents" : [ { "title" : "Avoid loop configurations with Resolver endpoints", "href" : "best-practices-resolver-endpoints.html" }, { "title" : "Resolver endpoint scaling", "href" : "best-practices-resolver-endpoint-scaling.html" }, { "title" : "High availability for Resolver endpoints", "href" : "best-practices-resolver-endpoint-high-availability.html" }, { "title" : "DNS zone walking", "href" : "best-practices-resolver-zone-walking.html" } ] }, { "title" : "Best practices for Amazon Route 53 health checks", "href" : "best-practices-healthchecks.html", "contents" : [ { "title" : "Best practices for Elastic IP addresses for health checks", "href" : "best-practices-healthcheck-monitoring-endpoints.html" } ] } ] }, { "title" : "Quotas", "href" : "DNSLimitations.html" }, { "title" : "Related information", "href" : "Resources.html" }, { "title" : "Document history", "href" : "History.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/",
+    "service": "Route53",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon Route\u00a053?",
+                "href": "Welcome.html",
+                "contents": [
+                    {
+                        "title": "How domain registration works",
+                        "href": "welcome-domain-registration.html"
+                    },
+                    {
+                        "title": "How internet traffic is routed to your website or web application",
+                        "href": "welcome-dns-service.html"
+                    },
+                    {
+                        "title": "How Amazon Route\u00a053 checks the health of your resources",
+                        "href": "welcome-health-checks.html"
+                    },
+                    {
+                        "title": "Amazon Route\u00a053 concepts",
+                        "href": "route-53-concepts.html"
+                    },
+                    {
+                        "title": "How to get started with Amazon Route\u00a053",
+                        "href": "welcome-how-to-get-started.html"
+                    },
+                    {
+                        "title": "Related services",
+                        "href": "welcome-related-services.html"
+                    },
+                    {
+                        "title": "Accessing Amazon Route\u00a053",
+                        "href": "welcome-accessing-route-53.html"
+                    },
+                    {
+                        "title": "AWS Identity and Access Management",
+                        "href": "IAMRoute53.html"
+                    },
+                    {
+                        "title": "Amazon Route\u00a053 pricing and billing",
+                        "href": "Route53Pricing.html"
+                    },
+                    {
+                        "title": "Working with AWS SDKs",
+                        "href": "sdk-general-information-section.html"
+                    }
+                ]
+            },
+            {
+                "title": "Setting up",
+                "href": "setting-up-route-53.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Use your domain for a static website",
+                        "href": "getting-started-s3.html"
+                    },
+                    {
+                        "title": "Use an Amazon CloudFront distribution to serve a static website",
+                        "href": "getting-started-cloudfront-overview.html"
+                    }
+                ]
+            },
+            {
+                "title": "Integration with other services",
+                "href": "integration-with-other-services.html"
+            },
+            {
+                "title": "DNS domain name format",
+                "href": "DomainNameFormat.html"
+            },
+            {
+                "title": "Registering and managing domains",
+                "href": "registrar.html",
+                "contents": [
+                    {
+                        "title": "Registering new domains",
+                        "href": "domain-register-update.html",
+                        "contents": [
+                            {
+                                "title": "Registering a new domain",
+                                "href": "domain-register.html"
+                            },
+                            {
+                                "title": "Values that you specify when you register or transfer a domain",
+                                "href": "domain-register-values-specify.html"
+                            },
+                            {
+                                "title": "Values that Amazon Route\u00a053 returns when you register a domain",
+                                "href": "domain-register-values-returned.html"
+                            },
+                            {
+                                "title": "Viewing the status of a domain registration",
+                                "href": "domain-view-status.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Updating domain settings",
+                        "href": "domain-update-settings.html",
+                        "contents": [
+                            {
+                                "title": "Updating contact information and ownership for a domain",
+                                "href": "domain-update-contacts.html"
+                            },
+                            {
+                                "title": "Enabling or disabling privacy protection for contact information for a domain",
+                                "href": "domain-privacy-protection.html"
+                            },
+                            {
+                                "title": "Enabling or disabling automatic renewal for a domain",
+                                "href": "domain-enable-disable-auto-renewal.html"
+                            },
+                            {
+                                "title": "Locking a domain to prevent unauthorized transfer to another registrar",
+                                "href": "domain-lock.html"
+                            },
+                            {
+                                "title": "Extending the registration period for a domain",
+                                "href": "domain-extend.html"
+                            },
+                            {
+                                "title": "Updating name servers to use another registrar",
+                                "href": "domain-register-other-dns-service.html"
+                            },
+                            {
+                                "title": "Adding or changing name servers and glue records for a domain",
+                                "href": "domain-name-servers-glue-records.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Renewing registration for a domain",
+                        "href": "domain-renew.html"
+                    },
+                    {
+                        "title": "Restoring an expired or deleted domain",
+                        "href": "domain-restore-expired.html"
+                    },
+                    {
+                        "title": "Replacing the hosted zone for a domain",
+                        "href": "domain-replace-hosted-zone.html"
+                    },
+                    {
+                        "title": "Transferring domains",
+                        "href": "domain-transfer.html",
+                        "contents": [
+                            {
+                                "title": "Transferring domain registration to Route\u00a053",
+                                "href": "domain-transfer-to-route-53.html"
+                            },
+                            {
+                                "title": "Viewing the status of a domain transfer",
+                                "href": "domain-transfer-to-route-53-status.html"
+                            },
+                            {
+                                "title": "How transferring a domain to Route\u00a053 affects the expiration date",
+                                "href": "domain-transfer-to-route-53-expiration.html"
+                            },
+                            {
+                                "title": "Transferring a domain to a different AWS account",
+                                "href": "domain-transfer-between-aws-accounts.html"
+                            },
+                            {
+                                "title": "Transferring a domain from Route\u00a053",
+                                "href": "domain-transfer-from-route-53.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Resending authorization and confirmation emails",
+                        "href": "domain-click-email-link.html"
+                    },
+                    {
+                        "title": "Configuring DNSSEC for a domain",
+                        "href": "domain-configure-dnssec.html"
+                    },
+                    {
+                        "title": "Finding your registrar",
+                        "href": "find-your-registrar.html",
+                        "contents": [
+                            {
+                                "title": "Viewing information about domains",
+                                "href": "domain-whois-rdap.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Deleting a domain name registration",
+                        "href": "domain-delete.html"
+                    },
+                    {
+                        "title": "Contacting AWS Support about domain registration issues",
+                        "href": "domain-contact-support.html"
+                    },
+                    {
+                        "title": "Downloading a domain billing report",
+                        "href": "domain-billing-report.html"
+                    },
+                    {
+                        "title": "Domains that you can register with Amazon Route\u00a053",
+                        "href": "registrar-tld-list.html",
+                        "contents": [
+                            {
+                                "title": "Generic top-level domains",
+                                "href": "registrar-tld-list-generic.html",
+                                "contents": [
+                                    {
+                                        "title": ".ac",
+                                        "href": "ac-xref.html"
+                                    },
+                                    {
+                                        "title": ".academy",
+                                        "href": "academy.html"
+                                    },
+                                    {
+                                        "title": ".accountants",
+                                        "href": "accountants.html"
+                                    },
+                                    {
+                                        "title": ".actor",
+                                        "href": "actor.html"
+                                    },
+                                    {
+                                        "title": ".adult",
+                                        "href": "adult.html"
+                                    },
+                                    {
+                                        "title": ".agency",
+                                        "href": "agency.html"
+                                    },
+                                    {
+                                        "title": ".airforce",
+                                        "href": "airforce.html"
+                                    },
+                                    {
+                                        "title": ".apartments",
+                                        "href": "apartments.html"
+                                    },
+                                    {
+                                        "title": ".associates",
+                                        "href": "associates.html"
+                                    },
+                                    {
+                                        "title": ".auction",
+                                        "href": "auction.html"
+                                    },
+                                    {
+                                        "title": ".audio",
+                                        "href": "audio.html"
+                                    },
+                                    {
+                                        "title": ".band",
+                                        "href": "band.html"
+                                    },
+                                    {
+                                        "title": ".bargains",
+                                        "href": "bargains.html"
+                                    },
+                                    {
+                                        "title": ".bet",
+                                        "href": "bet.html"
+                                    },
+                                    {
+                                        "title": ".bike",
+                                        "href": "bike.html"
+                                    },
+                                    {
+                                        "title": ".bingo",
+                                        "href": "bingo.html"
+                                    },
+                                    {
+                                        "title": ".biz",
+                                        "href": "biz.html"
+                                    },
+                                    {
+                                        "title": ".black",
+                                        "href": "black.html"
+                                    },
+                                    {
+                                        "title": ".blue",
+                                        "href": "blue.html"
+                                    },
+                                    {
+                                        "title": ".boutique",
+                                        "href": "boutique.html"
+                                    },
+                                    {
+                                        "title": ".builders",
+                                        "href": "builders.html"
+                                    },
+                                    {
+                                        "title": ".business",
+                                        "href": "business.html"
+                                    },
+                                    {
+                                        "title": ".buzz",
+                                        "href": "buzz.html"
+                                    },
+                                    {
+                                        "title": ".cab",
+                                        "href": "cab.html"
+                                    },
+                                    {
+                                        "title": ".cafe",
+                                        "href": "cafe.html"
+                                    },
+                                    {
+                                        "title": ".camera",
+                                        "href": "camera.html"
+                                    },
+                                    {
+                                        "title": ".camp",
+                                        "href": "camp.html"
+                                    },
+                                    {
+                                        "title": ".capital",
+                                        "href": "capital.html"
+                                    },
+                                    {
+                                        "title": ".cards",
+                                        "href": "cards.html"
+                                    },
+                                    {
+                                        "title": ".care",
+                                        "href": "care.html"
+                                    },
+                                    {
+                                        "title": ".careers",
+                                        "href": "careers.html"
+                                    },
+                                    {
+                                        "title": ".cash",
+                                        "href": "cash.html"
+                                    },
+                                    {
+                                        "title": ".casino",
+                                        "href": "casino.html"
+                                    },
+                                    {
+                                        "title": ".catering",
+                                        "href": "catering.html"
+                                    },
+                                    {
+                                        "title": ".cc",
+                                        "href": "cc-xref.html"
+                                    },
+                                    {
+                                        "title": ".center",
+                                        "href": "center.html"
+                                    },
+                                    {
+                                        "title": ".ceo",
+                                        "href": "ceo.html"
+                                    },
+                                    {
+                                        "title": ".chat",
+                                        "href": "chat.html"
+                                    },
+                                    {
+                                        "title": ".cheap",
+                                        "href": "cheap.html"
+                                    },
+                                    {
+                                        "title": ".church",
+                                        "href": "church.html"
+                                    },
+                                    {
+                                        "title": ".city",
+                                        "href": "city.html"
+                                    },
+                                    {
+                                        "title": ".claims",
+                                        "href": "claims.html"
+                                    },
+                                    {
+                                        "title": ".cleaning",
+                                        "href": "cleaning.html"
+                                    },
+                                    {
+                                        "title": ".click",
+                                        "href": "click.html"
+                                    },
+                                    {
+                                        "title": ".clinic",
+                                        "href": "clinic.html"
+                                    },
+                                    {
+                                        "title": ".clothing",
+                                        "href": "clothing.html"
+                                    },
+                                    {
+                                        "title": ".cloud",
+                                        "href": "cloud.html"
+                                    },
+                                    {
+                                        "title": ".club",
+                                        "href": "club.html"
+                                    },
+                                    {
+                                        "title": ".coach",
+                                        "href": "coach.html"
+                                    },
+                                    {
+                                        "title": ".codes",
+                                        "href": "codes.html"
+                                    },
+                                    {
+                                        "title": ".coffee",
+                                        "href": "coffee.html"
+                                    },
+                                    {
+                                        "title": ".college",
+                                        "href": "college.html"
+                                    },
+                                    {
+                                        "title": ".com",
+                                        "href": "com.html"
+                                    },
+                                    {
+                                        "title": ".community",
+                                        "href": "community.html"
+                                    },
+                                    {
+                                        "title": ".company",
+                                        "href": "company.html"
+                                    },
+                                    {
+                                        "title": ".computer",
+                                        "href": "computer.html"
+                                    },
+                                    {
+                                        "title": ".condos",
+                                        "href": "condos.html"
+                                    },
+                                    {
+                                        "title": ".construction",
+                                        "href": "construction.html"
+                                    },
+                                    {
+                                        "title": ".consulting",
+                                        "href": "consulting.html"
+                                    },
+                                    {
+                                        "title": ".contractors",
+                                        "href": "contractors.html"
+                                    },
+                                    {
+                                        "title": ".cool",
+                                        "href": "cool.html"
+                                    },
+                                    {
+                                        "title": ".coupons",
+                                        "href": "coupons.html"
+                                    },
+                                    {
+                                        "title": ".credit",
+                                        "href": "credit.html"
+                                    },
+                                    {
+                                        "title": ".creditcard",
+                                        "href": "creditcard.html"
+                                    },
+                                    {
+                                        "title": ".cruises",
+                                        "href": "cruises.html"
+                                    },
+                                    {
+                                        "title": ".dance",
+                                        "href": "dance.html"
+                                    },
+                                    {
+                                        "title": ".dating",
+                                        "href": "dating.html"
+                                    },
+                                    {
+                                        "title": ".deals",
+                                        "href": "deals.html"
+                                    },
+                                    {
+                                        "title": ".degree",
+                                        "href": "degree.html"
+                                    },
+                                    {
+                                        "title": ".delivery",
+                                        "href": "delivery.html"
+                                    },
+                                    {
+                                        "title": ".democrat",
+                                        "href": "democrat.html"
+                                    },
+                                    {
+                                        "title": ".dental",
+                                        "href": "dental.html"
+                                    },
+                                    {
+                                        "title": ".diamonds",
+                                        "href": "diamonds.html"
+                                    },
+                                    {
+                                        "title": ".diet",
+                                        "href": "diet.html"
+                                    },
+                                    {
+                                        "title": ".digital",
+                                        "href": "digital.html"
+                                    },
+                                    {
+                                        "title": ".direct",
+                                        "href": "direct.html"
+                                    },
+                                    {
+                                        "title": ".directory",
+                                        "href": "directory.html"
+                                    },
+                                    {
+                                        "title": ".discount",
+                                        "href": "discount.html"
+                                    },
+                                    {
+                                        "title": ".dog",
+                                        "href": "dog.html"
+                                    },
+                                    {
+                                        "title": ".domains",
+                                        "href": "domains.html"
+                                    },
+                                    {
+                                        "title": ".education",
+                                        "href": "education.html"
+                                    },
+                                    {
+                                        "title": ".email",
+                                        "href": "email.html"
+                                    },
+                                    {
+                                        "title": ".energy",
+                                        "href": "energy.html"
+                                    },
+                                    {
+                                        "title": ".engineering",
+                                        "href": "engineering.html"
+                                    },
+                                    {
+                                        "title": ".enterprises",
+                                        "href": "enterprises.html"
+                                    },
+                                    {
+                                        "title": ".equipment",
+                                        "href": "equipment.html"
+                                    },
+                                    {
+                                        "title": ".estate",
+                                        "href": "estate.html"
+                                    },
+                                    {
+                                        "title": ".events",
+                                        "href": "events.html"
+                                    },
+                                    {
+                                        "title": ".exchange",
+                                        "href": "exchange.html"
+                                    },
+                                    {
+                                        "title": ".expert",
+                                        "href": "expert.html"
+                                    },
+                                    {
+                                        "title": ".exposed",
+                                        "href": "exposed.html"
+                                    },
+                                    {
+                                        "title": ".express",
+                                        "href": "express.html"
+                                    },
+                                    {
+                                        "title": ".fail",
+                                        "href": "fail.html"
+                                    },
+                                    {
+                                        "title": ".farm",
+                                        "href": "farm.html"
+                                    },
+                                    {
+                                        "title": ".finance",
+                                        "href": "finance.html"
+                                    },
+                                    {
+                                        "title": ".financial",
+                                        "href": "financial.html"
+                                    },
+                                    {
+                                        "title": ".fish",
+                                        "href": "fish.html"
+                                    },
+                                    {
+                                        "title": ".fitness",
+                                        "href": "fitness.html"
+                                    },
+                                    {
+                                        "title": ".flights",
+                                        "href": "flights.html"
+                                    },
+                                    {
+                                        "title": ".florist",
+                                        "href": "florist.html"
+                                    },
+                                    {
+                                        "title": ".flowers",
+                                        "href": "flowers.html"
+                                    },
+                                    {
+                                        "title": ".fm",
+                                        "href": "fm-xref.html"
+                                    },
+                                    {
+                                        "title": ".football",
+                                        "href": "football.html"
+                                    },
+                                    {
+                                        "title": ".forsale",
+                                        "href": "forsale.html"
+                                    },
+                                    {
+                                        "title": ".foundation",
+                                        "href": "foundation.html"
+                                    },
+                                    {
+                                        "title": ".fund",
+                                        "href": "fund.html"
+                                    },
+                                    {
+                                        "title": ".furniture",
+                                        "href": "furniture.html"
+                                    },
+                                    {
+                                        "title": ".futbol",
+                                        "href": "futbol.html"
+                                    },
+                                    {
+                                        "title": ".fyi",
+                                        "href": "fyi.html"
+                                    },
+                                    {
+                                        "title": ".gallery",
+                                        "href": "gallery.html"
+                                    },
+                                    {
+                                        "title": ".games",
+                                        "href": "games.html"
+                                    },
+                                    {
+                                        "title": ".gift",
+                                        "href": "gift.html"
+                                    },
+                                    {
+                                        "title": ".gifts",
+                                        "href": "gifts.html"
+                                    },
+                                    {
+                                        "title": ".gives",
+                                        "href": "gives.html"
+                                    },
+                                    {
+                                        "title": ".glass",
+                                        "href": "glass.html"
+                                    },
+                                    {
+                                        "title": ".global",
+                                        "href": "global.html"
+                                    },
+                                    {
+                                        "title": ".gmbh",
+                                        "href": "gmbh.html"
+                                    },
+                                    {
+                                        "title": ".gold",
+                                        "href": "gold.html"
+                                    },
+                                    {
+                                        "title": ".golf",
+                                        "href": "golf.html"
+                                    },
+                                    {
+                                        "title": ".graphics",
+                                        "href": "graphics.html"
+                                    },
+                                    {
+                                        "title": ".gratis",
+                                        "href": "gratis.html"
+                                    },
+                                    {
+                                        "title": ".green",
+                                        "href": "green.html"
+                                    },
+                                    {
+                                        "title": ".gripe",
+                                        "href": "gripe.html"
+                                    },
+                                    {
+                                        "title": ".group",
+                                        "href": "group.html"
+                                    },
+                                    {
+                                        "title": ".guide",
+                                        "href": "guide.html"
+                                    },
+                                    {
+                                        "title": ".guitars",
+                                        "href": "guitars.html"
+                                    },
+                                    {
+                                        "title": ".guru",
+                                        "href": "guru.html"
+                                    },
+                                    {
+                                        "title": ".haus",
+                                        "href": "haus.html"
+                                    },
+                                    {
+                                        "title": ".healthcare",
+                                        "href": "healthcare.html"
+                                    },
+                                    {
+                                        "title": ".help",
+                                        "href": "help.html"
+                                    },
+                                    {
+                                        "title": ".hiv",
+                                        "href": "hiv.html"
+                                    },
+                                    {
+                                        "title": ".hockey",
+                                        "href": "hockey.html"
+                                    },
+                                    {
+                                        "title": ".holdings",
+                                        "href": "holdings.html"
+                                    },
+                                    {
+                                        "title": ".holiday",
+                                        "href": "holiday.html"
+                                    },
+                                    {
+                                        "title": ".host",
+                                        "href": "host.html"
+                                    },
+                                    {
+                                        "title": ".hosting",
+                                        "href": "hosting.html"
+                                    },
+                                    {
+                                        "title": ".house",
+                                        "href": "house.html"
+                                    },
+                                    {
+                                        "title": ".im",
+                                        "href": "im-xref.html"
+                                    },
+                                    {
+                                        "title": ".immo",
+                                        "href": "immo.html"
+                                    },
+                                    {
+                                        "title": ".immobilien",
+                                        "href": "immobilien.html"
+                                    },
+                                    {
+                                        "title": ".industries",
+                                        "href": "industries.html"
+                                    },
+                                    {
+                                        "title": ".info",
+                                        "href": "info.html"
+                                    },
+                                    {
+                                        "title": ".ink",
+                                        "href": "ink.html"
+                                    },
+                                    {
+                                        "title": ".institute",
+                                        "href": "institute.html"
+                                    },
+                                    {
+                                        "title": ".insure",
+                                        "href": "insure.html"
+                                    },
+                                    {
+                                        "title": ".international",
+                                        "href": "international.html"
+                                    },
+                                    {
+                                        "title": ".investments",
+                                        "href": "investments.html"
+                                    },
+                                    {
+                                        "title": ".io",
+                                        "href": "io-xref.html"
+                                    },
+                                    {
+                                        "title": ".irish",
+                                        "href": "irish.html"
+                                    },
+                                    {
+                                        "title": ".jewelry",
+                                        "href": "jewelry.html"
+                                    },
+                                    {
+                                        "title": ".juegos",
+                                        "href": "juegos.html"
+                                    },
+                                    {
+                                        "title": ".kaufen",
+                                        "href": "kaufen.html"
+                                    },
+                                    {
+                                        "title": ".kim",
+                                        "href": "kim.html"
+                                    },
+                                    {
+                                        "title": ".kitchen",
+                                        "href": "kitchen.html"
+                                    },
+                                    {
+                                        "title": ".kiwi",
+                                        "href": "kiwi.html"
+                                    },
+                                    {
+                                        "title": ".land",
+                                        "href": "land.html"
+                                    },
+                                    {
+                                        "title": ".lease",
+                                        "href": "lease.html"
+                                    },
+                                    {
+                                        "title": ".legal",
+                                        "href": "legal.html"
+                                    },
+                                    {
+                                        "title": ".lgbt",
+                                        "href": "lgbt.html"
+                                    },
+                                    {
+                                        "title": ".life",
+                                        "href": "life.html"
+                                    },
+                                    {
+                                        "title": ".lighting",
+                                        "href": "lighting.html"
+                                    },
+                                    {
+                                        "title": ".limited",
+                                        "href": "limited.html"
+                                    },
+                                    {
+                                        "title": ".limo",
+                                        "href": "limo.html"
+                                    },
+                                    {
+                                        "title": ".link",
+                                        "href": "link.html"
+                                    },
+                                    {
+                                        "title": ".live",
+                                        "href": "live.html"
+                                    },
+                                    {
+                                        "title": ".loan",
+                                        "href": "loan.html"
+                                    },
+                                    {
+                                        "title": ".loans",
+                                        "href": "loans.html"
+                                    },
+                                    {
+                                        "title": ".lol",
+                                        "href": "lol.html"
+                                    },
+                                    {
+                                        "title": ".maison",
+                                        "href": "maison.html"
+                                    },
+                                    {
+                                        "title": ".management",
+                                        "href": "management.html"
+                                    },
+                                    {
+                                        "title": ".marketing",
+                                        "href": "marketing.html"
+                                    },
+                                    {
+                                        "title": ".mba",
+                                        "href": "mba.html"
+                                    },
+                                    {
+                                        "title": ".media",
+                                        "href": "media.html"
+                                    },
+                                    {
+                                        "title": ".memorial",
+                                        "href": "memorial.html"
+                                    },
+                                    {
+                                        "title": ".mobi",
+                                        "href": "mobi.html"
+                                    },
+                                    {
+                                        "title": ".moda",
+                                        "href": "moda.html"
+                                    },
+                                    {
+                                        "title": ".money",
+                                        "href": "money.html"
+                                    },
+                                    {
+                                        "title": ".mortgage",
+                                        "href": "mortgage.html"
+                                    },
+                                    {
+                                        "title": ".movie",
+                                        "href": "movie.html"
+                                    },
+                                    {
+                                        "title": ".name",
+                                        "href": "name.html"
+                                    },
+                                    {
+                                        "title": ".net",
+                                        "href": "net.html"
+                                    },
+                                    {
+                                        "title": ".network",
+                                        "href": "network.html"
+                                    },
+                                    {
+                                        "title": ".news",
+                                        "href": "news.html"
+                                    },
+                                    {
+                                        "title": ".ninja",
+                                        "href": "ninja.html"
+                                    },
+                                    {
+                                        "title": ".onl",
+                                        "href": "onl.html"
+                                    },
+                                    {
+                                        "title": ".online",
+                                        "href": "online.html"
+                                    },
+                                    {
+                                        "title": ".org",
+                                        "href": "org.html"
+                                    },
+                                    {
+                                        "title": ".partners",
+                                        "href": "partners.html"
+                                    },
+                                    {
+                                        "title": ".parts",
+                                        "href": "parts.html"
+                                    },
+                                    {
+                                        "title": ".photo",
+                                        "href": "photo.html"
+                                    },
+                                    {
+                                        "title": ".photography",
+                                        "href": "photography.html"
+                                    },
+                                    {
+                                        "title": ".photos",
+                                        "href": "photos.html"
+                                    },
+                                    {
+                                        "title": ".pics",
+                                        "href": "pics.html"
+                                    },
+                                    {
+                                        "title": ".pictures",
+                                        "href": "pictures.html"
+                                    },
+                                    {
+                                        "title": ".pink",
+                                        "href": "pink.html"
+                                    },
+                                    {
+                                        "title": ".pizza",
+                                        "href": "pizza.html"
+                                    },
+                                    {
+                                        "title": ".place",
+                                        "href": "place.html"
+                                    },
+                                    {
+                                        "title": ".plumbing",
+                                        "href": "plumbing.html"
+                                    },
+                                    {
+                                        "title": ".plus",
+                                        "href": "plus.html"
+                                    },
+                                    {
+                                        "title": ".poker",
+                                        "href": "poker.html"
+                                    },
+                                    {
+                                        "title": ".porn",
+                                        "href": "porn.html"
+                                    },
+                                    {
+                                        "title": ".press",
+                                        "href": "press.html"
+                                    },
+                                    {
+                                        "title": ".pro",
+                                        "href": "pro.html"
+                                    },
+                                    {
+                                        "title": ".productions",
+                                        "href": "productions.html"
+                                    },
+                                    {
+                                        "title": ".properties",
+                                        "href": "properties.html"
+                                    },
+                                    {
+                                        "title": ".property",
+                                        "href": "property.html"
+                                    },
+                                    {
+                                        "title": ".pub",
+                                        "href": "pub.html"
+                                    },
+                                    {
+                                        "title": ".qpon",
+                                        "href": "qpon.html"
+                                    },
+                                    {
+                                        "title": ".recipes",
+                                        "href": "recipes.html"
+                                    },
+                                    {
+                                        "title": ".red",
+                                        "href": "red.html"
+                                    },
+                                    {
+                                        "title": ".reise",
+                                        "href": "reise.html"
+                                    },
+                                    {
+                                        "title": ".reisen",
+                                        "href": "reisen.html"
+                                    },
+                                    {
+                                        "title": ".rentals",
+                                        "href": "rentals.html"
+                                    },
+                                    {
+                                        "title": ".repair",
+                                        "href": "repair.html"
+                                    },
+                                    {
+                                        "title": ".report",
+                                        "href": "report.html"
+                                    },
+                                    {
+                                        "title": ".republican",
+                                        "href": "republican.html"
+                                    },
+                                    {
+                                        "title": ".restaurant",
+                                        "href": "restaurant.html"
+                                    },
+                                    {
+                                        "title": ".reviews",
+                                        "href": "reviews.html"
+                                    },
+                                    {
+                                        "title": ".rip",
+                                        "href": "rip.html"
+                                    },
+                                    {
+                                        "title": ".rocks",
+                                        "href": "rocks.html"
+                                    },
+                                    {
+                                        "title": ".run",
+                                        "href": "run.html"
+                                    },
+                                    {
+                                        "title": ".sale",
+                                        "href": "sale.html"
+                                    },
+                                    {
+                                        "title": ".sarl",
+                                        "href": "sarl.html"
+                                    },
+                                    {
+                                        "title": ".school",
+                                        "href": "school.html"
+                                    },
+                                    {
+                                        "title": ".schule",
+                                        "href": "schule.html"
+                                    },
+                                    {
+                                        "title": ".services",
+                                        "href": "services.html"
+                                    },
+                                    {
+                                        "title": ".sex",
+                                        "href": "sex.html"
+                                    },
+                                    {
+                                        "title": ".sexy",
+                                        "href": "sexy.html"
+                                    },
+                                    {
+                                        "title": ".shiksha",
+                                        "href": "shiksha.html"
+                                    },
+                                    {
+                                        "title": ".shoes",
+                                        "href": "shoes.html"
+                                    },
+                                    {
+                                        "title": ".show",
+                                        "href": "show.html"
+                                    },
+                                    {
+                                        "title": ".singles",
+                                        "href": "singles.html"
+                                    },
+                                    {
+                                        "title": ".site",
+                                        "href": "site.html"
+                                    },
+                                    {
+                                        "title": ".soccer",
+                                        "href": "soccer.html"
+                                    },
+                                    {
+                                        "title": ".social",
+                                        "href": "social.html"
+                                    },
+                                    {
+                                        "title": ".solar",
+                                        "href": "solar.html"
+                                    },
+                                    {
+                                        "title": ".solutions",
+                                        "href": "solutions.html"
+                                    },
+                                    {
+                                        "title": ".space",
+                                        "href": "space.html"
+                                    },
+                                    {
+                                        "title": ".store",
+                                        "href": "store.html"
+                                    },
+                                    {
+                                        "title": ".studio",
+                                        "href": "studio.html"
+                                    },
+                                    {
+                                        "title": ".style",
+                                        "href": "style.html"
+                                    },
+                                    {
+                                        "title": ".sucks",
+                                        "href": "sucks.html"
+                                    },
+                                    {
+                                        "title": ".supplies",
+                                        "href": "supplies.html"
+                                    },
+                                    {
+                                        "title": ".supply",
+                                        "href": "supply.html"
+                                    },
+                                    {
+                                        "title": ".support",
+                                        "href": "support.html"
+                                    },
+                                    {
+                                        "title": ".surgery",
+                                        "href": "surgery.html"
+                                    },
+                                    {
+                                        "title": ".systems",
+                                        "href": "systems.html"
+                                    },
+                                    {
+                                        "title": ".tattoo",
+                                        "href": "tattoo.html"
+                                    },
+                                    {
+                                        "title": ".tax",
+                                        "href": "tax.html"
+                                    },
+                                    {
+                                        "title": ".taxi",
+                                        "href": "taxi.html"
+                                    },
+                                    {
+                                        "title": ".team",
+                                        "href": "team.html"
+                                    },
+                                    {
+                                        "title": ".tech",
+                                        "href": "tech.html"
+                                    },
+                                    {
+                                        "title": ".technology",
+                                        "href": "technology.html"
+                                    },
+                                    {
+                                        "title": ".tennis",
+                                        "href": "tennis.html"
+                                    },
+                                    {
+                                        "title": ".theater",
+                                        "href": "theater.html"
+                                    },
+                                    {
+                                        "title": ".tienda",
+                                        "href": "tienda.html"
+                                    },
+                                    {
+                                        "title": ".tips",
+                                        "href": "tips.html"
+                                    },
+                                    {
+                                        "title": ".tires",
+                                        "href": "tires.html"
+                                    },
+                                    {
+                                        "title": ".today",
+                                        "href": "today.html"
+                                    },
+                                    {
+                                        "title": ".tools",
+                                        "href": "tools.html"
+                                    },
+                                    {
+                                        "title": ".tours",
+                                        "href": "tours.html"
+                                    },
+                                    {
+                                        "title": ".town",
+                                        "href": "town.html"
+                                    },
+                                    {
+                                        "title": ".toys",
+                                        "href": "toys.html"
+                                    },
+                                    {
+                                        "title": ".trade",
+                                        "href": "trade.html"
+                                    },
+                                    {
+                                        "title": ".training",
+                                        "href": "training.html"
+                                    },
+                                    {
+                                        "title": ".tv",
+                                        "href": "tv.html"
+                                    },
+                                    {
+                                        "title": ".university",
+                                        "href": "university.html"
+                                    },
+                                    {
+                                        "title": ".uno",
+                                        "href": "uno.html"
+                                    },
+                                    {
+                                        "title": ".vacations",
+                                        "href": "vacations.html"
+                                    },
+                                    {
+                                        "title": ".vegas",
+                                        "href": "vegas.html"
+                                    },
+                                    {
+                                        "title": ".ventures",
+                                        "href": "ventures.html"
+                                    },
+                                    {
+                                        "title": ".vg",
+                                        "href": "vg-xref.html"
+                                    },
+                                    {
+                                        "title": ".viajes",
+                                        "href": "viajes.html"
+                                    },
+                                    {
+                                        "title": ".video",
+                                        "href": "video.html"
+                                    },
+                                    {
+                                        "title": ".villas",
+                                        "href": "villas.html"
+                                    },
+                                    {
+                                        "title": ".vision",
+                                        "href": "vision.html"
+                                    },
+                                    {
+                                        "title": ".voyage",
+                                        "href": "voyage.html"
+                                    },
+                                    {
+                                        "title": ".watch",
+                                        "href": "watch.html"
+                                    },
+                                    {
+                                        "title": ".website",
+                                        "href": "website.html"
+                                    },
+                                    {
+                                        "title": ".wedding",
+                                        "href": "wedding.html"
+                                    },
+                                    {
+                                        "title": ".wiki",
+                                        "href": "wiki.html"
+                                    },
+                                    {
+                                        "title": ".wine",
+                                        "href": "wine.html"
+                                    },
+                                    {
+                                        "title": ".works",
+                                        "href": "works.html"
+                                    },
+                                    {
+                                        "title": ".world",
+                                        "href": "world.html"
+                                    },
+                                    {
+                                        "title": ".wtf",
+                                        "href": "wtf.html"
+                                    },
+                                    {
+                                        "title": ".xyz",
+                                        "href": "xyz.html"
+                                    },
+                                    {
+                                        "title": ".zone",
+                                        "href": "zone.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Geographic top-level domains",
+                                "href": "registrar-tld-list-geographic.html",
+                                "contents": [
+                                    {
+                                        "title": "Africa",
+                                        "href": "registrar-tld-list-africa.html",
+                                        "contents": [
+                                            {
+                                                "title": ".ac (Ascension Island)",
+                                                "href": "ac.html"
+                                            },
+                                            {
+                                                "title": ".co.za (South Africa)",
+                                                "href": "co.za.html"
+                                            },
+                                            {
+                                                "title": ".sh (Saint Helena)",
+                                                "href": "sh.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Americas",
+                                        "href": "registrar-tld-list-americas.html",
+                                        "contents": [
+                                            {
+                                                "title": ".ca (Canada)",
+                                                "href": "ca.html"
+                                            },
+                                            {
+                                                "title": ".cl (Chile)",
+                                                "href": "cl.html"
+                                            },
+                                            {
+                                                "title": ".co (Colombia)",
+                                                "href": "co.html"
+                                            },
+                                            {
+                                                "title": ".com.ar (Argentina)",
+                                                "href": "com.ar.html"
+                                            },
+                                            {
+                                                "title": ".com.br (Brazil)",
+                                                "href": "com.br.html"
+                                            },
+                                            {
+                                                "title": ".com.mx (Mexico)",
+                                                "href": "com.mx.html"
+                                            },
+                                            {
+                                                "title": ".mx (Mexico)",
+                                                "href": "mx.html"
+                                            },
+                                            {
+                                                "title": ".us (United States)",
+                                                "href": "us.html"
+                                            },
+                                            {
+                                                "title": ".vc (Saint Vincent and the Grenadines)",
+                                                "href": "vc.html"
+                                            },
+                                            {
+                                                "title": ".vg (British Virgin Islands)",
+                                                "href": "vg.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Asia/Oceania",
+                                        "href": "registrar-tld-list-asiaoceania.html",
+                                        "contents": [
+                                            {
+                                                "title": ".au (Australia)",
+                                                "href": "au.html"
+                                            },
+                                            {
+                                                "title": ".cc (Cocos (Keeling) Islands)",
+                                                "href": "cc.html"
+                                            },
+                                            {
+                                                "title": ".co.nz (New Zealand)",
+                                                "href": "co.nz.html"
+                                            },
+                                            {
+                                                "title": ".com.au (Australia)",
+                                                "href": "com.au.html"
+                                            },
+                                            {
+                                                "title": ".com.sg (Republic of Singapore)",
+                                                "href": "com.sg.html"
+                                            },
+                                            {
+                                                "title": ".fm (Federated States of Micronesia)",
+                                                "href": "fm.html"
+                                            },
+                                            {
+                                                "title": ".in (India)",
+                                                "href": "in.html"
+                                            },
+                                            {
+                                                "title": ".jp (Japan)",
+                                                "href": "jp.html"
+                                            },
+                                            {
+                                                "title": ".io (British Indian Ocean Territory)",
+                                                "href": "io.html"
+                                            },
+                                            {
+                                                "title": ".net.au (Australia)",
+                                                "href": "net.au.html"
+                                            },
+                                            {
+                                                "title": ".net.nz (New Zealand)",
+                                                "href": "net.nz.html"
+                                            },
+                                            {
+                                                "title": ".org.nz (New Zealand)",
+                                                "href": "org.nz.html"
+                                            },
+                                            {
+                                                "title": ".qa (Qatar)",
+                                                "href": "qa.html"
+                                            },
+                                            {
+                                                "title": ".ru (Russian Federation)",
+                                                "href": "ru.html"
+                                            },
+                                            {
+                                                "title": ".sg (Republic of Singapore)",
+                                                "href": "sg.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Europe",
+                                        "href": "registrar-tld-list-europe.html",
+                                        "contents": [
+                                            {
+                                                "title": ".be (Belgium)",
+                                                "href": "be.html"
+                                            },
+                                            {
+                                                "title": ".berlin (city of Berlin in Germany)",
+                                                "href": "berlin.html"
+                                            },
+                                            {
+                                                "title": ".ch (Switzerland)",
+                                                "href": "ch.html"
+                                            },
+                                            {
+                                                "title": ".co.uk (United Kingdom)",
+                                                "href": "co.uk.html"
+                                            },
+                                            {
+                                                "title": ".cz (Czech Republic)",
+                                                "href": "cz.html"
+                                            },
+                                            {
+                                                "title": ".de (Germany)",
+                                                "href": "de.html"
+                                            },
+                                            {
+                                                "title": ".es (Spain)",
+                                                "href": "es.html"
+                                            },
+                                            {
+                                                "title": ".eu (European Union)",
+                                                "href": "eu.html"
+                                            },
+                                            {
+                                                "title": ".fi (Finland)",
+                                                "href": "fi.html"
+                                            },
+                                            {
+                                                "title": ".fr (France)",
+                                                "href": "fr.html"
+                                            },
+                                            {
+                                                "title": ".gg (Guernsey)",
+                                                "href": "gg.html"
+                                            },
+                                            {
+                                                "title": ".im (Isle of Man)",
+                                                "href": "im.html"
+                                            },
+                                            {
+                                                "title": ".it (Italy)",
+                                                "href": "it.html"
+                                            },
+                                            {
+                                                "title": ".me (Montenegro)",
+                                                "href": "me.html"
+                                            },
+                                            {
+                                                "title": ".me.uk (United Kingdom)",
+                                                "href": "me.uk.html"
+                                            },
+                                            {
+                                                "title": ".nl (the Netherlands)",
+                                                "href": "nl.html"
+                                            },
+                                            {
+                                                "title": ".org.uk (United Kingdom)",
+                                                "href": "org.uk.html"
+                                            },
+                                            {
+                                                "title": ".ruhr (Ruhr region, western part of Germany)",
+                                                "href": "ruhr.html"
+                                            },
+                                            {
+                                                "title": ".se (Sweden)",
+                                                "href": "se.html"
+                                            },
+                                            {
+                                                "title": ".uk (United Kingdom)",
+                                                "href": "uk.html"
+                                            },
+                                            {
+                                                "title": ".wien (city of Vienna in Austria)",
+                                                "href": "wien.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Configuring Amazon Route\u00a053 as your DNS service",
+                "href": "dns-configuring.html",
+                "contents": [
+                    {
+                        "title": "Making Route\u00a053 the DNS service for an existing domain",
+                        "href": "MigratingDNS.html",
+                        "contents": [
+                            {
+                                "title": "Making Route\u00a053 the DNS service for a domain that's in use",
+                                "href": "migrate-dns-domain-in-use.html"
+                            },
+                            {
+                                "title": "Making Route\u00a053 the DNS service for an inactive domain",
+                                "href": "migrate-dns-domain-inactive.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuring DNS routing for a new domain",
+                        "href": "dns-configuring-new-domain.html"
+                    },
+                    {
+                        "title": "Routing traffic to your resources",
+                        "href": "dns-routing-traffic-to-resources.html",
+                        "contents": [
+                            {
+                                "title": "Routing traffic for subdomains",
+                                "href": "dns-routing-traffic-for-subdomains.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with hosted zones",
+                        "href": "hosted-zones-working-with.html",
+                        "contents": [
+                            {
+                                "title": "Working with public hosted zones",
+                                "href": "AboutHZWorkingWith.html",
+                                "contents": [
+                                    {
+                                        "title": "Considerations when working with public hosted zones",
+                                        "href": "hosted-zone-public-considerations.html"
+                                    },
+                                    {
+                                        "title": "Creating a public hosted zone",
+                                        "href": "CreatingHostedZone.html"
+                                    },
+                                    {
+                                        "title": "Getting the name servers for a public hosted zone",
+                                        "href": "GetInfoAboutHostedZone.html"
+                                    },
+                                    {
+                                        "title": "Listing public hosted zones",
+                                        "href": "ListInfoOnHostedZone.html"
+                                    },
+                                    {
+                                        "title": "Viewing DNS query metrics for a public hosted zone",
+                                        "href": "hosted-zone-public-viewing-query-metrics.html"
+                                    },
+                                    {
+                                        "title": "Deleting a public hosted zone",
+                                        "href": "DeleteHostedZone.html"
+                                    },
+                                    {
+                                        "title": "Checking DNS responses from Route\u00a053",
+                                        "href": "dns-test.html"
+                                    },
+                                    {
+                                        "title": "Configuring white-label name servers",
+                                        "href": "white-label-name-servers.html"
+                                    },
+                                    {
+                                        "title": "NS and SOA records that Amazon Route\u00a053 creates for a public hosted zone",
+                                        "href": "SOA-NSrecords.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Working with private hosted zones",
+                                "href": "hosted-zones-private.html",
+                                "contents": [
+                                    {
+                                        "title": "Considerations when working with a private hosted zone",
+                                        "href": "hosted-zone-private-considerations.html"
+                                    },
+                                    {
+                                        "title": "Creating a private hosted zone",
+                                        "href": "hosted-zone-private-creating.html"
+                                    },
+                                    {
+                                        "title": "Listing private hosted zones",
+                                        "href": "hosted-zone-private-listing.html"
+                                    },
+                                    {
+                                        "title": "Associating more VPCs with a private hosted zone",
+                                        "href": "hosted-zone-private-associate-vpcs.html"
+                                    },
+                                    {
+                                        "title": "Associating an Amazon VPC and a private hosted zone that you created with different AWS accounts",
+                                        "href": "hosted-zone-private-associate-vpcs-different-accounts.html"
+                                    },
+                                    {
+                                        "title": "Disassociating VPCs from a private hosted zone",
+                                        "href": "hosted-zone-private-disassociate-vpcs.html"
+                                    },
+                                    {
+                                        "title": "Deleting a private hosted zone",
+                                        "href": "hosted-zone-private-deleting.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Migrating a hosted zone to a different AWS account",
+                                "href": "hosted-zones-migrating.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Working with records",
+                        "href": "rrsets-working-with.html",
+                        "contents": [
+                            {
+                                "title": "Choosing a routing policy",
+                                "href": "routing-policy.html",
+                                "contents": [
+                                    {
+                                        "title": "Simple routing",
+                                        "href": "routing-policy-simple.html"
+                                    },
+                                    {
+                                        "title": "Failover routing",
+                                        "href": "routing-policy-failover.html"
+                                    },
+                                    {
+                                        "title": "Geolocation routing",
+                                        "href": "routing-policy-geo.html",
+                                        "contents": [
+                                            {
+                                                "title": "Geolocation routing in private hosted zones",
+                                                "href": "routing-policy-geo-phz.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Geoproximity routing (traffic flow only)",
+                                        "href": "routing-policy-geoproximity.html"
+                                    },
+                                    {
+                                        "title": "Latency-based routing",
+                                        "href": "routing-policy-latency.html",
+                                        "contents": [
+                                            {
+                                                "title": "Latency-based routing in private hosted zones",
+                                                "href": "routing-policy-latency-phz.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "IP-based routing",
+                                        "href": "routing-policy-ipbased.html",
+                                        "contents": [
+                                            {
+                                                "title": "Creating a CIDR collection with CIDR locations and blocks",
+                                                "href": "resource-record-sets-creating-cidr-collection.html"
+                                            },
+                                            {
+                                                "title": "Working with CIDR locations and blocks",
+                                                "href": "resource-record-sets-working-with-cidr-locations.html"
+                                            },
+                                            {
+                                                "title": "Deleting a CIDR collection",
+                                                "href": "resource-record-sets-delete-cidr-collection.html"
+                                            },
+                                            {
+                                                "title": "Moving a geolocation to IP-based routing",
+                                                "href": "resource-record-sets-move-geolocation-to-cidr.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Multivalue answer routing",
+                                        "href": "routing-policy-multivalue.html"
+                                    },
+                                    {
+                                        "title": "Weighted routing",
+                                        "href": "routing-policy-weighted.html"
+                                    },
+                                    {
+                                        "title": "How Amazon Route\u00a053 uses EDNS0 to estimate the location of a user",
+                                        "href": "routing-policy-edns0.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Choosing between alias and non-alias records",
+                                "href": "resource-record-sets-choosing-alias-non-alias.html"
+                            },
+                            {
+                                "title": "Supported DNS record types",
+                                "href": "ResourceRecordTypes.html"
+                            },
+                            {
+                                "title": "Creating records by using the Amazon Route\u00a053 console",
+                                "href": "resource-record-sets-creating.html"
+                            },
+                            {
+                                "title": "Resource record set permissions",
+                                "href": "resource-record-sets-permissions.html"
+                            },
+                            {
+                                "title": "Values you specify",
+                                "href": "resource-record-sets-values.html",
+                                "contents": [
+                                    {
+                                        "title": "Common values",
+                                        "href": "resource-record-sets-values-shared.html"
+                                    },
+                                    {
+                                        "title": "Common values for alias records",
+                                        "href": "resource-record-sets-values-alias-common.html"
+                                    },
+                                    {
+                                        "title": "Simple records values",
+                                        "href": "resource-record-sets-values-basic.html"
+                                    },
+                                    {
+                                        "title": "Simple alias records values",
+                                        "href": "resource-record-sets-values-alias.html"
+                                    },
+                                    {
+                                        "title": "Failover records values",
+                                        "href": "resource-record-sets-values-failover.html"
+                                    },
+                                    {
+                                        "title": "Failover alias records values",
+                                        "href": "resource-record-sets-values-failover-alias.html"
+                                    },
+                                    {
+                                        "title": "Geolocation records values",
+                                        "href": "resource-record-sets-values-geo.html"
+                                    },
+                                    {
+                                        "title": "Geolocation alias records values",
+                                        "href": "resource-record-sets-values-geo-alias.html"
+                                    },
+                                    {
+                                        "title": "Latency records values",
+                                        "href": "resource-record-sets-values-latency.html"
+                                    },
+                                    {
+                                        "title": "Latency alias records values",
+                                        "href": "resource-record-sets-values-latency-alias.html"
+                                    },
+                                    {
+                                        "title": "IP-based records values",
+                                        "href": "resource-record-sets-values-ipbased.html"
+                                    },
+                                    {
+                                        "title": "IP-based alias records values",
+                                        "href": "resource-record-sets-values-ipbased-alias.html"
+                                    },
+                                    {
+                                        "title": "Multivalue answer records values",
+                                        "href": "resource-record-sets-values-multivalue.html"
+                                    },
+                                    {
+                                        "title": "Weighted records values",
+                                        "href": "resource-record-sets-values-weighted.html"
+                                    },
+                                    {
+                                        "title": "Weighted alias records values",
+                                        "href": "resource-record-sets-values-weighted-alias.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Creating records by importing a zone file",
+                                "href": "resource-record-sets-creating-import.html"
+                            },
+                            {
+                                "title": "Editing records",
+                                "href": "resource-record-sets-editing.html"
+                            },
+                            {
+                                "title": "Deleting records",
+                                "href": "resource-record-sets-deleting.html"
+                            },
+                            {
+                                "title": "Listing records",
+                                "href": "resource-record-sets-listing.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using traffic flow to route DNS traffic",
+                        "href": "traffic-flow.html",
+                        "contents": [
+                            {
+                                "title": "Creating and managing traffic policies",
+                                "href": "traffic-policies.html"
+                            },
+                            {
+                                "title": "Creating and managing policy records",
+                                "href": "traffic-policy-records.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuring DNSSEC signing",
+                        "href": "dns-configuring-dnssec.html",
+                        "contents": [
+                            {
+                                "title": "Enabling DNSSEC signing and establishing a chain of trust",
+                                "href": "dns-configuring-dnssec-enable-signing.html"
+                            },
+                            {
+                                "title": "Disabling DNSSEC signing",
+                                "href": "dns-configuring-dnssec-disable.html"
+                            },
+                            {
+                                "title": "Working with customer managed keys",
+                                "href": "dns-configuring-dnssec-cmk-requirements.html"
+                            },
+                            {
+                                "title": "Working with key-signing keys (KSKs)",
+                                "href": "dns-configuring-dnssec-ksk.html"
+                            },
+                            {
+                                "title": "KMS key and ZSK management in Route\u00a053",
+                                "href": "dns-configuring-dnssec-zsk-management.html"
+                            },
+                            {
+                                "title": "DNSSEC proofs of nonexistence in Route 53",
+                                "href": "dns-configuring-dnssec-proof-of-nonexistence.html"
+                            },
+                            {
+                                "title": "Troubleshooting DNSSEC signing",
+                                "href": "dns-configuring-dnssec-troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using AWS Cloud Map to create records and health checks",
+                        "href": "autonaming.html"
+                    },
+                    {
+                        "title": "DNS constraints and behaviors",
+                        "href": "DNSBehavior.html"
+                    }
+                ]
+            },
+            {
+                "title": "What is Route\u00a053 Resolver?",
+                "href": "resolver.html",
+                "contents": [
+                    {
+                        "title": "Resolving DNS queries between VPCs and your network",
+                        "href": "resolver-overview-DSN-queries-to-vpc.html"
+                    },
+                    {
+                        "title": "Getting started with Route 53 Resolver",
+                        "href": "resolver-getting-started.html"
+                    },
+                    {
+                        "title": "Forwarding inbound DNS queries to your VPCs",
+                        "href": "resolver-forwarding-inbound-queries.html"
+                    },
+                    {
+                        "title": "Forwarding outbound DNS queries to your network",
+                        "href": "resolver-forwarding-outbound-queries.html"
+                    },
+                    {
+                        "title": "Managing inbound endpoints",
+                        "href": "resolver-forwarding-inbound-queries-managing.html"
+                    },
+                    {
+                        "title": "Managing outbound endpoints",
+                        "href": "resolver-forwarding-outbound-queries-managing.html"
+                    },
+                    {
+                        "title": "Managing forwarding rules",
+                        "href": "resolver-rules-managing.html",
+                        "contents": [
+                            {
+                                "title": "Forwarding rules for reverse DNS queries in Resolver",
+                                "href": "resolver-automatic-forwarding-rules-reverse-dns.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Enabling DNSSEC validation",
+                        "href": "resolver-dnssec-validation.html"
+                    }
+                ]
+            },
+            {
+                "title": "Routing internet traffic to your AWS resources",
+                "href": "routing-to-aws-resources.html",
+                "contents": [
+                    {
+                        "title": "Amazon API Gateway API",
+                        "href": "routing-to-api-gateway.html"
+                    },
+                    {
+                        "title": "Amazon CloudFront distribution",
+                        "href": "routing-to-cloudfront-distribution.html"
+                    },
+                    {
+                        "title": "Amazon EC2 instance",
+                        "href": "routing-to-ec2-instance.html"
+                    },
+                    {
+                        "title": "App Runner service",
+                        "href": "routing-to-app-runner.html"
+                    },
+                    {
+                        "title": "AWS Elastic Beanstalk environment",
+                        "href": "routing-to-beanstalk-environment.html"
+                    },
+                    {
+                        "title": "ELB load balancer",
+                        "href": "routing-to-elb-load-balancer.html"
+                    },
+                    {
+                        "title": "Amazon S3 bucket",
+                        "href": "RoutingToS3Bucket.html"
+                    },
+                    {
+                        "title": "Amazon Virtual Private Cloud interface endpoint",
+                        "href": "routing-to-vpc-interface-endpoint.html"
+                    },
+                    {
+                        "title": "Amazon WorkMail",
+                        "href": "routing-to-workmail.html"
+                    },
+                    {
+                        "title": "Other AWS resources",
+                        "href": "routing-to-additional-aws-resources.html"
+                    }
+                ]
+            },
+            {
+                "title": "Creating health checks and configuring DNS failover",
+                "href": "dns-failover.html",
+                "contents": [
+                    {
+                        "title": "Types of health checks",
+                        "href": "health-checks-types.html"
+                    },
+                    {
+                        "title": "How Route\u00a053 determines whether a health check is healthy",
+                        "href": "dns-failover-determining-health-of-endpoints.html"
+                    },
+                    {
+                        "title": "Creating, updating, and deleting health checks",
+                        "href": "health-checks-creating-deleting.html",
+                        "contents": [
+                            {
+                                "title": "Creating and updating health checks",
+                                "href": "health-checks-creating.html"
+                            },
+                            {
+                                "title": "Values that you specify when you create or update health checks",
+                                "href": "health-checks-creating-values.html"
+                            },
+                            {
+                                "title": "Values that Route\u00a053 displays when you create a health check",
+                                "href": "health-checks-creating-values-displayed.html"
+                            },
+                            {
+                                "title": "Updating health checks when you change CloudWatch alarm settings",
+                                "href": "health-checks-updating-cloudwatch-alarm-settings.html"
+                            },
+                            {
+                                "title": "Deleting health checks",
+                                "href": "health-checks-deleting.html"
+                            },
+                            {
+                                "title": "Updating or deleting health checks when DNS failover is configured",
+                                "href": "health-checks-updating-deleting-tasks.html"
+                            },
+                            {
+                                "title": "Configuring router and firewall rules for health checks",
+                                "href": "dns-failover-router-firewall-rules.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Monitoring health check status and getting notifications",
+                        "href": "health-checks-monitor-view-status.html",
+                        "contents": [
+                            {
+                                "title": "Viewing health check status and the reason for health check failures",
+                                "href": "health-checks-view-status.html"
+                            },
+                            {
+                                "title": "Monitoring the latency between health checkers and your endpoint",
+                                "href": "monitoring-health-check-latency.html"
+                            },
+                            {
+                                "title": "Monitoring health checks using CloudWatch",
+                                "href": "monitoring-health-checks.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuring DNS failover",
+                        "href": "dns-failover-configuring.html",
+                        "contents": [
+                            {
+                                "title": "Task list for configuring DNS failover",
+                                "href": "dns-failover-how-to.html"
+                            },
+                            {
+                                "title": "How health checks work in simple configurations",
+                                "href": "dns-failover-simple-configs.html"
+                            },
+                            {
+                                "title": "How health checks work in complex configurations",
+                                "href": "dns-failover-complex-configs.html"
+                            },
+                            {
+                                "title": "How Route\u00a053 chooses records when health checking is configured",
+                                "href": "health-checks-how-route-53-chooses-records.html"
+                            },
+                            {
+                                "title": "Active-active and active-passive failover",
+                                "href": "dns-failover-types.html"
+                            },
+                            {
+                                "title": "Configuring failover in a private hosted zone",
+                                "href": "dns-failover-private-hosted-zones.html"
+                            },
+                            {
+                                "title": "How Route\u00a053 averts failover problems",
+                                "href": "dns-failover-problems.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Naming and tagging health checks",
+                        "href": "health-checks-tagging.html"
+                    },
+                    {
+                        "title": "Using API versions before 2012-12-12",
+                        "href": "dns-failover-using-old-apis.html"
+                    }
+                ]
+            },
+            {
+                "title": "Route 53 Resolver DNS Firewall",
+                "href": "resolver-dns-firewall.html",
+                "contents": [
+                    {
+                        "title": "How Route 53 Resolver DNS Firewall works",
+                        "href": "resolver-dns-firewall-overview.html"
+                    },
+                    {
+                        "title": "Getting started with Route 53 Resolver DNS Firewall",
+                        "href": "resolver-dns-firewall-getting-started.html"
+                    },
+                    {
+                        "title": "DNS Firewall rule groups and rules",
+                        "href": "resolver-dns-firewall-rule-groups.html",
+                        "contents": [
+                            {
+                                "title": "Rule group settings in DNS Firewall",
+                                "href": "resolver-dns-firewall-rule-group-settings.html"
+                            },
+                            {
+                                "title": "Rule settings in DNS Firewall",
+                                "href": "resolver-dns-firewall-rule-settings.html"
+                            },
+                            {
+                                "title": "Rule actions in DNS Firewall",
+                                "href": "resolver-dns-firewall-rule-actions.html"
+                            },
+                            {
+                                "title": "Managing rule groups and rules in DNS Firewall",
+                                "href": "resolver-dns-firewall-rule-group-managing.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Route 53 Resolver DNS Firewall domain lists",
+                        "href": "resolver-dns-firewall-domain-lists.html",
+                        "contents": [
+                            {
+                                "title": "Managed Domain Lists",
+                                "href": "resolver-dns-firewall-managed-domain-lists.html"
+                            },
+                            {
+                                "title": "Managing your own domain lists",
+                                "href": "resolver-dns-firewall-user-managed-domain-lists.html"
+                            },
+                            {
+                                "title": "Configuring query logging for DNS Firewall",
+                                "href": "firewall-resolver-query-logs-configuring.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Sharing rule groups between accounts",
+                        "href": "resolver-dns-firewall-rule-group-sharing.html"
+                    },
+                    {
+                        "title": "Enabling DNS Firewall protections for your VPC",
+                        "href": "resolver-dns-firewall-vpc-protections.html",
+                        "contents": [
+                            {
+                                "title": "Managing associations between your VPC and firewall rule groups",
+                                "href": "resolver-dns-firewall-vpc-associating-rule-group.html"
+                            },
+                            {
+                                "title": "DNS Firewall VPC configuration",
+                                "href": "resolver-dns-firewall-vpc-configuration.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "What is Amazon Route 53 on Outposts?",
+                "href": "outpost-resolver.html",
+                "contents": [
+                    {
+                        "title": "Getting started with Route\u00a053 Resolver on AWS Outposts",
+                        "href": "outpost-resolver-getting-started.html"
+                    },
+                    {
+                        "title": "Creating inbound endpoints",
+                        "href": "outpost-resolver-add-inbound-endpoints.html"
+                    },
+                    {
+                        "title": "Creating outbound endpoints",
+                        "href": "outpost-resolver-add-outbound-endpoints.html"
+                    },
+                    {
+                        "title": "Creating forwarding rules for outbound endpoints",
+                        "href": "outpost-resolver-add-resolver-rules.html"
+                    },
+                    {
+                        "title": "Managing Resolver on Outpost",
+                        "href": "outpost-resolver-manage.html"
+                    },
+                    {
+                        "title": "Managing inbound endpoints on Resolver on Outpost",
+                        "href": "outpost-resolver-manage-inbound.html"
+                    },
+                    {
+                        "title": "Managing outbound endpoints on Resolver on Outpost",
+                        "href": "outpost-resolver-manage-outbound-outpost.html"
+                    }
+                ]
+            },
+            {
+                "title": "Creating AWS CloudFormation resources",
+                "href": "creating-resources-with-cloudformation.html"
+            },
+            {
+                "title": "Code examples",
+                "href": "service_code_examples.html",
+                "contents": [
+                    {
+                        "title": "Route\u00a053 examples",
+                        "href": "service_code_examples_route-53.html",
+                        "contents": [
+                            {
+                                "title": "Actions",
+                                "href": "service_code_examples_route-53_actions.html",
+                                "contents": [
+                                    {
+                                        "title": "Get a list of the public and private hosted zones",
+                                        "href": "example_route-53_ListHostedZones_section.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Route\u00a053 domain registration examples",
+                        "href": "service_code_examples_route53-domains.html",
+                        "contents": [
+                            {
+                                "title": "Actions",
+                                "href": "service_code_examples_route53-domains_actions.html",
+                                "contents": [
+                                    {
+                                        "title": "Check domain availability",
+                                        "href": "example_route-53_CheckDomainAvailability_section.html"
+                                    },
+                                    {
+                                        "title": "Check domain transferability",
+                                        "href": "example_route-53_CheckDomainTransferability_section.html"
+                                    },
+                                    {
+                                        "title": "Get domain details",
+                                        "href": "example_route-53_GetDomainDetails_section.html"
+                                    },
+                                    {
+                                        "title": "Get operation details",
+                                        "href": "example_route-53_GetOperationDetails_section.html"
+                                    },
+                                    {
+                                        "title": "Get suggested domain names",
+                                        "href": "example_route-53_GetDomainSuggestions_section.html"
+                                    },
+                                    {
+                                        "title": "List domain prices",
+                                        "href": "example_route-53_ListPrices_section.html"
+                                    },
+                                    {
+                                        "title": "List domains",
+                                        "href": "example_route-53_ListDomains_section.html"
+                                    },
+                                    {
+                                        "title": "List operations",
+                                        "href": "example_route-53_ListOperations_section.html"
+                                    },
+                                    {
+                                        "title": "Register a domain",
+                                        "href": "example_route-53_RegisterDomain_section.html"
+                                    },
+                                    {
+                                        "title": "View billing",
+                                        "href": "example_route-53_ViewBilling_section.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Scenarios",
+                                "href": "service_code_examples_route53-domains_scenarios.html",
+                                "contents": [
+                                    {
+                                        "title": "Get started with domains",
+                                        "href": "example_route-53_Scenario_GetStartedRoute53Domains_section.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Protection from dangling delegation records",
+                                "href": "protection-from-dangling-dns.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "auth-and-access-control.html",
+                        "contents": [
+                            {
+                                "title": "Overview of managing access",
+                                "href": "access-control-overview.html"
+                            },
+                            {
+                                "title": "Using IAM policies for Route\u00a053",
+                                "href": "access-control-managing-permissions.html"
+                            },
+                            {
+                                "title": "Using Service-Linked Roles",
+                                "href": "using-service-linked-roles.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol-route53.html"
+                            },
+                            {
+                                "title": "Using IAM policy conditions to manage resource record sets",
+                                "href": "specifying-rrset-conditions.html"
+                            },
+                            {
+                                "title": "Route\u00a053 API permissions reference",
+                                "href": "r53-api-permissions-ref.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "logging-monitoring.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "route-53-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Public DNS query logging",
+                        "href": "query-logs.html"
+                    },
+                    {
+                        "title": "Resolver query logging",
+                        "href": "resolver-query-logs.html",
+                        "contents": [
+                            {
+                                "title": "Resources that you can send Resolver query logs to",
+                                "href": "resolver-query-logs-choosing-target-resource.html"
+                            },
+                            {
+                                "title": "Managing configurations",
+                                "href": "resolver-query-logging-configurations-managing.html",
+                                "contents": [
+                                    {
+                                        "title": "Values that appear in Resolver query logs",
+                                        "href": "resolver-query-logs-format.html"
+                                    },
+                                    {
+                                        "title": "Resolver query log example",
+                                        "href": "resolver-query-logs-example-json.html",
+                                        "contents": [
+                                            {
+                                                "title": "Sharing Resolver query logging configs with other accounts",
+                                                "href": "query-logging-configurations-managing-sharing.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Monitoring domain registrations",
+                        "href": "monitoring-domain-registrations.html"
+                    },
+                    {
+                        "title": "Monitoring your resources with Amazon Route\u00a053 health checks and Amazon CloudWatch",
+                        "href": "monitoring-cloudwatch.html"
+                    },
+                    {
+                        "title": "Monitoring hosted zones using Amazon CloudWatch",
+                        "href": "monitoring-hosted-zones-with-cloudwatch.html"
+                    },
+                    {
+                        "title": "Monitoring Route 53 Resolver endpoints with Amazon CloudWatch",
+                        "href": "monitoring-resolver-with-cloudwatch.html"
+                    },
+                    {
+                        "title": "Monitoring Route 53 Resolver DNS Firewall rule groups with Amazon CloudWatch",
+                        "href": "monitoring-resolver-dns-firewall-with-cloudwatch.html"
+                    },
+                    {
+                        "title": "Logging Amazon Route\u00a053 API calls with AWS CloudTrail",
+                        "href": "logging-using-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting-route-53.html",
+                "contents": [
+                    {
+                        "title": "My domain is unavailable on the internet",
+                        "href": "troubleshooting-domain-unavailable.html"
+                    },
+                    {
+                        "title": "My domain is suspended (status is ClientHold)",
+                        "href": "troubleshooting-domain-suspended.html"
+                    },
+                    {
+                        "title": "Transferring my domain to Amazon Route\u00a053 failed",
+                        "href": "troubleshooting-domain-transfer-failed.html"
+                    },
+                    {
+                        "title": "I changed DNS settings, but they haven't taken effect",
+                        "href": "troubleshooting-new-dns-settings-not-in-effect.html"
+                    },
+                    {
+                        "title": "My browser displays a \"Server not found\" error",
+                        "href": "troubleshooting-server-not-found.html"
+                    },
+                    {
+                        "title": "I can't route traffic to an Amazon S3 bucket that's configured for website hosting",
+                        "href": "troubleshooting-s3-bucket-website-hosting.html"
+                    },
+                    {
+                        "title": "I was billed twice for the same hosted zone",
+                        "href": "troubleshooting-billed-twice.html"
+                    },
+                    {
+                        "title": "My AWS account is closed, suspended, or terminated, and my domain is registered with Route\u00a053",
+                        "href": "troubleshooting-account-closed.html"
+                    }
+                ]
+            },
+            {
+                "title": "IP address ranges",
+                "href": "route-53-ip-addresses.html"
+            },
+            {
+                "title": "Tagging resources",
+                "href": "tagging-resources.html"
+            },
+            {
+                "title": "Tutorials",
+                "href": "Tutorials.html",
+                "contents": [
+                    {
+                        "title": "Using Amazon Route\u00a053 as the DNS service for subdomains without migrating the parent domain",
+                        "href": "creating-migrating.html",
+                        "contents": [
+                            {
+                                "title": "Creating a subdomain that uses Amazon Route\u00a053 as the DNS service without migrating the parent domain",
+                                "href": "CreatingNewSubdomain.html"
+                            },
+                            {
+                                "title": "Migrating DNS service for a subdomain to Amazon Route\u00a053 without migrating the parent domain",
+                                "href": "MigratingSubdomain.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Transitioning to latency-based routing in Amazon Route\u00a053",
+                        "href": "TutorialTransitionToLBR.html"
+                    },
+                    {
+                        "title": "Adding another Region to your latency-based routing in Amazon Route\u00a053",
+                        "href": "TutorialAddingLBRRegion.html"
+                    },
+                    {
+                        "title": "Using latency and weighted records in Amazon Route\u00a053 to route traffic to multiple Amazon EC2 instances in a Region",
+                        "href": "TutorialLBRMultipleEC2InRegion.html"
+                    },
+                    {
+                        "title": "Managing over 100 weighted records in Amazon Route\u00a053",
+                        "href": "TutorialManagingOver100WRR.html"
+                    },
+                    {
+                        "title": "Weighting fault-tolerant multi-record answers in Amazon Route\u00a053",
+                        "href": "TutorialWeightedFTMR.html"
+                    }
+                ]
+            },
+            {
+                "title": "Best practices",
+                "href": "best-practices.html",
+                "contents": [
+                    {
+                        "title": "Best practices for Amazon Route\u00a053 DNS",
+                        "href": "best-practices-dns.html"
+                    },
+                    {
+                        "title": "Best practices for Resolver",
+                        "href": "best-practices-resolver.html",
+                        "contents": [
+                            {
+                                "title": "Avoid loop configurations with Resolver endpoints",
+                                "href": "best-practices-resolver-endpoints.html"
+                            },
+                            {
+                                "title": "Resolver endpoint scaling",
+                                "href": "best-practices-resolver-endpoint-scaling.html"
+                            },
+                            {
+                                "title": "High availability for Resolver endpoints",
+                                "href": "best-practices-resolver-endpoint-high-availability.html"
+                            },
+                            {
+                                "title": "DNS zone walking",
+                                "href": "best-practices-resolver-zone-walking.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Best practices for Amazon Route\u00a053 health checks",
+                        "href": "best-practices-healthchecks.html",
+                        "contents": [
+                            {
+                                "title": "Best practices for Elastic IP addresses for health checks",
+                                "href": "best-practices-healthcheck-monitoring-endpoints.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "DNSLimitations.html"
+            },
+            {
+                "title": "Related information",
+                "href": "Resources.html"
+            },
+            {
+                "title": "Document history",
+                "href": "History.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

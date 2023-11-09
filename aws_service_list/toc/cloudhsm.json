@@ -1,1 +1,1492 @@
-{ "contents" : [ { "title" : "What is AWS CloudHSM?", "href" : "introduction.html", "contents" : [ { "title" : "Use cases", "href" : "use-cases.html" }, { "title" : "How it works", "href" : "whatis-concepts.html", "contents" : [ { "title" : "Clusters", "href" : "clusters.html" }, { "title" : "HSM users", "href" : "hsm-users.html" }, { "title" : "HSM keys", "href" : "whatis-hsm-keys.html" }, { "title" : "Client SDKs", "href" : "client-tools-and-libraries.html" }, { "title" : "Backups", "href" : "backups.html" }, { "title" : "Regions", "href" : "regions.html" } ] }, { "title" : "Pricing", "href" : "pricing.html" } ] }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Create IAM administrators", "href" : "create-iam-user.html" }, { "title" : "Create a VPC", "href" : "create-vpc.html" }, { "title" : "Create a cluster", "href" : "create-cluster.html" }, { "title" : "Review the cluster security group", "href" : "configure-sg.html" }, { "title" : "Launch an EC2 client", "href" : "launch-client-instance.html" }, { "title" : "Configure EC2 instance security groups", "href" : "configure-sg-client-instance.html" }, { "title" : "Create an HSM", "href" : "create-hsm.html" }, { "title" : "Verify HSM identity (optional)", "href" : "verify-hsm-identity.html" }, { "title" : "Initialize the cluster", "href" : "initialize-cluster.html" }, { "title" : "Install CloudHSM CLI", "href" : "gs_cloudhsm_cli-install.html" }, { "title" : "Activate the cluster", "href" : "activate-cluster.html" }, { "title" : "Reconfigure SSL (optional)", "href" : "getting-started-ssl.html" }, { "title" : "Build an application", "href" : "create-apps.html" } ] }, { "title" : "Best practices", "href" : "best-practices.html" }, { "title" : "Managing clusters", "href" : "manage-clusters.html", "contents" : [ { "title" : "Connecting to the cluster", "href" : "cluster-connect.html" }, { "title" : "Adding or removing HSMs", "href" : "add-remove-hsm.html" }, { "title" : "Deleting a cluster", "href" : "delete-cluster.html" }, { "title" : "Creating clusters from backups", "href" : "create-cluster-from-backup.html" } ] }, { "title" : "Managing backups", "href" : "manage-backups.html", "contents" : [ { "title" : "Deleting and restoring backups", "href" : "delete-restore-backup.html" }, { "title" : "Configuring backup retention", "href" : "manage-backup-retention.html" }, { "title" : "Copying backups across Regions", "href" : "copy-backup-to-region.html" } ] }, { "title" : "Tagging resources", "href" : "tag-resources.html" }, { "title" : "Managing HSM users and keys", "href" : "manage-hsm-users-and-keys.html", "contents" : [ { "title" : "Managing HSM users", "href" : "manage-hsm-users.html", "contents" : [ { "title" : "Using CloudHSM CLI", "href" : "manage-hsm-users-chsm-cli.html", "contents" : [ { "title" : "Managing users", "href" : "manage-chsm-cli-users.html", "contents" : [ { "title" : "How to", "href" : "manage-users-cloudhsm-cli.html", "contents" : [ { "title" : "Create admin", "href" : "create-admin-cloudhsm-cli.html" }, { "title" : "Create CUs", "href" : "create-user-cloudhsm-cli.html" }, { "title" : "List all users", "href" : "list-users-cloudhsm-cli.html" }, { "title" : "Change passwords", "href" : "change-user-password-cloudhsm-cli.html" }, { "title" : "Delete users", "href" : "delete-user-cloudhsm-cli.html" } ] } ] }, { "title" : "Managing MFA", "href" : "login-mfa-token-sign.html", "contents" : [ { "title" : "Understanding MFA", "href" : "understand-mfa-cloudhsm-cli.html" }, { "title" : "Working with MFA", "href" : "enable-mfa-cloudhsm-cli.html", "contents" : [ { "title" : "Key Pair Requirements", "href" : "mfa-key-pair-cloudhsm-cli.html" }, { "title" : "Set up MFA", "href" : "set-up-mfa-for-cloudhsm-cli.html" }, { "title" : "Create users", "href" : "create-mfa-users-cloudhsm-cli.html" }, { "title" : "Log in users", "href" : "login-mfa-cloudhsm-cli.html" }, { "title" : "Rotate keys", "href" : "rotate-mfa-cloudhsm-cli.html" }, { "title" : "Deregister an MFA public key", "href" : "deregister-mfa-cloudhsm-cli.html" }, { "title" : "Token file reference", "href" : "reference-mfa-cloudhsm-cli.html" } ] } ] }, { "title" : "Managing quorum (M of N)", "href" : "quorum-auth-chsm-cli.html", "contents" : [ { "title" : "Service names", "href" : "quorum-auth-chsm-cli-service-names.html" }, { "title" : "First time setup", "href" : "quorum-auth-chsm-cli-first-time.html" }, { "title" : "Using quorum (M of N)", "href" : "quorum-auth-chsm-cli-admin.html" }, { "title" : "Change the minimum value", "href" : "quorum-auth-chsm-cli-min-value.html" } ] } ] }, { "title" : "Using CMU", "href" : "manage-hsm-users-cmu.html", "contents" : [ { "title" : "Using CMU to manage users", "href" : "cli-users.html" }, { "title" : "Using CMU to manage 2FA", "href" : "manage-2fa.html" }, { "title" : "Using CMU to manage quorum authentication", "href" : "quorum-authentication.html", "contents" : [ { "title" : "First time setup", "href" : "quorum-authentication-crypto-officers-first-time-setup.html" }, { "title" : "Using M of N", "href" : "quorum-authentication-crypto-officers.html" }, { "title" : "Change the minimum value", "href" : "quorum-authentication-crypto-officers-change-minimum-value.html" } ] } ] } ] }, { "title" : "Managing keys", "href" : "manage-keys.html", "contents" : [ { "title" : "Key sync and durability", "href" : "manage-key-sync.html" }, { "title" : "AES key wrapping", "href" : "manage-aes-key-wrapping.html" }, { "title" : "Trusted keys", "href" : "manage-keys-using-trusted-keys.html" }, { "title" : "Managing keys with CloudHSM CLI", "href" : "manage-keys-chsm-cli.html", "contents" : [ { "title" : "Generating keys", "href" : "manage-keys-cloudhsm-cli-generate.html" }, { "title" : "Deleting keys", "href" : "manage-keys-cloudhsm-cli-delete.html" }, { "title" : "Sharing and unsharing keys", "href" : "manage-keys-cloudhsm-cli-share.html" }, { "title" : "Filtering by keys", "href" : "manage-keys-cloudhsm-cli-filtering.html" }, { "title" : "Marking a key as trusted", "href" : "manage-keys-cloudhsm-cli-trusted.html" } ] }, { "title" : "Managing keys with the KMU and CMU", "href" : "manage-keys-kmu-cmu.html", "contents" : [ { "title" : "Generating keys", "href" : "generate-keys.html" }, { "title" : "Importing keys", "href" : "import-keys.html" }, { "title" : "Exporting keys", "href" : "export-keys.html" }, { "title" : "Deleting keys", "href" : "delete-keys.html" }, { "title" : "Sharing and unsharing keys", "href" : "share-keys.html" }, { "title" : "Marking a key as trusted", "href" : "cloudhsm_using_trusted_keys_control_key_wrap.html" } ] } ] }, { "title" : "Managing cloned clusters", "href" : "cloned-clusters.html" } ] }, { "title" : "Command line tools", "href" : "command-line-tools.html", "contents" : [ { "title" : "Configure tool", "href" : "configure-tool.html", "contents" : [ { "title" : "Latest configure tool", "href" : "configure-sdk-5.html", "contents" : [ { "title" : "Advanced configurations", "href" : "configure-sdk5-advanced-configs.html" } ] }, { "title" : "Previous configure tool", "href" : "configure-sdk-3.html" } ] }, { "title" : "CloudHSM CLI", "href" : "cloudhsm_cli.html", "contents" : [ { "title" : "Supported platforms", "href" : "cloudhsm-cli-support.html" }, { "title" : "Getting started", "href" : "cloudhsm_cli-getting-started.html" }, { "title" : "Interactive and single command modes", "href" : "cloudhsm_cli-modes.html" }, { "title" : "Key attributes", "href" : "cloudhsm_cli-key-attributes.html" }, { "title" : "Reference", "href" : "cloudhsm_cli-reference.html", "contents" : [ { "title" : "cluster", "href" : "cloudhsm_cli-cluster.html", "contents" : [ { "title" : "activate", "href" : "cloudhsm_cli-cluster-activate.html" }, { "title" : "hsm-info", "href" : "cloudhsm_cli-cluster-hsm-info.html" } ] }, { "title" : "key", "href" : "cloudhsm_cli-key.html", "contents" : [ { "title" : "delete", "href" : "cloudhsm_cli-key-delete.html" }, { "title" : "generate-file", "href" : "cloudhsm_cli-key-generate-file.html" }, { "title" : "generate-asymmetric-pair", "href" : "cloudhsm_cli-key-generate-asymmetric-pair.html", "contents" : [ { "title" : "ec", "href" : "cloudhsm_cli-key-generate-asymmetric-pair-ec.html" }, { "title" : "rsa", "href" : "cloudhsm_cli-key-generate-asymmetric-pair-rsa.html" } ] }, { "title" : "generate-symmetric", "href" : "cloudhsm_cli-key-generate-symmetric.html", "contents" : [ { "title" : "aes", "href" : "cloudhsm_cli-key-generate-symmetric-aes.html" }, { "title" : "generic-secret", "href" : "cloudhsm_cli-key-generate-symmetric-generic-secret.html" } ] }, { "title" : "list", "href" : "cloudhsm_cli-key-list.html" }, { "title" : "set-attribute", "href" : "cloudhsm_cli-key-set-attribute.html" }, { "title" : "share", "href" : "cloudhsm_cli-key-share.html" }, { "title" : "unshare", "href" : "cloudhsm_cli-key-unshare.html" } ] }, { "title" : "login", "href" : "cloudhsm_cli-login.html", "contents" : [ { "title" : "mfa-token-sign", "href" : "cloudhsm_cli-login-mfa-token-sign.html" } ] }, { "title" : "logout", "href" : "cloudhsm_cli-logout.html" }, { "title" : "user", "href" : "cloudhsm_cli-user.html", "contents" : [ { "title" : "change-mfa", "href" : "cloudhsm_cli-user-change-mfa.html", "contents" : [ { "title" : "token-sign", "href" : "cloudhsm_cli-user-change-mfa-token-sign.html" } ] }, { "title" : "change-password", "href" : "cloudhsm_cli-user-change-password.html" }, { "title" : "change-quorum", "href" : "cloudhsm_cli-user-chqm.html", "contents" : [ { "title" : "token-sign", "href" : "cloudhsm_cli-user-chqm-token.html", "contents" : [ { "title" : "register", "href" : "cloudhsm_cli-user-chqm-token-reg.html" } ] } ] }, { "title" : "create", "href" : "cloudhsm_cli-user-create.html" }, { "title" : "delete", "href" : "cloudhsm_cli-user-delete.html" }, { "title" : "list", "href" : "cloudhsm_cli-user-list.html" } ] }, { "title" : "quorum", "href" : "cloudhsm_cli-qm.html", "contents" : [ { "title" : "token-sign", "href" : "cloudhsm_cli-qm-token.html", "contents" : [ { "title" : "delete", "href" : "cloudhsm_cli-qm-token-del.html" }, { "title" : "generate", "href" : "cloudhsm_cli-qm-token-gen.html" }, { "title" : "list", "href" : "cloudhsm_cli-qm-token-list.html" }, { "title" : "list-quorum-values", "href" : "cloudhsm_cli-qm-token-list-qm.html" }, { "title" : "list-timeouts", "href" : "cloudhsm_cli-qm-token-list-tm.html" }, { "title" : "set-quorum-value", "href" : "cloudhsm_cli-qm-token-set-qm.html" }, { "title" : "set-timeout", "href" : "cloudhsm_cli-qm-token-set-tm.html" } ] } ] } ] } ] }, { "title" : "CloudHSM Management Utility", "href" : "cloudhsm_mgmt_util.html", "contents" : [ { "title" : "Supported platforms", "href" : "cmu-support.html" }, { "title" : "Getting started", "href" : "cloudhsm_mgmt_util-getting-started.html" }, { "title" : "Install the client (Linux)", "href" : "cmu-install-and-configure-client-linux.html" }, { "title" : "Install the client (Windows)", "href" : "cmu-install-and-configure-client-win.html" }, { "title" : "Reference", "href" : "cloudhsm_mgmt_util-reference.html", "contents" : [ { "title" : "changePswd", "href" : "cloudhsm_mgmt_util-changePswd.html" }, { "title" : "createUser", "href" : "cloudhsm_mgmt_util-createUser.html" }, { "title" : "deleteUser", "href" : "cloudhsm_mgmt_util-deleteUser.html" }, { "title" : "findAllKeys", "href" : "cloudhsm_mgmt_util-findAllKeys.html" }, { "title" : "getAttribute", "href" : "cloudhsm_mgmt_util-getAttribute.html" }, { "title" : "getCert", "href" : "cloudhsm_mgmt_util-getCert.html" }, { "title" : "getHSMInfo", "href" : "cloudhsm_mgmt_util-getHSMInfo.html" }, { "title" : "getKeyInfo", "href" : "cloudhsm_mgmt_util-getKeyInfo.html" }, { "title" : "info", "href" : "cloudhsm_mgmt_util-info.html" }, { "title" : "listAttributes", "href" : "cloudhsm_mgmt_util-listAttributes.html" }, { "title" : "listUsers", "href" : "cloudhsm_mgmt_util-listUsers.html" }, { "title" : "loginHSM and logoutHSM", "href" : "cloudhsm_mgmt_util-loginLogout.html" }, { "title" : "registerQuorumPubKey", "href" : "cloudhsm_mgmt_util-registerQuorumPubKey.html" }, { "title" : "server", "href" : "cloudhsm_mgmt_util-server.html" }, { "title" : "setAttribute", "href" : "cloudhsm_mgmt_util-setAttribute.html" }, { "title" : "quit", "href" : "cloudhsm_mgmt_util-quit.html" }, { "title" : "shareKey", "href" : "cloudhsm_mgmt_util-shareKey.html" }, { "title" : "syncKey", "href" : "cloudhsm_mgmt_util-syncKey.html" }, { "title" : "syncUser", "href" : "cloudhsm_mgmt_util-syncUser.html" } ] } ] }, { "title" : "Key Management Utility", "href" : "key_mgmt_util.html", "contents" : [ { "title" : "Getting started", "href" : "key_mgmt_util-getting-started.html" }, { "title" : "Install the client (Linux)", "href" : "kmu-install-and-configure-client-linux.html" }, { "title" : "Install the client (Windows)", "href" : "kmu-install-and-configure-client-win.html" }, { "title" : "Reference", "href" : "key_mgmt_util-reference.html", "contents" : [ { "title" : "aesWrapUnwrap", "href" : "key_mgmt_util-aesWrapUnwrap.html" }, { "title" : "deleteKey", "href" : "key_mgmt_util-deleteKey.html" }, { "title" : "Error2String", "href" : "key_mgmt_util-Error2String.html" }, { "title" : "exit", "href" : "key_mgmt_util-exit.html" }, { "title" : "exportPrivateKey", "href" : "key_mgmt_util-exportPrivateKey.html" }, { "title" : "exportPubKey", "href" : "key_mgmt_util-exportPubKey.html" }, { "title" : "exSymKey", "href" : "key_mgmt_util-exSymKey.html" }, { "title" : "extractMaskedObject", "href" : "key_mgmt_util-extractMaskedObject.html" }, { "title" : "findKey", "href" : "key_mgmt_util-findKey.html" }, { "title" : "findSingleKey", "href" : "key_mgmt_util-findSingleKey.html" }, { "title" : "genDSAKeyPair", "href" : "key_mgmt_util-genDSAKeyPair.html" }, { "title" : "genECCKeyPair", "href" : "key_mgmt_util-genECCKeyPair.html" }, { "title" : "genRSAKeyPair", "href" : "key_mgmt_util-genRSAKeyPair.html" }, { "title" : "genSymKey", "href" : "key_mgmt_util-genSymKey.html" }, { "title" : "getAttribute", "href" : "key_mgmt_util-getAttribute.html" }, { "title" : "getCaviumPrivKey", "href" : "key_mgmt_util-getCaviumPrivKey.html" }, { "title" : "getCert", "href" : "key_mgmt_util-getCert.html" }, { "title" : "getKeyInfo", "href" : "key_mgmt_util-getKeyInfo.html" }, { "title" : "help", "href" : "key_mgmt_util-help.html" }, { "title" : "importPrivateKey", "href" : "key_mgmt_util-importPrivateKey.html" }, { "title" : "importPubKey", "href" : "key_mgmt_util-importPubKey.html" }, { "title" : "imSymKey", "href" : "key_mgmt_util-imSymKey.html" }, { "title" : "insertMaskedObject", "href" : "key_mgmt_util-insertMaskedObject.html" }, { "title" : "IsValidKeyHandlefile", "href" : "key_mgmt_util-IsValidKeyHandlefile.html" }, { "title" : "listAttributes", "href" : "key_mgmt_util-listAttributes.html" }, { "title" : "listUsers", "href" : "key_mgmt_util-listUsers.html" }, { "title" : "loginHSM and logoutHSM", "href" : "key_mgmt_util-loginHSM.html" }, { "title" : "setAttribute", "href" : "key_mgmt_util-setAttribute.html" }, { "title" : "sign", "href" : "key_mgmt_util-sign.html" }, { "title" : "unWrapKey", "href" : "key_mgmt_util-unwrapKey.html" }, { "title" : "verify", "href" : "key_mgmt_util-verify.html" }, { "title" : "wrapKey", "href" : "key_mgmt_util-wrapKey.html" }, { "title" : "Key Attribute Reference", "href" : "key-attribute-table.html" } ] } ] } ] }, { "title" : "Client SDKs", "href" : "use-hsm.html", "contents" : [ { "title" : "Supported platforms", "href" : "client-supported-platforms.html" }, { "title" : "PKCS #11 library", "href" : "pkcs11-library.html", "contents" : [ { "title" : "Installing PKCS #11 library", "href" : "pkcs11-library-install.html" }, { "title" : "Authenticating to the PKCS #11 library", "href" : "pkcs11-pin.html" }, { "title" : "Key types", "href" : "pkcs11-key-types.html" }, { "title" : "Mechanisms", "href" : "pkcs11-mechanisms.html" }, { "title" : "API operations", "href" : "pkcs11-apis.html" }, { "title" : "Key attributes", "href" : "pkcs11-attributes.html" }, { "title" : "Code samples", "href" : "pkcs11-samples.html" }, { "title" : "Advanced configurations", "href" : "pkcs11-library-configs.html", "contents" : [ { "title" : "Multiple slots", "href" : "pkcs11-library-configs-multi-slot.html" }, { "title" : "Retry commands", "href" : "pkcs11-library-configs-retry.html" } ] } ] }, { "title" : "OpenSSL Dynamic Engine", "href" : "openssl-library.html", "contents" : [ { "title" : "Installing the OpenSSL Dynamic Engine", "href" : "openssl5-install.html" }, { "title" : "Advanced configurations", "href" : "openssl-library-configs.html", "contents" : [ { "title" : "Retry commands", "href" : "openssl-library-configs-retry.html" } ] } ] }, { "title" : "JCE provider", "href" : "java-library.html", "contents" : [ { "title" : "Installing the JCE provider", "href" : "java-library-install_5.html" }, { "title" : "Key types", "href" : "java-lib-keys_5.html" }, { "title" : "Mechanisms", "href" : "java-lib-supported_5.html" }, { "title" : "Key attributes", "href" : "java-lib-attributes_5.html" }, { "title" : "Code samples", "href" : "java-samples.html" }, { "title" : "Javadocs", "href" : "java-javadocs_5.html" }, { "title" : "CloudHSM KeyStore", "href" : "alternative-keystore_5.html" }, { "title" : "Advanced configurations", "href" : "java-lib-configs.html", "contents" : [ { "title" : "Multiple clusters", "href" : "java-lib-configs-multi.html" }, { "title" : "Retry commands", "href" : "java-lib-configs-retry.html" }, { "title" : "Key extraction", "href" : "java-lib-configs-getencoded.html" } ] } ] }, { "title" : "KSP and CNG providers", "href" : "ksp-library.html", "contents" : [ { "title" : "Verifying provider installation", "href" : "ksp-library-install.html" }, { "title" : "Prerequisites", "href" : "ksp-library-prereq.html" }, { "title" : "Associate a key with a certificate", "href" : "ksp-library-associate-key-certificate.html" }, { "title" : "Code sample", "href" : "ksp-library-sample.html" } ] }, { "title" : "Benefits of the latest Client SDK", "href" : "client-sdk-5-benefits.html", "contents" : [ { "title" : "Migrating to Latest Client SDK", "href" : "migrate-sdk.html" } ] }, { "title" : "Previous Client SDK versions", "href" : "choose-client-sdk.html", "contents" : [ { "title" : "Supported platforms", "href" : "sdk3-support.html" }, { "title" : "Upgrading Client SDK 3", "href" : "client-upgrade.html" }, { "title" : "PKCS #11 library", "href" : "pkcs11-v3-library.html", "contents" : [ { "title" : "Installing PKCS #11 library", "href" : "install-pkcs11-v3.html" }, { "title" : "Authenticating to the PKCS #11 library", "href" : "pkcs11-v3-pin.html" }, { "title" : "Key types", "href" : "pkcs11-v3-key-types.html" }, { "title" : "Mechanisms", "href" : "pkcs11-v3-mechanisms.html" }, { "title" : "API operations", "href" : "pkcs11-v3-apis.html" }, { "title" : "Key attributes", "href" : "pkcs11-v3-attributes.html" }, { "title" : "Code samples", "href" : "pkcs11-v3-samples.html" } ] }, { "title" : "OpenSSL Dynamic Engine", "href" : "openssl3-install.html", "contents" : [ { "title" : "Prerequisites", "href" : "openssl3-install-dyn3-prereqs.html" }, { "title" : "Installation", "href" : "openssl3-install-openssl-library.html" }, { "title" : "Use OpenSSL Dynamic Engine", "href" : "openssl3-use-library.html" } ] }, { "title" : "JCE provider", "href" : "java-library_3.html", "contents" : [ { "title" : "Installing the JCE provider", "href" : "java-library-install.html" }, { "title" : "Mechanisms", "href" : "java-lib-supported.html" }, { "title" : "Key attributes", "href" : "java-lib-attributes.html" }, { "title" : "Code samples", "href" : "java-samples_3.html" }, { "title" : "AWS CloudHSM KeyStore", "href" : "alternative-keystore.html" } ] } ] } ] }, { "title" : "Integrating third-party applications", "href" : "third-party-applications.html", "contents" : [ { "title" : "SSL/TLS offload", "href" : "ssl-offload.html", "contents" : [ { "title" : "How it works", "href" : "ssl-offload-overview.html" }, { "title" : "SSL/TLS offload on Linux", "href" : "ssl-offload-linux.html", "contents" : [ { "title" : "NGINX or Apache with OpenSSL", "href" : "third-offload-linux-openssl.html", "contents" : [ { "title" : "1: Get ready", "href" : "ssl-offload-prerequisites.html" }, { "title" : "2: Generate key", "href" : "ssl-offload-import-or-generate-private-key-and-certificate.html" }, { "title" : "3: Configure server", "href" : "ssl-offload-configure-web-server.html" }, { "title" : "4: Verify", "href" : "ssl-offload-enable-traffic-and-verify-certificate.html" } ] }, { "title" : "Tomcat with JSSE", "href" : "third-offload-linux-jsse.html", "contents" : [ { "title" : "1: Get ready", "href" : "third-offload-linux-jsse-prereqs.html" }, { "title" : "2: Generate key", "href" : "third-offload-linux-jsse-gen.html" }, { "title" : "3: Configure server", "href" : "third-offload-linux-jsse-config.html" }, { "title" : "4: Verify", "href" : "third-offload-linux-jsse-verify.html" } ] } ] }, { "title" : "SSL/TLS offload on Windows", "href" : "ssl-offload-windows.html", "contents" : [ { "title" : "1: Get ready", "href" : "ssl-offload-prerequisites-windows.html" }, { "title" : "2: Create CSR", "href" : "ssl-offload-windows-create-csr-and-certificate.html" }, { "title" : "3: Configure server", "href" : "ssl-offload-configure-web-server-windows.html" }, { "title" : "4: Verify", "href" : "ssl-offload-enable-traffic-and-verify-certificate-windows.html" } ] }, { "title" : "Add a load balancer (optional)", "href" : "third-offload-add-lb.html" } ] }, { "title" : "Windows Server CA", "href" : "win-ca-overview.html", "contents" : [ { "title" : "Prerequisites", "href" : "win-ca-prerequisites.html" }, { "title" : "Create Windows Server CA", "href" : "win-ca-setup.html" }, { "title" : "Sign a CSR", "href" : "win-ca-sign-csr.html" } ] }, { "title" : "Oracle database encryption", "href" : "oracle-tde.html", "contents" : [ { "title" : "Set up prerequisites", "href" : "oracle-tde-prerequisites.html" }, { "title" : "Configure the database", "href" : "oracle-tde-configure-database-and-generate-master-key.html" } ] }, { "title" : "Microsoft SignTool", "href" : "signtool.html", "contents" : [ { "title" : "Microsoft SignTool with AWS CloudHSM step 1: Set up the prerequisites", "href" : "signtool-prereqs.html" }, { "title" : "Microsoft SignTool with AWS CloudHSM step 2: Create a signing certificate", "href" : "signtool-csr.html" }, { "title" : "Microsoft SignTool with AWS CloudHSM step 3: Sign a file", "href" : "signtool-sign.html" } ] }, { "title" : "Java Keytool and Jarsigner", "href" : "third_java-sdk_integration.html", "contents" : [ { "title" : "Use Client SDK 5 to integrate with Java Keytool and Jarsigner", "href" : "keystore-third-party-tools_5.html" }, { "title" : "Use Client SDK 3 to integrate with Java Keytool and Jarsigner", "href" : "keystore-third-party-tools.html" } ] }, { "title" : "Other third-party vendor integrations", "href" : "other-integrations.html" } ] }, { "title" : "Monitoring", "href" : "get-logs.html", "contents" : [ { "title" : "Client SDK logs", "href" : "hsm-client-logs.html" }, { "title" : "AWS CloudTrail", "href" : "get-api-logs-using-cloudtrail.html" }, { "title" : "Audit logs", "href" : "get-hsm-audit-logs-using-cloudwatch.html", "contents" : [ { "title" : "How logging works", "href" : "get-audit-logs-from-cloudwatch.html" }, { "title" : "Viewing logs", "href" : "understand-audit-logs.html" }, { "title" : "Interpreting logs", "href" : "interpreting-audit-logs.html" }, { "title" : "Log reference", "href" : "cloudhsm-audit-log-reference.html" } ] }, { "title" : "CloudWatch metrics", "href" : "hsm-metrics-cw.html" } ] }, { "title" : "Performance", "href" : "performance.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "End-to-end encryption", "href" : "client-end-to-end-encryption.html" }, { "title" : "Cluster backups", "href" : "data-protection-backup-security.html" } ] }, { "title" : "Identity and access management", "href" : "identity-access-management.html", "contents" : [ { "title" : "Service-linked roles", "href" : "service-linked-roles.html" } ] }, { "title" : "Compliance", "href" : "fips-validation.html", "contents" : [ { "title" : "PCI-PIN FAQs", "href" : "compliance-pci-pin-faqs.html" }, { "title" : "Deprecation Notifications", "href" : "compliance-dep-notif.html" } ] }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "VPC endpoints (AWS PrivateLink)", "href" : "cloudhsm-vpc-endpoint.html" }, { "title" : "Update management", "href" : "update-management.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "Known issues", "href" : "KnownIssues.html", "contents" : [ { "title" : "Known issues for all HSM instances", "href" : "ki-all.html" }, { "title" : "Known issues for the PKCS #11 library", "href" : "ki-pkcs11-sdk.html" }, { "title" : "Known issues for the JCE SDK", "href" : "ki-jce-sdk.html" }, { "title" : "Known issues for the OpenSSL Dynamic Engine", "href" : "ki-openssl-sdk.html" }, { "title" : "Known issues for Amazon EC2 instances running Amazon Linux 2", "href" : "ki-al2.html" }, { "title" : "Known issues for integrating third-party applications", "href" : "ki-third-party.html" } ] }, { "title" : "Client SDK 3 key synchronization failures", "href" : "ts-client-sync-fail.html" }, { "title" : "Client SDK 3 Verify Performance", "href" : "troubleshooting-verify-hsm-performance.html" }, { "title" : "Client SDK 5 user contains inconsistent values", "href" : "troubleshoot-sdk5-inconsistent-value.html" }, { "title" : "Error seen during key availability check", "href" : "troubleshoot-key-availability-check.html" }, { "title" : "Extracting keys using JCE", "href" : "troubleshoot-getencoded.html" }, { "title" : "HSM Throttling", "href" : "troubleshoot-hsm-throttling.html" }, { "title" : "Keep HSM users in sync", "href" : "troubleshooting-keep-hsm-users-in-sync.html" }, { "title" : "Lost connection", "href" : "troubleshooting-lost-connection.html" }, { "title" : "Missing AWS CloudHSM audit logs in CloudWatch", "href" : "troubleshooting-missing-audit-logs.html" }, { "title" : "Non-compliant AES key wraps", "href" : "troubleshooting-aes-keys.html" }, { "title" : "Resolving cluster creation failures", "href" : "troubleshooting-create-cluster.html" }, { "title" : "Retrieving client configuration logs", "href" : "troubleshooting-log-collection-script.html" } ] }, { "title" : "Quotas", "href" : "limits.html", "contents" : [ { "title" : "System resources", "href" : "system-resources.html" } ] }, { "title" : "Downloads", "href" : "client-history.html" }, { "title" : "Document history", "href" : "document-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/cloudhsm/latest/userguide/",
+    "service": "cloudhsm",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS CloudHSM?",
+                "href": "introduction.html",
+                "contents": [
+                    {
+                        "title": "Use cases",
+                        "href": "use-cases.html"
+                    },
+                    {
+                        "title": "How it works",
+                        "href": "whatis-concepts.html",
+                        "contents": [
+                            {
+                                "title": "Clusters",
+                                "href": "clusters.html"
+                            },
+                            {
+                                "title": "HSM users",
+                                "href": "hsm-users.html"
+                            },
+                            {
+                                "title": "HSM keys",
+                                "href": "whatis-hsm-keys.html"
+                            },
+                            {
+                                "title": "Client SDKs",
+                                "href": "client-tools-and-libraries.html"
+                            },
+                            {
+                                "title": "Backups",
+                                "href": "backups.html"
+                            },
+                            {
+                                "title": "Regions",
+                                "href": "regions.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Pricing",
+                        "href": "pricing.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Create IAM administrators",
+                        "href": "create-iam-user.html"
+                    },
+                    {
+                        "title": "Create a VPC",
+                        "href": "create-vpc.html"
+                    },
+                    {
+                        "title": "Create a cluster",
+                        "href": "create-cluster.html"
+                    },
+                    {
+                        "title": "Review the cluster security group",
+                        "href": "configure-sg.html"
+                    },
+                    {
+                        "title": "Launch an EC2 client",
+                        "href": "launch-client-instance.html"
+                    },
+                    {
+                        "title": "Configure EC2 instance security groups",
+                        "href": "configure-sg-client-instance.html"
+                    },
+                    {
+                        "title": "Create an HSM",
+                        "href": "create-hsm.html"
+                    },
+                    {
+                        "title": "Verify HSM identity (optional)",
+                        "href": "verify-hsm-identity.html"
+                    },
+                    {
+                        "title": "Initialize the cluster",
+                        "href": "initialize-cluster.html"
+                    },
+                    {
+                        "title": "Install CloudHSM CLI",
+                        "href": "gs_cloudhsm_cli-install.html"
+                    },
+                    {
+                        "title": "Activate the cluster",
+                        "href": "activate-cluster.html"
+                    },
+                    {
+                        "title": "Reconfigure SSL (optional)",
+                        "href": "getting-started-ssl.html"
+                    },
+                    {
+                        "title": "Build an application",
+                        "href": "create-apps.html"
+                    }
+                ]
+            },
+            {
+                "title": "Best practices",
+                "href": "best-practices.html"
+            },
+            {
+                "title": "Managing clusters",
+                "href": "manage-clusters.html",
+                "contents": [
+                    {
+                        "title": "Connecting to the cluster",
+                        "href": "cluster-connect.html"
+                    },
+                    {
+                        "title": "Adding or removing HSMs",
+                        "href": "add-remove-hsm.html"
+                    },
+                    {
+                        "title": "Deleting a cluster",
+                        "href": "delete-cluster.html"
+                    },
+                    {
+                        "title": "Creating clusters from backups",
+                        "href": "create-cluster-from-backup.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing backups",
+                "href": "manage-backups.html",
+                "contents": [
+                    {
+                        "title": "Deleting and restoring backups",
+                        "href": "delete-restore-backup.html"
+                    },
+                    {
+                        "title": "Configuring backup retention",
+                        "href": "manage-backup-retention.html"
+                    },
+                    {
+                        "title": "Copying backups across Regions",
+                        "href": "copy-backup-to-region.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tagging resources",
+                "href": "tag-resources.html"
+            },
+            {
+                "title": "Managing HSM users and keys",
+                "href": "manage-hsm-users-and-keys.html",
+                "contents": [
+                    {
+                        "title": "Managing HSM users",
+                        "href": "manage-hsm-users.html",
+                        "contents": [
+                            {
+                                "title": "Using CloudHSM CLI",
+                                "href": "manage-hsm-users-chsm-cli.html",
+                                "contents": [
+                                    {
+                                        "title": "Managing users",
+                                        "href": "manage-chsm-cli-users.html",
+                                        "contents": [
+                                            {
+                                                "title": "How to",
+                                                "href": "manage-users-cloudhsm-cli.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Create admin",
+                                                        "href": "create-admin-cloudhsm-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Create CUs",
+                                                        "href": "create-user-cloudhsm-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "List all users",
+                                                        "href": "list-users-cloudhsm-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Change passwords",
+                                                        "href": "change-user-password-cloudhsm-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Delete users",
+                                                        "href": "delete-user-cloudhsm-cli.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Managing MFA",
+                                        "href": "login-mfa-token-sign.html",
+                                        "contents": [
+                                            {
+                                                "title": "Understanding MFA",
+                                                "href": "understand-mfa-cloudhsm-cli.html"
+                                            },
+                                            {
+                                                "title": "Working with MFA",
+                                                "href": "enable-mfa-cloudhsm-cli.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Key Pair Requirements",
+                                                        "href": "mfa-key-pair-cloudhsm-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Set up MFA",
+                                                        "href": "set-up-mfa-for-cloudhsm-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Create users",
+                                                        "href": "create-mfa-users-cloudhsm-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Log in users",
+                                                        "href": "login-mfa-cloudhsm-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Rotate keys",
+                                                        "href": "rotate-mfa-cloudhsm-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Deregister an MFA public key",
+                                                        "href": "deregister-mfa-cloudhsm-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Token file reference",
+                                                        "href": "reference-mfa-cloudhsm-cli.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Managing quorum (M of N)",
+                                        "href": "quorum-auth-chsm-cli.html",
+                                        "contents": [
+                                            {
+                                                "title": "Service names",
+                                                "href": "quorum-auth-chsm-cli-service-names.html"
+                                            },
+                                            {
+                                                "title": "First time setup",
+                                                "href": "quorum-auth-chsm-cli-first-time.html"
+                                            },
+                                            {
+                                                "title": "Using quorum (M of N)",
+                                                "href": "quorum-auth-chsm-cli-admin.html"
+                                            },
+                                            {
+                                                "title": "Change the minimum value",
+                                                "href": "quorum-auth-chsm-cli-min-value.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using CMU",
+                                "href": "manage-hsm-users-cmu.html",
+                                "contents": [
+                                    {
+                                        "title": "Using CMU to manage users",
+                                        "href": "cli-users.html"
+                                    },
+                                    {
+                                        "title": "Using CMU to manage 2FA",
+                                        "href": "manage-2fa.html"
+                                    },
+                                    {
+                                        "title": "Using CMU to manage quorum authentication",
+                                        "href": "quorum-authentication.html",
+                                        "contents": [
+                                            {
+                                                "title": "First time setup",
+                                                "href": "quorum-authentication-crypto-officers-first-time-setup.html"
+                                            },
+                                            {
+                                                "title": "Using M of N",
+                                                "href": "quorum-authentication-crypto-officers.html"
+                                            },
+                                            {
+                                                "title": "Change the minimum value",
+                                                "href": "quorum-authentication-crypto-officers-change-minimum-value.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing keys",
+                        "href": "manage-keys.html",
+                        "contents": [
+                            {
+                                "title": "Key sync and durability",
+                                "href": "manage-key-sync.html"
+                            },
+                            {
+                                "title": "AES key wrapping",
+                                "href": "manage-aes-key-wrapping.html"
+                            },
+                            {
+                                "title": "Trusted keys",
+                                "href": "manage-keys-using-trusted-keys.html"
+                            },
+                            {
+                                "title": "Managing keys with CloudHSM CLI",
+                                "href": "manage-keys-chsm-cli.html",
+                                "contents": [
+                                    {
+                                        "title": "Generating keys",
+                                        "href": "manage-keys-cloudhsm-cli-generate.html"
+                                    },
+                                    {
+                                        "title": "Deleting keys",
+                                        "href": "manage-keys-cloudhsm-cli-delete.html"
+                                    },
+                                    {
+                                        "title": "Sharing and unsharing keys",
+                                        "href": "manage-keys-cloudhsm-cli-share.html"
+                                    },
+                                    {
+                                        "title": "Filtering by keys",
+                                        "href": "manage-keys-cloudhsm-cli-filtering.html"
+                                    },
+                                    {
+                                        "title": "Marking a key as trusted",
+                                        "href": "manage-keys-cloudhsm-cli-trusted.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Managing keys with the KMU and CMU",
+                                "href": "manage-keys-kmu-cmu.html",
+                                "contents": [
+                                    {
+                                        "title": "Generating keys",
+                                        "href": "generate-keys.html"
+                                    },
+                                    {
+                                        "title": "Importing keys",
+                                        "href": "import-keys.html"
+                                    },
+                                    {
+                                        "title": "Exporting keys",
+                                        "href": "export-keys.html"
+                                    },
+                                    {
+                                        "title": "Deleting keys",
+                                        "href": "delete-keys.html"
+                                    },
+                                    {
+                                        "title": "Sharing and unsharing keys",
+                                        "href": "share-keys.html"
+                                    },
+                                    {
+                                        "title": "Marking a key as trusted",
+                                        "href": "cloudhsm_using_trusted_keys_control_key_wrap.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing cloned clusters",
+                        "href": "cloned-clusters.html"
+                    }
+                ]
+            },
+            {
+                "title": "Command line tools",
+                "href": "command-line-tools.html",
+                "contents": [
+                    {
+                        "title": "Configure tool",
+                        "href": "configure-tool.html",
+                        "contents": [
+                            {
+                                "title": "Latest configure tool",
+                                "href": "configure-sdk-5.html",
+                                "contents": [
+                                    {
+                                        "title": "Advanced configurations",
+                                        "href": "configure-sdk5-advanced-configs.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Previous configure tool",
+                                "href": "configure-sdk-3.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CloudHSM CLI",
+                        "href": "cloudhsm_cli.html",
+                        "contents": [
+                            {
+                                "title": "Supported platforms",
+                                "href": "cloudhsm-cli-support.html"
+                            },
+                            {
+                                "title": "Getting started",
+                                "href": "cloudhsm_cli-getting-started.html"
+                            },
+                            {
+                                "title": "Interactive and single command modes",
+                                "href": "cloudhsm_cli-modes.html"
+                            },
+                            {
+                                "title": "Key attributes",
+                                "href": "cloudhsm_cli-key-attributes.html"
+                            },
+                            {
+                                "title": "Reference",
+                                "href": "cloudhsm_cli-reference.html",
+                                "contents": [
+                                    {
+                                        "title": "cluster",
+                                        "href": "cloudhsm_cli-cluster.html",
+                                        "contents": [
+                                            {
+                                                "title": "activate",
+                                                "href": "cloudhsm_cli-cluster-activate.html"
+                                            },
+                                            {
+                                                "title": "hsm-info",
+                                                "href": "cloudhsm_cli-cluster-hsm-info.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "key",
+                                        "href": "cloudhsm_cli-key.html",
+                                        "contents": [
+                                            {
+                                                "title": "delete",
+                                                "href": "cloudhsm_cli-key-delete.html"
+                                            },
+                                            {
+                                                "title": "generate-file",
+                                                "href": "cloudhsm_cli-key-generate-file.html"
+                                            },
+                                            {
+                                                "title": "generate-asymmetric-pair",
+                                                "href": "cloudhsm_cli-key-generate-asymmetric-pair.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "ec",
+                                                        "href": "cloudhsm_cli-key-generate-asymmetric-pair-ec.html"
+                                                    },
+                                                    {
+                                                        "title": "rsa",
+                                                        "href": "cloudhsm_cli-key-generate-asymmetric-pair-rsa.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "generate-symmetric",
+                                                "href": "cloudhsm_cli-key-generate-symmetric.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "aes",
+                                                        "href": "cloudhsm_cli-key-generate-symmetric-aes.html"
+                                                    },
+                                                    {
+                                                        "title": "generic-secret",
+                                                        "href": "cloudhsm_cli-key-generate-symmetric-generic-secret.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "list",
+                                                "href": "cloudhsm_cli-key-list.html"
+                                            },
+                                            {
+                                                "title": "set-attribute",
+                                                "href": "cloudhsm_cli-key-set-attribute.html"
+                                            },
+                                            {
+                                                "title": "share",
+                                                "href": "cloudhsm_cli-key-share.html"
+                                            },
+                                            {
+                                                "title": "unshare",
+                                                "href": "cloudhsm_cli-key-unshare.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "login",
+                                        "href": "cloudhsm_cli-login.html",
+                                        "contents": [
+                                            {
+                                                "title": "mfa-token-sign",
+                                                "href": "cloudhsm_cli-login-mfa-token-sign.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "logout",
+                                        "href": "cloudhsm_cli-logout.html"
+                                    },
+                                    {
+                                        "title": "user",
+                                        "href": "cloudhsm_cli-user.html",
+                                        "contents": [
+                                            {
+                                                "title": "change-mfa",
+                                                "href": "cloudhsm_cli-user-change-mfa.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "token-sign",
+                                                        "href": "cloudhsm_cli-user-change-mfa-token-sign.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "change-password",
+                                                "href": "cloudhsm_cli-user-change-password.html"
+                                            },
+                                            {
+                                                "title": "change-quorum",
+                                                "href": "cloudhsm_cli-user-chqm.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "token-sign",
+                                                        "href": "cloudhsm_cli-user-chqm-token.html",
+                                                        "contents": [
+                                                            {
+                                                                "title": "register",
+                                                                "href": "cloudhsm_cli-user-chqm-token-reg.html"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "create",
+                                                "href": "cloudhsm_cli-user-create.html"
+                                            },
+                                            {
+                                                "title": "delete",
+                                                "href": "cloudhsm_cli-user-delete.html"
+                                            },
+                                            {
+                                                "title": "list",
+                                                "href": "cloudhsm_cli-user-list.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "quorum",
+                                        "href": "cloudhsm_cli-qm.html",
+                                        "contents": [
+                                            {
+                                                "title": "token-sign",
+                                                "href": "cloudhsm_cli-qm-token.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "delete",
+                                                        "href": "cloudhsm_cli-qm-token-del.html"
+                                                    },
+                                                    {
+                                                        "title": "generate",
+                                                        "href": "cloudhsm_cli-qm-token-gen.html"
+                                                    },
+                                                    {
+                                                        "title": "list",
+                                                        "href": "cloudhsm_cli-qm-token-list.html"
+                                                    },
+                                                    {
+                                                        "title": "list-quorum-values",
+                                                        "href": "cloudhsm_cli-qm-token-list-qm.html"
+                                                    },
+                                                    {
+                                                        "title": "list-timeouts",
+                                                        "href": "cloudhsm_cli-qm-token-list-tm.html"
+                                                    },
+                                                    {
+                                                        "title": "set-quorum-value",
+                                                        "href": "cloudhsm_cli-qm-token-set-qm.html"
+                                                    },
+                                                    {
+                                                        "title": "set-timeout",
+                                                        "href": "cloudhsm_cli-qm-token-set-tm.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CloudHSM Management Utility",
+                        "href": "cloudhsm_mgmt_util.html",
+                        "contents": [
+                            {
+                                "title": "Supported platforms",
+                                "href": "cmu-support.html"
+                            },
+                            {
+                                "title": "Getting started",
+                                "href": "cloudhsm_mgmt_util-getting-started.html"
+                            },
+                            {
+                                "title": "Install the client (Linux)",
+                                "href": "cmu-install-and-configure-client-linux.html"
+                            },
+                            {
+                                "title": "Install the client (Windows)",
+                                "href": "cmu-install-and-configure-client-win.html"
+                            },
+                            {
+                                "title": "Reference",
+                                "href": "cloudhsm_mgmt_util-reference.html",
+                                "contents": [
+                                    {
+                                        "title": "changePswd",
+                                        "href": "cloudhsm_mgmt_util-changePswd.html"
+                                    },
+                                    {
+                                        "title": "createUser",
+                                        "href": "cloudhsm_mgmt_util-createUser.html"
+                                    },
+                                    {
+                                        "title": "deleteUser",
+                                        "href": "cloudhsm_mgmt_util-deleteUser.html"
+                                    },
+                                    {
+                                        "title": "findAllKeys",
+                                        "href": "cloudhsm_mgmt_util-findAllKeys.html"
+                                    },
+                                    {
+                                        "title": "getAttribute",
+                                        "href": "cloudhsm_mgmt_util-getAttribute.html"
+                                    },
+                                    {
+                                        "title": "getCert",
+                                        "href": "cloudhsm_mgmt_util-getCert.html"
+                                    },
+                                    {
+                                        "title": "getHSMInfo",
+                                        "href": "cloudhsm_mgmt_util-getHSMInfo.html"
+                                    },
+                                    {
+                                        "title": "getKeyInfo",
+                                        "href": "cloudhsm_mgmt_util-getKeyInfo.html"
+                                    },
+                                    {
+                                        "title": "info",
+                                        "href": "cloudhsm_mgmt_util-info.html"
+                                    },
+                                    {
+                                        "title": "listAttributes",
+                                        "href": "cloudhsm_mgmt_util-listAttributes.html"
+                                    },
+                                    {
+                                        "title": "listUsers",
+                                        "href": "cloudhsm_mgmt_util-listUsers.html"
+                                    },
+                                    {
+                                        "title": "loginHSM and logoutHSM",
+                                        "href": "cloudhsm_mgmt_util-loginLogout.html"
+                                    },
+                                    {
+                                        "title": "registerQuorumPubKey",
+                                        "href": "cloudhsm_mgmt_util-registerQuorumPubKey.html"
+                                    },
+                                    {
+                                        "title": "server",
+                                        "href": "cloudhsm_mgmt_util-server.html"
+                                    },
+                                    {
+                                        "title": "setAttribute",
+                                        "href": "cloudhsm_mgmt_util-setAttribute.html"
+                                    },
+                                    {
+                                        "title": "quit",
+                                        "href": "cloudhsm_mgmt_util-quit.html"
+                                    },
+                                    {
+                                        "title": "shareKey",
+                                        "href": "cloudhsm_mgmt_util-shareKey.html"
+                                    },
+                                    {
+                                        "title": "syncKey",
+                                        "href": "cloudhsm_mgmt_util-syncKey.html"
+                                    },
+                                    {
+                                        "title": "syncUser",
+                                        "href": "cloudhsm_mgmt_util-syncUser.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Key Management Utility",
+                        "href": "key_mgmt_util.html",
+                        "contents": [
+                            {
+                                "title": "Getting started",
+                                "href": "key_mgmt_util-getting-started.html"
+                            },
+                            {
+                                "title": "Install the client (Linux)",
+                                "href": "kmu-install-and-configure-client-linux.html"
+                            },
+                            {
+                                "title": "Install the client (Windows)",
+                                "href": "kmu-install-and-configure-client-win.html"
+                            },
+                            {
+                                "title": "Reference",
+                                "href": "key_mgmt_util-reference.html",
+                                "contents": [
+                                    {
+                                        "title": "aesWrapUnwrap",
+                                        "href": "key_mgmt_util-aesWrapUnwrap.html"
+                                    },
+                                    {
+                                        "title": "deleteKey",
+                                        "href": "key_mgmt_util-deleteKey.html"
+                                    },
+                                    {
+                                        "title": "Error2String",
+                                        "href": "key_mgmt_util-Error2String.html"
+                                    },
+                                    {
+                                        "title": "exit",
+                                        "href": "key_mgmt_util-exit.html"
+                                    },
+                                    {
+                                        "title": "exportPrivateKey",
+                                        "href": "key_mgmt_util-exportPrivateKey.html"
+                                    },
+                                    {
+                                        "title": "exportPubKey",
+                                        "href": "key_mgmt_util-exportPubKey.html"
+                                    },
+                                    {
+                                        "title": "exSymKey",
+                                        "href": "key_mgmt_util-exSymKey.html"
+                                    },
+                                    {
+                                        "title": "extractMaskedObject",
+                                        "href": "key_mgmt_util-extractMaskedObject.html"
+                                    },
+                                    {
+                                        "title": "findKey",
+                                        "href": "key_mgmt_util-findKey.html"
+                                    },
+                                    {
+                                        "title": "findSingleKey",
+                                        "href": "key_mgmt_util-findSingleKey.html"
+                                    },
+                                    {
+                                        "title": "genDSAKeyPair",
+                                        "href": "key_mgmt_util-genDSAKeyPair.html"
+                                    },
+                                    {
+                                        "title": "genECCKeyPair",
+                                        "href": "key_mgmt_util-genECCKeyPair.html"
+                                    },
+                                    {
+                                        "title": "genRSAKeyPair",
+                                        "href": "key_mgmt_util-genRSAKeyPair.html"
+                                    },
+                                    {
+                                        "title": "genSymKey",
+                                        "href": "key_mgmt_util-genSymKey.html"
+                                    },
+                                    {
+                                        "title": "getAttribute",
+                                        "href": "key_mgmt_util-getAttribute.html"
+                                    },
+                                    {
+                                        "title": "getCaviumPrivKey",
+                                        "href": "key_mgmt_util-getCaviumPrivKey.html"
+                                    },
+                                    {
+                                        "title": "getCert",
+                                        "href": "key_mgmt_util-getCert.html"
+                                    },
+                                    {
+                                        "title": "getKeyInfo",
+                                        "href": "key_mgmt_util-getKeyInfo.html"
+                                    },
+                                    {
+                                        "title": "help",
+                                        "href": "key_mgmt_util-help.html"
+                                    },
+                                    {
+                                        "title": "importPrivateKey",
+                                        "href": "key_mgmt_util-importPrivateKey.html"
+                                    },
+                                    {
+                                        "title": "importPubKey",
+                                        "href": "key_mgmt_util-importPubKey.html"
+                                    },
+                                    {
+                                        "title": "imSymKey",
+                                        "href": "key_mgmt_util-imSymKey.html"
+                                    },
+                                    {
+                                        "title": "insertMaskedObject",
+                                        "href": "key_mgmt_util-insertMaskedObject.html"
+                                    },
+                                    {
+                                        "title": "IsValidKeyHandlefile",
+                                        "href": "key_mgmt_util-IsValidKeyHandlefile.html"
+                                    },
+                                    {
+                                        "title": "listAttributes",
+                                        "href": "key_mgmt_util-listAttributes.html"
+                                    },
+                                    {
+                                        "title": "listUsers",
+                                        "href": "key_mgmt_util-listUsers.html"
+                                    },
+                                    {
+                                        "title": "loginHSM and logoutHSM",
+                                        "href": "key_mgmt_util-loginHSM.html"
+                                    },
+                                    {
+                                        "title": "setAttribute",
+                                        "href": "key_mgmt_util-setAttribute.html"
+                                    },
+                                    {
+                                        "title": "sign",
+                                        "href": "key_mgmt_util-sign.html"
+                                    },
+                                    {
+                                        "title": "unWrapKey",
+                                        "href": "key_mgmt_util-unwrapKey.html"
+                                    },
+                                    {
+                                        "title": "verify",
+                                        "href": "key_mgmt_util-verify.html"
+                                    },
+                                    {
+                                        "title": "wrapKey",
+                                        "href": "key_mgmt_util-wrapKey.html"
+                                    },
+                                    {
+                                        "title": "Key Attribute Reference",
+                                        "href": "key-attribute-table.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Client SDKs",
+                "href": "use-hsm.html",
+                "contents": [
+                    {
+                        "title": "Supported platforms",
+                        "href": "client-supported-platforms.html"
+                    },
+                    {
+                        "title": "PKCS #11 library",
+                        "href": "pkcs11-library.html",
+                        "contents": [
+                            {
+                                "title": "Installing PKCS #11 library",
+                                "href": "pkcs11-library-install.html"
+                            },
+                            {
+                                "title": "Authenticating to the PKCS #11 library",
+                                "href": "pkcs11-pin.html"
+                            },
+                            {
+                                "title": "Key types",
+                                "href": "pkcs11-key-types.html"
+                            },
+                            {
+                                "title": "Mechanisms",
+                                "href": "pkcs11-mechanisms.html"
+                            },
+                            {
+                                "title": "API operations",
+                                "href": "pkcs11-apis.html"
+                            },
+                            {
+                                "title": "Key attributes",
+                                "href": "pkcs11-attributes.html"
+                            },
+                            {
+                                "title": "Code samples",
+                                "href": "pkcs11-samples.html"
+                            },
+                            {
+                                "title": "Advanced configurations",
+                                "href": "pkcs11-library-configs.html",
+                                "contents": [
+                                    {
+                                        "title": "Multiple slots",
+                                        "href": "pkcs11-library-configs-multi-slot.html"
+                                    },
+                                    {
+                                        "title": "Retry commands",
+                                        "href": "pkcs11-library-configs-retry.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "OpenSSL Dynamic Engine",
+                        "href": "openssl-library.html",
+                        "contents": [
+                            {
+                                "title": "Installing the OpenSSL Dynamic Engine",
+                                "href": "openssl5-install.html"
+                            },
+                            {
+                                "title": "Advanced configurations",
+                                "href": "openssl-library-configs.html",
+                                "contents": [
+                                    {
+                                        "title": "Retry commands",
+                                        "href": "openssl-library-configs-retry.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "JCE provider",
+                        "href": "java-library.html",
+                        "contents": [
+                            {
+                                "title": "Installing the JCE provider",
+                                "href": "java-library-install_5.html"
+                            },
+                            {
+                                "title": "Key types",
+                                "href": "java-lib-keys_5.html"
+                            },
+                            {
+                                "title": "Mechanisms",
+                                "href": "java-lib-supported_5.html"
+                            },
+                            {
+                                "title": "Key attributes",
+                                "href": "java-lib-attributes_5.html"
+                            },
+                            {
+                                "title": "Code samples",
+                                "href": "java-samples.html"
+                            },
+                            {
+                                "title": "Javadocs",
+                                "href": "java-javadocs_5.html"
+                            },
+                            {
+                                "title": "CloudHSM KeyStore",
+                                "href": "alternative-keystore_5.html"
+                            },
+                            {
+                                "title": "Advanced configurations",
+                                "href": "java-lib-configs.html",
+                                "contents": [
+                                    {
+                                        "title": "Multiple clusters",
+                                        "href": "java-lib-configs-multi.html"
+                                    },
+                                    {
+                                        "title": "Retry commands",
+                                        "href": "java-lib-configs-retry.html"
+                                    },
+                                    {
+                                        "title": "Key extraction",
+                                        "href": "java-lib-configs-getencoded.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "KSP and CNG providers",
+                        "href": "ksp-library.html",
+                        "contents": [
+                            {
+                                "title": "Verifying provider installation",
+                                "href": "ksp-library-install.html"
+                            },
+                            {
+                                "title": "Prerequisites",
+                                "href": "ksp-library-prereq.html"
+                            },
+                            {
+                                "title": "Associate a key with a certificate",
+                                "href": "ksp-library-associate-key-certificate.html"
+                            },
+                            {
+                                "title": "Code sample",
+                                "href": "ksp-library-sample.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Benefits of the latest Client SDK",
+                        "href": "client-sdk-5-benefits.html",
+                        "contents": [
+                            {
+                                "title": "Migrating to Latest Client SDK",
+                                "href": "migrate-sdk.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Previous Client SDK versions",
+                        "href": "choose-client-sdk.html",
+                        "contents": [
+                            {
+                                "title": "Supported platforms",
+                                "href": "sdk3-support.html"
+                            },
+                            {
+                                "title": "Upgrading Client SDK 3",
+                                "href": "client-upgrade.html"
+                            },
+                            {
+                                "title": "PKCS #11 library",
+                                "href": "pkcs11-v3-library.html",
+                                "contents": [
+                                    {
+                                        "title": "Installing PKCS #11 library",
+                                        "href": "install-pkcs11-v3.html"
+                                    },
+                                    {
+                                        "title": "Authenticating to the PKCS #11 library",
+                                        "href": "pkcs11-v3-pin.html"
+                                    },
+                                    {
+                                        "title": "Key types",
+                                        "href": "pkcs11-v3-key-types.html"
+                                    },
+                                    {
+                                        "title": "Mechanisms",
+                                        "href": "pkcs11-v3-mechanisms.html"
+                                    },
+                                    {
+                                        "title": "API operations",
+                                        "href": "pkcs11-v3-apis.html"
+                                    },
+                                    {
+                                        "title": "Key attributes",
+                                        "href": "pkcs11-v3-attributes.html"
+                                    },
+                                    {
+                                        "title": "Code samples",
+                                        "href": "pkcs11-v3-samples.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "OpenSSL Dynamic Engine",
+                                "href": "openssl3-install.html",
+                                "contents": [
+                                    {
+                                        "title": "Prerequisites",
+                                        "href": "openssl3-install-dyn3-prereqs.html"
+                                    },
+                                    {
+                                        "title": "Installation",
+                                        "href": "openssl3-install-openssl-library.html"
+                                    },
+                                    {
+                                        "title": "Use OpenSSL Dynamic Engine",
+                                        "href": "openssl3-use-library.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "JCE provider",
+                                "href": "java-library_3.html",
+                                "contents": [
+                                    {
+                                        "title": "Installing the JCE provider",
+                                        "href": "java-library-install.html"
+                                    },
+                                    {
+                                        "title": "Mechanisms",
+                                        "href": "java-lib-supported.html"
+                                    },
+                                    {
+                                        "title": "Key attributes",
+                                        "href": "java-lib-attributes.html"
+                                    },
+                                    {
+                                        "title": "Code samples",
+                                        "href": "java-samples_3.html"
+                                    },
+                                    {
+                                        "title": "AWS CloudHSM KeyStore",
+                                        "href": "alternative-keystore.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Integrating third-party applications",
+                "href": "third-party-applications.html",
+                "contents": [
+                    {
+                        "title": "SSL/TLS offload",
+                        "href": "ssl-offload.html",
+                        "contents": [
+                            {
+                                "title": "How it works",
+                                "href": "ssl-offload-overview.html"
+                            },
+                            {
+                                "title": "SSL/TLS offload on Linux",
+                                "href": "ssl-offload-linux.html",
+                                "contents": [
+                                    {
+                                        "title": "NGINX or Apache with OpenSSL",
+                                        "href": "third-offload-linux-openssl.html",
+                                        "contents": [
+                                            {
+                                                "title": "1: Get ready",
+                                                "href": "ssl-offload-prerequisites.html"
+                                            },
+                                            {
+                                                "title": "2: Generate key",
+                                                "href": "ssl-offload-import-or-generate-private-key-and-certificate.html"
+                                            },
+                                            {
+                                                "title": "3: Configure server",
+                                                "href": "ssl-offload-configure-web-server.html"
+                                            },
+                                            {
+                                                "title": "4: Verify",
+                                                "href": "ssl-offload-enable-traffic-and-verify-certificate.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Tomcat with JSSE",
+                                        "href": "third-offload-linux-jsse.html",
+                                        "contents": [
+                                            {
+                                                "title": "1: Get ready",
+                                                "href": "third-offload-linux-jsse-prereqs.html"
+                                            },
+                                            {
+                                                "title": "2: Generate key",
+                                                "href": "third-offload-linux-jsse-gen.html"
+                                            },
+                                            {
+                                                "title": "3: Configure server",
+                                                "href": "third-offload-linux-jsse-config.html"
+                                            },
+                                            {
+                                                "title": "4: Verify",
+                                                "href": "third-offload-linux-jsse-verify.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "SSL/TLS offload on Windows",
+                                "href": "ssl-offload-windows.html",
+                                "contents": [
+                                    {
+                                        "title": "1: Get ready",
+                                        "href": "ssl-offload-prerequisites-windows.html"
+                                    },
+                                    {
+                                        "title": "2: Create CSR",
+                                        "href": "ssl-offload-windows-create-csr-and-certificate.html"
+                                    },
+                                    {
+                                        "title": "3: Configure server",
+                                        "href": "ssl-offload-configure-web-server-windows.html"
+                                    },
+                                    {
+                                        "title": "4: Verify",
+                                        "href": "ssl-offload-enable-traffic-and-verify-certificate-windows.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Add a load balancer (optional)",
+                                "href": "third-offload-add-lb.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Windows Server CA",
+                        "href": "win-ca-overview.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "win-ca-prerequisites.html"
+                            },
+                            {
+                                "title": "Create Windows Server CA",
+                                "href": "win-ca-setup.html"
+                            },
+                            {
+                                "title": "Sign a CSR",
+                                "href": "win-ca-sign-csr.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Oracle database encryption",
+                        "href": "oracle-tde.html",
+                        "contents": [
+                            {
+                                "title": "Set up prerequisites",
+                                "href": "oracle-tde-prerequisites.html"
+                            },
+                            {
+                                "title": "Configure the database",
+                                "href": "oracle-tde-configure-database-and-generate-master-key.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Microsoft SignTool",
+                        "href": "signtool.html",
+                        "contents": [
+                            {
+                                "title": "Microsoft SignTool with AWS CloudHSM step 1: Set up the prerequisites",
+                                "href": "signtool-prereqs.html"
+                            },
+                            {
+                                "title": "Microsoft SignTool with AWS CloudHSM step 2: Create a signing certificate",
+                                "href": "signtool-csr.html"
+                            },
+                            {
+                                "title": "Microsoft SignTool with AWS CloudHSM step 3: Sign a file",
+                                "href": "signtool-sign.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Java Keytool and Jarsigner",
+                        "href": "third_java-sdk_integration.html",
+                        "contents": [
+                            {
+                                "title": "Use Client SDK 5 to integrate with Java Keytool and Jarsigner",
+                                "href": "keystore-third-party-tools_5.html"
+                            },
+                            {
+                                "title": "Use Client SDK 3 to integrate with Java Keytool and Jarsigner",
+                                "href": "keystore-third-party-tools.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Other third-party vendor integrations",
+                        "href": "other-integrations.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring",
+                "href": "get-logs.html",
+                "contents": [
+                    {
+                        "title": "Client SDK logs",
+                        "href": "hsm-client-logs.html"
+                    },
+                    {
+                        "title": "AWS CloudTrail",
+                        "href": "get-api-logs-using-cloudtrail.html"
+                    },
+                    {
+                        "title": "Audit logs",
+                        "href": "get-hsm-audit-logs-using-cloudwatch.html",
+                        "contents": [
+                            {
+                                "title": "How logging works",
+                                "href": "get-audit-logs-from-cloudwatch.html"
+                            },
+                            {
+                                "title": "Viewing logs",
+                                "href": "understand-audit-logs.html"
+                            },
+                            {
+                                "title": "Interpreting logs",
+                                "href": "interpreting-audit-logs.html"
+                            },
+                            {
+                                "title": "Log reference",
+                                "href": "cloudhsm-audit-log-reference.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CloudWatch metrics",
+                        "href": "hsm-metrics-cw.html"
+                    }
+                ]
+            },
+            {
+                "title": "Performance",
+                "href": "performance.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "End-to-end encryption",
+                                "href": "client-end-to-end-encryption.html"
+                            },
+                            {
+                                "title": "Cluster backups",
+                                "href": "data-protection-backup-security.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "identity-access-management.html",
+                        "contents": [
+                            {
+                                "title": "Service-linked roles",
+                                "href": "service-linked-roles.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance",
+                        "href": "fips-validation.html",
+                        "contents": [
+                            {
+                                "title": "PCI-PIN FAQs",
+                                "href": "compliance-pci-pin-faqs.html"
+                            },
+                            {
+                                "title": "Deprecation Notifications",
+                                "href": "compliance-dep-notif.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "VPC endpoints (AWS PrivateLink)",
+                        "href": "cloudhsm-vpc-endpoint.html"
+                    },
+                    {
+                        "title": "Update management",
+                        "href": "update-management.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Known issues",
+                        "href": "KnownIssues.html",
+                        "contents": [
+                            {
+                                "title": "Known issues for all HSM instances",
+                                "href": "ki-all.html"
+                            },
+                            {
+                                "title": "Known issues for the PKCS #11 library",
+                                "href": "ki-pkcs11-sdk.html"
+                            },
+                            {
+                                "title": "Known issues for the JCE SDK",
+                                "href": "ki-jce-sdk.html"
+                            },
+                            {
+                                "title": "Known issues for the OpenSSL Dynamic Engine",
+                                "href": "ki-openssl-sdk.html"
+                            },
+                            {
+                                "title": "Known issues for Amazon EC2 instances running Amazon Linux 2",
+                                "href": "ki-al2.html"
+                            },
+                            {
+                                "title": "Known issues for integrating third-party applications",
+                                "href": "ki-third-party.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Client SDK 3 key synchronization failures",
+                        "href": "ts-client-sync-fail.html"
+                    },
+                    {
+                        "title": "Client SDK 3 Verify Performance",
+                        "href": "troubleshooting-verify-hsm-performance.html"
+                    },
+                    {
+                        "title": "Client SDK 5 user contains inconsistent values",
+                        "href": "troubleshoot-sdk5-inconsistent-value.html"
+                    },
+                    {
+                        "title": "Error seen during key availability check",
+                        "href": "troubleshoot-key-availability-check.html"
+                    },
+                    {
+                        "title": "Extracting keys using JCE",
+                        "href": "troubleshoot-getencoded.html"
+                    },
+                    {
+                        "title": "HSM Throttling",
+                        "href": "troubleshoot-hsm-throttling.html"
+                    },
+                    {
+                        "title": "Keep HSM users in sync",
+                        "href": "troubleshooting-keep-hsm-users-in-sync.html"
+                    },
+                    {
+                        "title": "Lost connection",
+                        "href": "troubleshooting-lost-connection.html"
+                    },
+                    {
+                        "title": "Missing AWS CloudHSM audit logs in CloudWatch",
+                        "href": "troubleshooting-missing-audit-logs.html"
+                    },
+                    {
+                        "title": "Non-compliant AES key wraps",
+                        "href": "troubleshooting-aes-keys.html"
+                    },
+                    {
+                        "title": "Resolving cluster creation failures",
+                        "href": "troubleshooting-create-cluster.html"
+                    },
+                    {
+                        "title": "Retrieving client configuration logs",
+                        "href": "troubleshooting-log-collection-script.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "limits.html",
+                "contents": [
+                    {
+                        "title": "System resources",
+                        "href": "system-resources.html"
+                    }
+                ]
+            },
+            {
+                "title": "Downloads",
+                "href": "client-history.html"
+            },
+            {
+                "title": "Document history",
+                "href": "document-history.html"
+            }
+        ]
+    }
+}

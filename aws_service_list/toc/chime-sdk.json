@@ -1,1 +1,1240 @@
-{ "contents" : [ { "title" : "What is the Amazon Chime SDK?", "href" : "what-is-chime-sdk.html" }, { "title" : "Using the Amazon Chime SDK", "href" : "meetings-sdk.html", "contents" : [ { "title" : "Available Regions", "href" : "sdk-available-regions.html" }, { "title" : "Integrating with a client library", "href" : "mtgs-sdk-client-lib.html" }, { "title" : "SIP integration", "href" : "mtgs-sdk-cvc.html" }, { "title" : "Amazon Chime SDK event notifications", "href" : "mtgs-sdk-notifications.html" }, { "title" : "Migrating from the Amazon Chime namespace", "href" : "migrate-from-chm-namespace.html" } ] }, { "title" : "Using Amazon Chime SDK meetings", "href" : "mtgs-sdk-mtgs.html", "contents" : [ { "title" : "Migrating to the Amazon Chime SDK Meetings namespace", "href" : "meeting-namespace-migration.html" }, { "title" : "Using meeting Regions", "href" : "chime-sdk-meetings-regions.html" }, { "title" : "Creating meetings", "href" : "create-mtgs.html" }, { "title" : "WebRTC media", "href" : "webrtc-media.html" }, { "title" : "Network configuration", "href" : "network-config.html", "contents" : [ { "title" : "Using AppKeys and TenantIDs", "href" : "app-keys-tenant-ids.html" } ] }, { "title" : "Meeting events", "href" : "using-events.html" }, { "title" : "Amazon CloudWatch metrics", "href" : "sdk-usage-metrics.html", "contents" : [ { "title" : "Service metrics", "href" : "service-metrics.html" }, { "title" : "API usage metrics", "href" : "usage-metrics.html" } ] }, { "title" : "Creating Amazon Chime SDK media pipelines", "href" : "media-pipelines.html", "contents" : [ { "title" : "Migrating to the ChimeSdkMediaPipelines namespace", "href" : "migrate-pipelines.html" }, { "title" : "Pipeline creation overview", "href" : "create-pipeline.html" }, { "title" : "Creating media capture pipelines", "href" : "capture-pipe-config.html", "contents" : [ { "title" : "Creating an Amazon S3 bucket", "href" : "create-s3-bucket.html" }, { "title" : "Enabling server-side encryption for an Amazon S3 bucket", "href" : "sse-kms.html" }, { "title" : "Creating the media capture pipeline", "href" : "create-capture-pipe.html" }, { "title" : "Working with media capture artifacts", "href" : "artifacts.html" }, { "title" : "Configuring the audio folder", "href" : "configure-audio.html" }, { "title" : "Configuring the video folder", "href" : "configure-video.html" }, { "title" : "Understanding messages in the data-channel folder", "href" : "data-channel.html" }, { "title" : "Understanding the S3 bucket folder structure", "href" : "capture-folder-structure.html" }, { "title" : "Understanding meeting event files", "href" : "meeting-events.html" }, { "title" : "Understanding transcription files", "href" : "transcription-messages.html" }, { "title" : "Concatenating data streams", "href" : "concatenate-streams.html" } ] }, { "title" : "Creating media concatenation pipelines", "href" : "create-concat-pipe.html", "contents" : [ { "title" : "Concatenation pipeline architecture", "href" : "concat-architecture.html" }, { "title" : "Building a media concatenation pipeline", "href" : "create-concat-pipe-steps.html" }, { "title" : "Understanding the S3 bucket folder structure", "href" : "concat-folder-structure.html" } ] }, { "title" : "Creating media live connector pipelines", "href" : "connector-pipe-config.html" }, { "title" : "Compositing audio and video into a single view", "href" : "pipeline-compositing.html", "contents" : [ { "title" : "Setting canvas orientation", "href" : "canvas-orientation.html" }, { "title" : "Setting border and corner attributes", "href" : "video-attribute.html" }, { "title" : "Using the layout configurations", "href" : "compositing-layouts.html" } ] }, { "title" : "Creating media stream pipelines", "href" : "create-media-stream-pipeline.html", "contents" : [ { "title" : "Creating a Kinesis Video Streams pool", "href" : "create-kvs-pool.html" }, { "title" : "Example code for Kinesis Video Streams pools", "href" : "pool-creation-code.html" }, { "title" : "Creating media stream pipelines", "href" : "create-stream-pipeline.html" }, { "title" : "Example code for media stream pipelines", "href" : "pipeline-creation-code.html" }, { "title" : "Using Event Bridge notifications", "href" : "media-stream-event-bridge.html", "contents" : [ { "title" : "Media stream pipeline events", "href" : "stream-pipe-events.html" }, { "title" : "Media Pipeline Kinesis Video Pool events", "href" : "media-stream-pool-events.html" } ] }, { "title" : "Using media stream pipeline data", "href" : "media-stream-tips-tricks.html" } ] }, { "title" : "Creating a service-linked role for media pipelines", "href" : "create-pipeline-role.html" }, { "title" : "Using media pipeline events", "href" : "media-pipe-events.html", "contents" : [ { "title" : "Setting Amazon S3 bucket permissions", "href" : "s3-permissions.html" }, { "title" : "Sending media pipeline events to CloudTrail", "href" : "pipeline-cloudtrail.html" } ] }, { "title" : "Parsing transcripts", "href" : "parse-transcripts.html" }, { "title" : "Best practices for stopping pipelines", "href" : "stop-pipe-best-practices.html" } ] }, { "title" : "Using Amazon Chime SDK live transcription", "href" : "meeting-transcription.html", "contents" : [ { "title" : "Configuring your account", "href" : "configure-transcribe.html" }, { "title" : "Choosing transcription options", "href" : "transcription-options.html" }, { "title" : "Starting and stopping transcription", "href" : "initiate-transcription.html" }, { "title" : "Transcription events", "href" : "transcription-events.html" }, { "title" : "Transcription messages", "href" : "process-msgs.html" }, { "title" : "Delivery examples", "href" : "delivery-examples.html" } ] }, { "title" : "Using media replication", "href" : "media-replication.html" }, { "title" : "Troubleshooting and debugging Amazon Chime SDK Meetings", "href" : "troubleshoot-sdk-meetings.html", "contents" : [ { "title" : "Understanding the system requirements", "href" : "ts-supported-browsers.html" }, { "title" : "Setting up logging and monitoring", "href" : "ts-log-monitor.html" }, { "title" : "Self troubleshooting", "href" : "self-troubleshooting.html" }, { "title" : "Common issues", "href" : "common-issues.html", "contents" : [ { "title" : "Verifying SDK quotas and API throttling", "href" : "quotas-throttling.html" }, { "title" : "Opening support cases", "href" : "open-support-cases.html" } ] } ] } ] }, { "title" : "Using Amazon Chime SDK messaging", "href" : "using-the-messaging-sdk.html", "contents" : [ { "title" : "Migrating to the Amazon Chime SDK Identity namespace", "href" : "identity-namespace-migration.html" }, { "title" : "Migrating to the Amazon Chime SDK Messaging namespace", "href" : "messaging-namespace-migration.html" }, { "title" : "Messaging prerequisites", "href" : "messaging-prerequisites.html" }, { "title" : "Messaging concepts", "href" : "messaging-concepts.html" }, { "title" : "Messaging architecture", "href" : "messaging-architecture.html" }, { "title" : "Message types", "href" : "msg-types.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Creating an AppInstance", "href" : "create-app-instance.html", "contents" : [ { "title" : "Building an AppInstance", "href" : "app-instance-steps.html" }, { "title" : "Creating an AppInstanceUser", "href" : "create-app-instance-user.html" } ] }, { "title" : "Making SDK calls from a back-end service", "href" : "call-from-backend.html" }, { "title" : "Authenticating end-user client applications", "href" : "auth-client-apps.html" }, { "title" : "Creating channels", "href" : "creating-channels.html" }, { "title" : "Sending messages", "href" : "send-messages.html" }, { "title" : "Using ExpirationSettings", "href" : "expiration.html" }, { "title" : "Using WebSockets to receive messages", "href" : "websockets.html", "contents" : [ { "title" : "Defining an IAM policy", "href" : "define-iam-policy.html" }, { "title" : "Retrieving the endpoint", "href" : "retrieve-endpoint.html" }, { "title" : "Establishing the connection", "href" : "connect-api.html" }, { "title" : "Using prefetch", "href" : "prefetch.html" }, { "title" : "Processing the events", "href" : "process-events.html", "contents" : [ { "title" : "Understanding message structures", "href" : "message-structures.html" }, { "title" : "Handling disconnects", "href" : "handle-disconnects.html" } ] } ] }, { "title" : "Configuring attachments", "href" : "configure-attachments.html" } ] }, { "title" : "Understanding system messages", "href" : "system-messages.html" }, { "title" : "Example IAM roles", "href" : "iam-roles.html" }, { "title" : "Understanding authorization by role", "href" : "auth-by-role.html" }, { "title" : "Streaming messaging data", "href" : "streaming-export.html" }, { "title" : "Using elastic channels to host live events", "href" : "elastic-channels.html", "contents" : [ { "title" : "Creating elastic channels", "href" : "create-elastic-channel.html" }, { "title" : "Managing elastic channel members", "href" : "manage-elastic-members.html" }, { "title" : "Sending elastic channel messages", "href" : "send-messages-elastic.html" }, { "title" : "Understanding WebSocket system messages in elastic channels", "href" : "websocket-messages-elastic.html" }, { "title" : "Using Kinesis streams to receive system messages", "href" : "elastic-onboard-streams.html" }, { "title" : "Testing elastic channels in our demo app", "href" : "elastic-testing.html" } ] }, { "title" : "Using mobile push notifications to receive messages", "href" : "using-push-notifications.html", "contents" : [ { "title" : "Create an Amazon Pinpoint application", "href" : "create-pinpoint.html" }, { "title" : "Create a service role", "href" : "create-service-role.html" }, { "title" : "Register a mobile device endpoint as an App Instance user", "href" : "register-endpoint.html" }, { "title" : "Send a channel message with notifications enabled", "href" : "send-channel-msg-with-notifications.html" }, { "title" : "Receiving push notifications", "href" : "receive-notifications.html" }, { "title" : "Debugging push notification failures", "href" : "debug-notifications.html" }, { "title" : "Using filter rules to filter messages", "href" : "filter-msgs.html" } ] }, { "title" : "Using service-linked roles", "href" : "using-roles.html", "contents" : [ { "title" : "Using service-linked roles for data streaming", "href" : "stream-service-linked.html" } ] }, { "title" : "Using channel flows to process messages", "href" : "using-channel-flows.html", "contents" : [ { "title" : "Setting up a Channel Processor", "href" : "processor-setup.html" }, { "title" : "Creating a channel flow", "href" : "create-channel-flow.html" }, { "title" : "Associating and disassociating channel flows", "href" : "associate-channel-flow.html" }, { "title" : "Sending messages", "href" : "sending-msgs.html" }, { "title" : "Creating failure alerts by automating with EventBridge", "href" : "event-bridge-events.html" } ] }, { "title" : "Using bots as channel agents", "href" : "appinstance-bots.html", "contents" : [ { "title" : "Creating an Amazon Lex V2 bot", "href" : "create-lex-bot.html", "contents" : [ { "title" : "Creating a welcome intent", "href" : "welcome-intent.html" }, { "title" : "Creating Amazon Lex V2 bot versions", "href" : "lex-versions.html" }, { "title" : "Creating Amazon Lex V2 bot aliases", "href" : "lex-aliases.html" } ] }, { "title" : "Setting up AppInstance bots", "href" : "appinstance-bot-setup.html" }, { "title" : "Channel membership for AppInstanceBots", "href" : "channel-membership.html" }, { "title" : "Sending messages to an AppInstanceBot", "href" : "message-appinstancebot.html" }, { "title" : "Processing messages from Amazon Lex", "href" : "process-from-lexv2.html" }, { "title" : "Processing responses from an AppInstanceBot", "href" : "process-response.html" }, { "title" : "Using rules to send events to Amazon EventBridge", "href" : "event-bridge-alerts.html" }, { "title" : "Troubleshooting AppInstanceBots", "href" : "troubleshoot-lex-bots.html" } ] }, { "title" : "Managing message retention", "href" : "manage-retention.html" }, { "title" : "User interface components for messaging", "href" : "ui-components.html" }, { "title" : "Integrating with client libraries", "href" : "integrate-client-library.html" }, { "title" : "Using Amazon Chime SDK messaging with JavaScript", "href" : "use-javascript.html" } ] }, { "title" : "Using the Amazon Chime SDK PSTN Audio service", "href" : "build-lambdas-for-sip-sdk.html", "contents" : [ { "title" : "Migrating to the Amazon Chime SDK Voice namespace", "href" : "voice-namespace-migration.html" }, { "title" : "Understanding phone numbers, SIP rules, SIP media applications, and AWS Lambda functions", "href" : "using-lambda.html" }, { "title" : "PSTN Audio service programming model", "href" : "pstn-model.html" }, { "title" : "Routing calls and events to AWS Lambda functions", "href" : "route-calls-events.html" }, { "title" : "About using PSTN Audio service call legs", "href" : "call-architecture.html" }, { "title" : "Sample call flow", "href" : "call-flow.html" }, { "title" : "Using Amazon Chime SDK Alexa skill calling", "href" : "alexa-calling.html", "contents" : [ { "title" : "Overview", "href" : "alexa-overview.html" }, { "title" : "System requirements", "href" : "alexa-system-reqs.html" }, { "title" : "Building an Alexa Skill with skill calling", "href" : "build-skill-with-calling.html" }, { "title" : "Using clientSessionId to send call context data", "href" : "call-context-data.html" }, { "title" : "Announcing skill calls", "href" : "announce-calls.html" }, { "title" : "Handling skill call events", "href" : "handle-skill-call-events.html" }, { "title" : "Use cases for skill calls", "href" : "skill-call-use-cases.html" }, { "title" : "StartCommunicationSession API reference", "href" : "communication-session-reference.html" }, { "title" : "Troubleshooting Amazon Chime SDK Alexa skill calling", "href" : "skill-call-troubleshoot.html" } ] }, { "title" : "Building AWS Lambda functions for the PSTN Audio service", "href" : "writing-lambdas.html", "contents" : [ { "title" : "Understanding telephony events", "href" : "pstn-invocations.html" }, { "title" : "Understanding actions", "href" : "about-actions.html" }, { "title" : "Telephony events that invoke AWS Lambda functions", "href" : "invoking-Lambda.html", "contents" : [ { "title" : "Making an outbound call", "href" : "use-create-call-api.html" }, { "title" : "Receiving an inbound call", "href" : "case-1.html" }, { "title" : "Specifying actions in response to telephony events", "href" : "use-case-2.html" }, { "title" : "Receiving caller input", "href" : "case-4.html" }, { "title" : "Updating in-progress calls", "href" : "update-sip-call.html" }, { "title" : "Ending a call", "href" : "case-5.html" }, { "title" : "End-to-end call example", "href" : "use-cases.html" } ] }, { "title" : "Responding to invocations with action lists", "href" : "invoke-on-call-leg.html" }, { "title" : "Supported actions for the PSTN Audio service", "href" : "specify-actions.html", "contents" : [ { "title" : "Using TransactionAttributes", "href" : "transaction-attributes.html", "contents" : [ { "title" : "Setting TransactionAttributes", "href" : "set-trans-attributes.html" }, { "title" : "Updating TransactionAttributes", "href" : "update-trans-attributes.html" }, { "title" : "Clearing TransactionAttributes", "href" : "clear-trans-attributes.html" }, { "title" : "Handling ACTION_SUCCESSFUL events", "href" : "attribute-trans-success.html" }, { "title" : "Invalid inputs", "href" : "attribute-trans-invalid.html" } ] }, { "title" : "Using call recording", "href" : "sip-apps-call-record.html", "contents" : [ { "title" : "Recording audio tracks", "href" : "record-legs.html" }, { "title" : "Sample use cases", "href" : "recording-use-cases.html" }, { "title" : "Call recording actions for SIP media applications", "href" : "use-recording-apis.html", "contents" : [ { "title" : "StartCallRecording", "href" : "start-call-recording.html" }, { "title" : "StopCallRecording", "href" : "stop-call-recording.html" }, { "title" : "PauseCallRecording", "href" : "pause-call-recording.html" }, { "title" : "ResumeCallRecording", "href" : "resume-call-recording.html" } ] } ] }, { "title" : "CallAndBridge", "href" : "call-and-bridge.html" }, { "title" : "Hangup", "href" : "hangup.html" }, { "title" : "JoinChimeMeeting", "href" : "join-chime-meeting.html" }, { "title" : "ModifyChimeMeetingAttendee (muting and unmuting audio)", "href" : "mute-unmute.html" }, { "title" : "Pause", "href" : "pause.html" }, { "title" : "PlayAudio", "href" : "play-audio.html" }, { "title" : "PlayAudioAndGetDigits", "href" : "play-audio-get-digits.html" }, { "title" : "ReceiveDigits", "href" : "listen-to-digits.html" }, { "title" : "RecordAudio", "href" : "record-audio.html" }, { "title" : "SendDigits", "href" : "send-digits.html" }, { "title" : "Speak", "href" : "speak.html" }, { "title" : "SpeakAndGetDigits", "href" : "speak-and-get-digits.html" }, { "title" : "StartBotConversation", "href" : "start-bot-conversation.html" } ] }, { "title" : "Using SIP headers", "href" : "sip-headers.html" }, { "title" : "Using call detail records", "href" : "attributes.html" }, { "title" : "Timeouts and retries", "href" : "timeouts.html" }, { "title" : "Debugging and troubleshooting", "href" : "debug-pstn.html", "contents" : [ { "title" : "Checking the logs", "href" : "check-logs.html" }, { "title" : "Debugging unexpected hangups", "href" : "unexpected-hangups.html" }, { "title" : "Debugging unexpected ACTION_FAILED events", "href" : "unexpected-action-fail.html" } ] }, { "title" : "VoiceFocus", "href" : "voice-focus.html" }, { "title" : "PSTN audio service glossary", "href" : "chm-dg-glossary.html" } ] } ] }, { "title" : "Using call analytics", "href" : "call-analytics.html", "contents" : [ { "title" : "What is Amazon Chime SDK call analytics", "href" : "what-is-amazon-chime-sdk-call-analytics.html" }, { "title" : "Call analytics terminology", "href" : "ca-terms-concepts.html" }, { "title" : "Creating call analytics configurations", "href" : "creating-ca-configuration.html", "contents" : [ { "title" : "Prerequisites", "href" : "ca-prerequisites.html" }, { "title" : "Using the console to create configurations", "href" : "create-config-console.html" }, { "title" : "Using APIs to create call analytics configurations.", "href" : "create-config-apis.html" }, { "title" : "Associating a configuration with a Voice Connector", "href" : "ca-associate-vc-steps.html" } ] }, { "title" : "Using call analytics configurations", "href" : "using-call-analytics-configurations.html", "contents" : [ { "title" : "Workflows for recording calls", "href" : "recording-workflows.html" }, { "title" : "Workflows for machine-learning based analytics", "href" : "ml-based-analytics.html" } ] }, { "title" : "Managing call analytics pipelines", "href" : "managing-call-analytics-pipelines.html" }, { "title" : "Pausing and resuming call analytics pipelines", "href" : "pausing-and-resuming-call-analytics-pipelines.html" }, { "title" : "Using the call analytics resource access role", "href" : "call-analytics-resource-access-role.html" }, { "title" : "Understanding the call analytics statuses", "href" : "call-analytics-statuses.html" }, { "title" : "Call analytics processor and output destinations", "href" : "call-analytics-processor-and-output-destinations.html", "contents" : [ { "title" : "Combining transcription with recording sinks", "href" : "combining-recording-transcription.html" }, { "title" : "Using Amazon EventBridge notifications", "href" : "using-eventbridge-notifications.html" }, { "title" : "Creating an Amazon Chime SDK data lake", "href" : "ca-data-lake.html" }, { "title" : "Configuring an Amazon QuickSight dashboard", "href" : "quicksight-setup-setup.html" } ] }, { "title" : "Call analytics data model", "href" : "ca-data-model.html", "contents" : [ { "title" : "Glue data catalog table structure", "href" : "ca-data-model-diagram.html" }, { "title" : "Glue data catalog tables", "href" : "glue-tables.html" }, { "title" : "Sample queries", "href" : "ca-data-model-queries.html" } ] }, { "title" : "Using Amazon Chime SDK voice analytics", "href" : "voice-analytics.html", "contents" : [ { "title" : "Voice analytics architecture", "href" : "va-architecture.html" }, { "title" : "Sample speaker search workflow", "href" : "va-data-flow.html" }, { "title" : "Sample voice tone analysis workflow", "href" : "va-tone-flow.html" }, { "title" : "Polling for task results", "href" : "va-task-result-poll.html" }, { "title" : "Understanding notifications", "href" : "va-notification-targets.html", "contents" : [ { "title" : "IAM policies for notification targets", "href" : "va-iam-target-policies.html" }, { "title" : "Voice analytics example Lambda function", "href" : "va-sample-lambda.html" } ] }, { "title" : "Data storage, opt-out, & data-retention policies", "href" : "va-opt-out.html", "contents" : [ { "title" : "Data storage for speaker search", "href" : "speaker-search-data-storage.html" }, { "title" : "Handling opt outs for speaker search", "href" : "va-refusals.html" }, { "title" : "Data retention", "href" : "va-data-retention.html" } ] }, { "title" : "Using voice APIs to run voice analytics", "href" : "va-in-voice-namespace.html" } ] }, { "title" : "Call analytics service quotas", "href" : "ca-regions.html" } ] }, { "title" : "Using the Amazon Chime SDK client library for Android", "href" : "sdk-for-android.html" }, { "title" : "Using the Amazon Chime SDK client library for iOS", "href" : "sdk-for-ios.html" }, { "title" : "Using the Amazon Chime SDK client library for JavaScript", "href" : "js-sdk-intro.html", "contents" : [ { "title" : "Components of an Amazon Chime SDK application", "href" : "components.html" }, { "title" : "Key concepts", "href" : "key-concepts.html" }, { "title" : "Service architecture", "href" : "service-architecture.html" }, { "title" : "Web application architecture", "href" : "web-architecture.html" }, { "title" : "Server application architecture", "href" : "server-app-architecture.html" }, { "title" : "The Amazon Chime SDK media control plane", "href" : "media-control-plane.html" }, { "title" : "The Amazon Chime SDK media data plane", "href" : "media-data-plane.html" }, { "title" : "Web application component architecture", "href" : "web-app-comp-arch.html" }, { "title" : "Building a server application", "href" : "build-server-app.html", "contents" : [ { "title" : "Creating IAM users or roles", "href" : "create-iam-users-roles.html" }, { "title" : "Configuring the AWS SDK to invoke the APIs", "href" : "invoke-apis.html" }, { "title" : "Creating a meeting", "href" : "create-meeting.html" }, { "title" : "Creating an attendee", "href" : "create-attendee.html" }, { "title" : "Sending a response to the client", "href" : "send-response-to-client.html" } ] }, { "title" : "Building a client application", "href" : "build-client-app.html" }, { "title" : "Integrating background filters into a client application", "href" : "background-filters.html", "contents" : [ { "title" : "About using background filters", "href" : "about-bg-filters.html" }, { "title" : "Using a content-security policy", "href" : "content-security.html", "contents" : [ { "title" : "Required content security policy directives", "href" : "required-csp.html", "contents" : [ { "title" : "Required script policy directives", "href" : "required-script.html" }, { "title" : "Worker policy directive", "href" : "required-worker.html" }, { "title" : "WebAssembly policy", "href" : "required-web-assembly.html" }, { "title" : "(Optional) Background image policy", "href" : "optional-directives.html" }, { "title" : "Content security policy example", "href" : "example-csp.html" }, { "title" : "Content security policy errors", "href" : "csp-errors.html" } ] }, { "title" : "Using the cross-origin opener policy", "href" : "cross-origin-policy.html" } ] }, { "title" : "Adding background filters to your application", "href" : "add-filters.html", "contents" : [ { "title" : "Checking for support before offering a filter", "href" : "support-check.html" }, { "title" : "Creating a VideoFxConfig object", "href" : "create-videofxconfig.html" }, { "title" : "Creating a VideoFxProcessor object", "href" : "create-videofxprocessor.html" }, { "title" : "Configuring the VideoFxProcessor object", "href" : "configure-videofxprocessor.html" }, { "title" : "Creating the VideoTransformDevice object", "href" : "create-video-transform.html" }, { "title" : "Tuning resource utilization", "href" : "tuning.html" } ] }, { "title" : "Example background filter", "href" : "example-bg-filter.html" } ] } ] }, { "title" : "Using the Amazon Chime SDK client library for Windows", "href" : "client-lib-windows.html" }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/chime-sdk/latest/dg/",
+    "service": "chime-sdk",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is the Amazon Chime SDK?",
+                "href": "what-is-chime-sdk.html"
+            },
+            {
+                "title": "Using the Amazon Chime SDK",
+                "href": "meetings-sdk.html",
+                "contents": [
+                    {
+                        "title": "Available Regions",
+                        "href": "sdk-available-regions.html"
+                    },
+                    {
+                        "title": "Integrating with a client library",
+                        "href": "mtgs-sdk-client-lib.html"
+                    },
+                    {
+                        "title": "SIP integration",
+                        "href": "mtgs-sdk-cvc.html"
+                    },
+                    {
+                        "title": "Amazon Chime SDK event notifications",
+                        "href": "mtgs-sdk-notifications.html"
+                    },
+                    {
+                        "title": "Migrating from the Amazon Chime namespace",
+                        "href": "migrate-from-chm-namespace.html"
+                    }
+                ]
+            },
+            {
+                "title": "Using Amazon Chime SDK meetings",
+                "href": "mtgs-sdk-mtgs.html",
+                "contents": [
+                    {
+                        "title": "Migrating to the Amazon Chime SDK Meetings namespace",
+                        "href": "meeting-namespace-migration.html"
+                    },
+                    {
+                        "title": "Using meeting Regions",
+                        "href": "chime-sdk-meetings-regions.html"
+                    },
+                    {
+                        "title": "Creating meetings",
+                        "href": "create-mtgs.html"
+                    },
+                    {
+                        "title": "WebRTC media",
+                        "href": "webrtc-media.html"
+                    },
+                    {
+                        "title": "Network configuration",
+                        "href": "network-config.html",
+                        "contents": [
+                            {
+                                "title": "Using AppKeys and TenantIDs",
+                                "href": "app-keys-tenant-ids.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Meeting events",
+                        "href": "using-events.html"
+                    },
+                    {
+                        "title": "Amazon CloudWatch metrics",
+                        "href": "sdk-usage-metrics.html",
+                        "contents": [
+                            {
+                                "title": "Service metrics",
+                                "href": "service-metrics.html"
+                            },
+                            {
+                                "title": "API usage metrics",
+                                "href": "usage-metrics.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Creating Amazon Chime SDK media pipelines",
+                        "href": "media-pipelines.html",
+                        "contents": [
+                            {
+                                "title": "Migrating to the ChimeSdkMediaPipelines namespace",
+                                "href": "migrate-pipelines.html"
+                            },
+                            {
+                                "title": "Pipeline creation overview",
+                                "href": "create-pipeline.html"
+                            },
+                            {
+                                "title": "Creating media capture pipelines",
+                                "href": "capture-pipe-config.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating an Amazon S3 bucket",
+                                        "href": "create-s3-bucket.html"
+                                    },
+                                    {
+                                        "title": "Enabling server-side encryption for an Amazon S3 bucket",
+                                        "href": "sse-kms.html"
+                                    },
+                                    {
+                                        "title": "Creating the media capture pipeline",
+                                        "href": "create-capture-pipe.html"
+                                    },
+                                    {
+                                        "title": "Working with media capture artifacts",
+                                        "href": "artifacts.html"
+                                    },
+                                    {
+                                        "title": "Configuring the audio folder",
+                                        "href": "configure-audio.html"
+                                    },
+                                    {
+                                        "title": "Configuring the video folder",
+                                        "href": "configure-video.html"
+                                    },
+                                    {
+                                        "title": "Understanding messages in the data-channel folder",
+                                        "href": "data-channel.html"
+                                    },
+                                    {
+                                        "title": "Understanding the S3 bucket folder structure",
+                                        "href": "capture-folder-structure.html"
+                                    },
+                                    {
+                                        "title": "Understanding meeting event files",
+                                        "href": "meeting-events.html"
+                                    },
+                                    {
+                                        "title": "Understanding transcription files",
+                                        "href": "transcription-messages.html"
+                                    },
+                                    {
+                                        "title": "Concatenating data streams",
+                                        "href": "concatenate-streams.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Creating media concatenation pipelines",
+                                "href": "create-concat-pipe.html",
+                                "contents": [
+                                    {
+                                        "title": "Concatenation pipeline architecture",
+                                        "href": "concat-architecture.html"
+                                    },
+                                    {
+                                        "title": "Building a media concatenation pipeline",
+                                        "href": "create-concat-pipe-steps.html"
+                                    },
+                                    {
+                                        "title": "Understanding the S3 bucket folder structure",
+                                        "href": "concat-folder-structure.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Creating media live connector pipelines",
+                                "href": "connector-pipe-config.html"
+                            },
+                            {
+                                "title": "Compositing audio and video into a single view",
+                                "href": "pipeline-compositing.html",
+                                "contents": [
+                                    {
+                                        "title": "Setting canvas orientation",
+                                        "href": "canvas-orientation.html"
+                                    },
+                                    {
+                                        "title": "Setting border and corner attributes",
+                                        "href": "video-attribute.html"
+                                    },
+                                    {
+                                        "title": "Using the layout configurations",
+                                        "href": "compositing-layouts.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Creating media stream pipelines",
+                                "href": "create-media-stream-pipeline.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating a Kinesis Video Streams pool",
+                                        "href": "create-kvs-pool.html"
+                                    },
+                                    {
+                                        "title": "Example code for Kinesis Video Streams pools",
+                                        "href": "pool-creation-code.html"
+                                    },
+                                    {
+                                        "title": "Creating media stream pipelines",
+                                        "href": "create-stream-pipeline.html"
+                                    },
+                                    {
+                                        "title": "Example code for media stream pipelines",
+                                        "href": "pipeline-creation-code.html"
+                                    },
+                                    {
+                                        "title": "Using Event Bridge notifications",
+                                        "href": "media-stream-event-bridge.html",
+                                        "contents": [
+                                            {
+                                                "title": "Media stream pipeline events",
+                                                "href": "stream-pipe-events.html"
+                                            },
+                                            {
+                                                "title": "Media Pipeline Kinesis Video Pool events",
+                                                "href": "media-stream-pool-events.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Using media stream pipeline data",
+                                        "href": "media-stream-tips-tricks.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Creating a service-linked role for media pipelines",
+                                "href": "create-pipeline-role.html"
+                            },
+                            {
+                                "title": "Using media pipeline events",
+                                "href": "media-pipe-events.html",
+                                "contents": [
+                                    {
+                                        "title": "Setting Amazon S3 bucket permissions",
+                                        "href": "s3-permissions.html"
+                                    },
+                                    {
+                                        "title": "Sending media pipeline events to CloudTrail",
+                                        "href": "pipeline-cloudtrail.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Parsing transcripts",
+                                "href": "parse-transcripts.html"
+                            },
+                            {
+                                "title": "Best practices for stopping pipelines",
+                                "href": "stop-pipe-best-practices.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Amazon Chime SDK live transcription",
+                        "href": "meeting-transcription.html",
+                        "contents": [
+                            {
+                                "title": "Configuring your account",
+                                "href": "configure-transcribe.html"
+                            },
+                            {
+                                "title": "Choosing transcription options",
+                                "href": "transcription-options.html"
+                            },
+                            {
+                                "title": "Starting and stopping transcription",
+                                "href": "initiate-transcription.html"
+                            },
+                            {
+                                "title": "Transcription events",
+                                "href": "transcription-events.html"
+                            },
+                            {
+                                "title": "Transcription messages",
+                                "href": "process-msgs.html"
+                            },
+                            {
+                                "title": "Delivery examples",
+                                "href": "delivery-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using media replication",
+                        "href": "media-replication.html"
+                    },
+                    {
+                        "title": "Troubleshooting and debugging Amazon Chime SDK Meetings",
+                        "href": "troubleshoot-sdk-meetings.html",
+                        "contents": [
+                            {
+                                "title": "Understanding the system requirements",
+                                "href": "ts-supported-browsers.html"
+                            },
+                            {
+                                "title": "Setting up logging and monitoring",
+                                "href": "ts-log-monitor.html"
+                            },
+                            {
+                                "title": "Self troubleshooting",
+                                "href": "self-troubleshooting.html"
+                            },
+                            {
+                                "title": "Common issues",
+                                "href": "common-issues.html",
+                                "contents": [
+                                    {
+                                        "title": "Verifying SDK quotas and API throttling",
+                                        "href": "quotas-throttling.html"
+                                    },
+                                    {
+                                        "title": "Opening support cases",
+                                        "href": "open-support-cases.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Using Amazon Chime SDK messaging",
+                "href": "using-the-messaging-sdk.html",
+                "contents": [
+                    {
+                        "title": "Migrating to the Amazon Chime SDK Identity namespace",
+                        "href": "identity-namespace-migration.html"
+                    },
+                    {
+                        "title": "Migrating to the Amazon Chime SDK Messaging namespace",
+                        "href": "messaging-namespace-migration.html"
+                    },
+                    {
+                        "title": "Messaging prerequisites",
+                        "href": "messaging-prerequisites.html"
+                    },
+                    {
+                        "title": "Messaging concepts",
+                        "href": "messaging-concepts.html"
+                    },
+                    {
+                        "title": "Messaging architecture",
+                        "href": "messaging-architecture.html"
+                    },
+                    {
+                        "title": "Message types",
+                        "href": "msg-types.html"
+                    },
+                    {
+                        "title": "Getting started",
+                        "href": "getting-started.html",
+                        "contents": [
+                            {
+                                "title": "Creating an AppInstance",
+                                "href": "create-app-instance.html",
+                                "contents": [
+                                    {
+                                        "title": "Building an AppInstance",
+                                        "href": "app-instance-steps.html"
+                                    },
+                                    {
+                                        "title": "Creating an AppInstanceUser",
+                                        "href": "create-app-instance-user.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Making SDK calls from a back-end service",
+                                "href": "call-from-backend.html"
+                            },
+                            {
+                                "title": "Authenticating end-user client applications",
+                                "href": "auth-client-apps.html"
+                            },
+                            {
+                                "title": "Creating channels",
+                                "href": "creating-channels.html"
+                            },
+                            {
+                                "title": "Sending messages",
+                                "href": "send-messages.html"
+                            },
+                            {
+                                "title": "Using ExpirationSettings",
+                                "href": "expiration.html"
+                            },
+                            {
+                                "title": "Using WebSockets to receive messages",
+                                "href": "websockets.html",
+                                "contents": [
+                                    {
+                                        "title": "Defining an IAM policy",
+                                        "href": "define-iam-policy.html"
+                                    },
+                                    {
+                                        "title": "Retrieving the endpoint",
+                                        "href": "retrieve-endpoint.html"
+                                    },
+                                    {
+                                        "title": "Establishing the connection",
+                                        "href": "connect-api.html"
+                                    },
+                                    {
+                                        "title": "Using prefetch",
+                                        "href": "prefetch.html"
+                                    },
+                                    {
+                                        "title": "Processing the events",
+                                        "href": "process-events.html",
+                                        "contents": [
+                                            {
+                                                "title": "Understanding message structures",
+                                                "href": "message-structures.html"
+                                            },
+                                            {
+                                                "title": "Handling disconnects",
+                                                "href": "handle-disconnects.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Configuring attachments",
+                                "href": "configure-attachments.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Understanding system messages",
+                        "href": "system-messages.html"
+                    },
+                    {
+                        "title": "Example IAM roles",
+                        "href": "iam-roles.html"
+                    },
+                    {
+                        "title": "Understanding authorization by role",
+                        "href": "auth-by-role.html"
+                    },
+                    {
+                        "title": "Streaming messaging data",
+                        "href": "streaming-export.html"
+                    },
+                    {
+                        "title": "Using elastic channels to host live events",
+                        "href": "elastic-channels.html",
+                        "contents": [
+                            {
+                                "title": "Creating elastic channels",
+                                "href": "create-elastic-channel.html"
+                            },
+                            {
+                                "title": "Managing elastic channel members",
+                                "href": "manage-elastic-members.html"
+                            },
+                            {
+                                "title": "Sending elastic channel messages",
+                                "href": "send-messages-elastic.html"
+                            },
+                            {
+                                "title": "Understanding WebSocket system messages in elastic channels",
+                                "href": "websocket-messages-elastic.html"
+                            },
+                            {
+                                "title": "Using Kinesis streams to receive system messages",
+                                "href": "elastic-onboard-streams.html"
+                            },
+                            {
+                                "title": "Testing elastic channels in our demo app",
+                                "href": "elastic-testing.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using mobile push notifications to receive messages",
+                        "href": "using-push-notifications.html",
+                        "contents": [
+                            {
+                                "title": "Create an Amazon Pinpoint application",
+                                "href": "create-pinpoint.html"
+                            },
+                            {
+                                "title": "Create a service role",
+                                "href": "create-service-role.html"
+                            },
+                            {
+                                "title": "Register a mobile device endpoint as an App Instance user",
+                                "href": "register-endpoint.html"
+                            },
+                            {
+                                "title": "Send a channel message with notifications enabled",
+                                "href": "send-channel-msg-with-notifications.html"
+                            },
+                            {
+                                "title": "Receiving push notifications",
+                                "href": "receive-notifications.html"
+                            },
+                            {
+                                "title": "Debugging push notification failures",
+                                "href": "debug-notifications.html"
+                            },
+                            {
+                                "title": "Using filter rules to filter messages",
+                                "href": "filter-msgs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using service-linked roles",
+                        "href": "using-roles.html",
+                        "contents": [
+                            {
+                                "title": "Using service-linked roles for data streaming",
+                                "href": "stream-service-linked.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using channel flows to process messages",
+                        "href": "using-channel-flows.html",
+                        "contents": [
+                            {
+                                "title": "Setting up a Channel Processor",
+                                "href": "processor-setup.html"
+                            },
+                            {
+                                "title": "Creating a channel flow",
+                                "href": "create-channel-flow.html"
+                            },
+                            {
+                                "title": "Associating and disassociating channel flows",
+                                "href": "associate-channel-flow.html"
+                            },
+                            {
+                                "title": "Sending messages",
+                                "href": "sending-msgs.html"
+                            },
+                            {
+                                "title": "Creating failure alerts by automating with EventBridge",
+                                "href": "event-bridge-events.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using bots as channel agents",
+                        "href": "appinstance-bots.html",
+                        "contents": [
+                            {
+                                "title": "Creating an Amazon Lex V2 bot",
+                                "href": "create-lex-bot.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating a welcome intent",
+                                        "href": "welcome-intent.html"
+                                    },
+                                    {
+                                        "title": "Creating Amazon Lex V2 bot versions",
+                                        "href": "lex-versions.html"
+                                    },
+                                    {
+                                        "title": "Creating Amazon Lex V2 bot aliases",
+                                        "href": "lex-aliases.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Setting up AppInstance bots",
+                                "href": "appinstance-bot-setup.html"
+                            },
+                            {
+                                "title": "Channel membership for AppInstanceBots",
+                                "href": "channel-membership.html"
+                            },
+                            {
+                                "title": "Sending messages to an AppInstanceBot",
+                                "href": "message-appinstancebot.html"
+                            },
+                            {
+                                "title": "Processing messages from Amazon Lex",
+                                "href": "process-from-lexv2.html"
+                            },
+                            {
+                                "title": "Processing responses from an AppInstanceBot",
+                                "href": "process-response.html"
+                            },
+                            {
+                                "title": "Using rules to send events to Amazon EventBridge",
+                                "href": "event-bridge-alerts.html"
+                            },
+                            {
+                                "title": "Troubleshooting AppInstanceBots",
+                                "href": "troubleshoot-lex-bots.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing message retention",
+                        "href": "manage-retention.html"
+                    },
+                    {
+                        "title": "User interface components for messaging",
+                        "href": "ui-components.html"
+                    },
+                    {
+                        "title": "Integrating with client libraries",
+                        "href": "integrate-client-library.html"
+                    },
+                    {
+                        "title": "Using Amazon Chime SDK messaging with JavaScript",
+                        "href": "use-javascript.html"
+                    }
+                ]
+            },
+            {
+                "title": "Using the Amazon Chime SDK PSTN Audio service",
+                "href": "build-lambdas-for-sip-sdk.html",
+                "contents": [
+                    {
+                        "title": "Migrating to the Amazon Chime SDK Voice namespace",
+                        "href": "voice-namespace-migration.html"
+                    },
+                    {
+                        "title": "Understanding phone numbers, SIP rules, SIP media applications, and AWS Lambda functions",
+                        "href": "using-lambda.html"
+                    },
+                    {
+                        "title": "PSTN Audio service programming model",
+                        "href": "pstn-model.html"
+                    },
+                    {
+                        "title": "Routing calls and events to AWS Lambda functions",
+                        "href": "route-calls-events.html"
+                    },
+                    {
+                        "title": "About using PSTN Audio service call legs",
+                        "href": "call-architecture.html"
+                    },
+                    {
+                        "title": "Sample call flow",
+                        "href": "call-flow.html"
+                    },
+                    {
+                        "title": "Using Amazon Chime SDK Alexa skill calling",
+                        "href": "alexa-calling.html",
+                        "contents": [
+                            {
+                                "title": "Overview",
+                                "href": "alexa-overview.html"
+                            },
+                            {
+                                "title": "System requirements",
+                                "href": "alexa-system-reqs.html"
+                            },
+                            {
+                                "title": "Building an Alexa Skill with skill calling",
+                                "href": "build-skill-with-calling.html"
+                            },
+                            {
+                                "title": "Using clientSessionId to send call context data",
+                                "href": "call-context-data.html"
+                            },
+                            {
+                                "title": "Announcing skill calls",
+                                "href": "announce-calls.html"
+                            },
+                            {
+                                "title": "Handling skill call events",
+                                "href": "handle-skill-call-events.html"
+                            },
+                            {
+                                "title": "Use cases for skill calls",
+                                "href": "skill-call-use-cases.html"
+                            },
+                            {
+                                "title": "StartCommunicationSession API reference",
+                                "href": "communication-session-reference.html"
+                            },
+                            {
+                                "title": "Troubleshooting Amazon Chime SDK Alexa skill calling",
+                                "href": "skill-call-troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Building AWS Lambda functions for the PSTN Audio service",
+                        "href": "writing-lambdas.html",
+                        "contents": [
+                            {
+                                "title": "Understanding telephony events",
+                                "href": "pstn-invocations.html"
+                            },
+                            {
+                                "title": "Understanding actions",
+                                "href": "about-actions.html"
+                            },
+                            {
+                                "title": "Telephony events that invoke AWS Lambda functions",
+                                "href": "invoking-Lambda.html",
+                                "contents": [
+                                    {
+                                        "title": "Making an outbound call",
+                                        "href": "use-create-call-api.html"
+                                    },
+                                    {
+                                        "title": "Receiving an inbound call",
+                                        "href": "case-1.html"
+                                    },
+                                    {
+                                        "title": "Specifying actions in response to telephony events",
+                                        "href": "use-case-2.html"
+                                    },
+                                    {
+                                        "title": "Receiving caller input",
+                                        "href": "case-4.html"
+                                    },
+                                    {
+                                        "title": "Updating in-progress calls",
+                                        "href": "update-sip-call.html"
+                                    },
+                                    {
+                                        "title": "Ending a call",
+                                        "href": "case-5.html"
+                                    },
+                                    {
+                                        "title": "End-to-end call example",
+                                        "href": "use-cases.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Responding to invocations with action lists",
+                                "href": "invoke-on-call-leg.html"
+                            },
+                            {
+                                "title": "Supported actions for the PSTN Audio service",
+                                "href": "specify-actions.html",
+                                "contents": [
+                                    {
+                                        "title": "Using TransactionAttributes",
+                                        "href": "transaction-attributes.html",
+                                        "contents": [
+                                            {
+                                                "title": "Setting TransactionAttributes",
+                                                "href": "set-trans-attributes.html"
+                                            },
+                                            {
+                                                "title": "Updating TransactionAttributes",
+                                                "href": "update-trans-attributes.html"
+                                            },
+                                            {
+                                                "title": "Clearing TransactionAttributes",
+                                                "href": "clear-trans-attributes.html"
+                                            },
+                                            {
+                                                "title": "Handling ACTION_SUCCESSFUL events",
+                                                "href": "attribute-trans-success.html"
+                                            },
+                                            {
+                                                "title": "Invalid inputs",
+                                                "href": "attribute-trans-invalid.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Using call recording",
+                                        "href": "sip-apps-call-record.html",
+                                        "contents": [
+                                            {
+                                                "title": "Recording audio tracks",
+                                                "href": "record-legs.html"
+                                            },
+                                            {
+                                                "title": "Sample use cases",
+                                                "href": "recording-use-cases.html"
+                                            },
+                                            {
+                                                "title": "Call recording actions for SIP media applications",
+                                                "href": "use-recording-apis.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "StartCallRecording",
+                                                        "href": "start-call-recording.html"
+                                                    },
+                                                    {
+                                                        "title": "StopCallRecording",
+                                                        "href": "stop-call-recording.html"
+                                                    },
+                                                    {
+                                                        "title": "PauseCallRecording",
+                                                        "href": "pause-call-recording.html"
+                                                    },
+                                                    {
+                                                        "title": "ResumeCallRecording",
+                                                        "href": "resume-call-recording.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "CallAndBridge",
+                                        "href": "call-and-bridge.html"
+                                    },
+                                    {
+                                        "title": "Hangup",
+                                        "href": "hangup.html"
+                                    },
+                                    {
+                                        "title": "JoinChimeMeeting",
+                                        "href": "join-chime-meeting.html"
+                                    },
+                                    {
+                                        "title": "ModifyChimeMeetingAttendee (muting and unmuting audio)",
+                                        "href": "mute-unmute.html"
+                                    },
+                                    {
+                                        "title": "Pause",
+                                        "href": "pause.html"
+                                    },
+                                    {
+                                        "title": "PlayAudio",
+                                        "href": "play-audio.html"
+                                    },
+                                    {
+                                        "title": "PlayAudioAndGetDigits",
+                                        "href": "play-audio-get-digits.html"
+                                    },
+                                    {
+                                        "title": "ReceiveDigits",
+                                        "href": "listen-to-digits.html"
+                                    },
+                                    {
+                                        "title": "RecordAudio",
+                                        "href": "record-audio.html"
+                                    },
+                                    {
+                                        "title": "SendDigits",
+                                        "href": "send-digits.html"
+                                    },
+                                    {
+                                        "title": "Speak",
+                                        "href": "speak.html"
+                                    },
+                                    {
+                                        "title": "SpeakAndGetDigits",
+                                        "href": "speak-and-get-digits.html"
+                                    },
+                                    {
+                                        "title": "StartBotConversation",
+                                        "href": "start-bot-conversation.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using SIP headers",
+                                "href": "sip-headers.html"
+                            },
+                            {
+                                "title": "Using call detail records",
+                                "href": "attributes.html"
+                            },
+                            {
+                                "title": "Timeouts and retries",
+                                "href": "timeouts.html"
+                            },
+                            {
+                                "title": "Debugging and troubleshooting",
+                                "href": "debug-pstn.html",
+                                "contents": [
+                                    {
+                                        "title": "Checking the logs",
+                                        "href": "check-logs.html"
+                                    },
+                                    {
+                                        "title": "Debugging unexpected hangups",
+                                        "href": "unexpected-hangups.html"
+                                    },
+                                    {
+                                        "title": "Debugging unexpected ACTION_FAILED events",
+                                        "href": "unexpected-action-fail.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "VoiceFocus",
+                                "href": "voice-focus.html"
+                            },
+                            {
+                                "title": "PSTN audio service glossary",
+                                "href": "chm-dg-glossary.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Using call analytics",
+                "href": "call-analytics.html",
+                "contents": [
+                    {
+                        "title": "What is Amazon Chime SDK call analytics",
+                        "href": "what-is-amazon-chime-sdk-call-analytics.html"
+                    },
+                    {
+                        "title": "Call analytics terminology",
+                        "href": "ca-terms-concepts.html"
+                    },
+                    {
+                        "title": "Creating call analytics configurations",
+                        "href": "creating-ca-configuration.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "ca-prerequisites.html"
+                            },
+                            {
+                                "title": "Using the console to create configurations",
+                                "href": "create-config-console.html"
+                            },
+                            {
+                                "title": "Using APIs to create call analytics configurations.",
+                                "href": "create-config-apis.html"
+                            },
+                            {
+                                "title": "Associating a configuration with a Voice Connector",
+                                "href": "ca-associate-vc-steps.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using call analytics configurations",
+                        "href": "using-call-analytics-configurations.html",
+                        "contents": [
+                            {
+                                "title": "Workflows for recording calls",
+                                "href": "recording-workflows.html"
+                            },
+                            {
+                                "title": "Workflows for machine-learning based analytics",
+                                "href": "ml-based-analytics.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing call analytics pipelines",
+                        "href": "managing-call-analytics-pipelines.html"
+                    },
+                    {
+                        "title": "Pausing and resuming call analytics pipelines",
+                        "href": "pausing-and-resuming-call-analytics-pipelines.html"
+                    },
+                    {
+                        "title": "Using the call analytics resource access role",
+                        "href": "call-analytics-resource-access-role.html"
+                    },
+                    {
+                        "title": "Understanding the call analytics statuses",
+                        "href": "call-analytics-statuses.html"
+                    },
+                    {
+                        "title": "Call analytics processor and output destinations",
+                        "href": "call-analytics-processor-and-output-destinations.html",
+                        "contents": [
+                            {
+                                "title": "Combining transcription with recording sinks",
+                                "href": "combining-recording-transcription.html"
+                            },
+                            {
+                                "title": "Using Amazon EventBridge notifications",
+                                "href": "using-eventbridge-notifications.html"
+                            },
+                            {
+                                "title": "Creating an Amazon Chime SDK data lake",
+                                "href": "ca-data-lake.html"
+                            },
+                            {
+                                "title": "Configuring an Amazon QuickSight dashboard",
+                                "href": "quicksight-setup-setup.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Call analytics data model",
+                        "href": "ca-data-model.html",
+                        "contents": [
+                            {
+                                "title": "Glue data catalog table structure",
+                                "href": "ca-data-model-diagram.html"
+                            },
+                            {
+                                "title": "Glue data catalog tables",
+                                "href": "glue-tables.html"
+                            },
+                            {
+                                "title": "Sample queries",
+                                "href": "ca-data-model-queries.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Amazon Chime SDK voice analytics",
+                        "href": "voice-analytics.html",
+                        "contents": [
+                            {
+                                "title": "Voice analytics architecture",
+                                "href": "va-architecture.html"
+                            },
+                            {
+                                "title": "Sample speaker search workflow",
+                                "href": "va-data-flow.html"
+                            },
+                            {
+                                "title": "Sample voice tone analysis workflow",
+                                "href": "va-tone-flow.html"
+                            },
+                            {
+                                "title": "Polling for task results",
+                                "href": "va-task-result-poll.html"
+                            },
+                            {
+                                "title": "Understanding notifications",
+                                "href": "va-notification-targets.html",
+                                "contents": [
+                                    {
+                                        "title": "IAM policies for notification targets",
+                                        "href": "va-iam-target-policies.html"
+                                    },
+                                    {
+                                        "title": "Voice analytics example Lambda function",
+                                        "href": "va-sample-lambda.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Data storage, opt-out, & data-retention policies",
+                                "href": "va-opt-out.html",
+                                "contents": [
+                                    {
+                                        "title": "Data storage for speaker search",
+                                        "href": "speaker-search-data-storage.html"
+                                    },
+                                    {
+                                        "title": "Handling opt outs for speaker search",
+                                        "href": "va-refusals.html"
+                                    },
+                                    {
+                                        "title": "Data retention",
+                                        "href": "va-data-retention.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using voice APIs to run voice analytics",
+                                "href": "va-in-voice-namespace.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Call analytics service quotas",
+                        "href": "ca-regions.html"
+                    }
+                ]
+            },
+            {
+                "title": "Using the Amazon Chime SDK client library for Android",
+                "href": "sdk-for-android.html"
+            },
+            {
+                "title": "Using the Amazon Chime SDK client library for iOS",
+                "href": "sdk-for-ios.html"
+            },
+            {
+                "title": "Using the Amazon Chime SDK client library for JavaScript",
+                "href": "js-sdk-intro.html",
+                "contents": [
+                    {
+                        "title": "Components of an Amazon Chime SDK application",
+                        "href": "components.html"
+                    },
+                    {
+                        "title": "Key concepts",
+                        "href": "key-concepts.html"
+                    },
+                    {
+                        "title": "Service architecture",
+                        "href": "service-architecture.html"
+                    },
+                    {
+                        "title": "Web application architecture",
+                        "href": "web-architecture.html"
+                    },
+                    {
+                        "title": "Server application architecture",
+                        "href": "server-app-architecture.html"
+                    },
+                    {
+                        "title": "The Amazon Chime SDK media control plane",
+                        "href": "media-control-plane.html"
+                    },
+                    {
+                        "title": "The Amazon Chime SDK media data plane",
+                        "href": "media-data-plane.html"
+                    },
+                    {
+                        "title": "Web application component architecture",
+                        "href": "web-app-comp-arch.html"
+                    },
+                    {
+                        "title": "Building a server application",
+                        "href": "build-server-app.html",
+                        "contents": [
+                            {
+                                "title": "Creating IAM users or roles",
+                                "href": "create-iam-users-roles.html"
+                            },
+                            {
+                                "title": "Configuring the AWS SDK to invoke the APIs",
+                                "href": "invoke-apis.html"
+                            },
+                            {
+                                "title": "Creating a meeting",
+                                "href": "create-meeting.html"
+                            },
+                            {
+                                "title": "Creating an attendee",
+                                "href": "create-attendee.html"
+                            },
+                            {
+                                "title": "Sending a response to the client",
+                                "href": "send-response-to-client.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Building a client application",
+                        "href": "build-client-app.html"
+                    },
+                    {
+                        "title": "Integrating background filters into a client application",
+                        "href": "background-filters.html",
+                        "contents": [
+                            {
+                                "title": "About using background filters",
+                                "href": "about-bg-filters.html"
+                            },
+                            {
+                                "title": "Using a content-security policy",
+                                "href": "content-security.html",
+                                "contents": [
+                                    {
+                                        "title": "Required content security policy directives",
+                                        "href": "required-csp.html",
+                                        "contents": [
+                                            {
+                                                "title": "Required script policy directives",
+                                                "href": "required-script.html"
+                                            },
+                                            {
+                                                "title": "Worker policy directive",
+                                                "href": "required-worker.html"
+                                            },
+                                            {
+                                                "title": "WebAssembly policy",
+                                                "href": "required-web-assembly.html"
+                                            },
+                                            {
+                                                "title": "(Optional) Background image policy",
+                                                "href": "optional-directives.html"
+                                            },
+                                            {
+                                                "title": "Content security policy example",
+                                                "href": "example-csp.html"
+                                            },
+                                            {
+                                                "title": "Content security policy errors",
+                                                "href": "csp-errors.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Using the cross-origin opener policy",
+                                        "href": "cross-origin-policy.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Adding background filters to your application",
+                                "href": "add-filters.html",
+                                "contents": [
+                                    {
+                                        "title": "Checking for support before offering a filter",
+                                        "href": "support-check.html"
+                                    },
+                                    {
+                                        "title": "Creating a VideoFxConfig object",
+                                        "href": "create-videofxconfig.html"
+                                    },
+                                    {
+                                        "title": "Creating a VideoFxProcessor object",
+                                        "href": "create-videofxprocessor.html"
+                                    },
+                                    {
+                                        "title": "Configuring the VideoFxProcessor object",
+                                        "href": "configure-videofxprocessor.html"
+                                    },
+                                    {
+                                        "title": "Creating the VideoTransformDevice object",
+                                        "href": "create-video-transform.html"
+                                    },
+                                    {
+                                        "title": "Tuning resource utilization",
+                                        "href": "tuning.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Example background filter",
+                                "href": "example-bg-filter.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Using the Amazon Chime SDK client library for Windows",
+                "href": "client-lib-windows.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

@@ -1,1 +1,116 @@
-{ "contents" : [ { "title" : "Tagging your AWS resources", "href" : "tagging.html" }, { "title" : "Using Tag Editor", "href" : "tag-editor.html", "contents" : [ { "title" : "Getting started", "href" : "gettingstarted.html" }, { "title" : "Finding resources to tag", "href" : "find-resources-to-tag.html" }, { "title" : "Managing tags", "href" : "tagging-resources.html" }, { "title" : "Using tags in IAM policies", "href" : "tags-in-iam-policies.html" }, { "title" : "AWS Organizations tag policies", "href" : "tag-policies-orgs.html", "contents" : [ { "title" : "Prerequisites and permissions", "href" : "tag-policies-prereqs.html" }, { "title" : "Evaluating compliance for an account", "href" : "tag-policies-orgs-finding-noncompliant-tags.html" }, { "title" : "Evaluating organization-wide compliance", "href" : "tag-policies-orgs-evaluating-org-wide-compliance.html" } ] }, { "title" : "Monitoring tag changes", "href" : "tag-monitor.html" }, { "title" : "Troubleshooting tag changes", "href" : "troubleshooting-tags.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "security_data-protection.html" }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How Tag Editor works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Logging and monitoring", "href" : "security_logging-monitoring.html" }, { "title" : "Compliance validation", "href" : "security_compliance.html" }, { "title" : "Resilience", "href" : "security_resilience.html" }, { "title" : "Infrastructure security", "href" : "security_infrastructure.html" } ] }, { "title" : "Reference", "href" : "reference.html" }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/tag-editor/latest/userguide/",
+    "service": "tag-editor",
+    "toc": {
+        "contents": [
+            {
+                "title": "Tagging your AWS resources",
+                "href": "tagging.html"
+            },
+            {
+                "title": "Using Tag Editor",
+                "href": "tag-editor.html",
+                "contents": [
+                    {
+                        "title": "Getting started",
+                        "href": "gettingstarted.html"
+                    },
+                    {
+                        "title": "Finding resources to tag",
+                        "href": "find-resources-to-tag.html"
+                    },
+                    {
+                        "title": "Managing tags",
+                        "href": "tagging-resources.html"
+                    },
+                    {
+                        "title": "Using tags in IAM policies",
+                        "href": "tags-in-iam-policies.html"
+                    },
+                    {
+                        "title": "AWS Organizations tag policies",
+                        "href": "tag-policies-orgs.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites and permissions",
+                                "href": "tag-policies-prereqs.html"
+                            },
+                            {
+                                "title": "Evaluating compliance for an account",
+                                "href": "tag-policies-orgs-finding-noncompliant-tags.html"
+                            },
+                            {
+                                "title": "Evaluating organization-wide compliance",
+                                "href": "tag-policies-orgs-evaluating-org-wide-compliance.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Monitoring tag changes",
+                        "href": "tag-monitor.html"
+                    },
+                    {
+                        "title": "Troubleshooting tag changes",
+                        "href": "troubleshooting-tags.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "security_data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Tag Editor works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "security_logging-monitoring.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "security_compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "security_resilience.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "security_infrastructure.html"
+                    }
+                ]
+            },
+            {
+                "title": "Reference",
+                "href": "reference.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

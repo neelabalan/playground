@@ -1,1 +1,74 @@
-{ "contents" : [ { "title" : "What are Savings Plans?", "href" : "what-is-savings-plans.html" }, { "title" : "Getting started", "href" : "get-started.html" }, { "title" : "Supported services", "href" : "sp-services.html" }, { "title" : "Understanding your Savings Plans recommendations", "href" : "sp-recommendations.html" }, { "title" : "Purchasing Savings Plans", "href" : "sp-purchase.html" }, { "title" : "Understanding your Savings Plans overview", "href" : "sp-overview.html" }, { "title" : "Monitoring your Savings Plans", "href" : "sp-monitoring.html", "contents" : [ { "title" : "Using the inventory", "href" : "ce-sp-inventory.html" }, { "title" : "Using the utilization report", "href" : "ce-sp-usingPR.html" }, { "title" : "Using your coverage report", "href" : "ce-sp-usingCR.html" }, { "title" : "Using budgets", "href" : "sp-usingBudgets.html" } ] }, { "title" : "How Savings Plans apply to usage", "href" : "sp-applying.html" }, { "title" : "Automating with Amazon EventBridge", "href" : "automating-savingsplans-with-eventbridge.html" }, { "title" : "Identity and Access Management", "href" : "identity-access-management.html" }, { "title" : "Logging Savings Plans API Calls with AWS CloudTrail", "href" : "logging-using-cloudtrail.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/savingsplans/latest/userguide/",
+    "service": "savingsplans",
+    "toc": {
+        "contents": [
+            {
+                "title": "What are Savings Plans?",
+                "href": "what-is-savings-plans.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "get-started.html"
+            },
+            {
+                "title": "Supported services",
+                "href": "sp-services.html"
+            },
+            {
+                "title": "Understanding your Savings Plans recommendations",
+                "href": "sp-recommendations.html"
+            },
+            {
+                "title": "Purchasing Savings Plans",
+                "href": "sp-purchase.html"
+            },
+            {
+                "title": "Understanding your Savings Plans overview",
+                "href": "sp-overview.html"
+            },
+            {
+                "title": "Monitoring your Savings Plans",
+                "href": "sp-monitoring.html",
+                "contents": [
+                    {
+                        "title": "Using the inventory",
+                        "href": "ce-sp-inventory.html"
+                    },
+                    {
+                        "title": "Using the utilization report",
+                        "href": "ce-sp-usingPR.html"
+                    },
+                    {
+                        "title": "Using your coverage report",
+                        "href": "ce-sp-usingCR.html"
+                    },
+                    {
+                        "title": "Using budgets",
+                        "href": "sp-usingBudgets.html"
+                    }
+                ]
+            },
+            {
+                "title": "How Savings Plans apply to usage",
+                "href": "sp-applying.html"
+            },
+            {
+                "title": "Automating with Amazon EventBridge",
+                "href": "automating-savingsplans-with-eventbridge.html"
+            },
+            {
+                "title": "Identity and Access Management",
+                "href": "identity-access-management.html"
+            },
+            {
+                "title": "Logging Savings Plans API Calls with AWS CloudTrail",
+                "href": "logging-using-cloudtrail.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

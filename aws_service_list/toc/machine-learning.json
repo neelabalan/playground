@@ -1,1 +1,408 @@
-{ "contents" : [ { "title" : "What is Amazon Machine Learning?", "href" : "what-is-amazon-machine-learning.html", "contents" : [ { "title" : "Amazon Machine Learning Key Concepts", "href" : "amazon-machine-learning-key-concepts.html" }, { "title" : "Accessing Amazon Machine Learning", "href" : "accessing-amazon-machine-learning.html" }, { "title" : "Regions and Endpoints", "href" : "regions-and-endpoints.html" }, { "title" : "Pricing for Amazon ML", "href" : "pricing.html" } ] }, { "title" : "Machine Learning Concepts", "href" : "machine-learning-concepts.html", "contents" : [ { "title" : "Solving Business Problems with Amazon Machine Learning", "href" : "machine-learning-problems-in-amazon-machine-learning.html" }, { "title" : "When to Use Machine Learning", "href" : "when-to-use-machine-learning.html" }, { "title" : "Building a Machine Learning Application", "href" : "building-machine-learning.html", "contents" : [ { "title" : "Formulating the Problem", "href" : "formulating-the-problem.html" }, { "title" : "Collecting Labeled Data", "href" : "collecting-labeled-data.html" }, { "title" : "Analyzing Your Data", "href" : "analyzing-your-data.html" }, { "title" : "Feature Processing", "href" : "feature-processing.html" }, { "title" : "Splitting the Data into Training and Evaluation Data", "href" : "splitting-the-data-into-training-and-evaluation-data.html" }, { "title" : "Training the Model", "href" : "training-the-model.html", "contents" : [ { "title" : "Linear Models", "href" : "linear-models.html" }, { "title" : "Learning Algorithm", "href" : "learning-algorithm.html" }, { "title" : "Training Parameters", "href" : "training-parameters1.html" } ] }, { "title" : "Evaluating Model Accuracy", "href" : "evaluating-model-accuracy.html", "contents" : [ { "title" : "Binary Classification", "href" : "binary-classification.html" }, { "title" : "Multiclass Classification", "href" : "multiclass-classification.html" }, { "title" : "Regression", "href" : "regression.html" } ] }, { "title" : "Improving Model Accuracy", "href" : "improving-model-accuracy.html", "contents" : [ { "title" : "Model Fit: Underfitting vs. Overfitting", "href" : "model-fit-underfitting-vs-overfitting.html" } ] }, { "title" : "Using the Model to Make Predictions", "href" : "using-the-model-to-make-predictions.html", "contents" : [ { "title" : "Batch Predictions", "href" : "about-batch-predictions.html" }, { "title" : "Online Predictions", "href" : "online-predictions.html" } ] }, { "title" : "Retraining Models on New Data", "href" : "retraining-models-on-new-data.html" } ] }, { "title" : "The Amazon Machine Learning Process", "href" : "the-machine-learning-process.html" } ] }, { "title" : "Setting Up Amazon Machine Learning", "href" : "setting-up-amazon-machine-learning.html" }, { "title" : "Tutorial: Using Amazon ML to Predict Responses to a Marketing Offer", "href" : "tutorial.html", "contents" : [ { "title" : "Step 1: Prepare Your Data", "href" : "step-1-download-edit-and-upload-data.html" }, { "title" : "Step 2: Create a Training Datasource", "href" : "step-2-create-a-datasource.html" }, { "title" : "Step 3: Create an ML Model", "href" : "step-3-create-an-ml-model.html" }, { "title" : "Step 4: Review the ML Model's Predictive Performance and Set a Score Threshold", "href" : "step-4-review-model-and-set-cutoff.html" }, { "title" : "Step 5: Use the ML Model to Generate Predictions", "href" : "step-5-create-predictions.html" }, { "title" : "Step 6: Clean Up", "href" : "step-6-clean-up.html" } ] }, { "title" : "Creating and Using Datasources", "href" : "creating-and-using-datasources.html", "contents" : [ { "title" : "Understanding the Data Format for Amazon ML", "href" : "understanding-the-data-format-for-amazon-ml.html" }, { "title" : "Creating a Data Schema for Amazon ML", "href" : "creating-a-data-schema-for-amazon-ml.html" }, { "title" : "Splitting Your Data", "href" : "splitting-types.html" }, { "title" : "Data Insights", "href" : "data-insights.html" }, { "title" : "Using Amazon S3 with Amazon ML", "href" : "using-amazon-s3-with-amazon-ml.html" }, { "title" : "Creating an Amazon ML Datasource from Data in Amazon Redshift", "href" : "using-amazon-redshift-with-amazon-ml.html", "contents" : [ { "title" : "Required Parameters for the Create Datasource Wizard", "href" : "redshift-parameters.html" }, { "title" : "Creating a Datasource with Amazon Redshift Data (Console)", "href" : "create-datasource-from-redshift-procedure.html" }, { "title" : "Troubleshooting Amazon Redshift Issues", "href" : "troubleshooting.html" } ] }, { "title" : "Using Data from an Amazon RDS Database to Create an Amazon ML Datasource", "href" : "using-amazon-rds-with-amazon-ml.html" } ] }, { "title" : "Training ML Models", "href" : "training-ml-models.html", "contents" : [ { "title" : "Types of ML Models", "href" : "types-of-ml-models.html" }, { "title" : "Training Process", "href" : "training-process.html" }, { "title" : "Training Parameters", "href" : "training-parameters.html" }, { "title" : "Creating an ML Model", "href" : "creating-ml-model-on-the-amazon-ml-console.html" } ] }, { "title" : "Data Transformations for Machine Learning", "href" : "data-transformations-for-machine-learning.html", "contents" : [ { "title" : "Importance of Feature Transformation", "href" : "importance-of-feature-transformation.html" }, { "title" : "Feature Transformations with Data Recipes", "href" : "feature-transformations-with-data-recipes.html" }, { "title" : "Recipe Format Reference", "href" : "recipe-format-reference.html" }, { "title" : "Suggested Recipes", "href" : "suggested-recipes.html" }, { "title" : "Data Transformations Reference", "href" : "data-transformations-reference.html" }, { "title" : "Data Rearrangement", "href" : "data-rearrangement.html" } ] }, { "title" : "Evaluating ML Models", "href" : "evaluating_models.html", "contents" : [ { "title" : "ML Model Insights", "href" : "ml-model-insights.html" }, { "title" : "Binary Model Insights", "href" : "binary-model-insights.html" }, { "title" : "Multiclass Model Insights", "href" : "multiclass-model-insights.html" }, { "title" : "Regression Model Insights", "href" : "regression-model-insights.html" }, { "title" : "Cross-Validation", "href" : "cross-validation.html" }, { "title" : "Evaluation Alerts", "href" : "evaluation-alerts.html" } ] }, { "title" : "Generating and Interpreting Predictions", "href" : "interpreting_predictions.html", "contents" : [ { "title" : "Creating a Batch Prediction", "href" : "creating-batch-prediction-objects.html" }, { "title" : "Reviewing Batch Prediction Metrics", "href" : "working-with-batch-predictions.html" }, { "title" : "Reading the Batch Prediction Output Files", "href" : "reading-the-batchprediction-output-files.html" }, { "title" : "Requesting Real-time Predictions", "href" : "requesting-real-time-predictions.html" } ] }, { "title" : "Managing Amazon ML Objects", "href" : "managing_objects.html", "contents" : [ { "title" : "Listing Objects", "href" : "listing-objects.html" }, { "title" : "Retrieving Object Descriptions", "href" : "retrieving-object-descriptions.html" }, { "title" : "Updating Objects", "href" : "updating-objects.html" }, { "title" : "Deleting Objects", "href" : "deleting-objects.html" } ] }, { "title" : "Monitoring Amazon ML with Amazon CloudWatch Metrics", "href" : "cw-doc.html" }, { "title" : "Logging Amazon ML API Calls with AWS CloudTrail", "href" : "logging-using-cloudtrail.html" }, { "title" : "Tagging Your Objects", "href" : "tagging-objects.html" }, { "title" : "Amazon Machine Learning Reference", "href" : "amazon-machine-learning-reference.html", "contents" : [ { "title" : "Granting Amazon ML Permissions to Read Your Data from Amazon S3", "href" : "granting-amazon-ml-permissions-to-read-your-data-from-amazon-s3.html" }, { "title" : "Granting Amazon ML Permissions to Output Predictions to Amazon S3", "href" : "granting-amazon-ml-permissions-to-output-predictions-to-amazon-s3.html" }, { "title" : "Controlling Access to Amazon ML Resources -with IAM", "href" : "controlling-access-to-amazon-ml-resources-by-using-iam.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Dependency Management of Asynchronous Operations", "href" : "dependency-management-of-asynchronous-operations.html" }, { "title" : "Checking Request Status", "href" : "operation-request-status.html" }, { "title" : "System Limits", "href" : "system-limits.html" }, { "title" : "Names and IDs for all Objects", "href" : "names-and-ids-for-all-objects.html" }, { "title" : "Object Lifetimes", "href" : "object-lifetimes.html" } ] }, { "title" : "Resources", "href" : "resources.html" }, { "title" : "Document History", "href" : "history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/machine-learning/latest/dg/",
+    "service": "machine-learning",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon Machine Learning?",
+                "href": "what-is-amazon-machine-learning.html",
+                "contents": [
+                    {
+                        "title": "Amazon Machine Learning Key Concepts",
+                        "href": "amazon-machine-learning-key-concepts.html"
+                    },
+                    {
+                        "title": "Accessing Amazon Machine Learning",
+                        "href": "accessing-amazon-machine-learning.html"
+                    },
+                    {
+                        "title": "Regions and Endpoints",
+                        "href": "regions-and-endpoints.html"
+                    },
+                    {
+                        "title": "Pricing for Amazon ML",
+                        "href": "pricing.html"
+                    }
+                ]
+            },
+            {
+                "title": "Machine Learning Concepts",
+                "href": "machine-learning-concepts.html",
+                "contents": [
+                    {
+                        "title": "Solving Business Problems with Amazon Machine Learning",
+                        "href": "machine-learning-problems-in-amazon-machine-learning.html"
+                    },
+                    {
+                        "title": "When to Use Machine Learning",
+                        "href": "when-to-use-machine-learning.html"
+                    },
+                    {
+                        "title": "Building a Machine Learning Application",
+                        "href": "building-machine-learning.html",
+                        "contents": [
+                            {
+                                "title": "Formulating the Problem",
+                                "href": "formulating-the-problem.html"
+                            },
+                            {
+                                "title": "Collecting Labeled Data",
+                                "href": "collecting-labeled-data.html"
+                            },
+                            {
+                                "title": "Analyzing Your Data",
+                                "href": "analyzing-your-data.html"
+                            },
+                            {
+                                "title": "Feature Processing",
+                                "href": "feature-processing.html"
+                            },
+                            {
+                                "title": "Splitting the Data into Training and Evaluation Data",
+                                "href": "splitting-the-data-into-training-and-evaluation-data.html"
+                            },
+                            {
+                                "title": "Training the Model",
+                                "href": "training-the-model.html",
+                                "contents": [
+                                    {
+                                        "title": "Linear Models",
+                                        "href": "linear-models.html"
+                                    },
+                                    {
+                                        "title": "Learning Algorithm",
+                                        "href": "learning-algorithm.html"
+                                    },
+                                    {
+                                        "title": "Training Parameters",
+                                        "href": "training-parameters1.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Evaluating Model Accuracy",
+                                "href": "evaluating-model-accuracy.html",
+                                "contents": [
+                                    {
+                                        "title": "Binary Classification",
+                                        "href": "binary-classification.html"
+                                    },
+                                    {
+                                        "title": "Multiclass Classification",
+                                        "href": "multiclass-classification.html"
+                                    },
+                                    {
+                                        "title": "Regression",
+                                        "href": "regression.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Improving Model Accuracy",
+                                "href": "improving-model-accuracy.html",
+                                "contents": [
+                                    {
+                                        "title": "Model Fit: Underfitting vs. Overfitting",
+                                        "href": "model-fit-underfitting-vs-overfitting.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using the Model to Make Predictions",
+                                "href": "using-the-model-to-make-predictions.html",
+                                "contents": [
+                                    {
+                                        "title": "Batch Predictions",
+                                        "href": "about-batch-predictions.html"
+                                    },
+                                    {
+                                        "title": "Online Predictions",
+                                        "href": "online-predictions.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Retraining Models on New Data",
+                                "href": "retraining-models-on-new-data.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "The Amazon Machine Learning Process",
+                        "href": "the-machine-learning-process.html"
+                    }
+                ]
+            },
+            {
+                "title": "Setting Up Amazon Machine Learning",
+                "href": "setting-up-amazon-machine-learning.html"
+            },
+            {
+                "title": "Tutorial: Using Amazon ML to Predict Responses to a Marketing Offer",
+                "href": "tutorial.html",
+                "contents": [
+                    {
+                        "title": "Step 1: Prepare Your Data",
+                        "href": "step-1-download-edit-and-upload-data.html"
+                    },
+                    {
+                        "title": "Step 2: Create a Training Datasource",
+                        "href": "step-2-create-a-datasource.html"
+                    },
+                    {
+                        "title": "Step 3: Create an ML Model",
+                        "href": "step-3-create-an-ml-model.html"
+                    },
+                    {
+                        "title": "Step 4: Review the ML Model's Predictive Performance and Set a Score Threshold",
+                        "href": "step-4-review-model-and-set-cutoff.html"
+                    },
+                    {
+                        "title": "Step 5: Use the ML Model to Generate Predictions",
+                        "href": "step-5-create-predictions.html"
+                    },
+                    {
+                        "title": "Step 6: Clean Up",
+                        "href": "step-6-clean-up.html"
+                    }
+                ]
+            },
+            {
+                "title": "Creating and Using Datasources",
+                "href": "creating-and-using-datasources.html",
+                "contents": [
+                    {
+                        "title": "Understanding the Data Format for Amazon ML",
+                        "href": "understanding-the-data-format-for-amazon-ml.html"
+                    },
+                    {
+                        "title": "Creating a Data Schema for Amazon ML",
+                        "href": "creating-a-data-schema-for-amazon-ml.html"
+                    },
+                    {
+                        "title": "Splitting Your Data",
+                        "href": "splitting-types.html"
+                    },
+                    {
+                        "title": "Data Insights",
+                        "href": "data-insights.html"
+                    },
+                    {
+                        "title": "Using Amazon S3 with Amazon ML",
+                        "href": "using-amazon-s3-with-amazon-ml.html"
+                    },
+                    {
+                        "title": "Creating an Amazon ML Datasource from Data in Amazon Redshift",
+                        "href": "using-amazon-redshift-with-amazon-ml.html",
+                        "contents": [
+                            {
+                                "title": "Required Parameters for the Create Datasource Wizard",
+                                "href": "redshift-parameters.html"
+                            },
+                            {
+                                "title": "Creating a Datasource with Amazon Redshift Data (Console)",
+                                "href": "create-datasource-from-redshift-procedure.html"
+                            },
+                            {
+                                "title": "Troubleshooting Amazon Redshift Issues",
+                                "href": "troubleshooting.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using Data from an Amazon RDS Database to Create an Amazon ML Datasource",
+                        "href": "using-amazon-rds-with-amazon-ml.html"
+                    }
+                ]
+            },
+            {
+                "title": "Training ML Models",
+                "href": "training-ml-models.html",
+                "contents": [
+                    {
+                        "title": "Types of ML Models",
+                        "href": "types-of-ml-models.html"
+                    },
+                    {
+                        "title": "Training Process",
+                        "href": "training-process.html"
+                    },
+                    {
+                        "title": "Training Parameters",
+                        "href": "training-parameters.html"
+                    },
+                    {
+                        "title": "Creating an ML Model",
+                        "href": "creating-ml-model-on-the-amazon-ml-console.html"
+                    }
+                ]
+            },
+            {
+                "title": "Data Transformations for Machine Learning",
+                "href": "data-transformations-for-machine-learning.html",
+                "contents": [
+                    {
+                        "title": "Importance of Feature Transformation",
+                        "href": "importance-of-feature-transformation.html"
+                    },
+                    {
+                        "title": "Feature Transformations with Data Recipes",
+                        "href": "feature-transformations-with-data-recipes.html"
+                    },
+                    {
+                        "title": "Recipe Format Reference",
+                        "href": "recipe-format-reference.html"
+                    },
+                    {
+                        "title": "Suggested Recipes",
+                        "href": "suggested-recipes.html"
+                    },
+                    {
+                        "title": "Data Transformations Reference",
+                        "href": "data-transformations-reference.html"
+                    },
+                    {
+                        "title": "Data Rearrangement",
+                        "href": "data-rearrangement.html"
+                    }
+                ]
+            },
+            {
+                "title": "Evaluating ML Models",
+                "href": "evaluating_models.html",
+                "contents": [
+                    {
+                        "title": "ML Model Insights",
+                        "href": "ml-model-insights.html"
+                    },
+                    {
+                        "title": "Binary Model Insights",
+                        "href": "binary-model-insights.html"
+                    },
+                    {
+                        "title": "Multiclass Model Insights",
+                        "href": "multiclass-model-insights.html"
+                    },
+                    {
+                        "title": "Regression Model Insights",
+                        "href": "regression-model-insights.html"
+                    },
+                    {
+                        "title": "Cross-Validation",
+                        "href": "cross-validation.html"
+                    },
+                    {
+                        "title": "Evaluation Alerts",
+                        "href": "evaluation-alerts.html"
+                    }
+                ]
+            },
+            {
+                "title": "Generating and Interpreting Predictions",
+                "href": "interpreting_predictions.html",
+                "contents": [
+                    {
+                        "title": "Creating a Batch Prediction",
+                        "href": "creating-batch-prediction-objects.html"
+                    },
+                    {
+                        "title": "Reviewing Batch Prediction Metrics",
+                        "href": "working-with-batch-predictions.html"
+                    },
+                    {
+                        "title": "Reading the Batch Prediction Output Files",
+                        "href": "reading-the-batchprediction-output-files.html"
+                    },
+                    {
+                        "title": "Requesting Real-time Predictions",
+                        "href": "requesting-real-time-predictions.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing Amazon ML Objects",
+                "href": "managing_objects.html",
+                "contents": [
+                    {
+                        "title": "Listing Objects",
+                        "href": "listing-objects.html"
+                    },
+                    {
+                        "title": "Retrieving Object Descriptions",
+                        "href": "retrieving-object-descriptions.html"
+                    },
+                    {
+                        "title": "Updating Objects",
+                        "href": "updating-objects.html"
+                    },
+                    {
+                        "title": "Deleting Objects",
+                        "href": "deleting-objects.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring Amazon ML with Amazon CloudWatch Metrics",
+                "href": "cw-doc.html"
+            },
+            {
+                "title": "Logging Amazon ML API Calls with AWS CloudTrail",
+                "href": "logging-using-cloudtrail.html"
+            },
+            {
+                "title": "Tagging Your Objects",
+                "href": "tagging-objects.html"
+            },
+            {
+                "title": "Amazon Machine Learning Reference",
+                "href": "amazon-machine-learning-reference.html",
+                "contents": [
+                    {
+                        "title": "Granting Amazon ML Permissions to Read Your Data from Amazon S3",
+                        "href": "granting-amazon-ml-permissions-to-read-your-data-from-amazon-s3.html"
+                    },
+                    {
+                        "title": "Granting Amazon ML Permissions to Output Predictions to Amazon S3",
+                        "href": "granting-amazon-ml-permissions-to-output-predictions-to-amazon-s3.html"
+                    },
+                    {
+                        "title": "Controlling Access to Amazon ML Resources -with IAM",
+                        "href": "controlling-access-to-amazon-ml-resources-by-using-iam.html"
+                    },
+                    {
+                        "title": "Cross-service confused deputy prevention",
+                        "href": "cross-service-confused-deputy-prevention.html"
+                    },
+                    {
+                        "title": "Dependency Management of Asynchronous Operations",
+                        "href": "dependency-management-of-asynchronous-operations.html"
+                    },
+                    {
+                        "title": "Checking Request Status",
+                        "href": "operation-request-status.html"
+                    },
+                    {
+                        "title": "System Limits",
+                        "href": "system-limits.html"
+                    },
+                    {
+                        "title": "Names and IDs for all Objects",
+                        "href": "names-and-ids-for-all-objects.html"
+                    },
+                    {
+                        "title": "Object Lifetimes",
+                        "href": "object-lifetimes.html"
+                    }
+                ]
+            },
+            {
+                "title": "Resources",
+                "href": "resources.html"
+            },
+            {
+                "title": "Document History",
+                "href": "history.html"
+            }
+        ]
+    }
+}

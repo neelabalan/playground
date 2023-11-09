@@ -1,1 +1,84 @@
-{ "contents" : [ { "title" : "What is the AWS Console Mobile Application?", "href" : "what-is-consolemobileapp.html", "contents" : [ { "title" : "Quotas", "href" : "quotas.html" } ] }, { "title" : "Setting up", "href" : "setting-up.html" }, { "title" : "Getting started", "href" : "getting-started.html" }, { "title" : "Push notifications", "href" : "managing-notifications.html", "contents" : [ { "title" : "Mobile devices as delivery channels", "href" : "permissions-policies.html" } ] }, { "title" : "Supported AWS Regions and services", "href" : "supported-services-regions.html" }, { "title" : "Monitoring", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Logging DeviceIdentity API calls in AWS CloudTrail", "href" : "monitoring-cloudtrail.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/consolemobileapp/latest/userguide/",
+    "service": "consolemobileapp",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is the AWS Console Mobile Application?",
+                "href": "what-is-consolemobileapp.html",
+                "contents": [
+                    {
+                        "title": "Quotas",
+                        "href": "quotas.html"
+                    }
+                ]
+            },
+            {
+                "title": "Setting up",
+                "href": "setting-up.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html"
+            },
+            {
+                "title": "Push notifications",
+                "href": "managing-notifications.html",
+                "contents": [
+                    {
+                        "title": "Mobile devices as delivery channels",
+                        "href": "permissions-policies.html"
+                    }
+                ]
+            },
+            {
+                "title": "Supported AWS Regions and services",
+                "href": "supported-services-regions.html"
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Logging DeviceIdentity API calls in AWS CloudTrail",
+                        "href": "monitoring-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

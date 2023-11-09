@@ -1,1 +1,686 @@
-{ "contents" : [ { "title" : "What Is Amazon CloudSearch?", "href" : "what-is-cloudsearch.html", "contents" : [ { "title" : "How Search Works", "href" : "how-search-works.html" }, { "title" : "Automatic Scaling", "href" : "concepts-scaling.html" } ] }, { "title" : "Getting Started", "href" : "getting-started.html", "contents" : [ { "title" : "Before You Begin", "href" : "getting-started-sign-up.html" }, { "title" : "Step 1: Create a Search Domain", "href" : "getting-started-create-domain.html" }, { "title" : "Step 2: Upload Data for Indexing", "href" : "getting-started-uploading-data.html" }, { "title" : "Step 3: Search Your Domain", "href" : "getting-started-search.html" }, { "title" : "Step 4: Delete Your Movies Domain", "href" : "getting-started-delete-domain.html" } ] }, { "title" : "Migrating to the 2013-01-01 API", "href" : "migrating.html" }, { "title" : "Creating and Managing Search Domains", "href" : "creating-managing-domains.html", "contents" : [ { "title" : "Creating a Search Domain", "href" : "creating-domains.html" }, { "title" : "Configuring Access", "href" : "configuring-access.html" }, { "title" : "Configuring Scaling Options", "href" : "configuring-scaling-options.html" }, { "title" : "Configuring Availability Options", "href" : "configuring-availability-options.html" }, { "title" : "Configuring Domain Endpoint Options", "href" : "configuring-domain-endpoint-options.html" }, { "title" : "Monitoring Search Domains", "href" : "monitoring-domains.html", "contents" : [ { "title" : "Getting Domain Information", "href" : "getting-domain-info.html" }, { "title" : "Monitoring a Domain with Amazon CloudWatch", "href" : "cloudwatch-monitoring.html" }, { "title" : "Logging Configuration API Calls", "href" : "logging-config-api-calls.html" }, { "title" : "Tracking your Amazon CloudSearch Usage and Charges", "href" : "tracking-usage.html" } ] }, { "title" : "Deleting a Domain", "href" : "deleting-domains.html" }, { "title" : "Tagging Amazon CloudSearch Domains", "href" : "tagging-cloudsearch-domains.html" } ] }, { "title" : "Controlling How Data is Indexed", "href" : "controlling-how-data-is-indexed.html", "contents" : [ { "title" : "Preparing Your Data", "href" : "preparing-data.html" }, { "title" : "Configuring Index Fields", "href" : "configuring-index-fields.html" }, { "title" : "Using Dynamic Fields", "href" : "using-dynamic-fields.html" }, { "title" : "Configuring Analysis Schemes", "href" : "configuring-analysis-schemes.html" }, { "title" : "Text Processing", "href" : "text-processing.html", "contents" : [ { "title" : "Supported Languages", "href" : "supported-languages.html" } ] } ] }, { "title" : "Uploading and Indexing Data", "href" : "uploading-and-indexing-data.html", "contents" : [ { "title" : "Uploading Data", "href" : "uploading-data.html", "contents" : [ { "title" : "Submitting Document Upload Requests", "href" : "submitting-doc-requests.html" } ] }, { "title" : "Indexing Document Data", "href" : "indexing.html" } ] }, { "title" : "Searching Your Data", "href" : "searching.html", "contents" : [ { "title" : "Submitting Search Requests", "href" : "submitting-search-requests.html", "contents" : [ { "title" : "Searching with the Search Tester", "href" : "search-tester.html" } ] }, { "title" : "Constructing Compound Queries", "href" : "searching-compound-queries.html" }, { "title" : "Searching for Text in Amazon CloudSearch", "href" : "searching-text.html" }, { "title" : "Searching for Numbers", "href" : "searching-numbers.html" }, { "title" : "Searching for Dates and Times", "href" : "searching-dates.html" }, { "title" : "Searching for a Range of Values", "href" : "searching-ranges.html" }, { "title" : "Searching and Ranking Results by Geographic Location", "href" : "searching-locations.html" }, { "title" : "Searching DynamoDB Data", "href" : "searching-dynamodb-data.html" }, { "title" : "Filtering Matching Documents", "href" : "filtering-results.html" }, { "title" : "Tuning Search Requests", "href" : "tuning-search.html" } ] }, { "title" : "Querying For More Information", "href" : "querying-for-more-info.html", "contents" : [ { "title" : "Retrieving Data from Index Fields", "href" : "retrieving-data.html" }, { "title" : "Getting Statistics for Numeric Fields", "href" : "retrieving-stats.html" }, { "title" : "Getting and Using Facet Information", "href" : "faceting.html" }, { "title" : "Highlighting Search Hits", "href" : "highlighting.html" }, { "title" : "Getting Suggestions", "href" : "getting-suggestions.html" } ] }, { "title" : "Controlling Search Results", "href" : "controlling-search-results.html", "contents" : [ { "title" : "Sorting Results", "href" : "sorting-results.html" }, { "title" : "Using Relative Field Weighting to Customize Text Relevance", "href" : "weighting-fields.html" }, { "title" : "Configuring Expressions", "href" : "configuring-expressions.html", "contents" : [ { "title" : "Defining Expressions in Search Requests", "href" : "defining-expressions-in-requests.html" }, { "title" : "Configuring Reusable Expressions", "href" : "configuring-reusable-expressions.html" }, { "title" : "Comparing Expressions", "href" : "comparing-expressions.html" } ] }, { "title" : "Getting Results as XML", "href" : "getting-xml-results.html" }, { "title" : "Paginating Results", "href" : "paginating-results.html" } ] }, { "title" : "Integrating with API Gateway", "href" : "api-gateway.html" }, { "title" : "Handling Errors", "href" : "error-handling.html" }, { "title" : "Amazon CloudSearch API Reference", "href" : "api-ref.html", "contents" : [ { "title" : "Configuration API Reference", "href" : "configuration-api.html", "contents" : [ { "title" : "Submitting Configuration Requests", "href" : "submitting-configuration-requests.html" }, { "title" : "Actions", "href" : "API_Operations.html", "contents" : [ { "title" : "BuildSuggesters", "href" : "API_BuildSuggesters.html" }, { "title" : "CreateDomain", "href" : "API_CreateDomain.html" }, { "title" : "DefineAnalysisScheme", "href" : "API_DefineAnalysisScheme.html" }, { "title" : "DefineExpression", "href" : "API_DefineExpression.html" }, { "title" : "DefineIndexField", "href" : "API_DefineIndexField.html" }, { "title" : "DefineSuggester", "href" : "API_DefineSuggester.html" }, { "title" : "DeleteAnalysisScheme", "href" : "API_DeleteAnalysisScheme.html" }, { "title" : "DeleteDomain", "href" : "API_DeleteDomain.html" }, { "title" : "DeleteExpression", "href" : "API_DeleteExpression.html" }, { "title" : "DeleteIndexField", "href" : "API_DeleteIndexField.html" }, { "title" : "DeleteSuggester", "href" : "API_DeleteSuggester.html" }, { "title" : "DescribeAnalysisSchemes", "href" : "API_DescribeAnalysisSchemes.html" }, { "title" : "DescribeAvailabilityOptions", "href" : "API_DescribeAvailabilityOptions.html" }, { "title" : "DescribeDomains", "href" : "API_DescribeDomains.html" }, { "title" : "DescribeExpressions", "href" : "API_DescribeExpressions.html" }, { "title" : "DescribeIndexFields", "href" : "API_DescribeIndexFields.html" }, { "title" : "DescribeScalingParameters", "href" : "API_DescribeScalingParameters.html" }, { "title" : "DescribeDomainEndpointOptions", "href" : "API_DescribeDomainEndpointOptions.html" }, { "title" : "DescribeServiceAccessPolicies", "href" : "API_DescribeServiceAccessPolicies.html" }, { "title" : "DescribeSuggesters", "href" : "API_DescribeSuggesters.html" }, { "title" : "IndexDocuments", "href" : "API_IndexDocuments.html" }, { "title" : "ListDomainNames", "href" : "API_ListDomainNames.html" }, { "title" : "UpdateAvailabilityOptions", "href" : "API_UpdateAvailabilityOptions.html" }, { "title" : "UpdateScalingParameters", "href" : "API_UpdateScalingParameters.html" }, { "title" : "UpdateDomainEndpointOptions", "href" : "API_UpdateDomainEndpointOptions.html" }, { "title" : "UpdateServiceAccessPolicies", "href" : "API_UpdateServiceAccessPolicies.html" } ] }, { "title" : "Data Types", "href" : "API_Types.html", "contents" : [ { "title" : "AccessPoliciesStatus", "href" : "API_AccessPoliciesStatus.html" }, { "title" : "AnalysisOptions", "href" : "API_AnalysisOptions.html" }, { "title" : "AnalysisScheme", "href" : "API_AnalysisScheme.html" }, { "title" : "AnalysisSchemeStatus", "href" : "API_AnalysisSchemeStatus.html" }, { "title" : "AvailabilityOptionsStatus", "href" : "API_AvailabilityOptionsStatus.html" }, { "title" : "BuildSuggestersResult", "href" : "API_BuildSuggestersResult.html" }, { "title" : "CreateDomainResult", "href" : "API_CreateDomainResult.html" }, { "title" : "DateArrayOptions", "href" : "API_DateArrayOptions.html" }, { "title" : "DateOptions", "href" : "API_DateOptions.html" }, { "title" : "DefineAnalysisSchemeResult", "href" : "API_DefineAnalysisSchemeResult.html" }, { "title" : "DefineExpressionResult", "href" : "API_DefineExpressionResult.html" }, { "title" : "DefineIndexFieldResult", "href" : "API_DefineIndexFieldResult.html" }, { "title" : "DefineSuggesterResult", "href" : "API_DefineSuggesterResult.html" }, { "title" : "DeleteAnalysisSchemeResult", "href" : "API_DeleteAnalysisSchemeResult.html" }, { "title" : "DeleteDomainResult", "href" : "API_DeleteDomainResult.html" }, { "title" : "DeleteExpressionResult", "href" : "API_DeleteExpressionResult.html" }, { "title" : "DeleteIndexFieldResult", "href" : "API_DeleteIndexFieldResult.html" }, { "title" : "DeleteSuggesterResult", "href" : "API_DeleteSuggesterResult.html" }, { "title" : "DescribeAnalysisSchemesResult", "href" : "API_DescribeAnalysisSchemesResult.html" }, { "title" : "DescribeAvailabilityOptionsResult", "href" : "API_DescribeAvailabilityOptionsResult.html" }, { "title" : "DescribeDomainsResult", "href" : "API_DescribeDomainsResult.html" }, { "title" : "DescribeExpressionsResult", "href" : "API_DescribeExpressionsResult.html" }, { "title" : "DescribeIndexFieldsResult", "href" : "API_DescribeIndexFieldsResult.html" }, { "title" : "DescribeScalingParametersResult", "href" : "API_DescribeScalingParametersResult.html" }, { "title" : "DescribeServiceAccessPoliciesResult", "href" : "API_DescribeServiceAccessPoliciesResult.html" }, { "title" : "DescribeSuggestersResult", "href" : "API_DescribeSuggestersResult.html" }, { "title" : "DocumentSuggesterOptions", "href" : "API_DocumentSuggesterOptions.html" }, { "title" : "DomainEndpointOptions", "href" : "API_DomainEndpointOptions.html" }, { "title" : "DomainEndpointOptionsStatus", "href" : "API_DomainEndpointOptionsStatus.html" }, { "title" : "DomainStatus", "href" : "API_DomainStatus.html" }, { "title" : "DoubleArrayOptions", "href" : "API_DoubleArrayOptions.html" }, { "title" : "DoubleOptions", "href" : "API_DoubleOptions.html" }, { "title" : "Expression", "href" : "API_Expression.html" }, { "title" : "ExpressionStatus", "href" : "API_ExpressionStatus.html" }, { "title" : "IndexDocumentsResult", "href" : "API_IndexDocumentsResult.html" }, { "title" : "IndexField", "href" : "API_IndexField.html" }, { "title" : "IndexFieldStatus", "href" : "API_IndexFieldStatus.html" }, { "title" : "IntArrayOptions", "href" : "API_IntArrayOptions.html" }, { "title" : "IntOptions", "href" : "API_IntOptions.html" }, { "title" : "LatLonOptions", "href" : "API_LatLonOptions.html" }, { "title" : "Limits", "href" : "API_Limits.html" }, { "title" : "ListDomainNamesResult", "href" : "API_ListDomainNamesResult.html" }, { "title" : "LiteralArrayOptions", "href" : "API_LiteralArrayOptions.html" }, { "title" : "LiteralOptions", "href" : "API_LiteralOptions.html" }, { "title" : "OptionStatus", "href" : "API_OptionStatus.html" }, { "title" : "ScalingParameters", "href" : "API_ScalingParameters.html" }, { "title" : "ScalingParametersStatus", "href" : "API_ScalingParametersStatus.html" }, { "title" : "ServiceEndpoint", "href" : "API_ServiceEndpoint.html" }, { "title" : "Suggester", "href" : "API_Suggester.html" }, { "title" : "SuggesterStatus", "href" : "API_SuggesterStatus.html" }, { "title" : "TextArrayOptions", "href" : "API_TextArrayOptions.html" }, { "title" : "TextOptions", "href" : "API_TextOptions.html" }, { "title" : "UpdateAvailabilityOptionsResult", "href" : "API_UpdateAvailabilityOptionsResult.html" }, { "title" : "UpdateScalingParametersResult", "href" : "API_UpdateScalingParametersResult.html" }, { "title" : "UpdateServiceAccessPoliciesResult", "href" : "API_UpdateServiceAccessPoliciesResult.html" } ] }, { "title" : "Common Parameters", "href" : "CommonParameters.html" }, { "title" : "Common Errors", "href" : "CommonErrors.html" } ] }, { "title" : "Document Service API Reference", "href" : "document-service-api.html", "contents" : [ { "title" : "documents/batch", "href" : "documents-batch-resource.html", "contents" : [ { "title" : "documents/batch XML API", "href" : "documents-batch-xml.html" } ] } ] }, { "title" : "Search API Reference", "href" : "search-api.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" }, { "title" : "Limits", "href" : "limits.html" }, { "title" : "Resources", "href" : "resources.html" }, { "title" : "Document History", "href" : "document-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/cloudsearch/latest/developerguide/",
+    "service": "cloudsearch",
+    "toc": {
+        "contents": [
+            {
+                "title": "What Is Amazon CloudSearch?",
+                "href": "what-is-cloudsearch.html",
+                "contents": [
+                    {
+                        "title": "How Search Works",
+                        "href": "how-search-works.html"
+                    },
+                    {
+                        "title": "Automatic Scaling",
+                        "href": "concepts-scaling.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting Started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Before You Begin",
+                        "href": "getting-started-sign-up.html"
+                    },
+                    {
+                        "title": "Step 1: Create a Search Domain",
+                        "href": "getting-started-create-domain.html"
+                    },
+                    {
+                        "title": "Step 2: Upload Data for Indexing",
+                        "href": "getting-started-uploading-data.html"
+                    },
+                    {
+                        "title": "Step 3: Search Your Domain",
+                        "href": "getting-started-search.html"
+                    },
+                    {
+                        "title": "Step 4: Delete Your Movies Domain",
+                        "href": "getting-started-delete-domain.html"
+                    }
+                ]
+            },
+            {
+                "title": "Migrating to the 2013-01-01 API",
+                "href": "migrating.html"
+            },
+            {
+                "title": "Creating and Managing Search Domains",
+                "href": "creating-managing-domains.html",
+                "contents": [
+                    {
+                        "title": "Creating a Search Domain",
+                        "href": "creating-domains.html"
+                    },
+                    {
+                        "title": "Configuring Access",
+                        "href": "configuring-access.html"
+                    },
+                    {
+                        "title": "Configuring Scaling Options",
+                        "href": "configuring-scaling-options.html"
+                    },
+                    {
+                        "title": "Configuring Availability Options",
+                        "href": "configuring-availability-options.html"
+                    },
+                    {
+                        "title": "Configuring Domain Endpoint Options",
+                        "href": "configuring-domain-endpoint-options.html"
+                    },
+                    {
+                        "title": "Monitoring Search Domains",
+                        "href": "monitoring-domains.html",
+                        "contents": [
+                            {
+                                "title": "Getting Domain Information",
+                                "href": "getting-domain-info.html"
+                            },
+                            {
+                                "title": "Monitoring a Domain with Amazon CloudWatch",
+                                "href": "cloudwatch-monitoring.html"
+                            },
+                            {
+                                "title": "Logging Configuration API Calls",
+                                "href": "logging-config-api-calls.html"
+                            },
+                            {
+                                "title": "Tracking your Amazon CloudSearch Usage and Charges",
+                                "href": "tracking-usage.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Deleting a Domain",
+                        "href": "deleting-domains.html"
+                    },
+                    {
+                        "title": "Tagging Amazon CloudSearch Domains",
+                        "href": "tagging-cloudsearch-domains.html"
+                    }
+                ]
+            },
+            {
+                "title": "Controlling How Data is Indexed",
+                "href": "controlling-how-data-is-indexed.html",
+                "contents": [
+                    {
+                        "title": "Preparing Your Data",
+                        "href": "preparing-data.html"
+                    },
+                    {
+                        "title": "Configuring Index Fields",
+                        "href": "configuring-index-fields.html"
+                    },
+                    {
+                        "title": "Using Dynamic Fields",
+                        "href": "using-dynamic-fields.html"
+                    },
+                    {
+                        "title": "Configuring Analysis Schemes",
+                        "href": "configuring-analysis-schemes.html"
+                    },
+                    {
+                        "title": "Text Processing",
+                        "href": "text-processing.html",
+                        "contents": [
+                            {
+                                "title": "Supported Languages",
+                                "href": "supported-languages.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Uploading and Indexing Data",
+                "href": "uploading-and-indexing-data.html",
+                "contents": [
+                    {
+                        "title": "Uploading Data",
+                        "href": "uploading-data.html",
+                        "contents": [
+                            {
+                                "title": "Submitting Document Upload Requests",
+                                "href": "submitting-doc-requests.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Indexing Document Data",
+                        "href": "indexing.html"
+                    }
+                ]
+            },
+            {
+                "title": "Searching Your Data",
+                "href": "searching.html",
+                "contents": [
+                    {
+                        "title": "Submitting Search Requests",
+                        "href": "submitting-search-requests.html",
+                        "contents": [
+                            {
+                                "title": "Searching with the Search Tester",
+                                "href": "search-tester.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Constructing Compound Queries",
+                        "href": "searching-compound-queries.html"
+                    },
+                    {
+                        "title": "Searching for Text in Amazon CloudSearch",
+                        "href": "searching-text.html"
+                    },
+                    {
+                        "title": "Searching for Numbers",
+                        "href": "searching-numbers.html"
+                    },
+                    {
+                        "title": "Searching for Dates and Times",
+                        "href": "searching-dates.html"
+                    },
+                    {
+                        "title": "Searching for a Range of Values",
+                        "href": "searching-ranges.html"
+                    },
+                    {
+                        "title": "Searching and Ranking Results by Geographic Location",
+                        "href": "searching-locations.html"
+                    },
+                    {
+                        "title": "Searching DynamoDB Data",
+                        "href": "searching-dynamodb-data.html"
+                    },
+                    {
+                        "title": "Filtering Matching Documents",
+                        "href": "filtering-results.html"
+                    },
+                    {
+                        "title": "Tuning Search Requests",
+                        "href": "tuning-search.html"
+                    }
+                ]
+            },
+            {
+                "title": "Querying For More Information",
+                "href": "querying-for-more-info.html",
+                "contents": [
+                    {
+                        "title": "Retrieving Data from Index Fields",
+                        "href": "retrieving-data.html"
+                    },
+                    {
+                        "title": "Getting Statistics for Numeric Fields",
+                        "href": "retrieving-stats.html"
+                    },
+                    {
+                        "title": "Getting and Using Facet Information",
+                        "href": "faceting.html"
+                    },
+                    {
+                        "title": "Highlighting Search Hits",
+                        "href": "highlighting.html"
+                    },
+                    {
+                        "title": "Getting Suggestions",
+                        "href": "getting-suggestions.html"
+                    }
+                ]
+            },
+            {
+                "title": "Controlling Search Results",
+                "href": "controlling-search-results.html",
+                "contents": [
+                    {
+                        "title": "Sorting Results",
+                        "href": "sorting-results.html"
+                    },
+                    {
+                        "title": "Using Relative Field Weighting to Customize Text Relevance",
+                        "href": "weighting-fields.html"
+                    },
+                    {
+                        "title": "Configuring Expressions",
+                        "href": "configuring-expressions.html",
+                        "contents": [
+                            {
+                                "title": "Defining Expressions in Search Requests",
+                                "href": "defining-expressions-in-requests.html"
+                            },
+                            {
+                                "title": "Configuring Reusable Expressions",
+                                "href": "configuring-reusable-expressions.html"
+                            },
+                            {
+                                "title": "Comparing Expressions",
+                                "href": "comparing-expressions.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Getting Results as XML",
+                        "href": "getting-xml-results.html"
+                    },
+                    {
+                        "title": "Paginating Results",
+                        "href": "paginating-results.html"
+                    }
+                ]
+            },
+            {
+                "title": "Integrating with API Gateway",
+                "href": "api-gateway.html"
+            },
+            {
+                "title": "Handling Errors",
+                "href": "error-handling.html"
+            },
+            {
+                "title": "Amazon CloudSearch API Reference",
+                "href": "api-ref.html",
+                "contents": [
+                    {
+                        "title": "Configuration API Reference",
+                        "href": "configuration-api.html",
+                        "contents": [
+                            {
+                                "title": "Submitting Configuration Requests",
+                                "href": "submitting-configuration-requests.html"
+                            },
+                            {
+                                "title": "Actions",
+                                "href": "API_Operations.html",
+                                "contents": [
+                                    {
+                                        "title": "BuildSuggesters",
+                                        "href": "API_BuildSuggesters.html"
+                                    },
+                                    {
+                                        "title": "CreateDomain",
+                                        "href": "API_CreateDomain.html"
+                                    },
+                                    {
+                                        "title": "DefineAnalysisScheme",
+                                        "href": "API_DefineAnalysisScheme.html"
+                                    },
+                                    {
+                                        "title": "DefineExpression",
+                                        "href": "API_DefineExpression.html"
+                                    },
+                                    {
+                                        "title": "DefineIndexField",
+                                        "href": "API_DefineIndexField.html"
+                                    },
+                                    {
+                                        "title": "DefineSuggester",
+                                        "href": "API_DefineSuggester.html"
+                                    },
+                                    {
+                                        "title": "DeleteAnalysisScheme",
+                                        "href": "API_DeleteAnalysisScheme.html"
+                                    },
+                                    {
+                                        "title": "DeleteDomain",
+                                        "href": "API_DeleteDomain.html"
+                                    },
+                                    {
+                                        "title": "DeleteExpression",
+                                        "href": "API_DeleteExpression.html"
+                                    },
+                                    {
+                                        "title": "DeleteIndexField",
+                                        "href": "API_DeleteIndexField.html"
+                                    },
+                                    {
+                                        "title": "DeleteSuggester",
+                                        "href": "API_DeleteSuggester.html"
+                                    },
+                                    {
+                                        "title": "DescribeAnalysisSchemes",
+                                        "href": "API_DescribeAnalysisSchemes.html"
+                                    },
+                                    {
+                                        "title": "DescribeAvailabilityOptions",
+                                        "href": "API_DescribeAvailabilityOptions.html"
+                                    },
+                                    {
+                                        "title": "DescribeDomains",
+                                        "href": "API_DescribeDomains.html"
+                                    },
+                                    {
+                                        "title": "DescribeExpressions",
+                                        "href": "API_DescribeExpressions.html"
+                                    },
+                                    {
+                                        "title": "DescribeIndexFields",
+                                        "href": "API_DescribeIndexFields.html"
+                                    },
+                                    {
+                                        "title": "DescribeScalingParameters",
+                                        "href": "API_DescribeScalingParameters.html"
+                                    },
+                                    {
+                                        "title": "DescribeDomainEndpointOptions",
+                                        "href": "API_DescribeDomainEndpointOptions.html"
+                                    },
+                                    {
+                                        "title": "DescribeServiceAccessPolicies",
+                                        "href": "API_DescribeServiceAccessPolicies.html"
+                                    },
+                                    {
+                                        "title": "DescribeSuggesters",
+                                        "href": "API_DescribeSuggesters.html"
+                                    },
+                                    {
+                                        "title": "IndexDocuments",
+                                        "href": "API_IndexDocuments.html"
+                                    },
+                                    {
+                                        "title": "ListDomainNames",
+                                        "href": "API_ListDomainNames.html"
+                                    },
+                                    {
+                                        "title": "UpdateAvailabilityOptions",
+                                        "href": "API_UpdateAvailabilityOptions.html"
+                                    },
+                                    {
+                                        "title": "UpdateScalingParameters",
+                                        "href": "API_UpdateScalingParameters.html"
+                                    },
+                                    {
+                                        "title": "UpdateDomainEndpointOptions",
+                                        "href": "API_UpdateDomainEndpointOptions.html"
+                                    },
+                                    {
+                                        "title": "UpdateServiceAccessPolicies",
+                                        "href": "API_UpdateServiceAccessPolicies.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Data Types",
+                                "href": "API_Types.html",
+                                "contents": [
+                                    {
+                                        "title": "AccessPoliciesStatus",
+                                        "href": "API_AccessPoliciesStatus.html"
+                                    },
+                                    {
+                                        "title": "AnalysisOptions",
+                                        "href": "API_AnalysisOptions.html"
+                                    },
+                                    {
+                                        "title": "AnalysisScheme",
+                                        "href": "API_AnalysisScheme.html"
+                                    },
+                                    {
+                                        "title": "AnalysisSchemeStatus",
+                                        "href": "API_AnalysisSchemeStatus.html"
+                                    },
+                                    {
+                                        "title": "AvailabilityOptionsStatus",
+                                        "href": "API_AvailabilityOptionsStatus.html"
+                                    },
+                                    {
+                                        "title": "BuildSuggestersResult",
+                                        "href": "API_BuildSuggestersResult.html"
+                                    },
+                                    {
+                                        "title": "CreateDomainResult",
+                                        "href": "API_CreateDomainResult.html"
+                                    },
+                                    {
+                                        "title": "DateArrayOptions",
+                                        "href": "API_DateArrayOptions.html"
+                                    },
+                                    {
+                                        "title": "DateOptions",
+                                        "href": "API_DateOptions.html"
+                                    },
+                                    {
+                                        "title": "DefineAnalysisSchemeResult",
+                                        "href": "API_DefineAnalysisSchemeResult.html"
+                                    },
+                                    {
+                                        "title": "DefineExpressionResult",
+                                        "href": "API_DefineExpressionResult.html"
+                                    },
+                                    {
+                                        "title": "DefineIndexFieldResult",
+                                        "href": "API_DefineIndexFieldResult.html"
+                                    },
+                                    {
+                                        "title": "DefineSuggesterResult",
+                                        "href": "API_DefineSuggesterResult.html"
+                                    },
+                                    {
+                                        "title": "DeleteAnalysisSchemeResult",
+                                        "href": "API_DeleteAnalysisSchemeResult.html"
+                                    },
+                                    {
+                                        "title": "DeleteDomainResult",
+                                        "href": "API_DeleteDomainResult.html"
+                                    },
+                                    {
+                                        "title": "DeleteExpressionResult",
+                                        "href": "API_DeleteExpressionResult.html"
+                                    },
+                                    {
+                                        "title": "DeleteIndexFieldResult",
+                                        "href": "API_DeleteIndexFieldResult.html"
+                                    },
+                                    {
+                                        "title": "DeleteSuggesterResult",
+                                        "href": "API_DeleteSuggesterResult.html"
+                                    },
+                                    {
+                                        "title": "DescribeAnalysisSchemesResult",
+                                        "href": "API_DescribeAnalysisSchemesResult.html"
+                                    },
+                                    {
+                                        "title": "DescribeAvailabilityOptionsResult",
+                                        "href": "API_DescribeAvailabilityOptionsResult.html"
+                                    },
+                                    {
+                                        "title": "DescribeDomainsResult",
+                                        "href": "API_DescribeDomainsResult.html"
+                                    },
+                                    {
+                                        "title": "DescribeExpressionsResult",
+                                        "href": "API_DescribeExpressionsResult.html"
+                                    },
+                                    {
+                                        "title": "DescribeIndexFieldsResult",
+                                        "href": "API_DescribeIndexFieldsResult.html"
+                                    },
+                                    {
+                                        "title": "DescribeScalingParametersResult",
+                                        "href": "API_DescribeScalingParametersResult.html"
+                                    },
+                                    {
+                                        "title": "DescribeServiceAccessPoliciesResult",
+                                        "href": "API_DescribeServiceAccessPoliciesResult.html"
+                                    },
+                                    {
+                                        "title": "DescribeSuggestersResult",
+                                        "href": "API_DescribeSuggestersResult.html"
+                                    },
+                                    {
+                                        "title": "DocumentSuggesterOptions",
+                                        "href": "API_DocumentSuggesterOptions.html"
+                                    },
+                                    {
+                                        "title": "DomainEndpointOptions",
+                                        "href": "API_DomainEndpointOptions.html"
+                                    },
+                                    {
+                                        "title": "DomainEndpointOptionsStatus",
+                                        "href": "API_DomainEndpointOptionsStatus.html"
+                                    },
+                                    {
+                                        "title": "DomainStatus",
+                                        "href": "API_DomainStatus.html"
+                                    },
+                                    {
+                                        "title": "DoubleArrayOptions",
+                                        "href": "API_DoubleArrayOptions.html"
+                                    },
+                                    {
+                                        "title": "DoubleOptions",
+                                        "href": "API_DoubleOptions.html"
+                                    },
+                                    {
+                                        "title": "Expression",
+                                        "href": "API_Expression.html"
+                                    },
+                                    {
+                                        "title": "ExpressionStatus",
+                                        "href": "API_ExpressionStatus.html"
+                                    },
+                                    {
+                                        "title": "IndexDocumentsResult",
+                                        "href": "API_IndexDocumentsResult.html"
+                                    },
+                                    {
+                                        "title": "IndexField",
+                                        "href": "API_IndexField.html"
+                                    },
+                                    {
+                                        "title": "IndexFieldStatus",
+                                        "href": "API_IndexFieldStatus.html"
+                                    },
+                                    {
+                                        "title": "IntArrayOptions",
+                                        "href": "API_IntArrayOptions.html"
+                                    },
+                                    {
+                                        "title": "IntOptions",
+                                        "href": "API_IntOptions.html"
+                                    },
+                                    {
+                                        "title": "LatLonOptions",
+                                        "href": "API_LatLonOptions.html"
+                                    },
+                                    {
+                                        "title": "Limits",
+                                        "href": "API_Limits.html"
+                                    },
+                                    {
+                                        "title": "ListDomainNamesResult",
+                                        "href": "API_ListDomainNamesResult.html"
+                                    },
+                                    {
+                                        "title": "LiteralArrayOptions",
+                                        "href": "API_LiteralArrayOptions.html"
+                                    },
+                                    {
+                                        "title": "LiteralOptions",
+                                        "href": "API_LiteralOptions.html"
+                                    },
+                                    {
+                                        "title": "OptionStatus",
+                                        "href": "API_OptionStatus.html"
+                                    },
+                                    {
+                                        "title": "ScalingParameters",
+                                        "href": "API_ScalingParameters.html"
+                                    },
+                                    {
+                                        "title": "ScalingParametersStatus",
+                                        "href": "API_ScalingParametersStatus.html"
+                                    },
+                                    {
+                                        "title": "ServiceEndpoint",
+                                        "href": "API_ServiceEndpoint.html"
+                                    },
+                                    {
+                                        "title": "Suggester",
+                                        "href": "API_Suggester.html"
+                                    },
+                                    {
+                                        "title": "SuggesterStatus",
+                                        "href": "API_SuggesterStatus.html"
+                                    },
+                                    {
+                                        "title": "TextArrayOptions",
+                                        "href": "API_TextArrayOptions.html"
+                                    },
+                                    {
+                                        "title": "TextOptions",
+                                        "href": "API_TextOptions.html"
+                                    },
+                                    {
+                                        "title": "UpdateAvailabilityOptionsResult",
+                                        "href": "API_UpdateAvailabilityOptionsResult.html"
+                                    },
+                                    {
+                                        "title": "UpdateScalingParametersResult",
+                                        "href": "API_UpdateScalingParametersResult.html"
+                                    },
+                                    {
+                                        "title": "UpdateServiceAccessPoliciesResult",
+                                        "href": "API_UpdateServiceAccessPoliciesResult.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Common Parameters",
+                                "href": "CommonParameters.html"
+                            },
+                            {
+                                "title": "Common Errors",
+                                "href": "CommonErrors.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Document Service API Reference",
+                        "href": "document-service-api.html",
+                        "contents": [
+                            {
+                                "title": "documents/batch",
+                                "href": "documents-batch-resource.html",
+                                "contents": [
+                                    {
+                                        "title": "documents/batch XML API",
+                                        "href": "documents-batch-xml.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Search API Reference",
+                        "href": "search-api.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            },
+            {
+                "title": "Limits",
+                "href": "limits.html"
+            },
+            {
+                "title": "Resources",
+                "href": "resources.html"
+            },
+            {
+                "title": "Document History",
+                "href": "document-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

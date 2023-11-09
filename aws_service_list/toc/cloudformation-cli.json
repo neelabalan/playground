@@ -1,1 +1,218 @@
-{ "contents" : [ { "title" : "What is the CloudFormation Command Line Interface (CFN-CLI)?", "href" : "what-is-cloudformation-cli.html" }, { "title" : "Creating resource types", "href" : "resource-types.html", "contents" : [ { "title" : "Modeling resource types", "href" : "resource-type-model.html", "contents" : [ { "title" : "Resource type schema", "href" : "resource-type-schema.html" }, { "title" : "Patterns for modeling resources", "href" : "resource-type-howtos.html" }, { "title" : "Preventing false drift results", "href" : "resource-type-model-false-drift.html" } ] }, { "title" : "Developing resource types", "href" : "resource-type-develop.html", "contents" : [ { "title" : "Testing resource types", "href" : "resource-type-test.html", "contents" : [ { "title" : "Resource type handler contract", "href" : "resource-type-test-contract.html" }, { "title" : "Contract tests", "href" : "contract-tests.html" }, { "title" : "Handler error codes", "href" : "resource-type-test-contract-errors.html" }, { "title" : "ProgressEvent object schema", "href" : "resource-type-test-progressevent.html" } ] }, { "title" : "Progress chaining, stabilization, and callback pattern", "href" : "resource-type-develop-stabilize.html" } ] }, { "title" : "Walkthrough: Develop a resource type", "href" : "resource-type-walkthrough.html" }, { "title" : "Resource type FAQ", "href" : "resource-type-faq.html" } ] }, { "title" : "Developing modules", "href" : "modules.html", "contents" : [ { "title" : "Module structure", "href" : "modules-structure.html" }, { "title" : "Develop a module", "href" : "modules-develop.html" } ] }, { "title" : "Developing hooks", "href" : "hooks.html", "contents" : [ { "title" : "Hooks structure", "href" : "hooks-structure.html" }, { "title" : "Walkthrough: Develop a hook", "href" : "walkthrough.html", "contents" : [ { "title" : "Walkthrough: Java", "href" : "hooks-walkthrough-java.html", "contents" : [ { "title" : "Initiating a hooks project", "href" : "initiating-hooks-project-java.html" }, { "title" : "Modeling a hook", "href" : "modeling-hooks-java.html" }, { "title" : "Registering hooks", "href" : "registering-hook-java.html" }, { "title" : "Testing hooks", "href" : "testing-hooks-java.html" }, { "title" : "Managing hooks", "href" : "managing-hooks-java.html" } ] }, { "title" : "Walkthrough: Python", "href" : "hooks-walkthrough-python.html", "contents" : [ { "title" : "Initiating a hooks project", "href" : "initiating-hooks-project-python.html" }, { "title" : "Modeling a hook", "href" : "modeling-hooks-python.html" }, { "title" : "Registering hooks", "href" : "registering-hook-python.html" }, { "title" : "Testing hooks", "href" : "testing-hooks-python.html" }, { "title" : "Managing hooks", "href" : "managing-hooks-python.html" } ] }, { "title" : "Publishing hooks", "href" : "hooks-publishing.html" } ] } ] }, { "title" : "Registering extensions", "href" : "resource-type-register.html" }, { "title" : "Publishing extensions", "href" : "publish-extension.html", "contents" : [ { "title" : "Publishing your extension in multiple Regions using StackSets", "href" : "publish-extension-stacksets.html" } ] }, { "title" : "CloudFormation CLI reference", "href" : "resource-type-cli.html", "contents" : [ { "title" : "Global parameters", "href" : "resource-type-cli-global-parameters.html" }, { "title" : "init", "href" : "resource-type-cli-init.html" }, { "title" : "generate", "href" : "resource-type-cli-generate.html" }, { "title" : "validate", "href" : "resource-type-cli-validate.html" }, { "title" : "invoke", "href" : "resource-type-cli-invoke.html" }, { "title" : "test", "href" : "resource-type-cli-test.html" }, { "title" : "submit", "href" : "resource-type-cli-submit.html" } ] }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/",
+    "service": "cloudformation-cli",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is the CloudFormation Command Line Interface (CFN-CLI)?",
+                "href": "what-is-cloudformation-cli.html"
+            },
+            {
+                "title": "Creating resource types",
+                "href": "resource-types.html",
+                "contents": [
+                    {
+                        "title": "Modeling resource types",
+                        "href": "resource-type-model.html",
+                        "contents": [
+                            {
+                                "title": "Resource type schema",
+                                "href": "resource-type-schema.html"
+                            },
+                            {
+                                "title": "Patterns for modeling resources",
+                                "href": "resource-type-howtos.html"
+                            },
+                            {
+                                "title": "Preventing false drift results",
+                                "href": "resource-type-model-false-drift.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Developing resource types",
+                        "href": "resource-type-develop.html",
+                        "contents": [
+                            {
+                                "title": "Testing resource types",
+                                "href": "resource-type-test.html",
+                                "contents": [
+                                    {
+                                        "title": "Resource type handler contract",
+                                        "href": "resource-type-test-contract.html"
+                                    },
+                                    {
+                                        "title": "Contract tests",
+                                        "href": "contract-tests.html"
+                                    },
+                                    {
+                                        "title": "Handler error codes",
+                                        "href": "resource-type-test-contract-errors.html"
+                                    },
+                                    {
+                                        "title": "ProgressEvent object schema",
+                                        "href": "resource-type-test-progressevent.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Progress chaining, stabilization, and callback pattern",
+                                "href": "resource-type-develop-stabilize.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Walkthrough: Develop a resource type",
+                        "href": "resource-type-walkthrough.html"
+                    },
+                    {
+                        "title": "Resource type FAQ",
+                        "href": "resource-type-faq.html"
+                    }
+                ]
+            },
+            {
+                "title": "Developing modules",
+                "href": "modules.html",
+                "contents": [
+                    {
+                        "title": "Module structure",
+                        "href": "modules-structure.html"
+                    },
+                    {
+                        "title": "Develop a module",
+                        "href": "modules-develop.html"
+                    }
+                ]
+            },
+            {
+                "title": "Developing hooks",
+                "href": "hooks.html",
+                "contents": [
+                    {
+                        "title": "Hooks structure",
+                        "href": "hooks-structure.html"
+                    },
+                    {
+                        "title": "Walkthrough: Develop a hook",
+                        "href": "walkthrough.html",
+                        "contents": [
+                            {
+                                "title": "Walkthrough: Java",
+                                "href": "hooks-walkthrough-java.html",
+                                "contents": [
+                                    {
+                                        "title": "Initiating a hooks project",
+                                        "href": "initiating-hooks-project-java.html"
+                                    },
+                                    {
+                                        "title": "Modeling a hook",
+                                        "href": "modeling-hooks-java.html"
+                                    },
+                                    {
+                                        "title": "Registering hooks",
+                                        "href": "registering-hook-java.html"
+                                    },
+                                    {
+                                        "title": "Testing hooks",
+                                        "href": "testing-hooks-java.html"
+                                    },
+                                    {
+                                        "title": "Managing hooks",
+                                        "href": "managing-hooks-java.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Walkthrough: Python",
+                                "href": "hooks-walkthrough-python.html",
+                                "contents": [
+                                    {
+                                        "title": "Initiating a hooks project",
+                                        "href": "initiating-hooks-project-python.html"
+                                    },
+                                    {
+                                        "title": "Modeling a hook",
+                                        "href": "modeling-hooks-python.html"
+                                    },
+                                    {
+                                        "title": "Registering hooks",
+                                        "href": "registering-hook-python.html"
+                                    },
+                                    {
+                                        "title": "Testing hooks",
+                                        "href": "testing-hooks-python.html"
+                                    },
+                                    {
+                                        "title": "Managing hooks",
+                                        "href": "managing-hooks-python.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Publishing hooks",
+                                "href": "hooks-publishing.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Registering extensions",
+                "href": "resource-type-register.html"
+            },
+            {
+                "title": "Publishing extensions",
+                "href": "publish-extension.html",
+                "contents": [
+                    {
+                        "title": "Publishing your extension in multiple Regions using StackSets",
+                        "href": "publish-extension-stacksets.html"
+                    }
+                ]
+            },
+            {
+                "title": "CloudFormation CLI reference",
+                "href": "resource-type-cli.html",
+                "contents": [
+                    {
+                        "title": "Global parameters",
+                        "href": "resource-type-cli-global-parameters.html"
+                    },
+                    {
+                        "title": "init",
+                        "href": "resource-type-cli-init.html"
+                    },
+                    {
+                        "title": "generate",
+                        "href": "resource-type-cli-generate.html"
+                    },
+                    {
+                        "title": "validate",
+                        "href": "resource-type-cli-validate.html"
+                    },
+                    {
+                        "title": "invoke",
+                        "href": "resource-type-cli-invoke.html"
+                    },
+                    {
+                        "title": "test",
+                        "href": "resource-type-cli-test.html"
+                    },
+                    {
+                        "title": "submit",
+                        "href": "resource-type-cli-submit.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

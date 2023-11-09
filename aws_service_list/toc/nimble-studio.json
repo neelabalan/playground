@@ -1,1 +1,120 @@
-{ "contents" : [ { "title" : "What is Nimble Studio?", "href" : "what-is-nimble-studio.html" }, { "title" : "Concepts and terminology", "href" : "concepts-terminology.html" }, { "title" : "Setting up", "href" : "setting-up-studio.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Quick setup", "href" : "nimble-studio-setup.html" }, { "title" : "Additional settings", "href" : "additional-studio-settings.html" } ] }, { "title" : "Delete a studio", "href" : "delete-studio.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Account security", "href" : "account-security.html" }, { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Encryption at rest", "href" : "encryption-rest.html" }, { "title" : "Encryption in transit", "href" : "encryption-transit.html" }, { "title" : "Key management for Amazon Nimble Studio", "href" : "key-management.html" } ] }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon Nimble Studio works with IAM", "href" : "security-iam-service-with-iam.html" }, { "title" : "ID-based policy examples", "href" : "security-iam-id-based-policy-examples.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Troubleshooting", "href" : "security-iam-troubleshooting.html" } ] }, { "title" : "Logging and monitoring", "href" : "security-monitoring-logging.html" }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" } ] }, { "title" : "Support", "href" : "support.html" }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/",
+    "service": "nimble-studio",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Nimble Studio?",
+                "href": "what-is-nimble-studio.html"
+            },
+            {
+                "title": "Concepts and terminology",
+                "href": "concepts-terminology.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "setting-up-studio.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Quick setup",
+                        "href": "nimble-studio-setup.html"
+                    },
+                    {
+                        "title": "Additional settings",
+                        "href": "additional-studio-settings.html"
+                    }
+                ]
+            },
+            {
+                "title": "Delete a studio",
+                "href": "delete-studio.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Account security",
+                        "href": "account-security.html"
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Encryption at rest",
+                                "href": "encryption-rest.html"
+                            },
+                            {
+                                "title": "Encryption in transit",
+                                "href": "encryption-transit.html"
+                            },
+                            {
+                                "title": "Key management for Amazon Nimble Studio",
+                                "href": "key-management.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon Nimble Studio works with IAM",
+                                "href": "security-iam-service-with-iam.html"
+                            },
+                            {
+                                "title": "ID-based policy examples",
+                                "href": "security-iam-id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security-iam-troubleshooting.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "security-monitoring-logging.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Support",
+                "href": "support.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

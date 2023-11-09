@@ -1,1 +1,314 @@
-{ "contents" : [ { "title" : "What is AWS Amplify Hosting?", "href" : "welcome.html" }, { "title" : "Getting started", "href" : "getting-started.html" }, { "title" : "Getting started with fullstack deployments", "href" : "deploy-backend.html" }, { "title" : "Server-side rendering (SSR)", "href" : "server-side-rendering-amplify.html", "contents" : [ { "title" : "What is server-side rendering", "href" : "What-is-server-side-rendering.html" }, { "title" : "Amplify support for Next.js SSR", "href" : "ssr-Amplify-support.html", "contents" : [ { "title" : "Pricing for Next.js SSR apps", "href" : "nextjs-ssr-pricing.html" }, { "title" : "Deploying a Next.js SSR app with Amplify", "href" : "deploy-nextjs-app.html" }, { "title" : "Migrating a Next.js 11 SSR app to Amplify Hosting compute", "href" : "update-app-nextjs-version.html" }, { "title" : "Adding SSR functionality to a static Next.js app", "href" : "redeploy-ssg-to-ssr.html" }, { "title" : "Making environment variables accessible to server-side runtimes", "href" : "ssr-environment-variables.html" }, { "title" : "Deploying a Next.js app in a monorepo", "href" : "deploy-nextjs-monorepo.html" }, { "title" : "Amazon CloudWatch Logs for SSR apps", "href" : "ssr-CloudWatch-logs.html" }, { "title" : "Troubleshooting SSR deployments", "href" : "troubleshooting-ssr-deployment.html" }, { "title" : "Amplify Next.js 11 SSR support", "href" : "ssr-nextjs11-support.html" } ] } ] }, { "title" : "Setting up custom domains", "href" : "custom-domains.html", "contents" : [ { "title" : "Understanding DNS terminology and concepts", "href" : "understanding-dns-terminology-and-concepts.html" }, { "title" : "Add a custom domain managed by Amazon Route 53", "href" : "to-add-a-custom-domain-managed-by-amazon-route-53.html" }, { "title" : "Add a custom domain managed by a third-party DNS provider", "href" : "to-add-a-custom-domain-managed-by-a-third-party-dns-provider.html" }, { "title" : "Add a custom domain managed by GoDaddy", "href" : "to-add-a-custom-domain-managed-by-godaddy.html" }, { "title" : "Add a custom domain managed by Google Domains", "href" : "to-add-a-custom-domain-managed-by-google-domains.html" }, { "title" : "Manage subdomains", "href" : "to-manage-subdomains.html" }, { "title" : "Set up automatic subdomains for a Amazon Route 53 custom domain", "href" : "to-set-up-automatic-subdomains-for-a-Route-53-custom-domain.html" }, { "title" : "Troubleshooting custom domains", "href" : "custom-domain-troubleshoot-guide.html" } ] }, { "title" : "Configuring build settings", "href" : "build-settings.html", "contents" : [ { "title" : "Monorepo build settings", "href" : "monorepo-configuration.html" } ] }, { "title" : "Feature branch deployments", "href" : "multi-environments.html", "contents" : [ { "title" : "Team workflows with Amplify backend environments", "href" : "team-workflows-with-amplify-cli-backend-environments.html" }, { "title" : "Pattern-based feature branch deployments", "href" : "pattern-based-feature-branch-deployments.html" }, { "title" : "Automatic build-time generation of Amplify config", "href" : "amplify-config-autogeneration.html" }, { "title" : "Conditional backend builds", "href" : "conditional-backends.html" }, { "title" : "Use Amplify backends across apps", "href" : "reuse-backends.html" } ] }, { "title" : "Manual deploys", "href" : "manual-deploys.html" }, { "title" : "One-click deploy button", "href" : "one-click.html" }, { "title" : "Setting up GitHub access", "href" : "setting-up-GitHub-access.html" }, { "title" : "Pull request previews", "href" : "pr-previews.html" }, { "title" : "End-to-end testing", "href" : "running-tests.html" }, { "title" : "Using redirects", "href" : "redirects.html" }, { "title" : "Restrict access", "href" : "access-control.html" }, { "title" : "Environment variables", "href" : "environment-variables.html" }, { "title" : "Custom headers", "href" : "custom-headers.html" }, { "title" : "Incoming webhooks", "href" : "webhooks.html" }, { "title" : "Monitoring", "href" : "access-logs.html" }, { "title" : "Notifications", "href" : "notifications.html" }, { "title" : "Custom builds", "href" : "custom-build-image.html" }, { "title" : "Adding a service role", "href" : "how-to-service-role-amplify-console.html" }, { "title" : "Managing app performance", "href" : "ttl.html" }, { "title" : "Logging Amplify API calls using AWS CloudTrail", "href" : "logging-using-cloudtrail.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amplify works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" }, { "title" : "Amplify permissions reference", "href" : "security_iam_permissions-reference.html" } ] }, { "title" : "Data Protection", "href" : "data-protection.html", "contents" : [ { "title" : "Encryption at rest", "href" : "encryption-at-rest.html" }, { "title" : "Encryption in transit", "href" : "encryption-in-transit.html" }, { "title" : "Encryption key management", "href" : "encryption-key-management.html" } ] }, { "title" : "Compliance Validation", "href" : "Amplify-compliance.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html" }, { "title" : "Logging and monitoring", "href" : "monitoring-overview.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" } ] }, { "title" : "Quotas", "href" : "quotas-chapter.html" }, { "title" : "AWS Amplify Hosting reference", "href" : "aws-amplify-reference-chapter.html", "contents" : [ { "title" : "AWS CloudFormation support", "href" : "cloudformation-support-chapter.html" }, { "title" : "AWS Command Line Interface support", "href" : "aws-cli-support-chapter.html" }, { "title" : "Resource tagging support", "href" : "resource-tagging-support-chapter.html" }, { "title" : "Amplify Hosting API", "href" : "amplify-api-reference.html" } ] }, { "title" : "Document history", "href" : "document-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/amplify/latest/userguide/",
+    "service": "amplify",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS Amplify Hosting?",
+                "href": "welcome.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html"
+            },
+            {
+                "title": "Getting started with fullstack deployments",
+                "href": "deploy-backend.html"
+            },
+            {
+                "title": "Server-side rendering (SSR)",
+                "href": "server-side-rendering-amplify.html",
+                "contents": [
+                    {
+                        "title": "What is server-side rendering",
+                        "href": "What-is-server-side-rendering.html"
+                    },
+                    {
+                        "title": "Amplify support for Next.js SSR",
+                        "href": "ssr-Amplify-support.html",
+                        "contents": [
+                            {
+                                "title": "Pricing for Next.js SSR apps",
+                                "href": "nextjs-ssr-pricing.html"
+                            },
+                            {
+                                "title": "Deploying a Next.js SSR app with Amplify",
+                                "href": "deploy-nextjs-app.html"
+                            },
+                            {
+                                "title": "Migrating a Next.js 11 SSR app to Amplify Hosting compute",
+                                "href": "update-app-nextjs-version.html"
+                            },
+                            {
+                                "title": "Adding SSR functionality to a static Next.js app",
+                                "href": "redeploy-ssg-to-ssr.html"
+                            },
+                            {
+                                "title": "Making environment variables accessible to server-side runtimes",
+                                "href": "ssr-environment-variables.html"
+                            },
+                            {
+                                "title": "Deploying a Next.js app in a monorepo",
+                                "href": "deploy-nextjs-monorepo.html"
+                            },
+                            {
+                                "title": "Amazon CloudWatch Logs for SSR apps",
+                                "href": "ssr-CloudWatch-logs.html"
+                            },
+                            {
+                                "title": "Troubleshooting SSR deployments",
+                                "href": "troubleshooting-ssr-deployment.html"
+                            },
+                            {
+                                "title": "Amplify Next.js 11 SSR support",
+                                "href": "ssr-nextjs11-support.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Setting up custom domains",
+                "href": "custom-domains.html",
+                "contents": [
+                    {
+                        "title": "Understanding DNS terminology and concepts",
+                        "href": "understanding-dns-terminology-and-concepts.html"
+                    },
+                    {
+                        "title": "Add a custom domain managed by Amazon Route\u00a053",
+                        "href": "to-add-a-custom-domain-managed-by-amazon-route-53.html"
+                    },
+                    {
+                        "title": "Add a custom domain managed by a third-party DNS provider",
+                        "href": "to-add-a-custom-domain-managed-by-a-third-party-dns-provider.html"
+                    },
+                    {
+                        "title": "Add a custom domain managed by GoDaddy",
+                        "href": "to-add-a-custom-domain-managed-by-godaddy.html"
+                    },
+                    {
+                        "title": "Add a custom domain managed by Google Domains",
+                        "href": "to-add-a-custom-domain-managed-by-google-domains.html"
+                    },
+                    {
+                        "title": "Manage subdomains",
+                        "href": "to-manage-subdomains.html"
+                    },
+                    {
+                        "title": "Wildcard subdomains",
+                        "href": "wildcard-subdomain-support.html"
+                    },
+                    {
+                        "title": "Set up automatic subdomains for an Amazon Route\u00a053 custom domain",
+                        "href": "to-set-up-automatic-subdomains-for-a-Route-53-custom-domain.html"
+                    },
+                    {
+                        "title": "Troubleshooting custom domains",
+                        "href": "custom-domain-troubleshoot-guide.html"
+                    }
+                ]
+            },
+            {
+                "title": "Configuring build settings",
+                "href": "build-settings.html",
+                "contents": [
+                    {
+                        "title": "Monorepo build settings",
+                        "href": "monorepo-configuration.html"
+                    }
+                ]
+            },
+            {
+                "title": "Feature branch deployments",
+                "href": "multi-environments.html",
+                "contents": [
+                    {
+                        "title": "Team workflows with Amplify backend environments",
+                        "href": "team-workflows-with-amplify-cli-backend-environments.html"
+                    },
+                    {
+                        "title": "Pattern-based feature branch deployments",
+                        "href": "pattern-based-feature-branch-deployments.html"
+                    },
+                    {
+                        "title": "Automatic build-time generation of Amplify config",
+                        "href": "amplify-config-autogeneration.html"
+                    },
+                    {
+                        "title": "Conditional backend builds",
+                        "href": "conditional-backends.html"
+                    },
+                    {
+                        "title": "Use Amplify backends across apps",
+                        "href": "reuse-backends.html"
+                    }
+                ]
+            },
+            {
+                "title": "Manual deploys",
+                "href": "manual-deploys.html"
+            },
+            {
+                "title": "One-click deploy button",
+                "href": "one-click.html"
+            },
+            {
+                "title": "Setting up GitHub access",
+                "href": "setting-up-GitHub-access.html"
+            },
+            {
+                "title": "Pull request previews",
+                "href": "pr-previews.html"
+            },
+            {
+                "title": "End-to-end testing",
+                "href": "running-tests.html"
+            },
+            {
+                "title": "Using redirects",
+                "href": "redirects.html"
+            },
+            {
+                "title": "Restrict access",
+                "href": "access-control.html"
+            },
+            {
+                "title": "Environment variables",
+                "href": "environment-variables.html"
+            },
+            {
+                "title": "Custom headers",
+                "href": "custom-headers.html"
+            },
+            {
+                "title": "Incoming webhooks",
+                "href": "webhooks.html"
+            },
+            {
+                "title": "Monitoring",
+                "href": "access-logs.html"
+            },
+            {
+                "title": "Notifications",
+                "href": "notifications.html"
+            },
+            {
+                "title": "Custom builds",
+                "href": "custom-build-image.html"
+            },
+            {
+                "title": "Adding a service role",
+                "href": "how-to-service-role-amplify-console.html"
+            },
+            {
+                "title": "Managing app performance",
+                "href": "ttl.html"
+            },
+            {
+                "title": "Logging Amplify API calls using AWS CloudTrail",
+                "href": "logging-using-cloudtrail.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amplify works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            },
+                            {
+                                "title": "Amplify permissions reference",
+                                "href": "security_iam_permissions-reference.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Data Protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Encryption at rest",
+                                "href": "encryption-at-rest.html"
+                            },
+                            {
+                                "title": "Encryption in transit",
+                                "href": "encryption-in-transit.html"
+                            },
+                            {
+                                "title": "Encryption key management",
+                                "href": "encryption-key-management.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "Amplify-compliance.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "monitoring-overview.html"
+                    },
+                    {
+                        "title": "Cross-service confused deputy prevention",
+                        "href": "cross-service-confused-deputy-prevention.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "quotas-chapter.html"
+            },
+            {
+                "title": "AWS Amplify Hosting reference",
+                "href": "aws-amplify-reference-chapter.html",
+                "contents": [
+                    {
+                        "title": "AWS CloudFormation support",
+                        "href": "cloudformation-support-chapter.html"
+                    },
+                    {
+                        "title": "AWS Command Line Interface support",
+                        "href": "aws-cli-support-chapter.html"
+                    },
+                    {
+                        "title": "Resource tagging support",
+                        "href": "resource-tagging-support-chapter.html"
+                    },
+                    {
+                        "title": "Amplify Hosting API",
+                        "href": "amplify-api-reference.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "document-history.html"
+            }
+        ]
+    }
+}

@@ -1,1 +1,742 @@
-{ "contents" : [ { "title" : "What is AWS IoT SiteWise?", "href" : "what-is-sitewise.html", "contents" : [ { "title" : "Concepts", "href" : "concept-overview.html" }, { "title" : "Key components", "href" : "feature-overview.html" } ] }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Setting up an AWS account", "href" : "set-up-aws-account.html" }, { "title" : "Using the quick start demo", "href" : "getting-started-demo.html" } ] }, { "title" : "Tutorials", "href" : "tutorials.html", "contents" : [ { "title" : "Calculating OEE", "href" : "calculate-oee.html" }, { "title" : "Ingesting data to AWS IoT SiteWise from AWS IoT things", "href" : "ingest-data-from-iot-things.html" }, { "title" : "Visualizing and sharing wind farm data in SiteWise Monitor", "href" : "monitor-wind-farm.html" }, { "title" : "Publishing property value updates to Amazon DynamoDB", "href" : "publish-to-amazon-dynamodb.html" } ] }, { "title" : "Ingesting data to AWS IoT SiteWise", "href" : "industrial-data-ingestion.html", "contents" : [ { "title" : "Using AWS IoT Core rules", "href" : "iot-rules.html" }, { "title" : "Using AWS IoT Events actions", "href" : "iot-events.html" }, { "title" : "Using AWS IoT Greengrass stream manager", "href" : "greengrass-stream-manager.html" }, { "title" : "Using the AWS IoT SiteWise API", "href" : "ingest-api.html" }, { "title" : "Using the CreateBulkImportJob API", "href" : "ingest-bulkImport.html", "contents" : [ { "title" : "Create a bulk import job (AWS CLI)", "href" : "CreateBulkImportJob.html" }, { "title" : "Describe a bulk import job (AWS CLI)", "href" : "DescribeBulkImportJob.html" }, { "title" : "List bulk import jobs (AWS CLI)", "href" : "ListBulkImportJobs.html" } ] } ] }, { "title" : "Using AWS IoT SiteWise gateways", "href" : "gateways-ggv2.html", "contents" : [ { "title" : "Setting up AWS IoT SiteWise Edge gateways (AWS IoT Greengrass Version 2)", "href" : "configure-gateway-ggv2.html", "contents" : [ { "title" : "Creating a gateway", "href" : "create-gateway-ggv2.html" }, { "title" : "Installing the gateway software on your local device", "href" : "install-gateway-software-on-local-device.html" }, { "title" : "Enabling edge data processing", "href" : "edge-processing.html", "contents" : [ { "title" : "Edge processing prerequisites", "href" : "edge-setup.html" }, { "title" : "Setting up edge capability", "href" : "using-sitewise-edge.html" } ] }, { "title" : "Upgrading packs", "href" : "update-gateway-packs.html" }, { "title" : "Configuring data source authentication", "href" : "configure-source-authentication-ggv2.html" } ] }, { "title" : "Setting up AWS IoT SiteWise gateways (Greengrass V1)", "href" : "gateways-ggv1.html", "contents" : [ { "title" : "Using a gateway", "href" : "gateways.html", "contents" : [ { "title" : "Using packs", "href" : "data-packs.html" }, { "title" : "Choosing a gateway platform", "href" : "choose-gateway-platform.html" }, { "title" : "Configuring a gateway", "href" : "configure-gateway.html" }, { "title" : "Configuring data sources", "href" : "configure-sources.html", "contents" : [ { "title" : "Configure an OPC-UA source", "href" : "configure-opcua-source.html", "contents" : [ { "title" : "Configure an OPC-UA source (console)", "href" : "config-opcua-source-console.html" }, { "title" : "Configure an OPC-UA source (CLI)", "href" : "configure-opc-ua-source-cli.html" }, { "title" : "Enabling your source servers to trust the gateway", "href" : "enable-source-trust.html" }, { "title" : "Configuring authentication", "href" : "configure-source-authentication.html" }, { "title" : "Filtering data ingestion ranges with OPC-UA", "href" : "opcua-data-acquisition.html" }, { "title" : "Using OPC-UA node filters", "href" : "opc-ua-node-filters.html" } ] }, { "title" : "Configure a Modbus TCP source", "href" : "configure-modbus-source.html", "contents" : [ { "title" : "Configure a Modbus TCP source (console)", "href" : "config-modbus-console.html" }, { "title" : "Configure a Modbus TCP source (CLI)", "href" : "configure-modbus-tcp-source-cli.html" } ] }, { "title" : "Configure an Ethernet/IP (EIP) source", "href" : "configure-eip-source.html", "contents" : [ { "title" : "Configure an Ethernet/IP source (console)", "href" : "config-eip-console.html" }, { "title" : "Configure an Ethernet/IP source (CLI)", "href" : "configure-eip-source-cli.html" }, { "title" : "Configuring data sources (AWS CLI)", "href" : "configure-source-cli.html" } ] }, { "title" : "Choosing a destination for your source server data", "href" : "source-destination.html" }, { "title" : "Upgrading a connector", "href" : "upgrade-gateway.html" } ] } ] } ] }, { "title" : "Upgrading gateways from Greengrass V1 to Greengrass V2", "href" : "migrate-ggv1-ggv2.html" }, { "title" : "Filtering assets", "href" : "filter-assets-ggv2.html" }, { "title" : "Managing gateways", "href" : "manage-gateways-ggv2.html" }, { "title" : "Using APIs", "href" : "edge-apis.html", "contents" : [ { "title" : "Edge-only APIs", "href" : "edge-local-apis.html" }, { "title" : "Tutorial: Getting a list of asset models", "href" : "edge-apis-tutorial.html" } ] }, { "title" : "Backup and restore gateways", "href" : "backup-restore-gateways-ggv2.html" } ] }, { "title" : "Processing and consuming data locally", "href" : "process-gateway-data-edge.html" }, { "title" : "Modeling industrial assets", "href" : "industrial-asset-models.html", "contents" : [ { "title" : "Asset and model states", "href" : "asset-and-model-states.html" }, { "title" : "Creating asset models", "href" : "create-asset-models.html", "contents" : [ { "title" : "Defining data properties", "href" : "asset-properties.html", "contents" : [ { "title" : "Defining static data", "href" : "attributes.html" }, { "title" : "Defining data streams from equipment", "href" : "measurements.html" }, { "title" : "Transforming data", "href" : "transforms.html" }, { "title" : "Aggregating data", "href" : "metrics.html" }, { "title" : "Using formula expressions", "href" : "formula-expressions.html", "contents" : [ { "title" : "Variables", "href" : "expression-variables.html" }, { "title" : "Literals", "href" : "expression-literals.html" }, { "title" : "Operators", "href" : "expression-operators.html" }, { "title" : "Constants", "href" : "expression-constants.html" }, { "title" : "Functions", "href" : "expression-functions.html", "contents" : [ { "title" : "Common functions", "href" : "expression-common-functions.html" }, { "title" : "Comparison functions", "href" : "expression-comparison-functions.html" }, { "title" : "Conditional functions", "href" : "expression-conditional-functions.html" }, { "title" : "String functions", "href" : "expression-string-functions.html" }, { "title" : "Aggregation functions", "href" : "expression-aggregation-functions.html" }, { "title" : "Temporal functions", "href" : "expression-temporal-functions.html" }, { "title" : "Date and time functions", "href" : "expression-date-and-time-functions.html" } ] }, { "title" : "Formula expression tutorials", "href" : "expression-tutorials.html" } ] } ] }, { "title" : "Defining relationships between asset models", "href" : "asset-hierarchies.html" } ] }, { "title" : "Creating assets", "href" : "create-assets.html" }, { "title" : "Mapping industrial data streams to asset properties", "href" : "connect-data-streams.html" }, { "title" : "Updating attribute values", "href" : "update-attribute-values.html" }, { "title" : "Associating assets", "href" : "add-associated-assets.html" }, { "title" : "Updating assets and models", "href" : "update-assets-and-models.html" }, { "title" : "Deleting assets and models", "href" : "delete-assets-and-models.html" } ] }, { "title" : "Managing data ingestion", "href" : "data-streams.html", "contents" : [ { "title" : "Managing data streams", "href" : "manage-data-streams.html", "contents" : [ { "title" : "Managing data streams (console)", "href" : "manage-data-streams-console.html" }, { "title" : "Managing data streams (AWS CLI)", "href" : "manage-data-streams-cli.html" } ] } ] }, { "title" : "Monitoring data with alarms", "href" : "industrial-alarms.html", "contents" : [ { "title" : "Defining alarms on asset models", "href" : "define-alarms.html", "contents" : [ { "title" : "Defining AWS IoT Events alarms", "href" : "define-iot-events-alarms.html", "contents" : [ { "title" : "Defining an AWS IoT Events alarm (AWS IoT SiteWise console)", "href" : "define-iot-events-alarm-console.html" }, { "title" : "Defining an AWS IoT Events alarm (AWS IoT Events console)", "href" : "define-iot-events-alarm-console-ite-console.html" }, { "title" : "Defining an AWS IoT Events alarm (CLI)", "href" : "define-iot-events-alarm-cli.html" } ] }, { "title" : "Defining external alarms", "href" : "define-external-alarms.html" } ] }, { "title" : "Configuring alarms on assets", "href" : "configure-alarms.html", "contents" : [ { "title" : "Configuring threshold values", "href" : "configure-alarm-threshold-values.html" }, { "title" : "Configuring notification settings", "href" : "configure-alarm-notification-settings.html" } ] }, { "title" : "Responding to alarms", "href" : "respond-to-alarms.html" }, { "title" : "Ingesting external alarm state", "href" : "ingest-external-alarm-state.html", "contents" : [ { "title" : "Mapping external alarm state streams", "href" : "connect-alarm-data-streams.html" }, { "title" : "Ingesting alarm state data", "href" : "ingest-alarm-state-data.html" } ] } ] }, { "title" : "Monitoring data with web portals", "href" : "monitor-data.html", "contents" : [ { "title" : "Getting started", "href" : "monitor-getting-started.html" }, { "title" : "Enabling additional features", "href" : "monitor-additional-features.html" }, { "title" : "Administering your portals", "href" : "administer-portals.html" }, { "title" : "Creating dashboards (CLI)", "href" : "create-dashboards-using-aws-cli.html" } ] }, { "title" : "Querying asset property data", "href" : "query-industrial-data.html" }, { "title" : "Interacting with other services", "href" : "interact-with-other-services.html", "contents" : [ { "title" : "Working with asset property notifications", "href" : "property-notifications.html", "contents" : [ { "title" : "Exporting data to Amazon S3", "href" : "export-to-s3.html", "contents" : [ { "title" : "Analyzing exported data", "href" : "analyze-exported-asset-data.html" }, { "title" : "Template resource reference", "href" : "export-to-s3-resources.html" } ] } ] } ] }, { "title" : "Managing data storage", "href" : "manage-data-storage.html", "contents" : [ { "title" : "Configuring storage settings", "href" : "configure-storage.html", "contents" : [ { "title" : "Configure storage settings (console)", "href" : "configure-storage-console.html" }, { "title" : "Configure storage settings (AWS CLI)", "href" : "configure-storage-cli.html" } ] }, { "title" : "Troubleshoot", "href" : "troubleshoot-storage-configuration.html" }, { "title" : "File paths and schemas of data saved in the cold tier", "href" : "file-path-and-schema.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Data encryption", "href" : "data-encryption.html", "contents" : [ { "title" : "Encryption at rest", "href" : "encryption-at-rest.html" }, { "title" : "Encryption in transit", "href" : "encryption-in-transit.html" }, { "title" : "Key management", "href" : "key-management.html" } ] }, { "title" : "Internetwork traffic privacy", "href" : "internetwork-traffic-privacy.html" } ] }, { "title" : "Identity and access management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS IoT SiteWise works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html" }, { "title" : "Using service roles for SiteWise Monitor", "href" : "monitor-service-role.html" }, { "title" : "Setting up permissions for alarms", "href" : "alarms-iam-permissions.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Configuration and vulnerability analysis", "href" : "vulnerability-analysis-and-management.html" }, { "title" : "VPC endpoints (AWS PrivateLink)", "href" : "vpc-interface-endpoints.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" } ] }, { "title" : "Logging and monitoring", "href" : "logging-and-monitoring.html", "contents" : [ { "title" : "Monitoring service logs", "href" : "monitor-cloudwatch-logs.html" }, { "title" : "Monitoring gateway logs", "href" : "monitor-gateway-logs.html" }, { "title" : "Monitoring with Amazon CloudWatch metrics", "href" : "monitor-cloudwatch-metrics.html" }, { "title" : "Logging API calls with AWS CloudTrail", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Tagging your resources", "href" : "tag-resources.html" }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "Troubleshooting a portal", "href" : "troubleshooting-portal.html" }, { "title" : "Troubleshooting a gateway", "href" : "troubleshooting-gateway.html" }, { "title" : "Troubleshooting an AWS IoT SiteWise rule action", "href" : "troubleshoot-rule.html" } ] }, { "title" : "Integrating with Grafana", "href" : "grafana-integration.html" }, { "title" : "Endpoints and quotas", "href" : "endpoints-and-quotas.html", "contents" : [ { "title" : "Endpoints", "href" : "enpoints.html" }, { "title" : "Quotas", "href" : "quotas.html" } ] }, { "title" : "Document history", "href" : "document-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/",
+    "service": "iot-sitewise",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS IoT SiteWise?",
+                "href": "what-is-sitewise.html",
+                "contents": [
+                    {
+                        "title": "Concepts",
+                        "href": "concept-overview.html"
+                    },
+                    {
+                        "title": "Key components",
+                        "href": "feature-overview.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Setting up an AWS account",
+                        "href": "set-up-aws-account.html"
+                    },
+                    {
+                        "title": "Using the quick start demo",
+                        "href": "getting-started-demo.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tutorials",
+                "href": "tutorials.html",
+                "contents": [
+                    {
+                        "title": "Calculating OEE",
+                        "href": "calculate-oee.html"
+                    },
+                    {
+                        "title": "Ingesting data to AWS IoT SiteWise from AWS IoT things",
+                        "href": "ingest-data-from-iot-things.html"
+                    },
+                    {
+                        "title": "Visualizing and sharing wind farm data in SiteWise Monitor",
+                        "href": "monitor-wind-farm.html"
+                    },
+                    {
+                        "title": "Publishing property value updates to Amazon DynamoDB",
+                        "href": "publish-to-amazon-dynamodb.html"
+                    }
+                ]
+            },
+            {
+                "title": "Ingesting data to AWS IoT SiteWise",
+                "href": "industrial-data-ingestion.html",
+                "contents": [
+                    {
+                        "title": "Using AWS IoT Core rules",
+                        "href": "iot-rules.html"
+                    },
+                    {
+                        "title": "Using AWS IoT Events actions",
+                        "href": "iot-events.html"
+                    },
+                    {
+                        "title": "Using AWS IoT Greengrass stream manager",
+                        "href": "greengrass-stream-manager.html"
+                    },
+                    {
+                        "title": "Using the AWS IoT SiteWise API",
+                        "href": "ingest-api.html"
+                    },
+                    {
+                        "title": "Using the CreateBulkImportJob API",
+                        "href": "ingest-bulkImport.html",
+                        "contents": [
+                            {
+                                "title": "Create a bulk import job (AWS CLI)",
+                                "href": "CreateBulkImportJob.html"
+                            },
+                            {
+                                "title": "Describe a bulk import job (AWS CLI)",
+                                "href": "DescribeBulkImportJob.html"
+                            },
+                            {
+                                "title": "List bulk import jobs (AWS CLI)",
+                                "href": "ListBulkImportJobs.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Using AWS IoT SiteWise gateways",
+                "href": "gateways-ggv2.html",
+                "contents": [
+                    {
+                        "title": "Setting up AWS IoT SiteWise Edge gateways (AWS IoT Greengrass Version 2)",
+                        "href": "configure-gateway-ggv2.html",
+                        "contents": [
+                            {
+                                "title": "Creating a gateway",
+                                "href": "create-gateway-ggv2.html"
+                            },
+                            {
+                                "title": "Installing the gateway software on your local device",
+                                "href": "install-gateway-software-on-local-device.html"
+                            },
+                            {
+                                "title": "Enabling edge data processing",
+                                "href": "edge-processing.html",
+                                "contents": [
+                                    {
+                                        "title": "Edge processing prerequisites",
+                                        "href": "edge-setup.html"
+                                    },
+                                    {
+                                        "title": "Setting up edge capability",
+                                        "href": "using-sitewise-edge.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Upgrading packs",
+                                "href": "update-gateway-packs.html"
+                            },
+                            {
+                                "title": "Configuring data source authentication",
+                                "href": "configure-source-authentication-ggv2.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Setting up AWS IoT SiteWise gateways (Greengrass V1)",
+                        "href": "gateways-ggv1.html",
+                        "contents": [
+                            {
+                                "title": "Using a gateway",
+                                "href": "gateways.html",
+                                "contents": [
+                                    {
+                                        "title": "Using packs",
+                                        "href": "data-packs.html"
+                                    },
+                                    {
+                                        "title": "Choosing a gateway platform",
+                                        "href": "choose-gateway-platform.html"
+                                    },
+                                    {
+                                        "title": "Configuring a gateway",
+                                        "href": "configure-gateway.html"
+                                    },
+                                    {
+                                        "title": "Configuring data sources",
+                                        "href": "configure-sources.html",
+                                        "contents": [
+                                            {
+                                                "title": "Configure an OPC-UA source",
+                                                "href": "configure-opcua-source.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Configure an OPC-UA source (console)",
+                                                        "href": "config-opcua-source-console.html"
+                                                    },
+                                                    {
+                                                        "title": "Configure an OPC-UA source (CLI)",
+                                                        "href": "configure-opc-ua-source-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Enabling your source servers to trust the gateway",
+                                                        "href": "enable-source-trust.html"
+                                                    },
+                                                    {
+                                                        "title": "Configuring authentication",
+                                                        "href": "configure-source-authentication.html"
+                                                    },
+                                                    {
+                                                        "title": "Filtering data ingestion ranges with OPC-UA",
+                                                        "href": "opcua-data-acquisition.html"
+                                                    },
+                                                    {
+                                                        "title": "Using OPC-UA node filters",
+                                                        "href": "opc-ua-node-filters.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Configure a Modbus TCP source",
+                                                "href": "configure-modbus-source.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Configure a Modbus TCP source (console)",
+                                                        "href": "config-modbus-console.html"
+                                                    },
+                                                    {
+                                                        "title": "Configure a Modbus TCP source (CLI)",
+                                                        "href": "configure-modbus-tcp-source-cli.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Configure an Ethernet/IP (EIP) source",
+                                                "href": "configure-eip-source.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Configure an Ethernet/IP source (console)",
+                                                        "href": "config-eip-console.html"
+                                                    },
+                                                    {
+                                                        "title": "Configure an Ethernet/IP source (CLI)",
+                                                        "href": "configure-eip-source-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Configuring data sources (AWS CLI)",
+                                                        "href": "configure-source-cli.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Choosing a destination for your source server data",
+                                                "href": "source-destination.html"
+                                            },
+                                            {
+                                                "title": "Upgrading a connector",
+                                                "href": "upgrade-gateway.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Upgrading gateways from Greengrass V1 to Greengrass V2",
+                        "href": "migrate-ggv1-ggv2.html"
+                    },
+                    {
+                        "title": "Adding partner data sources",
+                        "href": "edge-add-partner-data-source.html",
+                        "contents": [
+                            {
+                                "title": "Partner data sources",
+                                "href": "edge-partner-data-source.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Filtering assets",
+                        "href": "filter-assets-ggv2.html"
+                    },
+                    {
+                        "title": "Managing gateways",
+                        "href": "manage-gateways-ggv2.html"
+                    },
+                    {
+                        "title": "Using APIs",
+                        "href": "edge-apis.html",
+                        "contents": [
+                            {
+                                "title": "Edge-only APIs",
+                                "href": "edge-local-apis.html"
+                            },
+                            {
+                                "title": "Tutorial: Getting a list of asset models",
+                                "href": "edge-apis-tutorial.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Backup and restore gateways",
+                        "href": "backup-restore-gateways-ggv2.html"
+                    }
+                ]
+            },
+            {
+                "title": "Processing and consuming data locally",
+                "href": "process-gateway-data-edge.html"
+            },
+            {
+                "title": "Modeling industrial assets",
+                "href": "industrial-asset-models.html",
+                "contents": [
+                    {
+                        "title": "Asset and model states",
+                        "href": "asset-and-model-states.html"
+                    },
+                    {
+                        "title": "Creating asset models",
+                        "href": "create-asset-models.html",
+                        "contents": [
+                            {
+                                "title": "Defining data properties",
+                                "href": "asset-properties.html",
+                                "contents": [
+                                    {
+                                        "title": "Defining static data",
+                                        "href": "attributes.html"
+                                    },
+                                    {
+                                        "title": "Defining data streams from equipment",
+                                        "href": "measurements.html"
+                                    },
+                                    {
+                                        "title": "Transforming data",
+                                        "href": "transforms.html"
+                                    },
+                                    {
+                                        "title": "Aggregating data",
+                                        "href": "metrics.html"
+                                    },
+                                    {
+                                        "title": "Using formula expressions",
+                                        "href": "formula-expressions.html",
+                                        "contents": [
+                                            {
+                                                "title": "Variables",
+                                                "href": "expression-variables.html"
+                                            },
+                                            {
+                                                "title": "Literals",
+                                                "href": "expression-literals.html"
+                                            },
+                                            {
+                                                "title": "Operators",
+                                                "href": "expression-operators.html"
+                                            },
+                                            {
+                                                "title": "Constants",
+                                                "href": "expression-constants.html"
+                                            },
+                                            {
+                                                "title": "Functions",
+                                                "href": "expression-functions.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Common functions",
+                                                        "href": "expression-common-functions.html"
+                                                    },
+                                                    {
+                                                        "title": "Comparison functions",
+                                                        "href": "expression-comparison-functions.html"
+                                                    },
+                                                    {
+                                                        "title": "Conditional functions",
+                                                        "href": "expression-conditional-functions.html"
+                                                    },
+                                                    {
+                                                        "title": "String functions",
+                                                        "href": "expression-string-functions.html"
+                                                    },
+                                                    {
+                                                        "title": "Aggregation functions",
+                                                        "href": "expression-aggregation-functions.html"
+                                                    },
+                                                    {
+                                                        "title": "Temporal functions",
+                                                        "href": "expression-temporal-functions.html"
+                                                    },
+                                                    {
+                                                        "title": "Date and time functions",
+                                                        "href": "expression-date-and-time-functions.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Formula expression tutorials",
+                                                "href": "expression-tutorials.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Defining relationships between asset models",
+                                "href": "asset-hierarchies.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Creating assets",
+                        "href": "create-assets.html"
+                    },
+                    {
+                        "title": "Mapping industrial data streams to asset properties",
+                        "href": "connect-data-streams.html"
+                    },
+                    {
+                        "title": "Updating attribute values",
+                        "href": "update-attribute-values.html"
+                    },
+                    {
+                        "title": "Associating assets",
+                        "href": "add-associated-assets.html"
+                    },
+                    {
+                        "title": "Updating assets and models",
+                        "href": "update-assets-and-models.html"
+                    },
+                    {
+                        "title": "Deleting assets and models",
+                        "href": "delete-assets-and-models.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing data ingestion",
+                "href": "data-streams.html",
+                "contents": [
+                    {
+                        "title": "Managing data streams",
+                        "href": "manage-data-streams.html",
+                        "contents": [
+                            {
+                                "title": "Managing data streams (console)",
+                                "href": "manage-data-streams-console.html"
+                            },
+                            {
+                                "title": "Managing data streams (AWS CLI)",
+                                "href": "manage-data-streams-cli.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring data with alarms",
+                "href": "industrial-alarms.html",
+                "contents": [
+                    {
+                        "title": "Defining alarms on asset models",
+                        "href": "define-alarms.html",
+                        "contents": [
+                            {
+                                "title": "Defining AWS IoT Events alarms",
+                                "href": "define-iot-events-alarms.html",
+                                "contents": [
+                                    {
+                                        "title": "Defining an AWS IoT Events alarm (AWS IoT SiteWise console)",
+                                        "href": "define-iot-events-alarm-console.html"
+                                    },
+                                    {
+                                        "title": "Defining an AWS IoT Events alarm (AWS IoT Events console)",
+                                        "href": "define-iot-events-alarm-console-ite-console.html"
+                                    },
+                                    {
+                                        "title": "Defining an AWS IoT Events alarm (CLI)",
+                                        "href": "define-iot-events-alarm-cli.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Defining external alarms",
+                                "href": "define-external-alarms.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuring alarms on assets",
+                        "href": "configure-alarms.html",
+                        "contents": [
+                            {
+                                "title": "Configuring threshold values",
+                                "href": "configure-alarm-threshold-values.html"
+                            },
+                            {
+                                "title": "Configuring notification settings",
+                                "href": "configure-alarm-notification-settings.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Responding to alarms",
+                        "href": "respond-to-alarms.html"
+                    },
+                    {
+                        "title": "Ingesting external alarm state",
+                        "href": "ingest-external-alarm-state.html",
+                        "contents": [
+                            {
+                                "title": "Mapping external alarm state streams",
+                                "href": "connect-alarm-data-streams.html"
+                            },
+                            {
+                                "title": "Ingesting alarm state data",
+                                "href": "ingest-alarm-state-data.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring data with web portals",
+                "href": "monitor-data.html",
+                "contents": [
+                    {
+                        "title": "Getting started",
+                        "href": "monitor-getting-started.html"
+                    },
+                    {
+                        "title": "Enabling additional features",
+                        "href": "monitor-additional-features.html"
+                    },
+                    {
+                        "title": "Administering your portals",
+                        "href": "administer-portals.html"
+                    },
+                    {
+                        "title": "Creating dashboards (CLI)",
+                        "href": "create-dashboards-using-aws-cli.html"
+                    }
+                ]
+            },
+            {
+                "title": "Querying asset property data",
+                "href": "query-industrial-data.html"
+            },
+            {
+                "title": "Interacting with other services",
+                "href": "interact-with-other-services.html",
+                "contents": [
+                    {
+                        "title": "Working with asset property notifications",
+                        "href": "property-notifications.html",
+                        "contents": [
+                            {
+                                "title": "Exporting data to Amazon S3",
+                                "href": "export-to-s3.html",
+                                "contents": [
+                                    {
+                                        "title": "Analyzing exported data",
+                                        "href": "analyze-exported-asset-data.html"
+                                    },
+                                    {
+                                        "title": "Template resource reference",
+                                        "href": "export-to-s3-resources.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Managing data storage",
+                "href": "manage-data-storage.html",
+                "contents": [
+                    {
+                        "title": "Configuring storage settings",
+                        "href": "configure-storage.html",
+                        "contents": [
+                            {
+                                "title": "Configure storage settings (console)",
+                                "href": "configure-storage-console.html"
+                            },
+                            {
+                                "title": "Configure storage settings (AWS CLI)",
+                                "href": "configure-storage-cli.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Troubleshoot",
+                        "href": "troubleshoot-storage-configuration.html"
+                    },
+                    {
+                        "title": "File paths and schemas of data saved in the cold tier",
+                        "href": "file-path-and-schema.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Data encryption",
+                                "href": "data-encryption.html",
+                                "contents": [
+                                    {
+                                        "title": "Encryption at rest",
+                                        "href": "encryption-at-rest.html"
+                                    },
+                                    {
+                                        "title": "Encryption in transit",
+                                        "href": "encryption-in-transit.html"
+                                    },
+                                    {
+                                        "title": "Key management",
+                                        "href": "key-management.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Internetwork traffic privacy",
+                                "href": "internetwork-traffic-privacy.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS IoT SiteWise works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            },
+                            {
+                                "title": "Using service roles for SiteWise Monitor",
+                                "href": "monitor-service-role.html"
+                            },
+                            {
+                                "title": "Setting up permissions for alarms",
+                                "href": "alarms-iam-permissions.html"
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "vulnerability-analysis-and-management.html"
+                    },
+                    {
+                        "title": "VPC endpoints (AWS PrivateLink)",
+                        "href": "vpc-interface-endpoints.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Logging and monitoring",
+                "href": "logging-and-monitoring.html",
+                "contents": [
+                    {
+                        "title": "Monitoring service logs",
+                        "href": "monitor-cloudwatch-logs.html"
+                    },
+                    {
+                        "title": "Monitoring gateway logs",
+                        "href": "monitor-gateway-logs.html"
+                    },
+                    {
+                        "title": "Monitoring with Amazon CloudWatch metrics",
+                        "href": "monitor-cloudwatch-metrics.html"
+                    },
+                    {
+                        "title": "Logging API calls with AWS CloudTrail",
+                        "href": "logging-using-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tagging your resources",
+                "href": "tag-resources.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Troubleshooting a portal",
+                        "href": "troubleshooting-portal.html"
+                    },
+                    {
+                        "title": "Troubleshooting a gateway",
+                        "href": "troubleshooting-gateway.html"
+                    },
+                    {
+                        "title": "Troubleshooting an AWS IoT SiteWise rule action",
+                        "href": "troubleshoot-rule.html"
+                    }
+                ]
+            },
+            {
+                "title": "Integrating with Grafana",
+                "href": "grafana-integration.html"
+            },
+            {
+                "title": "Endpoints and quotas",
+                "href": "endpoints-and-quotas.html",
+                "contents": [
+                    {
+                        "title": "Endpoints",
+                        "href": "enpoints.html"
+                    },
+                    {
+                        "title": "Quotas",
+                        "href": "quotas.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "document-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

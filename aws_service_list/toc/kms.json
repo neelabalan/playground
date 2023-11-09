@@ -1,1 +1,958 @@
-{ "contents" : [ { "title" : "AWS Key Management Service", "href" : "overview.html", "contents" : [ { "title" : "Concepts", "href" : "concepts.html" } ] }, { "title" : "Managing keys", "href" : "getting-started.html", "contents" : [ { "title" : "Creating keys", "href" : "create-keys.html" }, { "title" : "Using aliases", "href" : "kms-alias.html", "contents" : [ { "title" : "About aliases", "href" : "alias-about.html" }, { "title" : "Managing aliases", "href" : "alias-manage.html" }, { "title" : "Using aliases in your applications", "href" : "alias-using.html" }, { "title" : "Controlling access to aliases", "href" : "alias-access.html" }, { "title" : "Using aliases to control access to KMS keys", "href" : "alias-authorization.html" }, { "title" : "Finding aliases in AWS CloudTrail logs", "href" : "alias-ct.html" } ] }, { "title" : "Viewing keys", "href" : "viewing-keys.html", "contents" : [ { "title" : "Viewing KMS keys in the console", "href" : "viewing-keys-console.html" }, { "title" : "Viewing KMS keys with the API", "href" : "viewing-keys-cli.html" }, { "title" : "Viewing the cryptographic configuration", "href" : "symm-asymm-crypto-config.html" }, { "title" : "Finding the key ID and key ARN", "href" : "find-cmk-id-arn.html" }, { "title" : "Finding the alias name and alias ARN", "href" : "find-cmk-alias.html" } ] }, { "title" : "Editing keys", "href" : "editing-keys.html" }, { "title" : "Tagging keys", "href" : "tagging-keys.html", "contents" : [ { "title" : "About tags in AWS KMS", "href" : "tags-about.html" }, { "title" : "Managing KMS key tags in the console", "href" : "manage-tags-console.html" }, { "title" : "Managing KMS key tags with API operations", "href" : "manage-tags-api.html" }, { "title" : "Controlling access to tags", "href" : "tag-permissions.html" }, { "title" : "Using tags to control access to KMS keys", "href" : "tag-authorization.html" } ] }, { "title" : "Enabling and disabling keys", "href" : "enabling-keys.html" }, { "title" : "Rotating keys", "href" : "rotate-keys.html" }, { "title" : "Monitoring keys", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Logging with AWS CloudTrail", "href" : "logging-using-cloudtrail.html", "contents" : [ { "title" : "Examples of AWS KMS log entries", "href" : "understanding-kms-entries.html", "contents" : [ { "title" : "CancelKeyDeletion", "href" : "ct-cancel-key-deletion.html" }, { "title" : "ConnectCustomKeyStore", "href" : "ct-connect-keystore.html" }, { "title" : "CreateAlias", "href" : "ct-createalias.html" }, { "title" : "CreateCustomKeyStore", "href" : "ct-create-keystore.html" }, { "title" : "CreateGrant", "href" : "ct-creategrant.html" }, { "title" : "CreateKey", "href" : "ct-createkey.html" }, { "title" : "Decrypt", "href" : "ct-decrypt.html" }, { "title" : "DeleteAlias", "href" : "ct-deletealias.html" }, { "title" : "DeleteCustomKeyStore", "href" : "ct-delete-keystore.html" }, { "title" : "DeleteExpiredKeyMaterial", "href" : "ct-deleteexpiredkeymaterial.html" }, { "title" : "DeleteImportedKeyMaterial", "href" : "ct-deleteimportedkeymaterial.html" }, { "title" : "DeleteKey", "href" : "ct-delete-key.html" }, { "title" : "DescribeCustomKeyStores", "href" : "ct-describe-keystores.html" }, { "title" : "DescribeKey", "href" : "ct-describekey.html" }, { "title" : "DisableKey", "href" : "ct-disablekey.html" }, { "title" : "DisableKeyRotation", "href" : "ct-disable-key-rotation.html" }, { "title" : "DisconnectCustomKeyStore", "href" : "ct-disconnect-keystore.html" }, { "title" : "EnableKey", "href" : "ct-enablekey.html" }, { "title" : "EnableKeyRotation", "href" : "ct-enablekeyrotation.html" }, { "title" : "Encrypt", "href" : "ct-encrypt.html" }, { "title" : "GenerateDataKey", "href" : "ct-generatedatakey.html" }, { "title" : "GenerateDataKeyPair", "href" : "ct-generatedatakeypair.html" }, { "title" : "GenerateDataKeyPairWithoutPlaintext", "href" : "ct-generatedatakeypairwithoutplaintext.html" }, { "title" : "GenerateDataKeyWithoutPlaintext", "href" : "ct-generatedatakeyplaintext.html" }, { "title" : "GenerateMac", "href" : "ct-generatemac.html" }, { "title" : "GenerateRandom", "href" : "ct-generaterandom.html" }, { "title" : "GetKeyPolicy", "href" : "ct-getkeypolicy.html" }, { "title" : "GetKeyRotationStatus", "href" : "ct-getkeyrotationstatus.html" }, { "title" : "GetParametersForImport", "href" : "ct-getparametersforimport.html" }, { "title" : "ImportKeyMaterial", "href" : "ct-importkeymaterial.html" }, { "title" : "ListAliases", "href" : "ct-listaliases.html" }, { "title" : "ListGrants", "href" : "ct-listgrants.html" }, { "title" : "PutKeyPolicy", "href" : "ct-put-key-policy.html" }, { "title" : "ReEncrypt", "href" : "ct-reencrypt.html" }, { "title" : "ReplicateKey", "href" : "ct-replicate-key.html" }, { "title" : "RetireGrant", "href" : "ct-retire-grant.html" }, { "title" : "RevokeGrant", "href" : "ct-revoke-grant.html" }, { "title" : "RotateKey", "href" : "ct-rotatekey.html" }, { "title" : "ScheduleKeyDeletion", "href" : "ct-schedule-key-deletion.html" }, { "title" : "Sign", "href" : "ct-sign.html" }, { "title" : "SynchronizeMultiRegionKey", "href" : "ct-synchronize-multi-region-key.html" }, { "title" : "TagResource", "href" : "ct-tagresource.html" }, { "title" : "UntagResource", "href" : "ct-untagresource.html" }, { "title" : "UpdateAlias", "href" : "ct-updatealias.html" }, { "title" : "UpdateCustomKeyStore", "href" : "ct-update-keystore.html" }, { "title" : "UpdateKeyDescription", "href" : "ct-update-key-description.html" }, { "title" : "UpdatePrimaryRegion", "href" : "ct-update-primary-region.html" }, { "title" : "VerifyMac", "href" : "ct-verifymac.html" }, { "title" : "Verify", "href" : "ct-verify.html" }, { "title" : "Amazon EC2 example one", "href" : "ct-ec2one.html" }, { "title" : "Amazon EC2 example two", "href" : "ct-ec2two.html" } ] } ] }, { "title" : "Monitoring with CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "Monitoring with Amazon EventBridge", "href" : "kms-events.html" } ] }, { "title" : "Using CloudFormation templates", "href" : "creating-resources-with-cloudformation.html" }, { "title" : "Deleting keys", "href" : "deleting-keys.html", "contents" : [ { "title" : "Controlling access to key deletion", "href" : "deleting-keys-adding-permission.html" }, { "title" : "Scheduling and canceling key deletion", "href" : "deleting-keys-scheduling-key-deletion.html" }, { "title" : "Creating an alarm", "href" : "deleting-keys-creating-cloudwatch-alarm.html" }, { "title" : "Determining past usage of a KMS key", "href" : "deleting-keys-determining-usage.html" } ] }, { "title" : "Key state reference", "href" : "key-state.html" } ] }, { "title" : "Authentication and access control", "href" : "control-access.html", "contents" : [ { "title" : "Key policies", "href" : "key-policies.html", "contents" : [ { "title" : "Creating a key policy", "href" : "key-policy-overview.html" }, { "title" : "Default key policy", "href" : "key-policy-default.html" }, { "title" : "Viewing a key policy", "href" : "key-policy-viewing.html" }, { "title" : "Changing a key policy", "href" : "key-policy-modifying.html" }, { "title" : "Permissions for AWS services", "href" : "key-policy-services.html" } ] }, { "title" : "IAM policies", "href" : "iam-policies.html", "contents" : [ { "title" : "Overview of IAM policies", "href" : "iam-policies-overview.html" }, { "title" : "Best practices for IAM policies", "href" : "iam-policies-best-practices.html" }, { "title" : "Specifying KMS keys in IAM policy statements", "href" : "cmks-in-iam-policies.html" }, { "title" : "Permissions required to use the AWS KMS console", "href" : "console-permissions.html" }, { "title" : "AWS managed policy for power users", "href" : "aws-managed-policies.html" }, { "title" : "Examples", "href" : "customer-managed-policies.html" } ] }, { "title" : "Grants", "href" : "grants.html", "contents" : [ { "title" : "Creating grants", "href" : "create-grant-overview.html" }, { "title" : "Managing grants", "href" : "grant-manage.html" } ] }, { "title" : "VPC endpoint", "href" : "kms-vpc-endpoint.html" }, { "title" : "Condition keys", "href" : "policy-conditions.html", "contents" : [ { "title" : "AWS global condition keys", "href" : "conditions-aws.html" }, { "title" : "AWS KMS condition keys", "href" : "conditions-kms.html" }, { "title" : "AWS KMS condition keys for AWS Nitro Enclaves", "href" : "conditions-nitro-enclaves.html" } ] }, { "title" : "Attribute-based access control (ABAC)", "href" : "abac.html" }, { "title" : "Cross-account access", "href" : "key-policy-modifying-external-accounts.html" }, { "title" : "Service-linked roles", "href" : "using-service-linked-roles.html" }, { "title" : "Hybrid post-quantum TLS", "href" : "pqtls.html" }, { "title" : "Determining access", "href" : "determining-access.html", "contents" : [ { "title" : "Examining the key policy", "href" : "determining-access-key-policy.html" }, { "title" : "Examining IAM policies", "href" : "determining-access-iam-policies.html" }, { "title" : "Examining grants", "href" : "determining-access-grants.html" }, { "title" : "Troubleshooting key access", "href" : "policy-evaluation.html" } ] }, { "title" : "Permissions reference", "href" : "kms-api-permissions-reference.html" }, { "title" : "Testing your permissions", "href" : "testing-permissions.html" } ] }, { "title" : "Special-purpose keys", "href" : "key-types.html", "contents" : [ { "title" : "Asymmetric keys", "href" : "symmetric-asymmetric.html", "contents" : [ { "title" : "Creating asymmetric KMS keys", "href" : "asymm-create-key.html" }, { "title" : "Downloading public keys", "href" : "download-public-key.html" }, { "title" : "Identifying asymmetric KMS keys", "href" : "find-symm-asymm.html" }, { "title" : "Asymmetric key specs", "href" : "asymmetric-key-specs.html" } ] }, { "title" : "HMAC keys", "href" : "hmac.html", "contents" : [ { "title" : "Creating HMAC keys", "href" : "hmac-create-key.html" }, { "title" : "Controlling access to HMAC keys", "href" : "hmac-authz.html" }, { "title" : "Viewing HMAC keys", "href" : "hmac-view.html" } ] }, { "title" : "Multi-Region keys", "href" : "multi-region-keys-overview.html", "contents" : [ { "title" : "Controlling access", "href" : "multi-region-keys-auth.html" }, { "title" : "Creating multi-Region keys", "href" : "multi-region-keys-create.html", "contents" : [ { "title" : "Creating primary keys", "href" : "create-primary-keys.html" }, { "title" : "Creating replica keys", "href" : "multi-region-keys-replicate.html" } ] }, { "title" : "Viewing multi-Region keys", "href" : "multi-region-keys-view.html" }, { "title" : "Managing multi-Region keys", "href" : "multi-region-keys-manage.html" }, { "title" : "Importing key material into multi-Region keys", "href" : "multi-region-keys-import.html" }, { "title" : "Deleting multi-Region keys", "href" : "multi-region-keys-delete.html" } ] }, { "title" : "Imported key material", "href" : "importing-keys.html", "contents" : [ { "title" : "Planning to import key material", "href" : "importing-keys-conceptual.html" }, { "title" : "Managing imported key material", "href" : "importing-keys-managing.html" }, { "title" : "Step 1: Create a KMS key with no key material", "href" : "importing-keys-create-cmk.html" }, { "title" : "Step 2: Download the wrapping public key and import token", "href" : "importing-keys-get-public-key-and-token.html" }, { "title" : "Step 3: Encrypt the key material", "href" : "importing-keys-encrypt-key-material.html" }, { "title" : "Step 4: Import the key material", "href" : "importing-keys-import-key-material.html" } ] }, { "title" : "Custom key stores", "href" : "custom-key-store-overview.html", "contents" : [ { "title" : "AWS CloudHSM key stores", "href" : "keystore-cloudhsm.html", "contents" : [ { "title" : "AWS CloudHSM key store concepts", "href" : "hsm-key-store-concepts.html" }, { "title" : "Controlling access to your AWS CloudHSM key store", "href" : "authorize-key-store.html" }, { "title" : "Managing a CloudHSM custom key store", "href" : "manage-keystore.html", "contents" : [ { "title" : "Creating an AWS CloudHSM key store", "href" : "create-keystore.html" }, { "title" : "Viewing an AWS CloudHSM key store", "href" : "view-keystore.html" }, { "title" : "Editing AWS CloudHSM key store settings", "href" : "update-keystore.html" }, { "title" : "Connecting and disconnecting an AWS CloudHSM key store", "href" : "disconnect-keystore.html" }, { "title" : "Deleting an AWS CloudHSM key store", "href" : "delete-keystore.html" } ] }, { "title" : "Managing KMS keys in a CloudHSM key store", "href" : "manage-cmk-keystore.html", "contents" : [ { "title" : "Creating KMS keys in an AWS CloudHSM key store", "href" : "create-cmk-keystore.html" }, { "title" : "Viewing KMS keys in an AWS CloudHSM key store", "href" : "view-cmk-keystore.html" }, { "title" : "Using KMS keys in an AWS CloudHSM key store", "href" : "use-cmk-keystore.html" }, { "title" : "Finding KMS keys and key material", "href" : "find-key-material.html" }, { "title" : "Scheduling deletion of KMS keys from an AWS CloudHSM key store", "href" : "delete-cmk-keystore.html" } ] }, { "title" : "Troubleshooting a custom key store", "href" : "fix-keystore.html" } ] }, { "title" : "External key stores", "href" : "keystore-external.html", "contents" : [ { "title" : "Controlling access to your external key store", "href" : "authorize-xks-key-store.html" }, { "title" : "Planning an external key store", "href" : "plan-xks-keystore.html", "contents" : [ { "title" : "Configuring VPC endpoint service connectivity", "href" : "vpc-connectivity.html" } ] }, { "title" : "Managing an external key store", "href" : "keystore-external-manage.html", "contents" : [ { "title" : "Creating an external key store", "href" : "create-xks-keystore.html" }, { "title" : "Editing external key store properties", "href" : "update-xks-keystore.html" }, { "title" : "Viewing an external key store", "href" : "view-xks-keystore.html" }, { "title" : "Monitoring an external key store", "href" : "xks-monitoring.html" }, { "title" : "Connecting and disconnecting an external key store", "href" : "xks-connect-disconnect.html" }, { "title" : "Deleting an external key store", "href" : "delete-xks.html" } ] }, { "title" : "Managing KMS keys in an external key store", "href" : "keystore-external-key-manage.html", "contents" : [ { "title" : "Creating KMS keys in an external key store", "href" : "create-xks-keys.html" }, { "title" : "Viewing KMS keys in an external key store", "href" : "view-xks-key.html" }, { "title" : "Using KMS keys in an external key store", "href" : "use-xks-key.html" }, { "title" : "Scheduling deletion of KMS keys from an external key store", "href" : "delete-xks-key.html" } ] }, { "title" : "Troubleshooting external key stores", "href" : "xks-troubleshooting.html" } ] } ] }, { "title" : "Key type reference", "href" : "symm-asymm-compare.html" } ] }, { "title" : "Security", "href" : "kms-security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and access management", "href" : "security-iam.html" }, { "title" : "Logging and monitoring", "href" : "security-logging-monitoring.html" }, { "title" : "Compliance validation", "href" : "kms-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Security best practices", "href" : "best-practices.html" } ] }, { "title" : "Quotas", "href" : "limits.html", "contents" : [ { "title" : "Resource quotas", "href" : "resource-limits.html" }, { "title" : "Request quotas", "href" : "requests-per-second.html" }, { "title" : "Throttling requests", "href" : "throttling.html" } ] }, { "title" : "How AWS services use AWS KMS", "href" : "service-integration.html", "contents" : [ { "title" : "AWS CloudTrail", "href" : "services-cloudtrail.html" }, { "title" : "Amazon DynamoDB", "href" : "services-dynamodb.html" }, { "title" : "Amazon Elastic Block Store (Amazon EBS)", "href" : "services-ebs.html" }, { "title" : "Amazon Elastic Transcoder", "href" : "services-et.html" }, { "title" : "Amazon EMR", "href" : "services-emr.html" }, { "title" : "AWS Nitro Enclaves", "href" : "services-nitro-enclaves.html" }, { "title" : "Amazon Redshift", "href" : "services-redshift.html" }, { "title" : "Amazon Relational Database Service (Amazon RDS)", "href" : "services-rds.html" }, { "title" : "AWS Secrets Manager", "href" : "services-secrets-manager.html" }, { "title" : "Amazon Simple Email Service (Amazon SES)", "href" : "services-ses.html" }, { "title" : "Amazon Simple Storage Service (Amazon S3)", "href" : "services-s3.html" }, { "title" : "AWS Systems Manager Parameter Store", "href" : "services-parameter-store.html" }, { "title" : "Amazon WorkMail", "href" : "services-wm.html" }, { "title" : "WorkSpaces", "href" : "services-workspaces.html" } ] }, { "title" : "Programming the AWS KMS API", "href" : "programming-top.html", "contents" : [ { "title" : "Creating a client", "href" : "programming-client.html" }, { "title" : "Working with keys", "href" : "programming-keys.html" }, { "title" : "Working with aliases", "href" : "programming-aliases.html" }, { "title" : "Encrypting and decrypting data keys", "href" : "programming-encryption.html" }, { "title" : "Working with key policies", "href" : "programming-key-policies.html" }, { "title" : "Working with grants", "href" : "programming-grants.html" }, { "title" : "Testing your AWS KMS API calls", "href" : "programming-dryrun.html" }, { "title" : "AWS KMS eventual consistency", "href" : "programming-eventual-consistency.html" } ] }, { "title" : "References", "href" : "references.html" }, { "title" : "Document history", "href" : "dochistory.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/kms/latest/developerguide/",
+    "service": "kms",
+    "toc": {
+        "contents": [
+            {
+                "title": "AWS Key Management Service",
+                "href": "overview.html",
+                "contents": [
+                    {
+                        "title": "Concepts",
+                        "href": "concepts.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing keys",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Creating keys",
+                        "href": "create-keys.html"
+                    },
+                    {
+                        "title": "Using aliases",
+                        "href": "kms-alias.html",
+                        "contents": [
+                            {
+                                "title": "About aliases",
+                                "href": "alias-about.html"
+                            },
+                            {
+                                "title": "Managing aliases",
+                                "href": "alias-manage.html"
+                            },
+                            {
+                                "title": "Using aliases in your applications",
+                                "href": "alias-using.html"
+                            },
+                            {
+                                "title": "Controlling access to aliases",
+                                "href": "alias-access.html"
+                            },
+                            {
+                                "title": "Using aliases to control access to KMS keys",
+                                "href": "alias-authorization.html"
+                            },
+                            {
+                                "title": "Finding aliases in AWS CloudTrail logs",
+                                "href": "alias-ct.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Viewing keys",
+                        "href": "viewing-keys.html",
+                        "contents": [
+                            {
+                                "title": "Viewing KMS keys in the console",
+                                "href": "viewing-keys-console.html"
+                            },
+                            {
+                                "title": "Viewing KMS keys with the API",
+                                "href": "viewing-keys-cli.html"
+                            },
+                            {
+                                "title": "Viewing the cryptographic configuration",
+                                "href": "symm-asymm-crypto-config.html"
+                            },
+                            {
+                                "title": "Finding the key ID and key ARN",
+                                "href": "find-cmk-id-arn.html"
+                            },
+                            {
+                                "title": "Finding the alias name and alias ARN",
+                                "href": "find-cmk-alias.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Editing keys",
+                        "href": "editing-keys.html"
+                    },
+                    {
+                        "title": "Tagging keys",
+                        "href": "tagging-keys.html",
+                        "contents": [
+                            {
+                                "title": "About tags in AWS KMS",
+                                "href": "tags-about.html"
+                            },
+                            {
+                                "title": "Managing KMS key tags in the console",
+                                "href": "manage-tags-console.html"
+                            },
+                            {
+                                "title": "Managing KMS key tags with API operations",
+                                "href": "manage-tags-api.html"
+                            },
+                            {
+                                "title": "Controlling access to tags",
+                                "href": "tag-permissions.html"
+                            },
+                            {
+                                "title": "Using tags to control access to KMS keys",
+                                "href": "tag-authorization.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Enabling and disabling keys",
+                        "href": "enabling-keys.html"
+                    },
+                    {
+                        "title": "Rotating keys",
+                        "href": "rotate-keys.html"
+                    },
+                    {
+                        "title": "Monitoring keys",
+                        "href": "monitoring-overview.html",
+                        "contents": [
+                            {
+                                "title": "Logging with AWS CloudTrail",
+                                "href": "logging-using-cloudtrail.html",
+                                "contents": [
+                                    {
+                                        "title": "Examples of AWS KMS log entries",
+                                        "href": "understanding-kms-entries.html",
+                                        "contents": [
+                                            {
+                                                "title": "CancelKeyDeletion",
+                                                "href": "ct-cancel-key-deletion.html"
+                                            },
+                                            {
+                                                "title": "ConnectCustomKeyStore",
+                                                "href": "ct-connect-keystore.html"
+                                            },
+                                            {
+                                                "title": "CreateAlias",
+                                                "href": "ct-createalias.html"
+                                            },
+                                            {
+                                                "title": "CreateCustomKeyStore",
+                                                "href": "ct-create-keystore.html"
+                                            },
+                                            {
+                                                "title": "CreateGrant",
+                                                "href": "ct-creategrant.html"
+                                            },
+                                            {
+                                                "title": "CreateKey",
+                                                "href": "ct-createkey.html"
+                                            },
+                                            {
+                                                "title": "Decrypt",
+                                                "href": "ct-decrypt.html"
+                                            },
+                                            {
+                                                "title": "DeleteAlias",
+                                                "href": "ct-deletealias.html"
+                                            },
+                                            {
+                                                "title": "DeleteCustomKeyStore",
+                                                "href": "ct-delete-keystore.html"
+                                            },
+                                            {
+                                                "title": "DeleteExpiredKeyMaterial",
+                                                "href": "ct-deleteexpiredkeymaterial.html"
+                                            },
+                                            {
+                                                "title": "DeleteImportedKeyMaterial",
+                                                "href": "ct-deleteimportedkeymaterial.html"
+                                            },
+                                            {
+                                                "title": "DeleteKey",
+                                                "href": "ct-delete-key.html"
+                                            },
+                                            {
+                                                "title": "DescribeCustomKeyStores",
+                                                "href": "ct-describe-keystores.html"
+                                            },
+                                            {
+                                                "title": "DescribeKey",
+                                                "href": "ct-describekey.html"
+                                            },
+                                            {
+                                                "title": "DisableKey",
+                                                "href": "ct-disablekey.html"
+                                            },
+                                            {
+                                                "title": "DisableKeyRotation",
+                                                "href": "ct-disable-key-rotation.html"
+                                            },
+                                            {
+                                                "title": "DisconnectCustomKeyStore",
+                                                "href": "ct-disconnect-keystore.html"
+                                            },
+                                            {
+                                                "title": "EnableKey",
+                                                "href": "ct-enablekey.html"
+                                            },
+                                            {
+                                                "title": "EnableKeyRotation",
+                                                "href": "ct-enablekeyrotation.html"
+                                            },
+                                            {
+                                                "title": "Encrypt",
+                                                "href": "ct-encrypt.html"
+                                            },
+                                            {
+                                                "title": "GenerateDataKey",
+                                                "href": "ct-generatedatakey.html"
+                                            },
+                                            {
+                                                "title": "GenerateDataKeyPair",
+                                                "href": "ct-generatedatakeypair.html"
+                                            },
+                                            {
+                                                "title": "GenerateDataKeyPairWithoutPlaintext",
+                                                "href": "ct-generatedatakeypairwithoutplaintext.html"
+                                            },
+                                            {
+                                                "title": "GenerateDataKeyWithoutPlaintext",
+                                                "href": "ct-generatedatakeyplaintext.html"
+                                            },
+                                            {
+                                                "title": "GenerateMac",
+                                                "href": "ct-generatemac.html"
+                                            },
+                                            {
+                                                "title": "GenerateRandom",
+                                                "href": "ct-generaterandom.html"
+                                            },
+                                            {
+                                                "title": "GetKeyPolicy",
+                                                "href": "ct-getkeypolicy.html"
+                                            },
+                                            {
+                                                "title": "GetKeyRotationStatus",
+                                                "href": "ct-getkeyrotationstatus.html"
+                                            },
+                                            {
+                                                "title": "GetParametersForImport",
+                                                "href": "ct-getparametersforimport.html"
+                                            },
+                                            {
+                                                "title": "ImportKeyMaterial",
+                                                "href": "ct-importkeymaterial.html"
+                                            },
+                                            {
+                                                "title": "ListAliases",
+                                                "href": "ct-listaliases.html"
+                                            },
+                                            {
+                                                "title": "ListGrants",
+                                                "href": "ct-listgrants.html"
+                                            },
+                                            {
+                                                "title": "PutKeyPolicy",
+                                                "href": "ct-put-key-policy.html"
+                                            },
+                                            {
+                                                "title": "ReEncrypt",
+                                                "href": "ct-reencrypt.html"
+                                            },
+                                            {
+                                                "title": "ReplicateKey",
+                                                "href": "ct-replicate-key.html"
+                                            },
+                                            {
+                                                "title": "RetireGrant",
+                                                "href": "ct-retire-grant.html"
+                                            },
+                                            {
+                                                "title": "RevokeGrant",
+                                                "href": "ct-revoke-grant.html"
+                                            },
+                                            {
+                                                "title": "RotateKey",
+                                                "href": "ct-rotatekey.html"
+                                            },
+                                            {
+                                                "title": "ScheduleKeyDeletion",
+                                                "href": "ct-schedule-key-deletion.html"
+                                            },
+                                            {
+                                                "title": "Sign",
+                                                "href": "ct-sign.html"
+                                            },
+                                            {
+                                                "title": "SynchronizeMultiRegionKey",
+                                                "href": "ct-synchronize-multi-region-key.html"
+                                            },
+                                            {
+                                                "title": "TagResource",
+                                                "href": "ct-tagresource.html"
+                                            },
+                                            {
+                                                "title": "UntagResource",
+                                                "href": "ct-untagresource.html"
+                                            },
+                                            {
+                                                "title": "UpdateAlias",
+                                                "href": "ct-updatealias.html"
+                                            },
+                                            {
+                                                "title": "UpdateCustomKeyStore",
+                                                "href": "ct-update-keystore.html"
+                                            },
+                                            {
+                                                "title": "UpdateKeyDescription",
+                                                "href": "ct-update-key-description.html"
+                                            },
+                                            {
+                                                "title": "UpdatePrimaryRegion",
+                                                "href": "ct-update-primary-region.html"
+                                            },
+                                            {
+                                                "title": "VerifyMac",
+                                                "href": "ct-verifymac.html"
+                                            },
+                                            {
+                                                "title": "Verify",
+                                                "href": "ct-verify.html"
+                                            },
+                                            {
+                                                "title": "Amazon EC2 example one",
+                                                "href": "ct-ec2one.html"
+                                            },
+                                            {
+                                                "title": "Amazon EC2 example two",
+                                                "href": "ct-ec2two.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Monitoring with CloudWatch",
+                                "href": "monitoring-cloudwatch.html"
+                            },
+                            {
+                                "title": "Monitoring with Amazon EventBridge",
+                                "href": "kms-events.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using CloudFormation templates",
+                        "href": "creating-resources-with-cloudformation.html"
+                    },
+                    {
+                        "title": "Deleting keys",
+                        "href": "deleting-keys.html",
+                        "contents": [
+                            {
+                                "title": "Controlling access to key deletion",
+                                "href": "deleting-keys-adding-permission.html"
+                            },
+                            {
+                                "title": "Scheduling and canceling key deletion",
+                                "href": "deleting-keys-scheduling-key-deletion.html"
+                            },
+                            {
+                                "title": "Creating an alarm",
+                                "href": "deleting-keys-creating-cloudwatch-alarm.html"
+                            },
+                            {
+                                "title": "Determining past usage of a KMS key",
+                                "href": "deleting-keys-determining-usage.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Key state reference",
+                        "href": "key-state.html"
+                    }
+                ]
+            },
+            {
+                "title": "Authentication and access control",
+                "href": "control-access.html",
+                "contents": [
+                    {
+                        "title": "Key policies",
+                        "href": "key-policies.html",
+                        "contents": [
+                            {
+                                "title": "Creating a key policy",
+                                "href": "key-policy-overview.html"
+                            },
+                            {
+                                "title": "Default key policy",
+                                "href": "key-policy-default.html"
+                            },
+                            {
+                                "title": "Viewing a key policy",
+                                "href": "key-policy-viewing.html"
+                            },
+                            {
+                                "title": "Changing a key policy",
+                                "href": "key-policy-modifying.html"
+                            },
+                            {
+                                "title": "Permissions for AWS services",
+                                "href": "key-policy-services.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IAM policies",
+                        "href": "iam-policies.html",
+                        "contents": [
+                            {
+                                "title": "Overview of IAM policies",
+                                "href": "iam-policies-overview.html"
+                            },
+                            {
+                                "title": "Best practices for IAM policies",
+                                "href": "iam-policies-best-practices.html"
+                            },
+                            {
+                                "title": "Specifying KMS keys in IAM policy statements",
+                                "href": "cmks-in-iam-policies.html"
+                            },
+                            {
+                                "title": "Permissions required to use the AWS KMS console",
+                                "href": "console-permissions.html"
+                            },
+                            {
+                                "title": "AWS managed policy for power users",
+                                "href": "aws-managed-policies.html"
+                            },
+                            {
+                                "title": "Examples",
+                                "href": "customer-managed-policies.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Grants",
+                        "href": "grants.html",
+                        "contents": [
+                            {
+                                "title": "Creating grants",
+                                "href": "create-grant-overview.html"
+                            },
+                            {
+                                "title": "Managing grants",
+                                "href": "grant-manage.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "VPC endpoint",
+                        "href": "kms-vpc-endpoint.html"
+                    },
+                    {
+                        "title": "Condition keys",
+                        "href": "policy-conditions.html",
+                        "contents": [
+                            {
+                                "title": "AWS global condition keys",
+                                "href": "conditions-aws.html"
+                            },
+                            {
+                                "title": "AWS KMS condition keys",
+                                "href": "conditions-kms.html"
+                            },
+                            {
+                                "title": "AWS KMS condition keys for AWS Nitro Enclaves",
+                                "href": "conditions-nitro-enclaves.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Attribute-based access control (ABAC)",
+                        "href": "abac.html"
+                    },
+                    {
+                        "title": "Cross-account access",
+                        "href": "key-policy-modifying-external-accounts.html"
+                    },
+                    {
+                        "title": "Service-linked roles",
+                        "href": "using-service-linked-roles.html"
+                    },
+                    {
+                        "title": "Hybrid post-quantum TLS",
+                        "href": "pqtls.html"
+                    },
+                    {
+                        "title": "Determining access",
+                        "href": "determining-access.html",
+                        "contents": [
+                            {
+                                "title": "Examining the key policy",
+                                "href": "determining-access-key-policy.html"
+                            },
+                            {
+                                "title": "Examining IAM policies",
+                                "href": "determining-access-iam-policies.html"
+                            },
+                            {
+                                "title": "Examining grants",
+                                "href": "determining-access-grants.html"
+                            },
+                            {
+                                "title": "Troubleshooting key access",
+                                "href": "policy-evaluation.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Permissions reference",
+                        "href": "kms-api-permissions-reference.html"
+                    },
+                    {
+                        "title": "Testing your permissions",
+                        "href": "testing-permissions.html"
+                    }
+                ]
+            },
+            {
+                "title": "Special-purpose keys",
+                "href": "key-types.html",
+                "contents": [
+                    {
+                        "title": "Asymmetric keys",
+                        "href": "symmetric-asymmetric.html",
+                        "contents": [
+                            {
+                                "title": "Creating asymmetric KMS keys",
+                                "href": "asymm-create-key.html"
+                            },
+                            {
+                                "title": "Downloading public keys",
+                                "href": "download-public-key.html"
+                            },
+                            {
+                                "title": "Identifying asymmetric KMS keys",
+                                "href": "find-symm-asymm.html"
+                            },
+                            {
+                                "title": "Asymmetric key specs",
+                                "href": "asymmetric-key-specs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "HMAC keys",
+                        "href": "hmac.html",
+                        "contents": [
+                            {
+                                "title": "Creating HMAC keys",
+                                "href": "hmac-create-key.html"
+                            },
+                            {
+                                "title": "Controlling access to HMAC keys",
+                                "href": "hmac-authz.html"
+                            },
+                            {
+                                "title": "Viewing HMAC keys",
+                                "href": "hmac-view.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Multi-Region keys",
+                        "href": "multi-region-keys-overview.html",
+                        "contents": [
+                            {
+                                "title": "Controlling access",
+                                "href": "multi-region-keys-auth.html"
+                            },
+                            {
+                                "title": "Creating multi-Region keys",
+                                "href": "multi-region-keys-create.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating primary keys",
+                                        "href": "create-primary-keys.html"
+                                    },
+                                    {
+                                        "title": "Creating replica keys",
+                                        "href": "multi-region-keys-replicate.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Viewing multi-Region keys",
+                                "href": "multi-region-keys-view.html"
+                            },
+                            {
+                                "title": "Managing multi-Region keys",
+                                "href": "multi-region-keys-manage.html"
+                            },
+                            {
+                                "title": "Importing key material into multi-Region keys",
+                                "href": "multi-region-keys-import.html"
+                            },
+                            {
+                                "title": "Deleting multi-Region keys",
+                                "href": "multi-region-keys-delete.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Imported key material",
+                        "href": "importing-keys.html",
+                        "contents": [
+                            {
+                                "title": "Planning to import key material",
+                                "href": "importing-keys-conceptual.html"
+                            },
+                            {
+                                "title": "Managing imported key material",
+                                "href": "importing-keys-managing.html"
+                            },
+                            {
+                                "title": "Step 1: Create a KMS key with no key material",
+                                "href": "importing-keys-create-cmk.html"
+                            },
+                            {
+                                "title": "Step 2: Download the wrapping public key and import token",
+                                "href": "importing-keys-get-public-key-and-token.html"
+                            },
+                            {
+                                "title": "Step 3: Encrypt the key material",
+                                "href": "importing-keys-encrypt-key-material.html"
+                            },
+                            {
+                                "title": "Step 4: Import the key material",
+                                "href": "importing-keys-import-key-material.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Custom key stores",
+                        "href": "custom-key-store-overview.html",
+                        "contents": [
+                            {
+                                "title": "AWS CloudHSM key stores",
+                                "href": "keystore-cloudhsm.html",
+                                "contents": [
+                                    {
+                                        "title": "AWS CloudHSM key store concepts",
+                                        "href": "hsm-key-store-concepts.html"
+                                    },
+                                    {
+                                        "title": "Controlling access to your AWS CloudHSM key store",
+                                        "href": "authorize-key-store.html"
+                                    },
+                                    {
+                                        "title": "Managing a CloudHSM custom key store",
+                                        "href": "manage-keystore.html",
+                                        "contents": [
+                                            {
+                                                "title": "Creating an AWS CloudHSM key store",
+                                                "href": "create-keystore.html"
+                                            },
+                                            {
+                                                "title": "Viewing an AWS CloudHSM key store",
+                                                "href": "view-keystore.html"
+                                            },
+                                            {
+                                                "title": "Editing AWS CloudHSM key store settings",
+                                                "href": "update-keystore.html"
+                                            },
+                                            {
+                                                "title": "Connecting and disconnecting an AWS CloudHSM key store",
+                                                "href": "disconnect-keystore.html"
+                                            },
+                                            {
+                                                "title": "Deleting an AWS CloudHSM key store",
+                                                "href": "delete-keystore.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Managing KMS keys in a CloudHSM key store",
+                                        "href": "manage-cmk-keystore.html",
+                                        "contents": [
+                                            {
+                                                "title": "Creating KMS keys in an AWS CloudHSM key store",
+                                                "href": "create-cmk-keystore.html"
+                                            },
+                                            {
+                                                "title": "Viewing KMS keys in an AWS CloudHSM key store",
+                                                "href": "view-cmk-keystore.html"
+                                            },
+                                            {
+                                                "title": "Using KMS keys in an AWS CloudHSM key store",
+                                                "href": "use-cmk-keystore.html"
+                                            },
+                                            {
+                                                "title": "Finding KMS keys and key material",
+                                                "href": "find-key-material.html"
+                                            },
+                                            {
+                                                "title": "Scheduling deletion of KMS keys from an AWS CloudHSM key store",
+                                                "href": "delete-cmk-keystore.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Troubleshooting a custom key store",
+                                        "href": "fix-keystore.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "External key stores",
+                                "href": "keystore-external.html",
+                                "contents": [
+                                    {
+                                        "title": "Controlling access to your external key store",
+                                        "href": "authorize-xks-key-store.html"
+                                    },
+                                    {
+                                        "title": "Planning an external key store",
+                                        "href": "plan-xks-keystore.html",
+                                        "contents": [
+                                            {
+                                                "title": "Configuring VPC endpoint service connectivity",
+                                                "href": "vpc-connectivity.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Managing an external key store",
+                                        "href": "keystore-external-manage.html",
+                                        "contents": [
+                                            {
+                                                "title": "Creating an external key store",
+                                                "href": "create-xks-keystore.html"
+                                            },
+                                            {
+                                                "title": "Editing external key store properties",
+                                                "href": "update-xks-keystore.html"
+                                            },
+                                            {
+                                                "title": "Viewing an external key store",
+                                                "href": "view-xks-keystore.html"
+                                            },
+                                            {
+                                                "title": "Monitoring an external key store",
+                                                "href": "xks-monitoring.html"
+                                            },
+                                            {
+                                                "title": "Connecting and disconnecting an external key store",
+                                                "href": "xks-connect-disconnect.html"
+                                            },
+                                            {
+                                                "title": "Deleting an external key store",
+                                                "href": "delete-xks.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Managing KMS keys in an external key store",
+                                        "href": "keystore-external-key-manage.html",
+                                        "contents": [
+                                            {
+                                                "title": "Creating KMS keys in an external key store",
+                                                "href": "create-xks-keys.html"
+                                            },
+                                            {
+                                                "title": "Viewing KMS keys in an external key store",
+                                                "href": "view-xks-key.html"
+                                            },
+                                            {
+                                                "title": "Using KMS keys in an external key store",
+                                                "href": "use-xks-key.html"
+                                            },
+                                            {
+                                                "title": "Scheduling deletion of KMS keys from an external key store",
+                                                "href": "delete-xks-key.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Troubleshooting external key stores",
+                                        "href": "xks-troubleshooting.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Key type reference",
+                        "href": "symm-asymm-compare.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "kms-security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "security-iam.html"
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "security-logging-monitoring.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "kms-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "limits.html",
+                "contents": [
+                    {
+                        "title": "Resource quotas",
+                        "href": "resource-limits.html"
+                    },
+                    {
+                        "title": "Request quotas",
+                        "href": "requests-per-second.html"
+                    },
+                    {
+                        "title": "Throttling requests",
+                        "href": "throttling.html"
+                    }
+                ]
+            },
+            {
+                "title": "How AWS services use AWS KMS",
+                "href": "service-integration.html",
+                "contents": [
+                    {
+                        "title": "AWS CloudTrail",
+                        "href": "services-cloudtrail.html"
+                    },
+                    {
+                        "title": "Amazon DynamoDB",
+                        "href": "services-dynamodb.html"
+                    },
+                    {
+                        "title": "Amazon Elastic Block Store (Amazon EBS)",
+                        "href": "services-ebs.html"
+                    },
+                    {
+                        "title": "Amazon Elastic Transcoder",
+                        "href": "services-et.html"
+                    },
+                    {
+                        "title": "Amazon EMR",
+                        "href": "services-emr.html"
+                    },
+                    {
+                        "title": "AWS Nitro Enclaves",
+                        "href": "services-nitro-enclaves.html"
+                    },
+                    {
+                        "title": "Amazon Redshift",
+                        "href": "services-redshift.html"
+                    },
+                    {
+                        "title": "Amazon Relational Database Service (Amazon RDS)",
+                        "href": "services-rds.html"
+                    },
+                    {
+                        "title": "AWS Secrets Manager",
+                        "href": "services-secrets-manager.html"
+                    },
+                    {
+                        "title": "Amazon Simple Email Service (Amazon SES)",
+                        "href": "services-ses.html"
+                    },
+                    {
+                        "title": "Amazon Simple Storage Service (Amazon S3)",
+                        "href": "services-s3.html"
+                    },
+                    {
+                        "title": "AWS Systems Manager Parameter Store",
+                        "href": "services-parameter-store.html"
+                    },
+                    {
+                        "title": "Amazon WorkMail",
+                        "href": "services-wm.html"
+                    },
+                    {
+                        "title": "WorkSpaces",
+                        "href": "services-workspaces.html"
+                    }
+                ]
+            },
+            {
+                "title": "Programming the AWS KMS API",
+                "href": "programming-top.html",
+                "contents": [
+                    {
+                        "title": "Creating a client",
+                        "href": "programming-client.html"
+                    },
+                    {
+                        "title": "Working with keys",
+                        "href": "programming-keys.html"
+                    },
+                    {
+                        "title": "Working with aliases",
+                        "href": "programming-aliases.html"
+                    },
+                    {
+                        "title": "Encrypting and decrypting data keys",
+                        "href": "programming-encryption.html"
+                    },
+                    {
+                        "title": "Working with key policies",
+                        "href": "programming-key-policies.html"
+                    },
+                    {
+                        "title": "Working with grants",
+                        "href": "programming-grants.html"
+                    },
+                    {
+                        "title": "Testing your AWS KMS API calls",
+                        "href": "programming-dryrun.html"
+                    },
+                    {
+                        "title": "AWS KMS eventual consistency",
+                        "href": "programming-eventual-consistency.html"
+                    }
+                ]
+            },
+            {
+                "title": "References",
+                "href": "references.html"
+            },
+            {
+                "title": "Document history",
+                "href": "dochistory.html"
+            }
+        ]
+    }
+}

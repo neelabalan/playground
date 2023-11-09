@@ -1,1 +1,144 @@
-{ "contents" : [ { "title" : "What is AWS Outposts?", "href" : "what-is-outposts.html" }, { "title" : "How AWS Outposts works", "href" : "how-outposts-works.html" }, { "title" : "Requirements", "href" : "outposts-requirements.html" }, { "title" : "Get started", "href" : "get-started-outposts.html", "contents" : [ { "title" : "Create an Outpost and order capacity", "href" : "order-outpost-capacity.html" }, { "title" : "Launch an instance", "href" : "launch-instance.html" } ] }, { "title" : "Service link", "href" : "region-connectivity.html" }, { "title" : "Outposts and sites", "href" : "work-with-outposts.html" }, { "title" : "Local gateway", "href" : "outposts-local-gateways.html", "contents" : [ { "title" : "Local gateway route tables", "href" : "routing.html" }, { "title" : "Rack local connectivity", "href" : "local-rack.html" } ] }, { "title" : "Working with shared resources", "href" : "sharing-outposts.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and access management", "href" : "identity-access-management.html", "contents" : [ { "title" : "How AWS Outposts works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" } ] }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Compliance validation", "href" : "compliance-validation.html" } ] }, { "title" : "Monitoring", "href" : "monitor-outposts.html", "contents" : [ { "title" : "CloudWatch metrics", "href" : "outposts-cloudwatch-metrics.html" }, { "title" : "Log API calls using CloudTrail", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Maintenance", "href" : "outpost-maintenance.html", "contents" : [ { "title" : "Optimization", "href" : "outposts-optimizations.html" }, { "title" : "Rack network troubleshooting", "href" : "network-troubleshoot.html" } ] }, { "title" : "End-of-term options", "href" : "term-end-racks.html" }, { "title" : "Quotas", "href" : "outposts-limits.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/outposts/latest/userguide/",
+    "service": "outposts",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS Outposts?",
+                "href": "what-is-outposts.html"
+            },
+            {
+                "title": "How AWS Outposts works",
+                "href": "how-outposts-works.html"
+            },
+            {
+                "title": "Requirements",
+                "href": "outposts-requirements.html"
+            },
+            {
+                "title": "Get started",
+                "href": "get-started-outposts.html",
+                "contents": [
+                    {
+                        "title": "Create an Outpost and order capacity",
+                        "href": "order-outpost-capacity.html"
+                    },
+                    {
+                        "title": "Launch an instance",
+                        "href": "launch-instance.html"
+                    }
+                ]
+            },
+            {
+                "title": "Service link",
+                "href": "region-connectivity.html"
+            },
+            {
+                "title": "Outposts and sites",
+                "href": "work-with-outposts.html"
+            },
+            {
+                "title": "Local gateway",
+                "href": "outposts-local-gateways.html",
+                "contents": [
+                    {
+                        "title": "Local gateway route tables",
+                        "href": "routing.html"
+                    },
+                    {
+                        "title": "Rack local connectivity",
+                        "href": "local-rack.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with shared resources",
+                "href": "sharing-outposts.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and access management",
+                        "href": "identity-access-management.html",
+                        "contents": [
+                            {
+                                "title": "How AWS Outposts works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitor-outposts.html",
+                "contents": [
+                    {
+                        "title": "CloudWatch metrics",
+                        "href": "outposts-cloudwatch-metrics.html"
+                    },
+                    {
+                        "title": "Log API calls using CloudTrail",
+                        "href": "logging-using-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Maintenance",
+                "href": "outpost-maintenance.html",
+                "contents": [
+                    {
+                        "title": "Optimization",
+                        "href": "outposts-optimizations.html"
+                    },
+                    {
+                        "title": "Rack network troubleshooting",
+                        "href": "network-troubleshoot.html"
+                    }
+                ]
+            },
+            {
+                "title": "End-of-term options",
+                "href": "term-end-racks.html"
+            },
+            {
+                "title": "Quotas",
+                "href": "outposts-limits.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

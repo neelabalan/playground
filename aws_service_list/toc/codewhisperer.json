@@ -1,1 +1,278 @@
-{ "contents" : [ { "title" : "What is CodeWhisperer?", "href" : "what-is-cwspr.html" }, { "title" : "Setting up", "href" : "setting-up.html", "contents" : [ { "title" : "CodeWhisperer Professional", "href" : "codewhisperer-setup-enterprise-admin.html", "contents" : [ { "title" : "With Organizations", "href" : "as-root.html" }, { "title" : "With IAM Identity Center administration", "href" : "as-account-admin.html", "contents" : [ { "title" : "Useful APIs", "href" : "useful-apis.html" } ] }, { "title" : "Administering end users", "href" : "as-whisper-admin.html" }, { "title" : "CodeWhisperer profiles", "href" : "about-profiles.html" } ] } ] }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "With VS Code and JetBrains", "href" : "getting-started-with-toolkits.html", "contents" : [ { "title" : "Professional tier", "href" : "whisper-setup-prof-devs.html" }, { "title" : "Individual tier", "href" : "whisper-setup-indv-devs.html" }, { "title" : "Authenticating", "href" : "codewhisperer-auth.html" } ] }, { "title" : "With Amazon SageMaker Studio", "href" : "sagemaker-setup.html" }, { "title" : "With JupyterLab", "href" : "jupyterlab-setup.html" }, { "title" : "With AWS Glue Studio", "href" : "glue-setup.html" }, { "title" : "With AWS Lambda", "href" : "lambda-setup.html" }, { "title" : "With AWS Cloud9", "href" : "cloud9-setup.html" } ] }, { "title" : "Features", "href" : "features.html", "contents" : [ { "title" : "Customizations", "href" : "customizations.html", "contents" : [ { "title" : "Preparing", "href" : "customizations-prereq.html" }, { "title" : "Creating", "href" : "customizations-admin-customize.html" }, { "title" : "Deleting", "href" : "customizations-admin-delete.html" }, { "title" : "Evaluating", "href" : "customizations-admin-activate.html" }, { "title" : "Activating", "href" : "customizations-activating.html" }, { "title" : "Adding users", "href" : "customizations-users.html" }, { "title" : "Using", "href" : "customizations-dev.html" } ] }, { "title" : "Dashboard", "href" : "dashboard.html" }, { "title" : "User actions", "href" : "actions-and-shortcuts.html" }, { "title" : "Languages and IDEs", "href" : "language-ide-support.html" }, { "title" : "Pausing suggestions", "href" : "toggling-suggestions.html" }, { "title" : "Security scans", "href" : "security-scans.html" }, { "title" : "Code references", "href" : "code-reference.html" } ] }, { "title" : "Types of users", "href" : "user-types.html" }, { "title" : "Code examples", "href" : "whisper-code-examples.html", "contents" : [ { "title" : "Single-line code completion", "href" : "single-line-completion.html" }, { "title" : "Full function generation", "href" : "whisper-full-function-generation.html" }, { "title" : "Block completion", "href" : "whisper-code-block.html" }, { "title" : "Docstring, JSDoc, and Javadoc completion", "href" : "whisper-docstring-javadoc.html" }, { "title" : "Line-by-line recommendations", "href" : "whisper-line-by-line-1.html" } ] }, { "title" : "Billing", "href" : "billing.html" }, { "title" : "Monitoring", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Monitoring with CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "Across your organization", "href" : "tracking-across-org.html" } ] }, { "title" : "Sharing data", "href" : "sharing-data.html" }, { "title" : "Quotas", "href" : "load-balancer-limits.html" }, { "title" : "Security", "href" : "codewhisperer-security.html", "contents" : [ { "title" : "Resilience", "href" : "codewhisperer-disaster-recovery-resiliency.html" }, { "title" : "Vulnerability analysis and management", "href" : "codewhisperer-vulnerability-analysis-and-management.html" }, { "title" : "Administrative security", "href" : "codewhisperer-admin-best-practices.html" }, { "title" : "Data protection", "href" : "whisper-data-protection.html" }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Security best practices", "href" : "security-best-practices.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon CodeWhisperer works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html" } ] }, { "title" : "VPC endpoints (AWS PrivateLink)", "href" : "vpc-interface-endpoints.html" } ] }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/codewhisperer/latest/userguide/",
+    "service": "codewhisperer",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is CodeWhisperer?",
+                "href": "what-is-cwspr.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "setting-up.html",
+                "contents": [
+                    {
+                        "title": "CodeWhisperer Professional",
+                        "href": "codewhisperer-setup-enterprise-admin.html",
+                        "contents": [
+                            {
+                                "title": "With Organizations",
+                                "href": "as-root.html"
+                            },
+                            {
+                                "title": "With IAM Identity Center administration",
+                                "href": "as-account-admin.html",
+                                "contents": [
+                                    {
+                                        "title": "Useful APIs",
+                                        "href": "useful-apis.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Administering end users",
+                                "href": "as-whisper-admin.html"
+                            },
+                            {
+                                "title": "CodeWhisperer profiles",
+                                "href": "about-profiles.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "With VS Code and JetBrains",
+                        "href": "getting-started-with-toolkits.html",
+                        "contents": [
+                            {
+                                "title": "Professional tier",
+                                "href": "whisper-setup-prof-devs.html"
+                            },
+                            {
+                                "title": "Individual tier",
+                                "href": "whisper-setup-indv-devs.html"
+                            },
+                            {
+                                "title": "Authenticating",
+                                "href": "codewhisperer-auth.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "With Amazon SageMaker Studio",
+                        "href": "sagemaker-setup.html"
+                    },
+                    {
+                        "title": "With JupyterLab",
+                        "href": "jupyterlab-setup.html"
+                    },
+                    {
+                        "title": "With AWS Glue Studio",
+                        "href": "glue-setup.html"
+                    },
+                    {
+                        "title": "With AWS Lambda",
+                        "href": "lambda-setup.html"
+                    },
+                    {
+                        "title": "With AWS Cloud9",
+                        "href": "cloud9-setup.html"
+                    }
+                ]
+            },
+            {
+                "title": "Features",
+                "href": "features.html",
+                "contents": [
+                    {
+                        "title": "Customizations",
+                        "href": "customizations.html",
+                        "contents": [
+                            {
+                                "title": "Preparing",
+                                "href": "customizations-prereq.html"
+                            },
+                            {
+                                "title": "Creating",
+                                "href": "customizations-admin-customize.html"
+                            },
+                            {
+                                "title": "Deleting",
+                                "href": "customizations-admin-delete.html"
+                            },
+                            {
+                                "title": "Evaluating",
+                                "href": "customizations-admin-activate.html"
+                            },
+                            {
+                                "title": "Activating",
+                                "href": "customizations-activating.html"
+                            },
+                            {
+                                "title": "Adding users",
+                                "href": "customizations-users.html"
+                            },
+                            {
+                                "title": "Using",
+                                "href": "customizations-dev.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Dashboard",
+                        "href": "dashboard.html"
+                    },
+                    {
+                        "title": "User actions",
+                        "href": "actions-and-shortcuts.html"
+                    },
+                    {
+                        "title": "Languages and IDEs",
+                        "href": "language-ide-support.html"
+                    },
+                    {
+                        "title": "Pausing suggestions",
+                        "href": "toggling-suggestions.html"
+                    },
+                    {
+                        "title": "Security scans",
+                        "href": "security-scans.html"
+                    },
+                    {
+                        "title": "Code references",
+                        "href": "code-reference.html"
+                    }
+                ]
+            },
+            {
+                "title": "Types of users",
+                "href": "user-types.html"
+            },
+            {
+                "title": "Code examples",
+                "href": "whisper-code-examples.html",
+                "contents": [
+                    {
+                        "title": "Single-line code completion",
+                        "href": "single-line-completion.html"
+                    },
+                    {
+                        "title": "Full function generation",
+                        "href": "whisper-full-function-generation.html"
+                    },
+                    {
+                        "title": "Block completion",
+                        "href": "whisper-code-block.html"
+                    },
+                    {
+                        "title": "Docstring, JSDoc, and Javadoc completion",
+                        "href": "whisper-docstring-javadoc.html"
+                    },
+                    {
+                        "title": "Line-by-line recommendations",
+                        "href": "whisper-line-by-line-1.html"
+                    }
+                ]
+            },
+            {
+                "title": "Billing",
+                "href": "billing.html"
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Monitoring with CloudWatch",
+                        "href": "monitoring-cloudwatch.html"
+                    },
+                    {
+                        "title": "Across your organization",
+                        "href": "tracking-across-org.html"
+                    }
+                ]
+            },
+            {
+                "title": "Sharing data",
+                "href": "sharing-data.html"
+            },
+            {
+                "title": "Quotas",
+                "href": "load-balancer-limits.html"
+            },
+            {
+                "title": "Security",
+                "href": "codewhisperer-security.html",
+                "contents": [
+                    {
+                        "title": "Resilience",
+                        "href": "codewhisperer-disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Vulnerability analysis and management",
+                        "href": "codewhisperer-vulnerability-analysis-and-management.html"
+                    },
+                    {
+                        "title": "Administrative security",
+                        "href": "codewhisperer-admin-best-practices.html"
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "whisper-data-protection.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Security best practices",
+                        "href": "security-best-practices.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon CodeWhisperer works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "VPC endpoints (AWS PrivateLink)",
+                        "href": "vpc-interface-endpoints.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

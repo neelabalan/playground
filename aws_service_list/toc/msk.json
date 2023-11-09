@@ -1,1 +1,678 @@
-{ "contents" : [ { "title" : "Welcome", "href" : "what-is-msk.html" }, { "title" : "Setting up", "href" : "before-you-begin.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Step 1: Create a cluster", "href" : "create-cluster.html" }, { "title" : "Step 2: Create an IAM role", "href" : "create-client-iam-role.html" }, { "title" : "Step 3: Create a client machine", "href" : "create-client-machine.html" }, { "title" : "Step 4: Create a topic", "href" : "create-topic.html" }, { "title" : "Step 5: Produce and consume data", "href" : "produce-consume.html" }, { "title" : "Step 6: View metrics", "href" : "view-metrics.html" }, { "title" : "Step 7: Delete the resources", "href" : "delete-cluster.html" } ] }, { "title" : "How it works", "href" : "operations.html", "contents" : [ { "title" : "Creating a cluster", "href" : "msk-create-cluster.html" }, { "title" : "Tiered storage", "href" : "msk-tiered-storage.html", "contents" : [ { "title" : "Tiered storage scenario", "href" : "msk-tiered-storage-retention-rules.html" }, { "title" : "Creating a tiered storage cluster with the console", "href" : "msk-create-cluster-tiered-storage-console.html" }, { "title" : "Creating a tiered storage cluster with the AWS CLI", "href" : "msk-create-cluster-tiered-storage-cli.html" }, { "title" : "Enabling and disabling tiered storage on an existing topic", "href" : "msk-enable-disable-topic-tiered-storage-cli.html" }, { "title" : "Enabling tiered storage on an existing cluster using AWS CLI", "href" : "msk-enable-cluster-tiered-storage-cli.html" }, { "title" : "Updating tiered storage on an existing cluster using AWS console", "href" : "msk-update-tiered-storage-console.html" } ] }, { "title" : "Deleting a cluster", "href" : "msk-delete-cluster.html" }, { "title" : "Getting the Apache ZooKeeper connection string", "href" : "msk-get-connection-string.html" }, { "title" : "Getting the bootstrap brokers", "href" : "msk-get-bootstrap-brokers.html" }, { "title" : "Listing clusters", "href" : "msk-list-clusters.html" }, { "title" : "Provisioning storage throughput", "href" : "msk-provision-throughput.html" }, { "title" : "Scaling up broker storage", "href" : "msk-update-storage.html", "contents" : [ { "title" : "Automatic scaling", "href" : "msk-autoexpand.html" }, { "title" : "Manual scaling", "href" : "manually-expand-storage.html" } ] }, { "title" : "Updating the broker type", "href" : "msk-update-broker-type.html" }, { "title" : "Updating the configuration of a cluster", "href" : "msk-update-cluster-config.html" }, { "title" : "Expanding a cluster", "href" : "msk-update-broker-count.html" }, { "title" : "Updating security", "href" : "msk-update-security.html" }, { "title" : "Rebooting a broker for a cluster", "href" : "msk-reboot-broker.html" }, { "title" : "Tagging a cluster", "href" : "msk-tagging.html" }, { "title" : "Accessing EventBridge pipes", "href" : "eb-pipes-integration.html" } ] }, { "title" : "Configuration", "href" : "msk-configuration.html", "contents" : [ { "title" : "Custom configurations", "href" : "msk-configuration-properties.html" }, { "title" : "Default configuration", "href" : "msk-default-configuration.html" }, { "title" : "Configuration operations", "href" : "msk-configuration-operations.html" } ] }, { "title" : "MSK Serverless", "href" : "serverless.html", "contents" : [ { "title" : "Getting started tutorial", "href" : "serverless-getting-started.html", "contents" : [ { "title" : "Step 1: Create a cluster", "href" : "create-serverless-cluster.html" }, { "title" : "Step 2: Create an IAM role", "href" : "create-iam-role.html" }, { "title" : "Step 3: Create a client machine", "href" : "create-serverless-cluster-client.html" }, { "title" : "Step 4: Create a topic", "href" : "msk-serverless-create-topic.html" }, { "title" : "Step 5: Produce and consume data", "href" : "msk-serverless-produce-consume.html" }, { "title" : "Step 6: Delete resources", "href" : "delete-resources.html" } ] }, { "title" : "Configuration", "href" : "serverless-config.html" }, { "title" : "Monitoring", "href" : "serverless-monitoring.html" } ] }, { "title" : "MSK Connect", "href" : "msk-connect.html", "contents" : [ { "title" : "Getting started", "href" : "msk-connect-getting-started.html", "contents" : [ { "title" : "Step 1: Set up required resources", "href" : "mkc-tutorial-setup.html" }, { "title" : "Step 2: Create custom plugin", "href" : "mkc-create-plugin.html" }, { "title" : "Step 3: Create client machine and Apache Kafka topic", "href" : "mkc-create-topic.html" }, { "title" : "Step 4: Create connector", "href" : "mkc-create-connector.html" }, { "title" : "Step 5: Send data", "href" : "mkc-send-data.html" } ] }, { "title" : "Connectors", "href" : "msk-connect-connectors.html" }, { "title" : "Plugins", "href" : "msk-connect-plugins.html" }, { "title" : "Workers", "href" : "msk-connect-workers.html" }, { "title" : "Configuration providers", "href" : "msk-connect-config-provider.html" }, { "title" : "IAM roles and policies", "href" : "msk-connect-iam.html", "contents" : [ { "title" : "Service execution role", "href" : "msk-connect-service-execution-role.html" }, { "title" : "Example policies", "href" : "mkc-iam-policy-examples.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "AWS managed policies", "href" : "mkc-security-iam-awsmanpol.html" }, { "title" : "Using service-linked roles", "href" : "mkc-using-service-linked-roles.html" } ] }, { "title" : "Enabling internet access", "href" : "msk-connect-internet-access.html" }, { "title" : "Private DNS hostnames", "href" : "msk-connect-dns.html", "contents" : [ { "title" : "Configuring", "href" : "msk-connect-dns-config-dhcp.html" }, { "title" : "DNS attributes", "href" : "msk-connect-dns-attributes.html" }, { "title" : "Failure handling", "href" : "msk-connect-dns-failure-handling.html" } ] }, { "title" : "Logging", "href" : "msk-connect-logging.html" }, { "title" : "Monitoring", "href" : "mkc-monitoring-overview.html" }, { "title" : "Examples", "href" : "msk-connect-examples.html", "contents" : [ { "title" : "Amazon S3 sink connector", "href" : "mkc-S3sink-connector-example.html" }, { "title" : "Debezium source connector", "href" : "mkc-debeziumsource-connector-example.html" } ] }, { "title" : "Best practices", "href" : "msk-connect-bestpractices.html", "contents" : [ { "title" : "Connecting from connectors", "href" : "msk-connect-from-connectors.html" } ] }, { "title" : "Troubleshooting", "href" : "msk-connect-troubleshooting.html" } ] }, { "title" : "MSK Replicator", "href" : "msk-replicator.html", "contents" : [ { "title" : "How Amazon MSK Replicator works", "href" : "msk-replicator-how-it-works.html.html" }, { "title" : "Requirements and considerations for creating an Amazon MSK Replicator", "href" : "msk-replicator-requirements.html" }, { "title" : "Getting started tutorial", "href" : "msk-replicator-getting-started.html", "contents" : [ { "title" : "Step 1: Prepare the Amazon MSK source cluster", "href" : "msk-replicator-prepare-cluster.html" }, { "title" : "Step 2: Prepare the Amazon MSK target cluster", "href" : "msk-replicator-prepare-target-cluster.html" }, { "title" : "Step 3: Create an Amazon MSK Replicator", "href" : "msk-replicator-create.html" } ] }, { "title" : "Edit MSK Replicator settings", "href" : "msk-replicator-edit-settings.html" }, { "title" : "Delete an MSK Replicator", "href" : "msk-replicator-delete.html" }, { "title" : "Monitor replication", "href" : "msk-replicator-monitor.html" }, { "title" : "Using replication to increase the resiliency of a Kafka streaming application across regions", "href" : "msk-replicator-increase-resiliency.html", "contents" : [ { "title" : "Creating an active-passive Kafka cluster setup and replicated topic naming", "href" : "msk-replicators-active-passive-cluster-setup.html" }, { "title" : "When to failover to the secondary AWS Region", "href" : "msk-replicator-when-planned-failover.html" }, { "title" : "Performing a planned failover to the secondary AWS Region", "href" : "msk-replicator-perform-planned-failover.html" }, { "title" : "Performing an unplanned failover to the secondary AWS Region", "href" : "msk-replicator-perform-unplanned-failover.html" }, { "title" : "Performing failback to the primary AWS Region", "href" : "msk-replicator-perform-failback.html" }, { "title" : "Creating an active-active setup using MSK Replicator", "href" : "msk-replicator-active-active.html" } ] }, { "title" : "Troubleshooting MSK Replicator", "href" : "msk-replicator-troubleshooting.html" }, { "title" : "Best practices for using MSK Replicator", "href" : "msk-replicator-best-practices.html" } ] }, { "title" : "Cluster states", "href" : "msk-cluster-states.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "Encryption", "href" : "msk-encryption.html" }, { "title" : "How do I get started with encryption?", "href" : "msk-working-with-encryption.html" } ] }, { "title" : "Authentication and authorization for Amazon MSK APIs", "href" : "security-iam.html", "contents" : [ { "title" : "How Amazon MSK works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Service-linked roles", "href" : "using-service-linked-roles.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Authentication and authorization for Apache Kafka APIs", "href" : "kafka_apis_iam.html", "contents" : [ { "title" : "IAM access control", "href" : "iam-access-control.html" }, { "title" : "Mutual TLS authentication", "href" : "msk-authentication.html" }, { "title" : "SASL/SCRAM authentication", "href" : "msk-password.html" }, { "title" : "Apache Kafka ACLs", "href" : "msk-acls.html" } ] }, { "title" : "Changing security groups", "href" : "change-security-group.html" }, { "title" : "Controlling access to Apache ZooKeeper", "href" : "zookeeper-security.html" }, { "title" : "Logging", "href" : "msk-logging.html" }, { "title" : "Compliance validation", "href" : "MSK-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Connecting to an MSK cluster", "href" : "client-access.html", "contents" : [ { "title" : "Public access", "href" : "public-access.html" }, { "title" : "Access from within AWS", "href" : "aws-access.html", "contents" : [ { "title" : "EC2-Classic", "href" : "accessing-cluster-from-ec2-classic.html" }, { "title" : "Multi-VPC private connectivity in a single Region", "href" : "aws-access-mult-vpc.html", "contents" : [ { "title" : "Update auth schemes on a cluster", "href" : "mvpc-cross-account-update-authschemes.html" }, { "title" : "Reject managed VPC connection", "href" : "mvpc-cross-account-reject-connection.html" }, { "title" : "Delete managed VPC connection", "href" : "mvpc-cross-account-delete-connection.html" }, { "title" : "Multi-VPC private connectivity permissions", "href" : "mvpc-cross-account-permissions.html" } ] }, { "title" : "Port information", "href" : "port-info.html" } ] } ] }, { "title" : "Migration", "href" : "migration.html" }, { "title" : "Monitoring a cluster", "href" : "monitoring.html", "contents" : [ { "title" : "Amazon MSK metrics for monitoring with CloudWatch", "href" : "metrics-details.html" }, { "title" : "Viewing Amazon MSK metrics using CloudWatch", "href" : "cloudwatch-metrics.html" }, { "title" : "Consumer-lag monitoring", "href" : "consumer-lag.html" }, { "title" : "Open monitoring with Prometheus", "href" : "open-monitoring.html" } ] }, { "title" : "Cruise Control", "href" : "cruise-control.html" }, { "title" : "Quota", "href" : "limits.html" }, { "title" : "Resources", "href" : "resources.html" }, { "title" : "MSK integrations", "href" : "msk-integrations.html", "contents" : [ { "title" : "Athena", "href" : "integrations-athena.html" }, { "title" : "Redshift", "href" : "integrations-redshift.html" }, { "title" : "Kinesis Data Firehose", "href" : "integrations-kinesis-data-firehose.html" } ] }, { "title" : "Apache Kafka versions", "href" : "kafka-versions.html", "contents" : [ { "title" : "Supported Apache Kafka versions", "href" : "supported-kafka-versions.html" }, { "title" : "Updating the Apache Kafka version", "href" : "version-upgrades.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" }, { "title" : "Best practices", "href" : "bestpractices.html" }, { "title" : "API Operations for MSK Replicator", "href" : "api-operations.html" }, { "title" : "API Resources for MSK Replicator", "href" : "msk-replicator-api-operations.html", "contents" : [ { "title" : "V1 Replicators", "href" : "v1-replicators.html" }, { "title" : "V1 Replicators replicatorArn", "href" : "v1-replicators-replicatorarn.html" }, { "title" : "V1 Replicators replicatorArn Replication-info", "href" : "v1-replicators-replicatorarn-replication-info.html" } ] }, { "title" : "Document history", "href" : "doc-history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/msk/latest/developerguide/",
+    "service": "msk",
+    "toc": {
+        "contents": [
+            {
+                "title": "Welcome",
+                "href": "what-is-msk.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "before-you-begin.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Step 1: Create a cluster",
+                        "href": "create-cluster.html"
+                    },
+                    {
+                        "title": "Step 2: Create an IAM role",
+                        "href": "create-client-iam-role.html"
+                    },
+                    {
+                        "title": "Step 3: Create a client machine",
+                        "href": "create-client-machine.html"
+                    },
+                    {
+                        "title": "Step 4: Create a topic",
+                        "href": "create-topic.html"
+                    },
+                    {
+                        "title": "Step 5: Produce and consume data",
+                        "href": "produce-consume.html"
+                    },
+                    {
+                        "title": "Step 6: View metrics",
+                        "href": "view-metrics.html"
+                    },
+                    {
+                        "title": "Step 7: Delete the resources",
+                        "href": "delete-cluster.html"
+                    }
+                ]
+            },
+            {
+                "title": "How it works",
+                "href": "operations.html",
+                "contents": [
+                    {
+                        "title": "Creating a cluster",
+                        "href": "msk-create-cluster.html"
+                    },
+                    {
+                        "title": "Tiered storage",
+                        "href": "msk-tiered-storage.html",
+                        "contents": [
+                            {
+                                "title": "Tiered storage scenario",
+                                "href": "msk-tiered-storage-retention-rules.html"
+                            },
+                            {
+                                "title": "Creating a tiered storage cluster with the console",
+                                "href": "msk-create-cluster-tiered-storage-console.html"
+                            },
+                            {
+                                "title": "Creating a tiered storage cluster with the AWS CLI",
+                                "href": "msk-create-cluster-tiered-storage-cli.html"
+                            },
+                            {
+                                "title": "Enabling and disabling tiered storage on an existing topic",
+                                "href": "msk-enable-disable-topic-tiered-storage-cli.html"
+                            },
+                            {
+                                "title": "Enabling tiered storage on an existing cluster using AWS CLI",
+                                "href": "msk-enable-cluster-tiered-storage-cli.html"
+                            },
+                            {
+                                "title": "Updating tiered storage on an existing cluster using AWS console",
+                                "href": "msk-update-tiered-storage-console.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Deleting a cluster",
+                        "href": "msk-delete-cluster.html"
+                    },
+                    {
+                        "title": "Getting the Apache ZooKeeper connection string",
+                        "href": "msk-get-connection-string.html"
+                    },
+                    {
+                        "title": "Getting the bootstrap brokers",
+                        "href": "msk-get-bootstrap-brokers.html"
+                    },
+                    {
+                        "title": "Listing clusters",
+                        "href": "msk-list-clusters.html"
+                    },
+                    {
+                        "title": "Provisioning storage throughput",
+                        "href": "msk-provision-throughput.html"
+                    },
+                    {
+                        "title": "Scaling up broker storage",
+                        "href": "msk-update-storage.html",
+                        "contents": [
+                            {
+                                "title": "Automatic scaling",
+                                "href": "msk-autoexpand.html"
+                            },
+                            {
+                                "title": "Manual scaling",
+                                "href": "manually-expand-storage.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Updating the broker type",
+                        "href": "msk-update-broker-type.html"
+                    },
+                    {
+                        "title": "Updating the configuration of a cluster",
+                        "href": "msk-update-cluster-config.html"
+                    },
+                    {
+                        "title": "Expanding a cluster",
+                        "href": "msk-update-broker-count.html"
+                    },
+                    {
+                        "title": "Updating security",
+                        "href": "msk-update-security.html"
+                    },
+                    {
+                        "title": "Rebooting a broker for a cluster",
+                        "href": "msk-reboot-broker.html"
+                    },
+                    {
+                        "title": "Tagging a cluster",
+                        "href": "msk-tagging.html"
+                    },
+                    {
+                        "title": "Accessing EventBridge pipes",
+                        "href": "eb-pipes-integration.html"
+                    }
+                ]
+            },
+            {
+                "title": "Configuration",
+                "href": "msk-configuration.html",
+                "contents": [
+                    {
+                        "title": "Custom configurations",
+                        "href": "msk-configuration-properties.html"
+                    },
+                    {
+                        "title": "Default configuration",
+                        "href": "msk-default-configuration.html"
+                    },
+                    {
+                        "title": "Configuration operations",
+                        "href": "msk-configuration-operations.html"
+                    }
+                ]
+            },
+            {
+                "title": "MSK Serverless",
+                "href": "serverless.html",
+                "contents": [
+                    {
+                        "title": "Getting started tutorial",
+                        "href": "serverless-getting-started.html",
+                        "contents": [
+                            {
+                                "title": "Step 1: Create a cluster",
+                                "href": "create-serverless-cluster.html"
+                            },
+                            {
+                                "title": "Step 2: Create an IAM role",
+                                "href": "create-iam-role.html"
+                            },
+                            {
+                                "title": "Step 3: Create a client machine",
+                                "href": "create-serverless-cluster-client.html"
+                            },
+                            {
+                                "title": "Step 4: Create a topic",
+                                "href": "msk-serverless-create-topic.html"
+                            },
+                            {
+                                "title": "Step 5: Produce and consume data",
+                                "href": "msk-serverless-produce-consume.html"
+                            },
+                            {
+                                "title": "Step 6: Delete resources",
+                                "href": "delete-resources.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Configuration",
+                        "href": "serverless-config.html"
+                    },
+                    {
+                        "title": "Monitoring",
+                        "href": "serverless-monitoring.html"
+                    }
+                ]
+            },
+            {
+                "title": "MSK Connect",
+                "href": "msk-connect.html",
+                "contents": [
+                    {
+                        "title": "Getting started",
+                        "href": "msk-connect-getting-started.html",
+                        "contents": [
+                            {
+                                "title": "Step 1: Set up required resources",
+                                "href": "mkc-tutorial-setup.html"
+                            },
+                            {
+                                "title": "Step 2: Create custom plugin",
+                                "href": "mkc-create-plugin.html"
+                            },
+                            {
+                                "title": "Step 3: Create client machine and Apache Kafka topic",
+                                "href": "mkc-create-topic.html"
+                            },
+                            {
+                                "title": "Step 4: Create connector",
+                                "href": "mkc-create-connector.html"
+                            },
+                            {
+                                "title": "Step 5: Send data",
+                                "href": "mkc-send-data.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Connectors",
+                        "href": "msk-connect-connectors.html"
+                    },
+                    {
+                        "title": "Plugins",
+                        "href": "msk-connect-plugins.html"
+                    },
+                    {
+                        "title": "Workers",
+                        "href": "msk-connect-workers.html"
+                    },
+                    {
+                        "title": "Configuration providers",
+                        "href": "msk-connect-config-provider.html"
+                    },
+                    {
+                        "title": "IAM roles and policies",
+                        "href": "msk-connect-iam.html",
+                        "contents": [
+                            {
+                                "title": "Service execution role",
+                                "href": "msk-connect-service-execution-role.html"
+                            },
+                            {
+                                "title": "Example policies",
+                                "href": "mkc-iam-policy-examples.html"
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "mkc-security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "mkc-using-service-linked-roles.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Enabling internet access",
+                        "href": "msk-connect-internet-access.html"
+                    },
+                    {
+                        "title": "Private DNS hostnames",
+                        "href": "msk-connect-dns.html",
+                        "contents": [
+                            {
+                                "title": "Configuring",
+                                "href": "msk-connect-dns-config-dhcp.html"
+                            },
+                            {
+                                "title": "DNS attributes",
+                                "href": "msk-connect-dns-attributes.html"
+                            },
+                            {
+                                "title": "Failure handling",
+                                "href": "msk-connect-dns-failure-handling.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging",
+                        "href": "msk-connect-logging.html"
+                    },
+                    {
+                        "title": "Monitoring",
+                        "href": "mkc-monitoring-overview.html"
+                    },
+                    {
+                        "title": "Examples",
+                        "href": "msk-connect-examples.html",
+                        "contents": [
+                            {
+                                "title": "Amazon S3 sink connector",
+                                "href": "mkc-S3sink-connector-example.html"
+                            },
+                            {
+                                "title": "Debezium source connector",
+                                "href": "mkc-debeziumsource-connector-example.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Best practices",
+                        "href": "msk-connect-bestpractices.html",
+                        "contents": [
+                            {
+                                "title": "Connecting from connectors",
+                                "href": "msk-connect-from-connectors.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "href": "msk-connect-troubleshooting.html"
+                    }
+                ]
+            },
+            {
+                "title": "MSK Replicator",
+                "href": "msk-replicator.html",
+                "contents": [
+                    {
+                        "title": "How Amazon MSK Replicator works",
+                        "href": "msk-replicator-how-it-works.html.html"
+                    },
+                    {
+                        "title": "Requirements and considerations for creating an Amazon MSK Replicator",
+                        "href": "msk-replicator-requirements.html"
+                    },
+                    {
+                        "title": "Getting started tutorial",
+                        "href": "msk-replicator-getting-started.html",
+                        "contents": [
+                            {
+                                "title": "Step 1: Prepare the Amazon MSK source cluster",
+                                "href": "msk-replicator-prepare-cluster.html"
+                            },
+                            {
+                                "title": "Step 2: Prepare the Amazon MSK target cluster",
+                                "href": "msk-replicator-prepare-target-cluster.html"
+                            },
+                            {
+                                "title": "Step 3: Create an Amazon MSK Replicator",
+                                "href": "msk-replicator-create.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Edit MSK Replicator settings",
+                        "href": "msk-replicator-edit-settings.html"
+                    },
+                    {
+                        "title": "Delete an MSK Replicator",
+                        "href": "msk-replicator-delete.html"
+                    },
+                    {
+                        "title": "Monitor replication",
+                        "href": "msk-replicator-monitor.html"
+                    },
+                    {
+                        "title": "Using replication to increase the resiliency of a Kafka streaming application across regions",
+                        "href": "msk-replicator-increase-resiliency.html",
+                        "contents": [
+                            {
+                                "title": "Creating an active-passive Kafka cluster setup and replicated topic naming",
+                                "href": "msk-replicators-active-passive-cluster-setup.html"
+                            },
+                            {
+                                "title": "When to failover to the secondary AWS Region",
+                                "href": "msk-replicator-when-planned-failover.html"
+                            },
+                            {
+                                "title": "Performing a planned failover to the secondary AWS Region",
+                                "href": "msk-replicator-perform-planned-failover.html"
+                            },
+                            {
+                                "title": "Performing an unplanned failover to the secondary AWS Region",
+                                "href": "msk-replicator-perform-unplanned-failover.html"
+                            },
+                            {
+                                "title": "Performing failback to the primary AWS Region",
+                                "href": "msk-replicator-perform-failback.html"
+                            },
+                            {
+                                "title": "Creating an active-active setup using MSK Replicator",
+                                "href": "msk-replicator-active-active.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Troubleshooting MSK Replicator",
+                        "href": "msk-replicator-troubleshooting.html"
+                    },
+                    {
+                        "title": "Best practices for using MSK Replicator",
+                        "href": "msk-replicator-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Cluster states",
+                "href": "msk-cluster-states.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Encryption",
+                                "href": "msk-encryption.html"
+                            },
+                            {
+                                "title": "How do I get started with encryption?",
+                                "href": "msk-working-with-encryption.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Authentication and authorization for Amazon MSK APIs",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon MSK works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Authentication and authorization for Apache Kafka APIs",
+                        "href": "kafka_apis_iam.html",
+                        "contents": [
+                            {
+                                "title": "IAM access control",
+                                "href": "iam-access-control.html"
+                            },
+                            {
+                                "title": "Mutual TLS authentication",
+                                "href": "msk-authentication.html"
+                            },
+                            {
+                                "title": "SASL/SCRAM authentication",
+                                "href": "msk-password.html"
+                            },
+                            {
+                                "title": "Apache Kafka ACLs",
+                                "href": "msk-acls.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Changing security groups",
+                        "href": "change-security-group.html"
+                    },
+                    {
+                        "title": "Controlling access to Apache ZooKeeper",
+                        "href": "zookeeper-security.html"
+                    },
+                    {
+                        "title": "Logging",
+                        "href": "msk-logging.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "MSK-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Connecting to an MSK cluster",
+                "href": "client-access.html",
+                "contents": [
+                    {
+                        "title": "Public access",
+                        "href": "public-access.html"
+                    },
+                    {
+                        "title": "Access from within AWS",
+                        "href": "aws-access.html",
+                        "contents": [
+                            {
+                                "title": "EC2-Classic",
+                                "href": "accessing-cluster-from-ec2-classic.html"
+                            },
+                            {
+                                "title": "Multi-VPC private connectivity in a single Region",
+                                "href": "aws-access-mult-vpc.html",
+                                "contents": [
+                                    {
+                                        "title": "Update auth schemes on a cluster",
+                                        "href": "mvpc-cross-account-update-authschemes.html"
+                                    },
+                                    {
+                                        "title": "Reject managed VPC connection",
+                                        "href": "mvpc-cross-account-reject-connection.html"
+                                    },
+                                    {
+                                        "title": "Delete managed VPC connection",
+                                        "href": "mvpc-cross-account-delete-connection.html"
+                                    },
+                                    {
+                                        "title": "Multi-VPC private connectivity permissions",
+                                        "href": "mvpc-cross-account-permissions.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Port information",
+                                "href": "port-info.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Migration",
+                "href": "migration.html"
+            },
+            {
+                "title": "Monitoring a cluster",
+                "href": "monitoring.html",
+                "contents": [
+                    {
+                        "title": "Amazon MSK metrics for monitoring with CloudWatch",
+                        "href": "metrics-details.html"
+                    },
+                    {
+                        "title": "Viewing Amazon MSK metrics using CloudWatch",
+                        "href": "cloudwatch-metrics.html"
+                    },
+                    {
+                        "title": "Consumer-lag monitoring",
+                        "href": "consumer-lag.html"
+                    },
+                    {
+                        "title": "Open monitoring with Prometheus",
+                        "href": "open-monitoring.html"
+                    }
+                ]
+            },
+            {
+                "title": "Cruise Control",
+                "href": "cruise-control.html"
+            },
+            {
+                "title": "Quota",
+                "href": "limits.html"
+            },
+            {
+                "title": "Resources",
+                "href": "resources.html"
+            },
+            {
+                "title": "MSK integrations",
+                "href": "msk-integrations.html",
+                "contents": [
+                    {
+                        "title": "Athena",
+                        "href": "integrations-athena.html"
+                    },
+                    {
+                        "title": "Redshift",
+                        "href": "integrations-redshift.html"
+                    },
+                    {
+                        "title": "Kinesis Data Firehose",
+                        "href": "integrations-kinesis-data-firehose.html"
+                    }
+                ]
+            },
+            {
+                "title": "Apache Kafka versions",
+                "href": "kafka-versions.html",
+                "contents": [
+                    {
+                        "title": "Supported Apache Kafka versions",
+                        "href": "supported-kafka-versions.html"
+                    },
+                    {
+                        "title": "Updating the Apache Kafka version",
+                        "href": "version-upgrades.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            },
+            {
+                "title": "Best practices",
+                "href": "bestpractices.html"
+            },
+            {
+                "title": "API Operations for MSK Replicator",
+                "href": "api-operations.html"
+            },
+            {
+                "title": "API Resources for MSK Replicator",
+                "href": "msk-replicator-api-operations.html",
+                "contents": [
+                    {
+                        "title": "V1 Replicators",
+                        "href": "v1-replicators.html"
+                    },
+                    {
+                        "title": "V1 Replicators replicatorArn",
+                        "href": "v1-replicators-replicatorarn.html"
+                    },
+                    {
+                        "title": "V1 Replicators replicatorArn Replication-info",
+                        "href": "v1-replicators-replicatorarn-replication-info.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

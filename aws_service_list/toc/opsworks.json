@@ -1,1 +1,2034 @@
-{ "contents" : [ { "title" : "What Is AWS OpsWorks?", "href" : "welcome.html" }, { "title" : "AWS OpsWorks for Puppet Enterprise", "href" : "welcome_opspup.html", "contents" : [ { "title" : "End of Life FAQs", "href" : "opspup-eol-faqs.html" }, { "title" : "Getting Started", "href" : "gettingstarted-opspup.html", "contents" : [ { "title" : "Create a Puppet Master", "href" : "gettingstarted-opspup-create.html" }, { "title" : "Finish Configuration", "href" : "opspup-starterkit.html" }, { "title" : "Add Nodes to Manage", "href" : "opspup-addnodes.html" }, { "title" : "Sign in to the Puppet Enterprise Console", "href" : "opspup-puppet-dashboard.html" }, { "title" : "Optional: Use CodeCommit", "href" : "opspup-puppet-codecommit.html" } ] }, { "title" : "Create a Puppet Master in CloudFormation", "href" : "opspup-create-server-cfn.html" }, { "title" : "Update a Server to Use a Custom Domain", "href" : "opspup-update-server-custom-domain.html" }, { "title" : "Work with Tags", "href" : "opspup-tags.html" }, { "title" : "Back Up and Restore Servers", "href" : "opspup-backup-restore.html", "contents" : [ { "title" : "Back Up an OpsWorks for Puppet Enterprise Server", "href" : "opspup-backup.html" }, { "title" : "Restore an OpsWorks for Puppet Enterprise Server", "href" : "opspup-restore.html" } ] }, { "title" : "System Maintenance", "href" : "opspup-maintenance.html" }, { "title" : "Add Nodes Automatically", "href" : "opspup-unattend-assoc.html" }, { "title" : "Remove Nodes", "href" : "opspup-disassociate-node.html" }, { "title" : "Delete a Puppet Master", "href" : "opspup-delete-server.html" }, { "title" : "Migrate a Puppet Server to Amazon EC2", "href" : "opspup-migrate-ec2.html" }, { "title" : "Using AWS CloudTrail", "href" : "logging-opspup-using-cloudtrail.html" }, { "title" : "Troubleshooting", "href" : "troubleshoot-opspup.html" } ] }, { "title" : "AWS OpsWorks for Chef Automate", "href" : "welcome_opscm.html", "contents" : [ { "title" : "End of Life FAQs", "href" : "opscm-eol-faqs.html" }, { "title" : "Upgrade to Chef Automate 2", "href" : "opscm-a2upgrade.html" }, { "title" : "Getting Started", "href" : "gettingstarted-opscm.html", "contents" : [ { "title" : "Create a Chef Automate Server", "href" : "gettingstarted-opscm-create.html" }, { "title" : "Finish configuration and upload cookbooks", "href" : "opscm-starterkit.html" }, { "title" : "Add nodes to manage", "href" : "opscm-addnodes.html", "contents" : [ { "title" : "Add nodes individually", "href" : "opscm-addnodes-individually.html" }, { "title" : "Add nodes automatically", "href" : "opscm-unattend-assoc.html" } ] }, { "title" : "Sign in to the Chef Automate dashboard", "href" : "opscm-chef-dashboard.html" } ] }, { "title" : "Create a Chef Automate Server in CloudFormation", "href" : "opscm-create-server-cfn.html" }, { "title" : "Update a Server to Use a Custom Domain", "href" : "opscm-update-server-custom-domain.html" }, { "title" : "Regenerate the starter kit", "href" : "opscm-regenerate-starterkit.html" }, { "title" : "Work with Tags", "href" : "opscm-tags.html" }, { "title" : "Back up and restore servers", "href" : "opscm-backup-restore.html", "contents" : [ { "title" : "Back Up an AWS OpsWorks for Chef Automate Server", "href" : "opscm-chef-backup.html" }, { "title" : "Restore an AWS OpsWorks for Chef Automate Server", "href" : "opscm-chef-restore.html" } ] }, { "title" : "System Maintenance", "href" : "opscm-maintenance.html" }, { "title" : "Compliance Scans", "href" : "opscm-chefcompliance.html" }, { "title" : "Remove nodes", "href" : "opscm-disassociate-node.html" }, { "title" : "Delete a Chef Automate server", "href" : "opscm-delete-server.html" }, { "title" : "Reset Chef credentials", "href" : "opscm-resetchefcreds.html" }, { "title" : "Using AWS CloudTrail", "href" : "logging-opsca-using-cloudtrail.html" }, { "title" : "Troubleshooting", "href" : "troubleshoot-opscm.html" } ] }, { "title" : "Security in AWS OpsWorks Configuration Management (CM)", "href" : "security-opscm.html", "contents" : [ { "title" : "Data Protection", "href" : "data-protection.html" }, { "title" : "Identity and Access Management", "href" : "security-iam-opscm.html", "contents" : [ { "title" : "How AWS OpsWorks CM Works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-Based Policy Examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" }, { "title" : "Cross-service confused deputy prevention in AWS OpsWorks CM", "href" : "cross-service-confused-deputy-prevention.html" } ] }, { "title" : "Compliance Validation", "href" : "opsworks-stacks-compliance-opscm.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency-opscm.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security-opscm.html" } ] }, { "title" : "AWS OpsWorks Stacks", "href" : "welcome_classic.html", "contents" : [ { "title" : "End of Life FAQs", "href" : "stacks-eol-faqs.html" }, { "title" : "Migrating your applications to Systems Manager Application Manager", "href" : "migrating-to-systems-manager.html", "contents" : [ { "title" : "Prerequisites", "href" : "migrating-to-systems-manager-prerequisites.html" }, { "title" : "Limitations", "href" : "migrating-to-systems-manager-limitations.html" }, { "title" : "Getting started", "href" : "migrating-to-systems-manager-getting-started.html", "contents" : [ { "title" : "Step 1: Prepare your environment for running the script", "href" : "w2ab1c14c43c17b9.html" }, { "title" : "Step 2: Download the migration script", "href" : "migrating-to-systems-manager-download-script.html" }, { "title" : "Step 3: Set up your environment to run the script", "href" : "migrating-to-systems-manager-script-parameters.html" }, { "title" : "Step 4: Run the script", "href" : "migrating-to-systems-manager-run-script.html" }, { "title" : "Step 5: Provision a CloudFormation stack", "href" : "migrating-to-systems-manager-provision-stack.html" }, { "title" : "Step 6: Review the provisioned resources", "href" : "migrating-to-systems-manager-provision-resources.html" }, { "title" : "Step 7: Start an instance", "href" : "migrating-to-systems-manager-start-instance.html" }, { "title" : "Step 8: Review the instance", "href" : "migrating-to-systems-manager-review-instance.html" }, { "title" : "Step 9: Monitor and run operations on your instances using Systems Manager Application Manager", "href" : "migrating-to-systems-manager-monitor.html" } ] }, { "title" : "FAQ", "href" : "migrating-to-systems-manager-faqs.html" }, { "title" : "Troubleshooting", "href" : "migrating-to-systems-manager-troubleshooting.html" } ] }, { "title" : "Getting Started", "href" : "gettingstarted_intro.html", "contents" : [ { "title" : "Getting Started: Sample", "href" : "gettingstarted-intro.html", "contents" : [ { "title" : "Step 1: Complete the Prerequisites", "href" : "gettingstarted-intro-prerequisites.html" }, { "title" : "Step 2: Create a Stack", "href" : "gettingstarted-intro-create-stack.html" }, { "title" : "Step 3: Start the Instance and Deploy the App", "href" : "gettingstarted-intro-start-instance.html" }, { "title" : "Step 4: Test the Deployed App on the Instance", "href" : "gettingstarted-intro-test-app.html" }, { "title" : "Step 5: Explore the Stack's Settings", "href" : "gettingstarted-intro-explore-stack.html" }, { "title" : "Step 6: Explore the Layer's Settings", "href" : "gettingstarted-intro-explore-layer.html" }, { "title" : "Step 7: Explore the Instance's Settings and Logs", "href" : "gettingstarted-intro-explore-instance.html" }, { "title" : "Step 8: Explore the App's Settings", "href" : "gettingstarted-intro-explore-app.html" }, { "title" : "Step 9: Explore Layer Monitoring Reports", "href" : "gettingstarted-intro-explore-monitoring.html" }, { "title" : "Step 10: Explore Additional Stack Settings", "href" : "gettingstarted-intro-explore-more.html" }, { "title" : "Step 11 (Optional): Clean Up", "href" : "gettingstarted-intro-clean-up.html" }, { "title" : "Next Steps", "href" : "gettingstarted-intro-next-steps.html" } ] }, { "title" : "Getting Started: Linux", "href" : "gettingstarted-linux.html", "contents" : [ { "title" : "Step 1: Complete the Prerequisites", "href" : "gettingstarted-linux-prerequisites.html" }, { "title" : "Step 2: Create a Stack", "href" : "gettingstarted-linux-create-stack.html" }, { "title" : "Step 3: Add a Layer to the Stack", "href" : "gettingstarted-linux-add-layer.html" }, { "title" : "Step 4: Specify the App to Deploy to the Instance", "href" : "gettingstarted-linux-specify-app.html" }, { "title" : "Step 5: Launch an Instance", "href" : "gettingstarted-linux-launch-instance.html" }, { "title" : "Step 6: Deploy the App to the Instance", "href" : "gettingstarted-linux-deploy-app.html" }, { "title" : "Step 7: Test the Deployed App on the Instance", "href" : "gettingstarted-linux-test-app.html" }, { "title" : "Step 8 (Optional): Clean Up", "href" : "gettingstarted-linux-clean-up.html" }, { "title" : "Next Steps", "href" : "gettingstarted-linux-next-steps.html" }, { "title" : "Learning More: Explore the Cookbook Used in This Walkthrough", "href" : "gettingstarted-linux-explore-cookbook.html" }, { "title" : "Learning More: Explore the App Used in This Walkthrough", "href" : "gettingstarted-linux-explore-app-source.html" } ] }, { "title" : "Getting Started: Windows", "href" : "gettingstarted-windows.html", "contents" : [ { "title" : "Step 1: Complete the Prerequisites", "href" : "gettingstarted-windows-prerequisites.html" }, { "title" : "Step 2: Create a Basic Application Server Stack", "href" : "gettingstarted-windows-basic.html", "contents" : [ { "title" : "Step 2.1: Create the Stack", "href" : "gettingstarted-windows-stack.html" }, { "title" : "Step 2.2: Authorize RDP Access", "href" : "gettingstarted-windows-rdp.html" }, { "title" : "Step 2.3: Implement a Custom Cookbook", "href" : "gettingstarted-windows-cookbook.html" }, { "title" : "Step 2.4: Add an IIS Layer", "href" : "gettingstarted-windows-iis-layer.html" }, { "title" : "Step 2.5: Deploy an App", "href" : "gettingstarted-windows-deploy.html" } ] }, { "title" : "Step 3: Scale Out IISExample", "href" : "gettingstarted-windows-scale.html", "contents" : [ { "title" : "Add a Load Balancer", "href" : "gettingstarted-windows-scale-elb.html" } ] }, { "title" : "Next Steps", "href" : "gettingstarted-windows-what-next.html" } ] }, { "title" : "Getting Started: Cookbooks", "href" : "gettingstarted-cookbooks.html", "contents" : [ { "title" : "Step 1: Create the Cookbook", "href" : "gettingstarted-cookbooks-create-cookbook.html" }, { "title" : "Step 2: Create the Stack", "href" : "gettingstarted-cookbooks-create-stack.html" }, { "title" : "Step 3: Run the Recipe", "href" : "gettingstarted-cookbooks-test-recipe.html" }, { "title" : "Step 4: Add a Recipe that Installs a Package", "href" : "gettingstarted-cookbooks-install-package.html" }, { "title" : "Step 5: Copy the Updated Cookbook", "href" : "gettingstarted-cookbooks-copy-cookbook.html" }, { "title" : "Step 6: Create a Recipe that Adds a User", "href" : "gettingstarted-cookbooks-add-user.html" }, { "title" : "Step 7: Create a Recipe that Creates a Directory", "href" : "gettingstarted-cookbooks-create-directory.html" }, { "title" : "Step 8: Create a Recipe that Creates and Copies Files", "href" : "gettingstarted-cookbooks-create-file.html" }, { "title" : "Step 9: Create a Recipe that Runs a Command", "href" : "gettingstarted-cookbooks-run-command.html" }, { "title" : "Step 10: Create a Recipe that Runs a Script", "href" : "gettingstarted-cookbooks-run-script.html" }, { "title" : "Step 11: Create a Recipe that Manages a Service", "href" : "gettingstarted-cookbooks-manage-service.html" }, { "title" : "Step 12: Create a Recipe that Uses Custom JSON", "href" : "gettingstarted-cookbooks-custom-json.html" }, { "title" : "Step 13: Create a Recipe that Uses Data Bags", "href" : "gettingstarted-cookbooks-data-bags.html" }, { "title" : "Step 14: Create a Recipe that Uses Iteration", "href" : "gettingstarted-cookbooks-iteration.html" }, { "title" : "Step 15: Create a Recipe that Uses Conditional Logic", "href" : "gettingstarted-cookbooks-conditional-logic.html" }, { "title" : "Step 16: Create a Recipe that Uses a Community Cookbook", "href" : "gettingstarted-cookbooks-community-cookbooks.html" }, { "title" : "Step 17: (Optional) Clean Up", "href" : "gettingstarted-cookbooks-clean-up.html" }, { "title" : "Next Steps", "href" : "gettingstarted-cookbooks-next-steps.html" } ] } ] }, { "title" : "Best Practices", "href" : "best-practices.html", "contents" : [ { "title" : "Root Device Storage", "href" : "best-practices-storage.html" }, { "title" : "Optimizing the Number of Servers", "href" : "best-practices-autoscale.html" }, { "title" : "Managing Permissions", "href" : "best-practices-permissions.html" }, { "title" : "Managing and Deploying Apps and Cookbooks", "href" : "best-deploy.html" }, { "title" : "Packaging Cookbook Dependencies Locally", "href" : "best-practices-packaging-cookbooks-locally.html" } ] }, { "title" : "Stacks", "href" : "workingstacks.html", "contents" : [ { "title" : "Migrate stacks from EC2-Classic", "href" : "workingstacks-migrate-ec2-vpc.html" }, { "title" : "Create a New Stack", "href" : "workingstacks-creating.html" }, { "title" : "Running a Stack in a VPC", "href" : "workingstacks-vpc.html" }, { "title" : "Update a Stack", "href" : "workingstacks-edit.html" }, { "title" : "Clone a Stack", "href" : "workingstacks-cloning.html" }, { "title" : "Run Stack Commands", "href" : "workingstacks-commands.html" }, { "title" : "Using Custom JSON", "href" : "workingstacks-json.html" }, { "title" : "Delete a Stack", "href" : "workingstacks-shutting.html" } ] }, { "title" : "Layers", "href" : "workinglayers.html", "contents" : [ { "title" : "OpsWorks Layer Basics", "href" : "workinglayers-basics.html", "contents" : [ { "title" : "Creating an OpsWorks Layer", "href" : "workinglayers-basics-create.html" }, { "title" : "Editing an OpsWorks Layer's Configuration", "href" : "workinglayers-basics-edit.html" }, { "title" : "Using Auto Healing", "href" : "workinginstances-autohealing.html" }, { "title" : "Deleting an OpsWorks Layer", "href" : "workinglayers-basics-delete.html" } ] }, { "title" : "Elastic Load Balancing Layer", "href" : "layers-elb.html" }, { "title" : "Amazon RDS Service Layer", "href" : "workinglayers-db-rds.html" }, { "title" : "ECS Cluster Layers", "href" : "workinglayers-ecscluster.html" }, { "title" : "Custom Layers", "href" : "workinglayers-custom.html" }, { "title" : "Per-layer Package Installations", "href" : "per-layer-os-package-install.html" } ] }, { "title" : "Instances", "href" : "workinginstances.html", "contents" : [ { "title" : "Using AWS OpsWorks Stacks Instances", "href" : "workinginstances-opsworks.html", "contents" : [ { "title" : "AWS OpsWorks Stacks operating systems", "href" : "workinginstances-os.html", "contents" : [ { "title" : "Linux operating systems", "href" : "workinginstances-os-linux.html" }, { "title" : "Microsoft Windows Server", "href" : "workinginstances-os-windows.html" } ] }, { "title" : "Adding an Instance to a Layer", "href" : "workinginstances-add.html" }, { "title" : "Using Custom AMIs", "href" : "workinginstances-custom-ami.html" }, { "title" : "Manually Starting, Stopping, and Rebooting 24/7 Instances", "href" : "workinginstances-starting.html" }, { "title" : "Managing load with time-based and load-based instances", "href" : "workinginstances-autoscaling.html", "contents" : [ { "title" : "Using automatic time-based scaling", "href" : "workinginstances-autoscaling-timebased.html" }, { "title" : "Using automatic load-based scaling", "href" : "workinginstances-autoscaling-loadbased.html" } ] } ] }, { "title" : "Using Computing Resources Created Outside of AWS OpsWorks Stacks", "href" : "registered-instances.html", "contents" : [ { "title" : "Registering an Instance with an AWS OpsWorks Stacks Stack", "href" : "registered-instances-register.html", "contents" : [ { "title" : "Walkthrough: Register an Instance from Your Workstation", "href" : "registered-instances-register-walkthrough.html" }, { "title" : "Registering Amazon EC2 and On-premises Instances", "href" : "registered-instances-register-registering.html", "contents" : [ { "title" : "Preparing the Instance", "href" : "registered-instances-register-registering-prepare.html" }, { "title" : "Installing and Configuring the AWS CLI", "href" : "registered-instances-register-registering-cli.html" }, { "title" : "Registering the Instance", "href" : "registered-instances-register-registering-register.html" }, { "title" : "Using the register Command", "href" : "registered-instances-register-registering-command.html" }, { "title" : "Example register Commands", "href" : "registered-instances-register-registering-examples.html" }, { "title" : "Instance Registration Policies", "href" : "registered-instances-register-registering-template.html" } ] } ] }, { "title" : "Managing Registered Instances", "href" : "registered-instances-manage.html" }, { "title" : "Assigning a Registered Instance to a Layer", "href" : "registered-instances-assign.html" }, { "title" : "Unassigning a Registered Instance", "href" : "registered-instances-unassign.html" }, { "title" : "Deregistering a Registered Instance", "href" : "registered-instances-deregister.html" }, { "title" : "Registered Instance Life Cycle", "href" : "registered-instances-lifecycle.html" } ] }, { "title" : "Editing the Instance Configuration", "href" : "workinginstances-properties.html" }, { "title" : "Deleting AWS OpsWorks Stacks Instances", "href" : "workinginstances-delete.html" }, { "title" : "Logging In with SSH", "href" : "workinginstances-ssh.html", "contents" : [ { "title" : "Using the Built-in MindTerm SSH Client", "href" : "workinginstances-ssh-mindterm.html" }, { "title" : "Using a Third-Party SSH Client", "href" : "workinginstances-ssh-third.html" } ] }, { "title" : "Logging In with RDP", "href" : "workinginstances-rdp.html" } ] }, { "title" : "Apps", "href" : "workingapps.html", "contents" : [ { "title" : "Adding Apps", "href" : "workingapps-creating.html" }, { "title" : "Deploying Apps", "href" : "workingapps-deploying.html" }, { "title" : "Editing Apps", "href" : "workingapps-editing.html" }, { "title" : "Connecting to a Database", "href" : "workingapps-connectdb.html" }, { "title" : "Using Environment Variables", "href" : "apps-environment-vars.html" }, { "title" : "Passing Data to Applications", "href" : "apps-data.html" }, { "title" : "Using Git Repository SSH Keys", "href" : "workingapps-deploykeys.html" }, { "title" : "Using Custom Domains", "href" : "workingapps-domains.html", "contents" : [ { "title" : "Running Multiple Applications on the Same Application Server", "href" : "workingapps-multiple.html" } ] }, { "title" : "Using SSL", "href" : "workingsecurity-ssl.html" } ] }, { "title" : "Cookbooks and Recipes", "href" : "workingcookbook.html", "contents" : [ { "title" : "Cookbook Repositories", "href" : "workingcookbook-installingcustom-repo.html" }, { "title" : "Chef Versions", "href" : "workingcookbook-chef11.html", "contents" : [ { "title" : "Implementing Recipes: Chef 12.2", "href" : "workingcookbook-chef12.html" }, { "title" : "Implementing Recipes: Chef 12", "href" : "workingcookbook-chef12-linux.html" }, { "title" : "Implementing Recipes: Chef 11.10", "href" : "workingcookbook-chef11-10.html" }, { "title" : "Implementing Recipes: Chef 11.4", "href" : "workingcookbook-chef11-4.html" }, { "title" : "Migrating to a new Chef Version", "href" : "workingcookbook-chef11-migrate.html" } ] }, { "title" : "Ruby Versions", "href" : "workingcookbook-ruby.html" }, { "title" : "Installing Custom Cookbooks", "href" : "workingcookbook-installingcustom-enable.html" }, { "title" : "Updating Custom Cookbooks", "href" : "workingcookbook-installingcustom-enable-update.html" }, { "title" : "Executing Recipes", "href" : "workingcookbook-executing.html", "contents" : [ { "title" : "AWS OpsWorks Stacks Lifecycle Events", "href" : "workingcookbook-events.html" }, { "title" : "Automatically Running Recipes", "href" : "workingcookbook-assigningcustom.html" }, { "title" : "Manually Running Recipes", "href" : "workingcookbook-manual.html" } ] } ] }, { "title" : "Resource Management", "href" : "resources.html", "contents" : [ { "title" : "Registering Resources with a Stack", "href" : "resources-reg.html" }, { "title" : "Attaching and Moving Resources", "href" : "resources-attach.html" }, { "title" : "Detaching Resources", "href" : "resources-detach.html" }, { "title" : "Deregistering Resources", "href" : "resources-dereg.html" } ] }, { "title" : "Tags", "href" : "tagging.html" }, { "title" : "Monitoring", "href" : "monitoring.html", "contents" : [ { "title" : "Using Amazon CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "Using AWS CloudTrail", "href" : "monitoring-cloudtrail.html" }, { "title" : "Using Amazon CloudWatch Logs", "href" : "monitoring-cloudwatch-logs.html" }, { "title" : "Using Amazon CloudWatch Events", "href" : "monitoring-cloudwatch-events.html" } ] }, { "title" : "Security and Permissions", "href" : "workingsecurity.html", "contents" : [ { "title" : "Managing User Permissions", "href" : "opsworks-security-users.html", "contents" : [ { "title" : "Managing Users", "href" : "opsworks-security-users-manage.html", "contents" : [ { "title" : "Creating an Administrative User", "href" : "opsworks-security-users-manage-admin.html" }, { "title" : "Creating IAM users", "href" : "opsworks-security-users-create-user.html" }, { "title" : "Importing Users", "href" : "opsworks-security-users-manage-import.html" }, { "title" : "Editing User Settings", "href" : "opsworks-security-users-manage-edit.html" } ] }, { "title" : "Granting Per-Stack Permissions", "href" : "opsworks-security-users-console.html" }, { "title" : "Attaching an IAM Policy", "href" : "opsworks-security-users-policy.html" }, { "title" : "Example Policies", "href" : "opsworks-security-users-examples.html" }, { "title" : "Permissions Levels", "href" : "opsworks-security-users-standard.html" } ] }, { "title" : "Allowing AWS OpsWorks Stacks to Act on Your Behalf", "href" : "opsworks-security-servicerole.html" }, { "title" : "Confused deputy prevention", "href" : "cross-service-confused-deputy-prevention-stacks.html" }, { "title" : "Specifying Permissions for Apps Running on EC2 instances", "href" : "opsworks-security-appsrole.html" }, { "title" : "Managing SSH Access", "href" : "security-ssh-access.html", "contents" : [ { "title" : "Installing an Amazon EC2 Key", "href" : "security-settingec2key.html" }, { "title" : "Registering a User's Public SSH Key", "href" : "security-settingsshkey.html" } ] }, { "title" : "Managing Security Updates", "href" : "workingsecurity-updates.html" }, { "title" : "Using Security Groups", "href" : "workingsecurity-groups.html" } ] }, { "title" : "Chef 12 Linux", "href" : "chef-12-linux.html", "contents" : [ { "title" : "Moving to Data Bags", "href" : "attributes-to-data-bags.html" } ] }, { "title" : "Previous Chef Versions", "href" : "previous-chef-versions.html", "contents" : [ { "title" : "Chef 11.10 and Earlier Versions for Linux", "href" : "chef-11-linux.html", "contents" : [ { "title" : "Getting Started: Chef 11 Linux", "href" : "gettingstarted.html", "contents" : [ { "title" : "Step 1: Complete the Prerequisites", "href" : "gettingstarted-prerequisites.html" }, { "title" : "Step 2: Application Server Stack - Chef 11", "href" : "gettingstarted-simple.html", "contents" : [ { "title" : "Step 2.1: Create a Stack - Chef 11", "href" : "gettingstarted-simple-stack.html" }, { "title" : "Step 2.2: Add a PHP App Server Layer - Chef 11", "href" : "gettingstarted-simple-layer.html" }, { "title" : "Step 2.3: Add an Instance - Chef 11", "href" : "gettingstarted-simple-instance.html" }, { "title" : "Step 2.4: Create and Deploy an App - Chef 11", "href" : "gettingstarted-simple-app.html" } ] }, { "title" : "Step 3: Add a Back-end Data Store", "href" : "gettingstarted-db.html", "contents" : [ { "title" : "Step 3.1: Add a Back-end Database", "href" : "gettingstarted-db-db.html" }, { "title" : "Step 3.2: Update SimplePHPApp", "href" : "gettingstarted-db-update.html" }, { "title" : "A Short Digression: Cookbooks, Recipes, and AWS OpsWorks Stacks Attributes", "href" : "gettingstarted-db-recipes.html" }, { "title" : "Step 3.3: Add the Custom Cookbooks to MyStack", "href" : "gettingstarted-db-cookbooks.html" }, { "title" : "Step 3.4: Run the Recipes", "href" : "gettingstarted-db-lifecycle.html" }, { "title" : "Step 3.5: Deploy SimplePHPApp, Version 2", "href" : "gettingstarted-db-deploy.html" }, { "title" : "Step 3.6: Run SimplePHPApp", "href" : "gettingstarted-db-run.html" } ] }, { "title" : "Step 4: Scale Out MyStack", "href" : "gettingstarted-scale.html", "contents" : [ { "title" : "Step 4.1: Add a Load Balancer", "href" : "gettingstarted-scale-elb.html" }, { "title" : "Step 4.2: Add PHP App Server Instances", "href" : "gettingstarted-scale-instances.html" }, { "title" : "Step 4.3: Monitor MyStack", "href" : "gettingstarted-scale-monitor.html" } ] }, { "title" : "Step 5: Delete MyStack", "href" : "gettingstarted-delete.html" } ] }, { "title" : "Creating Your First Node.js Stack", "href" : "gettingstarted-node.html" }, { "title" : "Customizing AWS OpsWorks Stacks", "href" : "customizing.html", "contents" : [ { "title" : "Overriding Attributes", "href" : "workingcookbook-attributes.html", "contents" : [ { "title" : "Attribute Precedence", "href" : "workingcookbook-attributes-precedence.html" }, { "title" : "Using Custom JSON", "href" : "workingcookbook-json-override.html" }, { "title" : "Using Custom Cookbook Attributes", "href" : "workingcookbook-cookbook-attributes.html" } ] }, { "title" : "Using Custom Templates", "href" : "workingcookbook-template-override.html" }, { "title" : "Extending a Layer", "href" : "workingcookbook-extend.html", "contents" : [ { "title" : "Using Recipes to Run Scripts", "href" : "workingcookbook-extend-scripts.html" }, { "title" : "Using Chef Deployment Hooks", "href" : "workingcookbook-extend-hooks.html" }, { "title" : "Running Cron Jobs on Linux Instances", "href" : "workingcookbook-extend-cron.html" }, { "title" : "Installing and Configuring Packages on Linux Instances", "href" : "workingcookbook-extend-package.html" } ] }, { "title" : "Creating a Custom Tomcat Server Layer", "href" : "create-custom.html", "contents" : [ { "title" : "Attributes File", "href" : "create-custom-attributes.html" }, { "title" : "Setup Recipes", "href" : "create-custom-setup.html" }, { "title" : "Configure Recipes", "href" : "create-custom-configure.html" }, { "title" : "Deploy Recipes", "href" : "create-custom-deploy.html" }, { "title" : "Create a Stack and Run an Application", "href" : "create-custom-stack.html" } ] }, { "title" : "Stack Configuration and Deployment Attributes", "href" : "workingcookbook-json.html" } ] }, { "title" : "Cookbooks 101", "href" : "cookbooks-101.html", "contents" : [ { "title" : "Cookbook Basics", "href" : "cookbooks-101-basics.html", "contents" : [ { "title" : "Recipe Structure", "href" : "cookbooks-101-basics-structure.html" }, { "title" : "Example 1: Installing Packages", "href" : "cookbooks-101-basics-packages.html" }, { "title" : "Example 2: Managing Users", "href" : "cookbooks-101-basics-users.html" }, { "title" : "Example 3: Creating Directories", "href" : "cookbooks-101-basics-directories.html" }, { "title" : "Example 4: Adding Flow Control", "href" : "cookbooks-101-basics-ruby.html" }, { "title" : "Example 5: Using Attributes", "href" : "cookbooks-101-basics-attributes.html" }, { "title" : "Example 6: Creating Files", "href" : "cookbooks-101-basics-files.html" }, { "title" : "Example 7: Running Commands and Scripts", "href" : "cookbooks-101-basics-commands.html" }, { "title" : "Example 8: Managing Services", "href" : "cookbooks-101-basics-services.html" }, { "title" : "Example 9: Using Amazon EC2 Instances", "href" : "cookbooks-101-basics-ec2.html" }, { "title" : "Next Steps", "href" : "cookbooks-101-basics-next.html" } ] }, { "title" : "Implementing Cookbooks for AWS OpsWorks Stacks", "href" : "cookbooks-101-opsworks.html", "contents" : [ { "title" : "Running a Recipe on a Linux Instance", "href" : "cookbooks-101-opsworks-opsworks-instance.html" }, { "title" : "Running a Recipe on a Windows Instance", "href" : "cookbooks-101-opsworks-opsworks-windows.html" }, { "title" : "Running a Windows PowerShell Script", "href" : "cookbooks-101-opsworks-opsworks-powershell.html" }, { "title" : "Mocking the Stack Configuration and Deployment Attributes on Vagrant", "href" : "opsworks-opsworks-mock.html" }, { "title" : "Using Stack Configuration and Deployment Attribute Values", "href" : "cookbooks-101-opsworks-opsworks-stack-config.html", "contents" : [ { "title" : "Obtaining Attribute Values Directly", "href" : "cookbooks-101-opsworks-opsworks-stack-config-node.html" }, { "title" : "Obtaining Attribute Values with Chef Search", "href" : "cookbooks-101-opsworks-opsworks-stack-config-search.html", "contents" : [ { "title" : "Using Search on a Linux Stack", "href" : "cookbooks-101-opsworks-opsworks-stack-config-search-linux.html" }, { "title" : "Using Search on a Windows Stack", "href" : "cookbooks-101-opsworks-opsworks-stack-config-search-windows.html", "contents" : [ { "title" : "Using the node Search Index on Windows Stacks", "href" : "cookbooks-101-opsworks-opsworks-stack-config-search-node.html" }, { "title" : "Using AWS OpsWorks Stacks-Specific Search Indexes on Windows Stacks", "href" : "cookbooks-101-opsworks-opsworks-stack-config-search-opsworks.html" } ] } ] } ] }, { "title" : "Using an External Cookbook on a Linux Instance: Berkshelf", "href" : "cookbooks-101-opsworks-berkshelf.html" }, { "title" : "Using the SDK for Ruby", "href" : "cookbooks-101-opsworks-s3.html", "contents" : [ { "title" : "Using the SDK for Ruby on a Vagrant Instance", "href" : "cookbooks-101-opsworks-s3-vagrant.html" }, { "title" : "Using the SDK for Ruby on an AWS OpsWorks Stacks Linux Instance", "href" : "cookbooks-101-opsworks-s3-opsworks.html" }, { "title" : "Using the SDK for Ruby on an AWS OpsWorks Stacks Windows Instance", "href" : "cookbooks-101-opsworks-s3-windows.html" } ] }, { "title" : "Installing Windows Software", "href" : "cookbooks-101-opsworks-install-software.html", "contents" : [ { "title" : "Installing a Windows Feature: IIS", "href" : "cookbooks-101-opsworks-install-software-feature.html" }, { "title" : "Installing a Package", "href" : "cookbooks-101-opsworks-install-software-package.html" } ] }, { "title" : "Overriding Built-In Attributes", "href" : "cookbooks-101-opsworks-attributes.html" }, { "title" : "Overriding Built-In Templates", "href" : "cookbooks-101-opsworks-templates.html" } ] } ] }, { "title" : "Load Balancing a Layer", "href" : "best-server-load-balancing.html" }, { "title" : "Migrating from Chef Server", "href" : "best-practices-server-migrate.html" }, { "title" : "AWS OpsWorks Stacks Layer Reference", "href" : "layers.html", "contents" : [ { "title" : "HAProxy Layer Reference", "href" : "layers-load.html" }, { "title" : "HAProxy AWS OpsWorks Stacks Layer", "href" : "layers-haproxy.html" }, { "title" : "MySQL Layer Reference", "href" : "layers-mysql.html" }, { "title" : "MySQL OpsWorks Layer", "href" : "workinglayers-db-mysql.html" }, { "title" : "Application Server Layers Reference", "href" : "layers-server.html", "contents" : [ { "title" : "AWS Flow (Ruby) Layer Reference", "href" : "layers-server-flow.html" }, { "title" : "Java App Server Layer Reference", "href" : "layers-server-java.html" }, { "title" : "Node.js App Server Layer Reference", "href" : "layers-server-nodejs.html" }, { "title" : "PHP App Server Layer Reference", "href" : "layers-server-php.html" }, { "title" : "Rails App Server Layer Reference", "href" : "layers-server-rails.html" }, { "title" : "Static Web Server Layer Reference", "href" : "layers-server-static.html" } ] }, { "title" : "Application Server Layers", "href" : "workinglayers-servers.html", "contents" : [ { "title" : "AWS Flow (Ruby) Layer", "href" : "workinglayers-awsflow.html" }, { "title" : "Java App Server AWS OpsWorks Stacks Layer", "href" : "layers-java.html", "contents" : [ { "title" : "Custom Configuration", "href" : "layers-java-config.html" }, { "title" : "Deploying Java Apps", "href" : "layers-java-deploy.html" } ] }, { "title" : "Node.js App Server AWS OpsWorks Stacks Layer", "href" : "workinglayers-node.html" }, { "title" : "PHP App Server AWS OpsWorks Stacks Layer", "href" : "workinglayers-php.html" }, { "title" : "Rails App Server AWS OpsWorks Stacks Layer", "href" : "workinglayers-rails.html" }, { "title" : "Static Web Server AWS OpsWorks Stacks Layer", "href" : "workinglayers-static.html" } ] }, { "title" : "Custom Layer Reference", "href" : "layers-other-custom.html" }, { "title" : "Other Layers Reference", "href" : "layers-other.html", "contents" : [ { "title" : "Ganglia Layer Reference", "href" : "layers-other-ganglia.html" }, { "title" : "Memcached Layer Reference", "href" : "layers-other-memcached.html" } ] }, { "title" : "Other Layers", "href" : "workinglayers-other.html", "contents" : [ { "title" : "Ganglia Layer", "href" : "workinglayers-ganglia.html" }, { "title" : "Memcached", "href" : "workinglayers-mem.html" } ] } ] }, { "title" : "Cookbook Components", "href" : "workingcookbook-installingcustom-components.html", "contents" : [ { "title" : "Attributes", "href" : "workingcookbook-installingcustom-components-attributes.html" }, { "title" : "Templates", "href" : "workingcookbook-installingcustom-components-templates.html" }, { "title" : "Recipes", "href" : "workingcookbook-installingcustom-components-recipes.html" } ] }, { "title" : "Stack Configuration and Deployment Attributes: Linux", "href" : "attributes-json-linux.html", "contents" : [ { "title" : "opsworks Attributes", "href" : "attributes-json-opsworks.html", "contents" : [ { "title" : "applications", "href" : "attributes-json-opsworks-applications.html" }, { "title" : "instance Attributes", "href" : "attributes-json-opsworks-instance.html" }, { "title" : "layers Attributes", "href" : "attributes-json-opsworks-layers.html" }, { "title" : "rails_stack Attributes", "href" : "attributes-json-opsworks-rails-stack.html" }, { "title" : "stack Attributes", "href" : "attributes-json-opsworks-stack.html" }, { "title" : "Other Top-level opsworks Attributes", "href" : "attributes-json-opsworks-other.html" } ] }, { "title" : "opsworks_custom_cookbooks Attributes", "href" : "attributes-json-custom.html" }, { "title" : "dependencies Attributes", "href" : "attributes-json-dependencies.html" }, { "title" : "ganglia Attributes", "href" : "attributes-json-ganglia.html" }, { "title" : "mysql Attributes", "href" : "attributes-json-mysql.html" }, { "title" : "passenger Attributes", "href" : "attributes-json-passenger.html" }, { "title" : "opsworks_bundler Attributes", "href" : "attributes-json-bundler.html" }, { "title" : "deploy Attributes", "href" : "attributes-json-deploy.html" }, { "title" : "Other Top-Level Attributes", "href" : "attributes-json-other.html" } ] }, { "title" : "Built-in Cookbook Attributes", "href" : "attributes-recipes.html", "contents" : [ { "title" : "apache2 Attributes", "href" : "attributes-recipes-apache.html" }, { "title" : "deploy Attributes", "href" : "attributes-recipes-deploy.html" }, { "title" : "haproxy Attributes", "href" : "attributes-recipes-haproxy.html" }, { "title" : "memcached Attributes", "href" : "attributes-recipes-mem.html" }, { "title" : "mysql Attributes", "href" : "attributes-recipes-mysql.html" }, { "title" : "nginx Attributes", "href" : "attributes-recipes-nginx.html" }, { "title" : "opsworks_berkshelf Attributes", "href" : "attributes-recipes-berkshelf.html" }, { "title" : "opsworks_java Attributes", "href" : "attributes-recipes-java.html" }, { "title" : "passenger_apache2 Attributes", "href" : "attributes-recipes-passenger.html" }, { "title" : "ruby Attributes", "href" : "attributes-recipes-ruby.html" }, { "title" : "unicorn Attributes", "href" : "attributes-recipes-unicorn.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting-chef-11-linux.html" } ] } ] }, { "title" : "Using AWS OpsWorks Stacks with Other AWS Services", "href" : "other-services.html", "contents" : [ { "title" : "Using a Back-end Data Store", "href" : "customizing-rds.html", "contents" : [ { "title" : "How to Set up a Database Connection", "href" : "customizing-rds-setup.html" }, { "title" : "How to Connect an Application Server Instance to Amazon RDS", "href" : "customizing-rds-connect.html", "contents" : [ { "title" : "Create an Amazon RDS MySQL Database", "href" : "customizing-rds-connect-create.html" }, { "title" : "Customize the Stack to Connect to the RDS Database", "href" : "customizing-rds-connect-customize.html" } ] } ] }, { "title" : "ElastiCache Redis", "href" : "other-services-redis.html", "contents" : [ { "title" : "Step 1: Create an ElastiCache Redis Cluster", "href" : "other-services-redis-cluster.html" }, { "title" : "Step 2: Set up a Rails Stack", "href" : "other-services-redis-stack.html" }, { "title" : "Step 3: Create and Deploy a Custom Cookbook", "href" : "other-services-redis-cookbook.html" }, { "title" : "Step 4: Assign the Recipe to a LifeCycle Event", "href" : "other-services-redis-event.html" }, { "title" : "Step 5: Add Access Information to the Stack Configuration JSON", "href" : "other-services-redis-json.html" }, { "title" : "Step 6: Deploy and run the App", "href" : "other-services-redis-app.html" } ] }, { "title" : "Using an Amazon S3 Bucket", "href" : "gettingstarted.walkthrough.photoapp.html", "contents" : [ { "title" : "Step 1: Create an Amazon S3 Bucket", "href" : "using-s3-bucket.html" }, { "title" : "Step 2: Create a PHP App Server Stack", "href" : "using-s3-stack.html" }, { "title" : "Step 3: Create and Deploy a Custom Cookbook", "href" : "using-s3-cookbook.html" }, { "title" : "Step 4: Assign the Recipes to LifeCycle Events", "href" : "using-s3-events.html" }, { "title" : "Step 5: Add Access Information to the Stack Configuration and Deployment Attributes", "href" : "using-s3-json.html" }, { "title" : "Step 6: Deploy and Run PhotoApp", "href" : "using-s3-run.html" } ] }, { "title" : "Using AWS CodePipeline with AWS OpsWorks Stacks", "href" : "other-services-cp.html", "contents" : [ { "title" : "AWS CodePipeline with AWS OpsWorks Stacks - Chef 12 Stacks", "href" : "other-services-cp-chef12.html", "contents" : [ { "title" : "Step 1: Create a stack, layer, and an instance in AWS OpsWorks Stacks", "href" : "other-services-cp-chef12-stack.html" }, { "title" : "Step 2: Configure your stack and layer to use custom cookbooks", "href" : "other-services-cp-stackconfig.html" }, { "title" : "Step 3: Upload app code to an Amazon S3 bucket", "href" : "other-services-cp-chef12-s3.html" }, { "title" : "Step 4: Add your app to AWS OpsWorks Stacks", "href" : "other-services-cp-chef12-addapp.html" }, { "title" : "Step 5: Create a pipeline in CodePipeline", "href" : "other-services-cp-chef12-pipeline.html" }, { "title" : "Step 6: Verifying the app deployment in AWS OpsWorks Stacks", "href" : "other-services-cp-chef12-verify.html" }, { "title" : "Step 7 (Optional): Update the app code to see CodePipeline redeploy your app automatically", "href" : "other-services-cp-chef12-update.html" }, { "title" : "Step 8 (Optional): Clean up resources", "href" : "other-services-cp-chef12-cleanup.html" } ] }, { "title" : "AWS CodePipeline with AWS OpsWorks Stacks - Chef 11 Stacks", "href" : "other-services-cp-chef11.html", "contents" : [ { "title" : "Step 1: Create a stack, layer, and an instance in AWS OpsWorks Stacks", "href" : "other-services-cp-chef11-stack.html" }, { "title" : "Step 2: Upload app code to an Amazon S3 bucket", "href" : "other-services-cp-chef11-s3.html" }, { "title" : "Step 3: Add your app to AWS OpsWorks Stacks", "href" : "other-services-cp-chef11-addapp.html" }, { "title" : "Step 4: Create a pipeline in CodePipeline", "href" : "other-services-cp-chef11-pipeline.html" }, { "title" : "Step 5: Verifying the app deployment in AWS OpsWorks Stacks", "href" : "other-services-cp-chef11-verify.html" }, { "title" : "Step 6 (Optional): Update the app code to see CodePipeline redeploy your app automatically", "href" : "other-services-cp-chef11-update.html" }, { "title" : "Step 7 (Optional): Clean up resources", "href" : "other-services-cp-chef11-cleanup.html" } ] } ] } ] }, { "title" : "Using the AWS OpsWorks Stacks CLI", "href" : "cli-examples.html", "contents" : [ { "title" : "Create an Instance", "href" : "cli-examples-create-instance.html" }, { "title" : "Deploy an App", "href" : "cli-examples-create-deployment.html" }, { "title" : "List Apps", "href" : "cli-examples-describe-apps.html" }, { "title" : "List Commands", "href" : "cli-examples-describe-commands.html" }, { "title" : "List Deployments", "href" : "cli-examples-describe-deployments.html" }, { "title" : "List Elastic IP Addresses", "href" : "cli-examples-describe-eips.html" }, { "title" : "List Instances", "href" : "cli-examples-describe-instances.html" }, { "title" : "List Stacks", "href" : "cli-examples-describe-stacks.html" }, { "title" : "List Layers", "href" : "cli-examples-describe-layers.html" }, { "title" : "Execute a Recipe", "href" : "cli-examples-execute-recipe.html" }, { "title" : "Install Dependencies", "href" : "cli-examples-install-dependencies.html" }, { "title" : "Update the Stack Configuration", "href" : "cli-examples-update-stack.html" } ] }, { "title" : "Debugging and Troubleshooting Guide", "href" : "troubleshoot.html", "contents" : [ { "title" : "Debugging Recipes", "href" : "troubleshoot-debug.html", "contents" : [ { "title" : "Logging in to a Failed Instance", "href" : "troubleshoot-debug-login.html" }, { "title" : "Chef Logs", "href" : "troubleshoot-debug-log.html" }, { "title" : "Using the AWS OpsWorks Stacks Agent CLI", "href" : "troubleshoot-debug-cli.html" } ] }, { "title" : "Common Debugging and Troubleshooting Issues", "href" : "common-issues.html", "contents" : [ { "title" : "Troubleshooting AWS OpsWorks Stacks", "href" : "common-issues-troubleshoot.html" } ] } ] }, { "title" : "AWS OpsWorks Stacks Agent CLI", "href" : "agent.html", "contents" : [ { "title" : "agent_report", "href" : "agent-report.html" }, { "title" : "get_json", "href" : "agent-json.html" }, { "title" : "instance_report", "href" : "agent-instance.html" }, { "title" : "list_commands", "href" : "agent-list.html" }, { "title" : "run_command", "href" : "agent-run.html" }, { "title" : "show_log", "href" : "agent-show.html" }, { "title" : "stack_state", "href" : "agent-stack.html" } ] }, { "title" : "AWS OpsWorks Stacks Data Bag Reference", "href" : "data-bags.html", "contents" : [ { "title" : "App Data Bag (aws_opsworks_app)", "href" : "data-bag-json-app.html" }, { "title" : "Command Data Bag (aws_opsworks_command)", "href" : "data-bag-json-command.html" }, { "title" : "Amazon ECS Cluster Data Bag (aws_opsworks_ecs_cluster)", "href" : "data-bag-json-ecs-cluster.html" }, { "title" : "Elastic Load Balancing Data Bag (aws_opsworks_elastic_load_balancer)", "href" : "data-bag-json-elb.html" }, { "title" : "Instance Data Bag (aws_opsworks_instance)", "href" : "data-bag-json-instance.html" }, { "title" : "Layer Data Bag (aws_opsworks_layer)", "href" : "data-bag-json-layer.html" }, { "title" : "Amazon RDS Data Bag (aws_opsworks_rds_db_instance)", "href" : "data-bag-json-rds.html" }, { "title" : "Stack Data Bag (aws_opsworks_stack)", "href" : "data-bag-json-stack.html" }, { "title" : "User Data Bag (aws_opsworks_user)", "href" : "data-bag-json-user.html" } ] }, { "title" : "OpsWorks Agent Changes", "href" : "agentchanges.html" } ] }, { "title" : "Resources", "href" : "relatedresources.html" }, { "title" : "AWS OpsWorks document history", "href" : "history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/opsworks/latest/userguide/",
+    "service": "opsworks",
+    "toc": {
+        "contents": [
+            {
+                "title": "What Is AWS OpsWorks?",
+                "href": "welcome.html"
+            },
+            {
+                "title": "AWS OpsWorks for Puppet Enterprise",
+                "href": "welcome_opspup.html",
+                "contents": [
+                    {
+                        "title": "End of Life FAQs",
+                        "href": "opspup-eol-faqs.html"
+                    },
+                    {
+                        "title": "Getting Started",
+                        "href": "gettingstarted-opspup.html",
+                        "contents": [
+                            {
+                                "title": "Create a Puppet Master",
+                                "href": "gettingstarted-opspup-create.html"
+                            },
+                            {
+                                "title": "Finish Configuration",
+                                "href": "opspup-starterkit.html"
+                            },
+                            {
+                                "title": "Add Nodes to Manage",
+                                "href": "opspup-addnodes.html"
+                            },
+                            {
+                                "title": "Sign in to the Puppet Enterprise Console",
+                                "href": "opspup-puppet-dashboard.html"
+                            },
+                            {
+                                "title": "Optional: Use CodeCommit",
+                                "href": "opspup-puppet-codecommit.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Create a Puppet Master in CloudFormation",
+                        "href": "opspup-create-server-cfn.html"
+                    },
+                    {
+                        "title": "Update a Server to Use a Custom Domain",
+                        "href": "opspup-update-server-custom-domain.html"
+                    },
+                    {
+                        "title": "Work with Tags",
+                        "href": "opspup-tags.html"
+                    },
+                    {
+                        "title": "Back Up and Restore Servers",
+                        "href": "opspup-backup-restore.html",
+                        "contents": [
+                            {
+                                "title": "Back Up an OpsWorks for Puppet Enterprise Server",
+                                "href": "opspup-backup.html"
+                            },
+                            {
+                                "title": "Restore an OpsWorks for Puppet Enterprise Server",
+                                "href": "opspup-restore.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "System Maintenance",
+                        "href": "opspup-maintenance.html"
+                    },
+                    {
+                        "title": "Add Nodes Automatically",
+                        "href": "opspup-unattend-assoc.html"
+                    },
+                    {
+                        "title": "Remove Nodes",
+                        "href": "opspup-disassociate-node.html"
+                    },
+                    {
+                        "title": "Delete a Puppet Master",
+                        "href": "opspup-delete-server.html"
+                    },
+                    {
+                        "title": "Migrate a Puppet Server to Amazon EC2",
+                        "href": "opspup-migrate-ec2.html"
+                    },
+                    {
+                        "title": "Using AWS CloudTrail",
+                        "href": "logging-opspup-using-cloudtrail.html"
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "href": "troubleshoot-opspup.html"
+                    }
+                ]
+            },
+            {
+                "title": "AWS OpsWorks for Chef Automate",
+                "href": "welcome_opscm.html",
+                "contents": [
+                    {
+                        "title": "End of Life FAQs",
+                        "href": "opscm-eol-faqs.html"
+                    },
+                    {
+                        "title": "Upgrade to Chef Automate 2",
+                        "href": "opscm-a2upgrade.html"
+                    },
+                    {
+                        "title": "Getting Started",
+                        "href": "gettingstarted-opscm.html",
+                        "contents": [
+                            {
+                                "title": "Create a Chef Automate Server",
+                                "href": "gettingstarted-opscm-create.html"
+                            },
+                            {
+                                "title": "Finish configuration and upload cookbooks",
+                                "href": "opscm-starterkit.html"
+                            },
+                            {
+                                "title": "Add nodes to manage",
+                                "href": "opscm-addnodes.html",
+                                "contents": [
+                                    {
+                                        "title": "Add nodes individually",
+                                        "href": "opscm-addnodes-individually.html"
+                                    },
+                                    {
+                                        "title": "Add nodes automatically",
+                                        "href": "opscm-unattend-assoc.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Sign in to the Chef Automate dashboard",
+                                "href": "opscm-chef-dashboard.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Create a Chef Automate Server in CloudFormation",
+                        "href": "opscm-create-server-cfn.html"
+                    },
+                    {
+                        "title": "Update a Server to Use a Custom Domain",
+                        "href": "opscm-update-server-custom-domain.html"
+                    },
+                    {
+                        "title": "Regenerate the starter kit",
+                        "href": "opscm-regenerate-starterkit.html"
+                    },
+                    {
+                        "title": "Work with Tags",
+                        "href": "opscm-tags.html"
+                    },
+                    {
+                        "title": "Back up and restore servers",
+                        "href": "opscm-backup-restore.html",
+                        "contents": [
+                            {
+                                "title": "Back Up an AWS OpsWorks for Chef Automate Server",
+                                "href": "opscm-chef-backup.html"
+                            },
+                            {
+                                "title": "Restore an AWS OpsWorks for Chef Automate Server",
+                                "href": "opscm-chef-restore.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "System Maintenance",
+                        "href": "opscm-maintenance.html"
+                    },
+                    {
+                        "title": "Compliance Scans",
+                        "href": "opscm-chefcompliance.html"
+                    },
+                    {
+                        "title": "Remove nodes",
+                        "href": "opscm-disassociate-node.html"
+                    },
+                    {
+                        "title": "Delete a Chef Automate server",
+                        "href": "opscm-delete-server.html"
+                    },
+                    {
+                        "title": "Reset Chef credentials",
+                        "href": "opscm-resetchefcreds.html"
+                    },
+                    {
+                        "title": "Using AWS CloudTrail",
+                        "href": "logging-opsca-using-cloudtrail.html"
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "href": "troubleshoot-opscm.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security in AWS OpsWorks Configuration Management (CM)",
+                "href": "security-opscm.html",
+                "contents": [
+                    {
+                        "title": "Data Protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam-opscm.html",
+                        "contents": [
+                            {
+                                "title": "How AWS OpsWorks CM Works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-Based Policy Examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Cross-service confused deputy prevention in AWS OpsWorks CM",
+                                "href": "cross-service-confused-deputy-prevention.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "opsworks-stacks-compliance-opscm.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency-opscm.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security-opscm.html"
+                    }
+                ]
+            },
+            {
+                "title": "AWS OpsWorks Stacks",
+                "href": "welcome_classic.html",
+                "contents": [
+                    {
+                        "title": "End of Life FAQs",
+                        "href": "stacks-eol-faqs.html"
+                    },
+                    {
+                        "title": "Migrating your applications to Systems Manager Application Manager",
+                        "href": "migrating-to-systems-manager.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "migrating-to-systems-manager-prerequisites.html"
+                            },
+                            {
+                                "title": "Limitations",
+                                "href": "migrating-to-systems-manager-limitations.html"
+                            },
+                            {
+                                "title": "Getting started",
+                                "href": "migrating-to-systems-manager-getting-started.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Prepare your environment for running the script",
+                                        "href": "w2ab1c14c43c17b9.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Download the migration script",
+                                        "href": "migrating-to-systems-manager-download-script.html"
+                                    },
+                                    {
+                                        "title": "Step 3: Set up your environment to run the script",
+                                        "href": "migrating-to-systems-manager-script-parameters.html"
+                                    },
+                                    {
+                                        "title": "Step 4: Run the script",
+                                        "href": "migrating-to-systems-manager-run-script.html"
+                                    },
+                                    {
+                                        "title": "Step 5: Provision a CloudFormation stack",
+                                        "href": "migrating-to-systems-manager-provision-stack.html"
+                                    },
+                                    {
+                                        "title": "Step 6: Review the provisioned resources",
+                                        "href": "migrating-to-systems-manager-provision-resources.html"
+                                    },
+                                    {
+                                        "title": "Step 7: Start an instance",
+                                        "href": "migrating-to-systems-manager-start-instance.html"
+                                    },
+                                    {
+                                        "title": "Step 8: Review the instance",
+                                        "href": "migrating-to-systems-manager-review-instance.html"
+                                    },
+                                    {
+                                        "title": "Step 9: Monitor and run operations on your instances using Systems Manager Application Manager",
+                                        "href": "migrating-to-systems-manager-monitor.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "FAQ",
+                                "href": "migrating-to-systems-manager-faqs.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "migrating-to-systems-manager-troubleshooting.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Getting Started",
+                        "href": "gettingstarted_intro.html",
+                        "contents": [
+                            {
+                                "title": "Getting Started: Sample",
+                                "href": "gettingstarted-intro.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Complete the Prerequisites",
+                                        "href": "gettingstarted-intro-prerequisites.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Create a Stack",
+                                        "href": "gettingstarted-intro-create-stack.html"
+                                    },
+                                    {
+                                        "title": "Step 3: Start the Instance and Deploy the App",
+                                        "href": "gettingstarted-intro-start-instance.html"
+                                    },
+                                    {
+                                        "title": "Step 4: Test the Deployed App on the Instance",
+                                        "href": "gettingstarted-intro-test-app.html"
+                                    },
+                                    {
+                                        "title": "Step 5: Explore the Stack's Settings",
+                                        "href": "gettingstarted-intro-explore-stack.html"
+                                    },
+                                    {
+                                        "title": "Step 6: Explore the Layer's Settings",
+                                        "href": "gettingstarted-intro-explore-layer.html"
+                                    },
+                                    {
+                                        "title": "Step 7: Explore the Instance's Settings and Logs",
+                                        "href": "gettingstarted-intro-explore-instance.html"
+                                    },
+                                    {
+                                        "title": "Step 8: Explore the App's Settings",
+                                        "href": "gettingstarted-intro-explore-app.html"
+                                    },
+                                    {
+                                        "title": "Step 9: Explore Layer Monitoring Reports",
+                                        "href": "gettingstarted-intro-explore-monitoring.html"
+                                    },
+                                    {
+                                        "title": "Step 10: Explore Additional Stack Settings",
+                                        "href": "gettingstarted-intro-explore-more.html"
+                                    },
+                                    {
+                                        "title": "Step 11 (Optional): Clean Up",
+                                        "href": "gettingstarted-intro-clean-up.html"
+                                    },
+                                    {
+                                        "title": "Next Steps",
+                                        "href": "gettingstarted-intro-next-steps.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Getting Started: Linux",
+                                "href": "gettingstarted-linux.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Complete the Prerequisites",
+                                        "href": "gettingstarted-linux-prerequisites.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Create a Stack",
+                                        "href": "gettingstarted-linux-create-stack.html"
+                                    },
+                                    {
+                                        "title": "Step 3: Add a Layer to the Stack",
+                                        "href": "gettingstarted-linux-add-layer.html"
+                                    },
+                                    {
+                                        "title": "Step 4: Specify the App to Deploy to the Instance",
+                                        "href": "gettingstarted-linux-specify-app.html"
+                                    },
+                                    {
+                                        "title": "Step 5: Launch an Instance",
+                                        "href": "gettingstarted-linux-launch-instance.html"
+                                    },
+                                    {
+                                        "title": "Step 6: Deploy the App to the Instance",
+                                        "href": "gettingstarted-linux-deploy-app.html"
+                                    },
+                                    {
+                                        "title": "Step 7: Test the Deployed App on the Instance",
+                                        "href": "gettingstarted-linux-test-app.html"
+                                    },
+                                    {
+                                        "title": "Step 8 (Optional): Clean Up",
+                                        "href": "gettingstarted-linux-clean-up.html"
+                                    },
+                                    {
+                                        "title": "Next Steps",
+                                        "href": "gettingstarted-linux-next-steps.html"
+                                    },
+                                    {
+                                        "title": "Learning More: Explore the Cookbook Used in This Walkthrough",
+                                        "href": "gettingstarted-linux-explore-cookbook.html"
+                                    },
+                                    {
+                                        "title": "Learning More: Explore the App Used in This Walkthrough",
+                                        "href": "gettingstarted-linux-explore-app-source.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Getting Started: Windows",
+                                "href": "gettingstarted-windows.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Complete the Prerequisites",
+                                        "href": "gettingstarted-windows-prerequisites.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Create a Basic Application Server Stack",
+                                        "href": "gettingstarted-windows-basic.html",
+                                        "contents": [
+                                            {
+                                                "title": "Step 2.1: Create the Stack",
+                                                "href": "gettingstarted-windows-stack.html"
+                                            },
+                                            {
+                                                "title": "Step 2.2: Authorize RDP Access",
+                                                "href": "gettingstarted-windows-rdp.html"
+                                            },
+                                            {
+                                                "title": "Step 2.3: Implement a Custom Cookbook",
+                                                "href": "gettingstarted-windows-cookbook.html"
+                                            },
+                                            {
+                                                "title": "Step 2.4: Add an IIS Layer",
+                                                "href": "gettingstarted-windows-iis-layer.html"
+                                            },
+                                            {
+                                                "title": "Step 2.5: Deploy an App",
+                                                "href": "gettingstarted-windows-deploy.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Step 3: Scale Out IISExample",
+                                        "href": "gettingstarted-windows-scale.html",
+                                        "contents": [
+                                            {
+                                                "title": "Add a Load Balancer",
+                                                "href": "gettingstarted-windows-scale-elb.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Next Steps",
+                                        "href": "gettingstarted-windows-what-next.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Getting Started: Cookbooks",
+                                "href": "gettingstarted-cookbooks.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Create the Cookbook",
+                                        "href": "gettingstarted-cookbooks-create-cookbook.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Create the Stack",
+                                        "href": "gettingstarted-cookbooks-create-stack.html"
+                                    },
+                                    {
+                                        "title": "Step 3: Run the Recipe",
+                                        "href": "gettingstarted-cookbooks-test-recipe.html"
+                                    },
+                                    {
+                                        "title": "Step 4: Add a Recipe that Installs a Package",
+                                        "href": "gettingstarted-cookbooks-install-package.html"
+                                    },
+                                    {
+                                        "title": "Step 5: Copy the Updated Cookbook",
+                                        "href": "gettingstarted-cookbooks-copy-cookbook.html"
+                                    },
+                                    {
+                                        "title": "Step 6: Create a Recipe that Adds a User",
+                                        "href": "gettingstarted-cookbooks-add-user.html"
+                                    },
+                                    {
+                                        "title": "Step 7: Create a Recipe that Creates a Directory",
+                                        "href": "gettingstarted-cookbooks-create-directory.html"
+                                    },
+                                    {
+                                        "title": "Step 8: Create a Recipe that Creates and Copies Files",
+                                        "href": "gettingstarted-cookbooks-create-file.html"
+                                    },
+                                    {
+                                        "title": "Step 9: Create a Recipe that Runs a Command",
+                                        "href": "gettingstarted-cookbooks-run-command.html"
+                                    },
+                                    {
+                                        "title": "Step 10: Create a Recipe that Runs a Script",
+                                        "href": "gettingstarted-cookbooks-run-script.html"
+                                    },
+                                    {
+                                        "title": "Step 11: Create a Recipe that Manages a Service",
+                                        "href": "gettingstarted-cookbooks-manage-service.html"
+                                    },
+                                    {
+                                        "title": "Step 12: Create a Recipe that Uses Custom JSON",
+                                        "href": "gettingstarted-cookbooks-custom-json.html"
+                                    },
+                                    {
+                                        "title": "Step 13: Create a Recipe that Uses Data Bags",
+                                        "href": "gettingstarted-cookbooks-data-bags.html"
+                                    },
+                                    {
+                                        "title": "Step 14: Create a Recipe that Uses Iteration",
+                                        "href": "gettingstarted-cookbooks-iteration.html"
+                                    },
+                                    {
+                                        "title": "Step 15: Create a Recipe that Uses Conditional Logic",
+                                        "href": "gettingstarted-cookbooks-conditional-logic.html"
+                                    },
+                                    {
+                                        "title": "Step 16: Create a Recipe that Uses a Community Cookbook",
+                                        "href": "gettingstarted-cookbooks-community-cookbooks.html"
+                                    },
+                                    {
+                                        "title": "Step 17: (Optional) Clean Up",
+                                        "href": "gettingstarted-cookbooks-clean-up.html"
+                                    },
+                                    {
+                                        "title": "Next Steps",
+                                        "href": "gettingstarted-cookbooks-next-steps.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Best Practices",
+                        "href": "best-practices.html",
+                        "contents": [
+                            {
+                                "title": "Root Device Storage",
+                                "href": "best-practices-storage.html"
+                            },
+                            {
+                                "title": "Optimizing the Number of Servers",
+                                "href": "best-practices-autoscale.html"
+                            },
+                            {
+                                "title": "Managing Permissions",
+                                "href": "best-practices-permissions.html"
+                            },
+                            {
+                                "title": "Managing and Deploying Apps and Cookbooks",
+                                "href": "best-deploy.html"
+                            },
+                            {
+                                "title": "Packaging Cookbook Dependencies Locally",
+                                "href": "best-practices-packaging-cookbooks-locally.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Stacks",
+                        "href": "workingstacks.html",
+                        "contents": [
+                            {
+                                "title": "Migrate stacks from EC2-Classic",
+                                "href": "workingstacks-migrate-ec2-vpc.html"
+                            },
+                            {
+                                "title": "Create a New Stack",
+                                "href": "workingstacks-creating.html"
+                            },
+                            {
+                                "title": "Running a Stack in a VPC",
+                                "href": "workingstacks-vpc.html"
+                            },
+                            {
+                                "title": "Update a Stack",
+                                "href": "workingstacks-edit.html"
+                            },
+                            {
+                                "title": "Clone a Stack",
+                                "href": "workingstacks-cloning.html"
+                            },
+                            {
+                                "title": "Run Stack Commands",
+                                "href": "workingstacks-commands.html"
+                            },
+                            {
+                                "title": "Using Custom JSON",
+                                "href": "workingstacks-json.html"
+                            },
+                            {
+                                "title": "Delete a Stack",
+                                "href": "workingstacks-shutting.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Layers",
+                        "href": "workinglayers.html",
+                        "contents": [
+                            {
+                                "title": "OpsWorks Layer Basics",
+                                "href": "workinglayers-basics.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating an OpsWorks Layer",
+                                        "href": "workinglayers-basics-create.html"
+                                    },
+                                    {
+                                        "title": "Editing an OpsWorks Layer's Configuration",
+                                        "href": "workinglayers-basics-edit.html"
+                                    },
+                                    {
+                                        "title": "Using Auto Healing",
+                                        "href": "workinginstances-autohealing.html"
+                                    },
+                                    {
+                                        "title": "Deleting an OpsWorks Layer",
+                                        "href": "workinglayers-basics-delete.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Elastic Load Balancing Layer",
+                                "href": "layers-elb.html"
+                            },
+                            {
+                                "title": "Amazon RDS Service Layer",
+                                "href": "workinglayers-db-rds.html"
+                            },
+                            {
+                                "title": "ECS Cluster Layers",
+                                "href": "workinglayers-ecscluster.html"
+                            },
+                            {
+                                "title": "Custom Layers",
+                                "href": "workinglayers-custom.html"
+                            },
+                            {
+                                "title": "Per-layer Package Installations",
+                                "href": "per-layer-os-package-install.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Instances",
+                        "href": "workinginstances.html",
+                        "contents": [
+                            {
+                                "title": "Using AWS OpsWorks Stacks Instances",
+                                "href": "workinginstances-opsworks.html",
+                                "contents": [
+                                    {
+                                        "title": "AWS OpsWorks Stacks operating systems",
+                                        "href": "workinginstances-os.html",
+                                        "contents": [
+                                            {
+                                                "title": "Linux operating systems",
+                                                "href": "workinginstances-os-linux.html"
+                                            },
+                                            {
+                                                "title": "Microsoft Windows Server",
+                                                "href": "workinginstances-os-windows.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Adding an Instance to a Layer",
+                                        "href": "workinginstances-add.html"
+                                    },
+                                    {
+                                        "title": "Using Custom AMIs",
+                                        "href": "workinginstances-custom-ami.html"
+                                    },
+                                    {
+                                        "title": "Manually Starting, Stopping, and Rebooting 24/7 Instances",
+                                        "href": "workinginstances-starting.html"
+                                    },
+                                    {
+                                        "title": "Managing load with time-based and load-based instances",
+                                        "href": "workinginstances-autoscaling.html",
+                                        "contents": [
+                                            {
+                                                "title": "Using automatic time-based scaling",
+                                                "href": "workinginstances-autoscaling-timebased.html"
+                                            },
+                                            {
+                                                "title": "Using automatic load-based scaling",
+                                                "href": "workinginstances-autoscaling-loadbased.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using Computing Resources Created Outside of AWS OpsWorks Stacks",
+                                "href": "registered-instances.html",
+                                "contents": [
+                                    {
+                                        "title": "Registering an Instance with an AWS OpsWorks Stacks Stack",
+                                        "href": "registered-instances-register.html",
+                                        "contents": [
+                                            {
+                                                "title": "Walkthrough: Register an Instance from Your Workstation",
+                                                "href": "registered-instances-register-walkthrough.html"
+                                            },
+                                            {
+                                                "title": "Registering Amazon EC2 and On-premises Instances",
+                                                "href": "registered-instances-register-registering.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Preparing the Instance",
+                                                        "href": "registered-instances-register-registering-prepare.html"
+                                                    },
+                                                    {
+                                                        "title": "Installing and Configuring the AWS CLI",
+                                                        "href": "registered-instances-register-registering-cli.html"
+                                                    },
+                                                    {
+                                                        "title": "Registering the Instance",
+                                                        "href": "registered-instances-register-registering-register.html"
+                                                    },
+                                                    {
+                                                        "title": "Using the register Command",
+                                                        "href": "registered-instances-register-registering-command.html"
+                                                    },
+                                                    {
+                                                        "title": "Example register Commands",
+                                                        "href": "registered-instances-register-registering-examples.html"
+                                                    },
+                                                    {
+                                                        "title": "Instance Registration Policies",
+                                                        "href": "registered-instances-register-registering-template.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Managing Registered Instances",
+                                        "href": "registered-instances-manage.html"
+                                    },
+                                    {
+                                        "title": "Assigning a Registered Instance to a Layer",
+                                        "href": "registered-instances-assign.html"
+                                    },
+                                    {
+                                        "title": "Unassigning a Registered Instance",
+                                        "href": "registered-instances-unassign.html"
+                                    },
+                                    {
+                                        "title": "Deregistering a Registered Instance",
+                                        "href": "registered-instances-deregister.html"
+                                    },
+                                    {
+                                        "title": "Registered Instance Life Cycle",
+                                        "href": "registered-instances-lifecycle.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Editing the Instance Configuration",
+                                "href": "workinginstances-properties.html"
+                            },
+                            {
+                                "title": "Deleting AWS OpsWorks Stacks Instances",
+                                "href": "workinginstances-delete.html"
+                            },
+                            {
+                                "title": "Logging In with SSH",
+                                "href": "workinginstances-ssh.html",
+                                "contents": [
+                                    {
+                                        "title": "Using the Built-in MindTerm SSH Client",
+                                        "href": "workinginstances-ssh-mindterm.html"
+                                    },
+                                    {
+                                        "title": "Using a Third-Party SSH Client",
+                                        "href": "workinginstances-ssh-third.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Logging In with RDP",
+                                "href": "workinginstances-rdp.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Apps",
+                        "href": "workingapps.html",
+                        "contents": [
+                            {
+                                "title": "Adding Apps",
+                                "href": "workingapps-creating.html"
+                            },
+                            {
+                                "title": "Deploying Apps",
+                                "href": "workingapps-deploying.html"
+                            },
+                            {
+                                "title": "Editing Apps",
+                                "href": "workingapps-editing.html"
+                            },
+                            {
+                                "title": "Connecting to a Database",
+                                "href": "workingapps-connectdb.html"
+                            },
+                            {
+                                "title": "Using Environment Variables",
+                                "href": "apps-environment-vars.html"
+                            },
+                            {
+                                "title": "Passing Data to Applications",
+                                "href": "apps-data.html"
+                            },
+                            {
+                                "title": "Using Git Repository SSH Keys",
+                                "href": "workingapps-deploykeys.html"
+                            },
+                            {
+                                "title": "Using Custom Domains",
+                                "href": "workingapps-domains.html",
+                                "contents": [
+                                    {
+                                        "title": "Running Multiple Applications on the Same Application Server",
+                                        "href": "workingapps-multiple.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using SSL",
+                                "href": "workingsecurity-ssl.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Cookbooks and Recipes",
+                        "href": "workingcookbook.html",
+                        "contents": [
+                            {
+                                "title": "Cookbook Repositories",
+                                "href": "workingcookbook-installingcustom-repo.html"
+                            },
+                            {
+                                "title": "Chef Versions",
+                                "href": "workingcookbook-chef11.html",
+                                "contents": [
+                                    {
+                                        "title": "Implementing Recipes: Chef 12.2",
+                                        "href": "workingcookbook-chef12.html"
+                                    },
+                                    {
+                                        "title": "Implementing Recipes: Chef 12",
+                                        "href": "workingcookbook-chef12-linux.html"
+                                    },
+                                    {
+                                        "title": "Implementing Recipes: Chef 11.10",
+                                        "href": "workingcookbook-chef11-10.html"
+                                    },
+                                    {
+                                        "title": "Implementing Recipes: Chef 11.4",
+                                        "href": "workingcookbook-chef11-4.html"
+                                    },
+                                    {
+                                        "title": "Migrating to a new Chef Version",
+                                        "href": "workingcookbook-chef11-migrate.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Ruby Versions",
+                                "href": "workingcookbook-ruby.html"
+                            },
+                            {
+                                "title": "Installing Custom Cookbooks",
+                                "href": "workingcookbook-installingcustom-enable.html"
+                            },
+                            {
+                                "title": "Updating Custom Cookbooks",
+                                "href": "workingcookbook-installingcustom-enable-update.html"
+                            },
+                            {
+                                "title": "Executing Recipes",
+                                "href": "workingcookbook-executing.html",
+                                "contents": [
+                                    {
+                                        "title": "AWS OpsWorks Stacks Lifecycle Events",
+                                        "href": "workingcookbook-events.html"
+                                    },
+                                    {
+                                        "title": "Automatically Running Recipes",
+                                        "href": "workingcookbook-assigningcustom.html"
+                                    },
+                                    {
+                                        "title": "Manually Running Recipes",
+                                        "href": "workingcookbook-manual.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Resource Management",
+                        "href": "resources.html",
+                        "contents": [
+                            {
+                                "title": "Registering Resources with a Stack",
+                                "href": "resources-reg.html"
+                            },
+                            {
+                                "title": "Attaching and Moving Resources",
+                                "href": "resources-attach.html"
+                            },
+                            {
+                                "title": "Detaching Resources",
+                                "href": "resources-detach.html"
+                            },
+                            {
+                                "title": "Deregistering Resources",
+                                "href": "resources-dereg.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tags",
+                        "href": "tagging.html"
+                    },
+                    {
+                        "title": "Monitoring",
+                        "href": "monitoring.html",
+                        "contents": [
+                            {
+                                "title": "Using Amazon CloudWatch",
+                                "href": "monitoring-cloudwatch.html"
+                            },
+                            {
+                                "title": "Using AWS CloudTrail",
+                                "href": "monitoring-cloudtrail.html"
+                            },
+                            {
+                                "title": "Using Amazon CloudWatch Logs",
+                                "href": "monitoring-cloudwatch-logs.html"
+                            },
+                            {
+                                "title": "Using Amazon CloudWatch Events",
+                                "href": "monitoring-cloudwatch-events.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Security and Permissions",
+                        "href": "workingsecurity.html",
+                        "contents": [
+                            {
+                                "title": "Managing User Permissions",
+                                "href": "opsworks-security-users.html",
+                                "contents": [
+                                    {
+                                        "title": "Managing Users",
+                                        "href": "opsworks-security-users-manage.html",
+                                        "contents": [
+                                            {
+                                                "title": "Creating an Administrative User",
+                                                "href": "opsworks-security-users-manage-admin.html"
+                                            },
+                                            {
+                                                "title": "Creating IAM users",
+                                                "href": "opsworks-security-users-create-user.html"
+                                            },
+                                            {
+                                                "title": "Importing Users",
+                                                "href": "opsworks-security-users-manage-import.html"
+                                            },
+                                            {
+                                                "title": "Editing User Settings",
+                                                "href": "opsworks-security-users-manage-edit.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Granting Per-Stack Permissions",
+                                        "href": "opsworks-security-users-console.html"
+                                    },
+                                    {
+                                        "title": "Attaching an IAM Policy",
+                                        "href": "opsworks-security-users-policy.html"
+                                    },
+                                    {
+                                        "title": "Example Policies",
+                                        "href": "opsworks-security-users-examples.html"
+                                    },
+                                    {
+                                        "title": "Permissions Levels",
+                                        "href": "opsworks-security-users-standard.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Allowing AWS OpsWorks Stacks to Act on Your Behalf",
+                                "href": "opsworks-security-servicerole.html"
+                            },
+                            {
+                                "title": "Confused deputy prevention",
+                                "href": "cross-service-confused-deputy-prevention-stacks.html"
+                            },
+                            {
+                                "title": "Specifying Permissions for Apps Running on EC2 instances",
+                                "href": "opsworks-security-appsrole.html"
+                            },
+                            {
+                                "title": "Managing SSH Access",
+                                "href": "security-ssh-access.html",
+                                "contents": [
+                                    {
+                                        "title": "Installing an Amazon EC2 Key",
+                                        "href": "security-settingec2key.html"
+                                    },
+                                    {
+                                        "title": "Registering a User's Public SSH Key",
+                                        "href": "security-settingsshkey.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Managing Security Updates",
+                                "href": "workingsecurity-updates.html"
+                            },
+                            {
+                                "title": "Using Security Groups",
+                                "href": "workingsecurity-groups.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Chef 12 Linux",
+                        "href": "chef-12-linux.html",
+                        "contents": [
+                            {
+                                "title": "Moving to Data Bags",
+                                "href": "attributes-to-data-bags.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Previous Chef Versions",
+                        "href": "previous-chef-versions.html",
+                        "contents": [
+                            {
+                                "title": "Chef 11.10 and Earlier Versions for Linux",
+                                "href": "chef-11-linux.html",
+                                "contents": [
+                                    {
+                                        "title": "Getting Started: Chef 11 Linux",
+                                        "href": "gettingstarted.html",
+                                        "contents": [
+                                            {
+                                                "title": "Step 1: Complete the Prerequisites",
+                                                "href": "gettingstarted-prerequisites.html"
+                                            },
+                                            {
+                                                "title": "Step 2: Application Server Stack - Chef 11",
+                                                "href": "gettingstarted-simple.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Step 2.1: Create a Stack - Chef 11",
+                                                        "href": "gettingstarted-simple-stack.html"
+                                                    },
+                                                    {
+                                                        "title": "Step 2.2: Add a PHP App Server Layer - Chef 11",
+                                                        "href": "gettingstarted-simple-layer.html"
+                                                    },
+                                                    {
+                                                        "title": "Step 2.3: Add an Instance - Chef 11",
+                                                        "href": "gettingstarted-simple-instance.html"
+                                                    },
+                                                    {
+                                                        "title": "Step 2.4: Create and Deploy an App - Chef 11",
+                                                        "href": "gettingstarted-simple-app.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Step 3: Add a Back-end Data Store",
+                                                "href": "gettingstarted-db.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Step 3.1: Add a Back-end Database",
+                                                        "href": "gettingstarted-db-db.html"
+                                                    },
+                                                    {
+                                                        "title": "Step 3.2: Update SimplePHPApp",
+                                                        "href": "gettingstarted-db-update.html"
+                                                    },
+                                                    {
+                                                        "title": "A Short Digression: Cookbooks, Recipes, and AWS OpsWorks Stacks Attributes",
+                                                        "href": "gettingstarted-db-recipes.html"
+                                                    },
+                                                    {
+                                                        "title": "Step 3.3: Add the Custom Cookbooks to MyStack",
+                                                        "href": "gettingstarted-db-cookbooks.html"
+                                                    },
+                                                    {
+                                                        "title": "Step 3.4: Run the Recipes",
+                                                        "href": "gettingstarted-db-lifecycle.html"
+                                                    },
+                                                    {
+                                                        "title": "Step 3.5: Deploy SimplePHPApp, Version 2",
+                                                        "href": "gettingstarted-db-deploy.html"
+                                                    },
+                                                    {
+                                                        "title": "Step 3.6: Run SimplePHPApp",
+                                                        "href": "gettingstarted-db-run.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Step 4: Scale Out MyStack",
+                                                "href": "gettingstarted-scale.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Step 4.1: Add a Load Balancer",
+                                                        "href": "gettingstarted-scale-elb.html"
+                                                    },
+                                                    {
+                                                        "title": "Step 4.2: Add PHP App Server Instances",
+                                                        "href": "gettingstarted-scale-instances.html"
+                                                    },
+                                                    {
+                                                        "title": "Step 4.3: Monitor MyStack",
+                                                        "href": "gettingstarted-scale-monitor.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Step 5: Delete MyStack",
+                                                "href": "gettingstarted-delete.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Creating Your First Node.js Stack",
+                                        "href": "gettingstarted-node.html"
+                                    },
+                                    {
+                                        "title": "Customizing AWS OpsWorks Stacks",
+                                        "href": "customizing.html",
+                                        "contents": [
+                                            {
+                                                "title": "Overriding Attributes",
+                                                "href": "workingcookbook-attributes.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Attribute Precedence",
+                                                        "href": "workingcookbook-attributes-precedence.html"
+                                                    },
+                                                    {
+                                                        "title": "Using Custom JSON",
+                                                        "href": "workingcookbook-json-override.html"
+                                                    },
+                                                    {
+                                                        "title": "Using Custom Cookbook Attributes",
+                                                        "href": "workingcookbook-cookbook-attributes.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Using Custom Templates",
+                                                "href": "workingcookbook-template-override.html"
+                                            },
+                                            {
+                                                "title": "Extending a Layer",
+                                                "href": "workingcookbook-extend.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Using Recipes to Run Scripts",
+                                                        "href": "workingcookbook-extend-scripts.html"
+                                                    },
+                                                    {
+                                                        "title": "Using Chef Deployment Hooks",
+                                                        "href": "workingcookbook-extend-hooks.html"
+                                                    },
+                                                    {
+                                                        "title": "Running Cron Jobs on Linux Instances",
+                                                        "href": "workingcookbook-extend-cron.html"
+                                                    },
+                                                    {
+                                                        "title": "Installing and Configuring Packages on Linux Instances",
+                                                        "href": "workingcookbook-extend-package.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Creating a Custom Tomcat Server Layer",
+                                                "href": "create-custom.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Attributes File",
+                                                        "href": "create-custom-attributes.html"
+                                                    },
+                                                    {
+                                                        "title": "Setup Recipes",
+                                                        "href": "create-custom-setup.html"
+                                                    },
+                                                    {
+                                                        "title": "Configure Recipes",
+                                                        "href": "create-custom-configure.html"
+                                                    },
+                                                    {
+                                                        "title": "Deploy Recipes",
+                                                        "href": "create-custom-deploy.html"
+                                                    },
+                                                    {
+                                                        "title": "Create a Stack and Run an Application",
+                                                        "href": "create-custom-stack.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Stack Configuration and Deployment Attributes",
+                                                "href": "workingcookbook-json.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Cookbooks 101",
+                                        "href": "cookbooks-101.html",
+                                        "contents": [
+                                            {
+                                                "title": "Cookbook Basics",
+                                                "href": "cookbooks-101-basics.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Recipe Structure",
+                                                        "href": "cookbooks-101-basics-structure.html"
+                                                    },
+                                                    {
+                                                        "title": "Example 1: Installing Packages",
+                                                        "href": "cookbooks-101-basics-packages.html"
+                                                    },
+                                                    {
+                                                        "title": "Example 2: Managing Users",
+                                                        "href": "cookbooks-101-basics-users.html"
+                                                    },
+                                                    {
+                                                        "title": "Example 3: Creating Directories",
+                                                        "href": "cookbooks-101-basics-directories.html"
+                                                    },
+                                                    {
+                                                        "title": "Example 4: Adding Flow Control",
+                                                        "href": "cookbooks-101-basics-ruby.html"
+                                                    },
+                                                    {
+                                                        "title": "Example 5: Using Attributes",
+                                                        "href": "cookbooks-101-basics-attributes.html"
+                                                    },
+                                                    {
+                                                        "title": "Example 6: Creating Files",
+                                                        "href": "cookbooks-101-basics-files.html"
+                                                    },
+                                                    {
+                                                        "title": "Example 7: Running Commands and Scripts",
+                                                        "href": "cookbooks-101-basics-commands.html"
+                                                    },
+                                                    {
+                                                        "title": "Example 8: Managing Services",
+                                                        "href": "cookbooks-101-basics-services.html"
+                                                    },
+                                                    {
+                                                        "title": "Example 9: Using Amazon EC2 Instances",
+                                                        "href": "cookbooks-101-basics-ec2.html"
+                                                    },
+                                                    {
+                                                        "title": "Next Steps",
+                                                        "href": "cookbooks-101-basics-next.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Implementing Cookbooks for AWS OpsWorks Stacks",
+                                                "href": "cookbooks-101-opsworks.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Running a Recipe on a Linux Instance",
+                                                        "href": "cookbooks-101-opsworks-opsworks-instance.html"
+                                                    },
+                                                    {
+                                                        "title": "Running a Recipe on a Windows Instance",
+                                                        "href": "cookbooks-101-opsworks-opsworks-windows.html"
+                                                    },
+                                                    {
+                                                        "title": "Running a Windows PowerShell Script",
+                                                        "href": "cookbooks-101-opsworks-opsworks-powershell.html"
+                                                    },
+                                                    {
+                                                        "title": "Mocking the Stack Configuration and Deployment Attributes on Vagrant",
+                                                        "href": "opsworks-opsworks-mock.html"
+                                                    },
+                                                    {
+                                                        "title": "Using Stack Configuration and Deployment Attribute Values",
+                                                        "href": "cookbooks-101-opsworks-opsworks-stack-config.html",
+                                                        "contents": [
+                                                            {
+                                                                "title": "Obtaining Attribute Values Directly",
+                                                                "href": "cookbooks-101-opsworks-opsworks-stack-config-node.html"
+                                                            },
+                                                            {
+                                                                "title": "Obtaining Attribute Values with Chef Search",
+                                                                "href": "cookbooks-101-opsworks-opsworks-stack-config-search.html",
+                                                                "contents": [
+                                                                    {
+                                                                        "title": "Using Search on a Linux Stack",
+                                                                        "href": "cookbooks-101-opsworks-opsworks-stack-config-search-linux.html"
+                                                                    },
+                                                                    {
+                                                                        "title": "Using Search on a Windows Stack",
+                                                                        "href": "cookbooks-101-opsworks-opsworks-stack-config-search-windows.html",
+                                                                        "contents": [
+                                                                            {
+                                                                                "title": "Using the node Search Index on Windows Stacks",
+                                                                                "href": "cookbooks-101-opsworks-opsworks-stack-config-search-node.html"
+                                                                            },
+                                                                            {
+                                                                                "title": "Using AWS OpsWorks Stacks-Specific Search Indexes on Windows Stacks",
+                                                                                "href": "cookbooks-101-opsworks-opsworks-stack-config-search-opsworks.html"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "title": "Using an External Cookbook on a Linux Instance: Berkshelf",
+                                                        "href": "cookbooks-101-opsworks-berkshelf.html"
+                                                    },
+                                                    {
+                                                        "title": "Using the SDK for Ruby",
+                                                        "href": "cookbooks-101-opsworks-s3.html",
+                                                        "contents": [
+                                                            {
+                                                                "title": "Using the SDK for Ruby on a Vagrant Instance",
+                                                                "href": "cookbooks-101-opsworks-s3-vagrant.html"
+                                                            },
+                                                            {
+                                                                "title": "Using the SDK for Ruby on an AWS OpsWorks Stacks Linux Instance",
+                                                                "href": "cookbooks-101-opsworks-s3-opsworks.html"
+                                                            },
+                                                            {
+                                                                "title": "Using the SDK for Ruby on an AWS OpsWorks Stacks Windows Instance",
+                                                                "href": "cookbooks-101-opsworks-s3-windows.html"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "title": "Installing Windows Software",
+                                                        "href": "cookbooks-101-opsworks-install-software.html",
+                                                        "contents": [
+                                                            {
+                                                                "title": "Installing a Windows Feature: IIS",
+                                                                "href": "cookbooks-101-opsworks-install-software-feature.html"
+                                                            },
+                                                            {
+                                                                "title": "Installing a Package",
+                                                                "href": "cookbooks-101-opsworks-install-software-package.html"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "title": "Overriding Built-In Attributes",
+                                                        "href": "cookbooks-101-opsworks-attributes.html"
+                                                    },
+                                                    {
+                                                        "title": "Overriding Built-In Templates",
+                                                        "href": "cookbooks-101-opsworks-templates.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Load Balancing a Layer",
+                                        "href": "best-server-load-balancing.html"
+                                    },
+                                    {
+                                        "title": "Migrating from Chef Server",
+                                        "href": "best-practices-server-migrate.html"
+                                    },
+                                    {
+                                        "title": "AWS OpsWorks Stacks Layer Reference",
+                                        "href": "layers.html",
+                                        "contents": [
+                                            {
+                                                "title": "HAProxy Layer Reference",
+                                                "href": "layers-load.html"
+                                            },
+                                            {
+                                                "title": "HAProxy AWS OpsWorks Stacks Layer",
+                                                "href": "layers-haproxy.html"
+                                            },
+                                            {
+                                                "title": "MySQL Layer Reference",
+                                                "href": "layers-mysql.html"
+                                            },
+                                            {
+                                                "title": "MySQL OpsWorks Layer",
+                                                "href": "workinglayers-db-mysql.html"
+                                            },
+                                            {
+                                                "title": "Application Server Layers Reference",
+                                                "href": "layers-server.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "AWS Flow (Ruby) Layer Reference",
+                                                        "href": "layers-server-flow.html"
+                                                    },
+                                                    {
+                                                        "title": "Java App Server Layer Reference",
+                                                        "href": "layers-server-java.html"
+                                                    },
+                                                    {
+                                                        "title": "Node.js App Server Layer Reference",
+                                                        "href": "layers-server-nodejs.html"
+                                                    },
+                                                    {
+                                                        "title": "PHP App Server Layer Reference",
+                                                        "href": "layers-server-php.html"
+                                                    },
+                                                    {
+                                                        "title": "Rails App Server Layer Reference",
+                                                        "href": "layers-server-rails.html"
+                                                    },
+                                                    {
+                                                        "title": "Static Web Server Layer Reference",
+                                                        "href": "layers-server-static.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Application Server Layers",
+                                                "href": "workinglayers-servers.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "AWS Flow (Ruby) Layer",
+                                                        "href": "workinglayers-awsflow.html"
+                                                    },
+                                                    {
+                                                        "title": "Java App Server AWS OpsWorks Stacks Layer",
+                                                        "href": "layers-java.html",
+                                                        "contents": [
+                                                            {
+                                                                "title": "Custom Configuration",
+                                                                "href": "layers-java-config.html"
+                                                            },
+                                                            {
+                                                                "title": "Deploying Java Apps",
+                                                                "href": "layers-java-deploy.html"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "title": "Node.js App Server AWS OpsWorks Stacks Layer",
+                                                        "href": "workinglayers-node.html"
+                                                    },
+                                                    {
+                                                        "title": "PHP App Server AWS OpsWorks Stacks Layer",
+                                                        "href": "workinglayers-php.html"
+                                                    },
+                                                    {
+                                                        "title": "Rails App Server AWS OpsWorks Stacks Layer",
+                                                        "href": "workinglayers-rails.html"
+                                                    },
+                                                    {
+                                                        "title": "Static Web Server AWS OpsWorks Stacks Layer",
+                                                        "href": "workinglayers-static.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Custom Layer Reference",
+                                                "href": "layers-other-custom.html"
+                                            },
+                                            {
+                                                "title": "Other Layers Reference",
+                                                "href": "layers-other.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Ganglia Layer Reference",
+                                                        "href": "layers-other-ganglia.html"
+                                                    },
+                                                    {
+                                                        "title": "Memcached Layer Reference",
+                                                        "href": "layers-other-memcached.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Other Layers",
+                                                "href": "workinglayers-other.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Ganglia Layer",
+                                                        "href": "workinglayers-ganglia.html"
+                                                    },
+                                                    {
+                                                        "title": "Memcached",
+                                                        "href": "workinglayers-mem.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Cookbook Components",
+                                        "href": "workingcookbook-installingcustom-components.html",
+                                        "contents": [
+                                            {
+                                                "title": "Attributes",
+                                                "href": "workingcookbook-installingcustom-components-attributes.html"
+                                            },
+                                            {
+                                                "title": "Templates",
+                                                "href": "workingcookbook-installingcustom-components-templates.html"
+                                            },
+                                            {
+                                                "title": "Recipes",
+                                                "href": "workingcookbook-installingcustom-components-recipes.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Stack Configuration and Deployment Attributes: Linux",
+                                        "href": "attributes-json-linux.html",
+                                        "contents": [
+                                            {
+                                                "title": "opsworks Attributes",
+                                                "href": "attributes-json-opsworks.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "applications",
+                                                        "href": "attributes-json-opsworks-applications.html"
+                                                    },
+                                                    {
+                                                        "title": "instance Attributes",
+                                                        "href": "attributes-json-opsworks-instance.html"
+                                                    },
+                                                    {
+                                                        "title": "layers Attributes",
+                                                        "href": "attributes-json-opsworks-layers.html"
+                                                    },
+                                                    {
+                                                        "title": "rails_stack Attributes",
+                                                        "href": "attributes-json-opsworks-rails-stack.html"
+                                                    },
+                                                    {
+                                                        "title": "stack Attributes",
+                                                        "href": "attributes-json-opsworks-stack.html"
+                                                    },
+                                                    {
+                                                        "title": "Other Top-level opsworks Attributes",
+                                                        "href": "attributes-json-opsworks-other.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "opsworks_custom_cookbooks Attributes",
+                                                "href": "attributes-json-custom.html"
+                                            },
+                                            {
+                                                "title": "dependencies Attributes",
+                                                "href": "attributes-json-dependencies.html"
+                                            },
+                                            {
+                                                "title": "ganglia Attributes",
+                                                "href": "attributes-json-ganglia.html"
+                                            },
+                                            {
+                                                "title": "mysql Attributes",
+                                                "href": "attributes-json-mysql.html"
+                                            },
+                                            {
+                                                "title": "passenger Attributes",
+                                                "href": "attributes-json-passenger.html"
+                                            },
+                                            {
+                                                "title": "opsworks_bundler Attributes",
+                                                "href": "attributes-json-bundler.html"
+                                            },
+                                            {
+                                                "title": "deploy Attributes",
+                                                "href": "attributes-json-deploy.html"
+                                            },
+                                            {
+                                                "title": "Other Top-Level Attributes",
+                                                "href": "attributes-json-other.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Built-in Cookbook Attributes",
+                                        "href": "attributes-recipes.html",
+                                        "contents": [
+                                            {
+                                                "title": "apache2 Attributes",
+                                                "href": "attributes-recipes-apache.html"
+                                            },
+                                            {
+                                                "title": "deploy Attributes",
+                                                "href": "attributes-recipes-deploy.html"
+                                            },
+                                            {
+                                                "title": "haproxy Attributes",
+                                                "href": "attributes-recipes-haproxy.html"
+                                            },
+                                            {
+                                                "title": "memcached Attributes",
+                                                "href": "attributes-recipes-mem.html"
+                                            },
+                                            {
+                                                "title": "mysql Attributes",
+                                                "href": "attributes-recipes-mysql.html"
+                                            },
+                                            {
+                                                "title": "nginx Attributes",
+                                                "href": "attributes-recipes-nginx.html"
+                                            },
+                                            {
+                                                "title": "opsworks_berkshelf Attributes",
+                                                "href": "attributes-recipes-berkshelf.html"
+                                            },
+                                            {
+                                                "title": "opsworks_java Attributes",
+                                                "href": "attributes-recipes-java.html"
+                                            },
+                                            {
+                                                "title": "passenger_apache2 Attributes",
+                                                "href": "attributes-recipes-passenger.html"
+                                            },
+                                            {
+                                                "title": "ruby Attributes",
+                                                "href": "attributes-recipes-ruby.html"
+                                            },
+                                            {
+                                                "title": "unicorn Attributes",
+                                                "href": "attributes-recipes-unicorn.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Troubleshooting",
+                                        "href": "troubleshooting-chef-11-linux.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using AWS OpsWorks Stacks with Other AWS Services",
+                        "href": "other-services.html",
+                        "contents": [
+                            {
+                                "title": "Using a Back-end Data Store",
+                                "href": "customizing-rds.html",
+                                "contents": [
+                                    {
+                                        "title": "How to Set up a Database Connection",
+                                        "href": "customizing-rds-setup.html"
+                                    },
+                                    {
+                                        "title": "How to Connect an Application Server Instance to Amazon RDS",
+                                        "href": "customizing-rds-connect.html",
+                                        "contents": [
+                                            {
+                                                "title": "Create an Amazon RDS MySQL Database",
+                                                "href": "customizing-rds-connect-create.html"
+                                            },
+                                            {
+                                                "title": "Customize the Stack to Connect to the RDS Database",
+                                                "href": "customizing-rds-connect-customize.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "ElastiCache Redis",
+                                "href": "other-services-redis.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Create an ElastiCache Redis Cluster",
+                                        "href": "other-services-redis-cluster.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Set up a Rails Stack",
+                                        "href": "other-services-redis-stack.html"
+                                    },
+                                    {
+                                        "title": "Step 3: Create and Deploy a Custom Cookbook",
+                                        "href": "other-services-redis-cookbook.html"
+                                    },
+                                    {
+                                        "title": "Step 4: Assign the Recipe to a LifeCycle Event",
+                                        "href": "other-services-redis-event.html"
+                                    },
+                                    {
+                                        "title": "Step 5: Add Access Information to the Stack Configuration JSON",
+                                        "href": "other-services-redis-json.html"
+                                    },
+                                    {
+                                        "title": "Step 6: Deploy and run the App",
+                                        "href": "other-services-redis-app.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using an Amazon S3 Bucket",
+                                "href": "gettingstarted.walkthrough.photoapp.html",
+                                "contents": [
+                                    {
+                                        "title": "Step 1: Create an Amazon S3 Bucket",
+                                        "href": "using-s3-bucket.html"
+                                    },
+                                    {
+                                        "title": "Step 2: Create a PHP App Server Stack",
+                                        "href": "using-s3-stack.html"
+                                    },
+                                    {
+                                        "title": "Step 3: Create and Deploy a Custom Cookbook",
+                                        "href": "using-s3-cookbook.html"
+                                    },
+                                    {
+                                        "title": "Step 4: Assign the Recipes to LifeCycle Events",
+                                        "href": "using-s3-events.html"
+                                    },
+                                    {
+                                        "title": "Step 5: Add Access Information to the Stack Configuration and Deployment Attributes",
+                                        "href": "using-s3-json.html"
+                                    },
+                                    {
+                                        "title": "Step 6: Deploy and Run PhotoApp",
+                                        "href": "using-s3-run.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using AWS CodePipeline with AWS OpsWorks Stacks",
+                                "href": "other-services-cp.html",
+                                "contents": [
+                                    {
+                                        "title": "AWS CodePipeline with AWS OpsWorks Stacks - Chef 12 Stacks",
+                                        "href": "other-services-cp-chef12.html",
+                                        "contents": [
+                                            {
+                                                "title": "Step 1: Create a stack, layer, and an instance in AWS OpsWorks Stacks",
+                                                "href": "other-services-cp-chef12-stack.html"
+                                            },
+                                            {
+                                                "title": "Step 2: Configure your stack and layer to use custom cookbooks",
+                                                "href": "other-services-cp-stackconfig.html"
+                                            },
+                                            {
+                                                "title": "Step 3: Upload app code to an Amazon S3 bucket",
+                                                "href": "other-services-cp-chef12-s3.html"
+                                            },
+                                            {
+                                                "title": "Step 4: Add your app to AWS OpsWorks Stacks",
+                                                "href": "other-services-cp-chef12-addapp.html"
+                                            },
+                                            {
+                                                "title": "Step 5: Create a pipeline in CodePipeline",
+                                                "href": "other-services-cp-chef12-pipeline.html"
+                                            },
+                                            {
+                                                "title": "Step 6: Verifying the app deployment in AWS OpsWorks Stacks",
+                                                "href": "other-services-cp-chef12-verify.html"
+                                            },
+                                            {
+                                                "title": "Step 7 (Optional): Update the app code to see CodePipeline redeploy your app automatically",
+                                                "href": "other-services-cp-chef12-update.html"
+                                            },
+                                            {
+                                                "title": "Step 8 (Optional): Clean up resources",
+                                                "href": "other-services-cp-chef12-cleanup.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "AWS CodePipeline with AWS OpsWorks Stacks - Chef 11 Stacks",
+                                        "href": "other-services-cp-chef11.html",
+                                        "contents": [
+                                            {
+                                                "title": "Step 1: Create a stack, layer, and an instance in AWS OpsWorks Stacks",
+                                                "href": "other-services-cp-chef11-stack.html"
+                                            },
+                                            {
+                                                "title": "Step 2: Upload app code to an Amazon S3 bucket",
+                                                "href": "other-services-cp-chef11-s3.html"
+                                            },
+                                            {
+                                                "title": "Step 3: Add your app to AWS OpsWorks Stacks",
+                                                "href": "other-services-cp-chef11-addapp.html"
+                                            },
+                                            {
+                                                "title": "Step 4: Create a pipeline in CodePipeline",
+                                                "href": "other-services-cp-chef11-pipeline.html"
+                                            },
+                                            {
+                                                "title": "Step 5: Verifying the app deployment in AWS OpsWorks Stacks",
+                                                "href": "other-services-cp-chef11-verify.html"
+                                            },
+                                            {
+                                                "title": "Step 6 (Optional): Update the app code to see CodePipeline redeploy your app automatically",
+                                                "href": "other-services-cp-chef11-update.html"
+                                            },
+                                            {
+                                                "title": "Step 7 (Optional): Clean up resources",
+                                                "href": "other-services-cp-chef11-cleanup.html"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Using the AWS OpsWorks Stacks CLI",
+                        "href": "cli-examples.html",
+                        "contents": [
+                            {
+                                "title": "Create an Instance",
+                                "href": "cli-examples-create-instance.html"
+                            },
+                            {
+                                "title": "Deploy an App",
+                                "href": "cli-examples-create-deployment.html"
+                            },
+                            {
+                                "title": "List Apps",
+                                "href": "cli-examples-describe-apps.html"
+                            },
+                            {
+                                "title": "List Commands",
+                                "href": "cli-examples-describe-commands.html"
+                            },
+                            {
+                                "title": "List Deployments",
+                                "href": "cli-examples-describe-deployments.html"
+                            },
+                            {
+                                "title": "List Elastic IP Addresses",
+                                "href": "cli-examples-describe-eips.html"
+                            },
+                            {
+                                "title": "List Instances",
+                                "href": "cli-examples-describe-instances.html"
+                            },
+                            {
+                                "title": "List Stacks",
+                                "href": "cli-examples-describe-stacks.html"
+                            },
+                            {
+                                "title": "List Layers",
+                                "href": "cli-examples-describe-layers.html"
+                            },
+                            {
+                                "title": "Execute a Recipe",
+                                "href": "cli-examples-execute-recipe.html"
+                            },
+                            {
+                                "title": "Install Dependencies",
+                                "href": "cli-examples-install-dependencies.html"
+                            },
+                            {
+                                "title": "Update the Stack Configuration",
+                                "href": "cli-examples-update-stack.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Debugging and Troubleshooting Guide",
+                        "href": "troubleshoot.html",
+                        "contents": [
+                            {
+                                "title": "Debugging Recipes",
+                                "href": "troubleshoot-debug.html",
+                                "contents": [
+                                    {
+                                        "title": "Logging in to a Failed Instance",
+                                        "href": "troubleshoot-debug-login.html"
+                                    },
+                                    {
+                                        "title": "Chef Logs",
+                                        "href": "troubleshoot-debug-log.html"
+                                    },
+                                    {
+                                        "title": "Using the AWS OpsWorks Stacks Agent CLI",
+                                        "href": "troubleshoot-debug-cli.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Common Debugging and Troubleshooting Issues",
+                                "href": "common-issues.html",
+                                "contents": [
+                                    {
+                                        "title": "Troubleshooting AWS OpsWorks Stacks",
+                                        "href": "common-issues-troubleshoot.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS OpsWorks Stacks Agent CLI",
+                        "href": "agent.html",
+                        "contents": [
+                            {
+                                "title": "agent_report",
+                                "href": "agent-report.html"
+                            },
+                            {
+                                "title": "get_json",
+                                "href": "agent-json.html"
+                            },
+                            {
+                                "title": "instance_report",
+                                "href": "agent-instance.html"
+                            },
+                            {
+                                "title": "list_commands",
+                                "href": "agent-list.html"
+                            },
+                            {
+                                "title": "run_command",
+                                "href": "agent-run.html"
+                            },
+                            {
+                                "title": "show_log",
+                                "href": "agent-show.html"
+                            },
+                            {
+                                "title": "stack_state",
+                                "href": "agent-stack.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS OpsWorks Stacks Data Bag Reference",
+                        "href": "data-bags.html",
+                        "contents": [
+                            {
+                                "title": "App Data Bag (aws_opsworks_app)",
+                                "href": "data-bag-json-app.html"
+                            },
+                            {
+                                "title": "Command Data Bag (aws_opsworks_command)",
+                                "href": "data-bag-json-command.html"
+                            },
+                            {
+                                "title": "Amazon ECS Cluster Data Bag (aws_opsworks_ecs_cluster)",
+                                "href": "data-bag-json-ecs-cluster.html"
+                            },
+                            {
+                                "title": "Elastic Load Balancing Data Bag (aws_opsworks_elastic_load_balancer)",
+                                "href": "data-bag-json-elb.html"
+                            },
+                            {
+                                "title": "Instance Data Bag (aws_opsworks_instance)",
+                                "href": "data-bag-json-instance.html"
+                            },
+                            {
+                                "title": "Layer Data Bag (aws_opsworks_layer)",
+                                "href": "data-bag-json-layer.html"
+                            },
+                            {
+                                "title": "Amazon RDS Data Bag (aws_opsworks_rds_db_instance)",
+                                "href": "data-bag-json-rds.html"
+                            },
+                            {
+                                "title": "Stack Data Bag (aws_opsworks_stack)",
+                                "href": "data-bag-json-stack.html"
+                            },
+                            {
+                                "title": "User Data Bag (aws_opsworks_user)",
+                                "href": "data-bag-json-user.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "OpsWorks Agent Changes",
+                        "href": "agentchanges.html"
+                    }
+                ]
+            },
+            {
+                "title": "Resources",
+                "href": "relatedresources.html"
+            },
+            {
+                "title": "AWS OpsWorks document history",
+                "href": "history.html"
+            }
+        ]
+    }
+}

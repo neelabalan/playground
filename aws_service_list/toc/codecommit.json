@@ -1,1 +1,544 @@
-{ "contents" : [ { "title" : "What is CodeCommit?", "href" : "welcome.html" }, { "title" : "Setting up", "href" : "setting-up.html", "contents" : [ { "title" : "For HTTPS users using Git credentials", "href" : "setting-up-gc.html" }, { "title" : "For HTTPS connections with git-remote-codecommit", "href" : "setting-up-git-remote-codecommit.html" }, { "title" : "For connections from development tools", "href" : "setting-up-ide.html", "contents" : [ { "title" : "Integrate AWS Cloud9 with AWS CodeCommit", "href" : "setting-up-ide-c9.html" }, { "title" : "Integrate Visual Studio with AWS CodeCommit", "href" : "setting-up-ide-vs.html" }, { "title" : "Integrate Eclipse with AWS CodeCommit", "href" : "setting-up-ide-ec.html" } ] }, { "title" : "For SSH users not using the AWS CLI", "href" : "setting-up-without-cli.html" }, { "title" : "For SSH connections on Linux, macOS, or Unix", "href" : "setting-up-ssh-unixes.html" }, { "title" : "For SSH connections on Windows", "href" : "setting-up-ssh-windows.html" }, { "title" : "For HTTPS connections on Linux, macOS, or Unix with the AWS CLI credential helper", "href" : "setting-up-https-unixes.html" }, { "title" : "For HTTPS connections on Windows with the AWS CLI credential helper", "href" : "setting-up-https-windows.html" } ] }, { "title" : "Getting started", "href" : "getting-started-topnode.html", "contents" : [ { "title" : "Getting started with CodeCommit", "href" : "getting-started-cc.html" }, { "title" : "Getting started with Git and CodeCommit", "href" : "getting-started.html" } ] }, { "title" : "Product and service integrations", "href" : "integrations.html" }, { "title" : "Working with repositories", "href" : "repositories.html", "contents" : [ { "title" : "Create a repository", "href" : "how-to-create-repository.html" }, { "title" : "Connect to a repository", "href" : "how-to-connect.html" }, { "title" : "Share a repository", "href" : "how-to-share-repository.html" }, { "title" : "Configuring notifications for repository events", "href" : "how-to-repository-email.html", "contents" : [ { "title" : "Create a notification rule", "href" : "notification-rule-create.html" }, { "title" : "Change or disable notifications", "href" : "how-to-repository-email-console-edit.html" }, { "title" : "Delete notifications", "href" : "how-to-repository-email-delete.html" } ] }, { "title" : "Tagging a repository", "href" : "how-to-tag-repository.html", "contents" : [ { "title" : "Add a tag to a repository", "href" : "how-to-tag-repository-add.html" }, { "title" : "View tags for a repository", "href" : "how-to-tag-repository-list.html" }, { "title" : "Edit tags for a repository", "href" : "how-to-tag-repository-update.html" }, { "title" : "Remove a tag from a repository", "href" : "how-to-tag-repository-delete.html" } ] }, { "title" : "Manage triggers for a repository", "href" : "how-to-notify.html", "contents" : [ { "title" : "Create a trigger for an Amazon SNS topic", "href" : "how-to-notify-sns.html" }, { "title" : "Create a trigger for a Lambda function", "href" : "how-to-notify-lambda.html" }, { "title" : "Create a trigger for an existing Lambda function", "href" : "how-to-notify-lambda-cc.html" }, { "title" : "Edit triggers for a repository", "href" : "how-to-notify-edit.html" }, { "title" : "Test triggers for a repository", "href" : "how-to-notify-test.html" }, { "title" : "Delete triggers from a repository", "href" : "how-to-notify-delete.html" } ] }, { "title" : "Associate or disassociate a repository with Amazon CodeGuru Reviewer", "href" : "how-to-amazon-codeguru-reviewer.html" }, { "title" : "View repository details", "href" : "how-to-view-repository-details.html" }, { "title" : "Change repository settings", "href" : "how-to-change-repository.html" }, { "title" : "Sync changes between repositories", "href" : "how-to-sync-changes.html" }, { "title" : "Push commits to two repositories", "href" : "how-to-mirror-repo-pushes.html" }, { "title" : "Configure cross-account access to a repository using roles", "href" : "cross-account.html", "contents" : [ { "title" : "Cross-account repository access: Actions for the administrator in AccountA", "href" : "cross-account-administrator-a.html" }, { "title" : "Cross-account repository access: Actions for the administrator in AccountB", "href" : "cross-account-administrator-b.html" }, { "title" : "Cross-account repository access: Actions for the repository user in AccountB", "href" : "cross-account-user-b.html" } ] }, { "title" : "Delete a repository", "href" : "how-to-delete-repository.html" } ] }, { "title" : "Working with files", "href" : "files.html", "contents" : [ { "title" : "Browse files in a repository", "href" : "how-to-browse.html" }, { "title" : "Create or add a file", "href" : "how-to-create-file.html" }, { "title" : "Edit the contents of a file", "href" : "how-to-edit-file.html" } ] }, { "title" : "Working with pull requests", "href" : "pull-requests.html", "contents" : [ { "title" : "Create a pull request", "href" : "how-to-create-pull-request.html" }, { "title" : "Create an approval rule", "href" : "how-to-create-pull-request-approval-rule.html" }, { "title" : "View pull requests", "href" : "how-to-view-pull-request.html" }, { "title" : "Review a pull request", "href" : "how-to-review-pull-request.html" }, { "title" : "Update a pull request", "href" : "how-to-update-pull-request.html" }, { "title" : "Edit or delete an approval rule", "href" : "how-to-edit-delete-pull-request-approval-rule.html" }, { "title" : "Override approval rules on a pull request", "href" : "how-to-override-approval-rules.html" }, { "title" : "Merge a pull request", "href" : "how-to-merge-pull-request.html" }, { "title" : "Resolve conflicts in a pull request", "href" : "how-to-resolve-conflict-pull-request.html" }, { "title" : "Close a pull request", "href" : "how-to-close-pull-request.html" } ] }, { "title" : "Working with approval rule templates", "href" : "approval-rule-templates.html", "contents" : [ { "title" : "Create an approval rule template", "href" : "how-to-create-template.html" }, { "title" : "Associate an approval rule template with a repository", "href" : "how-to-associate-template.html" }, { "title" : "Manage approval rule templates", "href" : "how-to-manage-templates.html" }, { "title" : "Disassociate an approval rule template", "href" : "how-to-disassociate-template.html" }, { "title" : "Delete an approval rule template", "href" : "how-to-delete-template.html" } ] }, { "title" : "Working with commits", "href" : "commits.html", "contents" : [ { "title" : "Create a commit", "href" : "how-to-create-commit.html" }, { "title" : "View commit details", "href" : "how-to-view-commit-details.html" }, { "title" : "Compare commits", "href" : "how-to-compare-commits.html" }, { "title" : "Comment on a commit", "href" : "how-to-commit-comment.html" }, { "title" : "Create a Git tag", "href" : "how-to-create-tag.html" }, { "title" : "View tag details", "href" : "how-to-view-tag-details.html" }, { "title" : "Delete a tag", "href" : "how-to-delete-tag.html" } ] }, { "title" : "Working with branches", "href" : "branches.html", "contents" : [ { "title" : "Create a branch", "href" : "how-to-create-branch.html" }, { "title" : "Limit pushes and merges to branches", "href" : "how-to-conditional-branch.html" }, { "title" : "View branch details", "href" : "how-to-view-branch-details.html" }, { "title" : "Compare and merge branches", "href" : "how-to-compare-branches.html" }, { "title" : "Change branch settings", "href" : "how-to-change-branch.html" }, { "title" : "Delete a branch", "href" : "how-to-delete-branch.html" } ] }, { "title" : "Working with user preferences", "href" : "user-preferences.html" }, { "title" : "Migrate to CodeCommit", "href" : "how-to-migrate-repository.html", "contents" : [ { "title" : "Migrate a Git repository to AWS CodeCommit", "href" : "how-to-migrate-repository-existing.html" }, { "title" : "Migrate content to CodeCommit", "href" : "how-to-migrate-repository-local.html" }, { "title" : "Migrate a repository in increments", "href" : "how-to-push-large-repositories.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html", "contents" : [ { "title" : "AWS KMS and encryption", "href" : "encryption.html" }, { "title" : "Using rotating credentials", "href" : "temporary-access.html" } ] }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "Authentication and access control", "href" : "auth-and-access-control.html", "contents" : [ { "title" : "Using identity-based policies (IAM policies)", "href" : "auth-and-access-control-iam-identity-based-access-control.html", "contents" : [ { "title" : "AWS managed policies for CodeCommit", "href" : "security-iam-awsmanpol.html" }, { "title" : "Customer managed policy examples", "href" : "customer-managed-policies.html" } ] }, { "title" : "CodeCommit permissions reference", "href" : "auth-and-access-control-permissions-reference.html" } ] }, { "title" : "How AWS CodeCommit works with IAM", "href" : "security_iam_service-with-iam.html" } ] }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Monitoring CodeCommit", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Monitoring CodeCommit events", "href" : "monitoring-events.html" }, { "title" : "Logging AWS CodeCommit API calls with AWS CloudTrail", "href" : "integ-cloudtrail.html" } ] }, { "title" : "AWS CloudFormation resources", "href" : "creating-resources-with-cloudformation.html" }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "Troubleshooting Git credentials (HTTPS)", "href" : "troubleshooting-gc.html" }, { "title" : "Troubleshooting git-remote-codecommit", "href" : "troubleshooting-grc.html" }, { "title" : "Troubleshooting SSH connections", "href" : "troubleshooting-ssh.html" }, { "title" : "Troubleshooting the credential helper (HTTPS)", "href" : "troubleshooting-ch.html" }, { "title" : "Troubleshooting Git clients", "href" : "troubleshooting-git.html" }, { "title" : "Troubleshooting access errors", "href" : "troubleshooting-ae.html" }, { "title" : "Troubleshooting configuration errors", "href" : "troubleshooting-cf.html" }, { "title" : "Troubleshooting console errors", "href" : "troubleshooting-cs.html" }, { "title" : "Troubleshooting triggers", "href" : "troubleshooting-ti.html" } ] }, { "title" : "CodeCommit reference", "href" : "references.html", "contents" : [ { "title" : "Regions and Git connection endpoints", "href" : "regions.html" }, { "title" : "Using AWS CodeCommit with interface VPC endpoints", "href" : "codecommit-and-interface-VPC.html" }, { "title" : "Quotas", "href" : "limits.html" }, { "title" : "Command line reference", "href" : "cmd-ref.html" }, { "title" : "Basic Git commands", "href" : "how-to-basic-git.html" } ] }, { "title" : "Document history", "href" : "history.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/codecommit/latest/userguide/",
+    "service": "codecommit",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is CodeCommit?",
+                "href": "welcome.html"
+            },
+            {
+                "title": "Setting up",
+                "href": "setting-up.html",
+                "contents": [
+                    {
+                        "title": "For HTTPS users using Git credentials",
+                        "href": "setting-up-gc.html"
+                    },
+                    {
+                        "title": "For HTTPS connections with git-remote-codecommit",
+                        "href": "setting-up-git-remote-codecommit.html"
+                    },
+                    {
+                        "title": "For connections from development tools",
+                        "href": "setting-up-ide.html",
+                        "contents": [
+                            {
+                                "title": "Integrate AWS Cloud9 with AWS CodeCommit",
+                                "href": "setting-up-ide-c9.html"
+                            },
+                            {
+                                "title": "Integrate Visual Studio with AWS CodeCommit",
+                                "href": "setting-up-ide-vs.html"
+                            },
+                            {
+                                "title": "Integrate Eclipse with AWS CodeCommit",
+                                "href": "setting-up-ide-ec.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "For SSH users not using the AWS CLI",
+                        "href": "setting-up-without-cli.html"
+                    },
+                    {
+                        "title": "For SSH connections on Linux, macOS, or Unix",
+                        "href": "setting-up-ssh-unixes.html"
+                    },
+                    {
+                        "title": "For SSH connections on Windows",
+                        "href": "setting-up-ssh-windows.html"
+                    },
+                    {
+                        "title": "For HTTPS connections on Linux, macOS, or Unix with the AWS CLI credential helper",
+                        "href": "setting-up-https-unixes.html"
+                    },
+                    {
+                        "title": "For HTTPS connections on Windows with the AWS CLI credential helper",
+                        "href": "setting-up-https-windows.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started-topnode.html",
+                "contents": [
+                    {
+                        "title": "Getting started with CodeCommit",
+                        "href": "getting-started-cc.html"
+                    },
+                    {
+                        "title": "Getting started with Git and CodeCommit",
+                        "href": "getting-started.html"
+                    }
+                ]
+            },
+            {
+                "title": "Product and service integrations",
+                "href": "integrations.html"
+            },
+            {
+                "title": "Working with repositories",
+                "href": "repositories.html",
+                "contents": [
+                    {
+                        "title": "Create a repository",
+                        "href": "how-to-create-repository.html"
+                    },
+                    {
+                        "title": "Connect to a repository",
+                        "href": "how-to-connect.html"
+                    },
+                    {
+                        "title": "Share a repository",
+                        "href": "how-to-share-repository.html"
+                    },
+                    {
+                        "title": "Configuring notifications for repository events",
+                        "href": "how-to-repository-email.html",
+                        "contents": [
+                            {
+                                "title": "Create a notification rule",
+                                "href": "notification-rule-create.html"
+                            },
+                            {
+                                "title": "Change or disable notifications",
+                                "href": "how-to-repository-email-console-edit.html"
+                            },
+                            {
+                                "title": "Delete notifications",
+                                "href": "how-to-repository-email-delete.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tagging a repository",
+                        "href": "how-to-tag-repository.html",
+                        "contents": [
+                            {
+                                "title": "Add a tag to a repository",
+                                "href": "how-to-tag-repository-add.html"
+                            },
+                            {
+                                "title": "View tags for a repository",
+                                "href": "how-to-tag-repository-list.html"
+                            },
+                            {
+                                "title": "Edit tags for a repository",
+                                "href": "how-to-tag-repository-update.html"
+                            },
+                            {
+                                "title": "Remove a tag from a repository",
+                                "href": "how-to-tag-repository-delete.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Manage triggers for a repository",
+                        "href": "how-to-notify.html",
+                        "contents": [
+                            {
+                                "title": "Create a trigger for an Amazon SNS topic",
+                                "href": "how-to-notify-sns.html"
+                            },
+                            {
+                                "title": "Create a trigger for a Lambda function",
+                                "href": "how-to-notify-lambda.html"
+                            },
+                            {
+                                "title": "Create a trigger for an existing Lambda function",
+                                "href": "how-to-notify-lambda-cc.html"
+                            },
+                            {
+                                "title": "Edit triggers for a repository",
+                                "href": "how-to-notify-edit.html"
+                            },
+                            {
+                                "title": "Test triggers for a repository",
+                                "href": "how-to-notify-test.html"
+                            },
+                            {
+                                "title": "Delete triggers from a repository",
+                                "href": "how-to-notify-delete.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Associate or disassociate a repository with Amazon CodeGuru Reviewer",
+                        "href": "how-to-amazon-codeguru-reviewer.html"
+                    },
+                    {
+                        "title": "View repository details",
+                        "href": "how-to-view-repository-details.html"
+                    },
+                    {
+                        "title": "Change repository settings",
+                        "href": "how-to-change-repository.html"
+                    },
+                    {
+                        "title": "Sync changes between repositories",
+                        "href": "how-to-sync-changes.html"
+                    },
+                    {
+                        "title": "Push commits to two repositories",
+                        "href": "how-to-mirror-repo-pushes.html"
+                    },
+                    {
+                        "title": "Configure cross-account access to a repository using roles",
+                        "href": "cross-account.html",
+                        "contents": [
+                            {
+                                "title": "Cross-account repository access: Actions for the administrator in AccountA",
+                                "href": "cross-account-administrator-a.html"
+                            },
+                            {
+                                "title": "Cross-account repository access: Actions for the administrator in AccountB",
+                                "href": "cross-account-administrator-b.html"
+                            },
+                            {
+                                "title": "Cross-account repository access: Actions for the repository user in AccountB",
+                                "href": "cross-account-user-b.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Delete a repository",
+                        "href": "how-to-delete-repository.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with files",
+                "href": "files.html",
+                "contents": [
+                    {
+                        "title": "Browse files in a repository",
+                        "href": "how-to-browse.html"
+                    },
+                    {
+                        "title": "Create or add a file",
+                        "href": "how-to-create-file.html"
+                    },
+                    {
+                        "title": "Edit the contents of a file",
+                        "href": "how-to-edit-file.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with pull requests",
+                "href": "pull-requests.html",
+                "contents": [
+                    {
+                        "title": "Create a pull request",
+                        "href": "how-to-create-pull-request.html"
+                    },
+                    {
+                        "title": "Create an approval rule",
+                        "href": "how-to-create-pull-request-approval-rule.html"
+                    },
+                    {
+                        "title": "View pull requests",
+                        "href": "how-to-view-pull-request.html"
+                    },
+                    {
+                        "title": "Review a pull request",
+                        "href": "how-to-review-pull-request.html"
+                    },
+                    {
+                        "title": "Update a pull request",
+                        "href": "how-to-update-pull-request.html"
+                    },
+                    {
+                        "title": "Edit or delete an approval rule",
+                        "href": "how-to-edit-delete-pull-request-approval-rule.html"
+                    },
+                    {
+                        "title": "Override approval rules on a pull request",
+                        "href": "how-to-override-approval-rules.html"
+                    },
+                    {
+                        "title": "Merge a pull request",
+                        "href": "how-to-merge-pull-request.html"
+                    },
+                    {
+                        "title": "Resolve conflicts in a pull request",
+                        "href": "how-to-resolve-conflict-pull-request.html"
+                    },
+                    {
+                        "title": "Close a pull request",
+                        "href": "how-to-close-pull-request.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with approval rule templates",
+                "href": "approval-rule-templates.html",
+                "contents": [
+                    {
+                        "title": "Create an approval rule template",
+                        "href": "how-to-create-template.html"
+                    },
+                    {
+                        "title": "Associate an approval rule template with a repository",
+                        "href": "how-to-associate-template.html"
+                    },
+                    {
+                        "title": "Manage approval rule templates",
+                        "href": "how-to-manage-templates.html"
+                    },
+                    {
+                        "title": "Disassociate an approval rule template",
+                        "href": "how-to-disassociate-template.html"
+                    },
+                    {
+                        "title": "Delete an approval rule template",
+                        "href": "how-to-delete-template.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with commits",
+                "href": "commits.html",
+                "contents": [
+                    {
+                        "title": "Create a commit",
+                        "href": "how-to-create-commit.html"
+                    },
+                    {
+                        "title": "View commit details",
+                        "href": "how-to-view-commit-details.html"
+                    },
+                    {
+                        "title": "Compare commits",
+                        "href": "how-to-compare-commits.html"
+                    },
+                    {
+                        "title": "Comment on a commit",
+                        "href": "how-to-commit-comment.html"
+                    },
+                    {
+                        "title": "Create a Git tag",
+                        "href": "how-to-create-tag.html"
+                    },
+                    {
+                        "title": "View tag details",
+                        "href": "how-to-view-tag-details.html"
+                    },
+                    {
+                        "title": "Delete a tag",
+                        "href": "how-to-delete-tag.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with branches",
+                "href": "branches.html",
+                "contents": [
+                    {
+                        "title": "Create a branch",
+                        "href": "how-to-create-branch.html"
+                    },
+                    {
+                        "title": "Limit pushes and merges to branches",
+                        "href": "how-to-conditional-branch.html"
+                    },
+                    {
+                        "title": "View branch details",
+                        "href": "how-to-view-branch-details.html"
+                    },
+                    {
+                        "title": "Compare and merge branches",
+                        "href": "how-to-compare-branches.html"
+                    },
+                    {
+                        "title": "Change branch settings",
+                        "href": "how-to-change-branch.html"
+                    },
+                    {
+                        "title": "Delete a branch",
+                        "href": "how-to-delete-branch.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with user preferences",
+                "href": "user-preferences.html"
+            },
+            {
+                "title": "Migrate to CodeCommit",
+                "href": "how-to-migrate-repository.html",
+                "contents": [
+                    {
+                        "title": "Migrate a Git repository to AWS CodeCommit",
+                        "href": "how-to-migrate-repository-existing.html"
+                    },
+                    {
+                        "title": "Migrate content to CodeCommit",
+                        "href": "how-to-migrate-repository-local.html"
+                    },
+                    {
+                        "title": "Migrate a repository in increments",
+                        "href": "how-to-push-large-repositories.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "AWS KMS and encryption",
+                                "href": "encryption.html"
+                            },
+                            {
+                                "title": "Using rotating credentials",
+                                "href": "temporary-access.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "Authentication and access control",
+                                "href": "auth-and-access-control.html",
+                                "contents": [
+                                    {
+                                        "title": "Using identity-based policies (IAM policies)",
+                                        "href": "auth-and-access-control-iam-identity-based-access-control.html",
+                                        "contents": [
+                                            {
+                                                "title": "AWS managed policies for CodeCommit",
+                                                "href": "security-iam-awsmanpol.html"
+                                            },
+                                            {
+                                                "title": "Customer managed policy examples",
+                                                "href": "customer-managed-policies.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "CodeCommit permissions reference",
+                                        "href": "auth-and-access-control-permissions-reference.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "How AWS CodeCommit works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring CodeCommit",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Monitoring CodeCommit events",
+                        "href": "monitoring-events.html"
+                    },
+                    {
+                        "title": "Logging AWS CodeCommit API calls with AWS CloudTrail",
+                        "href": "integ-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "AWS CloudFormation resources",
+                "href": "creating-resources-with-cloudformation.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Troubleshooting Git credentials (HTTPS)",
+                        "href": "troubleshooting-gc.html"
+                    },
+                    {
+                        "title": "Troubleshooting git-remote-codecommit",
+                        "href": "troubleshooting-grc.html"
+                    },
+                    {
+                        "title": "Troubleshooting SSH connections",
+                        "href": "troubleshooting-ssh.html"
+                    },
+                    {
+                        "title": "Troubleshooting the credential helper (HTTPS)",
+                        "href": "troubleshooting-ch.html"
+                    },
+                    {
+                        "title": "Troubleshooting Git clients",
+                        "href": "troubleshooting-git.html"
+                    },
+                    {
+                        "title": "Troubleshooting access errors",
+                        "href": "troubleshooting-ae.html"
+                    },
+                    {
+                        "title": "Troubleshooting configuration errors",
+                        "href": "troubleshooting-cf.html"
+                    },
+                    {
+                        "title": "Troubleshooting console errors",
+                        "href": "troubleshooting-cs.html"
+                    },
+                    {
+                        "title": "Troubleshooting triggers",
+                        "href": "troubleshooting-ti.html"
+                    }
+                ]
+            },
+            {
+                "title": "CodeCommit reference",
+                "href": "references.html",
+                "contents": [
+                    {
+                        "title": "Regions and Git connection endpoints",
+                        "href": "regions.html"
+                    },
+                    {
+                        "title": "Using AWS CodeCommit with interface VPC endpoints",
+                        "href": "codecommit-and-interface-VPC.html"
+                    },
+                    {
+                        "title": "Quotas",
+                        "href": "limits.html"
+                    },
+                    {
+                        "title": "Command line reference",
+                        "href": "cmd-ref.html"
+                    },
+                    {
+                        "title": "Basic Git commands",
+                        "href": "how-to-basic-git.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "history.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

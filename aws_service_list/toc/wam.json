@@ -1,1 +1,20 @@
-{ "contents" : [ { "title" : "Getting Started", "href" : "getting_started.html" }, { "title" : "Client Application", "href" : "using.html" }, { "title" : "Troubleshooting", "href" : "troubleshooting.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/wam/latest/userguide/",
+    "service": "wam",
+    "toc": {
+        "contents": [
+            {
+                "title": "Getting Started",
+                "href": "getting_started.html"
+            },
+            {
+                "title": "Client Application",
+                "href": "using.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html"
+            }
+        ]
+    }
+}

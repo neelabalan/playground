@@ -1,1 +1,266 @@
-{ "contents" : [ { "title" : "What is a scaling plan?", "href" : "what-is-a-scaling-plan.html" }, { "title" : "How scaling plans work", "href" : "how-it-works.html" }, { "title" : "Best practices", "href" : "best-practices-for-scaling-plans.html" }, { "title" : "Getting started", "href" : "getting-started-with-scaling-plans.html", "contents" : [ { "title" : "Step 1: Find your scalable resources", "href" : "gs-select-application.html" }, { "title" : "Step 2: Specify the scaling strategy", "href" : "gs-configure-scaling-plan.html" }, { "title" : "Step 3: Configure advanced settings (optional)", "href" : "gs-specify-custom-settings.html" }, { "title" : "Step 4: Create your scaling plan", "href" : "gs-create-scaling-plan.html" }, { "title" : "Step 5: Clean up", "href" : "gs-delete-scaling-plan.html" }, { "title" : "Step 6: Next steps", "href" : "gs-next-steps.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "VPC endpoints (AWS PrivateLink)", "href" : "scaling-plan-vpc-endpoints.html" }, { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and Access Management", "href" : "auth-and-access-control.html", "contents" : [ { "title" : "How scaling plans work with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Service-linked roles", "href" : "aws-auto-scaling-service-linked-roles.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" } ] }, { "title" : "Compliance validation", "href" : "compliance.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Quotas", "href" : "scaling-plan-quotas.html" }, { "title" : "Related information", "href" : "resources.html" }, { "title" : "Document history", "href" : "scaling-plan-doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/autoscaling/application/userguide/",
+    "service": "autoscaling",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Application Auto Scaling?",
+                "href": "what-is-application-auto-scaling.html"
+            },
+            {
+                "title": "Get started",
+                "href": "getting-started.html"
+            },
+            {
+                "title": "Services that work with Application Auto Scaling",
+                "href": "integrated-services-list.html",
+                "contents": [
+                    {
+                        "title": "Amazon AppStream 2.0",
+                        "href": "services-that-can-integrate-appstream.html"
+                    },
+                    {
+                        "title": "Amazon Aurora",
+                        "href": "services-that-can-integrate-aurora.html"
+                    },
+                    {
+                        "title": "Amazon Comprehend",
+                        "href": "services-that-can-integrate-comprehend.html"
+                    },
+                    {
+                        "title": "Amazon DynamoDB",
+                        "href": "services-that-can-integrate-dynamodb.html"
+                    },
+                    {
+                        "title": "Amazon ECS",
+                        "href": "services-that-can-integrate-ecs.html"
+                    },
+                    {
+                        "title": "Amazon ElastiCache",
+                        "href": "services-that-can-integrate-elasticache.html"
+                    },
+                    {
+                        "title": "Amazon Keyspaces (for Apache Cassandra)",
+                        "href": "services-that-can-integrate-keyspaces.html"
+                    },
+                    {
+                        "title": "AWS Lambda",
+                        "href": "services-that-can-integrate-lambda.html"
+                    },
+                    {
+                        "title": "Amazon Managed Streaming for Apache Kafka (MSK)",
+                        "href": "services-that-can-integrate-msk.html"
+                    },
+                    {
+                        "title": "Amazon Neptune",
+                        "href": "services-that-can-integrate-neptune.html"
+                    },
+                    {
+                        "title": "Amazon SageMaker",
+                        "href": "services-that-can-integrate-sagemaker.html"
+                    },
+                    {
+                        "title": "Spot Fleet (Amazon EC2)",
+                        "href": "services-that-can-integrate-ec2.html"
+                    },
+                    {
+                        "title": "Custom resources",
+                        "href": "services-that-can-integrate-custom.html"
+                    }
+                ]
+            },
+            {
+                "title": "Set up",
+                "href": "setting-up.html",
+                "contents": [
+                    {
+                        "title": "Set up AWS CLI",
+                        "href": "setup-awscli.html"
+                    },
+                    {
+                        "title": "Use AWS CloudShell",
+                        "href": "use-awscli-with-cloudshell.html"
+                    }
+                ]
+            },
+            {
+                "title": "Configure scaling with AWS CloudFormation",
+                "href": "creating-resources-with-cloudformation.html"
+            },
+            {
+                "title": "Scheduled scaling",
+                "href": "application-auto-scaling-scheduled-scaling.html",
+                "contents": [
+                    {
+                        "title": "Overview",
+                        "href": "scheduled-scaling-policy-overview.html"
+                    },
+                    {
+                        "title": "Using cron expressions",
+                        "href": "scheduled-scaling-using-cron-expressions.html"
+                    },
+                    {
+                        "title": "Example scheduled actions",
+                        "href": "examples-scheduled-actions.html"
+                    },
+                    {
+                        "title": "Manage scheduled scaling",
+                        "href": "scheduled-scaling-additional-cli-commands.html"
+                    },
+                    {
+                        "title": "Tutorial: Get started with scheduled scaling using the AWS CLI",
+                        "href": "get-started-exercise.html"
+                    }
+                ]
+            },
+            {
+                "title": "Target tracking scaling policies",
+                "href": "application-auto-scaling-target-tracking.html",
+                "contents": [
+                    {
+                        "title": "Overview",
+                        "href": "target-tracking-scaling-policy-overview.html"
+                    },
+                    {
+                        "title": "Create a target tracking scaling policy",
+                        "href": "create-target-tracking-policy-cli.html"
+                    },
+                    {
+                        "title": "Use metric math",
+                        "href": "application-auto-scaling-target-tracking-metric-math.html"
+                    }
+                ]
+            },
+            {
+                "title": "Step scaling policies",
+                "href": "application-auto-scaling-step-scaling-policies.html",
+                "contents": [
+                    {
+                        "title": "Overview",
+                        "href": "step-scaling-policy-overview.html"
+                    },
+                    {
+                        "title": "Create a step scaling policy",
+                        "href": "create-step-scaling-policy-cli.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tutorial: Configure auto scaling to handle a heavy workload",
+                "href": "application-auto-scaling-tutorial.html"
+            },
+            {
+                "title": "Suspend scaling",
+                "href": "application-auto-scaling-suspend-resume-scaling.html"
+            },
+            {
+                "title": "Scaling activities",
+                "href": "application-auto-scaling-scaling-activities.html"
+            },
+            {
+                "title": "Monitor",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "AWS CloudTrail",
+                        "href": "logging-using-cloudtrail.html"
+                    },
+                    {
+                        "title": "Amazon CloudWatch",
+                        "href": "monitoring-cloudwatch.html",
+                        "contents": [
+                            {
+                                "title": "Build CloudWatch dashboards",
+                                "href": "build-dashboards-with-cloudwatch.html"
+                            },
+                            {
+                                "title": "Create CloudWatch alarms",
+                                "href": "cloudwatch-alarm-notifications.html"
+                            },
+                            {
+                                "title": "Monitor resource usage with CloudWatch",
+                                "href": "monitor-cloudwatch-metrics.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Amazon EventBridge",
+                        "href": "monitoring-eventbridge.html"
+                    },
+                    {
+                        "title": "AWS Health Dashboard",
+                        "href": "monitoring-personal-health-dashboard.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tagging support",
+                "href": "resource-tagging-support.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "VPC endpoints (AWS PrivateLink)",
+                        "href": "application-auto-scaling-vpc-endpoints.html"
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "application-auto-scaling-data-protection.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "auth-and-access-control.html",
+                        "contents": [
+                            {
+                                "title": "How Application Auto Scaling works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "AWS managed policies",
+                                "href": "security-iam-awsmanpol.html"
+                            },
+                            {
+                                "title": "Service-linked roles",
+                                "href": "application-auto-scaling-service-linked-roles.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            },
+                            {
+                                "title": "Permissions validation for API calls on target resources",
+                                "href": "security_iam_permission_validation.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "application-auto-scaling-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "application-auto-scaling-quotas.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

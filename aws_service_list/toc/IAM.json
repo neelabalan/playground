@@ -1,1 +1,1840 @@
-{ "contents" : [ { "title" : "What is IAM?", "href" : "introduction.html", "contents" : [ { "title" : "When do I use IAM", "href" : "when-to-use-iam.html" }, { "title" : "How IAM works", "href" : "intro-structure.html" }, { "title" : "Users in AWS", "href" : "introduction_identity-management.html" }, { "title" : "Permissions and policies in IAM", "href" : "introduction_access-management.html" }, { "title" : "What is ABAC?", "href" : "introduction_attribute-based-access-control.html" }, { "title" : "Security features outside IAM", "href" : "introduction_security-outside-iam.html" }, { "title" : "Quick links to common tasks", "href" : "introduction_quick-links-common-tasks.html" }, { "title" : "IAM console search", "href" : "console_search.html" }, { "title" : "Using AWS CloudShell", "href" : "using-aws-with-cloudshell.html" }, { "title" : "Working with AWS SDKs", "href" : "sdk-general-information-section.html" } ] }, { "title" : "Getting set up", "href" : "getting-set-up.html", "contents" : [ { "title" : "IAM management methods", "href" : "management_methods.html" }, { "title" : "Your AWS account ID and its alias", "href" : "console_account-alias.html" } ] }, { "title" : "Getting started", "href" : "getting-started.html" }, { "title" : "Security best practices and use cases", "href" : "IAMBestPracticesAndUseCases.html", "contents" : [ { "title" : "Security best practices", "href" : "best-practices.html" }, { "title" : "Root user best practices", "href" : "root-user-best-practices.html" }, { "title" : "Business use cases", "href" : "IAM_UseCases.html" } ] }, { "title" : "Tutorials", "href" : "tutorials.html", "contents" : [ { "title" : "Grant access to the billing console", "href" : "tutorial_billing.html" }, { "title" : "Delegate access across AWS accounts using roles", "href" : "tutorial_cross-account-with-roles.html" }, { "title" : "Create a customer managed policy", "href" : "tutorial_managed-policies.html" }, { "title" : "Use attribute-based access control (ABAC)", "href" : "tutorial_attribute-based-access-control.html", "contents" : [ { "title" : "Use SAML session tags for ABAC", "href" : "tutorial_abac-saml.html" } ] }, { "title" : "Permit users to manage their credentials and MFA settings", "href" : "tutorial_users-self-manage-mfa-and-creds.html" } ] }, { "title" : "Identities", "href" : "id.html", "contents" : [ { "title" : "AWS account root user", "href" : "id_root-user.html", "contents" : [ { "title" : "Enable a virtual MFA device for your AWS account root user (console)", "href" : "enable-virt-mfa-for-root.html" }, { "title" : "Enable a hardware TOTP token for the AWS account root user (console)", "href" : "enable-hw-mfa-for-root.html" }, { "title" : "Enable a FIDO security key for the AWS account root user (console)", "href" : "enable-fido-mfa-for-root.html" }, { "title" : "Change the password", "href" : "root-user-password.html" }, { "title" : "Resetting a lost or forgotten root user password", "href" : "reset-root-password.html" }, { "title" : "Creating access keys for the root user", "href" : "id_root-user_manage_add-key.html" }, { "title" : "Deleting access keys for the root user", "href" : "id_root-user_manage_delete-key.html" }, { "title" : "Tasks that require root user", "href" : "root-user-tasks.html" }, { "title" : "Troubleshooting root user issues", "href" : "troubleshooting_root-user.html" }, { "title" : "Related information", "href" : "id_root-user_related_information.html" } ] }, { "title" : "Users", "href" : "id_users.html", "contents" : [ { "title" : "Adding a user", "href" : "id_users_create.html" }, { "title" : "Controlling user access to the console", "href" : "console_controlling-access.html" }, { "title" : "How IAM users sign in to AWS", "href" : "id_users_sign-in.html", "contents" : [ { "title" : "Using MFA devices with your IAM sign-in page", "href" : "console_sign-in-mfa.html" } ] }, { "title" : "Managing users", "href" : "id_users_manage.html" }, { "title" : "Changing permissions for a user", "href" : "id_users_change-permissions.html" }, { "title" : "Managing passwords", "href" : "id_credentials_passwords.html", "contents" : [ { "title" : "Setting a password policy", "href" : "id_credentials_passwords_account-policy.html" }, { "title" : "Managing user passwords", "href" : "id_credentials_passwords_admin-change-user.html" }, { "title" : "Permitting IAM users to change their own passwords", "href" : "id_credentials_passwords_enable-user-change.html" }, { "title" : "How an IAM user changes their own password", "href" : "id_credentials_passwords_user-change-own.html" } ] }, { "title" : "Access keys", "href" : "id_credentials_access-keys.html" }, { "title" : "Retrieving lost passwords or access keys", "href" : "id_credentials_access-keys_retrieve.html" }, { "title" : "Multi-factor authentication (MFA)", "href" : "id_credentials_mfa.html", "contents" : [ { "title" : "Enabling MFA devices", "href" : "id_credentials_mfa_enable.html", "contents" : [ { "title" : "General steps for enabling MFA devices", "href" : "id_credentials_mfa_enable-overview.html" }, { "title" : "Enabling a virtual MFA device (console)", "href" : "id_credentials_mfa_enable_virtual.html" }, { "title" : "Enabling a FIDO security key (console)", "href" : "id_credentials_mfa_enable_fido.html", "contents" : [ { "title" : "Supported configurations for using FIDO security keys", "href" : "id_credentials_mfa_fido_supported_configurations.html" } ] }, { "title" : "Enabling a hardware TOTP token (console)", "href" : "id_credentials_mfa_enable_physical.html" }, { "title" : "Enabling and managing virtual MFA devices (AWS CLI or AWS API)", "href" : "id_credentials_mfa_enable_cliapi.html" } ] }, { "title" : "Checking MFA status", "href" : "id_credentials_mfa_checking-status.html" }, { "title" : "Resynchronizing virtual and hardware MFA devices", "href" : "id_credentials_mfa_sync.html" }, { "title" : "Deactivating MFA devices", "href" : "id_credentials_mfa_disable.html" }, { "title" : "What if an MFA device is lost or stops working?", "href" : "id_credentials_mfa_lost-or-broken.html" }, { "title" : "Configuring MFA-protected API access", "href" : "id_credentials_mfa_configure-api-require.html" }, { "title" : "Sample code: MFA", "href" : "id_credentials_mfa_sample-code.html" } ] }, { "title" : "Finding unused credentials", "href" : "id_credentials_finding-unused.html" }, { "title" : "Getting credential reports", "href" : "id_credentials_getting-report.html" }, { "title" : "Using IAM with CodeCommit", "href" : "id_credentials_ssh-keys.html" }, { "title" : "Using IAM with Amazon Keyspaces", "href" : "id_credentials_keyspaces.html" }, { "title" : "Managing server certificates", "href" : "id_credentials_server-certs.html" } ] }, { "title" : "User groups", "href" : "id_groups.html", "contents" : [ { "title" : "Creating user groups", "href" : "id_groups_create.html" }, { "title" : "Managing user groups", "href" : "id_groups_manage.html", "contents" : [ { "title" : "Listing IAM user groups", "href" : "id_groups_manage_list.html" }, { "title" : "Adding and removing users in an IAM user group", "href" : "id_groups_manage_add-remove-users.html" }, { "title" : "Attaching a policy to an IAM user group", "href" : "id_groups_manage_attach-policy.html" }, { "title" : "Renaming an IAM user group", "href" : "id_groups_manage_rename.html" }, { "title" : "Deleting a user group", "href" : "id_groups_manage_delete.html" } ] } ] }, { "title" : "Roles", "href" : "id_roles.html", "contents" : [ { "title" : "Terms and concepts", "href" : "id_roles_terms-and-concepts.html" }, { "title" : "Common scenarios", "href" : "id_roles_common-scenarios.html", "contents" : [ { "title" : "Providing access across AWS accounts", "href" : "id_roles_common-scenarios_aws-accounts.html" }, { "title" : "Providing access for non AWS workloads", "href" : "id_roles_common-scenarios_non-aws.html" }, { "title" : "Providing access to third-party AWS accounts", "href" : "id_roles_common-scenarios_third-party.html", "contents" : [ { "title" : "Using an external ID for third-party access", "href" : "id_roles_create_for-user_externalid.html" } ] }, { "title" : "Providing access to AWS services", "href" : "id_roles_common-scenarios_services.html" }, { "title" : "The confused deputy problem", "href" : "confused-deputy.html" }, { "title" : "Providing access through identity federation", "href" : "id_roles_common-scenarios_federated-users.html" } ] }, { "title" : "Identity providers and federation", "href" : "id_roles_providers.html", "contents" : [ { "title" : "About web identity federation", "href" : "id_roles_providers_oidc.html", "contents" : [ { "title" : "Using Amazon Cognito for mobile apps", "href" : "id_roles_providers_oidc_cognito.html" }, { "title" : "Using web identity federation API operations for mobile apps", "href" : "id_roles_providers_oidc_manual.html" }, { "title" : "Identifying users with web identity federation", "href" : "id_roles_providers_oidc_user-id.html" }, { "title" : "Additional resources for web identity federation", "href" : "id_roles_providers_oidc_resources.html" } ] }, { "title" : "About SAML 2.0 federation", "href" : "id_roles_providers_saml.html" }, { "title" : "Creating IAM identity providers", "href" : "id_roles_providers_create.html", "contents" : [ { "title" : "Creating OIDC identity providers", "href" : "id_roles_providers_create_oidc.html", "contents" : [ { "title" : "Obtaining the thumbprint for an OIDC Identity Provider", "href" : "id_roles_providers_create_oidc_verify-thumbprint.html" } ] }, { "title" : "Creating IAM SAML identity providers", "href" : "id_roles_providers_create_saml.html", "contents" : [ { "title" : "Configuring relying party trust and claims", "href" : "id_roles_providers_create_saml_relying-party.html" }, { "title" : "Integrating third-party SAML solution providers with AWS", "href" : "id_roles_providers_saml_3rd-party.html" }, { "title" : "Configuring SAML assertions for the authentication response", "href" : "id_roles_providers_create_saml_assertions.html" } ] } ] }, { "title" : "Enable SAML 2.0 federated users to access the AWS console", "href" : "id_roles_providers_enable-console-saml.html" }, { "title" : "Enabling custom identity broker access to the AWS console", "href" : "id_roles_providers_enable-console-custom-url.html" } ] }, { "title" : "Service-linked roles", "href" : "using-service-linked-roles.html" }, { "title" : "Creating roles", "href" : "id_roles_create.html", "contents" : [ { "title" : "Creating a role for an IAM user", "href" : "id_roles_create_for-user.html" }, { "title" : "Creating a role for an AWS service", "href" : "id_roles_create_for-service.html" }, { "title" : "Creating a role for identity federation", "href" : "id_roles_create_for-idp.html", "contents" : [ { "title" : "Creating a role for web Identity/OIDC federation", "href" : "id_roles_create_for-idp_oidc.html" }, { "title" : "Creating a role for SAML 2.0 federation", "href" : "id_roles_create_for-idp_saml.html" } ] }, { "title" : "Creating a role using custom trust policies", "href" : "id_roles_create_for-custom.html" }, { "title" : "Examples of policies for delegating access", "href" : "id_roles_create_policy-examples.html" } ] }, { "title" : "Using roles", "href" : "id_roles_use.html", "contents" : [ { "title" : "Granting a user permissions to switch roles", "href" : "id_roles_use_permissions-to-switch.html" }, { "title" : "Granting permissions to pass a role to a service", "href" : "id_roles_use_passrole.html" }, { "title" : "Switching roles (console)", "href" : "id_roles_use_switch-role-console.html" }, { "title" : "Switching roles (AWS CLI)", "href" : "id_roles_use_switch-role-cli.html" }, { "title" : "Switching roles (Tools for Windows PowerShell)", "href" : "id_roles_use_switch-role-twp.html" }, { "title" : "Switching roles (AWS API)", "href" : "id_roles_use_switch-role-api.html" }, { "title" : "Using roles for applications on Amazon EC2", "href" : "id_roles_use_switch-role-ec2.html", "contents" : [ { "title" : "Using instance profiles", "href" : "id_roles_use_switch-role-ec2_instance-profiles.html" } ] }, { "title" : "Revoking role temporary credentials", "href" : "id_roles_use_revoke-sessions.html" } ] }, { "title" : "Managing roles", "href" : "id_roles_manage.html", "contents" : [ { "title" : "Modifying a role", "href" : "id_roles_manage_modify.html", "contents" : [ { "title" : "Modifying a role (console)", "href" : "roles-managingrole-editing-console.html" }, { "title" : "Modifying a role (AWS CLI)", "href" : "roles-managingrole-editing-cli.html" }, { "title" : "Modifying a role (AWS API)", "href" : "roles-managingrole-editing-api.html" } ] }, { "title" : "Deleting roles or instance profiles", "href" : "id_roles_manage_delete.html" } ] } ] }, { "title" : "Tagging IAM resources", "href" : "id_tags.html", "contents" : [ { "title" : "Tagging IAM users", "href" : "id_tags_users.html" }, { "title" : "Tagging IAM roles", "href" : "id_tags_roles.html" }, { "title" : "Tagging customer managed policies", "href" : "id_tags_customer-managed-policies.html" }, { "title" : "Tagging IAM identity providers", "href" : "id_tags_idps.html", "contents" : [ { "title" : "Tagging OpenID Connect (OIDC) identity providers", "href" : "id_tags_idps_oidc.html" }, { "title" : "Tagging IAM SAML identity providers", "href" : "id_tags_idps_saml.html" } ] }, { "title" : "Tagging instance profiles", "href" : "id_tags_instance-profiles.html" }, { "title" : "Tagging server certificates", "href" : "id_tags_server-certificates.html" }, { "title" : "Tagging virtual MFA devices", "href" : "id_tags_virtual-mfa.html" }, { "title" : "Session tags", "href" : "id_session-tags.html" } ] }, { "title" : "Temporary security credentials", "href" : "id_credentials_temp.html", "contents" : [ { "title" : "Requesting temporary security credentials", "href" : "id_credentials_temp_request.html" }, { "title" : "Using temporary credentials with AWS resources", "href" : "id_credentials_temp_use-resources.html" }, { "title" : "Controlling permissions for temporary security credentials", "href" : "id_credentials_temp_control-access.html", "contents" : [ { "title" : "Permissions for AssumeRole API operations", "href" : "id_credentials_temp_control-access_assumerole.html" }, { "title" : "Monitor and control actions taken with assumed roles", "href" : "id_credentials_temp_control-access_monitor.html" }, { "title" : "Permissions for GetFederationToken", "href" : "id_credentials_temp_control-access_getfederationtoken.html" }, { "title" : "Permissions for GetSessionToken", "href" : "id_credentials_temp_control-access_getsessiontoken.html" }, { "title" : "Disabling permissions", "href" : "id_credentials_temp_control-access_disable-perms.html" }, { "title" : "Granting permissions to create credentials", "href" : "id_credentials_temp_control-access_enable-create.html" } ] }, { "title" : "Managing AWS STS in an AWS Region", "href" : "id_credentials_temp_enable-regions.html" }, { "title" : "Using AWS STS interface VPC endpoints", "href" : "id_credentials_sts_vpce.html" }, { "title" : "Using bearer tokens", "href" : "id_credentials_bearer.html" }, { "title" : "Sample applications that use temporary credentials", "href" : "id_credentials_temp_sample-apps.html" }, { "title" : "Additional resources for temporary credentials", "href" : "id_credentials_temp_related-topics.html" } ] }, { "title" : "Log events with CloudTrail", "href" : "cloudtrail-integration.html" } ] }, { "title" : "Access management", "href" : "access.html", "contents" : [ { "title" : "Policies and permissions", "href" : "access_policies.html", "contents" : [ { "title" : "Managed policies and inline policies", "href" : "access_policies_managed-vs-inline.html", "contents" : [ { "title" : "Choosing managed or inline", "href" : "access_policies-choosing-managed-or-inline.html" }, { "title" : "Getting started with managed policies", "href" : "access_policies-getting-started-managed.html" }, { "title" : "Converting inline policy to managed", "href" : "access_policies-convert-inline-to-managed.html" }, { "title" : "Deprecated AWS managed policies", "href" : "access_policies_managed-deprecated.html" } ] }, { "title" : "Permissions boundaries", "href" : "access_policies_boundaries.html" }, { "title" : "Identity vs resource", "href" : "access_policies_identity-vs-resource.html" }, { "title" : "Controlling access using policies", "href" : "access_controlling.html" }, { "title" : "Control access to IAM users and roles using tags", "href" : "access_iam-tags.html" }, { "title" : "Control access to AWS resources using tags", "href" : "access_tags.html" }, { "title" : "Cross account resource access", "href" : "access_policies-cross-account-resource-access.html" }, { "title" : "Forward access sessions", "href" : "access_forward_access_sessions.html" }, { "title" : "Example policies", "href" : "access_policies_examples.html", "contents" : [ { "title" : "AWS: Specific access during a date range", "href" : "reference_policies_examples_aws-dates.html" }, { "title" : "AWS: Enable or disable AWS Regions", "href" : "reference_policies_examples_aws-enable-disable-regions.html" }, { "title" : "AWS: Self-manage credentials with MFA (My security credentials)", "href" : "reference_policies_examples_aws_my-sec-creds-self-manage.html" }, { "title" : "AWS: Specific access with MFA during a date range", "href" : "reference_policies_examples_aws_mfa-dates.html" }, { "title" : "AWS: Self-manage credentials no MFA (My security credentials)", "href" : "reference_policies_examples_aws_my-sec-creds-self-manage-no-mfa.html" }, { "title" : "AWS: Self-manage MFA device (My security credentials)", "href" : "reference_policies_examples_aws_my-sec-creds-self-manage-mfa-only.html" }, { "title" : "AWS: Self-manage console password (My security credentials)", "href" : "reference_policies_examples_aws_my-sec-creds-self-manage-password-only.html" }, { "title" : "AWS: Self-manage password, access keys, & SSH public keys (My security credentials)", "href" : "reference_policies_examples_aws_my-sec-creds-self-manage-pass-accesskeys-ssh.html" }, { "title" : "AWS: Deny access based on requested Region", "href" : "reference_policies_examples_aws_deny-requested-region.html" }, { "title" : "AWS: Deny access based on source IP", "href" : "reference_policies_examples_aws_deny-ip.html" }, { "title" : "AWS: Deny access to Amazon S3 resources outside your account except AWS Data Exchange", "href" : "reference_policies_examples_resource_account_data_exch.html" }, { "title" : "Data Pipeline: Deny access to pipelines not created by user", "href" : "reference_policies_examples_datapipeline_not-owned.html" }, { "title" : "DynamoDB: Access specific table", "href" : "reference_policies_examples_dynamodb_specific-table.html" }, { "title" : "DynamoDB: Allow access to specific attributes", "href" : "reference_policies_examples_dynamodb_attributes.html" }, { "title" : "DynamoDB: Allow item access based on a Amazon Cognito ID", "href" : "reference_policies_examples_dynamodb_items.html" }, { "title" : "EC2: Attach or detach tagged EBS volumes", "href" : "reference_policies_examples_ec2_ebs-owner.html" }, { "title" : "EC2: Launch instances in a subnet (includes console)", "href" : "reference_policies_examples_ec2_instances-subnet.html" }, { "title" : "EC2: Manage security groups with the same tags (includes console)", "href" : "reference_policies_examples_ec2_securitygroups-vpc.html" }, { "title" : "EC2: Start or stop instances a user has tagged (includes console)", "href" : "reference_policies_examples_ec2_tag-owner.html" }, { "title" : "EC2: Start or stop instances based on tags", "href" : "reference_policies_examples_ec2-start-stop-tags.html" }, { "title" : "EC2: Start or stop for matching tags", "href" : "reference_policies_examples_ec2-start-stop-match-tags.html" }, { "title" : "EC2: Full access within a Region (includes console)", "href" : "reference_policies_examples_ec2_region.html" }, { "title" : "EC2: Start or stop an instance, modify security group (includes console)", "href" : "reference_policies_examples_ec2_instance-securitygroup.html" }, { "title" : "EC2: Requires MFA (GetSessionToken) for operations", "href" : "reference_policies_examples_ec2_require-mfa.html" }, { "title" : "EC2: Limit terminating instances to IP range", "href" : "reference_policies_examples_ec2_terminate-ip.html" }, { "title" : "IAM: Access the policy simulator API", "href" : "reference_policies_examples_iam_policy-sim.html" }, { "title" : "IAM: Access the policy simulator console", "href" : "reference_policies_examples_iam_policy-sim-console.html" }, { "title" : "IAM: Assume tagged roles", "href" : "reference_policies_examples_iam-assume-tagged-role.html" }, { "title" : "IAM: Allows and denies multiple services (includes console)", "href" : "reference_policies_examples_iam_multiple-services-console.html" }, { "title" : "IAM: Add specific tag to tagged user", "href" : "reference_policies_examples_iam-add-tag.html" }, { "title" : "IAM: Add a specific tag", "href" : "reference_policies_examples_iam-add-tag-user-role.html" }, { "title" : "IAM: Create only tagged users", "href" : "reference_policies_examples_iam-new-user-tag.html" }, { "title" : "IAM: Generate credential reports", "href" : "reference_policies_examples_iam-credential-report.html" }, { "title" : "IAM: Manage group membership (includes console)", "href" : "reference_policies_examples_iam_manage-group-membership.html" }, { "title" : "IAM: Manage a tag", "href" : "reference_policies_examples_iam-manage-tags.html" }, { "title" : "IAM: Pass a role to a service", "href" : "reference_policies_examples_iam-passrole-service.html" }, { "title" : "IAM: Read-only console access (no reporting)", "href" : "reference_policies_examples_iam_read-only-console-no-reporting.html" }, { "title" : "IAM: Read-only console access", "href" : "reference_policies_examples_iam_read-only-console.html" }, { "title" : "IAM: Specific users manage group (includes console)", "href" : "reference_policies_examples_iam_users-manage-group.html" }, { "title" : "IAM: Setting account password requirements (includes console)", "href" : "reference_policies_examples_iam_set-account-pass-policy.html" }, { "title" : "IAM: Access the policy simulator API based on user path", "href" : "reference_policies_examples_iam_policy-sim-path.html" }, { "title" : "IAM: Access the policy simulator console based on user path (includes console)", "href" : "reference_policies_examples_iam_policy-sim-path-console.html" }, { "title" : "IAM: MFA self-management", "href" : "reference_policies_examples_iam_mfa-selfmanage.html" }, { "title" : "IAM: Update credentials (includes console)", "href" : "reference_policies_examples_iam_credentials_console.html" }, { "title" : "IAM: View Organizations service last accessed information for a policy", "href" : "reference_policies_examples_iam_service-accessed-data-orgs.html" }, { "title" : "IAM: Apply limited managed policies", "href" : "reference_policies_examples_iam_limit-managed.html" }, { "title" : "AWS: Deny access to resources outside your account except AWS managed IAM policies", "href" : "resource_examples_iam_policies_resource_account.html" }, { "title" : "Lambda: Service access to DynamoDB", "href" : "reference_policies_examples_lambda-access-dynamodb.html" }, { "title" : "RDS: Full access within a Region", "href" : "reference_policies_examples_rds_region.html" }, { "title" : "RDS: Restore databases (includes console)", "href" : "reference_policies_examples_rds_db-console.html" }, { "title" : "RDS: Full access for tag owners", "href" : "reference_policies_examples_rds_tag-owner.html" }, { "title" : "S3: Access bucket if cognito", "href" : "reference_policies_examples_s3_cognito-bucket.html" }, { "title" : "S3: Access federated user home directory (includes console)", "href" : "reference_policies_examples_s3_federated-home-directory-console.html" }, { "title" : "S3: Full access with recent MFA", "href" : "reference_policies_examples_s3_full-access-except-production.html" }, { "title" : "S3: Access IAM user home directory (includes console)", "href" : "reference_policies_examples_s3_home-directory-console.html" }, { "title" : "S3: Restrict management to a specific bucket", "href" : "reference_policies_examples_s3_deny-except-bucket.html" }, { "title" : "S3: Read and write objects to a specific bucket", "href" : "reference_policies_examples_s3_rw-bucket.html" }, { "title" : "S3: Read and write to a specific bucket (includes console)", "href" : "reference_policies_examples_s3_rw-bucket-console.html" } ] } ] }, { "title" : "Managing IAM policies", "href" : "access_policies_manage.html", "contents" : [ { "title" : "Creating IAM policies", "href" : "access_policies_create.html", "contents" : [ { "title" : "Creating IAM policies (console)", "href" : "access_policies_create-console.html" }, { "title" : "Creating IAM policies (CLI)", "href" : "access_policies_create-cli.html" }, { "title" : "Creating IAM policies (API)", "href" : "access_policies_create-api.html" } ] }, { "title" : "Validating policies", "href" : "access_policies_policy-validator.html" }, { "title" : "Generating policies", "href" : "access_policies_generate-policy.html" }, { "title" : "Testing IAM policies", "href" : "access_policies_testing-policies.html" }, { "title" : "Add or remove identity permissions", "href" : "access_policies_manage-attach-detach.html" }, { "title" : "Versioning IAM policies", "href" : "access_policies_managed-versioning.html" }, { "title" : "Editing IAM policies", "href" : "access_policies_manage-edit.html" }, { "title" : "Deleting IAM policies", "href" : "access_policies_manage-delete.html" }, { "title" : "Refining permissions using access information", "href" : "access_policies_access-advisor.html", "contents" : [ { "title" : "View IAM access information", "href" : "access_policies_access-advisor-view-data.html" }, { "title" : "View access information for Organizations", "href" : "access_policies_access-advisor-view-data-orgs.html" }, { "title" : "Example scenarios", "href" : "access_policies_access-advisor-example-scenarios.html" }, { "title" : "Action last accessed services and actions", "href" : "access_policies_access-advisor-action-last-accessed.html" } ] } ] }, { "title" : "Understanding policies", "href" : "access_policies_understand.html", "contents" : [ { "title" : "Policy summary (list of services)", "href" : "access_policies_understand-policy-summary.html", "contents" : [ { "title" : "Access levels in policy summaries", "href" : "access_policies_understand-policy-summary-access-level-summaries.html" } ] }, { "title" : "Service summary (list of actions)", "href" : "access_policies_understand-service-summary.html" }, { "title" : "Action summary (list of resources)", "href" : "access_policies_understand-action-summary.html" }, { "title" : "Example policy summaries", "href" : "access_policies_policy-summary-examples.html" } ] }, { "title" : "Permissions required", "href" : "access_permissions-required.html", "contents" : [ { "title" : "Example policies for IAM", "href" : "id_credentials_delegate-permissions_examples.html" } ] } ] }, { "title" : "Code examples", "href" : "service_code_examples.html", "contents" : [ { "title" : "IAM examples", "href" : "service_code_examples_iam.html", "contents" : [ { "title" : "Actions", "href" : "service_code_examples_iam_actions.html", "contents" : [ { "title" : "Add a user to a group", "href" : "example_iam_AddUserToGroup_section.html" }, { "title" : "Attach a policy to a role", "href" : "example_iam_AttachRolePolicy_section.html" }, { "title" : "Attach a policy to a user", "href" : "example_iam_AttachUserPolicy_section.html" }, { "title" : "Attach an inline policy to a role", "href" : "example_iam_PutRolePolicy_section.html" }, { "title" : "Create a SAML provider", "href" : "example_iam_CreateSAMLProvider_section.html" }, { "title" : "Create a group", "href" : "example_iam_CreateGroup_section.html" }, { "title" : "Create a policy", "href" : "example_iam_CreatePolicy_section.html" }, { "title" : "Create a policy version", "href" : "example_iam_CreatePolicyVersion_section.html" }, { "title" : "Create a role", "href" : "example_iam_CreateRole_section.html" }, { "title" : "Create a service-linked role", "href" : "example_iam_CreateServiceLinkedRole_section.html" }, { "title" : "Create a user", "href" : "example_iam_CreateUser_section.html" }, { "title" : "Create an access key", "href" : "example_iam_CreateAccessKey_section.html" }, { "title" : "Create an alias for an account", "href" : "example_iam_CreateAccountAlias_section.html" }, { "title" : "Create an inline policy for a group", "href" : "example_iam_PutGroupPolicy_section.html" }, { "title" : "Create an inline policy for a user", "href" : "example_iam_PutUserPolicy_section.html" }, { "title" : "Create an instance profile", "href" : "example_iam_CreateInstanceProfile_section.html" }, { "title" : "Delete SAML provider", "href" : "example_iam_DeleteSAMLProvider_section.html" }, { "title" : "Delete a group", "href" : "example_iam_DeleteGroup_section.html" }, { "title" : "Delete a group policy", "href" : "example_iam_DeleteGroupPolicy_section.html" }, { "title" : "Delete a policy", "href" : "example_iam_DeletePolicy_section.html" }, { "title" : "Delete a role", "href" : "example_iam_DeleteRole_section.html" }, { "title" : "Delete a role policy", "href" : "example_iam_DeleteRolePolicy_section.html" }, { "title" : "Delete a server certificate", "href" : "example_iam_DeleteServerCertificate_section.html" }, { "title" : "Delete a service-linked role", "href" : "example_iam_DeleteServiceLinkedRole_section.html" }, { "title" : "Delete a user", "href" : "example_iam_DeleteUser_section.html" }, { "title" : "Delete an access key", "href" : "example_iam_DeleteAccessKey_section.html" }, { "title" : "Delete an account alias", "href" : "example_iam_DeleteAccountAlias_section.html" }, { "title" : "Delete an inline policy from a user", "href" : "example_iam_DeleteUserPolicy_section.html" }, { "title" : "Delete an instance profile", "href" : "example_iam_DeleteInstanceProfile_section.html" }, { "title" : "Detach a policy from a role", "href" : "example_iam_DetachRolePolicy_section.html" }, { "title" : "Detach a policy from a user", "href" : "example_iam_DetachUserPolicy_section.html" }, { "title" : "Generate a credential report", "href" : "example_iam_GenerateCredentialReport_section.html" }, { "title" : "Get a credential report", "href" : "example_iam_GetCredentialReport_section.html" }, { "title" : "Get a detailed authorization report for your account", "href" : "example_iam_GetAccountAuthorizationDetails_section.html" }, { "title" : "Get a policy", "href" : "example_iam_GetPolicy_section.html" }, { "title" : "Get a policy version", "href" : "example_iam_GetPolicyVersion_section.html" }, { "title" : "Get a role", "href" : "example_iam_GetRole_section.html" }, { "title" : "Get a server certificate", "href" : "example_iam_GetServerCertificate_section.html" }, { "title" : "Get a service-linked role's deletion status", "href" : "example_iam_GetServiceLinkedRoleDeletionStatus_section.html" }, { "title" : "Get a summary of account usage", "href" : "example_iam_GetAccountSummary_section.html" }, { "title" : "Get a user", "href" : "example_iam_GetUser_section.html" }, { "title" : "Get data about the last use of an access key", "href" : "example_iam_GetAccessKeyLastUsed_section.html" }, { "title" : "Get the account password policy", "href" : "example_iam_GetAccountPasswordPolicy_section.html" }, { "title" : "List SAML providers", "href" : "example_iam_ListSAMLProviders_section.html" }, { "title" : "List a user's access keys", "href" : "example_iam_ListAccessKeys_section.html" }, { "title" : "List account aliases", "href" : "example_iam_ListAccountAliases_section.html" }, { "title" : "List groups", "href" : "example_iam_ListGroups_section.html" }, { "title" : "List inline policies for a role", "href" : "example_iam_ListRolePolicies_section.html" }, { "title" : "List inline policies for a user", "href" : "example_iam_ListUserPolicies_section.html" }, { "title" : "List policies", "href" : "example_iam_ListPolicies_section.html" }, { "title" : "List policies attached to a role", "href" : "example_iam_ListAttachedRolePolicies_section.html" }, { "title" : "List roles", "href" : "example_iam_ListRoles_section.html" }, { "title" : "List server certificates", "href" : "example_iam_ListServerCertificates_section.html" }, { "title" : "List users", "href" : "example_iam_ListUsers_section.html" }, { "title" : "Remove a user from a group", "href" : "example_iam_RemoveUserFromGroup_section.html" }, { "title" : "Update a server certificate", "href" : "example_iam_UpdateServerCertificate_section.html" }, { "title" : "Update a user", "href" : "example_iam_UpdateUser_section.html" }, { "title" : "Update an access key", "href" : "example_iam_UpdateAccessKey_section.html" }, { "title" : "Upload a server certificate", "href" : "example_iam_UploadServerCertificate_section.html" } ] }, { "title" : "Scenarios", "href" : "service_code_examples_iam_scenarios.html", "contents" : [ { "title" : "Build and manage a resilient service", "href" : "example_cross_ResilientService_section.html" }, { "title" : "Create a group and add a user", "href" : "example_iam_Scenario_GroupBasics_section.html" }, { "title" : "Create a user and assume a role", "href" : "example_iam_Scenario_CreateUserAssumeRole_section.html" }, { "title" : "Create read-only and read-write users", "href" : "example_iam_Scenario_UserPolicies_section.html" }, { "title" : "Manage access keys", "href" : "example_iam_Scenario_ManageAccessKeys_section.html" }, { "title" : "Manage policies", "href" : "example_iam_Scenario_PolicyManagement_section.html" }, { "title" : "Manage roles", "href" : "example_iam_Scenario_RoleManagement_section.html" }, { "title" : "Manage your account", "href" : "example_iam_Scenario_AccountManagement_section.html" }, { "title" : "Roll back a policy version", "href" : "example_iam_Scenario_RollbackPolicyVersion_section.html" }, { "title" : "Work with the IAM Policy Builder API", "href" : "example_iam_Scenario_IamPolicyBuilder_section.html" } ] } ] }, { "title" : "AWS STS examples", "href" : "service_code_examples_sts.html", "contents" : [ { "title" : "Actions", "href" : "service_code_examples_sts_actions.html", "contents" : [ { "title" : "Assume a role", "href" : "example_sts_AssumeRole_section.html" }, { "title" : "Get a session token", "href" : "example_sts_GetSessionToken_section.html" } ] }, { "title" : "Scenarios", "href" : "service_code_examples_sts_scenarios.html", "contents" : [ { "title" : "Assume an IAM role that requires an MFA token", "href" : "example_sts_Scenario_AssumeRoleMfa_section.html" }, { "title" : "Construct a URL for federated users", "href" : "example_sts_Scenario_ConstructFederatedUrl_section.html" }, { "title" : "Get a session token that requires an MFA token", "href" : "example_sts_Scenario_SessionTokenMfa_section.html" } ] } ] } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "AWS security credentials", "href" : "security-creds.html" }, { "title" : "AWS security audit guidelines", "href" : "security-audit-guide.html" }, { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Logging and monitoring", "href" : "security-logging-and-monitoring.html" }, { "title" : "Compliance validation", "href" : "iam-compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Configuration and vulnerability analysis", "href" : "configuration-and-vulnerability-analysis.html" }, { "title" : "AWS managed policies", "href" : "security-iam-awsmanpol.html" } ] }, { "title" : "IAM Access Analyzer", "href" : "what-is-access-analyzer.html", "contents" : [ { "title" : "Findings for public and cross-account access", "href" : "access-analyzer-findings.html", "contents" : [ { "title" : "How IAM Access Analyzer findings work", "href" : "access-analyzer-concepts.html" }, { "title" : "Getting started with IAM Access Analyzer findings", "href" : "access-analyzer-getting-started.html" }, { "title" : "Working with findings", "href" : "access-analyzer-work-with-findings.html" }, { "title" : "Reviewing findings", "href" : "access-analyzer-findings-view.html" }, { "title" : "Filtering findings", "href" : "access-analyzer-findings-filter.html" }, { "title" : "Archiving findings", "href" : "access-analyzer-findings-archive.html" }, { "title" : "Resolving findings", "href" : "access-analyzer-findings-remediate.html" }, { "title" : "Supported resource types", "href" : "access-analyzer-resources.html" }, { "title" : "Settings", "href" : "access-analyzer-settings.html" }, { "title" : "Archive rules", "href" : "access-analyzer-archive-rules.html" }, { "title" : "Monitoring with EventBridge", "href" : "access-analyzer-eventbridge.html" }, { "title" : "Security Hub integration", "href" : "access-analyzer-securityhub-integration.html" }, { "title" : "Logging with CloudTrail", "href" : "logging-using-cloudtrail.html" }, { "title" : "IAM Access Analyzer filter keys", "href" : "access-analyzer-reference-filter-keys.html" }, { "title" : "Using service-linked roles", "href" : "access-analyzer-using-service-linked-roles.html" } ] }, { "title" : "Preview access", "href" : "access-analyzer-access-preview.html", "contents" : [ { "title" : "Previewing access in Amazon S3 console", "href" : "access-analyzer-preview-access-s3-console.html" }, { "title" : "Previewing access with IAM Access Analyzer APIs", "href" : "access-analyzer-preview-access-apis.html" } ] }, { "title" : "IAM Access Analyzer policy validation", "href" : "access-analyzer-policy-validation.html", "contents" : [ { "title" : "Policy check reference", "href" : "access-analyzer-reference-policy-checks.html" } ] }, { "title" : "IAM Access Analyzer policy generation", "href" : "access-analyzer-policy-generation.html", "contents" : [ { "title" : "IAM Access Analyzer policy generation services", "href" : "access-analyzer-policy-generation-action-last-accessed-support.html" } ] }, { "title" : "IAM Access Analyzer quotas", "href" : "access-analyzer-quotas.html" } ] }, { "title" : "Troubleshooting IAM", "href" : "troubleshoot.html", "contents" : [ { "title" : "General issues", "href" : "troubleshoot_general.html" }, { "title" : "Access denied error messages", "href" : "troubleshoot_access-denied.html" }, { "title" : "IAM policies", "href" : "troubleshoot_policies.html" }, { "title" : "FIDO security keys", "href" : "troubleshoot_mfa-fido.html" }, { "title" : "IAM roles", "href" : "troubleshoot_roles.html" }, { "title" : "IAM and Amazon EC2", "href" : "troubleshoot_iam-ec2.html" }, { "title" : "IAM and Amazon S3", "href" : "troubleshoot_iam-s3.html" }, { "title" : "SAML 2.0 federation", "href" : "troubleshoot_saml.html", "contents" : [ { "title" : "Viewing a SAML response in your browser", "href" : "troubleshoot_saml_view-saml-response.html" } ] } ] }, { "title" : "Reference", "href" : "reference.html", "contents" : [ { "title" : "Amazon Resource Names (ARNs)", "href" : "reference-arns.html" }, { "title" : "IAM identifiers", "href" : "reference_identifiers.html" }, { "title" : "IAM and AWS STS quotas", "href" : "reference_iam-quotas.html" }, { "title" : "Services that work with IAM", "href" : "reference_aws-services-that-work-with-iam.html" }, { "title" : "Signing AWS API requests", "href" : "reference_aws-signing.html", "contents" : [ { "title" : "Signature Version 4 request elements", "href" : "signing-elements.html" }, { "title" : "Authentication methods", "href" : "aws-signing-authentication-methods.html" }, { "title" : "Create a signed request", "href" : "create-signed-request.html" }, { "title" : "Request signature examples", "href" : "signature-v4-examples.html" }, { "title" : "Troubleshoot", "href" : "signature-v4-troubleshooting.html" } ] }, { "title" : "Policy reference", "href" : "reference_policies.html", "contents" : [ { "title" : "JSON element reference", "href" : "reference_policies_elements.html", "contents" : [ { "title" : "Version", "href" : "reference_policies_elements_version.html" }, { "title" : "Id", "href" : "reference_policies_elements_id.html" }, { "title" : "Statement", "href" : "reference_policies_elements_statement.html" }, { "title" : "Sid", "href" : "reference_policies_elements_sid.html" }, { "title" : "Effect", "href" : "reference_policies_elements_effect.html" }, { "title" : "Principal", "href" : "reference_policies_elements_principal.html" }, { "title" : "NotPrincipal", "href" : "reference_policies_elements_notprincipal.html" }, { "title" : "Action", "href" : "reference_policies_elements_action.html" }, { "title" : "NotAction", "href" : "reference_policies_elements_notaction.html" }, { "title" : "Resource", "href" : "reference_policies_elements_resource.html" }, { "title" : "NotResource", "href" : "reference_policies_elements_notresource.html" }, { "title" : "Condition", "href" : "reference_policies_elements_condition.html", "contents" : [ { "title" : "Condition operators", "href" : "reference_policies_elements_condition_operators.html" }, { "title" : "Conditions with multiple context keys or values", "href" : "reference_policies_condition-logic-multiple-context-keys-or-values.html" }, { "title" : "Single-valued vs. multivalued context keys", "href" : "reference_policies_condition-single-vs-multi-valued-context-keys.html" }, { "title" : "Condition policy examples", "href" : "reference_policies_condition_examples.html", "contents" : [ { "title" : "Multivalued context key examples", "href" : "reference_policies_condition_examples-multi-valued-context-keys.html" }, { "title" : "Single-valued context key policy examples", "href" : "reference_policies_condition_examples-single-valued-context-keys.html" } ] } ] }, { "title" : "Variables and tags", "href" : "reference_policies_variables.html" }, { "title" : "Supported data types", "href" : "reference_policies_elements_datatypes.html" } ] }, { "title" : "Policy evaluation logic", "href" : "reference_policies_evaluation-logic.html", "contents" : [ { "title" : "Cross-account policy evaluation logic", "href" : "reference_policies_evaluation-logic-cross-account.html" } ] }, { "title" : "Policy grammar", "href" : "reference_policies_grammar.html" }, { "title" : "AWS managed policies for job functions", "href" : "access_policies_job-functions.html", "contents" : [ { "title" : "Creating roles and attaching policies (console)", "href" : "access_policies_job-functions_create-policies.html" } ] }, { "title" : "Global condition keys", "href" : "reference_policies_condition-keys.html" }, { "title" : "IAM condition keys", "href" : "reference_policies_iam-condition-keys.html" }, { "title" : "Actions, resources, and condition keys", "href" : "reference_policies_actions-resources-contextkeys.html" } ] } ] }, { "title" : "Resources", "href" : "resources.html" }, { "title" : "Making HTTP query requests", "href" : "programming.html" }, { "title" : "Document history", "href" : "document-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/",
+    "service": "IAM",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is IAM?",
+                "href": "introduction.html",
+                "contents": [
+                    {
+                        "title": "When do I use IAM",
+                        "href": "when-to-use-iam.html"
+                    },
+                    {
+                        "title": "How IAM works",
+                        "href": "intro-structure.html"
+                    },
+                    {
+                        "title": "Users in AWS",
+                        "href": "introduction_identity-management.html"
+                    },
+                    {
+                        "title": "Permissions and policies in IAM",
+                        "href": "introduction_access-management.html"
+                    },
+                    {
+                        "title": "What is ABAC?",
+                        "href": "introduction_attribute-based-access-control.html"
+                    },
+                    {
+                        "title": "Security features outside IAM",
+                        "href": "introduction_security-outside-iam.html"
+                    },
+                    {
+                        "title": "Quick links to common tasks",
+                        "href": "introduction_quick-links-common-tasks.html"
+                    },
+                    {
+                        "title": "IAM console search",
+                        "href": "console_search.html"
+                    },
+                    {
+                        "title": "Using AWS CloudShell",
+                        "href": "using-aws-with-cloudshell.html"
+                    },
+                    {
+                        "title": "Working with AWS SDKs",
+                        "href": "sdk-general-information-section.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting set up",
+                "href": "getting-set-up.html",
+                "contents": [
+                    {
+                        "title": "IAM management methods",
+                        "href": "management_methods.html"
+                    },
+                    {
+                        "title": "Your AWS account ID and its alias",
+                        "href": "console_account-alias.html"
+                    }
+                ]
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html"
+            },
+            {
+                "title": "Security best practices and use cases",
+                "href": "IAMBestPracticesAndUseCases.html",
+                "contents": [
+                    {
+                        "title": "Security best practices",
+                        "href": "best-practices.html"
+                    },
+                    {
+                        "title": "Root user best practices",
+                        "href": "root-user-best-practices.html"
+                    },
+                    {
+                        "title": "Business use cases",
+                        "href": "IAM_UseCases.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tutorials",
+                "href": "tutorials.html",
+                "contents": [
+                    {
+                        "title": "Grant access to the billing console",
+                        "href": "tutorial_billing.html"
+                    },
+                    {
+                        "title": "Delegate access across AWS accounts using roles",
+                        "href": "tutorial_cross-account-with-roles.html"
+                    },
+                    {
+                        "title": "Create a customer managed policy",
+                        "href": "tutorial_managed-policies.html"
+                    },
+                    {
+                        "title": "Use attribute-based access control (ABAC)",
+                        "href": "tutorial_attribute-based-access-control.html",
+                        "contents": [
+                            {
+                                "title": "Use SAML session tags for ABAC",
+                                "href": "tutorial_abac-saml.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Permit users to manage their credentials and MFA settings",
+                        "href": "tutorial_users-self-manage-mfa-and-creds.html"
+                    }
+                ]
+            },
+            {
+                "title": "Identities",
+                "href": "id.html",
+                "contents": [
+                    {
+                        "title": "AWS account root user",
+                        "href": "id_root-user.html",
+                        "contents": [
+                            {
+                                "title": "Enable a virtual MFA device for your AWS account root user (console)",
+                                "href": "enable-virt-mfa-for-root.html"
+                            },
+                            {
+                                "title": "Enable a hardware TOTP token for the AWS account root user (console)",
+                                "href": "enable-hw-mfa-for-root.html"
+                            },
+                            {
+                                "title": "Enable a FIDO security key for the AWS account root user (console)",
+                                "href": "enable-fido-mfa-for-root.html"
+                            },
+                            {
+                                "title": "Change the password",
+                                "href": "root-user-password.html"
+                            },
+                            {
+                                "title": "Resetting a lost or forgotten root user password",
+                                "href": "reset-root-password.html"
+                            },
+                            {
+                                "title": "Creating access keys for the root user",
+                                "href": "id_root-user_manage_add-key.html"
+                            },
+                            {
+                                "title": "Deleting access keys for the root user",
+                                "href": "id_root-user_manage_delete-key.html"
+                            },
+                            {
+                                "title": "Tasks that require root user",
+                                "href": "root-user-tasks.html"
+                            },
+                            {
+                                "title": "Troubleshooting root user issues",
+                                "href": "troubleshooting_root-user.html"
+                            },
+                            {
+                                "title": "Related information",
+                                "href": "id_root-user_related_information.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Users",
+                        "href": "id_users.html",
+                        "contents": [
+                            {
+                                "title": "Adding a user",
+                                "href": "id_users_create.html"
+                            },
+                            {
+                                "title": "Controlling user access to the console",
+                                "href": "console_controlling-access.html"
+                            },
+                            {
+                                "title": "How IAM users sign in to AWS",
+                                "href": "id_users_sign-in.html",
+                                "contents": [
+                                    {
+                                        "title": "Using MFA devices with your IAM sign-in page",
+                                        "href": "console_sign-in-mfa.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Managing users",
+                                "href": "id_users_manage.html"
+                            },
+                            {
+                                "title": "Changing permissions for a user",
+                                "href": "id_users_change-permissions.html"
+                            },
+                            {
+                                "title": "Managing passwords",
+                                "href": "id_credentials_passwords.html",
+                                "contents": [
+                                    {
+                                        "title": "Setting a password policy",
+                                        "href": "id_credentials_passwords_account-policy.html"
+                                    },
+                                    {
+                                        "title": "Managing user passwords",
+                                        "href": "id_credentials_passwords_admin-change-user.html"
+                                    },
+                                    {
+                                        "title": "Permitting IAM users to change their own passwords",
+                                        "href": "id_credentials_passwords_enable-user-change.html"
+                                    },
+                                    {
+                                        "title": "How an IAM user changes their own password",
+                                        "href": "id_credentials_passwords_user-change-own.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Access keys",
+                                "href": "id_credentials_access-keys.html"
+                            },
+                            {
+                                "title": "Retrieving lost passwords or access keys",
+                                "href": "id_credentials_access-keys_retrieve.html"
+                            },
+                            {
+                                "title": "Multi-factor authentication (MFA)",
+                                "href": "id_credentials_mfa.html",
+                                "contents": [
+                                    {
+                                        "title": "Enabling MFA devices",
+                                        "href": "id_credentials_mfa_enable.html",
+                                        "contents": [
+                                            {
+                                                "title": "General steps for enabling MFA devices",
+                                                "href": "id_credentials_mfa_enable-overview.html"
+                                            },
+                                            {
+                                                "title": "Enabling a virtual MFA device (console)",
+                                                "href": "id_credentials_mfa_enable_virtual.html"
+                                            },
+                                            {
+                                                "title": "Enabling a FIDO security key (console)",
+                                                "href": "id_credentials_mfa_enable_fido.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Supported configurations for using FIDO security keys",
+                                                        "href": "id_credentials_mfa_fido_supported_configurations.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Enabling a hardware TOTP token (console)",
+                                                "href": "id_credentials_mfa_enable_physical.html"
+                                            },
+                                            {
+                                                "title": "Enabling and managing virtual MFA devices (AWS CLI or AWS API)",
+                                                "href": "id_credentials_mfa_enable_cliapi.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Checking MFA status",
+                                        "href": "id_credentials_mfa_checking-status.html"
+                                    },
+                                    {
+                                        "title": "Resynchronizing virtual and hardware MFA devices",
+                                        "href": "id_credentials_mfa_sync.html"
+                                    },
+                                    {
+                                        "title": "Deactivating MFA devices",
+                                        "href": "id_credentials_mfa_disable.html"
+                                    },
+                                    {
+                                        "title": "What if an MFA device is lost or stops working?",
+                                        "href": "id_credentials_mfa_lost-or-broken.html"
+                                    },
+                                    {
+                                        "title": "Configuring MFA-protected API access",
+                                        "href": "id_credentials_mfa_configure-api-require.html"
+                                    },
+                                    {
+                                        "title": "Sample code: MFA",
+                                        "href": "id_credentials_mfa_sample-code.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Finding unused credentials",
+                                "href": "id_credentials_finding-unused.html"
+                            },
+                            {
+                                "title": "Getting credential reports",
+                                "href": "id_credentials_getting-report.html"
+                            },
+                            {
+                                "title": "Using IAM with CodeCommit",
+                                "href": "id_credentials_ssh-keys.html"
+                            },
+                            {
+                                "title": "Using IAM with Amazon Keyspaces",
+                                "href": "id_credentials_keyspaces.html"
+                            },
+                            {
+                                "title": "Managing server certificates",
+                                "href": "id_credentials_server-certs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "User groups",
+                        "href": "id_groups.html",
+                        "contents": [
+                            {
+                                "title": "Creating user groups",
+                                "href": "id_groups_create.html"
+                            },
+                            {
+                                "title": "Managing user groups",
+                                "href": "id_groups_manage.html",
+                                "contents": [
+                                    {
+                                        "title": "Listing IAM user groups",
+                                        "href": "id_groups_manage_list.html"
+                                    },
+                                    {
+                                        "title": "Adding and removing users in an IAM user group",
+                                        "href": "id_groups_manage_add-remove-users.html"
+                                    },
+                                    {
+                                        "title": "Attaching a policy to an IAM user group",
+                                        "href": "id_groups_manage_attach-policy.html"
+                                    },
+                                    {
+                                        "title": "Renaming an IAM user group",
+                                        "href": "id_groups_manage_rename.html"
+                                    },
+                                    {
+                                        "title": "Deleting a user group",
+                                        "href": "id_groups_manage_delete.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Roles",
+                        "href": "id_roles.html",
+                        "contents": [
+                            {
+                                "title": "Terms and concepts",
+                                "href": "id_roles_terms-and-concepts.html"
+                            },
+                            {
+                                "title": "Common scenarios",
+                                "href": "id_roles_common-scenarios.html",
+                                "contents": [
+                                    {
+                                        "title": "Providing access across AWS accounts",
+                                        "href": "id_roles_common-scenarios_aws-accounts.html"
+                                    },
+                                    {
+                                        "title": "Providing access for non AWS workloads",
+                                        "href": "id_roles_common-scenarios_non-aws.html"
+                                    },
+                                    {
+                                        "title": "Providing access to third-party AWS accounts",
+                                        "href": "id_roles_common-scenarios_third-party.html",
+                                        "contents": [
+                                            {
+                                                "title": "Using an external ID for third-party access",
+                                                "href": "id_roles_create_for-user_externalid.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Providing access to AWS services",
+                                        "href": "id_roles_common-scenarios_services.html"
+                                    },
+                                    {
+                                        "title": "The confused deputy problem",
+                                        "href": "confused-deputy.html"
+                                    },
+                                    {
+                                        "title": "Providing access through identity federation",
+                                        "href": "id_roles_common-scenarios_federated-users.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Identity providers and federation",
+                                "href": "id_roles_providers.html",
+                                "contents": [
+                                    {
+                                        "title": "About web identity federation",
+                                        "href": "id_roles_providers_oidc.html",
+                                        "contents": [
+                                            {
+                                                "title": "Using Amazon Cognito for mobile apps",
+                                                "href": "id_roles_providers_oidc_cognito.html"
+                                            },
+                                            {
+                                                "title": "Using web identity federation API operations for mobile apps",
+                                                "href": "id_roles_providers_oidc_manual.html"
+                                            },
+                                            {
+                                                "title": "Identifying users with web identity federation",
+                                                "href": "id_roles_providers_oidc_user-id.html"
+                                            },
+                                            {
+                                                "title": "Additional resources for web identity federation",
+                                                "href": "id_roles_providers_oidc_resources.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "About SAML 2.0 federation",
+                                        "href": "id_roles_providers_saml.html"
+                                    },
+                                    {
+                                        "title": "Creating IAM identity providers",
+                                        "href": "id_roles_providers_create.html",
+                                        "contents": [
+                                            {
+                                                "title": "Creating OIDC identity providers",
+                                                "href": "id_roles_providers_create_oidc.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Obtaining the thumbprint for an OIDC Identity Provider",
+                                                        "href": "id_roles_providers_create_oidc_verify-thumbprint.html"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Creating IAM SAML identity providers",
+                                                "href": "id_roles_providers_create_saml.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Configuring relying party trust and claims",
+                                                        "href": "id_roles_providers_create_saml_relying-party.html"
+                                                    },
+                                                    {
+                                                        "title": "Integrating third-party SAML solution providers with AWS",
+                                                        "href": "id_roles_providers_saml_3rd-party.html"
+                                                    },
+                                                    {
+                                                        "title": "Configuring SAML assertions for the authentication response",
+                                                        "href": "id_roles_providers_create_saml_assertions.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Enable SAML 2.0 federated users to access the AWS console",
+                                        "href": "id_roles_providers_enable-console-saml.html"
+                                    },
+                                    {
+                                        "title": "Enabling custom identity broker access to the AWS console",
+                                        "href": "id_roles_providers_enable-console-custom-url.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            },
+                            {
+                                "title": "Creating roles",
+                                "href": "id_roles_create.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating a role for an IAM user",
+                                        "href": "id_roles_create_for-user.html"
+                                    },
+                                    {
+                                        "title": "Creating a role for an AWS service",
+                                        "href": "id_roles_create_for-service.html"
+                                    },
+                                    {
+                                        "title": "Creating a role for identity federation",
+                                        "href": "id_roles_create_for-idp.html",
+                                        "contents": [
+                                            {
+                                                "title": "Creating a role for web Identity/OIDC federation",
+                                                "href": "id_roles_create_for-idp_oidc.html"
+                                            },
+                                            {
+                                                "title": "Creating a role for SAML 2.0 federation",
+                                                "href": "id_roles_create_for-idp_saml.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Creating a role using custom trust policies",
+                                        "href": "id_roles_create_for-custom.html"
+                                    },
+                                    {
+                                        "title": "Examples of policies for delegating access",
+                                        "href": "id_roles_create_policy-examples.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Using roles",
+                                "href": "id_roles_use.html",
+                                "contents": [
+                                    {
+                                        "title": "Granting a user permissions to switch roles",
+                                        "href": "id_roles_use_permissions-to-switch.html"
+                                    },
+                                    {
+                                        "title": "Granting permissions to pass a role to a service",
+                                        "href": "id_roles_use_passrole.html"
+                                    },
+                                    {
+                                        "title": "Switching roles (console)",
+                                        "href": "id_roles_use_switch-role-console.html"
+                                    },
+                                    {
+                                        "title": "Switching roles (AWS CLI)",
+                                        "href": "id_roles_use_switch-role-cli.html"
+                                    },
+                                    {
+                                        "title": "Switching roles (Tools for Windows PowerShell)",
+                                        "href": "id_roles_use_switch-role-twp.html"
+                                    },
+                                    {
+                                        "title": "Switching roles (AWS API)",
+                                        "href": "id_roles_use_switch-role-api.html"
+                                    },
+                                    {
+                                        "title": "Using roles for applications on Amazon EC2",
+                                        "href": "id_roles_use_switch-role-ec2.html",
+                                        "contents": [
+                                            {
+                                                "title": "Using instance profiles",
+                                                "href": "id_roles_use_switch-role-ec2_instance-profiles.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Revoking role temporary credentials",
+                                        "href": "id_roles_use_revoke-sessions.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Managing roles",
+                                "href": "id_roles_manage.html",
+                                "contents": [
+                                    {
+                                        "title": "Modifying a role",
+                                        "href": "id_roles_manage_modify.html",
+                                        "contents": [
+                                            {
+                                                "title": "Modifying a role (console)",
+                                                "href": "roles-managingrole-editing-console.html"
+                                            },
+                                            {
+                                                "title": "Modifying a role (AWS CLI)",
+                                                "href": "roles-managingrole-editing-cli.html"
+                                            },
+                                            {
+                                                "title": "Modifying a role (AWS API)",
+                                                "href": "roles-managingrole-editing-api.html"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Deleting roles or instance profiles",
+                                        "href": "id_roles_manage_delete.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tagging IAM resources",
+                        "href": "id_tags.html",
+                        "contents": [
+                            {
+                                "title": "Tagging IAM users",
+                                "href": "id_tags_users.html"
+                            },
+                            {
+                                "title": "Tagging IAM roles",
+                                "href": "id_tags_roles.html"
+                            },
+                            {
+                                "title": "Tagging customer managed policies",
+                                "href": "id_tags_customer-managed-policies.html"
+                            },
+                            {
+                                "title": "Tagging IAM identity providers",
+                                "href": "id_tags_idps.html",
+                                "contents": [
+                                    {
+                                        "title": "Tagging OpenID Connect (OIDC) identity providers",
+                                        "href": "id_tags_idps_oidc.html"
+                                    },
+                                    {
+                                        "title": "Tagging IAM SAML identity providers",
+                                        "href": "id_tags_idps_saml.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Tagging instance profiles",
+                                "href": "id_tags_instance-profiles.html"
+                            },
+                            {
+                                "title": "Tagging server certificates",
+                                "href": "id_tags_server-certificates.html"
+                            },
+                            {
+                                "title": "Tagging virtual MFA devices",
+                                "href": "id_tags_virtual-mfa.html"
+                            },
+                            {
+                                "title": "Session tags",
+                                "href": "id_session-tags.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Temporary security credentials",
+                        "href": "id_credentials_temp.html",
+                        "contents": [
+                            {
+                                "title": "Requesting temporary security credentials",
+                                "href": "id_credentials_temp_request.html"
+                            },
+                            {
+                                "title": "Using temporary credentials with AWS resources",
+                                "href": "id_credentials_temp_use-resources.html"
+                            },
+                            {
+                                "title": "Controlling permissions for temporary security credentials",
+                                "href": "id_credentials_temp_control-access.html",
+                                "contents": [
+                                    {
+                                        "title": "Permissions for AssumeRole API operations",
+                                        "href": "id_credentials_temp_control-access_assumerole.html"
+                                    },
+                                    {
+                                        "title": "Monitor and control actions taken with assumed roles",
+                                        "href": "id_credentials_temp_control-access_monitor.html"
+                                    },
+                                    {
+                                        "title": "Permissions for GetFederationToken",
+                                        "href": "id_credentials_temp_control-access_getfederationtoken.html"
+                                    },
+                                    {
+                                        "title": "Permissions for GetSessionToken",
+                                        "href": "id_credentials_temp_control-access_getsessiontoken.html"
+                                    },
+                                    {
+                                        "title": "Disabling permissions",
+                                        "href": "id_credentials_temp_control-access_disable-perms.html"
+                                    },
+                                    {
+                                        "title": "Granting permissions to create credentials",
+                                        "href": "id_credentials_temp_control-access_enable-create.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Managing AWS STS in an AWS Region",
+                                "href": "id_credentials_temp_enable-regions.html"
+                            },
+                            {
+                                "title": "Using AWS STS interface VPC endpoints",
+                                "href": "id_credentials_sts_vpce.html"
+                            },
+                            {
+                                "title": "Using bearer tokens",
+                                "href": "id_credentials_bearer.html"
+                            },
+                            {
+                                "title": "Sample applications that use temporary credentials",
+                                "href": "id_credentials_temp_sample-apps.html"
+                            },
+                            {
+                                "title": "Additional resources for temporary credentials",
+                                "href": "id_credentials_temp_related-topics.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Log events with CloudTrail",
+                        "href": "cloudtrail-integration.html"
+                    }
+                ]
+            },
+            {
+                "title": "Access management",
+                "href": "access.html",
+                "contents": [
+                    {
+                        "title": "Policies and permissions",
+                        "href": "access_policies.html",
+                        "contents": [
+                            {
+                                "title": "Managed policies and inline policies",
+                                "href": "access_policies_managed-vs-inline.html",
+                                "contents": [
+                                    {
+                                        "title": "Choosing managed or inline",
+                                        "href": "access_policies-choosing-managed-or-inline.html"
+                                    },
+                                    {
+                                        "title": "Getting started with managed policies",
+                                        "href": "access_policies-getting-started-managed.html"
+                                    },
+                                    {
+                                        "title": "Converting inline policy to managed",
+                                        "href": "access_policies-convert-inline-to-managed.html"
+                                    },
+                                    {
+                                        "title": "Deprecated AWS managed policies",
+                                        "href": "access_policies_managed-deprecated.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Permissions boundaries",
+                                "href": "access_policies_boundaries.html"
+                            },
+                            {
+                                "title": "Identity vs resource",
+                                "href": "access_policies_identity-vs-resource.html"
+                            },
+                            {
+                                "title": "Controlling access using policies",
+                                "href": "access_controlling.html"
+                            },
+                            {
+                                "title": "Control access to IAM users and roles using tags",
+                                "href": "access_iam-tags.html"
+                            },
+                            {
+                                "title": "Control access to AWS resources using tags",
+                                "href": "access_tags.html"
+                            },
+                            {
+                                "title": "Cross account resource access",
+                                "href": "access_policies-cross-account-resource-access.html"
+                            },
+                            {
+                                "title": "Forward access sessions",
+                                "href": "access_forward_access_sessions.html"
+                            },
+                            {
+                                "title": "Example policies",
+                                "href": "access_policies_examples.html",
+                                "contents": [
+                                    {
+                                        "title": "AWS: Specific access during a date range",
+                                        "href": "reference_policies_examples_aws-dates.html"
+                                    },
+                                    {
+                                        "title": "AWS: Enable or disable AWS Regions",
+                                        "href": "reference_policies_examples_aws-enable-disable-regions.html"
+                                    },
+                                    {
+                                        "title": "AWS: Self-manage credentials with MFA (My security credentials)",
+                                        "href": "reference_policies_examples_aws_my-sec-creds-self-manage.html"
+                                    },
+                                    {
+                                        "title": "AWS: Specific access with MFA during a date range",
+                                        "href": "reference_policies_examples_aws_mfa-dates.html"
+                                    },
+                                    {
+                                        "title": "AWS: Self-manage credentials no MFA (My security credentials)",
+                                        "href": "reference_policies_examples_aws_my-sec-creds-self-manage-no-mfa.html"
+                                    },
+                                    {
+                                        "title": "AWS: Self-manage MFA device (My security credentials)",
+                                        "href": "reference_policies_examples_aws_my-sec-creds-self-manage-mfa-only.html"
+                                    },
+                                    {
+                                        "title": "AWS: Self-manage console password (My security credentials)",
+                                        "href": "reference_policies_examples_aws_my-sec-creds-self-manage-password-only.html"
+                                    },
+                                    {
+                                        "title": "AWS: Self-manage password, access keys, & SSH public keys (My security credentials)",
+                                        "href": "reference_policies_examples_aws_my-sec-creds-self-manage-pass-accesskeys-ssh.html"
+                                    },
+                                    {
+                                        "title": "AWS: Deny access based on requested Region",
+                                        "href": "reference_policies_examples_aws_deny-requested-region.html"
+                                    },
+                                    {
+                                        "title": "AWS: Deny access based on source IP",
+                                        "href": "reference_policies_examples_aws_deny-ip.html"
+                                    },
+                                    {
+                                        "title": "AWS: Deny access to Amazon S3 resources outside your account except AWS Data Exchange",
+                                        "href": "reference_policies_examples_resource_account_data_exch.html"
+                                    },
+                                    {
+                                        "title": "Data Pipeline: Deny access to pipelines not created by user",
+                                        "href": "reference_policies_examples_datapipeline_not-owned.html"
+                                    },
+                                    {
+                                        "title": "DynamoDB: Access specific table",
+                                        "href": "reference_policies_examples_dynamodb_specific-table.html"
+                                    },
+                                    {
+                                        "title": "DynamoDB: Allow access to specific attributes",
+                                        "href": "reference_policies_examples_dynamodb_attributes.html"
+                                    },
+                                    {
+                                        "title": "DynamoDB: Allow item access based on a Amazon Cognito ID",
+                                        "href": "reference_policies_examples_dynamodb_items.html"
+                                    },
+                                    {
+                                        "title": "EC2: Attach or detach tagged EBS volumes",
+                                        "href": "reference_policies_examples_ec2_ebs-owner.html"
+                                    },
+                                    {
+                                        "title": "EC2: Launch instances in a subnet (includes console)",
+                                        "href": "reference_policies_examples_ec2_instances-subnet.html"
+                                    },
+                                    {
+                                        "title": "EC2: Manage security groups with the same tags (includes console)",
+                                        "href": "reference_policies_examples_ec2_securitygroups-vpc.html"
+                                    },
+                                    {
+                                        "title": "EC2: Start or stop instances a user has tagged (includes console)",
+                                        "href": "reference_policies_examples_ec2_tag-owner.html"
+                                    },
+                                    {
+                                        "title": "EC2: Start or stop instances based on tags",
+                                        "href": "reference_policies_examples_ec2-start-stop-tags.html"
+                                    },
+                                    {
+                                        "title": "EC2: Start or stop for matching tags",
+                                        "href": "reference_policies_examples_ec2-start-stop-match-tags.html"
+                                    },
+                                    {
+                                        "title": "EC2: Full access within a Region (includes console)",
+                                        "href": "reference_policies_examples_ec2_region.html"
+                                    },
+                                    {
+                                        "title": "EC2: Start or stop an instance, modify security group (includes console)",
+                                        "href": "reference_policies_examples_ec2_instance-securitygroup.html"
+                                    },
+                                    {
+                                        "title": "EC2: Requires MFA (GetSessionToken) for operations",
+                                        "href": "reference_policies_examples_ec2_require-mfa.html"
+                                    },
+                                    {
+                                        "title": "EC2: Limit terminating instances to IP range",
+                                        "href": "reference_policies_examples_ec2_terminate-ip.html"
+                                    },
+                                    {
+                                        "title": "IAM: Access the policy simulator API",
+                                        "href": "reference_policies_examples_iam_policy-sim.html"
+                                    },
+                                    {
+                                        "title": "IAM: Access the policy simulator console",
+                                        "href": "reference_policies_examples_iam_policy-sim-console.html"
+                                    },
+                                    {
+                                        "title": "IAM: Assume tagged roles",
+                                        "href": "reference_policies_examples_iam-assume-tagged-role.html"
+                                    },
+                                    {
+                                        "title": "IAM: Allows and denies multiple services (includes console)",
+                                        "href": "reference_policies_examples_iam_multiple-services-console.html"
+                                    },
+                                    {
+                                        "title": "IAM: Add specific tag to tagged user",
+                                        "href": "reference_policies_examples_iam-add-tag.html"
+                                    },
+                                    {
+                                        "title": "IAM: Add a specific tag",
+                                        "href": "reference_policies_examples_iam-add-tag-user-role.html"
+                                    },
+                                    {
+                                        "title": "IAM: Create only tagged users",
+                                        "href": "reference_policies_examples_iam-new-user-tag.html"
+                                    },
+                                    {
+                                        "title": "IAM: Generate credential reports",
+                                        "href": "reference_policies_examples_iam-credential-report.html"
+                                    },
+                                    {
+                                        "title": "IAM: Manage group membership (includes console)",
+                                        "href": "reference_policies_examples_iam_manage-group-membership.html"
+                                    },
+                                    {
+                                        "title": "IAM: Manage a tag",
+                                        "href": "reference_policies_examples_iam-manage-tags.html"
+                                    },
+                                    {
+                                        "title": "IAM: Pass a role to a service",
+                                        "href": "reference_policies_examples_iam-passrole-service.html"
+                                    },
+                                    {
+                                        "title": "IAM: Read-only console access (no reporting)",
+                                        "href": "reference_policies_examples_iam_read-only-console-no-reporting.html"
+                                    },
+                                    {
+                                        "title": "IAM: Read-only console access",
+                                        "href": "reference_policies_examples_iam_read-only-console.html"
+                                    },
+                                    {
+                                        "title": "IAM: Specific users manage group (includes console)",
+                                        "href": "reference_policies_examples_iam_users-manage-group.html"
+                                    },
+                                    {
+                                        "title": "IAM: Setting account password requirements (includes console)",
+                                        "href": "reference_policies_examples_iam_set-account-pass-policy.html"
+                                    },
+                                    {
+                                        "title": "IAM: Access the policy simulator API based on user path",
+                                        "href": "reference_policies_examples_iam_policy-sim-path.html"
+                                    },
+                                    {
+                                        "title": "IAM: Access the policy simulator console based on user path (includes console)",
+                                        "href": "reference_policies_examples_iam_policy-sim-path-console.html"
+                                    },
+                                    {
+                                        "title": "IAM: MFA self-management",
+                                        "href": "reference_policies_examples_iam_mfa-selfmanage.html"
+                                    },
+                                    {
+                                        "title": "IAM: Update credentials (includes console)",
+                                        "href": "reference_policies_examples_iam_credentials_console.html"
+                                    },
+                                    {
+                                        "title": "IAM: View Organizations service last accessed information for a policy",
+                                        "href": "reference_policies_examples_iam_service-accessed-data-orgs.html"
+                                    },
+                                    {
+                                        "title": "IAM: Apply limited managed policies",
+                                        "href": "reference_policies_examples_iam_limit-managed.html"
+                                    },
+                                    {
+                                        "title": "AWS: Deny access to resources outside your account except AWS managed IAM policies",
+                                        "href": "resource_examples_iam_policies_resource_account.html"
+                                    },
+                                    {
+                                        "title": "Lambda: Service access to DynamoDB",
+                                        "href": "reference_policies_examples_lambda-access-dynamodb.html"
+                                    },
+                                    {
+                                        "title": "RDS: Full access within a Region",
+                                        "href": "reference_policies_examples_rds_region.html"
+                                    },
+                                    {
+                                        "title": "RDS: Restore databases (includes console)",
+                                        "href": "reference_policies_examples_rds_db-console.html"
+                                    },
+                                    {
+                                        "title": "RDS: Full access for tag owners",
+                                        "href": "reference_policies_examples_rds_tag-owner.html"
+                                    },
+                                    {
+                                        "title": "S3: Access bucket if cognito",
+                                        "href": "reference_policies_examples_s3_cognito-bucket.html"
+                                    },
+                                    {
+                                        "title": "S3: Access federated user home directory (includes console)",
+                                        "href": "reference_policies_examples_s3_federated-home-directory-console.html"
+                                    },
+                                    {
+                                        "title": "S3: Full access with recent MFA",
+                                        "href": "reference_policies_examples_s3_full-access-except-production.html"
+                                    },
+                                    {
+                                        "title": "S3: Access IAM user home directory (includes console)",
+                                        "href": "reference_policies_examples_s3_home-directory-console.html"
+                                    },
+                                    {
+                                        "title": "S3: Restrict management to a specific bucket",
+                                        "href": "reference_policies_examples_s3_deny-except-bucket.html"
+                                    },
+                                    {
+                                        "title": "S3: Read and write objects to a specific bucket",
+                                        "href": "reference_policies_examples_s3_rw-bucket.html"
+                                    },
+                                    {
+                                        "title": "S3: Read and write to a specific bucket (includes console)",
+                                        "href": "reference_policies_examples_s3_rw-bucket-console.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Managing IAM policies",
+                        "href": "access_policies_manage.html",
+                        "contents": [
+                            {
+                                "title": "Creating IAM policies",
+                                "href": "access_policies_create.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating IAM policies (console)",
+                                        "href": "access_policies_create-console.html"
+                                    },
+                                    {
+                                        "title": "Creating IAM policies (CLI)",
+                                        "href": "access_policies_create-cli.html"
+                                    },
+                                    {
+                                        "title": "Creating IAM policies (API)",
+                                        "href": "access_policies_create-api.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Validating policies",
+                                "href": "access_policies_policy-validator.html"
+                            },
+                            {
+                                "title": "Generating policies",
+                                "href": "access_policies_generate-policy.html"
+                            },
+                            {
+                                "title": "Testing IAM policies",
+                                "href": "access_policies_testing-policies.html"
+                            },
+                            {
+                                "title": "Add or remove identity permissions",
+                                "href": "access_policies_manage-attach-detach.html"
+                            },
+                            {
+                                "title": "Versioning IAM policies",
+                                "href": "access_policies_managed-versioning.html"
+                            },
+                            {
+                                "title": "Editing IAM policies",
+                                "href": "access_policies_manage-edit.html"
+                            },
+                            {
+                                "title": "Deleting IAM policies",
+                                "href": "access_policies_manage-delete.html"
+                            },
+                            {
+                                "title": "Refining permissions using access information",
+                                "href": "access_policies_access-advisor.html",
+                                "contents": [
+                                    {
+                                        "title": "View IAM access information",
+                                        "href": "access_policies_access-advisor-view-data.html"
+                                    },
+                                    {
+                                        "title": "View access information for Organizations",
+                                        "href": "access_policies_access-advisor-view-data-orgs.html"
+                                    },
+                                    {
+                                        "title": "Example scenarios",
+                                        "href": "access_policies_access-advisor-example-scenarios.html"
+                                    },
+                                    {
+                                        "title": "Action last accessed services and actions",
+                                        "href": "access_policies_access-advisor-action-last-accessed.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Understanding policies",
+                        "href": "access_policies_understand.html",
+                        "contents": [
+                            {
+                                "title": "Policy summary (list of services)",
+                                "href": "access_policies_understand-policy-summary.html",
+                                "contents": [
+                                    {
+                                        "title": "Access levels in policy summaries",
+                                        "href": "access_policies_understand-policy-summary-access-level-summaries.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Service summary (list of actions)",
+                                "href": "access_policies_understand-service-summary.html"
+                            },
+                            {
+                                "title": "Action summary (list of resources)",
+                                "href": "access_policies_understand-action-summary.html"
+                            },
+                            {
+                                "title": "Example policy summaries",
+                                "href": "access_policies_policy-summary-examples.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Permissions required",
+                        "href": "access_permissions-required.html",
+                        "contents": [
+                            {
+                                "title": "Example policies for IAM",
+                                "href": "id_credentials_delegate-permissions_examples.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Code examples",
+                "href": "service_code_examples.html",
+                "contents": [
+                    {
+                        "title": "IAM examples",
+                        "href": "service_code_examples_iam.html",
+                        "contents": [
+                            {
+                                "title": "Actions",
+                                "href": "service_code_examples_iam_actions.html",
+                                "contents": [
+                                    {
+                                        "title": "Add a user to a group",
+                                        "href": "example_iam_AddUserToGroup_section.html"
+                                    },
+                                    {
+                                        "title": "Attach a policy to a role",
+                                        "href": "example_iam_AttachRolePolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Attach a policy to a user",
+                                        "href": "example_iam_AttachUserPolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Attach an inline policy to a role",
+                                        "href": "example_iam_PutRolePolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Create a SAML provider",
+                                        "href": "example_iam_CreateSAMLProvider_section.html"
+                                    },
+                                    {
+                                        "title": "Create a group",
+                                        "href": "example_iam_CreateGroup_section.html"
+                                    },
+                                    {
+                                        "title": "Create a policy",
+                                        "href": "example_iam_CreatePolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Create a policy version",
+                                        "href": "example_iam_CreatePolicyVersion_section.html"
+                                    },
+                                    {
+                                        "title": "Create a role",
+                                        "href": "example_iam_CreateRole_section.html"
+                                    },
+                                    {
+                                        "title": "Create a service-linked role",
+                                        "href": "example_iam_CreateServiceLinkedRole_section.html"
+                                    },
+                                    {
+                                        "title": "Create a user",
+                                        "href": "example_iam_CreateUser_section.html"
+                                    },
+                                    {
+                                        "title": "Create an access key",
+                                        "href": "example_iam_CreateAccessKey_section.html"
+                                    },
+                                    {
+                                        "title": "Create an alias for an account",
+                                        "href": "example_iam_CreateAccountAlias_section.html"
+                                    },
+                                    {
+                                        "title": "Create an inline policy for a group",
+                                        "href": "example_iam_PutGroupPolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Create an inline policy for a user",
+                                        "href": "example_iam_PutUserPolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Create an instance profile",
+                                        "href": "example_iam_CreateInstanceProfile_section.html"
+                                    },
+                                    {
+                                        "title": "Delete SAML provider",
+                                        "href": "example_iam_DeleteSAMLProvider_section.html"
+                                    },
+                                    {
+                                        "title": "Delete a group",
+                                        "href": "example_iam_DeleteGroup_section.html"
+                                    },
+                                    {
+                                        "title": "Delete a group policy",
+                                        "href": "example_iam_DeleteGroupPolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Delete a policy",
+                                        "href": "example_iam_DeletePolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Delete a role",
+                                        "href": "example_iam_DeleteRole_section.html"
+                                    },
+                                    {
+                                        "title": "Delete a role policy",
+                                        "href": "example_iam_DeleteRolePolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Delete a server certificate",
+                                        "href": "example_iam_DeleteServerCertificate_section.html"
+                                    },
+                                    {
+                                        "title": "Delete a service-linked role",
+                                        "href": "example_iam_DeleteServiceLinkedRole_section.html"
+                                    },
+                                    {
+                                        "title": "Delete a user",
+                                        "href": "example_iam_DeleteUser_section.html"
+                                    },
+                                    {
+                                        "title": "Delete an access key",
+                                        "href": "example_iam_DeleteAccessKey_section.html"
+                                    },
+                                    {
+                                        "title": "Delete an account alias",
+                                        "href": "example_iam_DeleteAccountAlias_section.html"
+                                    },
+                                    {
+                                        "title": "Delete an inline policy from a user",
+                                        "href": "example_iam_DeleteUserPolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Delete an instance profile",
+                                        "href": "example_iam_DeleteInstanceProfile_section.html"
+                                    },
+                                    {
+                                        "title": "Detach a policy from a role",
+                                        "href": "example_iam_DetachRolePolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Detach a policy from a user",
+                                        "href": "example_iam_DetachUserPolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Generate a credential report",
+                                        "href": "example_iam_GenerateCredentialReport_section.html"
+                                    },
+                                    {
+                                        "title": "Get a credential report",
+                                        "href": "example_iam_GetCredentialReport_section.html"
+                                    },
+                                    {
+                                        "title": "Get a detailed authorization report for your account",
+                                        "href": "example_iam_GetAccountAuthorizationDetails_section.html"
+                                    },
+                                    {
+                                        "title": "Get a policy",
+                                        "href": "example_iam_GetPolicy_section.html"
+                                    },
+                                    {
+                                        "title": "Get a policy version",
+                                        "href": "example_iam_GetPolicyVersion_section.html"
+                                    },
+                                    {
+                                        "title": "Get a role",
+                                        "href": "example_iam_GetRole_section.html"
+                                    },
+                                    {
+                                        "title": "Get a server certificate",
+                                        "href": "example_iam_GetServerCertificate_section.html"
+                                    },
+                                    {
+                                        "title": "Get a service-linked role's deletion status",
+                                        "href": "example_iam_GetServiceLinkedRoleDeletionStatus_section.html"
+                                    },
+                                    {
+                                        "title": "Get a summary of account usage",
+                                        "href": "example_iam_GetAccountSummary_section.html"
+                                    },
+                                    {
+                                        "title": "Get a user",
+                                        "href": "example_iam_GetUser_section.html"
+                                    },
+                                    {
+                                        "title": "Get data about the last use of an access key",
+                                        "href": "example_iam_GetAccessKeyLastUsed_section.html"
+                                    },
+                                    {
+                                        "title": "Get the account password policy",
+                                        "href": "example_iam_GetAccountPasswordPolicy_section.html"
+                                    },
+                                    {
+                                        "title": "List SAML providers",
+                                        "href": "example_iam_ListSAMLProviders_section.html"
+                                    },
+                                    {
+                                        "title": "List a user's access keys",
+                                        "href": "example_iam_ListAccessKeys_section.html"
+                                    },
+                                    {
+                                        "title": "List account aliases",
+                                        "href": "example_iam_ListAccountAliases_section.html"
+                                    },
+                                    {
+                                        "title": "List groups",
+                                        "href": "example_iam_ListGroups_section.html"
+                                    },
+                                    {
+                                        "title": "List inline policies for a role",
+                                        "href": "example_iam_ListRolePolicies_section.html"
+                                    },
+                                    {
+                                        "title": "List inline policies for a user",
+                                        "href": "example_iam_ListUserPolicies_section.html"
+                                    },
+                                    {
+                                        "title": "List policies",
+                                        "href": "example_iam_ListPolicies_section.html"
+                                    },
+                                    {
+                                        "title": "List policies attached to a role",
+                                        "href": "example_iam_ListAttachedRolePolicies_section.html"
+                                    },
+                                    {
+                                        "title": "List roles",
+                                        "href": "example_iam_ListRoles_section.html"
+                                    },
+                                    {
+                                        "title": "List server certificates",
+                                        "href": "example_iam_ListServerCertificates_section.html"
+                                    },
+                                    {
+                                        "title": "List users",
+                                        "href": "example_iam_ListUsers_section.html"
+                                    },
+                                    {
+                                        "title": "Remove a user from a group",
+                                        "href": "example_iam_RemoveUserFromGroup_section.html"
+                                    },
+                                    {
+                                        "title": "Update a server certificate",
+                                        "href": "example_iam_UpdateServerCertificate_section.html"
+                                    },
+                                    {
+                                        "title": "Update a user",
+                                        "href": "example_iam_UpdateUser_section.html"
+                                    },
+                                    {
+                                        "title": "Update an access key",
+                                        "href": "example_iam_UpdateAccessKey_section.html"
+                                    },
+                                    {
+                                        "title": "Upload a server certificate",
+                                        "href": "example_iam_UploadServerCertificate_section.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Scenarios",
+                                "href": "service_code_examples_iam_scenarios.html",
+                                "contents": [
+                                    {
+                                        "title": "Build and manage a resilient service",
+                                        "href": "example_cross_ResilientService_section.html"
+                                    },
+                                    {
+                                        "title": "Create a group and add a user",
+                                        "href": "example_iam_Scenario_GroupBasics_section.html"
+                                    },
+                                    {
+                                        "title": "Create a user and assume a role",
+                                        "href": "example_iam_Scenario_CreateUserAssumeRole_section.html"
+                                    },
+                                    {
+                                        "title": "Create read-only and read-write users",
+                                        "href": "example_iam_Scenario_UserPolicies_section.html"
+                                    },
+                                    {
+                                        "title": "Manage access keys",
+                                        "href": "example_iam_Scenario_ManageAccessKeys_section.html"
+                                    },
+                                    {
+                                        "title": "Manage policies",
+                                        "href": "example_iam_Scenario_PolicyManagement_section.html"
+                                    },
+                                    {
+                                        "title": "Manage roles",
+                                        "href": "example_iam_Scenario_RoleManagement_section.html"
+                                    },
+                                    {
+                                        "title": "Manage your account",
+                                        "href": "example_iam_Scenario_AccountManagement_section.html"
+                                    },
+                                    {
+                                        "title": "Roll back a policy version",
+                                        "href": "example_iam_Scenario_RollbackPolicyVersion_section.html"
+                                    },
+                                    {
+                                        "title": "Work with the IAM Policy Builder API",
+                                        "href": "example_iam_Scenario_IamPolicyBuilder_section.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS STS examples",
+                        "href": "service_code_examples_sts.html",
+                        "contents": [
+                            {
+                                "title": "Actions",
+                                "href": "service_code_examples_sts_actions.html",
+                                "contents": [
+                                    {
+                                        "title": "Assume a role",
+                                        "href": "example_sts_AssumeRole_section.html"
+                                    },
+                                    {
+                                        "title": "Get a session token",
+                                        "href": "example_sts_GetSessionToken_section.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Scenarios",
+                                "href": "service_code_examples_sts_scenarios.html",
+                                "contents": [
+                                    {
+                                        "title": "Assume an IAM role that requires an MFA token",
+                                        "href": "example_sts_Scenario_AssumeRoleMfa_section.html"
+                                    },
+                                    {
+                                        "title": "Construct a URL for federated users",
+                                        "href": "example_sts_Scenario_ConstructFederatedUrl_section.html"
+                                    },
+                                    {
+                                        "title": "Get a session token that requires an MFA token",
+                                        "href": "example_sts_Scenario_SessionTokenMfa_section.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "AWS security credentials",
+                        "href": "security-creds.html"
+                    },
+                    {
+                        "title": "AWS security audit guidelines",
+                        "href": "security-audit-guide.html"
+                    },
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Logging and monitoring",
+                        "href": "security-logging-and-monitoring.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "iam-compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Configuration and vulnerability analysis",
+                        "href": "configuration-and-vulnerability-analysis.html"
+                    },
+                    {
+                        "title": "AWS managed policies",
+                        "href": "security-iam-awsmanpol.html"
+                    }
+                ]
+            },
+            {
+                "title": "IAM Access Analyzer",
+                "href": "what-is-access-analyzer.html",
+                "contents": [
+                    {
+                        "title": "Findings for public and cross-account access",
+                        "href": "access-analyzer-findings.html",
+                        "contents": [
+                            {
+                                "title": "How IAM Access Analyzer findings work",
+                                "href": "access-analyzer-concepts.html"
+                            },
+                            {
+                                "title": "Getting started with IAM Access Analyzer findings",
+                                "href": "access-analyzer-getting-started.html"
+                            },
+                            {
+                                "title": "Working with findings",
+                                "href": "access-analyzer-work-with-findings.html"
+                            },
+                            {
+                                "title": "Reviewing findings",
+                                "href": "access-analyzer-findings-view.html"
+                            },
+                            {
+                                "title": "Filtering findings",
+                                "href": "access-analyzer-findings-filter.html"
+                            },
+                            {
+                                "title": "Archiving findings",
+                                "href": "access-analyzer-findings-archive.html"
+                            },
+                            {
+                                "title": "Resolving findings",
+                                "href": "access-analyzer-findings-remediate.html"
+                            },
+                            {
+                                "title": "Supported resource types",
+                                "href": "access-analyzer-resources.html"
+                            },
+                            {
+                                "title": "Settings",
+                                "href": "access-analyzer-settings.html"
+                            },
+                            {
+                                "title": "Archive rules",
+                                "href": "access-analyzer-archive-rules.html"
+                            },
+                            {
+                                "title": "Monitoring with EventBridge",
+                                "href": "access-analyzer-eventbridge.html"
+                            },
+                            {
+                                "title": "Security Hub integration",
+                                "href": "access-analyzer-securityhub-integration.html"
+                            },
+                            {
+                                "title": "Logging with CloudTrail",
+                                "href": "logging-using-cloudtrail.html"
+                            },
+                            {
+                                "title": "IAM Access Analyzer filter keys",
+                                "href": "access-analyzer-reference-filter-keys.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "access-analyzer-using-service-linked-roles.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Preview access",
+                        "href": "access-analyzer-access-preview.html",
+                        "contents": [
+                            {
+                                "title": "Previewing access in Amazon S3 console",
+                                "href": "access-analyzer-preview-access-s3-console.html"
+                            },
+                            {
+                                "title": "Previewing access with IAM Access Analyzer APIs",
+                                "href": "access-analyzer-preview-access-apis.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IAM Access Analyzer policy validation",
+                        "href": "access-analyzer-policy-validation.html",
+                        "contents": [
+                            {
+                                "title": "Policy check reference",
+                                "href": "access-analyzer-reference-policy-checks.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IAM Access Analyzer policy generation",
+                        "href": "access-analyzer-policy-generation.html",
+                        "contents": [
+                            {
+                                "title": "IAM Access Analyzer policy generation services",
+                                "href": "access-analyzer-policy-generation-action-last-accessed-support.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IAM Access Analyzer quotas",
+                        "href": "access-analyzer-quotas.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting IAM",
+                "href": "troubleshoot.html",
+                "contents": [
+                    {
+                        "title": "General issues",
+                        "href": "troubleshoot_general.html"
+                    },
+                    {
+                        "title": "Access denied error messages",
+                        "href": "troubleshoot_access-denied.html"
+                    },
+                    {
+                        "title": "IAM policies",
+                        "href": "troubleshoot_policies.html"
+                    },
+                    {
+                        "title": "FIDO security keys",
+                        "href": "troubleshoot_mfa-fido.html"
+                    },
+                    {
+                        "title": "IAM roles",
+                        "href": "troubleshoot_roles.html"
+                    },
+                    {
+                        "title": "IAM and Amazon EC2",
+                        "href": "troubleshoot_iam-ec2.html"
+                    },
+                    {
+                        "title": "IAM and Amazon S3",
+                        "href": "troubleshoot_iam-s3.html"
+                    },
+                    {
+                        "title": "SAML 2.0 federation",
+                        "href": "troubleshoot_saml.html",
+                        "contents": [
+                            {
+                                "title": "Viewing a SAML response in your browser",
+                                "href": "troubleshoot_saml_view-saml-response.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Reference",
+                "href": "reference.html",
+                "contents": [
+                    {
+                        "title": "Amazon Resource Names (ARNs)",
+                        "href": "reference-arns.html"
+                    },
+                    {
+                        "title": "IAM identifiers",
+                        "href": "reference_identifiers.html"
+                    },
+                    {
+                        "title": "IAM and AWS STS quotas",
+                        "href": "reference_iam-quotas.html"
+                    },
+                    {
+                        "title": "Services that work with IAM",
+                        "href": "reference_aws-services-that-work-with-iam.html"
+                    },
+                    {
+                        "title": "Signing AWS API requests",
+                        "href": "reference_aws-signing.html",
+                        "contents": [
+                            {
+                                "title": "Signature Version 4 request elements",
+                                "href": "signing-elements.html"
+                            },
+                            {
+                                "title": "Authentication methods",
+                                "href": "aws-signing-authentication-methods.html"
+                            },
+                            {
+                                "title": "Create a signed request",
+                                "href": "create-signed-request.html"
+                            },
+                            {
+                                "title": "Request signature examples",
+                                "href": "signature-v4-examples.html"
+                            },
+                            {
+                                "title": "Troubleshoot",
+                                "href": "signature-v4-troubleshooting.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Policy reference",
+                        "href": "reference_policies.html",
+                        "contents": [
+                            {
+                                "title": "JSON element reference",
+                                "href": "reference_policies_elements.html",
+                                "contents": [
+                                    {
+                                        "title": "Version",
+                                        "href": "reference_policies_elements_version.html"
+                                    },
+                                    {
+                                        "title": "Id",
+                                        "href": "reference_policies_elements_id.html"
+                                    },
+                                    {
+                                        "title": "Statement",
+                                        "href": "reference_policies_elements_statement.html"
+                                    },
+                                    {
+                                        "title": "Sid",
+                                        "href": "reference_policies_elements_sid.html"
+                                    },
+                                    {
+                                        "title": "Effect",
+                                        "href": "reference_policies_elements_effect.html"
+                                    },
+                                    {
+                                        "title": "Principal",
+                                        "href": "reference_policies_elements_principal.html"
+                                    },
+                                    {
+                                        "title": "NotPrincipal",
+                                        "href": "reference_policies_elements_notprincipal.html"
+                                    },
+                                    {
+                                        "title": "Action",
+                                        "href": "reference_policies_elements_action.html"
+                                    },
+                                    {
+                                        "title": "NotAction",
+                                        "href": "reference_policies_elements_notaction.html"
+                                    },
+                                    {
+                                        "title": "Resource",
+                                        "href": "reference_policies_elements_resource.html"
+                                    },
+                                    {
+                                        "title": "NotResource",
+                                        "href": "reference_policies_elements_notresource.html"
+                                    },
+                                    {
+                                        "title": "Condition",
+                                        "href": "reference_policies_elements_condition.html",
+                                        "contents": [
+                                            {
+                                                "title": "Condition operators",
+                                                "href": "reference_policies_elements_condition_operators.html"
+                                            },
+                                            {
+                                                "title": "Conditions with multiple context keys or values",
+                                                "href": "reference_policies_condition-logic-multiple-context-keys-or-values.html"
+                                            },
+                                            {
+                                                "title": "Single-valued vs. multivalued context keys",
+                                                "href": "reference_policies_condition-single-vs-multi-valued-context-keys.html"
+                                            },
+                                            {
+                                                "title": "Condition policy examples",
+                                                "href": "reference_policies_condition_examples.html",
+                                                "contents": [
+                                                    {
+                                                        "title": "Multivalued context key examples",
+                                                        "href": "reference_policies_condition_examples-multi-valued-context-keys.html"
+                                                    },
+                                                    {
+                                                        "title": "Single-valued context key policy examples",
+                                                        "href": "reference_policies_condition_examples-single-valued-context-keys.html"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Variables and tags",
+                                        "href": "reference_policies_variables.html"
+                                    },
+                                    {
+                                        "title": "Supported data types",
+                                        "href": "reference_policies_elements_datatypes.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Policy evaluation logic",
+                                "href": "reference_policies_evaluation-logic.html",
+                                "contents": [
+                                    {
+                                        "title": "Cross-account policy evaluation logic",
+                                        "href": "reference_policies_evaluation-logic-cross-account.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Policy grammar",
+                                "href": "reference_policies_grammar.html"
+                            },
+                            {
+                                "title": "AWS managed policies for job functions",
+                                "href": "access_policies_job-functions.html",
+                                "contents": [
+                                    {
+                                        "title": "Creating roles and attaching policies (console)",
+                                        "href": "access_policies_job-functions_create-policies.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Global condition keys",
+                                "href": "reference_policies_condition-keys.html"
+                            },
+                            {
+                                "title": "IAM condition keys",
+                                "href": "reference_policies_iam-condition-keys.html"
+                            },
+                            {
+                                "title": "Actions, resources, and condition keys",
+                                "href": "reference_policies_actions-resources-contextkeys.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Resources",
+                "href": "resources.html"
+            },
+            {
+                "title": "Making HTTP query requests",
+                "href": "programming.html"
+            },
+            {
+                "title": "Document history",
+                "href": "document-history.html"
+            }
+        ]
+    }
+}

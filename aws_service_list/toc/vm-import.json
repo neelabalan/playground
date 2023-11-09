@@ -1,1 +1,96 @@
-{ "contents" : [ { "title" : "What is VM Import/Export?", "href" : "what-is-vmimport.html", "contents" : [ { "title" : "How it works", "href" : "how-vm-import-export-works.html" } ] }, { "title" : "Requirements", "href" : "vmie_prereqs.html", "contents" : [ { "title" : "System requirements", "href" : "prerequisites.html" }, { "title" : "Required configuration", "href" : "prepare-vm-image.html" }, { "title" : "Required permissions", "href" : "required-permissions.html" }, { "title" : "Licensing options", "href" : "licensing.html" } ] }, { "title" : "VM Import/Export Processes", "href" : "import-export-processes.html", "contents" : [ { "title" : "Image import", "href" : "vmimport-image-import.html" }, { "title" : "Snapshot import", "href" : "vmimport-import-snapshot.html" }, { "title" : "Instance import", "href" : "vmimport-instance-import.html" }, { "title" : "Export from an instance", "href" : "vmexport.html" }, { "title" : "Export from an AMI", "href" : "vmexport_image.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" } ] }, { "title" : "Troubleshooting", "href" : "vmimport-troubleshooting.html" }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/vm-import/latest/userguide/",
+    "service": "vm-import",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is VM Import/Export?",
+                "href": "what-is-vmimport.html",
+                "contents": [
+                    {
+                        "title": "How it works",
+                        "href": "how-vm-import-export-works.html"
+                    }
+                ]
+            },
+            {
+                "title": "Requirements",
+                "href": "vmie_prereqs.html",
+                "contents": [
+                    {
+                        "title": "System requirements",
+                        "href": "prerequisites.html"
+                    },
+                    {
+                        "title": "Required configuration",
+                        "href": "prepare-vm-image.html"
+                    },
+                    {
+                        "title": "Required permissions",
+                        "href": "required-permissions.html"
+                    },
+                    {
+                        "title": "Licensing options",
+                        "href": "licensing.html"
+                    }
+                ]
+            },
+            {
+                "title": "VM Import/Export Processes",
+                "href": "import-export-processes.html",
+                "contents": [
+                    {
+                        "title": "Image import",
+                        "href": "vmimport-image-import.html"
+                    },
+                    {
+                        "title": "Snapshot import",
+                        "href": "vmimport-import-snapshot.html"
+                    },
+                    {
+                        "title": "Instance import",
+                        "href": "vmimport-instance-import.html"
+                    },
+                    {
+                        "title": "Export from an instance",
+                        "href": "vmexport.html"
+                    },
+                    {
+                        "title": "Export from an AMI",
+                        "href": "vmexport_image.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "vmimport-troubleshooting.html"
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

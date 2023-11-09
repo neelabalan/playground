@@ -1,1 +1,462 @@
-{ "contents" : [ { "title" : "What is AWS Mainframe Modernization?", "href" : "what-is-m2.html" }, { "title" : "Setting up AWS Mainframe Modernization", "href" : "setting-up.html" }, { "title" : "Getting started", "href" : "getting-started.html", "contents" : [ { "title" : "Tutorial: Managed Runtime for AWS Blu Age", "href" : "tutorial-runtime-ba.html" }, { "title" : "Tutorial: Managed runtime for Micro Focus", "href" : "tutorial-runtime-mf.html" } ] }, { "title" : "Modernization approach", "href" : "modernization-m2.html" }, { "title" : "AWS Blu Age Refactoring", "href" : "refactoring-m2.html", "contents" : [ { "title" : "AWS Blu Age Runtime Concepts", "href" : "ba-shared-concept.html", "contents" : [ { "title" : "High Level Architecture", "href" : "ba-shared-architecture.html" }, { "title" : "Modernized Application Structure", "href" : "ba-shared-structure.html" }, { "title" : "Data Simplifier", "href" : "ba-shared-data.html" } ] }, { "title" : "AWS Blu Age Runtime (on Amazon EC2) Setup", "href" : "ba-runtime-setup.html", "contents" : [ { "title" : "AWS Blu Age Runtime (on Amazon EC2) Prerequisites", "href" : "ba-runtime-setup-prereq.html" }, { "title" : "AWS Blu Age Runtime (on Amazon EC2) onboarding", "href" : "ba-runtime-setup-onboard.html" }, { "title" : "Provisioning AWS Blu Age Components", "href" : "ba-runtime-cdk.html" }, { "title" : "Deploy a modernized application", "href" : "ba-runtime-deploy.html" }, { "title" : "Upgrade the AWS Blu Age Runtime (on Amazon EC2) version", "href" : "ba-runtime-maint.html" }, { "title" : "Setting up licensed dependencies in AWS Blu Age Runtime (on Amazon EC2)", "href" : "ba-runtime-dependencies.html" } ] }, { "title" : "AWS Blu Age Runtime (on Amazon EC2) Configuration", "href" : "ba-runtime-config.html", "contents" : [ { "title" : "Enabling properties", "href" : "ba-runtime-key-value.html" }, { "title" : "Configure authentication for Gapwalk applications", "href" : "ba-runtime-auth.html" } ] }, { "title" : "AWS Blu Age Runtime (on Amazon EC2) APIs", "href" : "ba-runtime-endpoints.html", "contents" : [ { "title" : "Building URLs", "href" : "ba-endpoints-build-urls.html" }, { "title" : "Gapwalk-Application", "href" : "ba-endpoints-gapwalk.html" }, { "title" : "Blusam Application Console REST endpoints", "href" : "ba-endpoints-bac.html" }, { "title" : "JICS Application Console", "href" : "ba-endpoints-jac.html" }, { "title" : "Data Structures", "href" : "ba-endpoints-apx.html" } ] }, { "title" : "Modify the source code with Blu Age Developer IDE", "href" : "ba-modify-source.html", "contents" : [ { "title" : "Tutorial: Set up AppStream 2.0 for AWS Blu Age Developer IDE", "href" : "set-up-appstream-ba.html" }, { "title" : "Tutorial: Use AWS Blu Age Developer on AppStream 2.0", "href" : "tutorial-ba-developer.html" } ] }, { "title" : "Set up a build and CI/CD pipeline", "href" : "tutorial-build-ba.html", "contents" : [ { "title" : "Prerequisites", "href" : "tutorial-build-ba-prerequisites.html" }, { "title" : "Overview of tutorial", "href" : "tutorial-build-ba-overview.html" }, { "title" : "Set up your CI/CD environment", "href" : "tutorial-build-ba-env.html" }, { "title" : "Set up your CI/CD build and pipeline", "href" : "tutorial-build-ba-cicd.html" }, { "title" : "Clean up resources", "href" : "tutorial-build-ba-clean.html" } ] }, { "title" : "AWS Blu Age Release Notes", "href" : "ba-release-notes.html" } ] }, { "title" : "Micro Focus Replatforming", "href" : "replatforming-m2.html", "contents" : [ { "title" : "Micro Focus Runtime (on Amazon EC2) Setup", "href" : "mf-runtime-setup.html", "contents" : [ { "title" : "Prerequisites", "href" : "mf-runtime-setup-prereq.html" }, { "title" : "Create the Amazon VPC Endpoint for Amazon S3", "href" : "mf-runtime-setup-vpc.html" }, { "title" : "Request the Allowlist update for the Account", "href" : "mf-runtime-setup-allowlist.html" }, { "title" : "Creating the AWS Identity and Access Management role", "href" : "mf-runtime-setup-iam-role.html" }, { "title" : "Grant License Manager the required permissions", "href" : "mf-runtime-setup-lic.html" }, { "title" : "Subscribe to the Amazon Machine Images", "href" : "mf-runtime-setup-ami.html" }, { "title" : "Launch an AWS Mainframe Modernization Micro Focus Instance", "href" : "mf-runtime-setup-mf-instance.html" }, { "title" : "Subnet or VPC with no Internet Access", "href" : "mf-runtime-setup-no-access.html" }, { "title" : "Troubleshooting license issues", "href" : "mf-runtime-setup-troubleshoot.html" } ] }, { "title" : "Tutorial: Set up AppStream 2.0 for Enterprise Analyzer and Enterprise Developer", "href" : "set-up-appstream.html" }, { "title" : "Set up Enterprise Analyzer", "href" : "set-up-ea.html" }, { "title" : "Set up Enterprise Developer", "href" : "set-up-ed.html" }, { "title" : "Set up AppStream 2.0 Automation", "href" : "set-up-automation-m2.html" }, { "title" : "View Data Sets as Tables", "href" : "view-datasets-tables-m2.html" }, { "title" : "Use templates with Enterprise Developer", "href" : "tutorial-templates-ed.html" }, { "title" : "Tutorial: Set up the build for the BankDemo sample", "href" : "tutorial-build.html" }, { "title" : "Tutorial: Setting up a CI/CD pipeline for use with Micro Focus Enterprise Developer", "href" : "tutorial-cicd-mf.html" }, { "title" : "Batch Utilities", "href" : "utilities-m2.html", "contents" : [ { "title" : "M2SFTP Batch Utility", "href" : "m2sftp.html" }, { "title" : "M2WAIT Batch Utility", "href" : "m2wait.html" }, { "title" : "TXT2PDF Batch Utility", "href" : "txt2pdf.html" } ] } ] }, { "title" : "Applications", "href" : "applications-m2.html", "contents" : [ { "title" : "Create an application", "href" : "applications-m2-create.html" }, { "title" : "Deploy an application", "href" : "applications-m2-deploy.html" }, { "title" : "Update an application", "href" : "applications-m2-update.html" }, { "title" : "Delete an application from an environment", "href" : "applications-m2-delete-env.html" }, { "title" : "Delete an application", "href" : "applications-m2-delete.html" }, { "title" : "Submit batch jobs for applications", "href" : "applications-m2-batch-job.html" }, { "title" : "Import data sets for applications", "href" : "applications-m2-dataset.html" }, { "title" : "Manage transactions for applications", "href" : "applications-m2-transactions.console.html" }, { "title" : "Create AWS resources for a migrated application", "href" : "applications-m2-other-resources.html" }, { "title" : "Configure the managed application", "href" : "ba-app-config.html", "contents" : [ { "title" : "Structure of AWS Blu Age managed applications", "href" : "applications-m2-other-resources-structure.html" }, { "title" : "Configuring access to utilities for managed applications", "href" : "applications-m2-ba-utilities.html" }, { "title" : "Configure additional properties", "href" : "applications-m2-ba-config-props.html" } ] }, { "title" : "Application definition reference", "href" : "applications-m2-definition.html" }, { "title" : "Data set definition reference", "href" : "datasets-m2-definition.html" } ] }, { "title" : "Managed Runtime Environments", "href" : "environments-m2.html", "contents" : [ { "title" : "Create a runtime environment", "href" : "create-environments-m2.html" }, { "title" : "Update a runtime environment", "href" : "update-environments-m2.html" }, { "title" : "Stop a runtime environment", "href" : "stop-environments-m2.html" }, { "title" : "Restart a runtime environment", "href" : "restart-environments-m2.html" }, { "title" : "Delete a runtime environment", "href" : "delete-environments-m2.html" } ] }, { "title" : "Concepts", "href" : "concept-m2.html" }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data protection", "href" : "data-protection.html" }, { "title" : "Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "How AWS Mainframe Modernization works with IAM", "href" : "security_iam_service-with-iam.html", "contents" : [ { "title" : "AWS Mainframe Modernization API permissions reference", "href" : "UsingWithM2_IAM_ResourcePermissions.html" } ] }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" }, { "title" : "Using service-linked roles", "href" : "using-service-linked-roles.html" } ] }, { "title" : "Compliance validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure security", "href" : "infrastructure-security.html" }, { "title" : "Tutorial: AWS Blu Age Application Security in AWS Mainframe Modernization", "href" : "security-app-ba.html" }, { "title" : "AWS PrivateLink", "href" : "vpc-interface-endpoints.html" } ] }, { "title" : "Monitoring", "href" : "monitoring-overview.html", "contents" : [ { "title" : "Monitoring with CloudWatch", "href" : "monitoring-cloudwatch.html" }, { "title" : "CloudTrail logs", "href" : "logging-using-cloudtrail.html" } ] }, { "title" : "Troubleshooting", "href" : "troubleshooting-m2.html", "contents" : [ { "title" : "Error: Time out while waiting for dataset name to be unlocked", "href" : "ba-blusam-timeout.html" }, { "title" : "Cannot access an application's URL", "href" : "both-application-connectivity.html" }, { "title" : "AWS Blu Insights doesn't open from the console", "href" : "ba-bi-tabclose.html" } ] }, { "title" : "Document history", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/m2/latest/userguide/",
+    "service": "m2",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is AWS Mainframe Modernization?",
+                "href": "what-is-m2.html"
+            },
+            {
+                "title": "Setting up AWS Mainframe Modernization",
+                "href": "setting-up.html"
+            },
+            {
+                "title": "Getting started",
+                "href": "getting-started.html",
+                "contents": [
+                    {
+                        "title": "Tutorial: Managed Runtime for AWS Blu Age",
+                        "href": "tutorial-runtime-ba.html"
+                    },
+                    {
+                        "title": "Tutorial: Managed runtime for Micro Focus",
+                        "href": "tutorial-runtime-mf.html"
+                    }
+                ]
+            },
+            {
+                "title": "Modernization approach",
+                "href": "modernization-m2.html"
+            },
+            {
+                "title": "AWS Blu Age Refactoring",
+                "href": "refactoring-m2.html",
+                "contents": [
+                    {
+                        "title": "AWS Blu Age Runtime Concepts",
+                        "href": "ba-shared-concept.html",
+                        "contents": [
+                            {
+                                "title": "High Level Architecture",
+                                "href": "ba-shared-architecture.html"
+                            },
+                            {
+                                "title": "Modernized Application Structure",
+                                "href": "ba-shared-structure.html"
+                            },
+                            {
+                                "title": "Data Simplifier",
+                                "href": "ba-shared-data.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS Blu Age Runtime (on Amazon EC2) Setup",
+                        "href": "ba-runtime-setup.html",
+                        "contents": [
+                            {
+                                "title": "AWS Blu Age Runtime (on Amazon EC2) Prerequisites",
+                                "href": "ba-runtime-setup-prereq.html"
+                            },
+                            {
+                                "title": "AWS Blu Age Runtime (on Amazon EC2) onboarding",
+                                "href": "ba-runtime-setup-onboard.html"
+                            },
+                            {
+                                "title": "Provisioning AWS Blu Age Components",
+                                "href": "ba-runtime-cdk.html"
+                            },
+                            {
+                                "title": "Deploy a modernized application",
+                                "href": "ba-runtime-deploy.html"
+                            },
+                            {
+                                "title": "Upgrade the AWS Blu Age Runtime (on Amazon EC2) version",
+                                "href": "ba-runtime-maint.html"
+                            },
+                            {
+                                "title": "Setting up licensed dependencies in AWS Blu Age Runtime (on Amazon EC2)",
+                                "href": "ba-runtime-dependencies.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS Blu Age Runtime (on Amazon EC2) Configuration",
+                        "href": "ba-runtime-config.html",
+                        "contents": [
+                            {
+                                "title": "Enabling properties",
+                                "href": "ba-runtime-key-value.html"
+                            },
+                            {
+                                "title": "Configure authentication for Gapwalk applications",
+                                "href": "ba-runtime-auth.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS Blu Age Runtime (on Amazon EC2) APIs",
+                        "href": "ba-runtime-endpoints.html",
+                        "contents": [
+                            {
+                                "title": "Building URLs",
+                                "href": "ba-endpoints-build-urls.html"
+                            },
+                            {
+                                "title": "Gapwalk-Application",
+                                "href": "ba-endpoints-gapwalk.html"
+                            },
+                            {
+                                "title": "Blusam Application Console REST endpoints",
+                                "href": "ba-endpoints-bac.html"
+                            },
+                            {
+                                "title": "JICS Application Console",
+                                "href": "ba-endpoints-jac.html"
+                            },
+                            {
+                                "title": "Data Structures",
+                                "href": "ba-endpoints-apx.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Modify the source code with Blu Age Developer IDE",
+                        "href": "ba-modify-source.html",
+                        "contents": [
+                            {
+                                "title": "Tutorial: Set up AppStream 2.0 for AWS Blu Age Developer IDE",
+                                "href": "set-up-appstream-ba.html"
+                            },
+                            {
+                                "title": "Tutorial: Use AWS Blu Age Developer on AppStream 2.0",
+                                "href": "tutorial-ba-developer.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Set up a build and CI/CD pipeline",
+                        "href": "tutorial-build-ba.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "tutorial-build-ba-prerequisites.html"
+                            },
+                            {
+                                "title": "Overview of tutorial",
+                                "href": "tutorial-build-ba-overview.html"
+                            },
+                            {
+                                "title": "Set up your CI/CD environment",
+                                "href": "tutorial-build-ba-env.html"
+                            },
+                            {
+                                "title": "Set up your CI/CD build and pipeline",
+                                "href": "tutorial-build-ba-cicd.html"
+                            },
+                            {
+                                "title": "Clean up resources",
+                                "href": "tutorial-build-ba-clean.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS Blu Age Release Notes",
+                        "href": "ba-release-notes.html"
+                    }
+                ]
+            },
+            {
+                "title": "Micro Focus Replatforming",
+                "href": "replatforming-m2.html",
+                "contents": [
+                    {
+                        "title": "Micro Focus Runtime (on Amazon EC2) Setup",
+                        "href": "mf-runtime-setup.html",
+                        "contents": [
+                            {
+                                "title": "Prerequisites",
+                                "href": "mf-runtime-setup-prereq.html"
+                            },
+                            {
+                                "title": "Create the Amazon VPC Endpoint for Amazon S3",
+                                "href": "mf-runtime-setup-vpc.html"
+                            },
+                            {
+                                "title": "Request the Allowlist update for the Account",
+                                "href": "mf-runtime-setup-allowlist.html"
+                            },
+                            {
+                                "title": "Creating the AWS Identity and Access Management role",
+                                "href": "mf-runtime-setup-iam-role.html"
+                            },
+                            {
+                                "title": "Grant License Manager the required permissions",
+                                "href": "mf-runtime-setup-lic.html"
+                            },
+                            {
+                                "title": "Subscribe to the Amazon Machine Images",
+                                "href": "mf-runtime-setup-ami.html"
+                            },
+                            {
+                                "title": "Launch an AWS Mainframe Modernization Micro Focus Instance",
+                                "href": "mf-runtime-setup-mf-instance.html"
+                            },
+                            {
+                                "title": "Subnet or VPC with no Internet Access",
+                                "href": "mf-runtime-setup-no-access.html"
+                            },
+                            {
+                                "title": "Troubleshooting license issues",
+                                "href": "mf-runtime-setup-troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tutorial: Set up AppStream 2.0 for Enterprise Analyzer and Enterprise Developer",
+                        "href": "set-up-appstream.html"
+                    },
+                    {
+                        "title": "Set up Enterprise Analyzer",
+                        "href": "set-up-ea.html"
+                    },
+                    {
+                        "title": "Set up Enterprise Developer",
+                        "href": "set-up-ed.html"
+                    },
+                    {
+                        "title": "Set up AppStream 2.0 Automation",
+                        "href": "set-up-automation-m2.html"
+                    },
+                    {
+                        "title": "View Data Sets as Tables",
+                        "href": "view-datasets-tables-m2.html"
+                    },
+                    {
+                        "title": "Use templates with Enterprise Developer",
+                        "href": "tutorial-templates-ed.html"
+                    },
+                    {
+                        "title": "Tutorial: Set up the build for the BankDemo sample",
+                        "href": "tutorial-build.html"
+                    },
+                    {
+                        "title": "Tutorial: Setting up a CI/CD pipeline for use with Micro Focus Enterprise Developer",
+                        "href": "tutorial-cicd-mf.html"
+                    },
+                    {
+                        "title": "Batch Utilities",
+                        "href": "utilities-m2.html",
+                        "contents": [
+                            {
+                                "title": "M2SFTP Batch Utility",
+                                "href": "m2sftp.html"
+                            },
+                            {
+                                "title": "M2WAIT Batch Utility",
+                                "href": "m2wait.html"
+                            },
+                            {
+                                "title": "TXT2PDF Batch Utility",
+                                "href": "txt2pdf.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Applications",
+                "href": "applications-m2.html",
+                "contents": [
+                    {
+                        "title": "Create an application",
+                        "href": "applications-m2-create.html"
+                    },
+                    {
+                        "title": "Deploy an application",
+                        "href": "applications-m2-deploy.html"
+                    },
+                    {
+                        "title": "Update an application",
+                        "href": "applications-m2-update.html"
+                    },
+                    {
+                        "title": "Delete an application from an environment",
+                        "href": "applications-m2-delete-env.html"
+                    },
+                    {
+                        "title": "Delete an application",
+                        "href": "applications-m2-delete.html"
+                    },
+                    {
+                        "title": "Submit batch jobs for applications",
+                        "href": "applications-m2-batch-job.html"
+                    },
+                    {
+                        "title": "Import data sets for applications",
+                        "href": "applications-m2-dataset.html"
+                    },
+                    {
+                        "title": "Manage transactions for applications",
+                        "href": "applications-m2-transactions.console.html"
+                    },
+                    {
+                        "title": "Create AWS resources for a migrated application",
+                        "href": "applications-m2-other-resources.html"
+                    },
+                    {
+                        "title": "Configure the managed application",
+                        "href": "ba-app-config.html",
+                        "contents": [
+                            {
+                                "title": "Structure of AWS Blu Age managed applications",
+                                "href": "applications-m2-other-resources-structure.html"
+                            },
+                            {
+                                "title": "Configuring access to utilities for managed applications",
+                                "href": "applications-m2-ba-utilities.html"
+                            },
+                            {
+                                "title": "Configure additional properties",
+                                "href": "applications-m2-ba-config-props.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Application definition reference",
+                        "href": "applications-m2-definition.html"
+                    },
+                    {
+                        "title": "Data set definition reference",
+                        "href": "datasets-m2-definition.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managed Runtime Environments",
+                "href": "environments-m2.html",
+                "contents": [
+                    {
+                        "title": "Create a runtime environment",
+                        "href": "create-environments-m2.html"
+                    },
+                    {
+                        "title": "Update a runtime environment",
+                        "href": "update-environments-m2.html"
+                    },
+                    {
+                        "title": "Stop a runtime environment",
+                        "href": "stop-environments-m2.html"
+                    },
+                    {
+                        "title": "Restart a runtime environment",
+                        "href": "restart-environments-m2.html"
+                    },
+                    {
+                        "title": "Delete a runtime environment",
+                        "href": "delete-environments-m2.html"
+                    }
+                ]
+            },
+            {
+                "title": "Concepts",
+                "href": "concept-m2.html"
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data protection",
+                        "href": "data-protection.html"
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "How AWS Mainframe Modernization works with IAM",
+                                "href": "security_iam_service-with-iam.html",
+                                "contents": [
+                                    {
+                                        "title": "AWS Mainframe Modernization API permissions reference",
+                                        "href": "UsingWithM2_IAM_ResourcePermissions.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            },
+                            {
+                                "title": "Using service-linked roles",
+                                "href": "using-service-linked-roles.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Tutorial: AWS Blu Age Application Security in AWS Mainframe Modernization",
+                        "href": "security-app-ba.html"
+                    },
+                    {
+                        "title": "AWS PrivateLink",
+                        "href": "vpc-interface-endpoints.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring",
+                "href": "monitoring-overview.html",
+                "contents": [
+                    {
+                        "title": "Monitoring with CloudWatch",
+                        "href": "monitoring-cloudwatch.html"
+                    },
+                    {
+                        "title": "CloudTrail logs",
+                        "href": "logging-using-cloudtrail.html"
+                    }
+                ]
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting-m2.html",
+                "contents": [
+                    {
+                        "title": "Error: Time out while waiting for dataset name to be unlocked",
+                        "href": "ba-blusam-timeout.html"
+                    },
+                    {
+                        "title": "Cannot access an application's URL",
+                        "href": "both-application-connectivity.html"
+                    },
+                    {
+                        "title": "AWS Blu Insights doesn't open from the console",
+                        "href": "ba-bi-tabclose.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document history",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}

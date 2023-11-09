@@ -1,1 +1,386 @@
-{ "contents" : [ { "title" : "What is Amazon SWF?", "href" : "swf-welcome.html" }, { "title" : "Introduction to Amazon SWF", "href" : "swf-dg-intro-to-swf.html" }, { "title" : "Setting Up", "href" : "swf-dg-dev-amzn-swf.html" }, { "title" : "Getting Started", "href" : "swf-sns-tutorial.html", "contents" : [ { "title" : "Part 1: Using Amazon SWF with the SDK for Ruby", "href" : "swf-sns-tutorial-setup-swf.html" }, { "title" : "Part 2: Implementing the Workflow", "href" : "swf-sns-tutorial-implementing-workflow.html" }, { "title" : "Part 3: Implementing the Activities", "href" : "swf-sns-tutorial-implementing-activities.html" }, { "title" : "Part 4: Implementing the Activities Task Poller", "href" : "swf-sns-tutorial-implementing-activities-poller.html" }, { "title" : "Running the Workflow", "href" : "swf-sns-tutorial-running-the-workflow.html" } ] }, { "title" : "Tutorials", "href" : "swf-dg-using-console.html", "contents" : [ { "title" : "Registering a Domain", "href" : "swf-dg-register-domain-console.html" }, { "title" : "Registering a Workflow Type", "href" : "dg-swf-register-workflow.html" }, { "title" : "Registering an Activity Type", "href" : "dg-swf-register-activity.html" }, { "title" : "Starting a Workflow Execution", "href" : "dg-swf-execution-start.html" }, { "title" : "Viewing Pending Tasks", "href" : "swf-dg-console-tasklists.html" }, { "title" : "Managing Your Workflow Executions", "href" : "swf-dg-console-manage-workflow-executions.html" }, { "title" : "Managing Amazon SWF Domains", "href" : "swf-dg-manage-domains-console.html" } ] }, { "title" : "How Amazon SWF Works", "href" : "swf-dg-basic.html", "contents" : [ { "title" : "Workflows", "href" : "swf-dev-about-workflows.html" }, { "title" : "Workflow History", "href" : "swf-dev-about-workflow-history.html" }, { "title" : "Actors", "href" : "swf-dev-actors.html" }, { "title" : "Tasks", "href" : "swf-dev-tasks.html" }, { "title" : "Domains", "href" : "swf-dev-domains.html" }, { "title" : "Object Identifiers", "href" : "swf-dev-obj-ident.html" }, { "title" : "Task Lists", "href" : "swf-dev-task-lists.html" }, { "title" : "Workflow Execution Closure", "href" : "swf-dev-workflow-exec-closure.html" }, { "title" : "Life Cycle of an Amazon SWF Workflow Execution", "href" : "swf-dev-workflow-exec-lifecycle.html" }, { "title" : "Polling for Tasks", "href" : "swf-dev-comm-proto.html" }, { "title" : "Advanced Concepts", "href" : "swf-dg-adv.html", "contents" : [ { "title" : "Versioning", "href" : "swf-dev-adv-versioning.html" }, { "title" : "Signals", "href" : "swf-dev-adv-signals.html" }, { "title" : "Child Workflows", "href" : "swf-dev-adv-child-workflows.html" }, { "title" : "Markers", "href" : "swf-dev-adv-markers.html" }, { "title" : "Tags", "href" : "swf-dev-adv-tags.html", "contents" : [ { "title" : "Manage Amazon SWF Tags", "href" : "manage-tags.html" }, { "title" : "Tagging Workflow Executions", "href" : "swf-dg-tagging.html" }, { "title" : "Control Access using IAM Tags", "href" : "swf-dg-tagging-iam.html" } ] }, { "title" : "Implementing Exclusive Choice", "href" : "swf-dg-exclusive-choice.html" }, { "title" : "Timers", "href" : "swf-dg-timers.html" }, { "title" : "Activity Task Cancellation", "href" : "swf-dg-task-cancellation.html" } ] } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data Protection", "href" : "data-protection.html", "contents" : [ { "title" : "Encryption", "href" : "security-encryption.html" } ] }, { "title" : "Identity and Access Management", "href" : "swf-dev-iam.html", "contents" : [ { "title" : "How Amazon Simple Workflow Service works with IAM", "href" : "security_iam_service-with-iam.html" }, { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" }, { "title" : "Basic Principles", "href" : "swf-dev-iam.basic.html" }, { "title" : "Amazon SWF IAM Policies", "href" : "swf-dev-iam.policies.html" }, { "title" : "API Summary", "href" : "swf-dev-iam.api.html" }, { "title" : "Tag-based Policies", "href" : "tag-based-policies.html" }, { "title" : "Amazon VPC endpoints", "href" : "swf-vpc-endpoints.html", "contents" : [ { "title" : "Endpoint Policies", "href" : "swf-vpc-iam.html" } ] }, { "title" : "Troubleshooting", "href" : "security_iam_troubleshoot.html" } ] }, { "title" : "Logging and Monitoring in Amazon Simple Workflow Service", "href" : "logging-monitoring.html", "contents" : [ { "title" : "Amazon SWF Metrics for CloudWatch", "href" : "cw-metrics.html" }, { "title" : "Viewing Amazon SWF Metrics", "href" : "cw-metrics-console.html" }, { "title" : "Logging Amazon SWF API Calls with CloudTrail", "href" : "ct-logging.html" }, { "title" : "EventBridge for Amazon SWF", "href" : "ev-events.html" }, { "title" : "Using AWS User Notifications with Amazon SWF", "href" : "using-user-notifications-swf.html" } ] }, { "title" : "Compliance Validation", "href" : "SWF-compliance.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html" }, { "title" : "Configuration and Vulnerability Analysis", "href" : "configuration-vulnerability.html" } ] }, { "title" : "Using the AWS CLI", "href" : "using-cli.html" }, { "title" : "Working with APIs", "href" : "swf-dg-using-swf-api.html", "contents" : [ { "title" : "Making HTTP Requests", "href" : "UsingJSON-swf.html", "contents" : [ { "title" : "Calculating the HMAC-SHA Signature", "href" : "HMACAuth-swf.html" } ] }, { "title" : "List of Amazon SWF Actions", "href" : "swf-api-by-category.html" }, { "title" : "Creating a Basic Workflow", "href" : "swf-dg-create-workflow.html" }, { "title" : "Registering a Domain", "href" : "swf-dg-register-domain-api.html" }, { "title" : "Setting Timeout Values", "href" : "setting-timeouts.html" }, { "title" : "Registering a Workflow Type", "href" : "swf-dg-register-workflow.html" }, { "title" : "Registering an Activity Type", "href" : "swf-dg-register-activity.html" }, { "title" : "Lambda Tasks", "href" : "lambda-task.html" }, { "title" : "Developing an Activity Worker", "href" : "swf-dg-develop-activity.html" }, { "title" : "Developing Deciders", "href" : "swf-dg-dev-deciders.html" }, { "title" : "Starting Workflow Executions", "href" : "swf-dg-start-workflow-exec.html" }, { "title" : "Setting Task Priority", "href" : "programming-priority.html" }, { "title" : "Handling Errors", "href" : "swf-dg-error-handling.html" } ] }, { "title" : "Quotas", "href" : "swf-dg-limits.html" }, { "title" : "Resources", "href" : "resources.html", "contents" : [ { "title" : "Timeout Types", "href" : "swf-timeout-types.html" }, { "title" : "Endpoints", "href" : "resources-endpoints.html" }, { "title" : "Additional Documentation", "href" : "resources-docs.html" }, { "title" : "Web Resources", "href" : "resources-web.html" } ] }, { "title" : "Ruby Flow Options", "href" : "RubyFlowOptions.html" }, { "title" : "Document History", "href" : "WhatsNew.html" }, { "title" : "AWS glossary", "href" : "glossary.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/amazonswf/latest/developerguide/",
+    "service": "amazonswf",
+    "toc": {
+        "contents": [
+            {
+                "title": "What is Amazon SWF?",
+                "href": "swf-welcome.html"
+            },
+            {
+                "title": "Introduction to Amazon SWF",
+                "href": "swf-dg-intro-to-swf.html"
+            },
+            {
+                "title": "Setting Up",
+                "href": "swf-dg-dev-amzn-swf.html"
+            },
+            {
+                "title": "Getting Started",
+                "href": "swf-sns-tutorial.html",
+                "contents": [
+                    {
+                        "title": "Part 1: Using Amazon SWF with the SDK for Ruby",
+                        "href": "swf-sns-tutorial-setup-swf.html"
+                    },
+                    {
+                        "title": "Part 2: Implementing the Workflow",
+                        "href": "swf-sns-tutorial-implementing-workflow.html"
+                    },
+                    {
+                        "title": "Part 3: Implementing the Activities",
+                        "href": "swf-sns-tutorial-implementing-activities.html"
+                    },
+                    {
+                        "title": "Part 4: Implementing the Activities Task Poller",
+                        "href": "swf-sns-tutorial-implementing-activities-poller.html"
+                    },
+                    {
+                        "title": "Running the Workflow",
+                        "href": "swf-sns-tutorial-running-the-workflow.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tutorials",
+                "href": "swf-dg-using-console.html",
+                "contents": [
+                    {
+                        "title": "Registering a Domain",
+                        "href": "swf-dg-register-domain-console.html"
+                    },
+                    {
+                        "title": "Registering a Workflow Type",
+                        "href": "dg-swf-register-workflow.html"
+                    },
+                    {
+                        "title": "Registering an Activity Type",
+                        "href": "dg-swf-register-activity.html"
+                    },
+                    {
+                        "title": "Starting a Workflow Execution",
+                        "href": "dg-swf-execution-start.html"
+                    },
+                    {
+                        "title": "Viewing Pending Tasks",
+                        "href": "swf-dg-console-tasklists.html"
+                    },
+                    {
+                        "title": "Managing Your Workflow Executions",
+                        "href": "swf-dg-console-manage-workflow-executions.html"
+                    },
+                    {
+                        "title": "Managing Amazon SWF Domains",
+                        "href": "swf-dg-manage-domains-console.html"
+                    }
+                ]
+            },
+            {
+                "title": "How Amazon SWF Works",
+                "href": "swf-dg-basic.html",
+                "contents": [
+                    {
+                        "title": "Workflows",
+                        "href": "swf-dev-about-workflows.html"
+                    },
+                    {
+                        "title": "Workflow History",
+                        "href": "swf-dev-about-workflow-history.html"
+                    },
+                    {
+                        "title": "Actors",
+                        "href": "swf-dev-actors.html"
+                    },
+                    {
+                        "title": "Tasks",
+                        "href": "swf-dev-tasks.html"
+                    },
+                    {
+                        "title": "Domains",
+                        "href": "swf-dev-domains.html"
+                    },
+                    {
+                        "title": "Object Identifiers",
+                        "href": "swf-dev-obj-ident.html"
+                    },
+                    {
+                        "title": "Task Lists",
+                        "href": "swf-dev-task-lists.html"
+                    },
+                    {
+                        "title": "Workflow Execution Closure",
+                        "href": "swf-dev-workflow-exec-closure.html"
+                    },
+                    {
+                        "title": "Life Cycle of an Amazon SWF Workflow Execution",
+                        "href": "swf-dev-workflow-exec-lifecycle.html"
+                    },
+                    {
+                        "title": "Polling for Tasks",
+                        "href": "swf-dev-comm-proto.html"
+                    },
+                    {
+                        "title": "Advanced Concepts",
+                        "href": "swf-dg-adv.html",
+                        "contents": [
+                            {
+                                "title": "Versioning",
+                                "href": "swf-dev-adv-versioning.html"
+                            },
+                            {
+                                "title": "Signals",
+                                "href": "swf-dev-adv-signals.html"
+                            },
+                            {
+                                "title": "Child Workflows",
+                                "href": "swf-dev-adv-child-workflows.html"
+                            },
+                            {
+                                "title": "Markers",
+                                "href": "swf-dev-adv-markers.html"
+                            },
+                            {
+                                "title": "Tags",
+                                "href": "swf-dev-adv-tags.html",
+                                "contents": [
+                                    {
+                                        "title": "Manage Amazon SWF Tags",
+                                        "href": "manage-tags.html"
+                                    },
+                                    {
+                                        "title": "Tagging Workflow Executions",
+                                        "href": "swf-dg-tagging.html"
+                                    },
+                                    {
+                                        "title": "Control Access using IAM Tags",
+                                        "href": "swf-dg-tagging-iam.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Implementing Exclusive Choice",
+                                "href": "swf-dg-exclusive-choice.html"
+                            },
+                            {
+                                "title": "Timers",
+                                "href": "swf-dg-timers.html"
+                            },
+                            {
+                                "title": "Activity Task Cancellation",
+                                "href": "swf-dg-task-cancellation.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data Protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Encryption",
+                                "href": "security-encryption.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Identity and Access Management",
+                        "href": "swf-dev-iam.html",
+                        "contents": [
+                            {
+                                "title": "How Amazon Simple Workflow Service works with IAM",
+                                "href": "security_iam_service-with-iam.html"
+                            },
+                            {
+                                "title": "Identity-based policy examples",
+                                "href": "security_iam_id-based-policy-examples.html"
+                            },
+                            {
+                                "title": "Basic Principles",
+                                "href": "swf-dev-iam.basic.html"
+                            },
+                            {
+                                "title": "Amazon SWF IAM Policies",
+                                "href": "swf-dev-iam.policies.html"
+                            },
+                            {
+                                "title": "API Summary",
+                                "href": "swf-dev-iam.api.html"
+                            },
+                            {
+                                "title": "Tag-based Policies",
+                                "href": "tag-based-policies.html"
+                            },
+                            {
+                                "title": "Amazon VPC endpoints",
+                                "href": "swf-vpc-endpoints.html",
+                                "contents": [
+                                    {
+                                        "title": "Endpoint Policies",
+                                        "href": "swf-vpc-iam.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Troubleshooting",
+                                "href": "security_iam_troubleshoot.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logging and Monitoring in Amazon Simple Workflow Service",
+                        "href": "logging-monitoring.html",
+                        "contents": [
+                            {
+                                "title": "Amazon SWF Metrics for CloudWatch",
+                                "href": "cw-metrics.html"
+                            },
+                            {
+                                "title": "Viewing Amazon SWF Metrics",
+                                "href": "cw-metrics-console.html"
+                            },
+                            {
+                                "title": "Logging Amazon SWF API Calls with CloudTrail",
+                                "href": "ct-logging.html"
+                            },
+                            {
+                                "title": "EventBridge for Amazon SWF",
+                                "href": "ev-events.html"
+                            },
+                            {
+                                "title": "Using AWS User Notifications with Amazon SWF",
+                                "href": "using-user-notifications-swf.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "SWF-compliance.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Configuration and Vulnerability Analysis",
+                        "href": "configuration-vulnerability.html"
+                    }
+                ]
+            },
+            {
+                "title": "Using the AWS CLI",
+                "href": "using-cli.html"
+            },
+            {
+                "title": "Working with APIs",
+                "href": "swf-dg-using-swf-api.html",
+                "contents": [
+                    {
+                        "title": "Making HTTP Requests",
+                        "href": "UsingJSON-swf.html",
+                        "contents": [
+                            {
+                                "title": "Calculating the HMAC-SHA Signature",
+                                "href": "HMACAuth-swf.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "List of Amazon SWF Actions",
+                        "href": "swf-api-by-category.html"
+                    },
+                    {
+                        "title": "Creating a Basic Workflow",
+                        "href": "swf-dg-create-workflow.html"
+                    },
+                    {
+                        "title": "Registering a Domain",
+                        "href": "swf-dg-register-domain-api.html"
+                    },
+                    {
+                        "title": "Setting Timeout Values",
+                        "href": "setting-timeouts.html"
+                    },
+                    {
+                        "title": "Registering a Workflow Type",
+                        "href": "swf-dg-register-workflow.html"
+                    },
+                    {
+                        "title": "Registering an Activity Type",
+                        "href": "swf-dg-register-activity.html"
+                    },
+                    {
+                        "title": "Lambda Tasks",
+                        "href": "lambda-task.html"
+                    },
+                    {
+                        "title": "Developing an Activity Worker",
+                        "href": "swf-dg-develop-activity.html"
+                    },
+                    {
+                        "title": "Developing Deciders",
+                        "href": "swf-dg-dev-deciders.html"
+                    },
+                    {
+                        "title": "Starting Workflow Executions",
+                        "href": "swf-dg-start-workflow-exec.html"
+                    },
+                    {
+                        "title": "Setting Task Priority",
+                        "href": "programming-priority.html"
+                    },
+                    {
+                        "title": "Handling Errors",
+                        "href": "swf-dg-error-handling.html"
+                    }
+                ]
+            },
+            {
+                "title": "Quotas",
+                "href": "swf-dg-limits.html"
+            },
+            {
+                "title": "Resources",
+                "href": "resources.html",
+                "contents": [
+                    {
+                        "title": "Timeout Types",
+                        "href": "swf-timeout-types.html"
+                    },
+                    {
+                        "title": "Endpoints",
+                        "href": "resources-endpoints.html"
+                    },
+                    {
+                        "title": "Additional Documentation",
+                        "href": "resources-docs.html"
+                    },
+                    {
+                        "title": "Web Resources",
+                        "href": "resources-web.html"
+                    }
+                ]
+            },
+            {
+                "title": "Ruby Flow Options",
+                "href": "RubyFlowOptions.html"
+            },
+            {
+                "title": "Document History",
+                "href": "WhatsNew.html"
+            },
+            {
+                "title": "AWS glossary",
+                "href": "glossary.html"
+            }
+        ]
+    }
+}

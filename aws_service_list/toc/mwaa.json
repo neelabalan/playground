@@ -1,1 +1,416 @@
-{ "contents" : [ { "title" : "What Is Amazon MWAA?", "href" : "what-is-mwaa.html" }, { "title" : "Quick start", "href" : "quick-start.html" }, { "title" : "Get started", "href" : "get-started.html", "contents" : [ { "title" : "Create a bucket", "href" : "mwaa-s3-bucket.html" }, { "title" : "Create the VPC network", "href" : "vpc-create.html" }, { "title" : "Create an environment", "href" : "create-environment.html" } ] }, { "title" : "Managing access", "href" : "manage-access.html", "contents" : [ { "title" : "Accessing an Amazon MWAA environment", "href" : "access-policies.html" }, { "title" : "Service-linked role", "href" : "mwaa-slr.html" }, { "title" : "Execution role", "href" : "mwaa-create-role.html" }, { "title" : "Cross-service confused deputy prevention", "href" : "cross-service-confused-deputy-prevention.html" }, { "title" : "Apache Airflow access modes", "href" : "configuring-networking.html" } ] }, { "title" : "Accessing the Apache Airflow UI", "href" : "access-airflow-ui.html", "contents" : [ { "title" : "Apache Airflow web login token", "href" : "call-mwaa-apis-web.html" }, { "title" : "Apache Airflow CLI token", "href" : "call-mwaa-apis-cli.html" }, { "title" : "Apache Airflow CLI command reference", "href" : "airflow-cli-command-reference.html" } ] }, { "title" : "Managing connections", "href" : "manage-connections.html", "contents" : [ { "title" : "Apache Airflow packages", "href" : "connections-packages.html" }, { "title" : "Connection types", "href" : "manage-connection-types.html" }, { "title" : "Configuring Secrets Manager", "href" : "connections-secrets-manager.html" } ] }, { "title" : "Managing environments", "href" : "using-mwaa.html", "contents" : [ { "title" : "Configuring the environment class", "href" : "environment-class.html" }, { "title" : "Configuring autoscaling", "href" : "mwaa-autoscaling.html" }, { "title" : "Using configuration options", "href" : "configuring-env-variables.html" }, { "title" : "Upgrading the version", "href" : "upgrading-environment.html" }, { "title" : "Using a startup script", "href" : "using-startup-script.html" } ] }, { "title" : "Working with DAGs", "href" : "working-dags.html", "contents" : [ { "title" : "Adding or updating DAGs", "href" : "configuring-dag-folder.html" }, { "title" : "Installing custom plugins", "href" : "configuring-dag-import-plugins.html" }, { "title" : "Installing Python dependencies", "href" : "working-dags-dependencies.html" }, { "title" : "Deleting files on Amazon S3", "href" : "working-dags-delete.html" } ] }, { "title" : "Networking", "href" : "networking.html", "contents" : [ { "title" : "About networking", "href" : "networking-about.html" }, { "title" : "Security in your VPC", "href" : "vpc-security.html" }, { "title" : "Managing access to VPC endpoints", "href" : "vpc-vpe-access.html" }, { "title" : "VPC service endpoints in private Amazon VPCs", "href" : "vpc-vpe-create-access.html" } ] }, { "title" : "Tutorials", "href" : "tutorials.html", "contents" : [ { "title" : "Tutorial: AWS Client VPN", "href" : "tutorials-private-network-vpn-client.html" }, { "title" : "Tutorial: Linux Bastion Host", "href" : "tutorials-private-network-bastion.html" }, { "title" : "Tutorial: Restricting users to a subset of DAGs", "href" : "limit-access-to-dags.html" } ] }, { "title" : "Code examples", "href" : "sample-code.html", "contents" : [ { "title" : "Import variables DAG", "href" : "samples-variables-import.html" }, { "title" : "Using the SSHOperator", "href" : "samples-ssh.html" }, { "title" : "Apache Airflow Snowflake connection in Secrets Manager", "href" : "samples-sm-snowflake.html" }, { "title" : "Using a DAG to write custom metrics", "href" : "samples-custom-metrics.html" }, { "title" : "Aurora PostgreSQL database cleanup", "href" : "samples-database-cleanup.html" }, { "title" : "Exporting environment metadata to Amazon S3", "href" : "samples-dag-run-info-to-csv.html" }, { "title" : "Using an Apache Airflow variable in Secrets Manager", "href" : "samples-secrets-manager-var.html" }, { "title" : "Using an Apache Airflow connection in Secrets Manager", "href" : "samples-secrets-manager.html" }, { "title" : "Custom plugin with Oracle", "href" : "samples-oracle.html" }, { "title" : "Custom plugin with environment variables", "href" : "samples-env-variables.html" }, { "title" : "Changing a DAG's timezone", "href" : "samples-plugins-timezone.html" }, { "title" : "Refreshing an AWS CodeArtifact token at runtime", "href" : "samples-code-artifact.html" }, { "title" : "Custom plugin with Apache Hive and Hadoop", "href" : "samples-hive.html" }, { "title" : "Custom plugin to patch PythonVirtualenvOperator", "href" : "samples-virtualenv.html" }, { "title" : "Invoking DAGs with Lambda", "href" : "samples-lambda.html" }, { "title" : "Invoking DAGs in different environments", "href" : "samples-invoke-dag.html" }, { "title" : "Amazon RDS server", "href" : "samples-sql-server.html" }, { "title" : "Amazon EMR integration", "href" : "samples-emr.html" }, { "title" : "Amazon EKS (eksctl)", "href" : "mwaa-eks-example.html" }, { "title" : "Using the ECSOperator", "href" : "samples-ecs-operator.html" }, { "title" : "Using dbt with Amazon MWAA", "href" : "samples-dbt.html" } ] }, { "title" : "Best practices", "href" : "best-practices.html", "contents" : [ { "title" : "Performance tuning for Apache Airflow", "href" : "best-practices-tuning.html" }, { "title" : "Managing Python dependencies", "href" : "best-practices-dependencies.html" } ] }, { "title" : "Monitoring and metrics", "href" : "cw-metrics.html", "contents" : [ { "title" : "Overview", "href" : "monitoring-overview.html" }, { "title" : "Viewing audit logs", "href" : "monitoring-cloudtrail.html" }, { "title" : "Viewing Airflow logs", "href" : "monitoring-airflow.html" }, { "title" : "Monitoring dashboards and alarms", "href" : "monitoring-dashboard.html" }, { "title" : "Apache Airflow v2 environment metrics", "href" : "access-metrics-cw-202.html" }, { "title" : "Apache Airflow v1 environment metrics", "href" : "access-metrics-cw-110.html" }, { "title" : "Container, queue, and database metrics", "href" : "accessing-metrics-cw-container-queue-db.html" } ] }, { "title" : "Security", "href" : "security.html", "contents" : [ { "title" : "Data Protection", "href" : "data-protection.html", "contents" : [ { "title" : "Encryption", "href" : "encryption.html" }, { "title" : "Using customer managed keys", "href" : "custom-keys-certs.html" } ] }, { "title" : "AWS Identity and Access Management", "href" : "security-iam.html", "contents" : [ { "title" : "Troubleshooting Amazon Managed Workflows for Apache Airflow identity and access", "href" : "security_iam_troubleshoot.html" }, { "title" : "How Amazon MWAA works with IAM", "href" : "security_iam_service-with-iam.html", "contents" : [ { "title" : "Identity-based policy examples", "href" : "security_iam_id-based-policy-examples.html" } ] } ] }, { "title" : "Compliance Validation", "href" : "compliance-validation.html" }, { "title" : "Resilience", "href" : "disaster-recovery-resiliency.html" }, { "title" : "Infrastructure Security", "href" : "infrastructure-security.html" }, { "title" : "Configuration and Vulnerability Analysis", "href" : "configuration-vulnerability-analysis.html" }, { "title" : "Best practices", "href" : "security-best-practices.html" } ] }, { "title" : "Versions", "href" : "airflow-versions.html" }, { "title" : "Endpoints and quotas", "href" : "mwaa-quotas.html" }, { "title" : "FAQs", "href" : "mwaa-faqs.html" }, { "title" : "Troubleshooting", "href" : "troubleshooting.html", "contents" : [ { "title" : "Apache Airflow v2", "href" : "t-apache-airflow-202.html" }, { "title" : "Apache Airflow v1", "href" : "t-apache-airflow-11012.html" }, { "title" : "Amazon MWAA Create/Update", "href" : "t-create-update-environment.html" }, { "title" : "CloudWatch Logs and CloudTrail", "href" : "t-cloudwatch-cloudtrail-logs.html" } ] }, { "title" : "Document History", "href" : "doc-history.html" } ] }
+{
+    "base_url": "https://docs.aws.amazon.com/mwaa/latest/userguide/",
+    "service": "mwaa",
+    "toc": {
+        "contents": [
+            {
+                "title": "What Is Amazon MWAA?",
+                "href": "what-is-mwaa.html"
+            },
+            {
+                "title": "Quick start",
+                "href": "quick-start.html"
+            },
+            {
+                "title": "Get started",
+                "href": "get-started.html",
+                "contents": [
+                    {
+                        "title": "Create a bucket",
+                        "href": "mwaa-s3-bucket.html"
+                    },
+                    {
+                        "title": "Create the VPC network",
+                        "href": "vpc-create.html"
+                    },
+                    {
+                        "title": "Create an environment",
+                        "href": "create-environment.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing access",
+                "href": "manage-access.html",
+                "contents": [
+                    {
+                        "title": "Accessing an Amazon MWAA environment",
+                        "href": "access-policies.html"
+                    },
+                    {
+                        "title": "Service-linked role",
+                        "href": "mwaa-slr.html"
+                    },
+                    {
+                        "title": "Execution role",
+                        "href": "mwaa-create-role.html"
+                    },
+                    {
+                        "title": "Cross-service confused deputy prevention",
+                        "href": "cross-service-confused-deputy-prevention.html"
+                    },
+                    {
+                        "title": "Apache Airflow access modes",
+                        "href": "configuring-networking.html"
+                    }
+                ]
+            },
+            {
+                "title": "Accessing the Apache Airflow UI",
+                "href": "access-airflow-ui.html",
+                "contents": [
+                    {
+                        "title": "Apache Airflow web login token",
+                        "href": "call-mwaa-apis-web.html"
+                    },
+                    {
+                        "title": "Apache Airflow CLI token",
+                        "href": "call-mwaa-apis-cli.html"
+                    },
+                    {
+                        "title": "Apache Airflow CLI command reference",
+                        "href": "airflow-cli-command-reference.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing connections",
+                "href": "manage-connections.html",
+                "contents": [
+                    {
+                        "title": "Apache Airflow packages",
+                        "href": "connections-packages.html"
+                    },
+                    {
+                        "title": "Connection types",
+                        "href": "manage-connection-types.html"
+                    },
+                    {
+                        "title": "Configuring Secrets Manager",
+                        "href": "connections-secrets-manager.html"
+                    }
+                ]
+            },
+            {
+                "title": "Managing environments",
+                "href": "using-mwaa.html",
+                "contents": [
+                    {
+                        "title": "Configuring the environment class",
+                        "href": "environment-class.html"
+                    },
+                    {
+                        "title": "Configuring autoscaling",
+                        "href": "mwaa-autoscaling.html"
+                    },
+                    {
+                        "title": "Using configuration options",
+                        "href": "configuring-env-variables.html"
+                    },
+                    {
+                        "title": "Upgrading the version",
+                        "href": "upgrading-environment.html"
+                    },
+                    {
+                        "title": "Using a startup script",
+                        "href": "using-startup-script.html"
+                    }
+                ]
+            },
+            {
+                "title": "Working with DAGs",
+                "href": "working-dags.html",
+                "contents": [
+                    {
+                        "title": "Adding or updating DAGs",
+                        "href": "configuring-dag-folder.html"
+                    },
+                    {
+                        "title": "Installing custom plugins",
+                        "href": "configuring-dag-import-plugins.html"
+                    },
+                    {
+                        "title": "Installing Python dependencies",
+                        "href": "working-dags-dependencies.html"
+                    },
+                    {
+                        "title": "Deleting files on Amazon S3",
+                        "href": "working-dags-delete.html"
+                    }
+                ]
+            },
+            {
+                "title": "Networking",
+                "href": "networking.html",
+                "contents": [
+                    {
+                        "title": "About networking",
+                        "href": "networking-about.html"
+                    },
+                    {
+                        "title": "Security in your VPC",
+                        "href": "vpc-security.html"
+                    },
+                    {
+                        "title": "Managing access to VPC endpoints",
+                        "href": "vpc-vpe-access.html"
+                    },
+                    {
+                        "title": "VPC service endpoints in private Amazon VPCs",
+                        "href": "vpc-vpe-create-access.html"
+                    }
+                ]
+            },
+            {
+                "title": "Tutorials",
+                "href": "tutorials.html",
+                "contents": [
+                    {
+                        "title": "Tutorial: AWS Client VPN",
+                        "href": "tutorials-private-network-vpn-client.html"
+                    },
+                    {
+                        "title": "Tutorial: Linux Bastion Host",
+                        "href": "tutorials-private-network-bastion.html"
+                    },
+                    {
+                        "title": "Tutorial: Restricting users to a subset of DAGs",
+                        "href": "limit-access-to-dags.html"
+                    }
+                ]
+            },
+            {
+                "title": "Code examples",
+                "href": "sample-code.html",
+                "contents": [
+                    {
+                        "title": "Import variables DAG",
+                        "href": "samples-variables-import.html"
+                    },
+                    {
+                        "title": "Using the SSHOperator",
+                        "href": "samples-ssh.html"
+                    },
+                    {
+                        "title": "Apache Airflow Snowflake connection in Secrets Manager",
+                        "href": "samples-sm-snowflake.html"
+                    },
+                    {
+                        "title": "Using a DAG to write custom metrics",
+                        "href": "samples-custom-metrics.html"
+                    },
+                    {
+                        "title": "Aurora PostgreSQL database cleanup",
+                        "href": "samples-database-cleanup.html"
+                    },
+                    {
+                        "title": "Exporting environment metadata to Amazon S3",
+                        "href": "samples-dag-run-info-to-csv.html"
+                    },
+                    {
+                        "title": "Using an Apache Airflow variable in Secrets Manager",
+                        "href": "samples-secrets-manager-var.html"
+                    },
+                    {
+                        "title": "Using an Apache Airflow connection in Secrets Manager",
+                        "href": "samples-secrets-manager.html"
+                    },
+                    {
+                        "title": "Custom plugin with Oracle",
+                        "href": "samples-oracle.html"
+                    },
+                    {
+                        "title": "Custom plugin with environment variables",
+                        "href": "samples-env-variables.html"
+                    },
+                    {
+                        "title": "Changing a DAG's timezone",
+                        "href": "samples-plugins-timezone.html"
+                    },
+                    {
+                        "title": "Refreshing an AWS CodeArtifact token at runtime",
+                        "href": "samples-code-artifact.html"
+                    },
+                    {
+                        "title": "Custom plugin with Apache Hive and Hadoop",
+                        "href": "samples-hive.html"
+                    },
+                    {
+                        "title": "Custom plugin to patch PythonVirtualenvOperator",
+                        "href": "samples-virtualenv.html"
+                    },
+                    {
+                        "title": "Invoking DAGs with Lambda",
+                        "href": "samples-lambda.html"
+                    },
+                    {
+                        "title": "Invoking DAGs in different environments",
+                        "href": "samples-invoke-dag.html"
+                    },
+                    {
+                        "title": "Amazon RDS server",
+                        "href": "samples-sql-server.html"
+                    },
+                    {
+                        "title": "Amazon EMR integration",
+                        "href": "samples-emr.html"
+                    },
+                    {
+                        "title": "Amazon EKS (eksctl)",
+                        "href": "mwaa-eks-example.html"
+                    },
+                    {
+                        "title": "Using the ECSOperator",
+                        "href": "samples-ecs-operator.html"
+                    },
+                    {
+                        "title": "Using dbt with Amazon MWAA",
+                        "href": "samples-dbt.html"
+                    }
+                ]
+            },
+            {
+                "title": "Best practices",
+                "href": "best-practices.html",
+                "contents": [
+                    {
+                        "title": "Performance tuning for Apache Airflow",
+                        "href": "best-practices-tuning.html"
+                    },
+                    {
+                        "title": "Managing Python dependencies",
+                        "href": "best-practices-dependencies.html"
+                    }
+                ]
+            },
+            {
+                "title": "Monitoring and metrics",
+                "href": "cw-metrics.html",
+                "contents": [
+                    {
+                        "title": "Overview",
+                        "href": "monitoring-overview.html"
+                    },
+                    {
+                        "title": "Viewing audit logs",
+                        "href": "monitoring-cloudtrail.html"
+                    },
+                    {
+                        "title": "Viewing Airflow logs",
+                        "href": "monitoring-airflow.html"
+                    },
+                    {
+                        "title": "Monitoring dashboards and alarms",
+                        "href": "monitoring-dashboard.html"
+                    },
+                    {
+                        "title": "Apache Airflow v2 environment metrics",
+                        "href": "access-metrics-cw-202.html"
+                    },
+                    {
+                        "title": "Container, queue, and database metrics",
+                        "href": "accessing-metrics-cw-container-queue-db.html"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "href": "security.html",
+                "contents": [
+                    {
+                        "title": "Data Protection",
+                        "href": "data-protection.html",
+                        "contents": [
+                            {
+                                "title": "Encryption",
+                                "href": "encryption.html"
+                            },
+                            {
+                                "title": "Using customer managed keys",
+                                "href": "custom-keys-certs.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "AWS Identity and Access Management",
+                        "href": "security-iam.html",
+                        "contents": [
+                            {
+                                "title": "Troubleshooting Amazon Managed Workflows for Apache Airflow identity and access",
+                                "href": "security_iam_troubleshoot.html"
+                            },
+                            {
+                                "title": "How Amazon MWAA works with IAM",
+                                "href": "security_iam_service-with-iam.html",
+                                "contents": [
+                                    {
+                                        "title": "Identity-based policy examples",
+                                        "href": "security_iam_id-based-policy-examples.html"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Compliance Validation",
+                        "href": "compliance-validation.html"
+                    },
+                    {
+                        "title": "Resilience",
+                        "href": "disaster-recovery-resiliency.html"
+                    },
+                    {
+                        "title": "Infrastructure Security",
+                        "href": "infrastructure-security.html"
+                    },
+                    {
+                        "title": "Configuration and Vulnerability Analysis",
+                        "href": "configuration-vulnerability-analysis.html"
+                    },
+                    {
+                        "title": "Best practices",
+                        "href": "security-best-practices.html"
+                    }
+                ]
+            },
+            {
+                "title": "Versions",
+                "href": "airflow-versions.html"
+            },
+            {
+                "title": "Endpoints and quotas",
+                "href": "mwaa-quotas.html"
+            },
+            {
+                "title": "FAQs",
+                "href": "mwaa-faqs.html"
+            },
+            {
+                "title": "Troubleshooting",
+                "href": "troubleshooting.html",
+                "contents": [
+                    {
+                        "title": "Apache Airflow v2",
+                        "href": "t-apache-airflow-202.html"
+                    },
+                    {
+                        "title": "Apache Airflow v1",
+                        "href": "t-apache-airflow-11012.html"
+                    },
+                    {
+                        "title": "Amazon MWAA Create/Update",
+                        "href": "t-create-update-environment.html"
+                    },
+                    {
+                        "title": "CloudWatch Logs and CloudTrail",
+                        "href": "t-cloudwatch-cloudtrail-logs.html"
+                    }
+                ]
+            },
+            {
+                "title": "Document History",
+                "href": "doc-history.html"
+            }
+        ]
+    }
+}
