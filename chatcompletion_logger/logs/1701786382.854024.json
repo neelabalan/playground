@@ -1,0 +1,41 @@
+{
+    "status_code": "200",
+    "url": "https://api.openai.com/v1/chat/completions",
+    "start_time": 1701786367.088358,
+    "end_time": 1701786382.854024,
+    "latency_ms": 15765.666007995605,
+    "request_body": {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Explain the process of photosynthesis in plants."
+            }
+        ],
+        "model": "gpt-4"
+    },
+    "response_body": {
+        "id": "chatcmpl-8SQf94RzZ4G64yzIPEF7EOM3e5zyJ",
+        "object": "chat.completion",
+        "created": 1701786367,
+        "model": "gpt-4-0613",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Photosynthesis is the process by which plants, some bacteria, and some protists convert light energy, usually from the sun, into chemical energy in the form of glucose (sugar). The process primarily involves the green pigment chlorophyll and generates oxygen as a byproduct.\n\nPhotosynthesis takes place within the chloroplasts in the plant cells, specifically using their thylakoid membrane. The overall process can be represented by the following chemical equation:\n\n6CO2 + 6H2O + light energy \u2192 C6H12O6 (glucose) + 6O2\n\nThis process is divided into two distinct parts:\n\n1) Light-Dependent Reactions: These reactions occur in the thylakoid membranes of the chloroplasts where chlorophyll and other photosynthetic pigments absorb light energy and convert it into chemical energy (ATP and NADPH). Water molecules are broken down, releasing oxygen gas and transferring electrons.\n\n2) Light-Independent Reactions (Calvin Cycle): These reactions occur in the stroma of the chloroplasts, where the ATP and NADPH generated in the light-dependent reactions combine with carbon dioxide to produce glucose.\n\nHence, the process of photosynthesis helps in the conversion of light energy into chemical energy, which is stored in the form of sugar and other organic molecules, and in the production of oxygen. This process is vital for life on earth since it provides all the organic compounds and most of the energy necessary for life."
+                },
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 17,
+            "completion_tokens": 302,
+            "total_tokens": 319
+        },
+        "system_fingerprint": null
+    },
+    "prompt_token_cost": 0.00051,
+    "completion_token_cost": 0.018119999999999997,
+    "total_token_cost": 0.018629999999999997
+}

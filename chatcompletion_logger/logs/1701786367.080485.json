@@ -1,0 +1,41 @@
+{
+    "status_code": "200",
+    "url": "https://api.openai.com/v1/chat/completions",
+    "start_time": 1701786365.9668229,
+    "end_time": 1701786367.080485,
+    "latency_ms": 1113.6622428894043,
+    "request_body": {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What is the capital of the United States?"
+            }
+        ],
+        "model": "gpt-4"
+    },
+    "response_body": {
+        "id": "chatcmpl-8SQf85ZDiTuWCIh2venpkweSHtR8g",
+        "object": "chat.completion",
+        "created": 1701786366,
+        "model": "gpt-4-0613",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "The capital of the United States is Washington D.C."
+                },
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 16,
+            "completion_tokens": 11,
+            "total_tokens": 27
+        },
+        "system_fingerprint": null
+    },
+    "prompt_token_cost": 0.00048,
+    "completion_token_cost": 0.0006599999999999999,
+    "total_token_cost": 0.00114
+}

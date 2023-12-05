@@ -1,0 +1,41 @@
+{
+    "status_code": "200",
+    "url": "https://api.openai.com/v1/chat/completions",
+    "start_time": 1701786364.3310158,
+    "end_time": 1701786365.956084,
+    "latency_ms": 1625.068187713623,
+    "request_body": {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Who is the creator of Doom?"
+            }
+        ],
+        "model": "gpt-4"
+    },
+    "response_body": {
+        "id": "chatcmpl-8SQf6MMMGrDOrRH1kM613nLrxeS9c",
+        "object": "chat.completion",
+        "created": 1701786364,
+        "model": "gpt-4-0613",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Doom was created by a team at id Software, led by John Carmack and John Romero."
+                },
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 14,
+            "completion_tokens": 20,
+            "total_tokens": 34
+        },
+        "system_fingerprint": null
+    },
+    "prompt_token_cost": 0.00042,
+    "completion_token_cost": 0.0012,
+    "total_token_cost": 0.00162
+}

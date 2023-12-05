@@ -1,0 +1,41 @@
+{
+    "status_code": "200",
+    "url": "https://api.openai.com/v1/chat/completions",
+    "start_time": 1701786382.864574,
+    "end_time": 1701786392.07059,
+    "latency_ms": 9206.016063690186,
+    "request_body": {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What is the significance of the Turing Test in Artificial Intelligence?"
+            }
+        ],
+        "model": "gpt-4"
+    },
+    "response_body": {
+        "id": "chatcmpl-8SQfP3wSISatmgGj1J5jPUqMvNSVp",
+        "object": "chat.completion",
+        "created": 1701786383,
+        "model": "gpt-4-0613",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "The Turing Test, proposed by British mathematician and computer scientist Alan Turing, plays a significant role in artificial intelligence (AI). It is historically regarded as the benchmark for determining if a machine can demonstrate human-like intelligence. It postulates that if a machine can engage in a conversation with a human via text and the human cannot reliably distinguish between the machine and another human, then the machine is said to have passed the Turing Test and displayed intelligent behaviour. This test played a pivotal role in prompting scientists and researchers to explore the domain of AI and machine learning. It served as a foundational concept in discussions about AI capabilities, sparking questions about machines having consciousness, human-level intelligence, and the ethical implications of developing such advanced AIs."
+                },
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 19,
+            "completion_tokens": 144,
+            "total_tokens": 163
+        },
+        "system_fingerprint": null
+    },
+    "prompt_token_cost": 0.00057,
+    "completion_token_cost": 0.008639999999999998,
+    "total_token_cost": 0.009209999999999998
+}

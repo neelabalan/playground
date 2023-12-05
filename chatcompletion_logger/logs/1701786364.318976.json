@@ -1,0 +1,41 @@
+{
+    "status_code": "200",
+    "url": "https://api.openai.com/v1/chat/completions",
+    "start_time": 1701786353.340051,
+    "end_time": 1701786364.318976,
+    "latency_ms": 10978.924989700317,
+    "request_body": {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Write a python program to sum the list of numbers"
+            }
+        ],
+        "model": "gpt-4"
+    },
+    "response_body": {
+        "id": "chatcmpl-8SQeyEfKa5f3kWOJIUYiVcSVztATU",
+        "object": "chat.completion",
+        "created": 1701786356,
+        "model": "gpt-4-0613",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Sure, here is a simple Python program to sum the numbers in a list:\n\n```python\ndef sum_numbers(numbers):\n    return sum(numbers)\n\n# Testing the function\nnumbers = [1, 2, 3, 4, 5]\nprint(sum_numbers(numbers))\n```\n\nIn the given code, we have defined a function `sum_numbers` which takes a list of numbers as input and returns their sum. The built-in `sum` function in Python is used to calculate the sum of numbers in the list. We then test our function with a list of numbers [1, 2, 3, 4, 5] and print the result."
+                },
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 17,
+            "completion_tokens": 136,
+            "total_tokens": 153
+        },
+        "system_fingerprint": null
+    },
+    "prompt_token_cost": 0.00051,
+    "completion_token_cost": 0.00816,
+    "total_token_cost": 0.00867
+}
