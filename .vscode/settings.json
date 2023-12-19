@@ -1,0 +1,15 @@
+{
+    "ruff.format.args": [
+        "--config=.ruff.toml"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.sortImports": true
+    },
+    "ruff.organizeImports": true,
+    "ruff.importStrategy": "useBundled",
+    "editor.formatOnSave": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    }
+}

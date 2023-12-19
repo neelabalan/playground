@@ -1,0 +1,252 @@
+{
+    "_type": "Module",
+    "body": [
+        {
+            "_type": "FunctionDef",
+            "name": "_split_tokens",
+            "args": {
+                "_type": "arguments",
+                "posonlyargs": [],
+                "args": [
+                    {
+                        "_type": "arg",
+                        "arg": "tokens",
+                        "annotation": null,
+                        "type_comment": null
+                    },
+                    {
+                        "_type": "arg",
+                        "arg": "token",
+                        "annotation": null,
+                        "type_comment": null
+                    },
+                    {
+                        "_type": "arg",
+                        "arg": "value",
+                        "annotation": null,
+                        "type_comment": null
+                    }
+                ],
+                "vararg": null,
+                "kwonlyargs": [],
+                "kw_defaults": [],
+                "kwarg": null,
+                "defaults": []
+            },
+            "body": [
+                {
+                    "_type": "Expr",
+                    "value": {
+                        "_type": "Constant",
+                        "value": "Split a list of tokens on the specified token pair (token, value),\n    where *token* is the token type (i.e. its code) and *value* its actual\n    value in the code.\n    ",
+                        "kind": null
+                    }
+                },
+                {
+                    "_type": "Assign",
+                    "targets": [
+                        {
+                            "_type": "Name",
+                            "id": "res",
+                            "ctx": {
+                                "_type": "Store"
+                            }
+                        }
+                    ],
+                    "value": {
+                        "_type": "List",
+                        "elts": [
+                            {
+                                "_type": "List",
+                                "elts": [],
+                                "ctx": {
+                                    "_type": "Load"
+                                }
+                            }
+                        ],
+                        "ctx": {
+                            "_type": "Load"
+                        }
+                    },
+                    "type_comment": null
+                },
+                {
+                    "_type": "For",
+                    "target": {
+                        "_type": "Name",
+                        "id": "token_values",
+                        "ctx": {
+                            "_type": "Store"
+                        }
+                    },
+                    "iter": {
+                        "_type": "Name",
+                        "id": "tokens",
+                        "ctx": {
+                            "_type": "Load"
+                        }
+                    },
+                    "body": [
+                        {
+                            "_type": "If",
+                            "test": {
+                                "_type": "Compare",
+                                "left": {
+                                    "_type": "Tuple",
+                                    "elts": [
+                                        {
+                                            "_type": "Name",
+                                            "id": "token",
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }
+                                        },
+                                        {
+                                            "_type": "Name",
+                                            "id": "value",
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }
+                                        }
+                                    ],
+                                    "ctx": {
+                                        "_type": "Load"
+                                    }
+                                },
+                                "ops": [
+                                    {
+                                        "_type": "Eq"
+                                    }
+                                ],
+                                "comparators": [
+                                    {
+                                        "_type": "Subscript",
+                                        "value": {
+                                            "_type": "Name",
+                                            "id": "token_values",
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }
+                                        },
+                                        "slice": {
+                                            "_type": "Slice",
+                                            "lower": null,
+                                            "upper": {
+                                                "_type": "Constant",
+                                                "value": 2,
+                                                "kind": null
+                                            },
+                                            "step": null
+                                        },
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }
+                                    }
+                                ]
+                            },
+                            "body": [
+                                {
+                                    "_type": "Expr",
+                                    "value": {
+                                        "_type": "Call",
+                                        "func": {
+                                            "_type": "Attribute",
+                                            "value": {
+                                                "_type": "Name",
+                                                "id": "res",
+                                                "ctx": {
+                                                    "_type": "Load"
+                                                }
+                                            },
+                                            "attr": "append",
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }
+                                        },
+                                        "args": [
+                                            {
+                                                "_type": "List",
+                                                "elts": [],
+                                                "ctx": {
+                                                    "_type": "Load"
+                                                }
+                                            }
+                                        ],
+                                        "keywords": []
+                                    }
+                                },
+                                {
+                                    "_type": "Continue"
+                                }
+                            ],
+                            "orelse": []
+                        },
+                        {
+                            "_type": "Expr",
+                            "value": {
+                                "_type": "Call",
+                                "func": {
+                                    "_type": "Attribute",
+                                    "value": {
+                                        "_type": "Subscript",
+                                        "value": {
+                                            "_type": "Name",
+                                            "id": "res",
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }
+                                        },
+                                        "slice": {
+                                            "_type": "UnaryOp",
+                                            "op": {
+                                                "_type": "USub"
+                                            },
+                                            "operand": {
+                                                "_type": "Constant",
+                                                "value": 1,
+                                                "kind": null
+                                            }
+                                        },
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }
+                                    },
+                                    "attr": "append",
+                                    "ctx": {
+                                        "_type": "Load"
+                                    }
+                                },
+                                "args": [
+                                    {
+                                        "_type": "Name",
+                                        "id": "token_values",
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }
+                                    }
+                                ],
+                                "keywords": []
+                            }
+                        }
+                    ],
+                    "orelse": [],
+                    "type_comment": null
+                },
+                {
+                    "_type": "Return",
+                    "value": {
+                        "_type": "Name",
+                        "id": "res",
+                        "ctx": {
+                            "_type": "Load"
+                        }
+                    }
+                }
+            ],
+            "decorator_list": [],
+            "returns": null,
+            "type_comment": null
+        }
+    ],
+    "type_ignores": []
+}
