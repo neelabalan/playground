@@ -1,6 +1,12 @@
 import ast
 
 class TypingToBuiltinTransformer(ast.NodeTransformer):
+    type_conversion_map = {
+        'List': 'list',
+        'Dict': 'dict',
+        'Tuple': 'tuple',
+        'Type': 'type'
+    }
     def visit_ImportFrom(self, node):
         if node.module == 'typing':
             # Filter out specific imports from 'typing'
@@ -13,12 +19,7 @@ class TypingToBuiltinTransformer(ast.NodeTransformer):
     def visit_Subscript(self, node):
         self.generic_visit(node)
         if isinstance(node.value, ast.Name):
-            if node.value.id == 'List':
-                node.value.id = 'list'
-            elif node.value.id == 'Dict':
-                node.value.id = 'dict'
-            elif node.value.id == 'Tuple':
-                node.value.id = 'tuple'
+            node.value.id = self.type_conversion_map.get(node.value.id, node.value.id)
         return node
 
 def convert_typing_to_builtin(source_code):
