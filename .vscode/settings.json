@@ -3,7 +3,7 @@
         "--config=.ruff.toml"
     ],
     "editor.codeActionsOnSave": {
-        "source.sortImports": true
+        "source.sortImports": "explicit"
     },
     "ruff.organizeImports": true,
     "ruff.importStrategy": "useBundled",
