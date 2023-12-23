@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from __future__ import annotations
 
 import argparse
@@ -125,7 +127,7 @@ def query_bookmark(query: str | None = None, n: int = 50):
     _tempfile.close()
 
 
-def parse_arguments():
+def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Query bookmarks.')
     parser.add_argument('--query', type=str, help='The query to search for.')
     parser.add_argument('--n', type=int, help='n_results from similarity search')
