@@ -30,8 +30,8 @@ Output
 """
 import itertools
 
-a = map(int, input().strip().split(" "))
-b = map(int, input().strip().split(" "))
+a = map(int, input().strip().split(' '))
+b = map(int, input().strip().split(' '))
 
 for prd in itertools.product(a, b):
-    print(prd, end=" ")
+    print(prd, end=' ')

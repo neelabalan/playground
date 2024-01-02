@@ -7,10 +7,9 @@
 """
 from hypothesis import given
 from hypothesis import strategies as st
-
 from source_file import add
-from source_file import multiply
 from source_file import divide
+from source_file import multiply
 
 
 @given(

@@ -1,14 +1,15 @@
+import datetime
 import sqlite3
 import time
-import datetime
 from time import sleep
+
 import serial
 
-conn = sqlite3.connect("gppdb.db")
+conn = sqlite3.connect('gppdb.db')
 c = conn.cursor()
 
 serialcomm = serial.Serial(
-    port="/dev/ttyUSB0",
+    port='/dev/ttyUSB0',
     baudrate=115200,
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
@@ -22,7 +23,7 @@ serialcomm.isOpen()
 
 def create_table():
     c.execute(
-        "CREATE TABLE IF NOT EXISTS gppdb( \
+        'CREATE TABLE IF NOT EXISTS gppdb( \
             chan1volt REAL,                      \
             chan1curr REAL,                      \
             chan1powr REAL,                      \
@@ -36,7 +37,7 @@ def create_table():
             chan4curr REAL,                      \
             chan4powr REAL,                      \
             timestamp TEXT                       \
-         )"
+         )'
     )
     # c.close()
 
@@ -49,23 +50,23 @@ def db_entry():
     # 1 - current
     # 2 - power
 
-    parameters[1][0] = get_serial(":MEASure1:VOLTage?")
-    parameters[1][1] = get_serial(":MEASure1:CURRent?")
-    parameters[1][2] = get_serial(":MEASure1:POWEr?")
-    parameters[2][0] = get_serial(":MEASure2:VOLTage?")
-    parameters[2][1] = get_serial(":MEASure2:CURRent?")
-    parameters[2][2] = get_serial(":MEASure2:POWEr?")
-    parameters[3][0] = get_serial(":MEASure3:VOLTage?")
-    parameters[3][1] = get_serial(":MEASure3:CURRent?")
-    parameters[3][2] = get_serial(":MEASure3:POWEr?")
-    parameters[4][0] = get_serial(":MEASure4:VOLTage?")
-    parameters[4][1] = get_serial(":MEASure4:CURRent?")
-    parameters[4][2] = get_serial(":MEASure4:POWEr?")
+    parameters[1][0] = get_serial(':MEASure1:VOLTage?')
+    parameters[1][1] = get_serial(':MEASure1:CURRent?')
+    parameters[1][2] = get_serial(':MEASure1:POWEr?')
+    parameters[2][0] = get_serial(':MEASure2:VOLTage?')
+    parameters[2][1] = get_serial(':MEASure2:CURRent?')
+    parameters[2][2] = get_serial(':MEASure2:POWEr?')
+    parameters[3][0] = get_serial(':MEASure3:VOLTage?')
+    parameters[3][1] = get_serial(':MEASure3:CURRent?')
+    parameters[3][2] = get_serial(':MEASure3:POWEr?')
+    parameters[4][0] = get_serial(':MEASure4:VOLTage?')
+    parameters[4][1] = get_serial(':MEASure4:CURRent?')
+    parameters[4][2] = get_serial(':MEASure4:POWEr?')
 
     gpp_params = parameters
-    date = str(datetime.datetime.fromtimestamp(unix).strftime("%d-%m-%Y_%X"))
+    date = str(datetime.datetime.fromtimestamp(unix).strftime('%d-%m-%Y_%X'))
     c.execute(
-        "INSERT INTO gppdb (  chan1volt,  \
+        'INSERT INTO gppdb (  chan1volt,  \
                                     chan1curr,  \
                                     chan1powr,  \
                                     chan2volt,  \
@@ -81,7 +82,7 @@ def db_entry():
                                                             ?, ?, ?,    \
                                                             ?, ?, ?,    \
                                                             ?, ?, ?,    \
-                                                                  ? )",
+                                                                  ? )',
         (
             gpp_params[1][0],
             gpp_params[1][1],
@@ -106,8 +107,8 @@ def get_serial(command):
     # input command and expect the output in return
     sleep(0.5)
     serialcomm.reset_input_buffer()
-    out = ""
-    command = command + "\r\n"
+    out = ''
+    command = command + '\r\n'
     serialcomm.write(command.encode())
     sleep(1)
     while serialcomm.inWaiting() > 0:
@@ -117,6 +118,6 @@ def get_serial(command):
     return out
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     create_table()
     db_entry()

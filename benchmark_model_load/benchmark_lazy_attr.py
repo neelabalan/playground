@@ -1,7 +1,10 @@
 import argparse
 import timeit
 from functools import lru_cache
-from typing import Any, Dict, List, Tuple
+from typing import Any
+from typing import Dict
+from typing import List
+from typing import Tuple
 
 import pandas as pd
 import xgboost as xgb
@@ -26,9 +29,7 @@ class ModelWithoutCache:
 
     def train_model(self) -> xgb.XGBClassifier:
         X, y = self.fetch_data()
-        X_train, _, y_train, _ = train_test_split(
-            X, y, test_size=0.2, random_state=123
-        )
+        X_train, _, y_train, _ = train_test_split(X, y, test_size=0.2, random_state=123)
         model = xgb.XGBClassifier(use_label_encoder=False)
         model.fit(X_train, y_train)
         return model
@@ -45,7 +46,6 @@ class ModelWithCache(ModelWithoutCache):
 
 
 def benchmark(iteration: int) -> None:
-
     results: List[Dict[str, float]] = []
     without_cache = ModelWithoutCache()
     with_cache = ModelWithCache()
@@ -62,29 +62,25 @@ def benchmark(iteration: int) -> None:
         time_with_cache = end - start
         results.append(
             {
-                "run": i + 1,
-                "without_lru_cache": time_without_cache,
-                "with_lru_cache": time_with_cache,
+                'run': i + 1,
+                'without_lru_cache': time_without_cache,
+                'with_lru_cache': time_with_cache,
             }
         )
 
     df = pd.DataFrame(results)
-    df.to_csv("benchmark_results.csv", index=False)
-    df[["without_lru_cache", "with_lru_cache"]][10:].plot().figure.savefig(
-        "benchmark_results.png"
-    )
+    df.to_csv('benchmark_results.csv', index=False)
+    df[['without_lru_cache', 'with_lru_cache']][10:].plot().figure.savefig('benchmark_results.png')
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Benchmark the usage of lru_cache in Python."
-    )
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Benchmark the usage of lru_cache in Python.')
     parser.add_argument(
-        "-i",
-        "--iteration",
+        '-i',
+        '--iteration',
         type=int,
         default=100,
-        help="Number of times to run the benchmark",
+        help='Number of times to run the benchmark',
     )
     args = parser.parse_args()
 

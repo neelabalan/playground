@@ -9,13 +9,13 @@ def generate_pydantic_model(schema: Dict[str, Any], model_name: str, output_fold
 
     code = generate_model_code(schema, model_name)
 
-    with open(os.path.join(output_folder, f"{model_name}.py"), "w") as f:
+    with open(os.path.join(output_folder, f'{model_name}.py'), 'w') as f:
         f.write(code)
 
 
 def generate_model_code(schema: Dict[str, Any], model_name: str) -> str:
-    code = "from pydantic import BaseModel, Field\n"
-    code += "from typing import List, Dict, Optional\n\n"
+    code = 'from pydantic import BaseModel, Field\n'
+    code += 'from typing import List, Dict, Optional\n\n'
 
     nested_classes, main_class = generate_class_code(schema, model_name)
     code += nested_classes + main_class
@@ -24,61 +24,61 @@ def generate_model_code(schema: Dict[str, Any], model_name: str) -> str:
 
 
 def generate_class_code(schema: Dict[str, Any], model_name: str) -> str:
-    nested_classes = ""
-    main_class = f"class {model_name}(BaseModel):\n"
+    nested_classes = ''
+    main_class = f'class {model_name}(BaseModel):\n'
 
     for attr, attr_properties in schema.items():
-        if "type" not in attr_properties:
+        if 'type' not in attr_properties:
             continue
 
-        if attr_properties["type"] == "object":
+        if attr_properties['type'] == 'object':
             nested_model_name = f"{model_name}{attr.replace('_', ' ').title().replace(' ', '')}"
-            nested_classes += generate_class_code(attr_properties["properties"], nested_model_name)[1]
+            nested_classes += generate_class_code(attr_properties['properties'], nested_model_name)[1]
             pydantic_type = nested_model_name
         else:
-            pydantic_type = get_pydantic_type(attr_properties["type"])
+            pydantic_type = get_pydantic_type(attr_properties['type'])
 
-        description = attr_properties.get("description", "")
-        main_class += f"    {attr}: {pydantic_type} = Field(..., description={repr(description)})\n"
+        description = attr_properties.get('description', '')
+        main_class += f'    {attr}: {pydantic_type} = Field(..., description={repr(description)})\n'
 
-    main_class += "\n"
-    main_class += "    def __str__(self) -> str:\n"
-    main_class += "        return self.json(indent=4)\n\n"
+    main_class += '\n'
+    main_class += '    def __str__(self) -> str:\n'
+    main_class += '        return self.json(indent=4)\n\n'
 
     return nested_classes, main_class
 
 
 def get_pydantic_type(json_type: str) -> str:
     type_mapping = {
-        "string": "str",
-        "integer": "int",
-        "boolean": "bool",
-        "double": "float",
-        "map": "Dict[str, Any]",
-        "timestamp": "str",
+        'string': 'str',
+        'integer': 'int',
+        'boolean': 'bool',
+        'double': 'float',
+        'map': 'Dict[str, Any]',
+        'timestamp': 'str',
     }
-    return type_mapping.get(json_type, "str")
+    return type_mapping.get(json_type, 'str')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     # Sample JSON schema with nested dictionaries
     schema = {
-        "name": {"description": "The name of the person", "type": "string"},
-        "age": {"description": "The age of the person", "type": "integer"},
-        "house_address": {
-            "type": "object",
-            "properties": {
-                "street": {"type": "string", "description": "The street of the house address"},
-                "city": {"type": "string", "description": "The city of the house address"},
+        'name': {'description': 'The name of the person', 'type': 'string'},
+        'age': {'description': 'The age of the person', 'type': 'integer'},
+        'house_address': {
+            'type': 'object',
+            'properties': {
+                'street': {'type': 'string', 'description': 'The street of the house address'},
+                'city': {'type': 'string', 'description': 'The city of the house address'},
             },
         },
-        "office_address": {
-            "type": "object",
-            "properties": {
-                "street": {"type": "string", "description": "The street of the office address"},
-                "city": {"type": "string", "description": "The city of the office address"},
+        'office_address': {
+            'type': 'object',
+            'properties': {
+                'street': {'type': 'string', 'description': 'The street of the office address'},
+                'city': {'type': 'string', 'description': 'The city of the office address'},
             },
         },
     }
 
-    generate_pydantic_model(schema, "Person", "models")
+    generate_pydantic_model(schema, 'Person', 'models')

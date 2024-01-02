@@ -28,4 +28,4 @@ from collections import Counter
 def merge_the_tools(string, k):
     splits = textwrap.wrap(string, k)
     split_freq = [Counter(strval) for strval in splits]
-    print("\n".join(["".join(freq_map.keys()) for freq_map in split_freq]))
+    print('\n'.join([''.join(freq_map.keys()) for freq_map in split_freq]))

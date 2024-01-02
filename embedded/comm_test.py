@@ -1,14 +1,12 @@
-import time
 import board
 import busio
+from telegram.ext import CommandHandler
+from telegram.ext import Updater
 
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-
-update = Updater(token="<TOKEN>")
+update = Updater(token='<TOKEN>')
 
 import adafruit_ads1x15.ads1115 as ADS
 from adafruit_ads1x15.analog_in import AnalogIn
-
 
 # Create the I2C bus
 i2c = busio.I2C(board.SCL, board.SDA)
@@ -27,9 +25,9 @@ def main():
     """main function starts"""
     dp = update.dispatcher
 
-    dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(CommandHandler("voltage", voltage))
-    dp.add_handler(CommandHandler("current", current))
+    dp.add_handler(CommandHandler('start', start))
+    dp.add_handler(CommandHandler('voltage', voltage))
+    dp.add_handler(CommandHandler('current', current))
 
     update.start_polling()
     update.idle()
@@ -43,7 +41,7 @@ def get_voltage(voltage_val):
 
 def start(bot, update):
     "sending the initial message to our bot when it starts"
-    update.message.reply_text("Welcome to the Motor Monitor IoT bot")
+    update.message.reply_text('Welcome to the Motor Monitor IoT bot')
 
 
 def voltage(bot, update):
@@ -55,5 +53,5 @@ def current(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text=motorvoltage)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -1,4 +1,4 @@
-if __name__ == "__main__":
+if __name__ == '__main__':
     n, m = input().strip().split()
     athelete_list = list()
     for _ in range(int(n)):
@@ -7,4 +7,4 @@ if __name__ == "__main__":
 
     athelete_list.sort(key=lambda x: x[index])
     for ath in athelete_list:
-        print(" ".join(list(map(str, ath))))
+        print(' '.join(list(map(str, ath))))

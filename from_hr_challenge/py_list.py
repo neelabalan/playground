@@ -3,14 +3,14 @@ from queue import Queue
 
 def call_function(command, element, index, oplist):
     """map of which function to be called and call em"""
-    no_arg_map = {"sort": oplist.sort, "pop": oplist.pop, "reverse": oplist.reverse}
-    single_arg_map = {"remove": oplist.remove, "append": oplist.append}
+    no_arg_map = {'sort': oplist.sort, 'pop': oplist.pop, 'reverse': oplist.reverse}
+    single_arg_map = {'remove': oplist.remove, 'append': oplist.append}
 
     if command in no_arg_map.keys():
         no_arg_map.get(command)()
     elif command in single_arg_map.keys():
         single_arg_map.get(command)(int(element))
-    elif command == "insert":
+    elif command == 'insert':
         oplist.insert(int(element), int(index))
     else:
         print(oplist)
@@ -29,7 +29,7 @@ def process(command_queue):
     return list_output
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     N = int(input())
     command_queue = Queue()
     for i in range(N):

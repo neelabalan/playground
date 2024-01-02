@@ -1,24 +1,24 @@
 #!python3
-import paho.mqtt.client as mqtt
-import time
 import sys
 
-mqtt_broker = "192.168.0.100"
+import paho.mqtt.client as mqtt
+
+mqtt_broker = '192.168.0.100'
 mqtt_port = 1883
 
-topic = "voltage"
+topic = 'voltage'
 
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
-        print("connection successful")
+        print('connection successful')
         client.subscribe(topic)
     else:
-        print("connection refused")
+        print('connection refused')
 
 
 def on_disconnect(client, userdata, rc):
-    print("Disconnected from broker")
+    print('Disconnected from broker')
 
 
 # def on_subscribe(client, obj, mid, granted_qos):
@@ -26,7 +26,7 @@ def on_disconnect(client, userdata, rc):
 
 
 def on_message(client, userdata, message):
-    print("Message received - " + message.payload.decode())
+    print('Message received - ' + message.payload.decode())
     print(message.topic)
 
 
@@ -40,9 +40,9 @@ client.on_message = on_message
 
 try:
     client.connect(mqtt_broker, mqtt_port)
-    print("Connecting to broker", mqtt_broker)
+    print('Connecting to broker', mqtt_broker)
 except:
-    print("ERROR -  COULD NOT CONNECT")
+    print('ERROR -  COULD NOT CONNECT')
     sys.exit(1)
 
 
