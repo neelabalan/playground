@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import logging
 import os
 import pathlib
 import subprocess
@@ -13,6 +14,7 @@ import typing
 
 import chromadb
 import requests
+from chromadb.utils import embedding_functions
 from rich import print
 from rich.console import Console
 from rich.table import Table
@@ -22,7 +24,8 @@ app_dir = pathlib.Path.home() / '.qd'
 app_dir.mkdir(exist_ok=True, parents=True)
 
 db_client = chromadb.PersistentClient(path=str(app_dir / 'bookmarks_db'))
-collection = db_client.get_or_create_collection('allbookmarks')
+collection = db_client.get_or_create_collection('allbookmarks', embedding_function= embedding_functions.SentenceTransformerEmbeddingFunction('all-mpnet-base-v2'))
+logging.basicConfig(level=logging.INFO)
 
 
 def get_raindrops(dump: bool = True) -> list[dict[str, typing.Any]]:
@@ -34,6 +37,7 @@ def get_raindrops(dump: bool = True) -> list[dict[str, typing.Any]]:
     collection_id = 0
     page = 1
 
+    logging.info('Fetching Raindrop bookmarks')
     while True:
         url = f'https://api.raindrop.io/rest/v1/raindrops/{collection_id}?page={page}'
         response = requests.get(url, headers=headers)
@@ -65,13 +69,16 @@ def get_raindrops(dump: bool = True) -> list[dict[str, typing.Any]]:
             json.dump(extracted_data, f, indent=4)
         with open(app_dir / f'raindropfullbackup_{timestamp}.json', 'w') as f:
             json.dump(data, f, indent=4)
+    logging.info('Dumped Raindrop bookmarks to file')
     return extracted_data
 
 
 def add_to_vectordb(data: list[dict[str, str]]) -> chromadb.Collection:
     documents = [item['title'] + '    ' + item['excerpt'] for item in data]
     metadatas = [{'link': item['link'], 'title': item['title']} for item in data]
+    logging.info('Adding Raindrop bookmarks to VectorDB')
     collection.upsert(ids=[item['link'] for item in data], documents=documents, metadatas=metadatas)
+    logging.info('Completed adding Raindrop bookmarks to VectorDB')
     return collection
 
 
@@ -131,7 +138,7 @@ def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Query bookmarks.')
     parser.add_argument('--query', type=str, help='The query to search for.')
     parser.add_argument('--n', type=int, help='n_results from similarity search')
-    parser.add_argument('--dump', type=bool, default=False, help='Dump the raindrop bookmarks to a file')
+    parser.add_argument('--dump', action='store_true', default=False, help='Dump the raindrop bookmarks to a file')
 
     return parser.parse_args()
 
