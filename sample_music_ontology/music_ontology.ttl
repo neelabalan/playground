@@ -1,0 +1,2403 @@
+@prefix ns1: <https://example.org/ontology/music#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:artistName a owl:DatatypeProperty .
+
+ns1:genre a owl:DatatypeProperty .
+
+ns1:hasArtist a owl:ObjectProperty .
+
+ns1:hasTopic a owl:ObjectProperty .
+
+ns1:isArtistOf a owl:ObjectProperty .
+
+ns1:isTopicOf a owl:ObjectProperty .
+
+ns1:releaseDate a owl:DatatypeProperty .
+
+ns1:topic a owl:DatatypeProperty .
+
+ns1:trackName a owl:DatatypeProperty .
+
+ns1:311 a ns1:Artist ;
+    ns1:artistName "311" ;
+    ns1:isArtistOf ns1:six .
+
+ns1:50_cent a ns1:Artist ;
+    ns1:artistName "50 cent" ;
+    ns1:isArtistOf ns1:what_up_gangsta .
+
+ns1:aceyalone a ns1:Artist ;
+    ns1:artistName "aceyalone" ;
+    ns1:isArtistOf ns1:jack_of_all_trades .
+
+ns1:air_supply a ns1:Artist ;
+    ns1:artistName "air supply" ;
+    ns1:isArtistOf ns1:without_you .
+
+ns1:al_green a ns1:Artist ;
+    ns1:artistName "al green" ;
+    ns1:isArtistOf ns1:you_brought_the_sunshine .
+
+ns1:alan_jackson a ns1:Artist ;
+    ns1:artistName "alan jackson" ;
+    ns1:isArtistOf ns1:there_is_power_in_the_blood .
+
+ns1:amy_grant a ns1:Artist ;
+    ns1:artistName "amy grant" ;
+    ns1:isArtistOf ns1:i_will_remember_you .
+
+ns1:andy_williams a ns1:Artist ;
+    ns1:artistName "andy williams" ;
+    ns1:isArtistOf ns1:your_song .
+
+ns1:anita_baker a ns1:Artist ;
+    ns1:artistName "anita baker" ;
+    ns1:isArtistOf ns1:whatever_it_takes .
+
+ns1:apogonoi_tou_omirou a ns1:Artist ;
+    ns1:artistName "apogonoi tou omirou" ;
+    ns1:isArtistOf ns1:break_the_needle_\(spase_ti_velona\) .
+
+ns1:arctic_monkeys a ns1:Artist ;
+    ns1:artistName "arctic monkeys" ;
+    ns1:isArtistOf ns1:my_propeller .
+
+ns1:astrud_gilberto a ns1:Artist ;
+    ns1:artistName "astrud gilberto" ;
+    ns1:isArtistOf ns1:only_trust_your_heart .
+
+ns1:average_white_band a ns1:Artist ;
+    ns1:artistName "average white band" ;
+    ns1:isArtistOf ns1:love_your_life .
+
+ns1:badfinger a ns1:Artist ;
+    ns1:artistName "badfinger" ;
+    ns1:isArtistOf ns1:love_time .
+
+ns1:band_of_skulls a ns1:Artist ;
+    ns1:artistName "band of skulls" ;
+    ns1:isArtistOf ns1:hoochie_coochie .
+
+ns1:barenaked_ladies a ns1:Artist ;
+    ns1:artistName "barenaked ladies" ;
+    ns1:isArtistOf ns1:be_my_yoko_ono .
+
+ns1:barney_kessel a ns1:Artist ;
+    ns1:artistName "barney kessel" ;
+    ns1:isArtistOf ns1:people .
+
+ns1:bernard_allison a ns1:Artist ;
+    ns1:artistName "bernard allison" ;
+    ns1:isArtistOf ns1:boogie_man .
+
+ns1:billy_joel a ns1:Artist ;
+    ns1:artistName "billy joel" ;
+    ns1:isArtistOf ns1:easy_money .
+
+ns1:blackfoot a ns1:Artist ;
+    ns1:artistName "blackfoot" ;
+    ns1:isArtistOf <https://example.org/ontology/music#steady_rockin'> .
+
+ns1:blind_melon a ns1:Artist ;
+    ns1:artistName "blind melon" ;
+    ns1:isArtistOf ns1:toes_across_the_floor .
+
+<https://example.org/ontology/music#bob_marley_&_the_wailers> a ns1:Artist ;
+    ns1:artistName "bob marley & the wailers" ;
+    ns1:isArtistOf ns1:zimbabwe .
+
+ns1:bob_wills a ns1:Artist ;
+    ns1:artistName "bob wills" ;
+    ns1:isArtistOf ns1:san_antonio_rose .
+
+ns1:bobby_vinton a ns1:Artist ;
+    ns1:artistName "bobby vinton" ;
+    ns1:isArtistOf ns1:blue_velvet .
+
+ns1:boney_james a ns1:Artist ;
+    ns1:artistName "boney james" ;
+    ns1:isArtistOf ns1:i_still_dream .
+
+ns1:brad_mehldau a ns1:Artist ;
+    ns1:artistName "brad mehldau" ;
+    ns1:isArtistOf ns1:song-song .
+
+ns1:cab_calloway a ns1:Artist ;
+    ns1:artistName "cab calloway" ;
+    ns1:isArtistOf ns1:blues_in_the_night .
+
+ns1:cage_the_elephant a ns1:Artist ;
+    ns1:artistName "cage the elephant" ;
+    ns1:isArtistOf ns1:skin_and_bones .
+
+ns1:capleton a ns1:Artist ;
+    ns1:artistName "capleton" ;
+    ns1:isArtistOf ns1:jah_jah_city .
+
+ns1:chicago a ns1:Artist ;
+    ns1:artistName "chicago" ;
+    ns1:isArtistOf <https://example.org/ontology/music#(i've_been)_searchin'_so_long> .
+
+ns1:chris_tomlin a ns1:Artist ;
+    ns1:artistName "chris tomlin" ;
+    ns1:isArtistOf ns1:i_will_follow .
+
+ns1:christina_perri a ns1:Artist ;
+    ns1:artistName "christina perri" ;
+    ns1:isArtistOf ns1:jar_of_hearts .
+
+ns1:chubby_checker a ns1:Artist ;
+    ns1:artistName "chubby checker" ;
+    ns1:isArtistOf ns1:the_stroll .
+
+ns1:clarence_carter a ns1:Artist ;
+    ns1:artistName "clarence carter" ;
+    ns1:isArtistOf ns1:slip_away .
+
+ns1:cocoa_tea a ns1:Artist ;
+    ns1:artistName "cocoa tea" ;
+    ns1:isArtistOf ns1:she_loves_me_now .
+
+ns1:creed a ns1:Artist ;
+    ns1:artistName "creed" ;
+    ns1:isArtistOf ns1:my_own_prison .
+
+ns1:das_efx a ns1:Artist ;
+    ns1:artistName "das efx" ;
+    ns1:isArtistOf ns1:looseys .
+
+ns1:david_guetta a ns1:Artist ;
+    ns1:artistName "david guetta" ;
+    ns1:isArtistOf ns1:when_love_takes_over_\(feat._kelly_rowland\) .
+
+ns1:days_of_the_new a ns1:Artist ;
+    ns1:artistName "days of the new" ;
+    ns1:isArtistOf ns1:the_down_town .
+
+ns1:def_leppard a ns1:Artist ;
+    ns1:artistName "def leppard" ;
+    ns1:isArtistOf ns1:promises .
+
+ns1:depeche_mode a ns1:Artist ;
+    ns1:artistName "depeche mode" ;
+    ns1:isArtistOf ns1:useless .
+
+ns1:devo a ns1:Artist ;
+    ns1:artistName "devo" ;
+    ns1:isArtistOf ns1:whip_it .
+
+ns1:diamond_rio a ns1:Artist ;
+    ns1:artistName "diamond rio" ;
+    ns1:isArtistOf <https://example.org/ontology/music#this_romeo_ain't_got_julie_yet> .
+
+ns1:diana_ross a ns1:Artist ;
+    ns1:artistName "diana ross" ;
+    ns1:isArtistOf ns1:my_old_piano .
+
+ns1:diaz a ns1:Artist ;
+    ns1:artistName "diaz" ;
+    ns1:isArtistOf ns1:hip-hop_blues .
+
+ns1:dirty_heads a ns1:Artist ;
+    ns1:artistName "dirty heads" ;
+    ns1:isArtistOf ns1:sails_to_the_wind .
+
+ns1:don_williams a ns1:Artist ;
+    ns1:artistName "don williams" ;
+    ns1:isArtistOf <https://example.org/ontology/music#when_i'm_with_you> .
+
+ns1:donna_summer a ns1:Artist ;
+    ns1:artistName "donna summer" ;
+    ns1:isArtistOf ns1:breakaway .
+
+ns1:eagles a ns1:Artist ;
+    ns1:artistName "eagles" ;
+    ns1:isArtistOf ns1:tequila_sunrise .
+
+ns1:eddie_money a ns1:Artist ;
+    ns1:artistName "eddie money" ;
+    ns1:isArtistOf ns1:two_tickets_to_paradise .
+
+ns1:eddie_vedder a ns1:Artist ;
+    ns1:artistName "eddie vedder" ;
+    ns1:isArtistOf ns1:rise .
+
+ns1:elton_john a ns1:Artist ;
+    ns1:artistName "elton john" ;
+    ns1:isArtistOf ns1:honky_cat .
+
+ns1:emmylou_harris a ns1:Artist ;
+    ns1:artistName "emmylou harris" ;
+    ns1:isArtistOf ns1:if_i_could_only_win_your_love .
+
+<https://example.org/ontology/music#esquivel!> a ns1:Artist ;
+    ns1:artistName "esquivel!" ;
+    ns1:isArtistOf ns1:titulos_principio .
+
+ns1:falling_in_reverse a ns1:Artist ;
+    ns1:artistName "falling in reverse" ;
+    ns1:isArtistOf ns1:bad_girls_club .
+
+ns1:fleet_foxes a ns1:Artist ;
+    ns1:artistName "fleet foxes" ;
+    ns1:isArtistOf ns1:montezuma .
+
+ns1:foreigner a ns1:Artist ;
+    ns1:artistName "foreigner" ;
+    ns1:isArtistOf ns1:i_have_waited_so_long .
+
+ns1:galactic a ns1:Artist ;
+    ns1:artistName "galactic" ;
+    ns1:isArtistOf ns1:does_it_really_make_a_difference_\(feat._mavis_staples\) .
+
+ns1:generation_x a ns1:Artist ;
+    ns1:artistName "generation x" ;
+    ns1:isArtistOf ns1:ready_steady_go .
+
+ns1:genesis a ns1:Artist ;
+    ns1:artistName "genesis" ;
+    ns1:isArtistOf <https://example.org/ontology/music#tonight,_tonight,_tonight> .
+
+ns1:george_jones a ns1:Artist ;
+    ns1:artistName "george jones" ;
+    ns1:isArtistOf ns1:the_ceremony .
+
+ns1:geto_boys a ns1:Artist ;
+    ns1:artistName "geto boys" ;
+    ns1:isArtistOf ns1:chuckie .
+
+ns1:golden_smog a ns1:Artist ;
+    ns1:artistName "golden smog" ;
+    ns1:isArtistOf ns1:lost_love .
+
+ns1:gordon_lightfoot a ns1:Artist ;
+    ns1:artistName "gordon lightfoot" ;
+    ns1:isArtistOf ns1:carefree_highway .
+
+ns1:gramatik a ns1:Artist ;
+    ns1:artistName "gramatik" ;
+    ns1:isArtistOf ns1:smooth_while_raw .
+
+ns1:grandmaster_melle_mel a ns1:Artist ;
+    ns1:artistName "grandmaster melle mel" ;
+    ns1:isArtistOf ns1:grndmza_pt._1 .
+
+ns1:greta_van_fleet a ns1:Artist ;
+    ns1:artistName "greta van fleet" ;
+    ns1:isArtistOf ns1:anthem .
+
+ns1:groundation a ns1:Artist ;
+    ns1:artistName "groundation" ;
+    ns1:isArtistOf ns1:here_i_am .
+
+ns1:guts a ns1:Artist ;
+    ns1:artistName "guts" ;
+    ns1:isArtistOf ns1:peaceful_life .
+
+ns1:hank_williams a ns1:Artist ;
+    ns1:artistName "hank williams" ;
+    ns1:isArtistOf ns1:men_with_broken_hearts .
+
+ns1:illvibe a ns1:Artist ;
+    ns1:artistName "illvibe" ;
+    ns1:isArtistOf ns1:son_of_a_gun .
+
+ns1:imagine_dragons a ns1:Artist ;
+    ns1:artistName "imagine dragons" ;
+    ns1:isArtistOf <https://example.org/ontology/music#bad_liar_–_stripped> .
+
+ns1:j._cole a ns1:Artist ;
+    ns1:artistName "j. cole" ;
+    ns1:isArtistOf <https://example.org/ontology/music#nobody's_perfect> .
+
+ns1:james_otto a ns1:Artist ;
+    ns1:artistName "james otto" ;
+    ns1:isArtistOf ns1:groovy_little_summer_song .
+
+ns1:janis_ian a ns1:Artist ;
+    ns1:artistName "janis ian" ;
+    ns1:isArtistOf ns1:at_seventeen .
+
+ns1:john_fogerty a ns1:Artist ;
+    ns1:artistName "john fogerty" ;
+    ns1:isArtistOf ns1:eye_of_the_zombie .
+
+ns1:josh_turner a ns1:Artist ;
+    ns1:artistName "josh turner" ;
+    ns1:isArtistOf ns1:the_difference_between_a_woman_and_a_man .
+
+ns1:journey a ns1:Artist ;
+    ns1:artistName "journey" ;
+    ns1:isArtistOf ns1:remember_me_\(feat._steve_augeri\) .
+
+ns1:judas_priest a ns1:Artist ;
+    ns1:artistName "judas priest" ;
+    ns1:isArtistOf ns1:the_sentinel .
+
+ns1:kansas a ns1:Artist ;
+    ns1:artistName "kansas" ;
+    ns1:isArtistOf ns1:belexes .
+
+ns1:kate_bush a ns1:Artist ;
+    ns1:artistName "kate bush" ;
+    ns1:isArtistOf ns1:the_kick_inside .
+
+ns1:keely_smith a ns1:Artist ;
+    ns1:artistName "keely smith" ;
+    ns1:isArtistOf ns1:the_song_is_you .
+
+ns1:keith_jarrett a ns1:Artist ;
+    ns1:artistName "keith jarrett" ;
+    ns1:isArtistOf <https://example.org/ontology/music#i_got_it_bad_and_that_ain't_good> .
+
+ns1:kenny_chesney a ns1:Artist ;
+    ns1:artistName "kenny chesney" ;
+    ns1:isArtistOf <https://example.org/ontology/music#don't_blink> .
+
+ns1:kid_ink a ns1:Artist ;
+    ns1:artistName "kid ink" ;
+    ns1:isArtistOf ns1:be_real_\(feat._dej_loaf\) .
+
+ns1:kiss a ns1:Artist ;
+    ns1:artistName "kiss" ;
+    ns1:isArtistOf ns1:reason_to_live .
+
+ns1:larkin_poe a ns1:Artist ;
+    ns1:artistName "larkin poe" ;
+    ns1:isArtistOf ns1:fly_like_an_eagle .
+
+ns1:lee_greenwood a ns1:Artist ;
+    ns1:artistName "lee greenwood" ;
+    ns1:isArtistOf <https://example.org/ontology/music#somebody's_gonna_love_you> .
+
+ns1:lee_roy_parnell a ns1:Artist ;
+    ns1:artistName "lee roy parnell" ;
+    ns1:isArtistOf ns1:crocodile_tears .
+
+ns1:little_feat a ns1:Artist ;
+    ns1:artistName "little feat" ;
+    ns1:isArtistOf ns1:all_that_you_dream_\(with_linda_ronstadt\) .
+
+ns1:live a ns1:Artist ;
+    ns1:artistName "live" ;
+    ns1:isArtistOf ns1:the_dam_at_otter_creek .
+
+ns1:loudon_wainwright_iii a ns1:Artist ;
+    ns1:artistName "loudon wainwright iii" ;
+    ns1:isArtistOf ns1:lullaby .
+
+ns1:louis_armstrong a ns1:Artist ;
+    ns1:artistName "louis armstrong" ;
+    ns1:isArtistOf ns1:swing_that_music .
+
+ns1:lyle_lovett a ns1:Artist ;
+    ns1:artistName "lyle lovett" ;
+    ns1:isArtistOf <https://example.org/ontology/music#she's_hot_to_go> .
+
+ns1:mariah_carey a ns1:Artist ;
+    ns1:artistName "mariah carey" ;
+    ns1:isArtistOf ns1:love_takes_time .
+
+ns1:mary_chapin_carpenter a ns1:Artist ;
+    ns1:artistName "mary chapin carpenter" ;
+    ns1:isArtistOf ns1:late_for_your_life .
+
+ns1:maze a ns1:Artist ;
+    ns1:artistName "maze" ;
+    ns1:isArtistOf ns1:we_are_one .
+
+ns1:megadeth a ns1:Artist ;
+    ns1:artistName "megadeth" ;
+    ns1:isArtistOf ns1:hook_in_mouth .
+
+ns1:merle_haggard a ns1:Artist ;
+    ns1:artistName "merle haggard" ;
+    ns1:isArtistOf ns1:silver_wings .
+
+ns1:meshuggah a ns1:Artist ;
+    ns1:artistName "meshuggah" ;
+    ns1:isArtistOf ns1:combustion .
+
+ns1:mezzoforte a ns1:Artist ;
+    ns1:artistName "mezzoforte" ;
+    ns1:isArtistOf ns1:rockall .
+
+ns1:muddy_waters a ns1:Artist ;
+    ns1:artistName "muddy waters" ;
+    ns1:isArtistOf ns1:lonely_man_blues .
+
+ns1:my_bloody_valentine a ns1:Artist ;
+    ns1:artistName "my bloody valentine" ;
+    ns1:isArtistOf ns1:soon .
+
+ns1:my_morning_jacket a ns1:Artist ;
+    ns1:artistName "my morning jacket" ;
+    ns1:isArtistOf ns1:if_all_else_fails .
+
+ns1:nappy_roots a ns1:Artist ;
+    ns1:artistName "nappy roots" ;
+    ns1:isArtistOf ns1:set_it_out .
+
+ns1:nas a ns1:Artist ;
+    ns1:artistName "nas" ;
+    ns1:isArtistOf ns1:hate_me_now_\(feat._puff_daddy\) .
+
+ns1:neil_sedaka a ns1:Artist ;
+    ns1:artistName "neil sedaka" ;
+    ns1:isArtistOf ns1:no_vacancy .
+
+ns1:pantera a ns1:Artist ;
+    ns1:artistName "pantera" ;
+    ns1:isArtistOf ns1:medicine_man .
+
+ns1:pat_boone a ns1:Artist ;
+    ns1:artistName "pat boone" ;
+    ns1:isArtistOf ns1:forgive_me .
+
+ns1:pato_banton a ns1:Artist ;
+    ns1:artistName "pato banton" ;
+    ns1:isArtistOf ns1:good_old_days .
+
+ns1:paula_abdul a ns1:Artist ;
+    ns1:artistName "paula abdul" ;
+    ns1:isArtistOf ns1:opposites_attract .
+
+ns1:pete_townshend a ns1:Artist ;
+    ns1:artistName "pete townshend" ;
+    ns1:isArtistOf ns1:the_real_me .
+
+ns1:pieces_of_a_dream a ns1:Artist ;
+    ns1:artistName "pieces of a dream" ;
+    ns1:isArtistOf <https://example.org/ontology/music#love's_silhouette> .
+
+ns1:popcaan a ns1:Artist ;
+    ns1:artistName "popcaan" ;
+    ns1:isArtistOf ns1:traumatized .
+
+ns1:pretenders a ns1:Artist ;
+    ns1:artistName "pretenders" ;
+    ns1:isArtistOf ns1:up_the_neck .
+
+ns1:quality_control a ns1:Artist ;
+    ns1:artistName "quality control" ;
+    ns1:isArtistOf ns1:100_racks_\(offset_feat._playboi_carti\) .
+
+ns1:queens_of_the_stone_age a ns1:Artist ;
+    ns1:artistName "queens of the stone age" ;
+    ns1:isArtistOf ns1:burn_the_witch .
+
+<https://example.org/ontology/music#r.e.m.> a ns1:Artist ;
+    ns1:artistName "r.e.m." ;
+    ns1:isArtistOf ns1:radio_song .
+
+ns1:rage_against_the_machine a ns1:Artist ;
+    ns1:artistName "rage against the machine" ;
+    ns1:isArtistOf ns1:freedom .
+
+ns1:reba_mcentire a ns1:Artist ;
+    ns1:artistName "reba mcentire" ;
+    ns1:isArtistOf <https://example.org/ontology/music#it's_not_over_(if_i'm_not_over_you)> .
+
+ns1:richard_buckner a ns1:Artist ;
+    ns1:artistName "richard buckner" ;
+    ns1:isArtistOf ns1:ariel_ramirez .
+
+ns1:rise_against a ns1:Artist ;
+    ns1:artistName "rise against" ;
+    ns1:isArtistOf ns1:prayer_of_the_refugee .
+
+ns1:robert_earl_keen a ns1:Artist ;
+    ns1:artistName "robert earl keen" ;
+    ns1:isArtistOf ns1:out_here_in_the_middle .
+
+ns1:robert_plant a ns1:Artist ;
+    ns1:artistName "robert plant" ;
+    ns1:isArtistOf ns1:down_to_the_sea .
+
+ns1:rupaul a ns1:Artist ;
+    ns1:artistName "rupaul" ;
+    ns1:isArtistOf ns1:sissy_that_walk .
+
+ns1:russ a ns1:Artist ;
+    ns1:artistName "russ" ;
+    ns1:isArtistOf <https://example.org/ontology/music#psycho,_pt._2> .
+
+ns1:sam_cooke a ns1:Artist ;
+    ns1:artistName "sam cooke" ;
+    ns1:isArtistOf ns1:jamaica_farewell .
+
+ns1:seether a ns1:Artist ;
+    ns1:artistName "seether" ;
+    ns1:isArtistOf ns1:country_song .
+
+ns1:shaggy a ns1:Artist ;
+    ns1:artistName "shaggy" ;
+    ns1:isArtistOf ns1:hope .
+
+ns1:shakira a ns1:Artist ;
+    ns1:artistName "shakira" ;
+    ns1:isArtistOf ns1:objection_\(tango\) .
+
+ns1:shinedown a ns1:Artist ;
+    ns1:artistName "shinedown" ;
+    ns1:isArtistOf <https://example.org/ontology/music#i'll_follow_you> .
+
+ns1:slave a ns1:Artist ;
+    ns1:artistName "slave" ;
+    ns1:isArtistOf ns1:steal_your_heart .
+
+ns1:slayer a ns1:Artist ;
+    ns1:artistName "slayer" ;
+    ns1:isArtistOf ns1:kill_again .
+
+ns1:suicidal_tendencies a ns1:Artist ;
+    ns1:artistName "suicidal tendencies" ;
+    ns1:isArtistOf <https://example.org/ontology/music#i_saw_your_mommy...> .
+
+ns1:ted_nugent a ns1:Artist ;
+    ns1:artistName "ted nugent" ;
+    ns1:isArtistOf ns1:one_woman .
+
+ns1:teddy_wilson a ns1:Artist ;
+    ns1:artistName "teddy wilson" ;
+    ns1:isArtistOf ns1:i_wanna_be_happy .
+
+ns1:the_alan_parsons_project a ns1:Artist ;
+    ns1:artistName "the alan parsons project" ;
+    ns1:isArtistOf ns1:some_other_time .
+
+ns1:the_avett_brothers a ns1:Artist ;
+    ns1:artistName "the avett brothers" ;
+    ns1:isArtistOf ns1:tin_man .
+
+ns1:the_brothers_johnson a ns1:Artist ;
+    ns1:artistName "the brothers johnson" ;
+    ns1:isArtistOf ns1:closer_to_the_one_that_you_love .
+
+ns1:the_clash a ns1:Artist ;
+    ns1:artistName "the clash" ;
+    ns1:isArtistOf <https://example.org/ontology/music#i'm_so_bored_with_the_u.s.a.> .
+
+ns1:the_cure a ns1:Artist ;
+    ns1:artistName "the cure" ;
+    ns1:isArtistOf ns1:from_the_edge_of_the_deep_green_sea .
+
+<https://example.org/ontology/music#the_mamas_&_the_papas> a ns1:Artist ;
+    ns1:artistName "the mamas & the papas" ;
+    ns1:isArtistOf ns1:snowqueen_of_texas .
+
+ns1:the_mills_brothers a ns1:Artist ;
+    ns1:artistName "the mills brothers" ;
+    ns1:isArtistOf ns1:tiger_rag .
+
+ns1:the_monkees a ns1:Artist ;
+    ns1:artistName "the monkees" ;
+    ns1:isArtistOf <https://example.org/ontology/music#this_just_doesn't_seem_to_be_my_day> .
+
+ns1:the_national a ns1:Artist ;
+    ns1:artistName "the national" ;
+    ns1:isArtistOf <https://example.org/ontology/music#don't_swallow_the_cap> .
+
+ns1:the_offspring a ns1:Artist ;
+    ns1:artistName "the offspring" ;
+    ns1:isArtistOf ns1:feelings .
+
+ns1:the_police a ns1:Artist ;
+    ns1:artistName "the police" ;
+    ns1:isArtistOf ns1:one_world_\(not_three\) .
+
+ns1:the_pretty_things a ns1:Artist ;
+    ns1:artistName "the pretty things" ;
+    ns1:isArtistOf ns1:oh_baby_doll .
+
+ns1:the_rolling_stones a ns1:Artist ;
+    ns1:artistName "the rolling stones" ;
+    ns1:isArtistOf ns1:shattered .
+
+ns1:the_stooges a ns1:Artist ;
+    ns1:artistName "the stooges" ;
+    ns1:isArtistOf ns1:gimme_danger .
+
+ns1:the_ventures a ns1:Artist ;
+    ns1:artistName "the ventures" ;
+    ns1:isArtistOf ns1:lonely_heart .
+
+ns1:the_wood_brothers a ns1:Artist ;
+    ns1:artistName "the wood brothers" ;
+    ns1:isArtistOf ns1:made_it_up_the_mountain .
+
+ns1:thin_lizzy a ns1:Artist ;
+    ns1:artistName "thin lizzy" ;
+    ns1:isArtistOf ns1:this_is_the_one .
+
+ns1:tim_mcgraw a ns1:Artist ;
+    ns1:artistName "tim mcgraw" ;
+    ns1:isArtistOf <https://example.org/ontology/music#if_you're_reading_this> .
+
+ns1:tool a ns1:Artist ;
+    ns1:artistName "tool" ;
+    ns1:isArtistOf ns1:lateralus .
+
+ns1:tracy_lawrence a ns1:Artist ;
+    ns1:artistName "tracy lawrence" ;
+    ns1:isArtistOf ns1:froze_over .
+
+ns1:twenty_one_pilots a ns1:Artist ;
+    ns1:artistName "twenty one pilots" ;
+    ns1:isArtistOf ns1:tear_in_my_heart .
+
+ns1:umut_ertek a ns1:Artist ;
+    ns1:artistName "umut ertek" ;
+    ns1:isArtistOf ns1:b_boys .
+
+ns1:warren_zevon a ns1:Artist ;
+    ns1:artistName "warren zevon" ;
+    ns1:isArtistOf <https://example.org/ontology/music#lawyers,_guns_and_money> .
+
+ns1:will_smith a ns1:Artist ;
+    ns1:artistName "will smith" ;
+    ns1:isArtistOf ns1:switch .
+
+ns1:willie_clayton a ns1:Artist ;
+    ns1:artistName "willie clayton" ;
+    ns1:isArtistOf ns1:wiggle .
+
+ns1:willie_nelson a ns1:Artist ;
+    ns1:artistName "willie nelson" ;
+    ns1:isArtistOf ns1:mr._record_man .
+
+ns1:wynonna a ns1:Artist ;
+    ns1:artistName "wynonna" ;
+    ns1:isArtistOf ns1:live_with_jesus .
+
+ns1:xscape a ns1:Artist ;
+    ns1:artistName "xscape" ;
+    ns1:isArtistOf ns1:is_my_living_in_vain .
+
+ns1:yellowman a ns1:Artist ;
+    ns1:artistName "yellowman" ;
+    ns1:isArtistOf ns1:natty_sat_upon_the_rock .
+
+ns1:yo_la_tengo a ns1:Artist ;
+    ns1:artistName "yo la tengo" ;
+    ns1:isArtistOf ns1:autumn_sweater .
+
+ns1:young_money a ns1:Artist ;
+    ns1:artistName "young money" ;
+    ns1:isArtistOf ns1:uoeno .
+
+<https://example.org/ontology/music#ziggy_marley_&_the_melody_makers> a ns1:Artist ;
+    ns1:artistName "ziggy marley & the melody makers" ;
+    ns1:isArtistOf ns1:so_good_so_right .
+
+<https://example.org/ontology/music#(i've_been)_searchin'_so_long> a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:chicago ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1974 ;
+    ns1:trackName "(i've been) searchin' so long" .
+
+ns1:100_racks_\(offset_feat._playboi_carti\) a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:quality_control ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2019 ;
+    ns1:trackName "100 racks (offset feat. playboi carti)" .
+
+<https://example.org/ontology/music#after_you've_gone> a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:judy_garland ;
+    ns1:hasTopic ns1:feelings ;
+    ns1:releaseDate 1955 ;
+    ns1:trackName "after you've gone" .
+
+ns1:all_that_you_dream_\(with_linda_ronstadt\) a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:little_feat ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1975 ;
+    ns1:trackName "all that you dream (with linda ronstadt)" .
+
+ns1:anthem a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:greta_van_fleet ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2018 ;
+    ns1:trackName "anthem" .
+
+ns1:ariel_ramirez a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:richard_buckner ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1998 ;
+    ns1:trackName "ariel ramirez" .
+
+ns1:asking_me_lies a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:the_replacements ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1989 ;
+    ns1:trackName "asking me lies" .
+
+ns1:at_seventeen a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:janis_ian ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1975 ;
+    ns1:trackName "at seventeen" .
+
+ns1:autumn_sweater a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:yo_la_tengo ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1997 ;
+    ns1:trackName "autumn sweater" .
+
+ns1:b_boys a ns1:Track ;
+    ns1:genre "hip hop" ;
+    ns1:hasArtist ns1:umut_ertek ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2004 ;
+    ns1:trackName "b boys" .
+
+ns1:bad_company a ns1:Artist ;
+    ns1:artistName "bad company" ;
+    ns1:isArtistOf ns1:burning_up,
+        <https://example.org/ontology/music#don't_let_me_down> .
+
+ns1:bad_girls_club a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:falling_in_reverse ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2013 ;
+    ns1:trackName "bad girls club" .
+
+<https://example.org/ontology/music#bad_liar_–_stripped> a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:imagine_dragons ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2019 ;
+    ns1:trackName "bad liar – stripped" .
+
+ns1:be_my_yoko_ono a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:barenaked_ladies ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1992 ;
+    ns1:trackName "be my yoko ono" .
+
+ns1:be_real_\(feat._dej_loaf\) a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:kid_ink ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2015 ;
+    ns1:trackName "be real (feat. dej loaf)" .
+
+ns1:belexes a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:kansas ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1974 ;
+    ns1:trackName "belexes" .
+
+ns1:blue_velvet a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:bobby_vinton ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 1954 ;
+    ns1:trackName "blue velvet" .
+
+ns1:blues_in_the_night a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:cab_calloway ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 2004 ;
+    ns1:trackName "blues in the night" .
+
+ns1:boogie_man a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:bernard_allison ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2008 ;
+    ns1:trackName "boogie man" .
+
+ns1:bread a ns1:Artist ;
+    ns1:artistName "bread" ;
+    ns1:isArtistOf ns1:just_like_yesterday,
+        ns1:yours_for_life .
+
+ns1:break_the_needle_\(spase_ti_velona\) a ns1:Track ;
+    ns1:genre "hip hop" ;
+    ns1:hasArtist ns1:apogonoi_tou_omirou ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2012 ;
+    ns1:trackName "break the needle (spase ti velona)" .
+
+ns1:breakaway a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:donna_summer ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1989 ;
+    ns1:trackName "breakaway" .
+
+ns1:burn_the_witch a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:queens_of_the_stone_age ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2005 ;
+    ns1:trackName "burn the witch" .
+
+ns1:burning_up a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:bad_company ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1986 ;
+    ns1:trackName "burning up" .
+
+ns1:carefree_highway a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:gordon_lightfoot ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1974 ;
+    ns1:trackName "carefree highway" .
+
+ns1:chuckie a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:geto_boys ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1991 ;
+    ns1:trackName "chuckie" .
+
+ns1:closer_to_the_one_that_you_love a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:the_brothers_johnson ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 1980 ;
+    ns1:trackName "closer to the one that you love" .
+
+ns1:combustion a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:meshuggah ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2008 ;
+    ns1:trackName "combustion" .
+
+ns1:country_song a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:seether ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2011 ;
+    ns1:trackName "country song" .
+
+ns1:crocodile_tears a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:lee_roy_parnell ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1989 ;
+    ns1:trackName "crocodile tears" .
+
+ns1:devin_townsend_project a ns1:Artist ;
+    ns1:artistName "devin townsend project" ;
+    ns1:isArtistOf ns1:failure,
+        ns1:save_our_now .
+
+ns1:does_it_really_make_a_difference_\(feat._mavis_staples\) a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:galactic ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2015 ;
+    ns1:trackName "does it really make a difference (feat. mavis staples)" .
+
+<https://example.org/ontology/music#don't_blink> a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:kenny_chesney ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2007 ;
+    ns1:trackName "don't blink" .
+
+<https://example.org/ontology/music#don't_let_me_down> a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:bad_company ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1974 ;
+    ns1:trackName "don't let me down" .
+
+<https://example.org/ontology/music#don't_swallow_the_cap> a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:the_national ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2013 ;
+    ns1:trackName "don't swallow the cap" .
+
+ns1:down_to_the_sea a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:robert_plant ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1993 ;
+    ns1:trackName "down to the sea" .
+
+ns1:easy_money a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:billy_joel ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1983 ;
+    ns1:trackName "easy money" .
+
+ns1:ella_fitzgerald a ns1:Artist ;
+    ns1:artistName "ella fitzgerald" ;
+    ns1:isArtistOf ns1:moonlight_on_the_ganges,
+        ns1:night_and_day .
+
+ns1:eye_of_the_zombie a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:john_fogerty ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1986 ;
+    ns1:trackName "eye of the zombie" .
+
+ns1:failure a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:devin_townsend_project ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2016 ;
+    ns1:trackName "failure" .
+
+ns1:fly_like_an_eagle a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:larkin_poe ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2018 ;
+    ns1:trackName "fly like an eagle" .
+
+ns1:forgive_me a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:pat_boone ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1956 ;
+    ns1:trackName "forgive me" .
+
+ns1:freedom a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:rage_against_the_machine ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1992 ;
+    ns1:trackName "freedom" .
+
+ns1:freewill a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:rush ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1980 ;
+    ns1:trackName "freewill" .
+
+ns1:from_the_edge_of_the_deep_green_sea a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:the_cure ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1992 ;
+    ns1:trackName "from the edge of the deep green sea" .
+
+ns1:froze_over a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:tracy_lawrence ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1991 ;
+    ns1:trackName "froze over" .
+
+ns1:games_people_play a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:waylon_jennings ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1969 ;
+    ns1:trackName "games people play" .
+
+ns1:gimme_danger a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:the_stooges ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1973 ;
+    ns1:trackName "gimme danger" .
+
+ns1:give_it_away a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist ns1:ziggy_marley ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2014 ;
+    ns1:trackName "give it away" .
+
+ns1:glen_campbell a ns1:Artist ;
+    ns1:artistName "glen campbell" ;
+    ns1:isArtistOf <https://example.org/ontology/music#it's_been_so_long_darlin'>,
+        ns1:words .
+
+ns1:good_old_days a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist ns1:pato_banton ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2000 ;
+    ns1:trackName "good old days" .
+
+ns1:grndmza_pt._1 a ns1:Track ;
+    ns1:genre "hip hop" ;
+    ns1:hasArtist ns1:grandmaster_melle_mel ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2012 ;
+    ns1:trackName "grndmza pt. 1" .
+
+ns1:groovy_little_summer_song a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:james_otto ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 2010 ;
+    ns1:trackName "groovy little summer song" .
+
+ns1:hate_me_now_\(feat._puff_daddy\) a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:nas ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1999 ;
+    ns1:trackName "hate me now (feat. puff daddy)" .
+
+ns1:here_i_am a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist ns1:groundation ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2009 ;
+    ns1:trackName "here i am" .
+
+ns1:hip-hop_blues a ns1:Track ;
+    ns1:genre "hip hop" ;
+    ns1:hasArtist ns1:diaz ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2009 ;
+    ns1:trackName "hip-hop blues" .
+
+ns1:honky_cat a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:elton_john ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1972 ;
+    ns1:trackName "honky cat" .
+
+ns1:hoochie_coochie a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:band_of_skulls ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2014 ;
+    ns1:trackName "hoochie coochie" .
+
+ns1:hook_in_mouth a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:megadeth ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1988 ;
+    ns1:trackName "hook in mouth" .
+
+ns1:hope a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:shaggy ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2000 ;
+    ns1:trackName "hope" .
+
+<https://example.org/ontology/music#how_long_has_this_been_going_on?> a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:judy_garland ;
+    ns1:hasTopic ns1:romantic ;
+    ns1:releaseDate 1961 ;
+    ns1:trackName "how long has this been going on?" .
+
+<https://example.org/ontology/music#i'll_follow_you> a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:shinedown ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2012 ;
+    ns1:trackName "i'll follow you" .
+
+<https://example.org/ontology/music#i'm_so_bored_with_the_u.s.a.> a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:the_clash ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1977 ;
+    ns1:trackName "i'm so bored with the u.s.a." .
+
+<https://example.org/ontology/music#i_don't_want_to_see_tomorrow> a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:nat_king_cole ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1964 ;
+    ns1:trackName "i don't want to see tomorrow" .
+
+ns1:i_fall_to_pieces a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:patsy_cline ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1961 ;
+    ns1:trackName "i fall to pieces" .
+
+<https://example.org/ontology/music#i_got_it_bad_and_that_ain't_good> a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:keith_jarrett ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1999 ;
+    ns1:trackName "i got it bad and that ain't good" .
+
+ns1:i_hate_music a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:the_replacements ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1981 ;
+    ns1:trackName "i hate music" .
+
+ns1:i_have_waited_so_long a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:foreigner ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 1978 ;
+    ns1:trackName "i have waited so long" .
+
+<https://example.org/ontology/music#i_saw_your_mommy...> a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:suicidal_tendencies ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1983 ;
+    ns1:trackName "i saw your mommy..." .
+
+ns1:i_still_dream a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:boney_james ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1997 ;
+    ns1:trackName "i still dream" .
+
+ns1:i_wanna_be_happy a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:teddy_wilson ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1957 ;
+    ns1:trackName "i wanna be happy" .
+
+ns1:i_will_follow a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:chris_tomlin ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2010 ;
+    ns1:trackName "i will follow" .
+
+ns1:i_will_remember_you a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:amy_grant ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1991 ;
+    ns1:trackName "i will remember you" .
+
+ns1:if_all_else_fails a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:my_morning_jacket ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1999 ;
+    ns1:trackName "if all else fails" .
+
+ns1:if_i_could_only_win_your_love a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:emmylou_harris ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1975 ;
+    ns1:trackName "if i could only win your love" .
+
+<https://example.org/ontology/music#if_you're_reading_this> a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:tim_mcgraw ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2007 ;
+    ns1:trackName "if you're reading this" .
+
+ns1:in_my_room a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:nancy_sinatra ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1966 ;
+    ns1:trackName "in my room" .
+
+ns1:is_my_living_in_vain a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:xscape ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1993 ;
+    ns1:trackName "is my living in vain" .
+
+<https://example.org/ontology/music#it's_been_so_long_darlin'> a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:glen_campbell ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1963 ;
+    ns1:trackName "it's been so long darlin'" .
+
+<https://example.org/ontology/music#it's_not_over_(if_i'm_not_over_you)> a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:reba_mcentire ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1984 ;
+    ns1:trackName "it's not over (if i'm not over you)" .
+
+<https://example.org/ontology/music#it's_too_late_now_(to_worry_anymore)> a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:marty_robbins ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1957 ;
+    ns1:trackName "it's too late now (to worry anymore)" .
+
+ns1:jack_of_all_trades a ns1:Track ;
+    ns1:genre "hip hop" ;
+    ns1:hasArtist ns1:aceyalone ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2002 ;
+    ns1:trackName "jack of all trades" .
+
+ns1:jah_jah_city a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist ns1:capleton ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2001 ;
+    ns1:trackName "jah jah city" .
+
+ns1:jamaica_farewell a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:sam_cooke ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1960 ;
+    ns1:trackName "jamaica farewell" .
+
+ns1:jar_of_hearts a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:christina_perri ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2011 ;
+    ns1:trackName "jar of hearts" .
+
+ns1:judy_garland a ns1:Artist ;
+    ns1:artistName "judy garland" ;
+    ns1:isArtistOf <https://example.org/ontology/music#after_you've_gone>,
+        <https://example.org/ontology/music#how_long_has_this_been_going_on?> .
+
+ns1:just_like_yesterday a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:bread ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1972 ;
+    ns1:trackName "just like yesterday" .
+
+ns1:just_out_of_reach_\(of_my_two_open_arms\) a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:patsy_cline ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1965 ;
+    ns1:trackName "just out of reach (of my two open arms)" .
+
+ns1:kill_again a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:slayer ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1985 ;
+    ns1:trackName "kill again" .
+
+ns1:late_for_your_life a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:mary_chapin_carpenter ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1989 ;
+    ns1:trackName "late for your life" .
+
+ns1:lateralus a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:tool ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2001 ;
+    ns1:trackName "lateralus" .
+
+<https://example.org/ontology/music#lawyers,_guns_and_money> a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:warren_zevon ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1978 ;
+    ns1:trackName "lawyers, guns and money" .
+
+ns1:let_me_live_with_love_\(and_die_with_you\) a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:ricky_van_shelton ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1988 ;
+    ns1:trackName "let me live with love (and die with you)" .
+
+ns1:live_with_jesus a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:wynonna ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1992 ;
+    ns1:trackName "live with jesus" .
+
+ns1:lonely_heart a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:the_ventures ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1961 ;
+    ns1:trackName "lonely heart" .
+
+ns1:lonely_man_blues a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:muddy_waters ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 1978 ;
+    ns1:trackName "lonely man blues" .
+
+ns1:looking_back a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:marty_robbins ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1962 ;
+    ns1:trackName "looking back" .
+
+ns1:looseys a ns1:Track ;
+    ns1:genre "hip hop" ;
+    ns1:hasArtist ns1:das_efx ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2019 ;
+    ns1:trackName "looseys" .
+
+ns1:losing_it a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:rush ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1982 ;
+    ns1:trackName "losing it" .
+
+ns1:lost_love a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:golden_smog ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1998 ;
+    ns1:trackName "lost love" .
+
+<https://example.org/ontology/music#love's_silhouette> a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:pieces_of_a_dream ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2002 ;
+    ns1:trackName "love's silhouette" .
+
+ns1:love_takes_time a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:mariah_carey ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1990 ;
+    ns1:trackName "love takes time" .
+
+ns1:love_time a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:badfinger ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1974 ;
+    ns1:trackName "love time" .
+
+ns1:love_your_life a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:average_white_band ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1976 ;
+    ns1:trackName "love your life" .
+
+ns1:lullaby a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:loudon_wainwright_iii ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1973 ;
+    ns1:trackName "lullaby" .
+
+ns1:made_it_up_the_mountain a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:the_wood_brothers ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2011 ;
+    ns1:trackName "made it up the mountain" .
+
+ns1:marty_robbins a ns1:Artist ;
+    ns1:artistName "marty robbins" ;
+    ns1:isArtistOf <https://example.org/ontology/music#it's_too_late_now_(to_worry_anymore)>,
+        ns1:looking_back .
+
+ns1:medicine_man a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:pantera ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1990 ;
+    ns1:trackName "medicine man" .
+
+ns1:men_with_broken_hearts a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:hank_williams ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1966 ;
+    ns1:trackName "men with broken hearts" .
+
+ns1:montezuma a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:fleet_foxes ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2011 ;
+    ns1:trackName "montezuma" .
+
+ns1:moonlight_on_the_ganges a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:ella_fitzgerald ;
+    ns1:hasTopic ns1:romantic ;
+    ns1:releaseDate 1958 ;
+    ns1:trackName "moonlight on the ganges" .
+
+ns1:mr._record_man a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:willie_nelson ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 1962 ;
+    ns1:trackName "mr. record man" .
+
+ns1:my_old_piano a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:diana_ross ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1980 ;
+    ns1:trackName "my old piano" .
+
+ns1:my_own_prison a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:creed ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1997 ;
+    ns1:trackName "my own prison" .
+
+ns1:my_propeller a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:arctic_monkeys ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2009 ;
+    ns1:trackName "my propeller" .
+
+ns1:nancy_sinatra a ns1:Artist ;
+    ns1:artistName "nancy sinatra" ;
+    ns1:isArtistOf ns1:in_my_room,
+        <https://example.org/ontology/music#so_long,_babe> .
+
+ns1:nat_king_cole a ns1:Artist ;
+    ns1:artistName "nat king cole" ;
+    ns1:isArtistOf <https://example.org/ontology/music#i_don't_want_to_see_tomorrow>,
+        ns1:pick_yourself_up .
+
+ns1:natty_sat_upon_the_rock a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist ns1:yellowman ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1982 ;
+    ns1:trackName "natty sat upon the rock" .
+
+ns1:night_and_day a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:ella_fitzgerald ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 1956 ;
+    ns1:trackName "night and day" .
+
+ns1:no_vacancy a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:neil_sedaka ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1959 ;
+    ns1:trackName "no vacancy" .
+
+<https://example.org/ontology/music#nobody's_perfect> a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:j._cole ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2011 ;
+    ns1:trackName "nobody's perfect" .
+
+ns1:objection_\(tango\) a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:shakira ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2001 ;
+    ns1:trackName "objection (tango)" .
+
+ns1:oh_baby_doll a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:the_pretty_things ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 1965 ;
+    ns1:trackName "oh baby doll" .
+
+ns1:one_woman a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:ted_nugent ;
+    ns1:hasTopic ns1:romantic ;
+    ns1:releaseDate 1978 ;
+    ns1:trackName "one woman" .
+
+ns1:one_world_\(not_three\) a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:the_police ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1981 ;
+    ns1:trackName "one world (not three)" .
+
+ns1:only_trust_your_heart a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:astrud_gilberto ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1987 ;
+    ns1:trackName "only trust your heart" .
+
+ns1:opposites_attract a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:paula_abdul ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1988 ;
+    ns1:trackName "opposites attract" .
+
+ns1:out_here_in_the_middle a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:robert_earl_keen ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2003 ;
+    ns1:trackName "out here in the middle" .
+
+<https://example.org/ontology/music#overture_from_'i_am_curious,_orange'> a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:the_fall ;
+    ns1:hasTopic ns1:feelings ;
+    ns1:releaseDate 1988 ;
+    ns1:trackName "overture from 'i am curious, orange'" .
+
+ns1:patsy_cline a ns1:Artist ;
+    ns1:artistName "patsy cline" ;
+    ns1:isArtistOf ns1:i_fall_to_pieces,
+        ns1:just_out_of_reach_\(of_my_two_open_arms\) .
+
+ns1:peaceful_life a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:guts ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2016 ;
+    ns1:trackName "peaceful life" .
+
+ns1:people a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:barney_kessel ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1983 ;
+    ns1:trackName "people" .
+
+ns1:pick_yourself_up a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:nat_king_cole ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1987 ;
+    ns1:trackName "pick yourself up" .
+
+ns1:prayer_of_the_refugee a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:rise_against ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2006 ;
+    ns1:trackName "prayer of the refugee" .
+
+ns1:promises a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:def_leppard ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1999 ;
+    ns1:trackName "promises" .
+
+<https://example.org/ontology/music#psycho,_pt._2> a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:russ ;
+    ns1:hasTopic ns1:feelings ;
+    ns1:releaseDate 2016 ;
+    ns1:trackName "psycho, pt. 2" .
+
+ns1:radio_song a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist <https://example.org/ontology/music#r.e.m.> ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 1991 ;
+    ns1:trackName "radio song" .
+
+ns1:ready_steady_go a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:generation_x ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 1978 ;
+    ns1:trackName "ready steady go" .
+
+ns1:reason_to_live a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:kiss ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1987 ;
+    ns1:trackName "reason to live" .
+
+ns1:reggae_in_my_head a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist ns1:ziggy_marley ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2011 ;
+    ns1:trackName "reggae in my head" .
+
+ns1:remember_me_\(feat._steve_augeri\) a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:journey ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1998 ;
+    ns1:trackName "remember me (feat. steve augeri)" .
+
+ns1:ricky_van_shelton a ns1:Artist ;
+    ns1:artistName "ricky van shelton" ;
+    ns1:isArtistOf ns1:let_me_live_with_love_\(and_die_with_you\),
+        ns1:you_would_do_the_same_for_me .
+
+ns1:rise a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:eddie_vedder ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 2007 ;
+    ns1:trackName "rise" .
+
+ns1:rockall a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:mezzoforte ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1984 ;
+    ns1:trackName "rockall" .
+
+ns1:rush a ns1:Artist ;
+    ns1:artistName "rush" ;
+    ns1:isArtistOf ns1:freewill,
+        ns1:losing_it .
+
+ns1:sails_to_the_wind a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist ns1:dirty_heads ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2008 ;
+    ns1:trackName "sails to the wind" .
+
+ns1:san_antonio_rose a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:bob_wills ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1960 ;
+    ns1:trackName "san antonio rose" .
+
+ns1:save_our_now a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:devin_townsend_project ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2012 ;
+    ns1:trackName "save our now" .
+
+ns1:set_it_out a ns1:Track ;
+    ns1:genre "hip hop" ;
+    ns1:hasArtist ns1:nappy_roots ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2019 ;
+    ns1:trackName "set it out" .
+
+ns1:shattered a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:the_rolling_stones ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1978 ;
+    ns1:trackName "shattered" .
+
+<https://example.org/ontology/music#she's_hot_to_go> a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:lyle_lovett ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 1987 ;
+    ns1:trackName "she's hot to go" .
+
+ns1:she_loves_me_now a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist ns1:cocoa_tea ;
+    ns1:hasTopic ns1:romantic ;
+    ns1:releaseDate 1994 ;
+    ns1:trackName "she loves me now" .
+
+ns1:silver_wings a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:merle_haggard ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1969 ;
+    ns1:trackName "silver wings" .
+
+ns1:sissy_that_walk a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:rupaul ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2014 ;
+    ns1:trackName "sissy that walk" .
+
+ns1:six a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist ns1:311 ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1994 ;
+    ns1:trackName "six" .
+
+ns1:skin_and_bones a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:cage_the_elephant ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2019 ;
+    ns1:trackName "skin and bones" .
+
+ns1:slip_away a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:clarence_carter ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1968 ;
+    ns1:trackName "slip away" .
+
+ns1:smooth_while_raw a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:gramatik ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2009 ;
+    ns1:trackName "smooth while raw" .
+
+ns1:snowqueen_of_texas a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist <https://example.org/ontology/music#the_mamas_&_the_papas> ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1971 ;
+    ns1:trackName "snowqueen of texas" .
+
+ns1:so_good_so_right a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist <https://example.org/ontology/music#ziggy_marley_&_the_melody_makers> ;
+    ns1:hasTopic ns1:feelings ;
+    ns1:releaseDate 1991 ;
+    ns1:trackName "so good so right" .
+
+<https://example.org/ontology/music#so_long,_babe> a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:nancy_sinatra ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 1966 ;
+    ns1:trackName "so long, babe" .
+
+ns1:some_other_time a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:the_alan_parsons_project ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1977 ;
+    ns1:trackName "some other time" .
+
+<https://example.org/ontology/music#somebody's_gonna_love_you> a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:lee_greenwood ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1983 ;
+    ns1:trackName "somebody's gonna love you" .
+
+ns1:son_of_a_gun a ns1:Track ;
+    ns1:genre "hip hop" ;
+    ns1:hasArtist ns1:illvibe ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2009 ;
+    ns1:trackName "son of a gun" .
+
+ns1:song-song a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:brad_mehldau ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1998 ;
+    ns1:trackName "song-song" .
+
+ns1:soon a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:my_bloody_valentine ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1991 ;
+    ns1:trackName "soon" .
+
+ns1:sorrow_\(breaks_a_good_man_down\) a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:waylon_jennings ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1968 ;
+    ns1:trackName "sorrow (breaks a good man down)" .
+
+<https://example.org/ontology/music#steady_rockin'> a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:blackfoot ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 1986 ;
+    ns1:trackName "steady rockin'" .
+
+ns1:steal_your_heart a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:slave ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1981 ;
+    ns1:trackName "steal your heart" .
+
+ns1:swing_that_music a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:louis_armstrong ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 1990 ;
+    ns1:trackName "swing that music" .
+
+ns1:switch a ns1:Track ;
+    ns1:genre "hip hop" ;
+    ns1:hasArtist ns1:will_smith ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2019 ;
+    ns1:trackName "switch" .
+
+ns1:tear_in_my_heart a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:twenty_one_pilots ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2015 ;
+    ns1:trackName "tear in my heart" .
+
+ns1:tequila_sunrise a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:eagles ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1973 ;
+    ns1:trackName "tequila sunrise" .
+
+ns1:the_ceremony a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:george_jones ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1971 ;
+    ns1:trackName "the ceremony" .
+
+ns1:the_classical a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:the_fall ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1982 ;
+    ns1:trackName "the classical" .
+
+ns1:the_dam_at_otter_creek a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:live ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1994 ;
+    ns1:trackName "the dam at otter creek" .
+
+ns1:the_difference_between_a_woman_and_a_man a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:josh_turner ;
+    ns1:hasTopic ns1:romantic ;
+    ns1:releaseDate 2003 ;
+    ns1:trackName "the difference between a woman and a man" .
+
+ns1:the_down_town a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:days_of_the_new ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 1997 ;
+    ns1:trackName "the down town" .
+
+ns1:the_fall a ns1:Artist ;
+    ns1:artistName "the fall" ;
+    ns1:isArtistOf <https://example.org/ontology/music#overture_from_'i_am_curious,_orange'>,
+        ns1:the_classical .
+
+ns1:the_kick_inside a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:kate_bush ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1978 ;
+    ns1:trackName "the kick inside" .
+
+ns1:the_real_me a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:pete_townshend ;
+    ns1:hasTopic ns1:feelings ;
+    ns1:releaseDate 1973 ;
+    ns1:trackName "the real me" .
+
+ns1:the_replacements a ns1:Artist ;
+    ns1:artistName "the replacements" ;
+    ns1:isArtistOf ns1:asking_me_lies,
+        ns1:i_hate_music .
+
+ns1:the_sentinel a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:judas_priest ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1984 ;
+    ns1:trackName "the sentinel" .
+
+ns1:the_song_is_you a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:keely_smith ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 1958 ;
+    ns1:trackName "the song is you" .
+
+ns1:the_stroll a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:chubby_checker ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 1961 ;
+    ns1:trackName "the stroll" .
+
+ns1:there_is_power_in_the_blood a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:alan_jackson ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2013 ;
+    ns1:trackName "there is power in the blood" .
+
+ns1:this_is_the_one a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:thin_lizzy ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1983 ;
+    ns1:trackName "this is the one" .
+
+<https://example.org/ontology/music#this_just_doesn't_seem_to_be_my_day> a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:the_monkees ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1966 ;
+    ns1:trackName "this just doesn't seem to be my day" .
+
+<https://example.org/ontology/music#this_romeo_ain't_got_julie_yet> a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:diamond_rio ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1991 ;
+    ns1:trackName "this romeo ain't got julie yet" .
+
+ns1:tiger_rag a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:the_mills_brothers ;
+    ns1:hasTopic ns1:romantic ;
+    ns1:releaseDate 1995 ;
+    ns1:trackName "tiger rag" .
+
+ns1:tin_man a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:the_avett_brothers ;
+    ns1:hasTopic ns1:feelings ;
+    ns1:releaseDate 2009 ;
+    ns1:trackName "tin man" .
+
+ns1:titulos_principio a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist <https://example.org/ontology/music#esquivel!> ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 1957 ;
+    ns1:trackName "titulos principio" .
+
+ns1:toes_across_the_floor a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:blind_melon ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1995 ;
+    ns1:trackName "toes across the floor" .
+
+<https://example.org/ontology/music#tonight,_tonight,_tonight> a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:genesis ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 1986 ;
+    ns1:trackName "tonight, tonight, tonight" .
+
+ns1:traumatized a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist ns1:popcaan ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 2019 ;
+    ns1:trackName "traumatized" .
+
+ns1:two_tickets_to_paradise a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:eddie_money ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 1977 ;
+    ns1:trackName "two tickets to paradise" .
+
+ns1:uoeno a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:young_money ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2014 ;
+    ns1:trackName "uoeno" .
+
+ns1:up_the_neck a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:pretenders ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1980 ;
+    ns1:trackName "up the neck" .
+
+ns1:useless a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:depeche_mode ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1997 ;
+    ns1:trackName "useless" .
+
+ns1:waylon_jennings a ns1:Artist ;
+    ns1:artistName "waylon jennings" ;
+    ns1:isArtistOf ns1:games_people_play,
+        ns1:sorrow_\(breaks_a_good_man_down\) .
+
+ns1:we_are_one a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:maze ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1998 ;
+    ns1:trackName "we are one" .
+
+ns1:what_up_gangsta a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:50_cent ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2003 ;
+    ns1:trackName "what up gangsta" .
+
+ns1:whatever_it_takes a ns1:Track ;
+    ns1:genre "jazz" ;
+    ns1:hasArtist ns1:anita_baker ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 2017 ;
+    ns1:trackName "whatever it takes" .
+
+<https://example.org/ontology/music#when_i'm_with_you> a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:don_williams ;
+    ns1:hasTopic ns1:music ;
+    ns1:releaseDate 1978 ;
+    ns1:trackName "when i'm with you" .
+
+ns1:when_love_takes_over_\(feat._kelly_rowland\) a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:david_guetta ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 2009 ;
+    ns1:trackName "when love takes over (feat. kelly rowland)" .
+
+ns1:whip_it a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:devo ;
+    ns1:hasTopic ns1:violence ;
+    ns1:releaseDate 1980 ;
+    ns1:trackName "whip it" .
+
+ns1:wiggle a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:willie_clayton ;
+    ns1:hasTopic ns1:obscene ;
+    ns1:releaseDate 2006 ;
+    ns1:trackName "wiggle" .
+
+ns1:without_you a ns1:Track ;
+    ns1:genre "rock" ;
+    ns1:hasArtist ns1:air_supply ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1991 ;
+    ns1:trackName "without you" .
+
+ns1:words a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:glen_campbell ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1968 ;
+    ns1:trackName "words" .
+
+ns1:you_brought_the_sunshine a ns1:Track ;
+    ns1:genre "blues" ;
+    ns1:hasArtist ns1:al_green ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1985 ;
+    ns1:trackName "you brought the sunshine" .
+
+ns1:you_would_do_the_same_for_me a ns1:Track ;
+    ns1:genre "country" ;
+    ns1:hasArtist ns1:ricky_van_shelton ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1990 ;
+    ns1:trackName "you would do the same for me" .
+
+ns1:your_song a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:andy_williams ;
+    ns1:hasTopic <https://example.org/ontology/music#world/life> ;
+    ns1:releaseDate 1962 ;
+    ns1:trackName "your song" .
+
+ns1:yours_for_life a ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:bread ;
+    ns1:hasTopic ns1:sadness ;
+    ns1:releaseDate 1972 ;
+    ns1:trackName "yours for life" .
+
+ns1:ziggy_marley a ns1:Artist ;
+    ns1:artistName "ziggy marley" ;
+    ns1:isArtistOf ns1:give_it_away,
+        ns1:reggae_in_my_head .
+
+ns1:zimbabwe a ns1:Track ;
+    ns1:genre "reggae" ;
+    ns1:hasArtist <https://example.org/ontology/music#bob_marley_&_the_wailers> ;
+    ns1:hasTopic <https://example.org/ontology/music#night/time> ;
+    ns1:releaseDate 1979 ;
+    ns1:trackName "zimbabwe" .
+
+ns1:romantic a ns1:Topic ;
+    ns1:isTopicOf <https://example.org/ontology/music#how_long_has_this_been_going_on?>,
+        ns1:moonlight_on_the_ganges,
+        ns1:one_woman,
+        ns1:she_loves_me_now,
+        ns1:the_difference_between_a_woman_and_a_man,
+        ns1:tiger_rag ;
+    ns1:topic "romantic" .
+
+ns1:Topic a owl:Class .
+
+ns1:feelings a ns1:Topic,
+        ns1:Track ;
+    ns1:genre "pop" ;
+    ns1:hasArtist ns1:the_offspring ;
+    ns1:hasTopic ns1:feelings ;
+    ns1:isTopicOf <https://example.org/ontology/music#after_you've_gone>,
+        ns1:feelings,
+        <https://example.org/ontology/music#overture_from_'i_am_curious,_orange'>,
+        <https://example.org/ontology/music#psycho,_pt._2>,
+        ns1:so_good_so_right,
+        ns1:the_real_me,
+        ns1:tin_man ;
+    ns1:releaseDate 1998 ;
+    ns1:topic "feelings" ;
+    ns1:trackName "feelings" .
+
+<https://example.org/ontology/music#night/time> a ns1:Topic ;
+    ns1:isTopicOf ns1:closer_to_the_one_that_you_love,
+        ns1:i_have_waited_so_long,
+        ns1:night_and_day,
+        ns1:ready_steady_go,
+        <https://example.org/ontology/music#she's_hot_to_go>,
+        <https://example.org/ontology/music#so_long,_babe>,
+        ns1:titulos_principio,
+        <https://example.org/ontology/music#tonight,_tonight,_tonight>,
+        ns1:two_tickets_to_paradise,
+        ns1:when_love_takes_over_\(feat._kelly_rowland\),
+        ns1:zimbabwe ;
+    ns1:topic "night/time" .
+
+ns1:music a ns1:Topic ;
+    ns1:isTopicOf ns1:blue_velvet,
+        ns1:blues_in_the_night,
+        ns1:groovy_little_summer_song,
+        ns1:lonely_man_blues,
+        ns1:mr._record_man,
+        ns1:oh_baby_doll,
+        ns1:radio_song,
+        ns1:swing_that_music,
+        ns1:the_down_town,
+        ns1:the_song_is_you,
+        ns1:the_stroll,
+        <https://example.org/ontology/music#when_i'm_with_you> ;
+    ns1:topic "music" .
+
+ns1:obscene a ns1:Topic ;
+    ns1:isTopicOf ns1:100_racks_\(offset_feat._playboi_carti\),
+        ns1:b_boys,
+        ns1:bad_girls_club,
+        ns1:be_real_\(feat._dej_loaf\),
+        ns1:boogie_man,
+        ns1:chuckie,
+        ns1:easy_money,
+        ns1:freedom,
+        ns1:games_people_play,
+        ns1:grndmza_pt._1,
+        ns1:hate_me_now_\(feat._puff_daddy\),
+        ns1:hip-hop_blues,
+        ns1:honky_cat,
+        ns1:hoochie_coochie,
+        <https://example.org/ontology/music#i'm_so_bored_with_the_u.s.a.>,
+        <https://example.org/ontology/music#lawyers,_guns_and_money>,
+        ns1:looseys,
+        ns1:my_old_piano,
+        ns1:natty_sat_upon_the_rock,
+        ns1:no_vacancy,
+        <https://example.org/ontology/music#nobody's_perfect>,
+        ns1:opposites_attract,
+        ns1:people,
+        ns1:set_it_out,
+        ns1:six,
+        <https://example.org/ontology/music#steady_rockin'>,
+        ns1:switch,
+        ns1:uoeno,
+        ns1:what_up_gangsta,
+        ns1:wiggle ;
+    ns1:topic "obscene" .
+
+ns1:violence a ns1:Topic ;
+    ns1:isTopicOf ns1:all_that_you_dream_\(with_linda_ronstadt\),
+        ns1:ariel_ramirez,
+        ns1:asking_me_lies,
+        ns1:be_my_yoko_ono,
+        ns1:belexes,
+        ns1:burn_the_witch,
+        ns1:combustion,
+        ns1:country_song,
+        <https://example.org/ontology/music#don't_swallow_the_cap>,
+        ns1:eye_of_the_zombie,
+        ns1:froze_over,
+        ns1:here_i_am,
+        ns1:hook_in_mouth,
+        ns1:i_hate_music,
+        <https://example.org/ontology/music#i_saw_your_mommy...>,
+        <https://example.org/ontology/music#if_you're_reading_this>,
+        ns1:jack_of_all_trades,
+        ns1:jah_jah_city,
+        ns1:kill_again,
+        ns1:lateralus,
+        ns1:losing_it,
+        ns1:lullaby,
+        ns1:medicine_man,
+        ns1:my_own_prison,
+        ns1:peaceful_life,
+        ns1:pick_yourself_up,
+        ns1:prayer_of_the_refugee,
+        ns1:reggae_in_my_head,
+        ns1:rockall,
+        ns1:sails_to_the_wind,
+        ns1:smooth_while_raw,
+        ns1:snowqueen_of_texas,
+        ns1:soon,
+        ns1:the_ceremony,
+        ns1:the_dam_at_otter_creek,
+        ns1:the_sentinel,
+        ns1:there_is_power_in_the_blood,
+        ns1:this_is_the_one,
+        <https://example.org/ontology/music#this_romeo_ain't_got_julie_yet>,
+        ns1:toes_across_the_floor,
+        ns1:traumatized,
+        ns1:up_the_neck,
+        ns1:useless,
+        ns1:whip_it ;
+    ns1:topic "violence" .
+
+ns1:sadness a ns1:Topic ;
+    ns1:isTopicOf ns1:autumn_sweater,
+        ns1:break_the_needle_\(spase_ti_velona\),
+        ns1:burning_up,
+        ns1:carefree_highway,
+        ns1:crocodile_tears,
+        <https://example.org/ontology/music#don't_let_me_down>,
+        ns1:forgive_me,
+        ns1:from_the_edge_of_the_deep_green_sea,
+        ns1:gimme_danger,
+        ns1:give_it_away,
+        ns1:i_fall_to_pieces,
+        ns1:if_all_else_fails,
+        ns1:if_i_could_only_win_your_love,
+        ns1:in_my_room,
+        <https://example.org/ontology/music#it's_been_so_long_darlin'>,
+        <https://example.org/ontology/music#it's_not_over_(if_i'm_not_over_you)>,
+        <https://example.org/ontology/music#it's_too_late_now_(to_worry_anymore)>,
+        ns1:jamaica_farewell,
+        ns1:jar_of_hearts,
+        ns1:just_like_yesterday,
+        ns1:just_out_of_reach_\(of_my_two_open_arms\),
+        ns1:lonely_heart,
+        ns1:lost_love,
+        ns1:love_takes_time,
+        ns1:men_with_broken_hearts,
+        ns1:montezuma,
+        ns1:my_propeller,
+        ns1:objection_\(tango\),
+        ns1:only_trust_your_heart,
+        ns1:out_here_in_the_middle,
+        ns1:san_antonio_rose,
+        ns1:save_our_now,
+        ns1:silver_wings,
+        ns1:sissy_that_walk,
+        ns1:skin_and_bones,
+        ns1:slip_away,
+        <https://example.org/ontology/music#somebody's_gonna_love_you>,
+        ns1:son_of_a_gun,
+        ns1:steal_your_heart,
+        ns1:tear_in_my_heart,
+        <https://example.org/ontology/music#this_just_doesn't_seem_to_be_my_day>,
+        ns1:we_are_one,
+        ns1:whatever_it_takes,
+        ns1:words,
+        ns1:yours_for_life ;
+    ns1:topic "sadness" .
+
+<https://example.org/ontology/music#world/life> a ns1:Topic ;
+    ns1:isTopicOf <https://example.org/ontology/music#(i've_been)_searchin'_so_long>,
+        ns1:anthem,
+        ns1:at_seventeen,
+        <https://example.org/ontology/music#bad_liar_–_stripped>,
+        ns1:breakaway,
+        ns1:does_it_really_make_a_difference_\(feat._mavis_staples\),
+        <https://example.org/ontology/music#don't_blink>,
+        ns1:down_to_the_sea,
+        ns1:failure,
+        ns1:fly_like_an_eagle,
+        ns1:freewill,
+        ns1:good_old_days,
+        ns1:hope,
+        <https://example.org/ontology/music#i'll_follow_you>,
+        <https://example.org/ontology/music#i_don't_want_to_see_tomorrow>,
+        <https://example.org/ontology/music#i_got_it_bad_and_that_ain't_good>,
+        ns1:i_still_dream,
+        ns1:i_wanna_be_happy,
+        ns1:i_will_follow,
+        ns1:i_will_remember_you,
+        ns1:is_my_living_in_vain,
+        ns1:late_for_your_life,
+        ns1:let_me_live_with_love_\(and_die_with_you\),
+        ns1:live_with_jesus,
+        ns1:looking_back,
+        <https://example.org/ontology/music#love's_silhouette>,
+        ns1:love_time,
+        ns1:love_your_life,
+        ns1:made_it_up_the_mountain,
+        ns1:one_world_\(not_three\),
+        ns1:promises,
+        ns1:reason_to_live,
+        ns1:remember_me_\(feat._steve_augeri\),
+        ns1:rise,
+        ns1:shattered,
+        ns1:some_other_time,
+        ns1:song-song,
+        ns1:sorrow_\(breaks_a_good_man_down\),
+        ns1:tequila_sunrise,
+        ns1:the_classical,
+        ns1:the_kick_inside,
+        ns1:without_you,
+        ns1:you_brought_the_sunshine,
+        ns1:you_would_do_the_same_for_me,
+        ns1:your_song ;
+    ns1:topic "world/life" .
+
+ns1:Artist a owl:Class .
+
+ns1:Track a owl:Class .
+
