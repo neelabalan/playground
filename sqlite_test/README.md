@@ -10,38 +10,68 @@ While SQLite provides faster write operations, especially for bulk inserts, the 
 
 > Note: The text file provided here is from this [wikipedia page](https://en.wikipedia.org/wiki/India)
 
+#### config
 ```
 Model Name: MacBook Air
 Chip: Apple M2
 Total Number of Cores: 8 (4 performance and 4 efficiency)
 Memory: 8 GB
 OS Loader Version: 10151.101.3
+```
 
+> 10,000 files
+
+```
 ❯ python benchmark.py --iterations=10000 --filename=text
-write_file_system took 2.743858814239502 seconds
-read_file_system took 2.236079216003418 seconds
-write_sqlite took 4.433104038238525 seconds
-read_sqlite took 1.4777662754058838 seconds
+write_file_system took 2.82395601272583 seconds
+read_file_system took 2.35856294631958 seconds
+write_sqlite took 3.9596030712127686 seconds
+read_sqlite took 1.4083750247955322 seconds
 Cleaning up files
 
 ❯ python benchmark.py --iterations=10000 --filename=text
-write_file_system took 2.6941733360290527 seconds
-read_file_system took 0.43399596214294434 seconds
-write_sqlite took 3.7641801834106445 seconds
-read_sqlite took 1.1609210968017578 seconds
+write_file_system took 2.7931108474731445 seconds
+read_file_system took 1.1529982089996338 seconds
+write_sqlite took 3.9521119594573975 seconds
+read_sqlite took 1.3336472511291504 seconds
 Cleaning up files
 
 ❯ python benchmark.py --iterations=10000 --filename=text
-write_file_system took 2.742851972579956 seconds
-read_file_system took 0.47078585624694824 seconds
-write_sqlite took 3.8059799671173096 seconds
-read_sqlite took 1.5623891353607178 seconds
+write_file_system took 2.742954969406128 seconds
+read_file_system took 0.8730340003967285 seconds
+write_sqlite took 3.9672093391418457 seconds
+read_sqlite took 1.096893072128296 seconds
 Cleaning up files
 
 ❯ python benchmark.py --iterations=10000 --filename=text
-write_file_system took 2.7235238552093506 seconds
-read_file_system took 0.4649050235748291 seconds
-write_sqlite took 3.938897132873535 seconds
-read_sqlite took 1.2644450664520264 seconds
+write_file_system took 2.7418599128723145 seconds
+read_file_system took 0.6525540351867676 seconds
+write_sqlite took 3.974774122238159 seconds
+read_sqlite took 1.1827456951141357 seconds
+Cleaning up files
+```
+
+> 20,000 files
+
+```
+❯ python benchmark.py --iterations=20000 --filename=text
+write_file_system took 5.601946115493774 seconds
+read_file_system took 5.844051837921143 seconds
+write_sqlite took 23.756388187408447 seconds
+read_sqlite took 3.4474239349365234 seconds
+Cleaning up files
+
+❯ python benchmark.py --iterations=20000 --filename=text
+write_file_system took 5.951803922653198 seconds
+read_file_system took 6.061838150024414 seconds
+write_sqlite took 27.041829109191895 seconds
+read_sqlite took 3.5959792137145996 seconds
+Cleaning up files
+
+❯ python benchmark.py --iterations=20000 --filename=text
+write_file_system took 5.795745611190796 seconds
+read_file_system took 6.220405101776123 seconds
+write_sqlite took 33.245250940322876 seconds
+read_sqlite took 5.212152719497681 seconds
 Cleaning up files
 ```

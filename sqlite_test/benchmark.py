@@ -44,11 +44,12 @@ def write_file_system(directory, iterations):
 @timeit
 def read_file_system(directory, iterations):
     directory = pathlib.Path(directory)
+    contents = []
 
     for i in range(iterations):
         filename = directory / f'text_{i}.txt'
         with filename.open('r') as file:
-            content = file.read()
+            contents.append(file.read())
 
 
 @timeit
@@ -60,7 +61,7 @@ def write_sqlite(db_file, iterations):
         contents = [get_text() for _ in range(iterations)]
         # c.executemany('''INSERT INTO text (content) VALUES (?)''', contents)
         for content in contents:
-            c.execute("""INSERT INTO text (content) VALUES (?)""", (content,))
+            c.execute("""INSERT INTO text (content) VALUES (?)""", (content, ))
 
 
 @timeit
