@@ -10,7 +10,14 @@ While SQLite provides faster write operations, especially for bulk inserts, the 
 
 > Note: The text file provided here is from this [wikipedia page](https://en.wikipedia.org/wiki/India)
 
-#### config
+### Images
+
+![100](./images/benchmark_results_100.png)
+![1000](./images/benchmark_results_1000.png)
+![10000](./images/benchmark_results_10000.png)
+
+#### Hardware config
+
 ```
 Model Name: MacBook Air
 Chip: Apple M2
@@ -75,3 +82,4 @@ write_sqlite took 33.245250940322876 seconds
 read_sqlite took 5.212152719497681 seconds
 Cleaning up files
 ```
+
