@@ -1,0 +1,509 @@
+[
+    {
+        "uri": "n777cd5f3885f4f8ab4014390ccee7efcb1",
+        "subclasses": [],
+        "object_properties": {
+            "core#identifier": {
+                "name": "core#identifier",
+                "values": [
+                    "http://dataid.dbpedia.org/ns/core#Identifier"
+                ]
+            }
+        },
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#AccessLevel",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "n777cd5f3885f4f8ab4014390ccee7efcb6",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#Agent",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#AgentRole",
+        "subclasses": [],
+        "object_properties": {
+            "core#allowsFor": {
+                "name": "core#allowsFor",
+                "values": [
+                    "http://dataid.dbpedia.org/ns/core#AuthorizedAction"
+                ]
+            }
+        },
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#AuthorityEntityContext",
+        "subclasses": [],
+        "object_properties": {
+            "core#authorityAgentRole": {
+                "name": "core#authorityAgentRole",
+                "values": [
+                    "http://dataid.dbpedia.org/ns/core#AgentRole"
+                ]
+            },
+            "core#authorizedAgent": {
+                "name": "core#authorizedAgent",
+                "values": [
+                    "http://dataid.dbpedia.org/ns/core#Agent"
+                ]
+            },
+            "core#authorizedFor": {
+                "name": "core#authorizedFor",
+                "values": [
+                    "http://www.w3.org/ns/prov#Entity"
+                ]
+            },
+            "core#validForAccessLevel": {
+                "name": "core#validForAccessLevel",
+                "values": [
+                    "http://dataid.dbpedia.org/ns/core#AccessLevel"
+                ]
+            },
+            "core#validFrom": {
+                "name": "core#validFrom",
+                "values": [
+                    "http://www.w3.org/2001/XMLSchema#datetime",
+                    "http://www.w3.org/2001/XMLSchema#datetime"
+                ]
+            },
+            "core#validUntil": {
+                "name": "core#validUntil",
+                "values": [
+                    "http://www.w3.org/2001/XMLSchema#datetime",
+                    "http://www.w3.org/2001/XMLSchema#datetime"
+                ]
+            },
+            "core#isInheritable": {
+                "name": "core#isInheritable",
+                "values": [
+                    "http://www.w3.org/2001/XMLSchema#boolean"
+                ]
+            }
+        },
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#AuthorizedAction",
+        "subclasses": [
+            "core#EntitledAction",
+            "core#ResponsibleAction"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "n777cd5f3885f4f8ab4014390ccee7efcb19",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#DataId",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#Dataset",
+        "subclasses": [],
+        "object_properties": {
+            "core#similarData": {
+                "name": "core#similarData",
+                "values": [
+                    "http://www.w3.org/ns/dcat#Dataset"
+                ]
+            }
+        },
+        "datatype_properties": {}
+    },
+    {
+        "uri": "n777cd5f3885f4f8ab4014390ccee7efcb26",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#Directory",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#Distribution",
+        "subclasses": [
+            "core#Directory",
+            "core#FileCollection",
+            "core#ServiceEndpoint",
+            "core#SingleFile"
+        ],
+        "object_properties": {
+            "core#isDistributionOf": {
+                "name": "core#isDistributionOf",
+                "values": [
+                    "http://dataid.dbpedia.org/ns/core#Dataset"
+                ]
+            },
+            "core#preview": {
+                "name": "core#preview",
+                "values": [
+                    "http://xmlns.com/foaf/0.1/Document"
+                ]
+            },
+            "core#softwareRquirement": {
+                "name": "core#softwareRquirement",
+                "values": [
+                    "http://xmlns.com/foaf/0.1/Document"
+                ]
+            },
+            "core#accessProcedure": {
+                "name": "core#accessProcedure",
+                "values": [
+                    "http://www.w3.org/2000/01/rdf-schema#Literal"
+                ]
+            },
+            "core#accessProtocol": {
+                "name": "core#accessProtocol",
+                "values": [
+                    "http://www.w3.org/2000/01/rdf-schema#Literal"
+                ]
+            },
+            "core#uncompressed": {
+                "name": "core#uncompressed",
+                "values": [
+                    "http://www.w3.org/2001/XMLSchema#integer"
+                ]
+            }
+        },
+        "datatype_properties": {}
+    },
+    {
+        "uri": "n777cd5f3885f4f8ab4014390ccee7efcb36",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#EntitledAction",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#FileCollection",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#Identifier",
+        "subclasses": [],
+        "object_properties": {
+            "core#identifierURL": {
+                "name": "core#identifierURL",
+                "values": [
+                    "http://xmlns.com/foaf/0.1/Document",
+                    "http://xmlns.com/foaf/0.1/Document"
+                ]
+            }
+        },
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#MediaType",
+        "subclasses": [],
+        "object_properties": {
+            "core#innerMediaType": {
+                "name": "core#innerMediaType",
+                "values": [
+                    "http://dataid.dbpedia.org/ns/core#MediaType"
+                ]
+            },
+            "core#typeReference": {
+                "name": "core#typeReference",
+                "values": [
+                    "http://www.w3.org/2000/01/rdf-schema#Resource"
+                ]
+            },
+            "core#typeExtension": {
+                "name": "core#typeExtension",
+                "values": [
+                    "http://www.w3.org/2000/01/rdf-schema#Literal"
+                ]
+            },
+            "core#typeName": {
+                "name": "core#typeName",
+                "values": [
+                    "http://www.w3.org/2000/01/rdf-schema#Literal"
+                ]
+            },
+            "core#typeTemplate": {
+                "name": "core#typeTemplate",
+                "values": [
+                    "http://www.w3.org/2000/01/rdf-schema#Literal"
+                ]
+            }
+        },
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#ResponsibleAction",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#ServiceEndpoint",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#SimpleStatement",
+        "subclasses": [],
+        "object_properties": {
+            "core#statement": {
+                "name": "core#statement",
+                "values": [
+                    "http://www.w3.org/2000/01/rdf-schema#Literal"
+                ]
+            }
+        },
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#SingleFile",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://dataid.dbpedia.org/ns/core#accessProtocol",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "n777cd5f3885f4f8ab4014390ccee7efcb49",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error21",
+        "subclasses": [
+            "core#Directory"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error22",
+        "subclasses": [
+            "core#Agent"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error23",
+        "subclasses": [
+            "core#Agent"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error24",
+        "subclasses": [
+            "core#FileCollection"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error25",
+        "subclasses": [
+            "core#ServiceEndpoint"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error26",
+        "subclasses": [
+            "core#Dataset"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error27",
+        "subclasses": [
+            "core#Dataset"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error28",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error29",
+        "subclasses": [
+            "core#DataId"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error30",
+        "subclasses": [
+            "core#Identifier"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error31",
+        "subclasses": [
+            "core#Identifier"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error32",
+        "subclasses": [
+            "core#Identifier"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error33",
+        "subclasses": [
+            "core#Distribution"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error34",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error35",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://org.semanticweb.owlapi/error#Error36",
+        "subclasses": [
+            "core#SingleFile"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://xmlns.com/foaf/0.1/Agent",
+        "subclasses": [
+            "core#Agent"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://purl.org/dc/terms/MediaType",
+        "subclasses": [
+            "core#MediaType"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://purl.org/dc/terms/ProvenanceStatement",
+        "subclasses": [
+            "core#SimpleStatement"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://purl.org/dc/terms/RightsStatement",
+        "subclasses": [
+            "core#SimpleStatement"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://purl.org/dc/terms/Standard",
+        "subclasses": [
+            "core#SimpleStatement"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://rdfs.org/ns/void#Dataset",
+        "subclasses": [
+            "core#Dataset"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://rdfs.org/ns/void#DatasetDescription",
+        "subclasses": [
+            "core#DataId"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://spdx.org/rdf/terms/#Checksum",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://www.w3.org/2001/XMLSchema#datetime",
+        "subclasses": [],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://www.w3.org/ns/adms#Identifier",
+        "subclasses": [
+            "core#Identifier"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    },
+    {
+        "uri": "http://www.w3.org/ns/wsdl-rdf#Service",
+        "subclasses": [
+            "core#ServiceEndpoint"
+        ],
+        "object_properties": {},
+        "datatype_properties": {}
+    }
+]
