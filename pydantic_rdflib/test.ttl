@@ -1,0 +1,22 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org#age> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org#Person> ;
+    rdfs:range xsd:integer .
+
+<http://example.org#authorOf> a owl:ObjectProperty ;
+    rdfs:label "authorOf" ;
+    rdfs:domain <http://example.org#Person> ;
+    rdfs:range <http://example.org#Book> .
+
+<http://example.org#name> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org#Person> .
+
+<http://example.org#Book> a owl:Class ;
+    rdfs:label "Book" .
+
+<http://example.org#Person> a owl:Class ;
+    rdfs:label "Person" .
+
