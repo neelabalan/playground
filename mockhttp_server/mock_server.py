@@ -69,9 +69,20 @@ class MockServer:
 
     def start(self) -> None:
         MockHandler.mock_server_config = self.config
-        server = http.server.HTTPServer(('', self.port), MockHandler)
+        self.server = http.server.HTTPServer(('', self.port), MockHandler)
         print(f'Starting server on port {self.port}')
-        server.serve_forever()
+        try:
+            self.server.serve_forever()
+        except KeyboardInterrupt:
+            pass
+        finally:
+            self.shutdown()
+
+    def shutdown(self):
+        if self.server:
+            print("Shutting down server...")
+            self.server.shutdown()
+            self.server.server_close()
 
 
 def load_config(config_path: str) -> Config:
