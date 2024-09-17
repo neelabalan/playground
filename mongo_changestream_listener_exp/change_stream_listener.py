@@ -31,10 +31,10 @@ class GzippedJsonRotatingFileHandler:
         self.file_counter += 1
 
     def write(self, data: dict):
-        self.current_file.write((bson.json_util.dumps(data)+ '\n').encode())
-        self.current_size >= self.max_bytes
-        if self.current_size >= self.max_bytes:
+        current_size = self.current_filename.stat().st_size
+        if current_size >= self.max_bytes:
             self.open_new_file()
+        self.current_file.write((bson.json_util.dumps(data)+ '\n').encode())
 
     def close(self):
         if self.current_file:
@@ -70,7 +70,7 @@ def main():
     # Set up logging
     logger = logging.getLogger('ChangeStreamListener')
     logger.setLevel(logging.INFO)
-    fh = logging.FileHandler('change_stream_listener.log')
+    fh = logging.FileHandler('logs/change_stream_listener.log')
     ch = logging.StreamHandler()
     ch.setLevel(logging.DEBUG)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
