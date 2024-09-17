@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mongo1:
+    image: mongo:6
+    command: [--replSet, my-replica-set, --bind_ip_all, --port, "27017"]
+    ports:
+      - 27017:27017
+    networks:
+      mongo-network:
+        ipv4_address: 172.20.0.2
+    healthcheck:
+      test: test $$(mongosh --quiet --eval "try {rs.status().ok} catch(e) {rs.initiate({_id:'my-replica-set',members:[{_id:0,host:\"mongo1:27017\"},{_id:1,host:\"mongo2:27017\"},{_id:2,host:\"mongo3:27017\"}]}).ok}") -eq 1
+      interval: 10s
+      start_period: 30s
+
+  mongo2:
+    image: mongo:6
+    command: [--replSet, my-replica-set, --bind_ip_all, --port, "27017"]
+    ports:
+      - 27018:27017
+    networks:
+      mongo-network:
+        ipv4_address: 172.20.0.3
+
+  mongo3:
+    image: mongo:6
+    command: [--replSet, my-replica-set, --bind_ip_all, --port, "27017"]
+    ports:
+      - 27019:27017
+    networks:
+      mongo-network:
+        ipv4_address: 172.20.0.4
+
+networks:
+  mongo-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16
