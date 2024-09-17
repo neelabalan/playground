@@ -22,7 +22,6 @@ func getLatestTimestamp(oplog *mongo.Collection) primitive.Timestamp {
 		return primitive.Timestamp{T: 0, I: 0}
 	}
 
-	// Extract the 'ts' field from the result
 	tsValue := result["ts"]
 	ts, _ := tsValue.(primitive.Timestamp)
 	return ts
@@ -30,6 +29,7 @@ func getLatestTimestamp(oplog *mongo.Collection) primitive.Timestamp {
 
 type OplogTailer struct {
 	database   string
+	client     *mongo.Client
 	collection string
 	timestamp  primitive.Timestamp
 	namespace  string
@@ -46,6 +46,7 @@ func (oplogTailer *OplogTailer) Init(mongoUri string, database string, collectio
 		slog.Error(fmt.Sprintf("Failed to connect to MongoDB: %v", err))
 		return
 	}
+	oplogTailer.client = client
 	// defer client.Disconnect(ctx)
 	// setting oplog collection
 	oplogTailer.oplog = client.Database("local").Collection("oplog.rs")
@@ -57,6 +58,25 @@ func (oplogTailer *OplogTailer) Init(mongoUri string, database string, collectio
 	oplogTailer.timestamp = getLatestTimestamp(oplogTailer.oplog)
 	slog.Info("initialization complete")
 
+}
+
+func (oplogTailer *OplogTailer) getCollectionStats() (map[string]interface{}, error) {
+	stats := bson.M{}
+	command := bson.D{{Key: "collStats", Value: oplogTailer.collection}}
+
+	err := oplogTailer.client.Database(oplogTailer.database).RunCommand(context.Background(), command).Decode(&stats)
+	if err != nil {
+		slog.Info("Error fetching collection stats: %v", err)
+		return nil, err
+	}
+
+	result := map[string]interface{}{
+		"size": stats["size"],
+		// "storageSize": stats["storageSize"],
+		"count": stats["count"],
+	}
+
+	return result, nil
 }
 
 func (oplogTailer OplogTailer) tailOplog() {
@@ -129,7 +149,21 @@ func (oplogTailer OplogTailer) tailOplog() {
 }
 
 func (oplogTailer OplogTailer) logOperation(doc bson.M) {
-	slog.Info(fmt.Sprintf("%s", doc["op"]))
+	operation := doc["op"].(string)
+	// ns := doc["ns"]
+
+	operationMap := map[string]string{
+		"i": "INSERT",
+		"u": "UPDATE",
+		"d": "DELETE",
+	}
+	expandedOp, exists := operationMap[operation]
+	if !exists {
+		expandedOp = "UNKNOWN"
+	}
+	slog.Info(fmt.Sprintf("operation %s", expandedOp))
+	stats, _ := oplogTailer.getCollectionStats()
+	slog.Info(fmt.Sprintf("Collection Stats: %+v", stats))
 
 }
 

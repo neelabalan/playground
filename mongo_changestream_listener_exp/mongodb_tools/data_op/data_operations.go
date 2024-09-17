@@ -183,7 +183,7 @@ func main() {
 	// case "update":
 	// 	operation = &UpdateOperation{BaseOperation: baseOp}
 	default:
-		logger.Error("Unknown operation type: %s", *operationType)
+		logger.Error(fmt.Sprintf("Unknown operation type: %s", *operationType))
 	}
 
 	operation.Execute()

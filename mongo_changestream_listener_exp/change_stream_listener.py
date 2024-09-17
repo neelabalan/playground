@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 import argparse
 import gzip
-import json
 import logging
+import pathlib
 import time
+import traceback
 
-from pymongo import MongoClient
+import bson
+import bson.json_util
+import pymongo
+from pymongo.collection import Collection
 
 
 class GzippedJsonRotatingFileHandler:
@@ -20,15 +24,15 @@ class GzippedJsonRotatingFileHandler:
     def open_new_file(self):
         if self.current_file:
             self.current_file.close()
-        filename = f"{self.base_filename}.{self.file_counter}.json.gz"
-        self.current_file = gzip.open(filename, 'wt')
+        filename = f"data/{self.base_filename}.{self.file_counter}.jsonl.gz"
+        self.current_filename = pathlib.Path(filename)
+        self.current_file = gzip.open(self.current_filename, mode='w')
         self.current_size = 0
         self.file_counter += 1
 
-    def write(self, data):
-        json_str = json.dumps(data)
-        self.current_file.write(json_str + '\n')
-        self.current_size += len(json_str) + 1  # Plus newline
+    def write(self, data: dict):
+        self.current_file.write((bson.json_util.dumps(data)+ '\n').encode())
+        self.current_size >= self.max_bytes
         if self.current_size >= self.max_bytes:
             self.open_new_file()
 
@@ -37,16 +41,22 @@ class GzippedJsonRotatingFileHandler:
             self.current_file.close()
             self.current_file = None
 
-def change_stream_listener(collection, logger, gzipped_logger) -> None:
+def change_stream_listener(collection: Collection, logger: logging.Logger, gzipped_logger: GzippedJsonRotatingFileHandler) -> None:
     try:
         logger.info("Listening to change stream...")
         with collection.watch() as stream:
             for change in stream:
                 event_type = change.get("operationType")
                 logger.info(f"Change detected: {event_type} at {time.time()}")
+                logger.debug(change)
                 gzipped_logger.write(change)
     except Exception as e:
+        gzipped_logger.close()
         logger.error(f"Error in change stream: {e}")
+        traceback.print_exc()
+    except KeyboardInterrupt as _:
+        gzipped_logger.close()
+        logger.error("Intercepted keyboard interrupt")
 
 def main():
     parser = argparse.ArgumentParser(description="MongoDB Change Stream Listener")
@@ -61,22 +71,22 @@ def main():
     logger = logging.getLogger('ChangeStreamListener')
     logger.setLevel(logging.INFO)
     fh = logging.FileHandler('change_stream_listener.log')
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.DEBUG)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     fh.setFormatter(formatter)
+    ch.setFormatter(formatter)
     logger.addHandler(fh)
+    logger.addHandler(ch)
 
-    # Set up GzippedJsonRotatingFileHandler
     gzipped_logger = GzippedJsonRotatingFileHandler(args.output_file, args.collect_size)
 
-    # Set up MongoDB client
-    client = MongoClient(args.mongo_uri)
+    client = pymongo.MongoClient(args.mongo_uri)
     db = client[args.database]
     collection = db[args.collection]
 
-    # Start the change stream listener
     change_stream_listener(collection, logger, gzipped_logger)
 
-    # Close the gzipped logger
     gzipped_logger.close()
 
 if __name__ == "__main__":
