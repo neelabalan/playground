@@ -84,7 +84,6 @@ func dumpData(task Task) {
 	for _, doc := range task.Documents {
 		// fmt.Printf("document - %v\n", doc)
 		jsonData, err := json.Marshal(doc)
-		println(jsonData)
 		if err != nil {
 			fmt.Println("Error marshaling document:", err)
 			continue
@@ -101,6 +100,8 @@ func main() {
 	mongoURI := flag.String("mongo-uri", "mongodb://localhost:27017/", "MongoDB URI")
 	databaseName := flag.String("database", "test_db", "Database name")
 	collectionName := flag.String("collection", "test_collection", "Collection name")
+	maxDocCount := flag.Int("doc-count", 1000, "Maximum number of documents that the worker can dump at a time")
+	maxWorkers := flag.Int("workers", 10, "Maximum number of workers to do the job")
 	flag.Parse()
 
 	clientOptions := options.Client().ApplyURI(*mongoURI)
@@ -113,12 +114,10 @@ func main() {
 	stream, _ := collection.Watch(context.TODO(), mongo.Pipeline{})
 
 	// more stuff for worker
-	maxWorkers := 10
-	wp := NewWorkerPool(maxWorkers)
+	wp := NewWorkerPool(*maxWorkers)
 	wp.Run(dumpData)
 
 	// second part for change stream listening
-	maxDocCount := 1000
 	defer stream.Close(context.TODO())
 	count := 0
 	batch := 0
@@ -132,12 +131,13 @@ func main() {
 			}
 			documents = append(documents, data)
 			count += 1
-			if count == maxDocCount {
+			if count == *maxDocCount {
 				task := Task{ID: batch, Documents: documents}
 				fmt.Printf("Adding task %d\n", task.ID)
 				wp.AddTask(task)
 				count = 0
 				batch += 1
+				documents = nil
 			}
 
 		}

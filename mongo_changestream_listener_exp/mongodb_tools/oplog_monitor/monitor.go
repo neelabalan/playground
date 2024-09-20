@@ -107,6 +107,7 @@ func (oplogTailer OplogTailer) tailOplog() {
 		defer cursor.Close(ctx)
 
 		for {
+			time.Sleep(5 * time.Second)
 			if cursor.Next(ctx) {
 				var doc bson.M
 				if err := cursor.Decode(&doc); err != nil {
