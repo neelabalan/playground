@@ -3,8 +3,6 @@ import json
 import urllib.request
 import zipfile
 from pathlib import Path
-from typing import Dict
-from typing import List
 
 # list of services with AWS CLI
 # aws services list
@@ -35,7 +33,7 @@ def unique_dicts(dicts):
     return [d for d in dicts if not (t := tuple(sorted(d.items()))) in seen and not seen.add(t)]
 
 
-def get_service_list(file_list: List[str]) -> List[Dict[str, str]]:
+def get_service_list(file_list: list[str]) -> list[dict[str, str]]:
     service_list = []
     for file_path in file_list:
         with open(file_path, 'r') as f:

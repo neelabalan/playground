@@ -1,10 +1,6 @@
 import argparse
 import timeit
 from functools import lru_cache
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Tuple
 
 import pandas as pd
 import xgboost as xgb
@@ -21,7 +17,7 @@ class ModelWithoutCache:
             self._model = self.train_model()
         return self._model
 
-    def fetch_data(self) -> Tuple[Any, Any]:
+    def fetch_data(self) -> tuple:
         iris = datasets.load_iris()
         X = iris.data
         y = iris.target
@@ -46,7 +42,7 @@ class ModelWithCache(ModelWithoutCache):
 
 
 def benchmark(iteration: int) -> None:
-    results: List[Dict[str, float]] = []
+    results: list[dict[str, float]] = []
     without_cache = ModelWithoutCache()
     with_cache = ModelWithCache()
 
