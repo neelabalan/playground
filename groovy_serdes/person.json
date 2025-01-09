@@ -1,0 +1,14 @@
+{
+  "name": "Adam",
+  "age": 40,
+  "relation": [
+    {
+      "relationship": "friend",
+      "age": 40
+    },
+    {
+      "relationship": "co-worker",
+      "age": 45
+    }
+  ]
+}

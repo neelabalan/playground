@@ -34,10 +34,12 @@ func createFlagArgs(args interface{}) interface{} {
 		case "int":
 			val, err := strconv.Atoi(defaultTag)
 			if err == nil {
+				// FIXME
 				slog.Error("Check the default tag for ", field)
 			}
 			flag.IntVar(commandLineArgs.Field(i).Addr().Interface().(*int), cmdTag, val, description)
 		default:
+			// FIXME
 			slog.Warn("Cannot parse at ", field)
 		}
 	}
@@ -90,7 +92,7 @@ func main() {
 	items := jsonBody["items"].([]interface{})
 	for _, item := range items {
 		volumeInfo := item.(map[string]interface{})["volumeInfo"].(map[string]interface{})
-		fmt.Println("\n==========\n")
+		fmt.Println("\n==========")
 		fmt.Println("Title: ", volumeInfo["title"])
 		fmt.Println("Publisher: ", volumeInfo["publisher"])
 		fmt.Println("Published Date: ", volumeInfo["publishedDate"])
