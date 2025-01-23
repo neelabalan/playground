@@ -1,0 +1,58 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://repo.jenkins-ci.org/public/'
+        url = 'https://repo.jenkins-ci.org/releases/'
+    }
+}
+
+dependencies {
+    implementation localGroovy()
+    implementation 'org.eclipse.hudson:hudson-core:3.2.1'
+    implementation 'org.jenkins-ci.main:jenkins-core:2.460'
+    implementation 'com.cloudbees:groovy-cps:1.22'
+    implementation 'org.jenkins-ci.plugins.workflow:workflow-cps:2.92'
+    implementation 'org.jenkins-ci.plugins.workflow:workflow-job:2.40@jar'
+    implementation 'org.jenkins-ci.plugins.workflow:workflow-api:2.41@jar'
+    implementation 'org.jenkins-ci.plugins:pipeline-utility-steps:2.10.0'
+    implementation 'org.jenkins-ci.plugins:job-dsl-core:1.77'
+
+    implementation(group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-step-api', version: '2.23') {
+        artifact {
+            name = 'workflow-step-api'
+            type = 'jar'
+        }
+    }
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'com.lesfurets:jenkins-pipeline-unit:1.13'
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.22'
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['.']
+            include 'pipeline.groovy'
+        }
+    }
+    test {
+        groovy {
+            srcDirs = ['.']
+            include 'pipeline_test.groovy'
+            include 'pipeline.groovy'
+        }
+    }
+}
+
+test {
+    testLogging {
+        outputs.upToDateWhen { false }
+        showStandardStreams = true
+    }
+}
