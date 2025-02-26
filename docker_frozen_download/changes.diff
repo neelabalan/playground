@@ -1,0 +1,124 @@
+--- original.sh	2025-02-26 11:12:32
++++ download-frozen-image-v2.sh	2025-02-26 11:11:30
+@@ -1,6 +1,19 @@
+ #!/usr/bin/env bash
+ set -eo pipefail
+ 
++# ...existing code...
++
++# check if essential commands are in our PATH
++for cmd in curl jq aria2c; do
++    if ! command -v $cmd &> /dev/null; then
++        echo >&2 "error: \"$cmd\" not found!"
++        if [ "$cmd" = "aria2c" ]; then
++            echo >&2 "Please install aria2 for faster downloads:"
++            echo >&2 "  brew install aria2"
++        fi
++        exit 1
++    fi
++done
+ # This script was developed for use in Moby's CI, and as such the use cases and
+ # usability are (intentionally) limited. You may find this script useful for
+ # educational purposes, for example, to learn how pulling images works "under
+\ No newline at end of file
+@@ -70,16 +83,24 @@
+ 	shift
+ 	local targetFile="$1"
+ 	shift
+-	local curlArgs=("$@")
++    local aria2cArgs=("$@")
+ 
+-	local curlHeaders
+-	curlHeaders="$(
+-		curl -S "${curlArgs[@]}" \
+-			-H "Authorization: Bearer $token" \
+-			"$registryBase/v2/$image/blobs/$digest" \
+-			-o "$targetFile" \
+-			-D-
+-	)"
++    local url="$registryBase/v2/$image/blobs/$digest"
++    local tempHeaders="$(mktemp)"
++    local targetDir=$(dirname "$targetFile")
++    local targetFilename=$(basename "$targetFile")
++
++    aria2c \
++        --header="Authorization: Bearer $token" \
++        --auto-file-renaming=false \
++        --dir="$targetDir" \
++        --out="$targetFilename" \
++        --dry-run \
++        "$url"
++
++    local curlHeaders=$(cat "$tempHeaders")
++    rm -rf "$tempHeaders"
++
+ 	curlHeaders="$(echo "$curlHeaders" | tr -d '\r')"
+ 	if grep -qE "^HTTP/[0-9].[0-9] 3" <<< "$curlHeaders"; then
+ 		rm -f "$targetFile"
+\ No newline at end of file
+@@ -92,9 +113,19 @@
+ 			return 1
+ 		fi
+ 
+-		curl -fSL "${curlArgs[@]}" \
+-			"$blobRedirect" \
+-			-o "$targetFile"
++        aria2c \
++            --header="Authorization: Bearer $token" \
++            --auto-file-renaming=false \
++            --dir="$targetDir" \
++            --out="$targetFilename" \
++            "$blobRedirect"
++    else
++        aria2c \
++            --header="Authorization: Bearer $token" \
++            --auto-file-renaming=false \
++            --dir="$targetDir" \
++            --out="$targetFilename" \
++            "$url"
+ 	fi
+ }
+ 
+\ No newline at end of file
+@@ -113,8 +144,10 @@
+ 	local layersFs
+ 	layersFs="$(echo "$manifestJson" | jq --raw-output --compact-output '.layers[]')"
+ 	local IFS="$newlineIFS"
+-	local layers
+-	mapfile -t layers <<< "$layersFs"
++	local layers=()
++    while IFS= read -r layer; do
++        layers+=("$layer")
++    done <<< "$layersFs"
+ 	unset IFS
+ 
+ 	echo "Downloading '$imageIdentifier' (${#layers[@]} layers)..."
+\ No newline at end of file
+@@ -325,7 +358,13 @@
+ 				application/vnd.oci.image.index.v1+json | application/vnd.docker.distribution.manifest.list.v2+json)
+ 					layersFs="$(echo "$manifestJson" | jq --raw-output --compact-output '.manifests[]')"
+ 					IFS="$newlineIFS"
+-					mapfile -t layers <<< "$layersFs"
++                    # not sure how to make this as a function
++                    # mapfile is not available in bash3, which is what is available by default in mostly all OS-X
++                    # mapfile -t layers <<< "$layersFs"
++                    while IFS= read -r layer; do
++                        layers+=("$layer")
++                    done <<< "$layerFs"
++                    ###
+ 					unset IFS
+ 
+ 					found=""
+\ No newline at end of file
+@@ -376,7 +415,9 @@
+ 
+ 			layersFs="$(echo "$manifestJson" | jq --raw-output '.fsLayers | .[] | .blobSum')"
+ 			IFS="$newlineIFS"
+-			mapfile -t layers <<< "$layersFs"
++            while IFS= read -r layer; do
++                layers+=("$layer")
++            done <<< "$layersFs"
+ 			unset IFS
+ 
+ 			history="$(echo "$manifestJson" | jq '.history | [.[] | .v1Compatibility]')"
+\ No newline at end of file
