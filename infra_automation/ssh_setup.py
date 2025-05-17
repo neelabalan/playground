@@ -6,6 +6,7 @@ import getpass
 import logging
 import pathlib
 import re
+import subprocess
 import sys
 import tempfile
 import typing
@@ -94,19 +95,30 @@ def ssh_connect(
         ssh.close()
 
 
+# TODO: to be integrated later
+def use_ssh_copy_id(host: str, port: int, user: str, keyfile: str, password: str) -> bool:
+    """Use ssh-copy-id to copy the public key to the remote host."""
+    logger.info('Using ssh-copy-id to deploy key...')
+    ssh_cmd = ['ssh-copy-id', '-i', keyfile, '-p', str(port), f'{user}@{host}']
+    try:
+        proc = subprocess.run(ssh_cmd, input=f'{password}\n', text=True, capture_output=True, check=True)
+        logger.info('ssh-copy-id output: %s', proc.stdout)
+        return True
+    except subprocess.CalledProcessError as e:
+        logger.error('ssh-copy-id failed: %s', e.stderr)
+        return False
+
+
 def setup_authorized_key(
-    sftp: paramiko.SFTPClient,
-    ssh: paramiko.SSHClient,
-    ssh_dir: str,
-    key_data: str,
-    username: str,
+    sftp: paramiko.SFTPClient, ssh: paramiko.SSHClient, ssh_dir: str, key_data: str, username: str, append: bool
 ) -> None:
     try:
         if not dir_exists(sftp, ssh_dir):
             sftp.mkdir(ssh_dir, mode=0o700)
             logger.info('Created %s', ssh_dir)
         ak_path = f'{ssh_dir}/authorized_keys'
-        with sftp.open(ak_path, 'w') as f:
+        # should check if the key already exists before appending?
+        with sftp.open(ak_path, 'a' if append else 'w') as f:
             f.write(key_data + '\n')
         sftp.chmod(ak_path, 0o600)
         sftp.chown(ak_path, uid=get_uid(ssh, username), gid=get_gid(ssh, username))
@@ -311,6 +323,9 @@ def main() -> None:
     parser.add_argument('--keyfile', required=True, help='Public key file path')
     parser.add_argument('--private-key', help='Private key file path')
     parser.add_argument('--debug', action='store_true', help='Enable debug logging')
+    parser.add_argument(
+        '--append', action='store_true', help='Append the public key to authorized_keys. By default it overrides.'
+    )
     args = parser.parse_args()
 
     logger.setLevel(logging.DEBUG if args.debug else logging.INFO)
@@ -324,7 +339,7 @@ def main() -> None:
         logger.info('Connecting using password')
         with ssh_connect(args.host, args.port, args.user, password) as ssh:
             with ssh.open_sftp() as sftp:
-                setup_authorized_key(sftp, ssh, f'/home/{args.user}/.ssh', pubkey, args.user)
+                setup_authorized_key(sftp, ssh, f'/home/{args.user}/.ssh', pubkey, args.user, args.append)
             apply_hardening(ssh, password)
             validate_policy(ssh, password)
             reload_sshd(ssh, password)
