@@ -1,0 +1,10 @@
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: jenkins
+          password: "#jbcrypt:$2a$10$6jsPyfI9tVzLG4zhlIKu9.pNJSgxqjwAuscsTSmMZ2i0a5bKw39oq"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
