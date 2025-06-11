@@ -1,9 +1,11 @@
 version: '3.8'
 
 services:
-  jenkins-docker:
+  # the service need to be named docker since the certs are not 
+  # generated if the host name is NOT docker
+  docker:
     image: docker:dind
-    container_name: jenkins-docker
+    container_name: docker
     privileged: true
     networks:
       - jenkins
@@ -14,7 +16,9 @@ services:
       - jenkins-data:/var/jenkins_home
     ports:
       - "2376:2376"
-    command: --storage-driver overlay2
+    command: >
+      --storage-driver overlay2
+      --insecure-registry registry:5000
     restart: on-failure
 
   jenkins-blueocean:
@@ -35,6 +39,14 @@ services:
       - "8080:8080"
       - "50000:50000"
     restart: on-failure
+
+  registry:
+    image: registry:2
+    ports:
+      - "5000:5000"
+    networks:
+      - jenkins
+  # TODO: attach volume
 
 networks:
   jenkins:
