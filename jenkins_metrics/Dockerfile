@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y lsb-release ca-certificates curl && \
     | tee /etc/apt/sources.list.d/docker.list > /dev/null && \
     apt-get update && apt-get install -y docker-ce-cli && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN usermod -aG root jenkins
+
 USER jenkins
 
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt

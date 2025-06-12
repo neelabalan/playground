@@ -1,56 +1,22 @@
 version: '3.8'
 
 services:
-  # the service need to be named docker since the certs are not 
-  # generated if the host name is NOT docker
-  docker:
-    image: docker:dind
-    container_name: docker
-    privileged: true
-    networks:
-      - jenkins
-    environment:
-      - DOCKER_TLS_CERTDIR=/certs
-    volumes:
-      - jenkins-docker-certs:/certs/client
-      - jenkins-data:/var/jenkins_home
-    ports:
-      - "2376:2376"
-    command: >
-      --storage-driver overlay2
-      --insecure-registry registry:5000
-    restart: on-failure
-
   jenkins-blueocean:
     image: customjenkins:latest
     container_name: jenkins-blueocean
-    networks:
-      - jenkins
+    platform: linux/amd64
+    privileged: true
     environment:
-      - DOCKER_HOST=tcp://docker:2376
-      - DOCKER_CERT_PATH=/certs/client
-      - DOCKER_TLS_VERIFY=1
+      - HOME=/var/jenkins_home
       - JENKINS_OPTS=--argumentsRealm.passwd.jenkins=admin --argumentsRealm.roles.jenkins=admin
     volumes:
       - jenkins-data:/var/jenkins_home
-      - jenkins-docker-certs:/certs/client:ro
+      - /var/run/docker.sock:/var/run/docker.sock
       - ./jenkins.yml:/var/jenkins_home/jenkins.yml:ro
     ports:
       - "8080:8080"
       - "50000:50000"
     restart: on-failure
-
-  registry:
-    image: registry:2
-    ports:
-      - "5000:5000"
-    networks:
-      - jenkins
-  # TODO: attach volume
-
-networks:
-  jenkins:
-    name: jenkins
 
 volumes:
   jenkins-data:
