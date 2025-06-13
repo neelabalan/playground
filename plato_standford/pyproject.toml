@@ -1,0 +1,14 @@
+[project]
+name = "plato-standford"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "~=3.11"
+dependencies = [
+    "beautifulsoup4==4.13.4",
+    "html2text==2025.4.15",
+    "pandas==2.3.0",
+    "pyarrow==20.0.0",
+    "pydantic==2.11.5",
+    "requests==2.32.4",
+]
