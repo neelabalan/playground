@@ -1,0 +1,29 @@
+{
+  "name": "json-rpc-server",
+  "version": "1.0.0",
+  "description": "A simple JSON-RPC server implementation in TypeScript",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start:server": "tsx src/server.ts",
+    "start:client": "tsx src/client.ts"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "tsx": "^4.7.0",
+    "@types/node": "^16.11.7",
+    "@types/express": "^4.17.13"
+  },
+  "keywords": [
+    "json-rpc",
+    "typescript",
+    "server"
+  ],
+  "author": "Neelabalan N",
+  "license": "MIT"
+}
