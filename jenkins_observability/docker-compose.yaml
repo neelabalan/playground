@@ -2,6 +2,9 @@ version: '3.8'
 
 services:
   jenkins-blueocean:
+    build: 
+      context: .
+      dockerfile: Dockerfile
     image: customjenkins:latest
     container_name: jenkins-blueocean
     platform: linux/amd64
@@ -16,6 +19,23 @@ services:
     ports:
       - "8080:8080"
       - "50000:50000"
+    restart: on-failure
+    depends_on:
+      - monitoring-stack 
+  
+  monitoring-stack:
+    image: docker.io/grafana/otel-lgtm:latest
+    container_name: lgtm
+    ports:
+      - "3000:3000"
+      - "4317:4317"
+      - "4318:4318"
+    volumes:
+      - ./container/grafana:/data/grafana
+      - ./container/prometheus:/data/prometheus
+      - ./container/loki:/data/loki
+    environment:
+      - GF_PATHS_DATA=/data/grafana
     restart: on-failure
 
 volumes:
