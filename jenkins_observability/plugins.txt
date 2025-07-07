@@ -23,6 +23,7 @@ joda-time-api:2.14.0-127.v7d9da_295a_d51
 json-api:20250517-153.vc8a_a_d87c0ce3
 json-path-api:2.9.0-148.v22a_7ffe323ce
 mailer:489.vd4b_25144138f
+opentelemetry:3.1543.v8446b_92b_cd64
 opentelemetry-api:1.49.0.59.vc32561e77cf3
 pipeline-groovy-lib:752.vdddedf804e72
 pipeline-input-step:527.vd61b_1d3c5078

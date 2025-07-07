@@ -35,7 +35,7 @@ RUN echo \
     tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 RUN apt-get update -y && apt-get install -y docker-ce-cli
-RUN usermod -aG root
+RUN groupadd -f docker && usermod -aG docker root
 
 WORKDIR /workspace
 SHELL ["/bin/bash", "-c"]
