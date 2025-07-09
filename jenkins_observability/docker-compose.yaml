@@ -9,7 +9,7 @@ services:
     environment:
       - HOME=/var/jenkins_home
       - JENKINS_OPTS=--argumentsRealm.passwd.jenkins=admin --argumentsRealm.roles.jenkins=admin
-      - JAVA_OPTS=-Dotel.instrumentation.jenkins.agent.enabled=true -Dotel.instrumentation.jenkins.remoting.enabled=true
+      - JAVA_OPTS=-Dotel.instrumentation.jenkins.agent.enabled=true -Dotel.instrumentation.jenkins.remoting.enabled=true -Dotel.instrumentation.jenkins.run.metric.duration.allow_list=.*
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://monitoring-stack:4317
       - GRAFANA_BASE_URL=http://monitoring-stack:3000
       - GRAFANA_METRICS_DASHBOARD_URL=http://monitoring-stack:3000/d/jenkins-metrics
