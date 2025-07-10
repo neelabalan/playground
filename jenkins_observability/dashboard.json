@@ -52,7 +52,21 @@
               "mode": "off"
             }
           },
-          "mappings": [],
+          "mappings": [
+            {
+              "options": {
+                "FAILURE": {
+                  "color": "red",
+                  "index": 1
+                },
+                "SUCCESS": {
+                  "color": "green",
+                  "index": 0
+                }
+              },
+              "type": "value"
+            }
+          ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -74,12 +88,13 @@
         "x": 0,
         "y": 0
       },
-      "id": 1,
+      "id": 2,
       "options": {
         "barRadius": 0,
-        "barWidth": 0.97,
+        "barWidth": 0.5,
+        "colorByField": "Result",
         "fullHighlight": false,
-        "groupWidth": 0.7,
+        "groupWidth": 0.49,
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -94,7 +109,7 @@
           "mode": "single",
           "sort": "none"
         },
-        "xField": "values",
+        "xField": "BuildNumber",
         "xTickLabelRotation": 0,
         "xTickLabelSpacing": 0
       },
@@ -107,53 +122,31 @@
           },
           "limit": 20,
           "metricsQueryType": "range",
-          "query": "{resource.service.name=\"jenkins\" && name=\"BUILD ecgo-docker-pipeline\" && span.ci.pipeline.run.number > 0}",
+          "query": "{resource.service.name=\"jenkins\" && name=\"BUILD ecgo-docker-pipeline\"} \n| select(\n    span.ci.pipeline.run.number,\n    span.ci.pipeline.run.result\n)",
           "queryType": "traceql",
           "refId": "A",
-          "step": "",
+          "spss": 5,
           "tableType": "traces"
         }
       ],
-      "title": "Build Duration Graph",
+      "title": "CI Build Duration",
       "transformations": [
         {
           "id": "extractFields",
           "options": {
             "delimiter": ",",
-            "format": "auto",
+            "format": "json",
             "jsonPaths": [
               {
-                "path": "0.ci.pipeline.run.number"
+                "alias": "Result",
+                "path": "0.fields.5.values.0"
+              },
+              {
+                "alias": "BuildNumber",
+                "path": "0.fields.4.values.0"
               }
             ],
-            "keepTime": false,
-            "replace": false,
             "source": "nested"
-          }
-        },
-        {
-          "id": "extractFields",
-          "options": {
-            "delimiter": ",",
-            "source": "0"
-          }
-        },
-        {
-          "id": "extractFields",
-          "options": {
-            "delimiter": ",",
-            "keepTime": false,
-            "replace": false,
-            "source": "fields"
-          }
-        },
-        {
-          "id": "extractFields",
-          "options": {
-            "delimiter": ",",
-            "keepTime": false,
-            "replace": false,
-            "source": "4"
           }
         },
         {
@@ -162,40 +155,10 @@
             "conversions": [
               {
                 "destinationType": "number",
-                "targetField": "values"
+                "targetField": "BuildNumber"
               }
             ],
             "fields": {}
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "0": true,
-              "1": true,
-              "2": true,
-              "3": true,
-              "4": true,
-              "5": true,
-              "6": true,
-              "0 2": true,
-              "config": true,
-              "creator": true,
-              "display": true,
-              "fields": true,
-              "first": true,
-              "getLinks": true,
-              "length": true,
-              "meta": true,
-              "name": false,
-              "nested": true,
-              "parsers": true,
-              "state": true
-            },
-            "includeByName": {},
-            "indexByName": {},
-            "renameByName": {}
           }
         },
         {
@@ -204,7 +167,8 @@
             "fields": {},
             "sort": [
               {
-                "field": "values"
+                "desc": false,
+                "field": "BuildNumber"
               }
             ]
           }
@@ -227,5 +191,5 @@
   "timezone": "browser",
   "title": "Jenkins Dashboard",
   "uid": "74bf6524-e2fa-4cce-ab02-4bb4192dc7da",
-  "version": 1
+  "version": 3
 }
