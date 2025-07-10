@@ -8,3 +8,14 @@ jenkins:
   authorizationStrategy:
     loggedInUsersCanDoAnything:
       allowAnonymousRead: false
+
+unclassified:
+  openTelemetry:
+    endpoint: "http://monitoring-stack:4317"
+    serviceName: "jenkins"
+    observabilityBackends:
+    - jaeger:
+        name: "jaeger"
+    authentication: "noAuthentication"
+    exportOtelConfigurationAsEnvironmentVariables: true
+    ignoredSteps: "dir,echo,isUnix,pwd,properties"
