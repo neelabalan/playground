@@ -1,18 +1,24 @@
 services:
   jenkins-blueocean:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
     image: customjenkins:latest
     container_name: jenkins-blueocean
     privileged: true
     environment:
-      - HOME=/var/jenkins_home
-      - JENKINS_OPTS=--argumentsRealm.passwd.jenkins=admin --argumentsRealm.roles.jenkins=admin
-      - JAVA_OPTS=-Dotel.instrumentation.jenkins.agent.enabled=true -Dotel.instrumentation.jenkins.remoting.enabled=true -Dotel.instrumentation.jenkins.run.metric.duration.allow_list=.*
-      - OTEL_EXPORTER_OTLP_ENDPOINT=http://monitoring-stack:4317
-      - GRAFANA_BASE_URL=http://monitoring-stack:3000
-      - GRAFANA_METRICS_DASHBOARD_URL=http://monitoring-stack:3000/d/jenkins-metrics
+      HOME: /var/jenkins_home
+      JENKINS_OPTS: >-
+        --argumentsRealm.passwd.jenkins=admin 
+        --argumentsRealm.roles.jenkins=admin
+      JAVA_OPTS: >-
+        -Dotel.instrumentation.jenkins.agent.enabled=true 
+        -Dotel.instrumentation.jenkins.remoting.enabled=true 
+        -Dotel.instrumentation.jenkins.run.metric.duration.allow_list=.*
+        -Dhudson.model.UsageStatistics.disabled=true
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://monitoring-stack:4317
+      GRAFANA_BASE_URL: http://monitoring-stack:3000
+      GRAFANA_METRICS_DASHBOARD_URL: http://monitoring-stack:3000/d/jenkins-metrics
 
     volumes:
       - jenkins-data:/var/jenkins_home
@@ -23,9 +29,9 @@ services:
       - "50000:50000"
     restart: on-failure
     depends_on:
-      - monitoring-stack 
+      - monitoring-stack
     user: root
-  
+
   monitoring-stack:
     image: docker.io/grafana/otel-lgtm:latest
     container_name: lgtm
