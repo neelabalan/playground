@@ -89,3 +89,4 @@ jersey2-api:2.45-154.v4ded3dc34f81
 gitlab-plugin:1.9.8
 theme-manager:294.vf2c2fd783821
 dark-theme:524.vd675b_22b_30cb_
+job-dsl:1.93

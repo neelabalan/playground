@@ -19,3 +19,10 @@ unclassified:
     authentication: "noAuthentication"
     exportOtelConfigurationAsEnvironmentVariables: true
     ignoredSteps: "dir,echo,isUnix,pwd,properties"
+security:
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: false
+
+jobs:
+  - file: "/var/jenkins_home/jobs/ecgo.dsl"
+  - file: "/var/jenkins_home/jobs/maven.dsl"
