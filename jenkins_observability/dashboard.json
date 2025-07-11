@@ -263,7 +263,7 @@
           },
           "limit": 20,
           "metricsQueryType": "range",
-          "query": "{resource.service.name=\"jenkins\" && name=\"BUILD ecgo-docker-pipeline\"} \n| select(\n    span.ci.pipeline.run.number,\n    span.ci.pipeline.run.result\n)",
+          "query": "{resource.service.name=\"jenkins\" && name=~\"^BUILD.*\" && span.ci.pipeline.name=\"$pipeline\"} \n| select(\n    span.ci.pipeline.run.number,\n    span.ci.pipeline.run.result,\n    span.ci.pipeline.run.name\n)",
           "queryType": "traceql",
           "refId": "A",
           "spss": 5,
@@ -374,32 +374,7 @@
             ]
           }
         },
-        "overrides": [
-          {
-            "__systemRef": "hideSeriesFrom",
-            "matcher": {
-              "id": "byNames",
-              "options": {
-                "mode": "exclude",
-                "names": [
-                  "{__name__=\"jenkins_executor_busy\", instance=\"92931cf351906d4624ff3514e161399e\", job=\"jenkins/jenkins\", label=\"built-in\", service_instance_id=\"92931cf351906d4624ff3514e161399e\", service_name=\"jenkins\", service_namespace=\"jenkins\", service_version=\"2.504.2\"}"
-                ],
-                "prefix": "All except:",
-                "readOnly": true
-              }
-            },
-            "properties": [
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": true
-                }
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
         "h": 7,
@@ -546,15 +521,40 @@
   "schemaVersion": 41,
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "text": ["my-maven"],
+          "value": ["my-maven"]
+        },
+        "datasource": {
+          "type": "tempo",
+          "uid": "tempo"
+        },
+        "definition": "",
+        "label": "Pipeline",
+        "multi": true,
+        "name": "pipeline",
+        "options": [],
+        "query": {
+          "label": "ci.pipeline.name",
+          "refId": "TempoDatasourceVariableQueryEditor-VariableQuery",
+          "type": 1
+        },
+        "refresh": 2,
+        "regex": "",
+        "sort": 1,
+        "type": "query"
+      }
+    ]
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Jenkins Dashboard",
   "uid": "74bf6524-e2fa-4cce-ab02-4bb4192dc7da",
-  "version": 8
+  "version": 17
 }
