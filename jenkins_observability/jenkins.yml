@@ -1,4 +1,10 @@
 jenkins:
+  systemMessage: "Jenkins configured with OpenTelemetry and Grafana observability"
+  numExecutors: 3
+  remotingSecurity:
+    enabled: false
+  scmCheckoutRetryCount: 3
+  mode: NORMAL
   securityRealm:
     local:
       allowsSignup: false
@@ -14,8 +20,9 @@ unclassified:
     endpoint: "http://monitoring-stack:4317"
     serviceName: "jenkins"
     observabilityBackends:
-    - jaeger:
-        name: "jaeger"
+    - grafana:
+        name: "grafana"
+        url: "http://monitoring-stack:3000"
     authentication: "noAuthentication"
     exportOtelConfigurationAsEnvironmentVariables: true
     ignoredSteps: "dir,echo,isUnix,pwd,properties"

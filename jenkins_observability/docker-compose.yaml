@@ -12,6 +12,8 @@ services:
         --argumentsRealm.passwd.jenkins=admin 
         --argumentsRealm.roles.jenkins=admin
       JAVA_OPTS: >-
+        -Djenkins.install.runSetupWizard=false
+        -Dhudson.model.UsageStatistics.disabled=true
         -Dotel.instrumentation.jenkins.agent.enabled=true
         -Dotel.instrumentation.jenkins.remoting.enabled=true
         -Dotel.instrumentation.jenkins.run.metric.duration.allow_list=.*
