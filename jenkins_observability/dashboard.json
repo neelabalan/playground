@@ -23,8 +23,8 @@
   "panels": [
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
+        "type": "tempo",
+        "uid": "tempo"
       },
       "fieldConfig": {
         "defaults": {
@@ -48,8 +48,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
-        "w": 3,
+        "h": 7,
+        "w": 4,
         "x": 0,
         "y": 0
       },
@@ -61,8 +61,10 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
-          "fields": "",
+          "calcs": [
+            "count"
+          ],
+          "fields": "/^Trace ID$/",
           "values": false
         },
         "showPercentChange": false,
@@ -73,19 +75,22 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "prometheus"
+            "type": "tempo",
+            "uid": "tempo"
           },
-          "disableTextWrap": false,
-          "editorMode": "builder",
-          "expr": "ci_pipeline_run_completed_total",
-          "fullMetaSearch": false,
-          "includeNullMetadata": true,
-          "instant": false,
-          "legendFormat": "__auto",
-          "range": true,
+          "filters": [
+            {
+              "id": "13aaefb4",
+              "operator": "=",
+              "scope": "span"
+            }
+          ],
+          "limit": 20,
+          "metricsQueryType": "range",
+          "query": "{resource.service.name=\"jenkins\" && name=~\"^BUILD.*\" && span.ci.pipeline.name=\"$pipeline\"} | select(span.ci.pipeline.run.result)",
+          "queryType": "traceql",
           "refId": "A",
-          "useBackend": false
+          "tableType": "traces"
         }
       ],
       "title": "Total Runs",
@@ -119,9 +124,9 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
-        "w": 3,
-        "x": 3,
+        "h": 7,
+        "w": 4,
+        "x": 4,
         "y": 0
       },
       "id": 4,
@@ -132,7 +137,9 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -149,7 +156,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "(ci_pipeline_run_success_total / ci_pipeline_run_completed_total)*100",
+          "expr": "(ci_pipeline_run_success_total / ci_pipeline_run_completed_total) * 100",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "instant": false,
@@ -161,6 +168,107 @@
       ],
       "title": "Success percentage",
       "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "jenkins_executor_busy",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Jenins Executor Busy",
+      "type": "timeseries"
     },
     {
       "datasource": {
@@ -225,9 +333,9 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 12,
-        "x": 6,
-        "y": 0
+        "w": 16,
+        "x": 0,
+        "y": 7
       },
       "id": 2,
       "options": {
@@ -280,11 +388,11 @@
             "jsonPaths": [
               {
                 "alias": "Result",
-                "path": "0.fields.5.values.0"
+                "path": "0.fields.6.values.0"
               },
               {
                 "alias": "BuildNumber",
-                "path": "0.fields.4.values.0"
+                "path": "0.fields.5.values.0"
               }
             ],
             "source": "nested"
@@ -316,107 +424,6 @@
         }
       ],
       "type": "barchart"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green"
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 7,
-        "w": 8,
-        "x": 0,
-        "y": 8
-      },
-      "id": 5,
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": false
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
-        }
-      },
-      "pluginVersion": "12.0.2",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "prometheus"
-          },
-          "disableTextWrap": false,
-          "editorMode": "builder",
-          "expr": "jenkins_executor_busy",
-          "fullMetaSearch": false,
-          "includeNullMetadata": true,
-          "instant": false,
-          "legendFormat": "__auto",
-          "range": true,
-          "refId": "A",
-          "useBackend": false
-        }
-      ],
-      "title": "Jenins Executor Busy",
-      "type": "timeseries"
     },
     {
       "datasource": {
@@ -467,9 +474,9 @@
       },
       "gridPos": {
         "h": 7,
-        "w": 10,
-        "x": 8,
-        "y": 8
+        "w": 16,
+        "x": 0,
+        "y": 15
       },
       "id": 6,
       "options": {
@@ -524,8 +531,12 @@
     "list": [
       {
         "current": {
-          "text": ["my-maven"],
-          "value": ["my-maven"]
+          "text": [
+            "ecgo-docker-pipeline"
+          ],
+          "value": [
+            "ecgo-docker-pipeline"
+          ]
         },
         "datasource": {
           "type": "tempo",
@@ -556,5 +567,5 @@
   "timezone": "browser",
   "title": "Jenkins Dashboard",
   "uid": "74bf6524-e2fa-4cce-ab02-4bb4192dc7da",
-  "version": 17
+  "version": 21
 }
