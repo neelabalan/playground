@@ -22,7 +22,7 @@ unclassified:
     observabilityBackends:
     - grafana:
         name: "grafana"
-        url: "http://monitoring-stack:3000"
+        grafanaBaseUrl: "http://monitoring-stack:3000"
     authentication: "noAuthentication"
     exportOtelConfigurationAsEnvironmentVariables: true
     ignoredSteps: "dir,echo,isUnix,pwd,properties"
