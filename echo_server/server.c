@@ -1,10 +1,10 @@
 #include <arpa/inet.h>
-#include <stdbool.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <getopt.h>
 #include <netinet/in.h>
 #include <stdarg.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>  // for memset
