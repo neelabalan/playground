@@ -32,7 +32,11 @@ class SepScraper:
         self.base_url = base_url
         self.delay = delay
         self.session = requests.Session()
-        self.session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'})
+        self.session.headers.update(
+            {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            }
+        )
 
         # Initialize HTML to Markdown converter
         self.h2m = html2text.HTML2Text()
@@ -116,7 +120,12 @@ class SepScraper:
             elem.decompose()
 
         # Find main content - usually in a div with id 'main-text' or similar
-        main_content = soup.find('div', id='main-text') or soup.find('div', id='content') or soup.find('div', class_='entry') or soup.find('main')
+        main_content = (
+            soup.find('div', id='main-text')
+            or soup.find('div', id='content')
+            or soup.find('div', class_='entry')
+            or soup.find('main')
+        )
 
         if main_content:
             # Remove any remaining unwanted elements
@@ -273,7 +282,15 @@ def main():
 
         # Display sample of the data
         df = pd.DataFrame(
-            [{'title': a.title[:50] + '...' if len(a.title) > 50 else a.title, 'author': a.author, 'word_count': a.word_count, 'first_published': a.first_published} for a in articles[:5]]
+            [
+                {
+                    'title': a.title[:50] + '...' if len(a.title) > 50 else a.title,
+                    'author': a.author,
+                    'word_count': a.word_count,
+                    'first_published': a.first_published,
+                }
+                for a in articles[:5]
+            ]
         )
 
         print('\nSample of scraped articles:')

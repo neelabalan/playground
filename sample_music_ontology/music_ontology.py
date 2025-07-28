@@ -8,22 +8,18 @@ from rdflib.namespace import Namespace
 def prepare_sample_data():
     df = pd.read_csv('dataset/tcc_ceds_music.csv')
     random_df = df.sample(n=200)
-    selected_columns = [
-        'artist_name',
-        'track_name',
-        'release_date',
-        'genre',
-        'topic'
-    ]
+    selected_columns = ['artist_name', 'track_name', 'release_date', 'genre', 'topic']
     random_df = random_df[selected_columns]
     random_df.to_csv('dataset/sample_data.csv', index=False)
+
 
 def fill_space_with_underscore(name):
     return name.lower().replace(' ', '_')
 
+
 def create_ontology():
     g = rdflib.Graph()
-    MUSIC = Namespace("https://example.org/ontology/music#")
+    MUSIC = Namespace('https://example.org/ontology/music#')
 
     # classes and properties
     g.add((MUSIC.Artist, RDF.type, OWL.Class))
@@ -69,6 +65,7 @@ def create_ontology():
 
     g.serialize('music_ontology.ttl', format='turtle')
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     prepare_sample_data()
     create_ontology()

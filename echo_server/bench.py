@@ -1,26 +1,28 @@
+import argparse
 import asyncio
-import time
 import random
 import statistics
-import argparse
+import time
+
 
 async def echo_client(host: str, port: int, message: str, results: list[float], semaphore: asyncio.Semaphore) -> None:
     start_time = time.perf_counter()
     writer = None
     try:
         reader, writer = await asyncio.open_connection(host, port)
-        writer.write((message + "\r\n").encode())
+        writer.write((message + '\r\n').encode())
         await writer.drain()
         await reader.readline()
         end_time = time.perf_counter()
         results.append(end_time - start_time)
     except Exception as e:
-        print(f"Connection error: {e}")
+        print(f'Connection error: {e}')
     finally:
         if writer:
             writer.close()
             await writer.wait_closed()
         semaphore.release()
+
 
 async def benchmark(host: str, port: int, num_connections: int, messages: list[str], duration: float) -> dict:
     results = []
@@ -40,7 +42,7 @@ async def benchmark(host: str, port: int, num_connections: int, messages: list[s
     try:
         await asyncio.gather(*workers)
     except asyncio.CancelledError:
-        print("Benchmark cancelled by user")
+        print('Benchmark cancelled by user')
     finally:
         for task in workers:
             task.cancel()
@@ -49,43 +51,50 @@ async def benchmark(host: str, port: int, num_connections: int, messages: list[s
             await asyncio.gather(*client_tasks)
 
     if not results:
-        return {"error": "No successful requests"}
+        return {'error': 'No successful requests'}
 
     return {
-        "total_requests": len(results),
-        "mean_time": statistics.mean(results),
-        "median_time": statistics.median(results),
-        "p95_time": statistics.quantiles(results, n=100)[94],
-        "p99_time": statistics.quantiles(results, n=100)[98],
-        "min_time": min(results),
-        "max_time": max(results),
-        "requests_per_second": len(results) / duration,
+        'total_requests': len(results),
+        'mean_time': statistics.mean(results),
+        'median_time': statistics.median(results),
+        'p95_time': statistics.quantiles(results, n=100)[94],
+        'p99_time': statistics.quantiles(results, n=100)[98],
+        'min_time': min(results),
+        'max_time': max(results),
+        'requests_per_second': len(results) / duration,
     }
 
+
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Benchmark an echo server.")
-    parser.add_argument("--host", type=str, default="localhost", help="Server host")
-    parser.add_argument("--port", type=int, required=True, help="Server port")
-    parser.add_argument("--connections", type=int, default=100, help="Number of concurrent connections")
-    parser.add_argument("--duration", type=float, default=10.0, help="Duration of the benchmark in seconds")
-    parser.add_argument("--messages", type=str, nargs="+", default=[
-        "Hello, World!",
-        "This is a test message.",
-        "Benchmarking echo server.",
-        "Asyncio is powerful.",
-        "Python 3.11 is fast."
-    ], help="List of messages to send")
+    parser = argparse.ArgumentParser(description='Benchmark an echo server.')
+    parser.add_argument('--host', type=str, default='localhost', help='Server host')
+    parser.add_argument('--port', type=int, required=True, help='Server port')
+    parser.add_argument('--connections', type=int, default=100, help='Number of concurrent connections')
+    parser.add_argument('--duration', type=float, default=10.0, help='Duration of the benchmark in seconds')
+    parser.add_argument(
+        '--messages',
+        type=str,
+        nargs='+',
+        default=[
+            'Hello, World!',
+            'This is a test message.',
+            'Benchmarking echo server.',
+            'Asyncio is powerful.',
+            'Python 3.11 is fast.',
+        ],
+        help='List of messages to send',
+    )
 
     args = parser.parse_args()
 
     try:
         stats = asyncio.run(benchmark(args.host, args.port, args.connections, args.messages, args.duration))
-        print("\nBenchmark Results:")
+        print('\nBenchmark Results:')
         for key, value in stats.items():
-            print(f"{key}: {value}")
+            print(f'{key}: {value}')
     except KeyboardInterrupt:
-        print("\nBenchmark stopped by user")
+        print('\nBenchmark stopped by user')
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()
-

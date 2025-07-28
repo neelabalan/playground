@@ -1,8 +1,7 @@
 # https://nedbatchelder.com/blog/202206/adding_a_dunder_to_an_object.html
 
 
-class SomeObject:
-    ...
+class SomeObject: ...
 
 
 class Nothing:

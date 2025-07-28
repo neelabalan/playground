@@ -28,6 +28,7 @@ Output
 (1, 3) (1, 4) (2, 3) (2, 4)
 
 """
+
 import itertools
 
 a = map(int, input().strip().split(' '))

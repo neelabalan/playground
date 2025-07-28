@@ -15,11 +15,13 @@ class Property(BaseModel):
     name: str
     values: List[str]
 
+
 class ClassMetadata(BaseModel):
     uri: str
     subclasses: List[str]
     object_properties: Dict[str, Property]
     datatype_properties: Dict[str, Property]
+
 
 class MetadataExtractor:
     def __init__(self, file):
@@ -46,7 +48,7 @@ class MetadataExtractor:
                 uri=class_uri,
                 subclasses=[str(o).split('/')[-1] for o in self.g.subjects(RDFS.subClassOf, subject)],
                 object_properties={},
-                datatype_properties={}
+                datatype_properties={},
             )
         self.add_properties(subject, OWL.ObjectProperty, ontology_metadata)
         self.add_properties(subject, OWL.DatatypeProperty, ontology_metadata)
@@ -55,7 +57,8 @@ class MetadataExtractor:
     def extract(self):
         return self.collect_classes_and_properties()
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Process some files.')
     parser.add_argument('--file', type=str, help='The input file to process')
     parser.add_argument('--out', type=str, help='The output file to write to')

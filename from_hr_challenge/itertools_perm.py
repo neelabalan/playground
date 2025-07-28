@@ -18,6 +18,7 @@ KA
 KC
 KH
 """
+
 from itertools import permutations as perm
 
 

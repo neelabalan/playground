@@ -98,14 +98,24 @@ class OntologyBuilder:
 
     def define_subclasses(self, subclass_parent_class: list[tuple[str, str]]):
         for subclass, parent_class in subclass_parent_class:
-            self.graph = SubClass(name=subclass, parent_class=parent_class, namespace=self.namespace, graph=self.graph).add_to_graph()
+            self.graph = SubClass(
+                name=subclass, parent_class=parent_class, namespace=self.namespace, graph=self.graph
+            ).add_to_graph()
 
     def define_data_properties_from_model(self, model: typing.Type[pydantic.BaseModel], domain: str):
         for field_name, field_type in typing.get_type_hints(model).items():
-            self.graph = DataProperty(name=field_name, namespace=self.namespace, graph=self.graph, domain=domain, property_range=self.TYPE_MAPPING.get(field_type)).add_to_graph()
+            self.graph = DataProperty(
+                name=field_name,
+                namespace=self.namespace,
+                graph=self.graph,
+                domain=domain,
+                property_range=self.TYPE_MAPPING.get(field_type),
+            ).add_to_graph()
 
     def define_object_property(self, name: str, domain: str, property_range: str):
-        self.graph = ObjectProperty(name=name, namespace=self.namespace, graph=self.graph, domain=domain, property_range=property_range).add_to_graph()
+        self.graph = ObjectProperty(
+            name=name, namespace=self.namespace, graph=self.graph, domain=domain, property_range=property_range
+        ).add_to_graph()
 
     def build(): ...
 

@@ -1,7 +1,8 @@
-""" 
+"""
 dependency : requests, colorama, beautifulsoup
 run        : python stoicquote --color blue
 """
+
 import argparse
 
 import colorama

@@ -91,6 +91,7 @@ def extract_code(
 
     return extracted
 
+
 class GraphSparqlChain(GraphSparqlQAChain):
     def _call(
         self,
@@ -105,52 +106,48 @@ class GraphSparqlChain(GraphSparqlQAChain):
         callbacks = _run_manager.get_child()
         prompt = inputs[self.input_key]
 
-        _intent = self.sparql_intent_chain.run({"prompt": prompt}, callbacks=callbacks)
+        _intent = self.sparql_intent_chain.run({'prompt': prompt}, callbacks=callbacks)
         intent = _intent.strip()
 
-        if "SELECT" in intent and "UPDATE" not in intent:
+        if 'SELECT' in intent and 'UPDATE' not in intent:
             sparql_generation_chain = self.sparql_generation_select_chain
-            intent = "SELECT"
-        elif "UPDATE" in intent and "SELECT" not in intent:
+            intent = 'SELECT'
+        elif 'UPDATE' in intent and 'SELECT' not in intent:
             sparql_generation_chain = self.sparql_generation_update_chain
-            intent = "UPDATE"
+            intent = 'UPDATE'
         else:
             raise ValueError(
-                "I am sorry, but this prompt seems to fit none of the currently "
-                "supported SPARQL query types, i.e., SELECT and UPDATE."
+                'I am sorry, but this prompt seems to fit none of the currently '
+                'supported SPARQL query types, i.e., SELECT and UPDATE.'
             )
 
-        _run_manager.on_text("Identified intent:", end="\n", verbose=self.verbose)
-        _run_manager.on_text(intent, color="green", end="\n", verbose=self.verbose)
+        _run_manager.on_text('Identified intent:', end='\n', verbose=self.verbose)
+        _run_manager.on_text(intent, color='green', end='\n', verbose=self.verbose)
 
         generated_sparql = sparql_generation_chain.run(
-            {"prompt": prompt, "schema": self.graph.get_schema}, callbacks=callbacks
+            {'prompt': prompt, 'schema': self.graph.get_schema}, callbacks=callbacks
         )
         # change here
         generated_sparql = extract_code(generated_sparql)[0][1]
 
-        _run_manager.on_text("Generated SPARQL:", end="\n", verbose=self.verbose)
-        _run_manager.on_text(
-            generated_sparql, color="green", end="\n", verbose=self.verbose
-        )
+        _run_manager.on_text('Generated SPARQL:', end='\n', verbose=self.verbose)
+        _run_manager.on_text(generated_sparql, color='green', end='\n', verbose=self.verbose)
 
-        if intent == "SELECT":
+        if intent == 'SELECT':
             context = self.graph.query(generated_sparql)
 
-            _run_manager.on_text("Full Context:", end="\n", verbose=self.verbose)
-            _run_manager.on_text(
-                str(context), color="green", end="\n", verbose=self.verbose
-            )
+            _run_manager.on_text('Full Context:', end='\n', verbose=self.verbose)
+            _run_manager.on_text(str(context), color='green', end='\n', verbose=self.verbose)
             result = self.qa_chain(
-                {"prompt": prompt, "context": context},
+                {'prompt': prompt, 'context': context},
                 callbacks=callbacks,
             )
             res = result[self.qa_chain.output_key]
-        elif intent == "UPDATE":
+        elif intent == 'UPDATE':
             self.graph.update(generated_sparql)
-            res = "Successfully inserted triples into the graph."
+            res = 'Successfully inserted triples into the graph.'
         else:
-            raise ValueError("Unsupported SPARQL query type.")
+            raise ValueError('Unsupported SPARQL query type.')
 
         chain_result: dict[str, Any] = {self.output_key: res}
         if self.return_sparql_query:

@@ -24,7 +24,9 @@ app_dir = pathlib.Path.home() / '.qd'
 app_dir.mkdir(exist_ok=True, parents=True)
 
 db_client = chromadb.PersistentClient(path=str(app_dir / 'bookmarks_db'))
-collection = db_client.get_or_create_collection('allbookmarks', embedding_function= embedding_functions.SentenceTransformerEmbeddingFunction('all-mpnet-base-v2'))
+collection = db_client.get_or_create_collection(
+    'allbookmarks', embedding_function=embedding_functions.SentenceTransformerEmbeddingFunction('all-mpnet-base-v2')
+)
 logging.basicConfig(level=logging.INFO)
 
 

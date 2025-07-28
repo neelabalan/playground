@@ -24,7 +24,7 @@ class GzippedJsonRotatingFileHandler:
     def open_new_file(self):
         if self.current_file:
             self.current_file.close()
-        filename = f"data/{self.base_filename}.{self.file_counter}.jsonl.gz"
+        filename = f'data/{self.base_filename}.{self.file_counter}.jsonl.gz'
         self.current_filename = pathlib.Path(filename)
         self.current_file = gzip.open(self.current_filename, mode='w')
         self.current_size = 0
@@ -34,32 +34,36 @@ class GzippedJsonRotatingFileHandler:
         current_size = self.current_filename.stat().st_size
         if current_size >= self.max_bytes:
             self.open_new_file()
-        self.current_file.write((bson.json_util.dumps(data)+ '\n').encode())
+        self.current_file.write((bson.json_util.dumps(data) + '\n').encode())
 
     def close(self):
         if self.current_file:
             self.current_file.close()
             self.current_file = None
 
-def change_stream_listener(collection: Collection, logger: logging.Logger, gzipped_logger: GzippedJsonRotatingFileHandler) -> None:
+
+def change_stream_listener(
+    collection: Collection, logger: logging.Logger, gzipped_logger: GzippedJsonRotatingFileHandler
+) -> None:
     try:
-        logger.info("Listening to change stream...")
+        logger.info('Listening to change stream...')
         with collection.watch() as stream:
             for change in stream:
-                event_type = change.get("operationType")
-                logger.info(f"Change detected: {event_type} at {time.time()}")
+                event_type = change.get('operationType')
+                logger.info(f'Change detected: {event_type} at {time.time()}')
                 logger.debug(change)
                 gzipped_logger.write(change)
     except Exception as e:
         gzipped_logger.close()
-        logger.error(f"Error in change stream: {e}")
+        logger.error(f'Error in change stream: {e}')
         traceback.print_exc()
     except KeyboardInterrupt as _:
         gzipped_logger.close()
-        logger.error("Intercepted keyboard interrupt")
+        logger.error('Intercepted keyboard interrupt')
+
 
 def main():
-    parser = argparse.ArgumentParser(description="MongoDB Change Stream Listener")
+    parser = argparse.ArgumentParser(description='MongoDB Change Stream Listener')
     parser.add_argument('--mongo-uri', type=str, default='mongodb://localhost:27017/', help='MongoDB URI')
     parser.add_argument('--database', type=str, default='test_db', help='Database name')
     parser.add_argument('--collection', type=str, default='test_collection', help='Collection name')
@@ -89,5 +93,6 @@ def main():
 
     gzipped_logger.close()
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()

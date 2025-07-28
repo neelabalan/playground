@@ -21,6 +21,7 @@ Split s into n/k = 9/3 equal parts of length k = 3.
 3. ADA -> AD
 
 """
+
 import textwrap  # for splitting the string in equal parts
 from collections import Counter
 

@@ -10,6 +10,7 @@ import numpy as np
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 log = logging.getLogger(__name__)
 
+
 def create_random_tree(n_nodes):
     """Create a random tree with the given number of nodes."""
     G = nx.Graph()
@@ -21,6 +22,7 @@ def create_random_tree(n_nodes):
 
     return G
 
+
 def compute_metrics(G):
     """Compute some metrics on the graph."""
     n_components = nx.number_connected_components(G)
@@ -28,6 +30,7 @@ def compute_metrics(G):
     avg_clustering = nx.average_clustering(G)
 
     return n_components, diameter, avg_clustering
+
 
 def benchmark_original_vs_spanning(n_nodes):
     """Benchmark the original graph and its spanning tree."""
@@ -60,15 +63,18 @@ def benchmark_original_vs_spanning(n_nodes):
     else:
         log.info('The original graph is easier to compute.')
 
+
 def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description='Benchmark graph computations.')
     parser.add_argument('-n', '--nodes', type=int, required=True, help='Number of nodes in the graph')
     return parser.parse_args()
 
+
 def main():
     args = parse_args()
     benchmark_original_vs_spanning(args.nodes)
+
 
 if __name__ == '__main__':
     main()

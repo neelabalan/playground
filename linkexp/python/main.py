@@ -11,7 +11,8 @@ def run(args: argparse.Namespace):
     else:
         asyncio.run(run_async(args.max_req))
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Benchmark the usage of lru_cache in Python.')
     parser.add_argument(
         '--concurrent',
@@ -24,7 +25,6 @@ if __name__ == "__main__":
         type=int,
         default=10,
         help='Semaphore val',
-
     )
     args = parser.parse_args()
     run(args)

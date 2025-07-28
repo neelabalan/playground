@@ -11,6 +11,7 @@ https://gist.github.com/pierre-haessig/6543283
 
 Félix Hartmann -- September 2013
 """
+
 from __future__ import division
 from __future__ import print_function
 
