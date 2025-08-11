@@ -18,7 +18,7 @@ type CmdArgs struct {
 	Search string `arg:"search" default:"" description:"Search term"`
 }
 
-func createFlagArgs(args interface{}) interface{} {
+func createFlagArgs(args any) any {
 	t := reflect.TypeOf(args)
 	commandLineArgs := reflect.New(t).Elem()
 
@@ -34,13 +34,11 @@ func createFlagArgs(args interface{}) interface{} {
 		case "int":
 			val, err := strconv.Atoi(defaultTag)
 			if err == nil {
-				// FIXME
-				slog.Error("Check the default tag for ", field)
+				slog.Error("Check the default tag for ", slog.Any("type", field))
 			}
 			flag.IntVar(commandLineArgs.Field(i).Addr().Interface().(*int), cmdTag, val, description)
 		default:
-			// FIXME
-			slog.Warn("Cannot parse at ", field)
+			slog.Warn("Cannot parse at ", slog.Any("type", field))
 		}
 	}
 	flag.Parse()
@@ -84,14 +82,14 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	var jsonBody map[string]interface{}
+	var jsonBody map[string]any
 	json.Unmarshal([]byte(body), &jsonBody)
 	marshaled, _ := json.MarshalIndent(jsonBody, "", "    ")
 	slog.Debug(string(marshaled))
 
-	items := jsonBody["items"].([]interface{})
+	items := jsonBody["items"].([]any)
 	for _, item := range items {
-		volumeInfo := item.(map[string]interface{})["volumeInfo"].(map[string]interface{})
+		volumeInfo := item.(map[string]any)["volumeInfo"].(map[string]any)
 		fmt.Println("\n==========")
 		fmt.Println("Title: ", volumeInfo["title"])
 		fmt.Println("Publisher: ", volumeInfo["publisher"])

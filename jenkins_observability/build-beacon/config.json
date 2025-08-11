@@ -1,0 +1,12 @@
+{
+  "pipelines": [
+    {
+      "url": "localhost:8080#docker",
+      "frequency": 3
+    },
+    { "url": "localhost:8080#something", "frequency": 6 }
+  ],
+  "worker": 10,
+  "data_store": "~/data",
+  "slack_channel": "#alert"
+}
