@@ -1,12 +1,15 @@
 {
   "pipelines": [
     {
-      "url": "localhost:8080#docker",
-      "frequency": 3
+      "url": "http://localhost:8080/job/ecgo-docker-pipeline",
+      "frequency": 1
     },
-    { "url": "localhost:8080#something", "frequency": 6 }
+    {
+      "url": "http://localhost:8080/job/my-maven",
+      "frequency": 1
+    }
   ],
-  "worker": 10,
-  "data_store": "~/data",
+  "worker": 2,
+  "data_store": "~/jenkins-data",
   "slack_channel": "#alert"
 }
