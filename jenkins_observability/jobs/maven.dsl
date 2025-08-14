@@ -8,13 +8,13 @@ DSL = '''pipeline {
   stages {
     stage('checkout') {
       steps {
-        git(url: 'https://github.com/elastic/opentelemetry-maven-extension', branch: 'main')
+        // git(url: 'https://github.com/elastic/opentelemetry-maven-extension', branch: 'main')
       }
     }
     stage('prepare') {
       steps {
-        sh (label: 'fetch opentelemetry-maven-extension',
-            script: 'curl -s https://repo.maven.apache.org/maven2/io/opentelemetry/contrib/opentelemetry-maven-extension/\${OTEL_VERSION}/opentelemetry-maven-extension-\${OTEL_VERSION}.jar > otel.jar')
+        // sh (label: 'fetch opentelemetry-maven-extension',
+        //     script: 'curl -s https://repo.maven.apache.org/maven2/io/opentelemetry/contrib/opentelemetry-maven-extension/\${OTEL_VERSION}/opentelemetry-maven-extension-\${OTEL_VERSION}.jar > otel.jar')
       }
     }
     stage('compile') {
