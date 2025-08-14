@@ -18,9 +18,9 @@ services:
         -Dotel.instrumentation.jenkins.remoting.enabled=true
         -Dotel.instrumentation.jenkins.run.metric.duration.allow_list=.*
         -Dhudson.model.UsageStatistics.disabled=true
-      OTEL_EXPORTER_OTLP_ENDPOINT: http://monitoring-stack:4317
-      GRAFANA_BASE_URL: http://monitoring-stack:3000
-      GRAFANA_METRICS_DASHBOARD_URL: http://monitoring-stack:3000/d/jenkins-metrics
+      # OTEL_EXPORTER_OTLP_ENDPOINT: http://monitoring-stack:4317
+      # GRAFANA_BASE_URL: http://monitoring-stack:3000
+      # GRAFANA_METRICS_DASHBOARD_URL: http://monitoring-stack:3000/d/jenkins-metrics
 
     volumes:
       - jenkins-data:/var/jenkins_home
