@@ -18,10 +18,6 @@ services:
         -Dotel.instrumentation.jenkins.remoting.enabled=true
         -Dotel.instrumentation.jenkins.run.metric.duration.allow_list=.*
         -Dhudson.model.UsageStatistics.disabled=true
-      # OTEL_EXPORTER_OTLP_ENDPOINT: http://monitoring-stack:4317
-      # GRAFANA_BASE_URL: http://monitoring-stack:3000
-      # GRAFANA_METRICS_DASHBOARD_URL: http://monitoring-stack:3000/d/jenkins-metrics
-
     volumes:
       - jenkins-data:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
@@ -31,26 +27,29 @@ services:
       - "8080:8080"
       - "50000:50000"
     restart: on-failure
-    # depends_on:
-    #   - monitoring-stack
     user: root
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./data:/prometheus
+    ports:
+      - "9090:9090"
+    depends_on:
+      - jenkins-blueocean
 
-  # monitoring-stack:
-  #   image: docker.io/grafana/otel-lgtm:latest
-  #   container_name: lgtm
-  #   ports:
-  #     - "3000:3000"
-  #     - "4317:4317"
-  #     - "4318:4318"
-  #     - "3200:3200"
-  #   volumes:
-  #     - ./container/grafana:/data/grafana
-  #     - ./container/prometheus:/data/prometheus
-  #     - ./container/loki:/data/loki
-  #   environment:
-  #     - GF_PATHS_DATA=/data/grafana
-  #   restart: on-failure
+  grafana:
+    image: grafana/grafana:12.1.1
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./grafana.ini:/etc/grafana/grafana.ini
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    depends_on:
+      - prometheus
 
 volumes:
   jenkins-data:
   jenkins-docker-certs:
+  prometheus_data:

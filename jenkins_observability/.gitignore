@@ -2,3 +2,4 @@ container/
 jobs/my-maven/
 jobs/pytest-otel/
 jobs/ecgo-docker-pipeline/
+data/
