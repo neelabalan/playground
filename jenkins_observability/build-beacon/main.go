@@ -83,6 +83,8 @@ func main() {
 		slog.Error("Failed to decode config file", slog.Any("error", err))
 		os.Exit(1)
 	}
+	setup()
+	publish()
 
 	fmt.Printf("Loaded config: %+v\n", config)
 }

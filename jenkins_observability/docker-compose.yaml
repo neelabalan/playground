@@ -14,10 +14,6 @@ services:
       JAVA_OPTS: >-
         -Djenkins.install.runSetupWizard=false
         -Dhudson.model.UsageStatistics.disabled=true
-        -Dotel.instrumentation.jenkins.agent.enabled=true
-        -Dotel.instrumentation.jenkins.remoting.enabled=true
-        -Dotel.instrumentation.jenkins.run.metric.duration.allow_list=.*
-        -Dhudson.model.UsageStatistics.disabled=true
     volumes:
       - jenkins-data:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
@@ -32,11 +28,15 @@ services:
     image: prom/prometheus:v3.5.0
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
-      - ./data:/prometheus
+      - ./metric-data:/prometheus # chmod 777 metric-data
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--storage.tsdb.retention.time=90d"
+      - "--storage.tsdb.retention.size=100GB"
+      - "--web.enable-remote-write-receiver"
     ports:
       - "9090:9090"
-    depends_on:
-      - jenkins-blueocean
 
   grafana:
     image: grafana/grafana:12.1.1
