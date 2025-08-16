@@ -2,16 +2,9 @@ global:
   scrape_interval: 15s
   evaluation_interval: 15s
 
-# TSDB runtime config: allow out-of-order ingestion up to 60 days
 storage:
   tsdb:
     out_of_order_time_window: 60d
 
-remote_write:
-  - url: "http://localhost:9090/api/v1/write"
-    remote_timeout: 30s
 
-scrape_configs:
-  - job_name: 'prometheus'
-    static_configs:
-      - targets: ['localhost:9090']
+scrape_configs: []
