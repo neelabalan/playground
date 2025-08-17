@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"context"
-	"encoding/json"
 	"flag"
 	"fmt"
 	"io"
@@ -423,119 +422,122 @@ func main() {
 		slog.Int("interval", args.Interval),
 		slog.Int("pipelines", args.Pipelines))
 
-	configPath := args.Config
-	if configPath == "" {
-		configPath = "config.json"
-	}
-	slog.Debug("Using config file", slog.String("path", configPath))
-
-	file, err := os.Open(configPath)
-	if err != nil {
-		slog.Error("Failed to open config file", slog.String("path", configPath), slog.Any("error", err))
-		os.Exit(1)
-	}
-	defer file.Close()
-
-	var config Config
-	decoder := json.NewDecoder(file)
-	if err := decoder.Decode(&config); err != nil {
-		slog.Error("Failed to decode config file", slog.Any("error", err))
-		os.Exit(1)
-	}
-	slog.Debug("Successfully loaded configuration from file")
-
-	if config.Telemetry.ServiceName == "" {
-		// default config
-		config.Telemetry = TelemetryConfig{
-			ServiceName:     "jenkins-build-beacon",
-			ServiceInstance: generateServiceInstanceID(),
-			OTLPEndpoint:    "localhost:9090",
-			OTLPPath:        "/api/v1/otlp/v1/metrics",
-			ExportInterval:  15,
-		}
-		slog.Debug("Using default telemetry configuration")
-	} else {
-		slog.Debug("Using telemetry configuration from file",
-			slog.String("service_name", config.Telemetry.ServiceName),
-			slog.String("endpoint", config.Telemetry.OTLPEndpoint))
-	}
-
-	slog.Info("Loaded config", slog.Any("pipelines", len(config.Pipelines)),
-		slog.Int("workers", config.Worker),
-		slog.String("service_instance", config.Telemetry.ServiceInstance),
-	)
-
 	ctx := context.Background()
+	TestJenkinsBuilds(ctx)
 
-	metricExporter, err := NewOTLPMetricExporter(
-		config.Telemetry.OTLPEndpoint,
-		config.Telemetry.OTLPPath,
-		config.Telemetry.ServiceName,
-		config.Telemetry.ServiceInstance,
-		config.Telemetry.ExportInterval,
-	)
-	if err != nil {
-		slog.Error("Failed to create metric exporter", slog.Any("error", err))
-		os.Exit(1)
-	}
-	defer metricExporter.Shutdown(ctx)
+	// configPath := args.Config
+	// if configPath == "" {
+	// 	configPath = "config.json"
+	// }
+	// slog.Debug("Using config file", slog.String("path", configPath))
 
-	if args.Simulate {
-		slog.Info("Starting Jenkins build simulation mode",
-			slog.Int("pipelines", args.Pipelines),
-			slog.Int("interval_seconds", args.Interval))
+	// file, err := os.Open(configPath)
+	// if err != nil {
+	// 	slog.Error("Failed to open config file", slog.String("path", configPath), slog.Any("error", err))
+	// 	os.Exit(1)
+	// }
+	// defer file.Close()
 
-		simulator := NewJenkinsBuildSimulator(args.Pipelines)
-		ticker := time.NewTicker(time.Duration(args.Interval) * time.Second)
-		defer ticker.Stop()
+	// var config Config
+	// decoder := json.NewDecoder(file)
+	// if err := decoder.Decode(&config); err != nil {
+	// 	slog.Error("Failed to decode config file", slog.Any("error", err))
+	// 	os.Exit(1)
+	// }
+	// slog.Debug("Successfully loaded configuration from file")
 
-		for {
-			select {
-			case <-ticker.C:
-				build := simulator.GenerateBuild()
+	// if config.Telemetry.ServiceName == "" {
+	// 	// default config
+	// 	config.Telemetry = TelemetryConfig{
+	// 		ServiceName:     "jenkins-build-beacon",
+	// 		ServiceInstance: generateServiceInstanceID(),
+	// 		OTLPEndpoint:    "localhost:9090",
+	// 		OTLPPath:        "/api/v1/otlp/v1/metrics",
+	// 		ExportInterval:  15,
+	// 	}
+	// 	slog.Debug("Using default telemetry configuration")
+	// } else {
+	// 	slog.Debug("Using telemetry configuration from file",
+	// 		slog.String("service_name", config.Telemetry.ServiceName),
+	// 		slog.String("endpoint", config.Telemetry.OTLPEndpoint))
+	// }
 
-				slog.Info("Simulating Jenkins build",
-					slog.String("pipeline", build.PipelineName),
-					slog.Int("build_number", build.BuildNumber),
-					slog.String("status", build.Status),
-					slog.Float64("duration_seconds", build.DurationSeconds))
+	// slog.Info("Loaded config", slog.Any("pipelines", len(config.Pipelines)),
+	// 	slog.Int("workers", config.Worker),
+	// 	slog.String("service_instance", config.Telemetry.ServiceInstance),
+	// )
 
-				if err := metricExporter.RecordJenkinsBuild(ctx, build); err != nil {
-					slog.Error("Failed to send build metrics", slog.Any("error", err))
-				}
+	// ctx := context.Background()
 
-			case <-waitForShutdown():
-				slog.Info("Shutdown signal received, stopping simulation...")
-				return
-			}
-		}
-	} else {
-		// Pipeline monitoring mode - just stay idle and monitor
-		slog.Info("Starting pipeline monitoring mode (idle - no metrics sent)")
-		slog.Debug("Configured pipelines", slog.Any("pipelines", config.Pipelines))
+	// metricExporter, err := NewOTLPMetricExporter(
+	// 	config.Telemetry.OTLPEndpoint,
+	// 	config.Telemetry.OTLPPath,
+	// 	config.Telemetry.ServiceName,
+	// 	config.Telemetry.ServiceInstance,
+	// 	config.Telemetry.ExportInterval,
+	// )
+	// if err != nil {
+	// 	slog.Error("Failed to create metric exporter", slog.Any("error", err))
+	// 	os.Exit(1)
+	// }
+	// defer metricExporter.Shutdown(ctx)
 
-		ticker := time.NewTicker(60 * time.Second) // Check every minute
-		defer ticker.Stop()
+	// if args.Simulate {
+	// 	slog.Info("Starting Jenkins build simulation mode",
+	// 		slog.Int("pipelines", args.Pipelines),
+	// 		slog.Int("interval_seconds", args.Interval))
 
-		for {
-			select {
-			case <-ticker.C:
-				slog.Debug("Pipeline monitoring heartbeat",
-					slog.Int("configured_pipelines", len(config.Pipelines)),
-					slog.String("mode", "idle_monitoring"))
+	// 	simulator := NewJenkinsBuildSimulator(args.Pipelines)
+	// 	ticker := time.NewTicker(time.Duration(args.Interval) * time.Second)
+	// 	defer ticker.Stop()
 
-				// Just log that we're monitoring, don't send metrics
-				for i, pipeline := range config.Pipelines {
-					slog.Debug("Monitoring pipeline",
-						slog.Int("index", i+1),
-						slog.String("url", pipeline.URL),
-						slog.Int("frequency", pipeline.Frequency))
-				}
+	// 	for {
+	// 		select {
+	// 		case <-ticker.C:
+	// 			build := simulator.GenerateBuild()
 
-			case <-waitForShutdown():
-				slog.Info("Shutdown signal received, stopping pipeline monitoring...")
-				return
-			}
-		}
-	}
+	// 			slog.Info("Simulating Jenkins build",
+	// 				slog.String("pipeline", build.PipelineName),
+	// 				slog.Int("build_number", build.BuildNumber),
+	// 				slog.String("status", build.Status),
+	// 				slog.Float64("duration_seconds", build.DurationSeconds))
+
+	// 			if err := metricExporter.RecordJenkinsBuild(ctx, build); err != nil {
+	// 				slog.Error("Failed to send build metrics", slog.Any("error", err))
+	// 			}
+
+	// 		case <-waitForShutdown():
+	// 			slog.Info("Shutdown signal received, stopping simulation...")
+	// 			return
+	// 		}
+	// 	}
+	// } else {
+	// 	// Pipeline monitoring mode - just stay idle and monitor
+	// 	slog.Info("Starting pipeline monitoring mode (idle - no metrics sent)")
+	// 	slog.Debug("Configured pipelines", slog.Any("pipelines", config.Pipelines))
+
+	// 	ticker := time.NewTicker(60 * time.Second) // Check every minute
+	// 	defer ticker.Stop()
+
+	// 	for {
+	// 		select {
+	// 		case <-ticker.C:
+	// 			slog.Debug("Pipeline monitoring heartbeat",
+	// 				slog.Int("configured_pipelines", len(config.Pipelines)),
+	// 				slog.String("mode", "idle_monitoring"))
+
+	// 			// Just log that we're monitoring, don't send metrics
+	// 			for i, pipeline := range config.Pipelines {
+	// 				slog.Debug("Monitoring pipeline",
+	// 					slog.Int("index", i+1),
+	// 					slog.String("url", pipeline.URL),
+	// 					slog.Int("frequency", pipeline.Frequency))
+	// 			}
+
+	// 		case <-waitForShutdown():
+	// 			slog.Info("Shutdown signal received, stopping pipeline monitoring...")
+	// 			return
+	// 		}
+	// 	}
+	// }
 }
