@@ -38,9 +38,9 @@ def validate_jenkins_url(url: str) -> str:
     return url
 
 
-async def test_jenkins_connection(client: httpx.AsyncClient, jenkins_url: str) -> None:
+async def test_jenkins_connection(client: httpx.AsyncClient, url: str) -> None:
     try:
-        response = await client.get(urlp.urljoin(jenkins_url, 'api/json'))
+        response = await client.get(urlp.urljoin(url, 'api/json'))
         response.raise_for_status()
     except httpx.HTTPStatusError as e:
         if e.response.status_code == 401:
@@ -53,8 +53,8 @@ async def test_jenkins_connection(client: httpx.AsyncClient, jenkins_url: str) -
         raise JenkinsAPIError(f'Connection error: {e}')
 
 
-async def fetch_jenkins_jobs(client: httpx.AsyncClient, jenkins_url: str, path: str = '') -> list[dict[str, typing.Any]]:
-    api_url = urlp.urljoin(jenkins_url, f'{path}api/json?tree=jobs[name,_class,color]')
+async def fetch_jenkins_jobs(client: httpx.AsyncClient, url: str, path: str = '') -> list[dict[str, typing.Any]]:
+    api_url = urlp.urljoin(url, f'{path}api/json?tree=jobs[name,_class,color]')
 
     try:
         response = await client.get(api_url)
@@ -72,8 +72,8 @@ async def fetch_jenkins_jobs(client: httpx.AsyncClient, jenkins_url: str, path: 
         return []
 
 
-async def fetch_job_script_path(client: httpx.AsyncClient, jenkins_url: str, job_path: str, job_name: str) -> str | None:
-    config_url = urlp.urljoin(jenkins_url, f'{job_path}job/{job_name}/config.xml')
+async def fetch_job_script_path(client: httpx.AsyncClient, url: str, job_path: str, job_name: str) -> str | None:
+    config_url = urlp.urljoin(url, f'{job_path}job/{job_name}/config.xml')
 
     try:
         response = await client.get(config_url)
@@ -100,9 +100,9 @@ async def fetch_job_script_path(client: httpx.AsyncClient, jenkins_url: str, job
 
 
 async def traverse_jenkins_structure(
-    client: httpx.AsyncClient, jenkins_url: str, path: str = ''
+    client: httpx.AsyncClient, url: str, path: str = ''
 ) -> dict[str, typing.Any] | list[dict[str, typing.Any]]:
-    jobs = await fetch_jenkins_jobs(client, jenkins_url, path)
+    jobs = await fetch_jenkins_jobs(client, url, path)
 
     result = {}
     pipelines = []
@@ -113,11 +113,11 @@ async def traverse_jenkins_structure(
 
         if 'Folder' in job_class or 'OrganizationFolder' in job_class:
             job_path = f'{path}job/{job_name}/'
-            subdirs = await traverse_jenkins_structure(client, jenkins_url, job_path)
+            subdirs = await traverse_jenkins_structure(client, url, job_path)
             result[job_name] = subdirs
         else:
-            job_url = urlp.urljoin(jenkins_url, f'{path}job/{job_name}/')
-            script_path = await fetch_job_script_path(client, jenkins_url, path, job_name)
+            job_url = urlp.urljoin(url, f'{path}job/{job_name}/')
+            script_path = await fetch_job_script_path(client, url, path, job_name)
 
             pipeline_info = {'name': job_name, 'url': job_url}
 
@@ -168,7 +168,7 @@ Examples:
     args = parser.parse_args()
 
     try:
-        jenkins_url = validate_jenkins_url(args.jenkins_url)
+        url = validate_jenkins_url(args.url)
 
         username = args.username
         token = args.token
@@ -184,17 +184,17 @@ Examples:
             print('or use --username and --token arguments.', file=sys.stderr)
             sys.exit(1)
 
-        print(f'Connecting to Jenkins at {jenkins_url}')
+        print(f'Connecting to Jenkins at {url}')
         print(f'Username: {username}')
 
         async with await create_authenticated_client(
             username=username, token=token, verify_ssl=not args.no_ssl_verify, timeout=args.timeout
         ) as client:
-            await test_jenkins_connection(client, jenkins_url)
+            await test_jenkins_connection(client, url)
             print('Connection successful!')
 
             print('Fetching Jenkins job structure...')
-            jenkins_structure = await traverse_jenkins_structure(client, jenkins_url)
+            jenkins_structure = await traverse_jenkins_structure(client, url)
 
             print(f'Writing results to {args.output}')
             with open(args.output, 'w') as f:
