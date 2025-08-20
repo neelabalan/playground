@@ -74,24 +74,29 @@ async def fetch_jenkins_jobs(client: httpx.AsyncClient, jenkins_url: str, path: 
 
 async def traverse_jenkins_structure(
     client: httpx.AsyncClient, jenkins_url: str, path: str = ''
-) -> dict[str, typing.Any]:
-    result: dict[str, typing.Any] = {}
+) -> dict[str, typing.Any] | list[dict[str, typing.Any]]:
     jobs = await fetch_jenkins_jobs(client, jenkins_url, path)
+
+    result = {}
+    pipelines = []
 
     for job in jobs:
         job_name = job.get('name', '')
         job_class = job.get('_class', '')
-        job_color = job.get('color', '')
 
         if 'Folder' in job_class or 'OrganizationFolder' in job_class:
             job_path = f'{path}job/{job_name}/'
             subdirs = await traverse_jenkins_structure(client, jenkins_url, job_path)
-            if subdirs:
-                result[job_name] = {'type': 'folder', 'children': subdirs}
-            else:
-                result[job_name] = {'type': 'empty_folder'}
+            result[job_name] = subdirs
         else:
-            result[job_name] = {'type': 'pipeline', 'status': job_color if job_color else 'unknown'}
+            job_url = urlp.urljoin(jenkins_url, f'{path}job/{job_name}/')
+            pipelines.append({'name': job_name, 'url': job_url})
+
+    if pipelines:
+        if result:
+            result['pipelines'] = pipelines
+        else:
+            return pipelines
 
     return result
 
@@ -116,11 +121,11 @@ Authentication:
 Examples:
   export JENKINS_USERNAME=myuser
   export JENKINS_TOKEN=abc123def456
-  python jenkins_dir.py https://jenkins.example.com output.json
+  python jenkins_dir.py --jenkins-url=https://jenkins.example.com --output=output.json
         """,
     )
-    parser.add_argument('jenkins_url', help='Jenkins server URL')
-    parser.add_argument('output_file', help='Output JSON file name')
+    parser.add_argument('--jenkins_url', help='Jenkins server URL')
+    parser.add_argument('--output', default='output.json', help='Output JSON file name')
     parser.add_argument('--username', help='Jenkins username (overrides env var)')
     parser.add_argument('--token', help='Jenkins API token (overrides env var)')
     parser.add_argument('--no-ssl-verify', action='store_true', help='Disable SSL certificate verification')
