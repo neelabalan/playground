@@ -102,7 +102,10 @@ async def fetch_job_script_path(client: httpx.AsyncClient, url: str, job_path: s
 async def traverse_jenkins_structure(
     client: httpx.AsyncClient, url: str, path: str = ''
 ) -> dict[str, typing.Any] | list[dict[str, typing.Any]]:
+    current_path = path if path else 'root'
+    print(f'Fetching jobs from: {current_path}')
     jobs = await fetch_jenkins_jobs(client, url, path)
+    print(f'Found {len(jobs)} items in {current_path}')
 
     result = {}
     pipelines = []
@@ -112,10 +115,13 @@ async def traverse_jenkins_structure(
         job_class = job.get('_class', '')
 
         if 'Folder' in job_class or 'OrganizationFolder' in job_class:
+            print(f'Processing folder: {job_name}')
             job_path = f'{path}job/{job_name}/'
             subdirs = await traverse_jenkins_structure(client, url, job_path)
             result[job_name] = subdirs
+            print(f'Completed folder: {job_name}')
         else:
+            print(f'Processing pipeline: {job_name}')
             job_url = urlp.urljoin(url, f'{path}job/{job_name}/')
             script_path = await fetch_job_script_path(client, url, path, job_name)
 
@@ -123,15 +129,21 @@ async def traverse_jenkins_structure(
 
             if script_path:
                 pipeline_info['script_path'] = script_path
+                print(f'  Found script path for {job_name}: {script_path}')
+            else:
+                print(f'  No script path found for {job_name}')
 
             pipelines.append(pipeline_info)
 
+    print(f'Building result structure for {current_path}')
     if pipelines:
+        print(f'  Adding {len(pipelines)} pipelines')
         if result:
             result['pipelines'] = pipelines
         else:
             return pipelines
 
+    print(f'Completed processing {current_path}')
     return result
 
 
@@ -193,8 +205,9 @@ Examples:
             await test_jenkins_connection(client, url)
             print('Connection successful!')
 
-            print('Fetching Jenkins job structure...')
+            print('Starting Jenkins job structure traversal...')
             jenkins_structure = await traverse_jenkins_structure(client, url)
+            print('Completed Jenkins job structure traversal')
 
             print(f'Writing results to {args.output}')
             with open(args.output, 'w') as f:
