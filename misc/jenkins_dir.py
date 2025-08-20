@@ -24,7 +24,9 @@ async def create_authenticated_client(
         encoded_auth = base64.b64encode(auth_string.encode()).decode()
         headers['Authorization'] = f'Basic {encoded_auth}'
 
-    return httpx.AsyncClient(headers=headers, verify=verify_ssl, timeout=timeout, follow_redirects=True)
+    limits = httpx.Limits(max_keepalive_connections=20, max_connections=100)
+
+    return httpx.AsyncClient(headers=headers, verify=verify_ssl, timeout=timeout, follow_redirects=True, limits=limits)
 
 
 def validate_jenkins_url(url: str) -> str:
@@ -72,35 +74,56 @@ async def fetch_jenkins_jobs(client: httpx.AsyncClient, url: str, path: str = ''
         return []
 
 
-async def fetch_job_script_path(client: httpx.AsyncClient, url: str, job_path: str, job_name: str) -> str | None:
-    config_url = urlp.urljoin(url, f'{job_path}job/{job_name}/config.xml')
+async def fetch_job_script_path(
+    client: httpx.AsyncClient, url: str, job_path: str, job_name: str, semaphore: asyncio.Semaphore
+) -> str | None:
+    async with semaphore:
+        config_url = urlp.urljoin(url, f'{job_path}job/{job_name}/config.xml')
 
-    try:
-        response = await client.get(config_url)
-        response.raise_for_status()
-        config_xml = response.text
+        try:
+            response = await client.get(config_url)
+            response.raise_for_status()
+            config_xml = response.text
 
-        import xml.etree.ElementTree as ET
+            import xml.etree.ElementTree as ET
 
-        root = ET.fromstring(config_xml)
+            root = ET.fromstring(config_xml)
 
-        script_path_elem = root.find('.//scriptPath')
-        if script_path_elem is not None and script_path_elem.text:
-            return script_path_elem.text.strip()
-
-        definition_elem = root.find('.//definition')
-        if definition_elem is not None:
-            script_path_elem = definition_elem.find('.//scriptPath')
+            script_path_elem = root.find('.//scriptPath')
             if script_path_elem is not None and script_path_elem.text:
                 return script_path_elem.text.strip()
 
-        return None
-    except Exception:
-        return None
+            definition_elem = root.find('.//definition')
+            if definition_elem is not None:
+                script_path_elem = definition_elem.find('.//scriptPath')
+                if script_path_elem is not None and script_path_elem.text:
+                    return script_path_elem.text.strip()
+
+            return None
+        except Exception:
+            return None
+
+
+async def process_pipeline_job(
+    client: httpx.AsyncClient, url: str, path: str, job_name: str, semaphore: asyncio.Semaphore
+) -> dict[str, typing.Any]:
+    print(f'Processing pipeline: {job_name}')
+    job_url = urlp.urljoin(url, f'{path}job/{job_name}/')
+    script_path = await fetch_job_script_path(client, url, path, job_name, semaphore)
+
+    pipeline_info = {'name': job_name, 'url': job_url}
+
+    if script_path:
+        pipeline_info['script_path'] = script_path
+        print(f'  Found script path for {job_name}: {script_path}')
+    else:
+        print(f'  No script path found for {job_name}')
+
+    return pipeline_info
 
 
 async def traverse_jenkins_structure(
-    client: httpx.AsyncClient, url: str, path: str = ''
+    client: httpx.AsyncClient, url: str, path: str = '', max_concurrent: int = 10
 ) -> dict[str, typing.Any] | list[dict[str, typing.Any]]:
     current_path = path if path else 'root'
     print(f'Fetching jobs from: {current_path}')
@@ -108,40 +131,52 @@ async def traverse_jenkins_structure(
     print(f'Found {len(jobs)} items in {current_path}')
 
     result = {}
-    pipelines = []
+    pipeline_jobs = []
+    folder_tasks = []
+
+    semaphore = asyncio.Semaphore(max_concurrent)
 
     for job in jobs:
         job_name = job.get('name', '')
         job_class = job.get('_class', '')
 
         if 'Folder' in job_class or 'OrganizationFolder' in job_class:
-            print(f'Processing folder: {job_name}')
+            print(f'Scheduling folder processing: {job_name}')
             job_path = f'{path}job/{job_name}/'
-            subdirs = await traverse_jenkins_structure(client, url, job_path)
-            result[job_name] = subdirs
-            print(f'Completed folder: {job_name}')
+            folder_task = traverse_jenkins_structure(client, url, job_path, max_concurrent)
+            folder_tasks.append((job_name, folder_task))
         else:
-            print(f'Processing pipeline: {job_name}')
-            job_url = urlp.urljoin(url, f'{path}job/{job_name}/')
-            script_path = await fetch_job_script_path(client, url, path, job_name)
+            pipeline_jobs.append((job_name, job))
 
-            pipeline_info = {'name': job_name, 'url': job_url}
-
-            if script_path:
-                pipeline_info['script_path'] = script_path
-                print(f'  Found script path for {job_name}: {script_path}')
+    print(f'Processing {len(folder_tasks)} folders concurrently')
+    if folder_tasks:
+        folder_results = await asyncio.gather(*[task for _, task in folder_tasks], return_exceptions=True)
+        for (folder_name, _), folder_result in zip(folder_tasks, folder_results):
+            if isinstance(folder_result, Exception):
+                print(f'Error processing folder {folder_name}: {folder_result}')
+                result[folder_name] = {}
             else:
-                print(f'  No script path found for {job_name}')
+                result[folder_name] = folder_result
+                print(f'Completed folder: {folder_name}')
 
-            pipelines.append(pipeline_info)
+    print(f'Processing {len(pipeline_jobs)} pipelines concurrently')
+    if pipeline_jobs:
+        pipeline_tasks = [process_pipeline_job(client, url, path, job_name, semaphore) for job_name, _ in pipeline_jobs]
+        pipelines = await asyncio.gather(*pipeline_tasks, return_exceptions=True)
 
-    print(f'Building result structure for {current_path}')
-    if pipelines:
-        print(f'  Adding {len(pipelines)} pipelines')
-        if result:
-            result['pipelines'] = pipelines
-        else:
-            return pipelines
+        valid_pipelines = []
+        for pipeline in pipelines:
+            if isinstance(pipeline, Exception):
+                print(f'Error processing pipeline: {pipeline}')
+            else:
+                valid_pipelines.append(pipeline)
+
+        if valid_pipelines:
+            print(f'  Adding {len(valid_pipelines)} pipelines')
+            if result:
+                result['pipelines'] = valid_pipelines
+            else:
+                return valid_pipelines
 
     print(f'Completed processing {current_path}')
     return result
@@ -176,6 +211,7 @@ Examples:
     parser.add_argument('--token', help='Jenkins API token (overrides env var)')
     parser.add_argument('--no-ssl-verify', action='store_true', help='Disable SSL certificate verification')
     parser.add_argument('--timeout', type=float, default=30.0, help='Request timeout in seconds (default: 30)')
+    parser.add_argument('--max-concurrent', type=int, default=10, help='Max concurrent requests (default: 10)')
 
     args = parser.parse_args()
 
@@ -206,7 +242,7 @@ Examples:
             print('Connection successful!')
 
             print('Starting Jenkins job structure traversal...')
-            jenkins_structure = await traverse_jenkins_structure(client, url)
+            jenkins_structure = await traverse_jenkins_structure(client, url, max_concurrent=args.max_concurrent)
             print('Completed Jenkins job structure traversal')
 
             print(f'Writing results to {args.output}')
