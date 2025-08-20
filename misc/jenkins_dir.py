@@ -72,6 +72,33 @@ async def fetch_jenkins_jobs(client: httpx.AsyncClient, jenkins_url: str, path: 
         return []
 
 
+async def fetch_job_script_path(client: httpx.AsyncClient, jenkins_url: str, job_path: str, job_name: str) -> str | None:
+    config_url = urlp.urljoin(jenkins_url, f'{job_path}job/{job_name}/config.xml')
+
+    try:
+        response = await client.get(config_url)
+        response.raise_for_status()
+        config_xml = response.text
+
+        import xml.etree.ElementTree as ET
+
+        root = ET.fromstring(config_xml)
+
+        script_path_elem = root.find('.//scriptPath')
+        if script_path_elem is not None and script_path_elem.text:
+            return script_path_elem.text.strip()
+
+        definition_elem = root.find('.//definition')
+        if definition_elem is not None:
+            script_path_elem = definition_elem.find('.//scriptPath')
+            if script_path_elem is not None and script_path_elem.text:
+                return script_path_elem.text.strip()
+
+        return None
+    except Exception:
+        return None
+
+
 async def traverse_jenkins_structure(
     client: httpx.AsyncClient, jenkins_url: str, path: str = ''
 ) -> dict[str, typing.Any] | list[dict[str, typing.Any]]:
@@ -90,7 +117,14 @@ async def traverse_jenkins_structure(
             result[job_name] = subdirs
         else:
             job_url = urlp.urljoin(jenkins_url, f'{path}job/{job_name}/')
-            pipelines.append({'name': job_name, 'url': job_url})
+            script_path = await fetch_job_script_path(client, jenkins_url, path, job_name)
+
+            pipeline_info = {'name': job_name, 'url': job_url}
+
+            if script_path:
+                pipeline_info['script_path'] = script_path
+
+            pipelines.append(pipeline_info)
 
     if pipelines:
         if result:
@@ -121,10 +155,10 @@ Authentication:
 Examples:
   export JENKINS_USERNAME=myuser
   export JENKINS_TOKEN=abc123def456
-  python jenkins_dir.py --jenkins-url=https://jenkins.example.com --output=output.json
+  python jenkins_dir.py --url=https://jenkins.example.com
         """,
     )
-    parser.add_argument('--jenkins_url', help='Jenkins server URL')
+    parser.add_argument('--url', help='Jenkins server URL')
     parser.add_argument('--output', default='output.json', help='Output JSON file name')
     parser.add_argument('--username', help='Jenkins username (overrides env var)')
     parser.add_argument('--token', help='Jenkins API token (overrides env var)')
@@ -162,8 +196,8 @@ Examples:
             print('Fetching Jenkins job structure...')
             jenkins_structure = await traverse_jenkins_structure(client, jenkins_url)
 
-            print(f'Writing results to {args.output_file}')
-            with open(args.output_file, 'w') as f:
+            print(f'Writing results to {args.output}')
+            with open(args.output, 'w') as f:
                 json.dump(jenkins_structure, f, indent=2)
 
             print('Done!')
@@ -177,10 +211,6 @@ Examples:
     except Exception as e:
         print(f'Unexpected Error: {e}', file=sys.stderr)
         sys.exit(1)
-
-
-if __name__ == '__main__':
-    asyncio.run(main())
 
 
 if __name__ == '__main__':
