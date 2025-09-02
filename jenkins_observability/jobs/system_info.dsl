@@ -24,6 +24,16 @@ DSL = '''pipeline {
         sh 'echo "JAVA_HOME: ${JAVA_HOME}"'
       }
     }
+    stage('Simulate Work') {
+      steps {
+        script {
+          def sleepTime = Math.floor(Math.random() * 240) + 60 // Random between 60-300 seconds (1-5 minutes)
+          echo "Simulating work... sleeping for ${sleepTime} seconds"
+          sleep sleepTime
+          echo "Work simulation completed!"
+        }
+      }
+    }
   }
   post {
     always {
