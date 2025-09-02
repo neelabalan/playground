@@ -32,11 +32,84 @@ This document reviews the technical journey of implementing Jenkins pipeline obs
     - Use a custom script to write each build’s duration as a row into PostgreSQL (with columns: build_id, job_name, duration_seconds, timestamp).
     - Visualize in Grafana using PostgreSQL as a data source
 
-## Future considerations
+## Jenkins Sentinel
 
+### Flow
+
+```mermaid
+flowchart TD
+    %% ── 1. Daemon start  ─────────────────────
+    A[Daemon starts] --> B{State Exists?}
+    B -->|No| C["Create fresh state"]
+    B -->|Yes| D["Load state from table"]
+    
+    C --> E["Back-fill existing jobs"]
+    D --> E
+    
+    E --> F["Get all Jenkins jobs"]
+    F --> G{"Filter jobs to fetch"}
+    
+    G -->|Jobs to fetch| H["Iterate over jobs"]
+    G -->|No jobs| Q["Sleep 1h"]
+    
+    H --> I["Query Jenkins API for all latest build number"]
+    I --> J["Query DB for existing build number (last job)"]
+    J --> K["Compute missing build numbers"]
+    
+    K --> L{"Missing builds found?"}
+    
+    L -->|Yes| M["Fetch details for missing builds<br/>(query Jenkins API per build number)"]
+    L -->|No| N["Log 'No new/missing builds' & continue"]
+    
+    M --> O["Upsert builds into build_durations"]
+    O --> P["Update state"]
+    N --> P
+    
+    P --> R{"More jobs to process?"}
+    R -->|Yes| H
+    R -->|No| S["Write state to DB"]
+    
+    S --> Q
+    Q --> A
+```
+
+### Data model
+
+- build_queue
+    - id
+    - job_path
+    - build_number
+    - last_attempt_at
+    - error_message
+    - collection_time (TIMESTAMP WITH TIME ZONE): When this build's data was captured/collected by the daemon.
+    - collection_status (ENUM: 'complete', 'partial', 'error', 'pending'): 'Partial' for builds collected mid-run; 'pending' for known but uncollected builds during backfill.
+
+- build_table (This stores the per-build metrics. Primary key: (pipeline_name, build_number) for uniqueness)
+    - pipeline_name (VARCHAR(255), part of PK): Unique identifier for the Jenkins pipeline/job.
+    - build_number (INTEGER, part of PK): Sequential build ID from Jenkins.
+    - build_start_time (TIMESTAMP WITH TIME ZONE): When the build began (from Jenkins API).
+    - build_end_time (TIMESTAMP WITH TIME ZONE): When the build completed/aborted.
+    - status (ENUM: 'success', 'failure', 'aborted', 'unstable', 'not_built', etc.): Matches Jenkins statuses.
+    - total_duration (INTERVAL or DOUBLE PRECISION in seconds): Build runtime. Use INTERVAL for human-readable queries, or seconds for easy math/ML.
+    - steps_successful (INTEGER): Count of successful steps/stages.
+    - steps_failed (INTEGER): Count of failed steps/stages. (Consider adding steps_total = steps_successful + steps_failed for completeness.)
+    - steps_skipped (INTEGER, optional addition): If your pipelines have conditional steps, this could track skipped ones for deeper analysis.
+    - last_updated (TIMESTAMP WITH TIME ZONE): When this record was last modified (auto-updated via trigger). Useful for auditing changes.
+    - error_log (TEXT): Any errors from Jenkins API during collection (e.g., "API timeout"). Null if successful.
+
+### Reliability & Resilience considerations
+
+- The system should be designed to handle Jenkins restarts or downtime. It remembers the last processed build ID and resumes from there when Jenkins is back online. 
+- The system should recover from collector crashes. A "state table" can ensure that only new builds are ingested upon restart, preventing data duplication.
+- Should handle scenarios where builds might have the same ID (though rare). The system can leverage timestamps to resolve conflicts.
+- A backfilling utility to resync data if the state table gets corrupted or is missing.
+- Handle possibility of Jenkins rate limiting. 
+- Handle archival for later data analytics.
 - For data retention implement automated cleanup policies for historical build data
+- Acknowledge the possibility of changes in the Jenkins API and ensure a degree of abstraction in the code to mitigate impact.
 - Consider time-series specific PostgreSQL extensions (TimescaleDB)
 - Hybrid approach of using Tempo for traces and Postgres for events.
+
 
 ## Troublehsoot
 
