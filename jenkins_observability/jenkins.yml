@@ -1,5 +1,4 @@
 jenkins:
-  # systemMessage: "Jenkins configured with OpenTelemetry and Grafana observability"
   numExecutors: 3
   remotingSecurity:
     enabled: false
@@ -15,17 +14,6 @@ jenkins:
     loggedInUsersCanDoAnything:
       allowAnonymousRead: false
 
-unclassified:
-  # openTelemetry:
-  #   endpoint: "http://monitoring-stack:4317"
-  #   serviceName: "jenkins"
-  #   observabilityBackends:
-  #   - grafana:
-  #       name: "grafana"
-  #       grafanaBaseUrl: "http://monitoring-stack:3000"
-  #   authentication: "noAuthentication"
-  #   exportOtelConfigurationAsEnvironmentVariables: true
-  #   ignoredSteps: "dir,echo,isUnix,pwd,properties"
 security:
   globalJobDslSecurityConfiguration:
     useScriptSecurity: false

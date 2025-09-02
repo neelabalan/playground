@@ -55,8 +55,6 @@ metrics:4.2.32-481.v75f035fdc894
 mina-sshd-api-common:2.15.0-161.vb_200831a_c15b_
 mina-sshd-api-core:2.15.0-161.vb_200831a_c15b_
 okhttp-api:4.11.0-189.v976fa_d3379d6
-# opentelemetry-api:1.49.0.77.va_c69ec2472c0
-# opentelemetry:3.1543.v8446b_92b_cd64
 pam-auth:1.12
 pipeline-build-step:571.v08a_fffd4b_0ce
 pipeline-github-lib:65.v203688e7727e
