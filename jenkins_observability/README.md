@@ -39,37 +39,27 @@ This document reviews the technical journey of implementing Jenkins pipeline obs
 ```mermaid
 flowchart TD
     %% ── 1. Daemon start  ─────────────────────
-    A[Daemon starts] --> B{State Exists?}
-    B -->|No| C["Create fresh state"]
-    B -->|Yes| D["Load state from table"]
-    
-    C --> E["Back-fill existing jobs"]
-    D --> E
-    
-    E --> F["Get all Jenkins jobs"]
-    F --> G{"Filter jobs to fetch"}
-    
-    G -->|Jobs to fetch| H["Iterate over jobs"]
-    G -->|No jobs| Q["Sleep 1h"]
-    
-    H --> I["Query Jenkins API for all latest build number"]
-    I --> J["Query DB for existing build number (last job)"]
-    J --> K["Compute missing build numbers"]
-    
+    A[Daemon starts] --> B["Read config"]
+    B --> C["Check for pipeline <br> metadata in DB"]
+    C --> D["Iterate through pipelines"]
+    D --> E{"Data exists?"}
+    E --> |No| F["Create fresh data in DB"]
+    F --> H["Backfill"]
+    E --> |Yes| G["Get last build <br> number for pipeline"]
+    G --> I["Query Jenkins API for <br> latest build number"]
+    I --> K["Compute missing build numbers"]
     K --> L{"Missing builds found?"}
-    
-    L -->|Yes| M["Fetch details for missing builds<br/>(query Jenkins API per build number)"]
+    L -->|Yes| M["Fetch details for <br> missing builds"]
     L -->|No| N["Log 'No new/missing builds' & continue"]
     
-    M --> O["Upsert builds into build_durations"]
+    M --> O["Upsert builds into <br> build_durations"]
     O --> P["Update state"]
-    N --> P
+    N --> R{"More jobs to process?"}
     
-    P --> R{"More jobs to process?"}
-    R -->|Yes| H
-    R -->|No| S["Write state to DB"]
+    P --> R
+    R --> |Yes| D
+    R --> |NO| Q["Sleep for X hour(s)"]
     
-    S --> Q
     Q --> A
 ```
 
