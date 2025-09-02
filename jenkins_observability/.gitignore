@@ -3,3 +3,4 @@ jobs/my-maven/
 jobs/pytest-otel/
 jobs/ecgo-docker-pipeline/
 metric-data/
+temp/
