@@ -20,27 +20,20 @@ if [ -f "docker-compose.yaml" ]; then
     docker-compose down --remove-orphans 2>/dev/null || docker compose down --remove-orphans 2>/dev/null || true
 fi
 
-docker stop $(docker ps -q) 2>/dev/null || true
-docker rm $(docker ps -aq) 2>/dev/null || true
-docker rmi $(docker images -q) 2>/dev/null || true
-docker image prune -af >/dev/null 2>&1
-docker volume rm $(docker volume ls -q) 2>/dev/null || true
-docker volume prune -f >/dev/null 2>&1
-docker network prune -f >/dev/null 2>&1
-docker builder prune -af >/dev/null 2>&1
+docker rmi customjenkins:latest 2>/dev/null || true
+
+docker volume rm jenkins-data 2>/dev/null || true
+docker volume rm jenkins-docker-certs 2>/dev/null || true
+docker volume rm postgres_data 2>/dev/null || true
 
 if [ -d "container" ]; then
     sudo rm -rf container
 fi
 
-docker system prune -af --volumes >/dev/null 2>&1
+docker network prune -f >/dev/null 2>&1
 
-if command_exists systemctl; then
-    sudo systemctl restart docker >/dev/null 2>&1 || true
-fi
-
-echo "Reset complete"
+echo "Reset complete for Jenkins Observability project"
 echo "Verification:"
-docker images
-docker container ls -a
-docker volume ls
+docker images | grep -E "(customjenkins|grafana|postgres)" || echo "No project images found"
+docker container ls -a | grep -E "(jenkins-blueocean|grafana|postgres)" || echo "No project containers found"
+docker volume ls | grep -E "(jenkins-data|jenkins-docker-certs|postgres_data)" || echo "No project volumes found"

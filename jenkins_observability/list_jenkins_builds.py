@@ -1,17 +1,18 @@
-import requests
+import httpx
 
-JENKINS_URL = "http://localhost:8080"
-JOB_NAME = "ecgo-docker-pipeline"
-USERNAME = "jenkins"
-PASSWORD = "admin"
+JENKINS_URL: str = 'http://localhost:8080'
+JOB_NAME: str = 'ecgo-docker-pipeline'
+USERNAME: str = 'jenkins'
+PASSWORD: str = 'admin'
 
-base_api = f"{JENKINS_URL.rstrip('/')}/job/{JOB_NAME}"
-builds_url = f"{base_api}/api/json?tree=builds[number]"
+base_api: str = f'{JENKINS_URL.rstrip("/")}/job/{JOB_NAME}'
+builds_url: str = f'{base_api}/api/json?tree=builds[number]'
 
-response = requests.get(builds_url, auth=(USERNAME, PASSWORD))
-response.raise_for_status()
-builds = response.json().get('builds', [])
+with httpx.Client() as client:
+    response = client.get(builds_url, auth=(USERNAME, PASSWORD))
+    response.raise_for_status()
+    builds = response.json().get('builds', [])
 
 print(f"Builds for job '{JOB_NAME}':")
 for build in builds:
-    print(f"Build number: {build['number']}")
+    print(f'Build number: {build["number"]}')
