@@ -6,31 +6,39 @@ Tracking per-job build duration in Jenkins like a time-series data provides a un
 
 This document reviews the technical journey of implementing Jenkins pipeline observability, analyzing the evolution from OpenTelemetry-based metrics to a PostgreSQL-based solution for build duration monitoring. The analysis validates the architectural decisions made and provides recommendations for future implementation.
 
-1. Initial Approach: OpenTelemetry (OTel) Plugin for Jenkins
-    - Outcome: Limited success, Too much transformation required to get the build duration per job data from traces.
-    - The Jenkins OpenTelemetry plugin is primarily designed for high-level pipeline observability and distributed tracing. While it provides valuable insights into pipeline execution flows, it lacks specific support for retrieving detailed build duration metrics for individual Jenkins jobs. The plugin focuses on:
-        - Overall pipeline health metrics
-        - Distributed tracing across pipeline stages
-        - Security and access monitoring
-        - General system performance indicators
-    - Requires multiple config changes at trace side to store traces for more than half hour and this shouldn't need compaction to run every few hours.
-        - Maybe this is configurable.
-2. Secondary Attempt: Attempted to combine Jenkins Metrics plugin with custom OpenTelemetry instrumentation
-    - Outcome: Failed due to fundamental data model mismatch
-    - Use the Jenkins Metrics plugin to generate build-duration metrics, then export to OTel.
-    - Why it didn't work:
-        - I tried to use a gauge (e.g., build_duration{job="jobX", build="123"}), but gauges aggregate over time (e.g., Prometheus averages the latest value, not storing individual points).
-        - The misconception was that build duration as treated as a metric, but rather an event, a single data point per build. Metrics represent aggregated state, not raw event data. Logs are more suitable (For example: `event_emitter`)
-    - Metrics (gauges, histograms) are stateful—they represent the current state (e.g., "last build duration") or aggregated values (e.g., "95th percentile of all builds").
-3. Third attempt: Storing Raw Build Events in PostgreSQL
-    - Outcome: Successful - meets all requirements for granular build duration tracking
-    - This solution succeeds because it aligns with the correct data archetype:
-        - Simplicity
-        - Each build becomes a discrete record with all associated metadata
-        - SQL enables complex queries across multiple dimensions (job, pipeline, time range, build number)
-        - Proper indexing supports efficient queries across large datasets
-    - Use a custom script to write each build’s duration as a row into PostgreSQL (with columns: build_id, job_name, duration_seconds, timestamp).
-    - Visualize in Grafana using PostgreSQL as a data source
+### First approach: OpenTelemetry (OTel) Plugin for Jenkins
+
+> Outcome: Limited success, Too much transformation required to get the build duration per job data from traces.
+
+- The Jenkins OpenTelemetry plugin is primarily designed for high-level pipeline observability and distributed tracing. While it provides valuable insights into pipeline execution flows, it lacks specific support for retrieving detailed build duration metrics for individual Jenkins jobs. The plugin focuses on:
+    - Overall pipeline health metrics
+    - Distributed tracing across pipeline stages
+    - Security and access monitoring
+    - General system performance indicators
+- Requires multiple config changes at trace side to store traces for more than half hour and this shouldn't need compaction to run every few hours.
+    - Maybe this is configurable.
+
+### Second approach: Attempted to combine Jenkins Metrics plugin with custom OpenTelemetry instrumentation
+
+> Outcome: Failed due to fundamental data model mismatch
+
+- Use the Jenkins Metrics plugin to generate build-duration metrics, then export to OTel.
+- Why it didn't work:
+    - I tried to use a gauge (e.g., build_duration{job="jobX", build="123"}), but gauges aggregate over time (e.g., Prometheus averages the latest value, not storing individual points).
+    - The misconception was that build duration as treated as a metric, but rather an event, a single data point per build. Metrics represent aggregated state, not raw event data. Logs are more suitable (For example: `event_emitter`)
+- Metrics (gauges, histograms) are stateful—they represent the current state (e.g., "last build duration") or aggregated values (e.g., "95th percentile of all builds").
+
+### Third approach: Storing Raw Build Events in PostgreSQL
+
+> Outcome: Successful - meets all requirements for granular build duration tracking
+
+- This solution succeeds because it aligns with the correct data archetype:
+    - Simplicity
+    - Each build becomes a discrete record with all associated metadata
+    - SQL enables complex queries across multiple dimensions (job, pipeline, time range, build number)
+    - Proper indexing supports efficient queries across large datasets
+- Use a custom script to write each build’s duration as a row into PostgreSQL (with columns: build_id, job_name, duration_seconds, timestamp).
+- Visualize in Grafana using PostgreSQL as a data source
 
 ## Jenkins Sentinel
 
