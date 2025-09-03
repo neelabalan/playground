@@ -40,27 +40,45 @@ This document reviews the technical journey of implementing Jenkins pipeline obs
 flowchart TD
     %% ── 1. Daemon start  ─────────────────────
     A[Daemon starts] --> B["Read config"]
-    B --> C["Check for pipeline <br> metadata in DB"]
+    B --> B1["Initialize DB connection pool"]
+    B1 --> B2["Health check; Jenkins API"]
+    B2 --> B3{"Jenkins accessible"}
+    B3 --> |No| B4["Log error & <br> retry with backoff"]
+    B4 --> B2
+    B3 --> |Yes| C["Check for pipeline <br> metadata in DB"]
     C --> D["Iterate through pipelines"]
     D --> E{"Data exists?"}
     E --> |No| F["Create fresh data in DB"]
-    F --> H["Backfill"]
+    F --> H["Backfill mode"]
     E --> |Yes| G["Get last build <br> number for pipeline"]
-    G --> I["Query Jenkins API for <br> latest build number"]
-    I --> K["Compute missing build numbers"]
+    G --> I1{"API call successful?"}
+    I1 --> |No| I2["Handle API error <br> (rate limit/timeout)"]
+    I2 --> I3["Add to retry queue"]
+    I3 --> R
+    I1 --> K["Compute missing build numbers"]
     K --> L{"Missing builds found?"}
     L -->|Yes| M["Fetch details for <br> missing builds"]
     L -->|No| N["Log 'No new/missing builds' & continue"]
     
-    M --> O["Upsert builds into <br> build_durations"]
-    O --> P["Update state"]
-    N --> R{"More jobs to process?"}
+    M --> M1{"Fetch successful?"}
+    M1 --> |No| M2["Add failed builds <br> to build queue"]
+    M1 --> |Yes| O["Upsert builds into <br> build_durations"]
+    M2 --> P["Update pipeline state"]
+    P --> P1
+    P1 --> P2["Process retry queue"]
+    P2 --> R{"More jobs to process?"}
+    N --> R
     
     P --> R
     R --> |Yes| D
     R --> |NO| Q["Sleep for X hour(s)"]
     
     Q --> A
+
+    %% Error handling branch
+    style B4 fill:#8f1500
+    style I2 fill:#8f1500
+    style M2 fill:#8f1500
 ```
 
 ### Data model
