@@ -1,5 +1,4 @@
--- Schema for Jenkins Sentinel database
-
+-- name: CreateBuildsTable :exec
 CREATE TABLE IF NOT EXISTS builds (
     id SERIAL PRIMARY KEY,
     pipeline_name VARCHAR(255) NOT NULL,
@@ -17,6 +16,7 @@ CREATE TABLE IF NOT EXISTS builds (
     updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
 );
 
+-- name: CreateBuildQueueTable :exec
 CREATE TABLE IF NOT EXISTS build_queue (
     id SERIAL PRIMARY KEY,
     job_path VARCHAR(255) NOT NULL,

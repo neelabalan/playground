@@ -90,6 +90,18 @@ func main() {
 
 	ctx := context.Background()
 
+	if err := queries.CreateBuildsTable(ctx); err != nil {
+		slog.Error("failed to create builds table", slog.Any("error", err))
+		os.Exit(1)
+	}
+
+	if err := queries.CreateBuildQueueTable(ctx); err != nil {
+		slog.Error("failed to create build_queue table", slog.Any("error", err))
+		os.Exit(1)
+	}
+
+	slog.Info("database schema initialized successfully")
+
 	createdBuild, err := queries.CreateBuild(ctx, db.CreateBuildParams{
 		PipelineName:    "test-pipeline",
 		BuildNumber:     1,
