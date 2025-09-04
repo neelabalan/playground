@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"log/slog"
 	"os"
@@ -64,7 +65,10 @@ func loadConfig(filename string) (*Config, error) {
 }
 
 func main() {
-	config, err := loadConfig("config.json")
+	configPath := flag.String("config", "config.json", "Path to the configuration file")
+	flag.Parse()
+
+	config, err := loadConfig(*configPath)
 	if err != nil {
 		slog.Error("error loading config", slog.Any("error", err))
 		os.Exit(1)
