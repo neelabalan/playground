@@ -1,10 +1,17 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
-	"log"
+	"log/slog"
 	"os"
+	"time"
+
+	"jenkins_sentinel/internal/db"
+
+	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 type DatabaseConfig struct {
@@ -25,6 +32,21 @@ type Config struct {
 	BackfillEnabled bool           `json:"backfill_enabled"`
 }
 
+const (
+	BuildStatusSuccess  = "success"
+	BuildStatusFailure  = "failure"
+	BuildStatusAborted  = "aborted"
+	BuildStatusUnstable = "unstable"
+	BuildStatusNotBuilt = "not_built"
+)
+
+const (
+	CollectionStatusComplete = "complete"
+	CollectionStatusPartial  = "partial"
+	CollectionStatusError    = "error"
+	CollectionStatusPending  = "pending"
+)
+
 func loadConfig(filename string) (*Config, error) {
 	file, err := os.Open(filename)
 	if err != nil {
@@ -44,8 +66,53 @@ func loadConfig(filename string) (*Config, error) {
 func main() {
 	config, err := loadConfig("config.json")
 	if err != nil {
-		log.Fatalf("Error loading config: %v", err)
+		slog.Error("error loading config", slog.Any("error", err))
+		os.Exit(1)
 	}
 
-	fmt.Printf("Loaded config: %+v\n", config)
+	slog.Info("loaded config", slog.Any("config", config))
+
+	conn, err := pgx.Connect(context.Background(), fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
+		config.Database.Host, config.Database.Port, config.Database.User, config.Database.Password, config.Database.DBName))
+	if err != nil {
+		slog.Error("failed connecting to postgres", slog.Any("error", err))
+		os.Exit(1)
+	}
+	defer conn.Close(context.Background())
+
+	queries := db.New(conn)
+
+	slog.Info("successfully connected to PostgreSQL database")
+
+	ctx := context.Background()
+
+	createdBuild, err := queries.CreateBuild(ctx, db.CreateBuildParams{
+		PipelineName:    "test-pipeline",
+		BuildNumber:     1,
+		BuildStartTime:  pgtype.Timestamptz{Time: time.Now().Add(-time.Hour), Valid: true},
+		BuildEndTime:    pgtype.Timestamptz{Time: time.Now(), Valid: true},
+		Status:          BuildStatusSuccess,
+		TotalDuration:   3600.0,
+		StepsSuccessful: 5,
+		StepsFailed:     0,
+		StepsSkipped:    pgtype.Int4{Int32: 0, Valid: true},
+		ErrorLog:        pgtype.Text{String: "", Valid: false},
+	})
+	if err != nil {
+		slog.Error("failed creating build", slog.Any("error", err))
+		os.Exit(1)
+	}
+
+	slog.Info("created build", slog.Any("build", createdBuild))
+
+	builds, err := queries.GetBuildsByPipeline(ctx, db.GetBuildsByPipelineParams{
+		PipelineName: "test-pipeline",
+		Limit:        10,
+	})
+	if err != nil {
+		slog.Error("failed querying builds", slog.Any("error", err))
+		os.Exit(1)
+	}
+
+	slog.Info("found builds", slog.Int("count", len(builds)))
 }
