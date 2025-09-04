@@ -83,6 +83,15 @@ const (
 	CollectionStatusPending  = "pending"
 )
 
+type JenkinsBuild struct {
+	Number int    `json:"number"`
+	Class  string `json:"_class"`
+}
+
+type JenkinsJobResponse struct {
+	Builds []JenkinsBuild `json:"builds"`
+}
+
 func (j *JenkinsClient) GetBuildNumbers(pipelinePath string) ([]int, error) {
 	req, _ := http.NewRequest("GET", fmt.Sprintf("%s/%s/api/json?tree=builds[number]", j.BaseURL, strings.TrimSuffix(pipelinePath, "/")), nil)
 
@@ -100,19 +109,14 @@ func (j *JenkinsClient) GetBuildNumbers(pipelinePath string) ([]int, error) {
 
 	slog.Debug("Jenkins API response for build numbers", slog.String("json", string(bodyBytes)))
 
-	var response map[string][]map[string]int
+	var response JenkinsJobResponse
 	if err := json.Unmarshal(bodyBytes, &response); err != nil {
 		return nil, fmt.Errorf("failed to decode response: %w", err)
 	}
 
-	builds, ok := response["builds"]
-	if !ok {
-		return nil, fmt.Errorf("builds key not found in response")
-	}
-
-	numbers := make([]int, len(builds))
-	for i, build := range builds {
-		numbers[i] = build["number"]
+	numbers := make([]int, len(response.Builds))
+	for i, build := range response.Builds {
+		numbers[i] = build.Number
 	}
 
 	return numbers, nil
@@ -344,13 +348,9 @@ func main() {
 
 	ctx := context.Background()
 
-	if err := queries.CreateBuildsTable(ctx); err != nil {
-		slog.Error("failed to create builds table", slog.Any("error", err))
-		os.Exit(1)
-	}
-
-	if err := queries.CreateBuildQueueTable(ctx); err != nil {
-		slog.Error("failed to create build_queue table", slog.Any("error", err))
+	// Run database migrations
+	if err := RunMigrations(ctx, conn, "sql/schema"); err != nil {
+		slog.Error("failed to run migrations", slog.Any("error", err))
 		os.Exit(1)
 	}
 
