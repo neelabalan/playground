@@ -1,7 +1,11 @@
 {
-  "username": "",
-  "token": "",
-  "pipelines": [],
+  "username": "jenkins",
+  "token": "1157c7bda4b9b32aeef77b7fa934ee0e26",
+  "base_url": "http://localhost:8080/",
+  "pipelines": [
+    "job/ecgo-docker-pipeline/",
+    "job/file_operations/"
+  ],
   "database": {
     "host": "localhost",
     "port": 5432,
