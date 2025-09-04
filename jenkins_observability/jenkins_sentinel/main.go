@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
 	"log/slog"
 	"net/http"
 	"os"
@@ -36,35 +37,34 @@ type Config struct {
 	BackfillEnabled bool           `json:"backfill_enabled"`
 }
 
-type JenkinsBuildList struct {
-	Builds []JenkinsBuildRef `json:"builds"`
-}
-
-type JenkinsBuildRef struct {
-	Number int `json:"number"`
-}
-
-type JenkinsBuildDetail struct {
-	Number    int    `json:"number"`
-	Result    string `json:"result"`
-	Timestamp int64  `json:"timestamp"`
-	Duration  int64  `json:"duration"`
-	Building  bool   `json:"building"`
-}
-
 type JenkinsClient struct {
-	BaseURL  string
-	Username string
-	Token    string
-	Client   *http.Client
+	BaseURL string
+	Client  *http.Client
+}
+
+type authTransport struct {
+	username string
+	token    string
+	base     http.RoundTripper
+}
+
+func (t *authTransport) RoundTrip(req *http.Request) (*http.Response, error) {
+	req.SetBasicAuth(t.username, t.token)
+	req.Header.Set("Accept", "application/json")
+	return t.base.RoundTrip(req)
 }
 
 func NewJenkinsClient(baseURL, username, token string) *JenkinsClient {
 	return &JenkinsClient{
-		BaseURL:  strings.TrimSuffix(baseURL, "/"),
-		Username: username,
-		Token:    token,
-		Client:   &http.Client{Timeout: 30 * time.Second},
+		BaseURL: strings.TrimSuffix(baseURL, "/"),
+		Client: &http.Client{
+			Timeout: 30 * time.Second,
+			Transport: &authTransport{
+				username: username,
+				token:    token,
+				base:     http.DefaultTransport,
+			},
+		},
 	}
 }
 
@@ -84,15 +84,7 @@ const (
 )
 
 func (j *JenkinsClient) GetBuildNumbers(pipelinePath string) ([]int, error) {
-	url := fmt.Sprintf("%s/%s/api/json?tree=builds[number]", j.BaseURL, strings.TrimSuffix(pipelinePath, "/"))
-
-	req, err := http.NewRequest("GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("failed to create request: %w", err)
-	}
-
-	req.SetBasicAuth(j.Username, j.Token)
-	req.Header.Set("Accept", "application/json")
+	req, _ := http.NewRequest("GET", fmt.Sprintf("%s/%s/api/json?tree=builds[number]", j.BaseURL, strings.TrimSuffix(pipelinePath, "/")), nil)
 
 	resp, err := j.Client.Do(req)
 	if err != nil {
@@ -104,30 +96,30 @@ func (j *JenkinsClient) GetBuildNumbers(pipelinePath string) ([]int, error) {
 		return nil, fmt.Errorf("jenkins API returned status %d", resp.StatusCode)
 	}
 
-	var buildList JenkinsBuildList
-	if err := json.NewDecoder(resp.Body).Decode(&buildList); err != nil {
+	bodyBytes, _ := io.ReadAll(resp.Body)
+
+	slog.Debug("Jenkins API response for build numbers", slog.String("json", string(bodyBytes)))
+
+	var response map[string][]map[string]int
+	if err := json.Unmarshal(bodyBytes, &response); err != nil {
 		return nil, fmt.Errorf("failed to decode response: %w", err)
 	}
 
-	numbers := make([]int, len(buildList.Builds))
-	for i, build := range buildList.Builds {
-		numbers[i] = build.Number
+	builds, ok := response["builds"]
+	if !ok {
+		return nil, fmt.Errorf("builds key not found in response")
+	}
+
+	numbers := make([]int, len(builds))
+	for i, build := range builds {
+		numbers[i] = build["number"]
 	}
 
 	return numbers, nil
 }
 
-func (j *JenkinsClient) GetBuildDetail(pipelinePath string, buildNumber int) (*JenkinsBuildDetail, error) {
-	url := fmt.Sprintf("%s/%s/%d/api/json", j.BaseURL, strings.TrimSuffix(pipelinePath, "/"), buildNumber)
-
-	req, err := http.NewRequest("GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("failed to create request: %w", err)
-	}
-
-	req.SetBasicAuth(j.Username, j.Token)
-	req.Header.Set("Accept", "application/json")
-
+func (j *JenkinsClient) GetBuildDetail(pipelinePath string, buildNumber int) (map[string]any, error) {
+	req, _ := http.NewRequest("GET", fmt.Sprintf("%s/%s/%d/api/json", j.BaseURL, strings.TrimSuffix(pipelinePath, "/"), buildNumber), nil)
 	resp, err := j.Client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("failed to execute request: %w", err)
@@ -138,12 +130,15 @@ func (j *JenkinsClient) GetBuildDetail(pipelinePath string, buildNumber int) (*J
 		return nil, fmt.Errorf("jenkins API returned status %d for build %d", resp.StatusCode, buildNumber)
 	}
 
-	var buildDetail JenkinsBuildDetail
-	if err := json.NewDecoder(resp.Body).Decode(&buildDetail); err != nil {
+	bodyBytes, _ := io.ReadAll(resp.Body)
+	slog.Debug("Jenkins API response for build detail", slog.String("json", string(bodyBytes)))
+
+	var buildDetail map[string]any
+	if err := json.Unmarshal(bodyBytes, &buildDetail); err != nil {
 		return nil, fmt.Errorf("failed to decode build detail: %w", err)
 	}
 
-	return &buildDetail, nil
+	return buildDetail, nil
 }
 
 func convertJenkinsResult(result string) string {
@@ -280,7 +275,7 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 		return fmt.Errorf("failed to get build detail: %w", err)
 	}
 
-	if buildDetail.Building {
+	if buildDetail["building"].(bool) {
 		slog.Info("build still running, skipping",
 			slog.String("job_path", queueItem.JobPath),
 			slog.Int("build_number", int(queueItem.BuildNumber)))
@@ -289,18 +284,18 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 
 	pipelineName := extractPipelineName(queueItem.JobPath)
 
-	buildStartTime := time.Unix(buildDetail.Timestamp/1000, 0)
-	buildEndTime := buildStartTime.Add(time.Duration(buildDetail.Duration) * time.Millisecond)
+	buildStartTime := time.Unix(int64(buildDetail["timestamp"].(float64))/1000, 0)
+	buildEndTime := buildStartTime.Add(time.Duration(buildDetail["duration"].(float64)) * time.Millisecond)
 
 	_, err = queries.CreateBuild(ctx, db.CreateBuildParams{
 		PipelineName:    pipelineName,
 		BuildNumber:     queueItem.BuildNumber,
 		BuildStartTime:  pgtype.Timestamptz{Time: buildStartTime, Valid: true},
 		BuildEndTime:    pgtype.Timestamptz{Time: buildEndTime, Valid: true},
-		Status:          convertJenkinsResult(buildDetail.Result),
-		TotalDuration:   float64(buildDetail.Duration) / 1000.0, // Convert to seconds
-		StepsSuccessful: 0,                                      // TODO: Extract from Jenkins data if available
-		StepsFailed:     0,                                      // TODO: Extract from Jenkins data if available
+		Status:          convertJenkinsResult(buildDetail["result"].(string)),
+		TotalDuration:   buildDetail["duration"].(float64) / 1000.0,
+		StepsSuccessful: 0, // TODO: Extract from Jenkins data if available
+		StepsFailed:     0, // TODO: Extract from Jenkins data if available
 		StepsSkipped:    pgtype.Int4{Valid: false},
 		ErrorLog:        pgtype.Text{Valid: false},
 	})
@@ -312,16 +307,14 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 	slog.Info("processed build",
 		slog.String("pipeline", pipelineName),
 		slog.Int("build_number", int(queueItem.BuildNumber)),
-		slog.String("status", convertJenkinsResult(buildDetail.Result)))
+		slog.String("status", convertJenkinsResult(buildDetail["result"].(string))))
 
 	return nil
 }
 
 func extractPipelineName(jobPath string) string {
 	cleaned := strings.TrimSuffix(jobPath, "/")
-	if strings.HasPrefix(cleaned, "job/") {
-		cleaned = strings.TrimPrefix(cleaned, "job/")
-	}
+	cleaned = strings.TrimPrefix(cleaned, "job/")
 	return cleaned
 }
 
