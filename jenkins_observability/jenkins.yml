@@ -24,3 +24,6 @@ jobs:
   - file: "/var/jenkins_home/jobs/hello_world.dsl"
   - file: "/var/jenkins_home/jobs/parallel_pipeline.dsl"
   - file: "/var/jenkins_home/jobs/system_info.dsl"
+  - file: "/var/jenkins_home/jobs/test1.dsl"
+  - file: "/var/jenkins_home/jobs/test2.dsl"
+  - file: "/var/jenkins_home/jobs/test3.dsl"
