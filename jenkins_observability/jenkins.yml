@@ -19,7 +19,7 @@ security:
     useScriptSecurity: false
 
 jobs:
-  - file: "/var/jenkins_home/jobs/ecgo.dsl"
+  - file: "/var/jenkins_home/jobs/ecgo_docker.dsl"
   - file: "/var/jenkins_home/jobs/file_operations.dsl"
   - file: "/var/jenkins_home/jobs/hello_world.dsl"
   - file: "/var/jenkins_home/jobs/parallel_pipeline.dsl"

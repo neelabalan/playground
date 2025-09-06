@@ -1,4 +1,4 @@
-NAME = 'test1-pipeline'
+NAME = 'test1_pipeline'
 DSL = '''pipeline {
     agent any
     environment {

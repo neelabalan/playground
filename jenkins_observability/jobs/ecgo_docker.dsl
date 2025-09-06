@@ -1,4 +1,4 @@
-NAME = 'ecgo-docker-pipeline'
+NAME = 'ecgo_docker'
 DSL = '''pipeline {
     agent {
         docker {
