@@ -1,4 +1,4 @@
-.PHONY: build clean test
+.PHONY: build clean test generate
 
 build:
 	mkdir -p build
@@ -9,3 +9,6 @@ clean:
 
 test:
 	go test ./...
+
+generate:
+	$(shell go env GOPATH)/bin/sqlc generate
