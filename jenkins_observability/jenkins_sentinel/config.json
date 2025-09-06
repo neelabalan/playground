@@ -8,9 +8,9 @@
     "job/hello_world",
     "job/parallel_pipeline",
     "job/system_info",
-    "test1_pipeline",
-    "test2_pipeline",
-    "test3_pipeline"
+    "job/test1_pipeline",
+    "job/test2_pipeline",
+    "job/test3_pipeline"
   ],
   "database": {
     "host": "localhost",
