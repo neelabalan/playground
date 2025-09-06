@@ -111,7 +111,7 @@ func processPipeline(ctx context.Context, queries *db.Queries, jenkins *JenkinsC
 	missingCount := 0
 	for _, buildNumber := range buildNumbers {
 		if !existingBuildNumbers[buildNumber] {
-			_, err := queries.CreateBuildQueueItem(ctx, db.CreateBuildQueueItemParams{
+			queueItem, err := queries.CreateBuildQueueItem(ctx, db.CreateBuildQueueItemParams{
 				JobPath:          pipelinePath,
 				BuildNumber:      int32(buildNumber),
 				LastAttemptAt:    pgtype.Timestamptz{Time: time.Now(), Valid: true},
@@ -126,6 +126,11 @@ func processPipeline(ctx context.Context, queries *db.Queries, jenkins *JenkinsC
 					slog.Any("error", err))
 				continue
 			}
+
+			slog.Debug("queued build for processing",
+				slog.String("pipeline", pipelinePath),
+				slog.Int("build", buildNumber),
+				slog.Int("queue_id", int(queueItem.ID)))
 			missingCount++
 		}
 	}

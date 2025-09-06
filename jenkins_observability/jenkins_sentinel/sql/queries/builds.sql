@@ -12,7 +12,18 @@ INSERT INTO builds (
     error_log
 ) VALUES (
     $1, $2, $3, $4, $5, $6, $7, $8, $9, $10
-) RETURNING *;
+) ON CONFLICT (pipeline_name, build_number) 
+DO UPDATE SET
+    build_start_time = EXCLUDED.build_start_time,
+    build_end_time = EXCLUDED.build_end_time,
+    status = EXCLUDED.status,
+    total_duration = EXCLUDED.total_duration,
+    steps_successful = EXCLUDED.steps_successful,
+    steps_failed = EXCLUDED.steps_failed,
+    steps_skipped = EXCLUDED.steps_skipped,
+    error_log = EXCLUDED.error_log,
+    updated_at = NOW()
+RETURNING *;
 
 -- name: GetBuildByID :one
 SELECT * FROM builds WHERE id = $1;
@@ -58,12 +69,22 @@ INSERT INTO build_queue (
     collection_status
 ) VALUES (
     $1, $2, $3, $4, $5, $6
-) RETURNING *;
+) ON CONFLICT (job_path, build_number) 
+DO UPDATE SET
+    last_attempt_at = EXCLUDED.last_attempt_at,
+    collection_time = EXCLUDED.collection_time,
+    collection_status = EXCLUDED.collection_status,
+    updated_at = NOW()
+RETURNING *;
 
 -- name: GetPendingQueueItems :many
 SELECT * FROM build_queue 
 WHERE collection_status = 'pending' 
 ORDER BY collection_time ASC;
+
+-- name: GetQueueItemByJobAndBuild :one
+SELECT * FROM build_queue 
+WHERE job_path = $1 AND build_number = $2;
 
 -- name: UpdateQueueItemStatus :one
 UPDATE build_queue 

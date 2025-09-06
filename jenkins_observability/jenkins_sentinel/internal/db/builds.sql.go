@@ -25,7 +25,18 @@ INSERT INTO builds (
     error_log
 ) VALUES (
     $1, $2, $3, $4, $5, $6, $7, $8, $9, $10
-) RETURNING id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, steps_successful, steps_failed, steps_skipped, last_updated, error_log, created_at, updated_at
+) ON CONFLICT (pipeline_name, build_number) 
+DO UPDATE SET
+    build_start_time = EXCLUDED.build_start_time,
+    build_end_time = EXCLUDED.build_end_time,
+    status = EXCLUDED.status,
+    total_duration = EXCLUDED.total_duration,
+    steps_successful = EXCLUDED.steps_successful,
+    steps_failed = EXCLUDED.steps_failed,
+    steps_skipped = EXCLUDED.steps_skipped,
+    error_log = EXCLUDED.error_log,
+    updated_at = NOW()
+RETURNING id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, steps_successful, steps_failed, steps_skipped, last_updated, error_log, created_at, updated_at
 `
 
 type CreateBuildParams struct {
@@ -84,7 +95,13 @@ INSERT INTO build_queue (
     collection_status
 ) VALUES (
     $1, $2, $3, $4, $5, $6
-) RETURNING id, job_path, build_number, last_attempt_at, error_message, collection_time, collection_status, created_at, updated_at
+) ON CONFLICT (job_path, build_number) 
+DO UPDATE SET
+    last_attempt_at = EXCLUDED.last_attempt_at,
+    collection_time = EXCLUDED.collection_time,
+    collection_status = EXCLUDED.collection_status,
+    updated_at = NOW()
+RETURNING id, job_path, build_number, last_attempt_at, error_message, collection_time, collection_status, created_at, updated_at
 `
 
 type CreateBuildQueueItemParams struct {
@@ -380,6 +397,33 @@ func (q *Queries) GetPendingQueueItems(ctx context.Context) ([]BuildQueue, error
 		return nil, err
 	}
 	return items, nil
+}
+
+const getQueueItemByJobAndBuild = `-- name: GetQueueItemByJobAndBuild :one
+SELECT id, job_path, build_number, last_attempt_at, error_message, collection_time, collection_status, created_at, updated_at FROM build_queue 
+WHERE job_path = $1 AND build_number = $2
+`
+
+type GetQueueItemByJobAndBuildParams struct {
+	JobPath     string `json:"job_path"`
+	BuildNumber int32  `json:"build_number"`
+}
+
+func (q *Queries) GetQueueItemByJobAndBuild(ctx context.Context, arg GetQueueItemByJobAndBuildParams) (BuildQueue, error) {
+	row := q.db.QueryRow(ctx, getQueueItemByJobAndBuild, arg.JobPath, arg.BuildNumber)
+	var i BuildQueue
+	err := row.Scan(
+		&i.ID,
+		&i.JobPath,
+		&i.BuildNumber,
+		&i.LastAttemptAt,
+		&i.ErrorMessage,
+		&i.CollectionTime,
+		&i.CollectionStatus,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
 }
 
 const updateBuildStatus = `-- name: UpdateBuildStatus :one
