@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Rick Sanchez",
+        "status": "Alive",
+        "species": "Human"
+    },
+    {
+        "name": "Morty Smith",
+        "status": "Alive",
+        "species": "Human"
+    },
+    {
+        "name": "Jessica",
+        "status": "Alive",
+        "species": "Human"
+    },
+    {
+        "name": "Mr. Goldenfold",
+        "status": "Alive",
+        "species": "Human"
+    },
+    {
+        "name": "Tammy Gueterman",
+        "status": "Unknown",
+        "species": "Human"
+    },
+    {
+        "name": "Birdperson",
+        "status": "Unknown",
+        "species": "Bird-Person"
+    },
+    {
+        "name": "Squanchy",
+        "status": "Alive",
+        "species": "Cat-Person"
+    },
+    {
+        "name": "Mr. Poopybutthole",
+        "status": "Alive",
+        "species": "Unknown"
+    },
+    {
+        "name": "Jon Allen",
+        "status": "Unknown",
+        "species": "Unknown"
+    },
+    {
+        "name": "President Andre Curtis",
+        "status": "Alive",
+        "species": "Human"
+    },
+    {
+        "name": "Gene Gilligan",
+        "status": "Alive",
+        "species": "Human"
+    },
+    {
+        "name": "Naruto Smith",
+        "status": "Alive",
+        "species": "Human"
+    },
+    {
+        "name": "Beth",
+        "status": "Alive",
+        "species": "Human"
+    }
+]
