@@ -1,0 +1,21 @@
+cabal-version:      3.0
+name:               rule-rhythms
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             neelabalan
+maintainer:         neelabalan.n@outlook.com
+category:           Sound
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+executable rule-rhythms
+    import:           warnings
+    main-is:          Main.hs
+    other-modules:    Freq, Rule110
+    build-depends:    base ^>=4.17.2.1, split, random==1.3.1, process==1.6.24.0, bytestring==0.12.2.0, optparse-applicative==0.17.1.0
+    hs-source-dirs:   src 
+    default-language: GHC2021
