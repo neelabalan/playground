@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "tmt"
+version = "0.1.6"
+description = "task management tool"
+authors = ["neelabalan <neelabalan.n@outlook.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+toml = "^0.10.2"
+rich = "^10.14.0"
+typer = {extras = ["all"], version = "^0.4.0"}
+cryptography = "^36.0.1"
+python-dateutil = "^2.8.2"
+jsondb = {git = "https://github.com/neelabalan/jsondb.git", rev = "main"}
+pyskim = {git = "https://github.com/neelabalan/pyskim.git", rev = "main"}
+
+
+[tool.poetry.dev-dependencies]
+black = "^21.11b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+tmt = "tmt:run"
+
