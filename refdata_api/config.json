@@ -1,0 +1,14 @@
+[
+	{
+		"endpoint": "nasdaq",
+		"path": "data/nasdaq_listed.csv"
+	},
+	{
+		"endpoint": "nasdaq_symbols",
+		"path": "data/nasdaq_listed_symbols.csv"
+	},
+	{
+		"endpoint": "world_cities",
+		"path": "data/world_cities.csv"
+	}
+]
