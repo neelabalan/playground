@@ -113,19 +113,34 @@ flowchart TD
     - last_updated (TIMESTAMP WITH TIME ZONE): When this record was last modified (auto-updated via trigger). Useful for auditing changes.
     - error_log (TEXT): Any errors from Jenkins API during collection (e.g., "API timeout"). Null if successful.
 
-### Reliability & Resilience considerations
+### Development and Enhancement Plan
 
-- The system should be designed to handle Jenkins restarts or downtime. It remembers the last processed build ID and resumes from there when Jenkins is back online. 
-- The system should recover from collector crashes. A "state table" can ensure that only new builds are ingested upon restart, preventing data duplication.
-- Should handle scenarios where builds might have the same ID (though rare). The system can leverage timestamps to resolve conflicts.
-- A backfilling utility to resync data if the state table gets corrupted or is missing.
-- Handle possibility of Jenkins rate limiting. 
-- Handle archival for later data analytics.
-- For data retention implement automated cleanup policies for historical build data
-- Acknowledge the possibility of changes in the Jenkins API and ensure a degree of abstraction in the code to mitigate impact.
-- Consider time-series specific PostgreSQL extensions (TimescaleDB)
-- Hybrid approach of using Tempo for traces and Postgres for events.
-
+- System handles Jenkins restarts and downtime by remembering last processed build ID and resuming when online
+- Collector crashes are handled through state table that prevents data duplication on restart
+- Backfilling utility resyncs data when state table gets corrupted or missing
+- Jenkins API rate limiting is handled with exponential backoff and retry mechanisms
+- Automated cleanup policies manage data retention for historical build data
+- Code abstraction layer mitigates impact of Jenkins API changes
+- TimescaleDB migration provides automatic partitioning and improved query performance for time-series data
+- Hybrid approach uses Tempo for traces and Postgres for events
+- Parallel build data collection improves performance with worker threads
+- Tracing integrations explore Jenkins Metrics API for generating traces stored in Tempo
+- Step level data collection captures successful, failed, and duration metrics for individual stages
+- Anomaly detection system identifies optimal algorithms through data collection and simulation
+- TimescaleDB migration strategy includes parallel deployment and zero-downtime cutover
+- Data lifecycle management automates archival to object storage with parquet format
+- Dashboard optimization provides dynamic time ranges and context-aware drill-down capabilities
+- LLM powered failure analysis offers triggered root cause analysis with chat integration
+- Natural language queries enable questions like "why did the payment-service build #13 fail"
+- Multi-jenkins support provides unified dashboard across different environments
+- Performance comparison capabilities across multiple Jenkins instances
+  
+### Business impact
+- Developer productivity increased through faster problem identification, reduced MTTR (Mean time to resolution) for build failures, elimination of debugging guesswork, and decreased context switching overhead
+- Overall pipeline success rate improvement through proactive anomaly detection
+- Infrastructure cost optimization through identification of resource-intensive pipelines
+- Reduced deployment cycle time by predicting and preventing pipeline bottlenecks
+- Accelerated onboarding of new team members through comprehensive build history visibility
 
 ## Troublehsoot
 
