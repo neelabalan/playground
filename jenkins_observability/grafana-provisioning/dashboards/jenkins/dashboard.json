@@ -18,6 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
+  "id": 1,
   "links": [],
   "panels": [
     {
@@ -483,6 +484,11 @@
             "mode": "fixed"
           },
           "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
             "fillOpacity": 80,
             "gradientMode": "none",
             "hideFrom": {
@@ -491,9 +497,11 @@
               "viz": false
             },
             "lineWidth": 1,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
             }
           },
           "mappings": [],
@@ -522,18 +530,26 @@
       },
       "id": 5,
       "options": {
-        "combine": true,
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
         "legend": {
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
           "showLegend": true
         },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
         "tooltip": {
           "hideZeros": false,
           "mode": "single",
           "sort": "none"
-        }
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
       },
       "pluginVersion": "12.1.1",
       "targets": [
@@ -541,7 +557,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\n    bucket_upper as le,\n    count\nFROM (\n    WITH duration_stats AS (\n        SELECT \n            MIN(total_duration) as min_duration,\n            MAX(total_duration) as max_duration\n        FROM builds\n        WHERE pipeline_name = '$pipeline'\n            AND total_duration IS NOT NULL  \n            AND $__timeFilter(build_start_time)\n    ),\n    buckets AS (\n        SELECT \n            generate_series(1, 5) as bucket_num,\n            min_duration,\n            max_duration,\n            (max_duration - min_duration) / 5.0 as bucket_size\n        FROM duration_stats\n    )\n    SELECT \n        CAST(min_duration + bucket_num * bucket_size AS DECIMAL(10,2)) as bucket_upper,\n        (\n            SELECT COUNT(*) \n            FROM builds \n            WHERE pipeline_name = '$pipeline'\n                AND total_duration IS NOT NULL\n                AND total_duration <= min_duration + bucket_num * bucket_size\n                AND $__timeFilter(build_start_time)\n        ) as count\n    FROM buckets\n) histogram_data\nORDER BY bucket_upper;",
+          "rawSql": "SELECT duration_range, count\nFROM (\n    SELECT \n        CASE \n            WHEN total_duration <= 60 THEN '0-60s'\n            WHEN total_duration <= 120 THEN '61-120s'\n            WHEN total_duration <= 300 THEN '2-5min'\n            WHEN total_duration <= 600 THEN '5-10min'\n            ELSE '10min+'\n        END AS duration_range,\n        COUNT(*) AS count\n    FROM builds\n    WHERE pipeline_name = '$pipeline'\n      AND total_duration IS NOT NULL\n      AND build_start_time IS NOT NULL\n    GROUP BY \n        CASE \n            WHEN total_duration <= 60 THEN '0-60s'\n            WHEN total_duration <= 120 THEN '61-120s'\n            WHEN total_duration <= 300 THEN '2-5min'\n            WHEN total_duration <= 600 THEN '5-10min'\n            ELSE '10min+'\n        END\n) AS duration_dist\nORDER BY \n    CASE duration_range\n        WHEN '0-60s' THEN 1\n        WHEN '61-120s' THEN 2\n        WHEN '2-5min' THEN 3\n        WHEN '5-10min' THEN 4\n        WHEN '10min+' THEN 5\n    END;\n",
           "refId": "A",
           "sql": {
             "columns": [
@@ -563,7 +579,7 @@
         }
       ],
       "title": "Duration Distribution",
-      "type": "histogram"
+      "type": "barchart"
     }
   ],
   "preload": false,
@@ -588,12 +604,12 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "New dashboard",
+  "title": "Jenkins Sentinel",
   "uid": "8c49e304-3dd5-4ea8-b690-31af1c9f0fe9",
-  "version": 14
+  "version": 5
 }
