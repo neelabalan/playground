@@ -196,6 +196,8 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 		return nil
 	}
 
+	stepStats := getWorkflowStepStats(jenkins, queueItem.JobPath, int(queueItem.BuildNumber))
+
 	pipelineName := extractPipelineName(queueItem.JobPath)
 
 	buildStartTime := time.Unix(int64(buildDetail["timestamp"].(float64))/1000, 0)
@@ -208,9 +210,9 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 		BuildEndTime:    pgtype.Timestamptz{Time: buildEndTime, Valid: true},
 		Status:          convertJenkinsResult(buildDetail["result"].(string)),
 		TotalDuration:   buildDetail["duration"].(float64) / 1000.0,
-		StepsSuccessful: 0, // TODO: Extract from Jenkins data if available
-		StepsFailed:     0, // TODO: Extract from Jenkins data if available
-		StepsSkipped:    pgtype.Int4{Valid: false},
+		StepsSuccessful: int32(stepStats.Successful),
+		StepsFailed:     int32(stepStats.Failed),
+		StepsSkipped:    pgtype.Int4{Int32: int32(stepStats.Skipped), Valid: stepStats.Skipped > 0},
 		ErrorLog:        pgtype.Text{Valid: false},
 	})
 
@@ -221,9 +223,66 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 	slog.Info("processed build",
 		slog.String("pipeline", pipelineName),
 		slog.Int("build_number", int(queueItem.BuildNumber)),
-		slog.String("status", convertJenkinsResult(buildDetail["result"].(string))))
+		slog.String("status", convertJenkinsResult(buildDetail["result"].(string))),
+		slog.Int("steps_successful", stepStats.Successful),
+		slog.Int("steps_failed", stepStats.Failed),
+		slog.Int("steps_skipped", stepStats.Skipped))
 
 	return nil
+}
+
+type WorkflowStepStats struct {
+	Total      int
+	Successful int
+	Failed     int
+	Skipped    int
+}
+
+func getWorkflowStepStats(jenkins *JenkinsClient, jobPath string, buildNumber int) WorkflowStepStats {
+	stats := WorkflowStepStats{}
+
+	workflowData, err := jenkins.GetWorkflowDescribe(jobPath, buildNumber)
+	if err != nil {
+		slog.Debug("failed to get workflow data", slog.Any("error", err))
+		return stats
+	}
+
+	stages, ok := workflowData["stages"].([]interface{})
+	if !ok {
+		slog.Debug("no stages found in workflow data")
+		return stats
+	}
+
+	extractStepsRecursive(stages, &stats)
+	return stats
+}
+
+func extractStepsRecursive(stages []interface{}, stats *WorkflowStepStats) {
+	for _, stage := range stages {
+		stageMap, ok := stage.(map[string]interface{})
+		if !ok {
+			continue
+		}
+
+		stats.Total++
+
+		status, ok := stageMap["status"].(string)
+		if ok {
+			switch strings.ToLower(status) {
+			case "success":
+				stats.Successful++
+			case "failed":
+				stats.Failed++
+			case "skipped", "not_executed", "aborted":
+				stats.Skipped++
+			}
+		}
+
+		// Process nested stages
+		if stageFlowNodes, ok := stageMap["stageFlowNodes"].([]interface{}); ok {
+			extractStepsRecursive(stageFlowNodes, stats)
+		}
+	}
 }
 
 func extractPipelineName(jobPath string) string {

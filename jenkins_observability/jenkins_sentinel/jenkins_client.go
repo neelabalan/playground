@@ -102,3 +102,26 @@ func (j *JenkinsClient) GetBuildDetail(pipelinePath string, buildNumber int) (ma
 
 	return buildDetail, nil
 }
+
+func (j *JenkinsClient) GetWorkflowDescribe(pipelinePath string, buildNumber int) (map[string]any, error) {
+	req, _ := http.NewRequest("GET", fmt.Sprintf("%s/%s/%d/wfapi/describe", j.BaseURL, strings.TrimSuffix(pipelinePath, "/"), buildNumber), nil)
+	resp, err := j.Client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("failed to execute workflow request: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("jenkins workflow API returned status %d for build %d", resp.StatusCode, buildNumber)
+	}
+
+	bodyBytes, _ := io.ReadAll(resp.Body)
+	slog.Debug("Jenkins workflow API response", slog.String("json", string(bodyBytes)))
+
+	var workflowDetail map[string]any
+	if err := json.Unmarshal(bodyBytes, &workflowDetail); err != nil {
+		return nil, fmt.Errorf("failed to decode workflow detail: %w", err)
+	}
+
+	return workflowDetail, nil
+}
