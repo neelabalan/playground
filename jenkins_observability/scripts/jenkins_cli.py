@@ -67,7 +67,11 @@ class JenkinsBuildExporter:
         estimated_duration_ms = build_detail.get('estimatedDuration', 0)
 
         start_time = datetime.datetime.fromtimestamp(timestamp_ms / 1000) if timestamp_ms else None
-        end_time = datetime.datetime.fromtimestamp((timestamp_ms + duration_ms) / 1000) if timestamp_ms and duration_ms else None
+        end_time = (
+            datetime.datetime.fromtimestamp((timestamp_ms + duration_ms) / 1000)
+            if timestamp_ms and duration_ms
+            else None
+        )
 
         status = build_detail.get('result', 'unknown').lower()
 
@@ -131,24 +135,35 @@ class JenkinsBuildExporter:
             print(f'exported {len(pipeline_data)} records for {pipeline_path} to {file_path}')
 
 
+async def trigger_job(jenkins_client: JenkinsClient, job_name: str) -> bool:
+    try:
+        response = await jenkins_client.post(f'job/{job_name}/build')
+        response.raise_for_status()
+        print(f'triggered job: {job_name}')
+        return True
+    except httpx.HTTPError as e:
+        print(f'error triggering job {job_name}: {e}')
+        return False
+
+
+async def list_job_builds(jenkins_client: JenkinsClient, job_name: str) -> list[int]:
+    try:
+        response = await jenkins_client.get(f'job/{job_name}/api/json', params={'tree': 'builds[number]'})
+        response.raise_for_status()
+        builds = response.json().get('builds', [])
+        return [build['number'] for build in builds]
+    except httpx.HTTPError as e:
+        print(f'error listing builds for {job_name}: {e}')
+        return []
+
+
 def load_config(config_path: pathlib.Path) -> dict:
     with open(config_path) as f:
         return json.load(f)
 
 
-async def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--config', required=True, help='Path to Jenkins configuration file')
-    parser.add_argument('--output', default='jenkins_build_data', help='Output directory')
-    parser.add_argument('--workers', type=int, default=5, help='Maximum number of concurrent workers (default: 5)')
-    args = parser.parse_args()
-
-    config_path = pathlib.Path(args.config)
-    if not config_path.exists():
-        print(f'config file not found: {config_path}')
-        return 1
-
-    config = load_config(config_path)
+async def export_command(args):
+    config = load_config(pathlib.Path(args.config))
 
     async with JenkinsClient(config['base_url'], config['username'], config['token']) as jenkins_client:
         exporter = JenkinsBuildExporter(jenkins_client, args.workers)
@@ -160,6 +175,65 @@ async def main():
                 print(f'error processing pipeline {pipeline_path}: {e}')
 
     print('export completed!')
+
+
+async def trigger_command(args):
+    config = load_config(pathlib.Path(args.config))
+
+    async with JenkinsClient(config['base_url'], config['username'], config['token']) as jenkins_client:
+        if args.job:
+            await trigger_job(jenkins_client, args.job)
+        else:
+            for pipeline_path in config['pipelines']:
+                job_name = pipeline_path.replace('job/', '')
+                await trigger_job(jenkins_client, job_name)
+
+    print('trigger completed!')
+
+
+async def list_command(args):
+    config = load_config(pathlib.Path(args.config))
+
+    async with JenkinsClient(config['base_url'], config['username'], config['token']) as jenkins_client:
+        if args.job:
+            builds = await list_job_builds(jenkins_client, args.job)
+            print(f"builds for job '{args.job}':")
+            for build_num in builds:
+                print(f'  build number: {build_num}')
+        else:
+            for pipeline_path in config['pipelines']:
+                job_name = pipeline_path.replace('job/', '')
+                builds = await list_job_builds(jenkins_client, job_name)
+                print(f"builds for job '{job_name}': {len(builds)} builds")
+
+
+async def main():
+    parser = argparse.ArgumentParser(description='jenkins management tool')
+    subparsers = parser.add_subparsers(dest='command', help='available commands')
+
+    export_parser = subparsers.add_parser('export', help='export build data to parquet files')
+    export_parser.add_argument('--config', required=True, help='path to jenkins configuration file')
+    export_parser.add_argument('--output', default='jenkins_build_data', help='output directory')
+    export_parser.add_argument('--workers', type=int, default=5, help='maximum number of concurrent workers')
+
+    trigger_parser = subparsers.add_parser('trigger', help='trigger jenkins jobs')
+    trigger_parser.add_argument('--config', required=True, help='path to jenkins configuration file')
+    trigger_parser.add_argument('--job', help='specific job to trigger (if not provided, triggers all jobs in config)')
+
+    list_parser = subparsers.add_parser('list', help='list jenkins builds')
+    list_parser.add_argument('--config', required=True, help='path to jenkins configuration file')
+    list_parser.add_argument('--job', help='specific job to list builds for (if not provided, lists all jobs in config)')
+
+    args = parser.parse_args()
+
+    if args.command == 'export':
+        await export_command(args)
+    elif args.command == 'trigger':
+        await trigger_command(args)
+    elif args.command == 'list':
+        await list_command(args)
+    else:
+        parser.print_help()
 
 
 if __name__ == '__main__':
