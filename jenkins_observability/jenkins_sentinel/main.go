@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"flag"
 	"fmt"
 	"log/slog"
@@ -15,25 +14,6 @@ import (
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgtype"
 )
-
-type DatabaseConfig struct {
-	Host     string `json:"host"`
-	Port     int    `json:"port"`
-	User     string `json:"user"`
-	Password string `json:"password"`
-	DBName   string `json:"dbname"`
-}
-
-type Config struct {
-	Username        string         `json:"username"`
-	Token           string         `json:"token"`
-	BaseURL         string         `json:"base_url"`
-	Pipelines       []string       `json:"pipelines"`
-	Database        DatabaseConfig `json:"database"`
-	RetryAttempts   int            `json:"retry_attempts"`
-	LoggingLevel    string         `json:"logging_level"`
-	BackfillEnabled bool           `json:"backfill_enabled"`
-}
 
 const (
 	BuildStatusSuccess  = "success"
@@ -65,22 +45,6 @@ func convertJenkinsResult(result string) string {
 	default:
 		return "unknown"
 	}
-}
-
-func loadConfig(filename string) (*Config, error) {
-	file, err := os.Open(filename)
-	if err != nil {
-		return nil, fmt.Errorf("failed to open config file: %w", err)
-	}
-	defer file.Close()
-
-	var config Config
-	decoder := json.NewDecoder(file)
-	if err := decoder.Decode(&config); err != nil {
-		return nil, fmt.Errorf("failed to decode config JSON: %w", err)
-	}
-
-	return &config, nil
 }
 
 func processPipeline(ctx context.Context, queries *db.Queries, jenkins *JenkinsClient, pipelinePath string) error {
@@ -301,7 +265,12 @@ func main() {
 		os.Exit(1)
 	}
 
-	slog.Info("loaded config", slog.Any("config", config))
+	if err := setupLogger(config); err != nil {
+		slog.Error("failed to setup logger", slog.Any("error", err))
+		os.Exit(1)
+	}
+
+	slog.Info("jenkins sentinel started", slog.String("config_path", *configPath))
 
 	conn, err := pgx.Connect(context.Background(), fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
 		config.Database.Host, config.Database.Port, config.Database.User, config.Database.Password, config.Database.DBName))

@@ -21,5 +21,6 @@
   },
   "retry_attempts": 3,
   "logging_level": "info",
-  "backfill_enabled": true
+  "backfill_enabled": true,
+  "log_file": "jenkins_sentinel.log"
 }
