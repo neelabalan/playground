@@ -1,6 +1,6 @@
 {
   "username": "jenkins",
-  "token": "",
+  "token": "11e03cbae3f9e44e18524284de9b891da1",
   "password": "admin",
   "base_url": "http://localhost:8080/",
   "pipelines": [
@@ -23,5 +23,6 @@
   "retry_attempts": 3,
   "logging_level": "info",
   "backfill_enabled": true,
-  "log_file": "jenkins_sentinel.log"
+  "log_file": "jenkins_sentinel.log",
+  "tempo_endpoint": "http://localhost:4318"
 }

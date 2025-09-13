@@ -90,6 +90,25 @@ class JenkinsBuildFetcher:
             return []
 
     async def get_build_steps(self, job_path: str, build_number: int) -> list[dict]:
+        is_pipeline = await self.is_pipeline_job(job_path)
+        if not is_pipeline:
+            print(f'skipping workflow steps for {job_path}/{build_number} (not a Pipeline job)')
+            return [{
+                'stage_name': 'build',
+                'stage_id': 'build',
+                'start_time': 0,
+                'duration': 0,
+                'status': 'COMPLETED',
+                'steps': [{
+                    'step_name': 'build',
+                    'step_id': 'build',
+                    'start_time': 0,
+                    'duration': 0,
+                    'status': 'COMPLETED',
+                    'type': 'BUILD'
+                }]
+            }]
+
         try:
             workflow_run_url = f'{job_path}/{build_number}/wfapi/describe'
             response = await self.jenkins_client.get(workflow_run_url)
@@ -122,25 +141,78 @@ class JenkinsBuildFetcher:
 
             return steps
         except httpx.HTTPError as e:
-            print(f'error fetching build steps for {job_path}/{build_number}: {e}')
+            if hasattr(e, 'response') and e.response is not None:
+                if e.response.status_code == 404:
+                    print(f'workflow API not available for {job_path}/{build_number} (build may not have workflow data)')
+                    # Return a basic stage for builds without workflow data
+                    return [{
+                        'stage_name': 'build',
+                        'stage_id': 'build',
+                        'start_time': 0,
+                        'duration': 0,
+                        'status': 'COMPLETED',
+                        'steps': [{
+                            'step_name': 'build',
+                            'step_id': 'build',
+                            'start_time': 0,
+                            'duration': 0,
+                            'status': 'COMPLETED',
+                            'type': 'BUILD'
+                        }]
+                    }]
+                else:
+                    print(f'HTTP error fetching build steps for {job_path}/{build_number}: {e.response.status_code}')
+                    return []
+            else:
+                print(f'error fetching build steps for {job_path}/{build_number}: {e}')
+                return []
+        except Exception as e:
+            print(f'unexpected error fetching build steps for {job_path}/{build_number}: {e}')
             return []
+
+    async def is_pipeline_job(self, job_path: str) -> bool:
+        """Check if a job is a Pipeline job by examining its class type"""
+        try:
+            response = await self.jenkins_client.get(f'{job_path}/api/json', params={'tree': '_class'})
+            response.raise_for_status()
+            data = response.json()
+            job_class = data.get('_class', '')
+            return 'WorkflowJob' in job_class or 'org.jenkinsci.plugins.workflow' in job_class
+        except httpx.HTTPError as e:
+            print(f'error checking job type for {job_path}: {e}')
+            return False
 
 
 class TracePublisher:
     def __init__(self, tempo_endpoint: str):
         trace.set_tracer_provider(TracerProvider())
-        exporter = OTLPSpanExporter(endpoint=tempo_endpoint)
-        trace.get_tracer_provider().add_span_processor(BatchSpanProcessor(exporter))
+        if not tempo_endpoint.endswith('/v1/traces'):
+            tempo_endpoint = tempo_endpoint.rstrip('/') + '/v1/traces'
+        exporter = OTLPSpanExporter(
+            endpoint=tempo_endpoint,
+            headers={},
+            timeout=30.0
+        )
+        span_processor = BatchSpanProcessor(exporter)
+        trace.get_tracer_provider().add_span_processor(span_processor)
         self.tracer = trace.get_tracer('jenkins-observability')
+        self.span_processor = span_processor
+        self.exporter = exporter
 
-    def publish_build_trace_with_steps(self, job_name: str, build_data: dict, steps_data: list[dict]):
+    def publish_build_trace_with_steps(self, job_name: str, build_data: dict, steps_data: list[dict], tempo_endpoint: str = None):
+        print(f'Creating trace for {job_name} build {build_data["number"]}')
+
         build_start_time = datetime.datetime.fromtimestamp(build_data['timestamp'] / 1000.0)
         build_duration_ms = build_data.get('duration', 0)
         build_end_time = build_start_time + datetime.timedelta(milliseconds=build_duration_ms)
 
+        # Convert to nanoseconds for OpenTelemetry
+        build_start_ns = int(build_start_time.timestamp() * 1_000_000_000)
+        build_end_ns = int(build_end_time.timestamp() * 1_000_000_000)
+
         with self.tracer.start_as_current_span(
             name=f'{job_name}-build-{build_data["number"]}',
-            start_time=build_start_time.timestamp(),
+            start_time=build_start_ns,
         ) as build_span:
             build_span.set_attribute('jenkins.job', job_name)
             build_span.set_attribute('jenkins.build_number', build_data['number'])
@@ -148,6 +220,7 @@ class TracePublisher:
             build_span.set_attribute('jenkins.result', build_data.get('result', 'UNKNOWN'))
             build_span.set_attribute('jenkins.duration_ms', build_duration_ms)
             build_span.set_attribute('jenkins.type', 'build')
+            build_span.set_attribute('service.name', 'jenkins-observability')
 
             for stage_data in steps_data:
                 stage_start_time = (
@@ -158,9 +231,13 @@ class TracePublisher:
                 stage_duration_ms = stage_data.get('duration', 0)
                 stage_end_time = stage_start_time + datetime.timedelta(milliseconds=stage_duration_ms)
 
+                # Convert to nanoseconds for OpenTelemetry
+                stage_start_ns = int(stage_start_time.timestamp() * 1_000_000_000)
+                stage_end_ns = int(stage_end_time.timestamp() * 1_000_000_000)
+
                 with self.tracer.start_as_current_span(
                     name=f'{stage_data["stage_name"]}',
-                    start_time=stage_start_time.timestamp(),
+                    start_time=stage_start_ns,
                 ) as stage_span:
                     stage_span.set_attribute('jenkins.job', job_name)
                     stage_span.set_attribute('jenkins.build_number', build_data['number'])
@@ -169,6 +246,7 @@ class TracePublisher:
                     stage_span.set_attribute('jenkins.status', stage_data.get('status', 'UNKNOWN'))
                     stage_span.set_attribute('jenkins.duration_ms', stage_duration_ms)
                     stage_span.set_attribute('jenkins.type', 'stage')
+                    stage_span.set_attribute('service.name', 'jenkins-observability')
 
                     for step_data in stage_data.get('steps', []):
                         step_start_time = (
@@ -179,9 +257,13 @@ class TracePublisher:
                         step_duration_ms = step_data.get('duration', 0)
                         step_end_time = step_start_time + datetime.timedelta(milliseconds=step_duration_ms)
 
+                        # Convert to nanoseconds for OpenTelemetry
+                        step_start_ns = int(step_start_time.timestamp() * 1_000_000_000)
+                        step_end_ns = int(step_end_time.timestamp() * 1_000_000_000)
+
                         with self.tracer.start_as_current_span(
                             name=f'{step_data["step_name"]}',
-                            start_time=step_start_time.timestamp(),
+                            start_time=step_start_ns,
                         ) as step_span:
                             step_span.set_attribute('jenkins.job', job_name)
                             step_span.set_attribute('jenkins.build_number', build_data['number'])
@@ -192,13 +274,26 @@ class TracePublisher:
                             step_span.set_attribute('jenkins.duration_ms', step_duration_ms)
                             step_span.set_attribute('jenkins.step_type', step_data.get('type', 'STEP'))
                             step_span.set_attribute('jenkins.type', 'step')
-                            step_span.end(step_end_time.timestamp())
+                            step_span.set_attribute('service.name', 'jenkins-observability')
+                            step_span.end(step_end_ns)
 
-                    stage_span.end(stage_end_time.timestamp())
+                    stage_span.end(stage_end_ns)
 
-            build_span.end(build_end_time.timestamp())
+            build_span.end(build_end_ns)
 
-        print(f'published detailed trace for {job_name} build {build_data["number"]} with {len(steps_data)} stages')
+        print(f'published trace for {job_name} build {build_data["number"]} with {len(steps_data)} stages')
+
+        # Force flush to ensure spans are sent
+        try:
+            print('Attempting to flush spans...')
+            result = self.span_processor.force_flush(timeout_millis=5000)
+            print(f'Flush result: {result}')
+            if not result:
+                print('Flush returned False - spans may not have been sent')
+        except Exception as e:
+            print(f'Error during flush: {e}')
+            import traceback
+            traceback.print_exc()
 
 
 async def publish_jenkins_traces(config: dict):
@@ -207,7 +302,7 @@ async def publish_jenkins_traces(config: dict):
     token = config['token']
     pipelines = config['pipelines']
 
-    tempo_endpoint = config.get('tempo_endpoint', 'http://localhost:4318/v1/traces')
+    tempo_endpoint = config.get('tempo_endpoint', 'http://localhost:4318')
     trace_publisher = TracePublisher(tempo_endpoint)
 
     async with JenkinsClient(jenkins_url, username, token) as jenkins_client:
