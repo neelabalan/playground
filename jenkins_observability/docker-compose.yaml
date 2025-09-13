@@ -49,7 +49,19 @@ services:
       - "5432:5432"
     restart: unless-stopped
 
+  tempo:
+    image: grafana/tempo:2.5.0
+    container_name: tempo
+    command: [ "-config.file=/etc/tempo.yaml" ]
+    volumes:
+      - tempo-data:/var/tempo
+    ports:
+      - "3200:3200"
+      - "4318:4318"
+    restart: unless-stopped
+
 volumes:
   jenkins-data:
   jenkins-docker-certs:
   postgres_data:
+  tempo-data:
