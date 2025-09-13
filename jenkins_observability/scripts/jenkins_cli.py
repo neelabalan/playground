@@ -6,11 +6,14 @@
 # ]
 # ///
 
+
+# uv run jenkins_cli.py
 import argparse
 import asyncio
 import datetime
 import json
 import pathlib
+import time
 
 import httpx
 import pandas as pd
@@ -23,14 +26,33 @@ class JenkinsClient:
         self.headers = {'Accept': 'application/json'}
         self.timeout = httpx.Timeout(30.0)
         self._client = None
+        self._crumb = None
 
     async def __aenter__(self):
         self._client = httpx.AsyncClient(auth=self.auth, headers=self.headers, timeout=self.timeout)
+        await self._get_crumb()
         return self
 
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         if self._client:
             await self._client.aclose()
+
+    async def _get_crumb(self):
+        try:
+            response = await self._client.get(f'{self.base_url}/crumbIssuer/api/json')
+            if response.status_code == 200:
+                crumb_data = response.json()
+                self._crumb = {
+                    'name': crumb_data.get('crumbRequestField', 'Jenkins-Crumb'),
+                    'value': crumb_data.get('crumb', ''),
+                }
+                print(f'retrieved CSRF crumb: {self._crumb["name"]}')
+            else:
+                print('CSRF protection not enabled or crumb not available')
+                self._crumb = None
+        except Exception as e:
+            print(f'could not retrieve CSRF crumb: {e}')
+            self._crumb = None
 
     async def get(self, path: str, params: dict = None) -> httpx.Response:
         url = f'{self.base_url}/{path.strip("/")}'
@@ -38,7 +60,10 @@ class JenkinsClient:
 
     async def post(self, path: str, data: dict = None, json_data: dict = None) -> httpx.Response:
         url = f'{self.base_url}/{path.strip("/")}'
-        return await self._client.post(url, data=data, json=json_data)
+        headers = {}
+        if self._crumb:
+            headers[self._crumb['name']] = self._crumb['value']
+        return await self._client.post(url, data=data, json=json_data, headers=headers)
 
 
 class JenkinsBuildExporter:
@@ -143,9 +168,17 @@ class JenkinsBuildExporter:
 
 async def trigger_job(jenkins_client: JenkinsClient, job_name: str) -> bool:
     try:
+        print(f'triggering job: {job_name}')
         response = await jenkins_client.post(f'job/{job_name}/build')
         response.raise_for_status()
-        print(f'triggered job: {job_name}')
+
+        location = response.headers.get('Location')
+        if location and '/queue/item/' in location:
+            queue_id = location.split('/queue/item/')[1].rstrip('/')
+            print(f'job {job_name} queued successfully (queue ID: {queue_id})')
+        else:
+            print(f'job {job_name} triggered successfully')
+
         return True
     except httpx.HTTPError as e:
         print(f'error triggering job {job_name}: {e}')
@@ -187,26 +220,53 @@ async def execute_job_schedule(args):
     config = load_config(pathlib.Path(args.config))
 
     job_trigger_counts = {
-        "ecgo_docker": 23,
-        "file_operations": 17,
-        "hello_world": 31,
-        "parallel_pipeline": 14,
-        "system_info": 28,
-        "test1_pipeline": 19,
-        "test2_pipeline": 25,
-        "test3_pipeline": 12
+        'ecgo_docker': 23,
+        'file_operations': 17,
+        'hello_world': 31,
+        'parallel_pipeline': 14,
+        'system_info': 28,
+        'test1_pipeline': 19,
+        'test2_pipeline': 25,
+        'test3_pipeline': 12,
     }
 
     async with JenkinsClient(config['base_url'], config['username'], config['token']) as jenkins_client:
+        total_triggered = 0
+        total_queued = 0
+
         for pipeline_path in config['pipelines']:
             job_name = pipeline_path.replace('job/', '')
 
             if job_name in job_trigger_counts:
                 trigger_count = job_trigger_counts[job_name]
-                for i in range(trigger_count):
-                    await trigger_job(jenkins_client, job_name)
+                print(f'triggering {trigger_count} builds for job: {job_name}')
 
-    print('job schedule execution completed!')
+                job_triggered = 0
+                job_queued = 0
+
+                for i in range(trigger_count):
+                    print(f'triggering build {i + 1}/{trigger_count} for {job_name}...')
+                    success = await trigger_job(jenkins_client, job_name)
+                    if success:
+                        job_queued += 1
+                        total_queued += 1
+                    job_triggered += 1
+                    total_triggered += 1
+                    if i < trigger_count - 1:
+                        print('waiting 1 second before next trigger...')
+                        time.sleep(1)
+                print(f'job {job_name}: {job_queued}/{job_triggered} builds successfully queued')
+                print('waiting 2 seconds before next job...')
+                time.sleep(2)
+
+        print('job schedule execution completed!')
+        print(f'total builds triggered: {total_triggered}')
+        print(f'total builds queued: {total_queued}')
+        print(
+            f'success rate: {(total_queued / total_triggered) * 100:.1f}%'
+            if total_triggered > 0
+            else 'no builds triggered'
+        )
 
 
 async def list_command(args):

@@ -1,9 +1,10 @@
 jenkins:
-  numExecutors: 3
+  numExecutors: 5
   remotingSecurity:
     enabled: false
   scmCheckoutRetryCount: 3
   mode: NORMAL
+  quietPeriod: 0
   securityRealm:
     local:
       allowsSignup: false
