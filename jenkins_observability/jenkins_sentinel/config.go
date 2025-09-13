@@ -16,7 +16,8 @@ type DatabaseConfig struct {
 
 type Config struct {
 	Username        string         `json:"username"`
-	Token           string         `json:"token"`
+	Token           string         `json:"token,omitempty"`
+	Password        string         `json:"password,omitempty"`
 	BaseURL         string         `json:"base_url"`
 	Pipelines       []string       `json:"pipelines"`
 	Database        DatabaseConfig `json:"database"`

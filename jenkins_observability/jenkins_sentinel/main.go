@@ -294,7 +294,7 @@ func main() {
 
 	slog.Info("database schema initialized successfully")
 
-	jenkins := NewJenkinsClient(config.BaseURL, config.Username, config.Token)
+	jenkins := NewJenkinsClient(config.BaseURL, config.Username, config.Token, config.Password)
 
 	for _, pipelinePath := range config.Pipelines {
 		err := processPipeline(ctx, queries, jenkins, pipelinePath)

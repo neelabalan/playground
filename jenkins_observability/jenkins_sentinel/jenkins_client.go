@@ -18,16 +18,33 @@ type JenkinsClient struct {
 type authTransport struct {
 	username string
 	token    string
+	password string
+	useToken bool
 	base     http.RoundTripper
 }
 
 func (t *authTransport) RoundTrip(req *http.Request) (*http.Response, error) {
-	req.SetBasicAuth(t.username, t.token)
+	if t.useToken {
+		req.SetBasicAuth(t.username, t.token)
+	} else {
+		req.SetBasicAuth(t.username, t.password)
+	}
 	req.Header.Set("Accept", "application/json")
 	return t.base.RoundTrip(req)
 }
 
-func NewJenkinsClient(baseURL, username, token string) *JenkinsClient {
+func NewJenkinsClient(baseURL, username, token, password string) *JenkinsClient {
+	// Determine authentication method
+	useToken := token != ""
+
+	if !useToken {
+		slog.Warn("Jenkins API token is empty or missing, falling back to password authentication",
+			slog.String("username", username),
+			slog.String("recommendation", "Generate an API token in Jenkins (Manage Jenkins > Manage Users > [username] > Configure > API Token) and use it instead of password for better security"))
+	} else {
+		slog.Info("Using Jenkins API token authentication", slog.String("username", username))
+	}
+
 	return &JenkinsClient{
 		BaseURL: strings.TrimSuffix(baseURL, "/"),
 		Client: &http.Client{
@@ -35,6 +52,8 @@ func NewJenkinsClient(baseURL, username, token string) *JenkinsClient {
 			Transport: &authTransport{
 				username: username,
 				token:    token,
+				password: password,
+				useToken: useToken,
 				base:     http.DefaultTransport,
 			},
 		},
