@@ -557,7 +557,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT duration_range, count\nFROM (\n    SELECT \n        CASE \n            WHEN total_duration <= 60 THEN '0-60s'\n            WHEN total_duration <= 120 THEN '61-120s'\n            WHEN total_duration <= 300 THEN '2-5min'\n            WHEN total_duration <= 600 THEN '5-10min'\n            ELSE '10min+'\n        END AS duration_range,\n        COUNT(*) AS count\n    FROM builds\n    WHERE pipeline_name = '$pipeline'\n      AND total_duration IS NOT NULL\n      AND build_start_time IS NOT NULL\n    GROUP BY \n        CASE \n            WHEN total_duration <= 60 THEN '0-60s'\n            WHEN total_duration <= 120 THEN '61-120s'\n            WHEN total_duration <= 300 THEN '2-5min'\n            WHEN total_duration <= 600 THEN '5-10min'\n            ELSE '10min+'\n        END\n) AS duration_dist\nORDER BY \n    CASE duration_range\n        WHEN '0-60s' THEN 1\n        WHEN '61-120s' THEN 2\n        WHEN '2-5min' THEN 3\n        WHEN '5-10min' THEN 4\n        WHEN '10min+' THEN 5\n    END;\n",
+          "rawSql": "SELECT duration_range, count\nFROM (\n    SELECT \n        CASE \n            WHEN total_duration <= 60 THEN '0-1min'\n            WHEN total_duration <= 120 THEN '1-2min'\n            WHEN total_duration <= 240 THEN '2-4min'\n            WHEN total_duration <= 480 THEN '4-8min'\n            WHEN total_duration <= 960 THEN '8-16min'\n            WHEN total_duration <= 1920 THEN '16-32min'\n            WHEN total_duration <= 3840 THEN '32-64min'\n            WHEN total_duration <= 7680 THEN '64-128min'\n            WHEN total_duration <= 10800 THEN '128-180min'\n            ELSE '180min+'\n        END AS duration_range,\n        COUNT(*) AS count\n    FROM builds\n    WHERE pipeline_name = '$pipeline'\n      AND total_duration IS NOT NULL\n      AND build_start_time IS NOT NULL\n    GROUP BY \n        CASE \n            WHEN total_duration <= 60 THEN '0-1min'\n            WHEN total_duration <= 120 THEN '1-2min'\n            WHEN total_duration <= 240 THEN '2-4min'\n            WHEN total_duration <= 480 THEN '4-8min'\n            WHEN total_duration <= 960 THEN '8-16min'\n            WHEN total_duration <= 1920 THEN '16-32min'\n            WHEN total_duration <= 3840 THEN '32-64min'\n            WHEN total_duration <= 7680 THEN '64-128min'\n            WHEN total_duration <= 10800 THEN '128-180min'\n            ELSE '180min+'\n        END\n) AS duration_dist\nORDER BY \n    CASE duration_range\n        WHEN '0-1min' THEN 1\n        WHEN '1-2min' THEN 2\n        WHEN '2-4min' THEN 3\n        WHEN '4-8min' THEN 4\n        WHEN '8-16min' THEN 5\n        WHEN '16-32min' THEN 6\n        WHEN '32-64min' THEN 7\n        WHEN '64-128min' THEN 8\n        WHEN '128-180min' THEN 9\n        WHEN '180min+' THEN 10\n    END;",
           "refId": "A",
           "sql": {
             "columns": [
@@ -589,8 +589,8 @@
     "list": [
       {
         "current": {
-          "text": "test1_pipeline",
-          "value": "test1_pipeline"
+          "text": "system_info",
+          "value": "system_info"
         },
         "definition": "SELECT DISTINCT pipeline_name FROM builds ORDER BY pipeline_name;",
         "label": "Pipeline",
@@ -604,12 +604,12 @@
     ]
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Jenkins Sentinel",
   "uid": "8c49e304-3dd5-4ea8-b690-31af1c9f0fe9",
-  "version": 5
+  "version": 2
 }
