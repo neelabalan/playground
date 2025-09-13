@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# /// script
+# dependencies = [
+#     "httpx>=0.28.1",
+#     "pandas>=2.3.2",
+# ]
+# ///
 
 import argparse
 import asyncio
