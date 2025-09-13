@@ -177,18 +177,30 @@ async def export_command(args):
     print('export completed!')
 
 
-async def trigger_command(args):
+async def execute_job_schedule(args):
     config = load_config(pathlib.Path(args.config))
 
-    async with JenkinsClient(config['base_url'], config['username'], config['token']) as jenkins_client:
-        if args.job:
-            await trigger_job(jenkins_client, args.job)
-        else:
-            for pipeline_path in config['pipelines']:
-                job_name = pipeline_path.replace('job/', '')
-                await trigger_job(jenkins_client, job_name)
+    job_trigger_counts = {
+        "ecgo_docker": 23,
+        "file_operations": 17,
+        "hello_world": 31,
+        "parallel_pipeline": 14,
+        "system_info": 28,
+        "test1_pipeline": 19,
+        "test2_pipeline": 25,
+        "test3_pipeline": 12
+    }
 
-    print('trigger completed!')
+    async with JenkinsClient(config['base_url'], config['username'], config['token']) as jenkins_client:
+        for pipeline_path in config['pipelines']:
+            job_name = pipeline_path.replace('job/', '')
+
+            if job_name in job_trigger_counts:
+                trigger_count = job_trigger_counts[job_name]
+                for i in range(trigger_count):
+                    await trigger_job(jenkins_client, job_name)
+
+    print('job schedule execution completed!')
 
 
 async def list_command(args):
@@ -218,7 +230,6 @@ async def main():
 
     trigger_parser = subparsers.add_parser('trigger', help='trigger jenkins jobs')
     trigger_parser.add_argument('--config', required=True, help='path to jenkins configuration file')
-    trigger_parser.add_argument('--job', help='specific job to trigger (if not provided, triggers all jobs in config)')
 
     list_parser = subparsers.add_parser('list', help='list jenkins builds')
     list_parser.add_argument('--config', required=True, help='path to jenkins configuration file')
@@ -229,7 +240,7 @@ async def main():
     if args.command == 'export':
         await export_command(args)
     elif args.command == 'trigger':
-        await trigger_command(args)
+        await execute_job_schedule(args)
     elif args.command == 'list':
         await list_command(args)
     else:
