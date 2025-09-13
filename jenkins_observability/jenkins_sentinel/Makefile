@@ -1,8 +1,11 @@
-.PHONY: build clean test generate
+.PHONY: build clean test generate run
 
 build:
 	mkdir -p build
 	go build -o build/jenkins_sentinel .
+
+run: build
+	./build/jenkins_sentinel
 
 clean:
 	rm -rf build
