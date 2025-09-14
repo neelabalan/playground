@@ -19,37 +19,28 @@ INSERT INTO builds (
     build_end_time,
     status,
     total_duration,
-    steps_successful,
-    steps_failed,
-    steps_skipped,
     error_log
 ) VALUES (
-    $1, $2, $3, $4, $5, $6, $7, $8, $9, $10
+    $1, $2, $3, $4, $5, $6, $7
 ) ON CONFLICT (pipeline_name, build_number) 
 DO UPDATE SET
     build_start_time = EXCLUDED.build_start_time,
     build_end_time = EXCLUDED.build_end_time,
     status = EXCLUDED.status,
     total_duration = EXCLUDED.total_duration,
-    steps_successful = EXCLUDED.steps_successful,
-    steps_failed = EXCLUDED.steps_failed,
-    steps_skipped = EXCLUDED.steps_skipped,
     error_log = EXCLUDED.error_log,
     updated_at = NOW()
-RETURNING id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, steps_successful, steps_failed, steps_skipped, last_updated, error_log, created_at, updated_at
+RETURNING id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, last_updated, error_log, created_at, updated_at
 `
 
 type CreateBuildParams struct {
-	PipelineName    string             `json:"pipeline_name"`
-	BuildNumber     int32              `json:"build_number"`
-	BuildStartTime  pgtype.Timestamptz `json:"build_start_time"`
-	BuildEndTime    pgtype.Timestamptz `json:"build_end_time"`
-	Status          string             `json:"status"`
-	TotalDuration   float64            `json:"total_duration"`
-	StepsSuccessful int32              `json:"steps_successful"`
-	StepsFailed     int32              `json:"steps_failed"`
-	StepsSkipped    pgtype.Int4        `json:"steps_skipped"`
-	ErrorLog        pgtype.Text        `json:"error_log"`
+	PipelineName   string             `json:"pipeline_name"`
+	BuildNumber    int32              `json:"build_number"`
+	BuildStartTime pgtype.Timestamptz `json:"build_start_time"`
+	BuildEndTime   pgtype.Timestamptz `json:"build_end_time"`
+	Status         string             `json:"status"`
+	TotalDuration  float64            `json:"total_duration"`
+	ErrorLog       pgtype.Text        `json:"error_log"`
 }
 
 func (q *Queries) CreateBuild(ctx context.Context, arg CreateBuildParams) (Build, error) {
@@ -60,9 +51,6 @@ func (q *Queries) CreateBuild(ctx context.Context, arg CreateBuildParams) (Build
 		arg.BuildEndTime,
 		arg.Status,
 		arg.TotalDuration,
-		arg.StepsSuccessful,
-		arg.StepsFailed,
-		arg.StepsSkipped,
 		arg.ErrorLog,
 	)
 	var i Build
@@ -74,9 +62,6 @@ func (q *Queries) CreateBuild(ctx context.Context, arg CreateBuildParams) (Build
 		&i.BuildEndTime,
 		&i.Status,
 		&i.TotalDuration,
-		&i.StepsSuccessful,
-		&i.StepsFailed,
-		&i.StepsSkipped,
 		&i.LastUpdated,
 		&i.ErrorLog,
 		&i.CreatedAt,
@@ -156,7 +141,7 @@ func (q *Queries) DeleteQueueItem(ctx context.Context, id int32) error {
 }
 
 const getBuildByID = `-- name: GetBuildByID :one
-SELECT id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, steps_successful, steps_failed, steps_skipped, last_updated, error_log, created_at, updated_at FROM builds WHERE id = $1
+SELECT id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, last_updated, error_log, created_at, updated_at FROM builds WHERE id = $1
 `
 
 func (q *Queries) GetBuildByID(ctx context.Context, id int32) (Build, error) {
@@ -170,9 +155,6 @@ func (q *Queries) GetBuildByID(ctx context.Context, id int32) (Build, error) {
 		&i.BuildEndTime,
 		&i.Status,
 		&i.TotalDuration,
-		&i.StepsSuccessful,
-		&i.StepsFailed,
-		&i.StepsSkipped,
 		&i.LastUpdated,
 		&i.ErrorLog,
 		&i.CreatedAt,
@@ -182,7 +164,7 @@ func (q *Queries) GetBuildByID(ctx context.Context, id int32) (Build, error) {
 }
 
 const getBuildsByPipeline = `-- name: GetBuildsByPipeline :many
-SELECT id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, steps_successful, steps_failed, steps_skipped, last_updated, error_log, created_at, updated_at FROM builds 
+SELECT id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, last_updated, error_log, created_at, updated_at FROM builds 
 WHERE pipeline_name = $1 
 ORDER BY build_number DESC 
 LIMIT $2
@@ -210,9 +192,6 @@ func (q *Queries) GetBuildsByPipeline(ctx context.Context, arg GetBuildsByPipeli
 			&i.BuildEndTime,
 			&i.Status,
 			&i.TotalDuration,
-			&i.StepsSuccessful,
-			&i.StepsFailed,
-			&i.StepsSkipped,
 			&i.LastUpdated,
 			&i.ErrorLog,
 			&i.CreatedAt,
@@ -229,7 +208,7 @@ func (q *Queries) GetBuildsByPipeline(ctx context.Context, arg GetBuildsByPipeli
 }
 
 const getBuildsByPipelineAndStatus = `-- name: GetBuildsByPipelineAndStatus :many
-SELECT id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, steps_successful, steps_failed, steps_skipped, last_updated, error_log, created_at, updated_at FROM builds 
+SELECT id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, last_updated, error_log, created_at, updated_at FROM builds 
 WHERE pipeline_name = $1 AND status = $2 
 ORDER BY build_number DESC 
 LIMIT $3
@@ -258,9 +237,6 @@ func (q *Queries) GetBuildsByPipelineAndStatus(ctx context.Context, arg GetBuild
 			&i.BuildEndTime,
 			&i.Status,
 			&i.TotalDuration,
-			&i.StepsSuccessful,
-			&i.StepsFailed,
-			&i.StepsSkipped,
 			&i.LastUpdated,
 			&i.ErrorLog,
 			&i.CreatedAt,
@@ -277,7 +253,7 @@ func (q *Queries) GetBuildsByPipelineAndStatus(ctx context.Context, arg GetBuild
 }
 
 const getBuildsInDateRange = `-- name: GetBuildsInDateRange :many
-SELECT id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, steps_successful, steps_failed, steps_skipped, last_updated, error_log, created_at, updated_at FROM builds 
+SELECT id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, last_updated, error_log, created_at, updated_at FROM builds 
 WHERE build_start_time >= $1 AND build_start_time <= $2 
 ORDER BY build_start_time DESC
 `
@@ -304,9 +280,6 @@ func (q *Queries) GetBuildsInDateRange(ctx context.Context, arg GetBuildsInDateR
 			&i.BuildEndTime,
 			&i.Status,
 			&i.TotalDuration,
-			&i.StepsSuccessful,
-			&i.StepsFailed,
-			&i.StepsSkipped,
 			&i.LastUpdated,
 			&i.ErrorLog,
 			&i.CreatedAt,
@@ -323,7 +296,7 @@ func (q *Queries) GetBuildsInDateRange(ctx context.Context, arg GetBuildsInDateR
 }
 
 const getLatestBuilds = `-- name: GetLatestBuilds :many
-SELECT id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, steps_successful, steps_failed, steps_skipped, last_updated, error_log, created_at, updated_at FROM builds 
+SELECT id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, last_updated, error_log, created_at, updated_at FROM builds 
 ORDER BY build_start_time DESC 
 LIMIT $1
 `
@@ -345,9 +318,6 @@ func (q *Queries) GetLatestBuilds(ctx context.Context, limit int32) ([]Build, er
 			&i.BuildEndTime,
 			&i.Status,
 			&i.TotalDuration,
-			&i.StepsSuccessful,
-			&i.StepsFailed,
-			&i.StepsSkipped,
 			&i.LastUpdated,
 			&i.ErrorLog,
 			&i.CreatedAt,
@@ -430,7 +400,7 @@ const updateBuildStatus = `-- name: UpdateBuildStatus :one
 UPDATE builds 
 SET status = $2, updated_at = NOW() 
 WHERE id = $1 
-RETURNING id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, steps_successful, steps_failed, steps_skipped, last_updated, error_log, created_at, updated_at
+RETURNING id, pipeline_name, build_number, build_start_time, build_end_time, status, total_duration, last_updated, error_log, created_at, updated_at
 `
 
 type UpdateBuildStatusParams struct {
@@ -449,9 +419,6 @@ func (q *Queries) UpdateBuildStatus(ctx context.Context, arg UpdateBuildStatusPa
 		&i.BuildEndTime,
 		&i.Status,
 		&i.TotalDuration,
-		&i.StepsSuccessful,
-		&i.StepsFailed,
-		&i.StepsSkipped,
 		&i.LastUpdated,
 		&i.ErrorLog,
 		&i.CreatedAt,

@@ -9,20 +9,17 @@ import (
 )
 
 type Build struct {
-	ID              int32              `json:"id"`
-	PipelineName    string             `json:"pipeline_name"`
-	BuildNumber     int32              `json:"build_number"`
-	BuildStartTime  pgtype.Timestamptz `json:"build_start_time"`
-	BuildEndTime    pgtype.Timestamptz `json:"build_end_time"`
-	Status          string             `json:"status"`
-	TotalDuration   float64            `json:"total_duration"`
-	StepsSuccessful int32              `json:"steps_successful"`
-	StepsFailed     int32              `json:"steps_failed"`
-	StepsSkipped    pgtype.Int4        `json:"steps_skipped"`
-	LastUpdated     pgtype.Timestamptz `json:"last_updated"`
-	ErrorLog        pgtype.Text        `json:"error_log"`
-	CreatedAt       pgtype.Timestamptz `json:"created_at"`
-	UpdatedAt       pgtype.Timestamptz `json:"updated_at"`
+	ID             int32              `json:"id"`
+	PipelineName   string             `json:"pipeline_name"`
+	BuildNumber    int32              `json:"build_number"`
+	BuildStartTime pgtype.Timestamptz `json:"build_start_time"`
+	BuildEndTime   pgtype.Timestamptz `json:"build_end_time"`
+	Status         string             `json:"status"`
+	TotalDuration  float64            `json:"total_duration"`
+	LastUpdated    pgtype.Timestamptz `json:"last_updated"`
+	ErrorLog       pgtype.Text        `json:"error_log"`
+	CreatedAt      pgtype.Timestamptz `json:"created_at"`
+	UpdatedAt      pgtype.Timestamptz `json:"updated_at"`
 }
 
 type BuildQueue struct {

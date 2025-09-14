@@ -20,9 +20,16 @@ import pandas as pd
 
 
 class JenkinsClient:
-    def __init__(self, base_url: str, username: str, token: str):
+    def __init__(self, base_url: str, username: str, token: str = None, password: str = None):
         self.base_url = base_url.rstrip('/')
-        self.auth = httpx.BasicAuth(username, token)
+
+        if token:
+            self.auth = httpx.BasicAuth(username, token)
+        elif password:
+            self.auth = httpx.BasicAuth(username, password)
+        else:
+            raise ValueError('Either token or password must be provided')
+
         self.headers = {'Accept': 'application/json'}
         self.timeout = httpx.Timeout(30.0)
         self._client = None
@@ -204,7 +211,9 @@ def load_config(config_path: pathlib.Path) -> dict:
 async def export_command(args):
     config = load_config(pathlib.Path(args.config))
 
-    async with JenkinsClient(config['base_url'], config['username'], config['token']) as jenkins_client:
+    async with JenkinsClient(
+        config['base_url'], config['username'], token=config.get('token'), password=config.get('password')
+    ) as jenkins_client:
         exporter = JenkinsBuildExporter(jenkins_client, args.workers)
 
         for pipeline_path in config['pipelines']:
@@ -230,7 +239,9 @@ async def execute_job_schedule(args):
         'test3_pipeline': 12,
     }
 
-    async with JenkinsClient(config['base_url'], config['username'], config['token']) as jenkins_client:
+    async with JenkinsClient(
+        config['base_url'], config['username'], token=config.get('token'), password=config.get('password')
+    ) as jenkins_client:
         total_triggered = 0
         total_queued = 0
 
@@ -272,7 +283,9 @@ async def execute_job_schedule(args):
 async def list_command(args):
     config = load_config(pathlib.Path(args.config))
 
-    async with JenkinsClient(config['base_url'], config['username'], config['token']) as jenkins_client:
+    async with JenkinsClient(
+        config['base_url'], config['username'], token=config.get('token'), password=config.get('password')
+    ) as jenkins_client:
         if args.job:
             builds = await list_job_builds(jenkins_client, args.job)
             print(f"builds for job '{args.job}':")
