@@ -3,6 +3,7 @@
 # dependencies = [
 #     "httpx>=0.28.1",
 #     "pandas>=2.3.2",
+#     "pyarrow==17.0.0",
 # ]
 # ///
 
