@@ -79,8 +79,14 @@ class JenkinsBuildExporter:
         self.jenkins_client = jenkins_client
         self.max_workers = max_workers
 
-    async def _get_build_numbers(self, pipeline_path: str) -> list[int]:
-        params = {'tree': 'builds[number]'}
+    async def _get_build_numbers(
+        self, pipeline_path: str, page_size: int | None = None, start_offset: int = 0
+    ) -> list[int]:
+        if page_size:
+            end_offset = start_offset + page_size
+            params = {'tree': f'builds[{start_offset}:{end_offset}][number]'}
+        else:
+            params = {'tree': 'builds[number]'}
 
         try:
             response = await self.jenkins_client.get(f'{pipeline_path}/api/json', params=params)
@@ -129,43 +135,86 @@ class JenkinsBuildExporter:
             'estimated_duration': estimated_duration_ms / 1000.0 if estimated_duration_ms else None,
         }
 
-    async def _fetch_pipeline_data(self, pipeline_path: str) -> list[dict]:
+    async def _fetch_pipeline_data(self, pipeline_path: str, page_size: int | None = None) -> list[dict]:
         print(f'fetching builds for pipeline: {pipeline_path}')
 
-        build_numbers = await self._get_build_numbers(pipeline_path)
-        if not build_numbers:
-            print(f'no builds found for {pipeline_path}')
-            return []
+        if page_size:
+            all_builds = []
+            start_offset = 0
 
-        print(f'found {len(build_numbers)} builds for {pipeline_path}')
+            while True:
+                build_numbers = await self._get_build_numbers(pipeline_path, page_size, start_offset)
+                if not build_numbers:
+                    break
 
-        semaphore = asyncio.Semaphore(self.max_workers)
+                print(f'fetched page with {len(build_numbers)} builds (offset {start_offset})')
 
-        async def fetch_with_semaphore(build_number: int) -> dict | None:
-            async with semaphore:
-                build_detail = await self._get_build_detail(pipeline_path, build_number)
-                if build_detail:
-                    return self._extract_build_data(pipeline_path, build_detail)
-                return None
+                semaphore = asyncio.Semaphore(self.max_workers)
 
-        tasks = [fetch_with_semaphore(num) for num in build_numbers]
-        results = await asyncio.gather(*tasks, return_exceptions=True)
+                async def fetch_with_semaphore(build_number: int) -> dict | None:
+                    async with semaphore:
+                        build_detail = await self._get_build_detail(pipeline_path, build_number)
+                        if build_detail:
+                            return self._extract_build_data(pipeline_path, build_detail)
+                        return None
 
-        pipeline_data = []
-        for result in results:
-            if isinstance(result, dict):
-                pipeline_data.append(result)
-            elif isinstance(result, Exception):
-                print(f'error processing build: {result}')
+                tasks = [fetch_with_semaphore(num) for num in build_numbers]
+                results = await asyncio.gather(*tasks, return_exceptions=True)
 
-        print(f'successfully fetched {len(pipeline_data)} builds for {pipeline_path}')
-        return pipeline_data
+                page_data = []
+                for result in results:
+                    if isinstance(result, dict):
+                        page_data.append(result)
+                    elif isinstance(result, Exception):
+                        print(f'error processing build: {result}')
 
-    async def export_pipeline_builds(self, pipeline_path: str, output_path: str | pathlib.Path) -> None:
+                all_builds.extend(page_data)
+                print(f'processed {len(page_data)} builds from page (total: {len(all_builds)})')
+
+                if len(build_numbers) < page_size:
+                    break
+
+                start_offset += page_size
+
+            print(f'successfully fetched {len(all_builds)} builds for {pipeline_path}')
+            return all_builds
+        else:
+            build_numbers = await self._get_build_numbers(pipeline_path)
+            if not build_numbers:
+                print(f'no builds found for {pipeline_path}')
+                return []
+
+            print(f'found {len(build_numbers)} builds for {pipeline_path}')
+
+            semaphore = asyncio.Semaphore(self.max_workers)
+
+            async def fetch_with_semaphore(build_number: int) -> dict | None:
+                async with semaphore:
+                    build_detail = await self._get_build_detail(pipeline_path, build_number)
+                    if build_detail:
+                        return self._extract_build_data(pipeline_path, build_detail)
+                    return None
+
+            tasks = [fetch_with_semaphore(num) for num in build_numbers]
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+
+            pipeline_data = []
+            for result in results:
+                if isinstance(result, dict):
+                    pipeline_data.append(result)
+                elif isinstance(result, Exception):
+                    print(f'error processing build: {result}')
+
+            print(f'successfully fetched {len(pipeline_data)} builds for {pipeline_path}')
+            return pipeline_data
+
+    async def export_pipeline_builds(
+        self, pipeline_path: str, output_path: str | pathlib.Path, page_size: int | None = None
+    ) -> None:
         output_path = pathlib.Path(output_path)
         output_path.mkdir(exist_ok=True)
 
-        pipeline_data = await self._fetch_pipeline_data(pipeline_path)
+        pipeline_data = await self._fetch_pipeline_data(pipeline_path, page_size)
         if pipeline_data:
             df = pd.DataFrame(pipeline_data)
             safe_name = pipeline_path.replace('/', '_').replace(' ', '_')
@@ -219,7 +268,8 @@ async def export_command(args):
 
         for pipeline_path in config['pipelines']:
             try:
-                await exporter.export_pipeline_builds(pipeline_path, args.output)
+                page_size = getattr(args, 'page_size', None)
+                await exporter.export_pipeline_builds(pipeline_path, args.output, page_size)
             except Exception as e:
                 print(f'error processing pipeline {pipeline_path}: {e}')
 
@@ -307,6 +357,9 @@ async def main():
     export_parser.add_argument('--config', required=True, help='path to jenkins configuration file')
     export_parser.add_argument('--output', default='jenkins_build_data', help='output directory')
     export_parser.add_argument('--workers', type=int, default=5, help='maximum number of concurrent workers')
+    export_parser.add_argument(
+        '--page-size', default=100, type=int, help='number of builds to fetch per page for pagination'
+    )
 
     trigger_parser = subparsers.add_parser('trigger', help='trigger jenkins jobs')
     trigger_parser.add_argument('--config', required=True, help='path to jenkins configuration file')
