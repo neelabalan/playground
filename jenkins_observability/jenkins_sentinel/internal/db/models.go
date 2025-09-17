@@ -20,6 +20,8 @@ type Build struct {
 	ErrorLog       pgtype.Text        `json:"error_log"`
 	CreatedAt      pgtype.Timestamptz `json:"created_at"`
 	UpdatedAt      pgtype.Timestamptz `json:"updated_at"`
+	QueueWaitTime  pgtype.Float8      `json:"queue_wait_time"`
+	TriggeredBy    pgtype.Text        `json:"triggered_by"`
 }
 
 type BuildQueue struct {

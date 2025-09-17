@@ -141,7 +141,6 @@ class JenkinsBuildExporter:
 
         queue_wait_time_ms = self._extract_queue_wait_time(build_detail)
         triggered_by = self._extract_triggered_by(build_detail)
-        built_on_node = build_detail.get('builtOn')
 
         return {
             'pipeline_name': pipeline_path,
@@ -151,10 +150,8 @@ class JenkinsBuildExporter:
             'status': status,
             'total_duration': duration_ms / 1000.0,
             'url': build_detail.get('url'),
-            'building': build_detail.get('building', False),
             'estimated_duration': estimated_duration_ms / 1000.0 if estimated_duration_ms else None,
-            'queue_wait_time_seconds': queue_wait_time_ms / 1000.0 if queue_wait_time_ms else None,
-            'built_on_node': built_on_node,
+            'queue_wait_time': queue_wait_time_ms / 1000.0 if queue_wait_time_ms else None,
             'triggered_by': triggered_by,
         }
 

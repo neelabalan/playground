@@ -47,6 +47,65 @@ func convertJenkinsResult(result string) string {
 	}
 }
 
+func extractQueueWaitTime(buildDetail map[string]any) *float64 {
+	actions, ok := buildDetail["actions"].([]any)
+	if !ok {
+		return nil
+	}
+
+	for _, action := range actions {
+		actionMap, ok := action.(map[string]any)
+		if !ok {
+			continue
+		}
+
+		if actionMap["_class"] == "jenkins.metrics.impl.TimeInQueueAction" {
+			blockedDuration, _ := actionMap["blockedDurationMillis"].(float64)
+			buildableDuration, _ := actionMap["buildableDurationMillis"].(float64)
+			waitingDuration, _ := actionMap["waitingDurationMillis"].(float64)
+
+			totalMs := blockedDuration + buildableDuration + waitingDuration
+			totalSeconds := totalMs / 1000.0
+			return &totalSeconds
+		}
+	}
+	return nil
+}
+
+func extractTriggeredBy(buildDetail map[string]any) *string {
+	actions, ok := buildDetail["actions"].([]any)
+	if !ok {
+		return nil
+	}
+
+	for _, action := range actions {
+		actionMap, ok := action.(map[string]any)
+		if !ok {
+			continue
+		}
+
+		if actionMap["_class"] == "hudson.model.CauseAction" {
+			causes, ok := actionMap["causes"].([]any)
+			if !ok || len(causes) == 0 {
+				continue
+			}
+
+			cause, ok := causes[0].(map[string]any)
+			if !ok {
+				continue
+			}
+
+			if userName, ok := cause["userName"].(string); ok && userName != "" {
+				return &userName
+			}
+			if userID, ok := cause["userId"].(string); ok && userID != "" {
+				return &userID
+			}
+		}
+	}
+	return nil
+}
+
 func processPipeline(ctx context.Context, queries *db.Queries, jenkins *JenkinsClient, pipelinePath string) error {
 	slog.Info("processing pipeline", slog.String("pipeline", pipelinePath))
 
@@ -165,6 +224,19 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 	buildStartTime := time.Unix(int64(buildDetail["timestamp"].(float64))/1000, 0)
 	buildEndTime := buildStartTime.Add(time.Duration(buildDetail["duration"].(float64)) * time.Millisecond)
 
+	queueWaitTime := extractQueueWaitTime(buildDetail)
+	triggeredBy := extractTriggeredBy(buildDetail)
+
+	var queueWaitTimeField pgtype.Float8
+	if queueWaitTime != nil {
+		queueWaitTimeField = pgtype.Float8{Float64: *queueWaitTime, Valid: true}
+	}
+
+	var triggeredByField pgtype.Text
+	if triggeredBy != nil {
+		triggeredByField = pgtype.Text{String: *triggeredBy, Valid: true}
+	}
+
 	_, err = queries.CreateBuild(ctx, db.CreateBuildParams{
 		PipelineName:   pipelineName,
 		BuildNumber:    queueItem.BuildNumber,
@@ -173,16 +245,29 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 		Status:         convertJenkinsResult(buildDetail["result"].(string)),
 		TotalDuration:  buildDetail["duration"].(float64) / 1000.0,
 		ErrorLog:       pgtype.Text{Valid: false},
+		QueueWaitTime:  queueWaitTimeField,
+		TriggeredBy:    triggeredByField,
 	})
 
 	if err != nil {
 		return fmt.Errorf("failed to create build record: %w", err)
 	}
 
-	slog.Info("processed build",
+	logAttrs := []any{
 		slog.String("pipeline", pipelineName),
 		slog.Int("build_number", int(queueItem.BuildNumber)),
-		slog.String("status", convertJenkinsResult(buildDetail["result"].(string))))
+		slog.String("status", convertJenkinsResult(buildDetail["result"].(string))),
+	}
+
+	if queueWaitTime != nil {
+		logAttrs = append(logAttrs, slog.Float64("queue_wait_seconds", *queueWaitTime))
+	}
+
+	if triggeredBy != nil {
+		logAttrs = append(logAttrs, slog.String("triggered_by", *triggeredBy))
+	}
+
+	slog.Info("processed build", logAttrs...)
 
 	return nil
 }
