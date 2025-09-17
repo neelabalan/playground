@@ -60,11 +60,11 @@ func extractQueueWaitTime(buildDetail map[string]any) *float64 {
 		}
 
 		if actionMap["_class"] == "jenkins.metrics.impl.TimeInQueueAction" {
-			blockedDuration, _ := actionMap["blockedDurationMillis"].(float64)
-			buildableDuration, _ := actionMap["buildableDurationMillis"].(float64)
-			waitingDuration, _ := actionMap["waitingDurationMillis"].(float64)
+			blockedTime, _ := actionMap["blockedTimeMillis"].(float64)
+			buildableTime, _ := actionMap["buildableTimeMillis"].(float64)
+			waitingTime, _ := actionMap["waitingTimeMillis"].(float64)
 
-			totalMs := blockedDuration + buildableDuration + waitingDuration
+			totalMs := blockedTime + buildableTime + waitingTime
 			totalSeconds := totalMs / 1000.0
 			return &totalSeconds
 		}

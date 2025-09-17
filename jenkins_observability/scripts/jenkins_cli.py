@@ -110,9 +110,9 @@ class JenkinsBuildExporter:
         for action in build_detail.get('actions', []):
             if action.get('_class') == 'jenkins.metrics.impl.TimeInQueueAction':
                 return (
-                    action.get('blockedDurationMillis', 0)
-                    + action.get('buildableDurationMillis', 0)
-                    + action.get('waitingDurationMillis', 0)
+                    action.get('blockedTimeMillis', 0)
+                    + action.get('buildableTimeMillis', 0)
+                    + action.get('waitingTimeMillis', 0)
                 )
         return None
 
