@@ -21,20 +21,20 @@ import pandas as pd
 
 
 class JenkinsClient:
-    def __init__(self, base_url: str, username: str, token: str = None, password: str = None):
-        self.base_url = base_url.rstrip('/')
+    def __init__(self, base_url: str, username: str, token: str | None = None, password: str | None = None):
+        self.base_url: str = base_url.rstrip('/')
 
         if token:
-            self.auth = httpx.BasicAuth(username, token)
+            self.auth: httpx.BasicAuth = httpx.BasicAuth(username, token)
         elif password:
-            self.auth = httpx.BasicAuth(username, password)
+            self.auth: httpx.BasicAuth = httpx.BasicAuth(username, password)
         else:
             raise ValueError('Either token or password must be provided')
 
-        self.headers = {'Accept': 'application/json'}
-        self.timeout = httpx.Timeout(30.0)
-        self._client = None
-        self._crumb = None
+        self.headers: dict[str, str] = {'Accept': 'application/json'}
+        self.timeout: httpx.Timeout = httpx.Timeout(30.0)
+        self._client: httpx.AsyncClient | None = None
+        self._crumb: dict[str, str] | None = None
 
     async def __aenter__(self):
         self._client = httpx.AsyncClient(auth=self.auth, headers=self.headers, timeout=self.timeout)
@@ -46,6 +46,7 @@ class JenkinsClient:
             await self._client.aclose()
 
     async def _get_crumb(self):
+        assert self._client is not None
         try:
             response = await self._client.get(f'{self.base_url}/crumbIssuer/api/json')
             if response.status_code == 200:
@@ -62,11 +63,13 @@ class JenkinsClient:
             print(f'could not retrieve CSRF crumb: {e}')
             self._crumb = None
 
-    async def get(self, path: str, params: dict = None) -> httpx.Response:
+    async def get(self, path: str, params: dict | None = None) -> httpx.Response:
+        assert self._client is not None
         url = f'{self.base_url}/{path.strip("/")}'
         return await self._client.get(url, params=params)
 
-    async def post(self, path: str, data: dict = None, json_data: dict = None) -> httpx.Response:
+    async def post(self, path: str, data: dict | None = None, json_data: dict | None = None) -> httpx.Response:
+        assert self._client is not None
         url = f'{self.base_url}/{path.strip("/")}'
         headers = {}
         if self._crumb:
@@ -76,8 +79,8 @@ class JenkinsClient:
 
 class JenkinsBuildExporter:
     def __init__(self, jenkins_client: JenkinsClient, max_workers: int = 5):
-        self.jenkins_client = jenkins_client
-        self.max_workers = max_workers
+        self.jenkins_client: JenkinsClient = jenkins_client
+        self.max_workers: int = max_workers
 
     async def _get_build_numbers(
         self, pipeline_path: str, page_size: int | None = None, start_offset: int = 0
