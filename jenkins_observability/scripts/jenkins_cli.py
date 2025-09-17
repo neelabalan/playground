@@ -106,6 +106,25 @@ class JenkinsBuildExporter:
             print(f'error fetching build {build_number} for {pipeline_path}: {e}')
             return None
 
+    def _extract_queue_wait_time(self, build_detail: dict) -> int | None:
+        for action in build_detail.get('actions', []):
+            if action.get('_class') == 'jenkins.metrics.impl.TimeInQueueAction':
+                return (
+                    action.get('blockedDurationMillis', 0)
+                    + action.get('buildableDurationMillis', 0)
+                    + action.get('waitingDurationMillis', 0)
+                )
+        return None
+
+    def _extract_triggered_by(self, build_detail: dict) -> str | None:
+        for action in build_detail.get('actions', []):
+            if action.get('_class') == 'hudson.model.CauseAction':
+                causes = action.get('causes', [])
+                if causes:
+                    cause = causes[0]
+                    return cause.get('userName') or cause.get('userId')
+        return None
+
     def _extract_build_data(self, pipeline_path: str, build_detail: dict) -> dict:
         timestamp_ms = build_detail.get('timestamp', 0)
         duration_ms = build_detail.get('duration', 0)
@@ -120,6 +139,10 @@ class JenkinsBuildExporter:
 
         status = build_detail.get('result', 'unknown').lower()
 
+        queue_wait_time_ms = self._extract_queue_wait_time(build_detail)
+        triggered_by = self._extract_triggered_by(build_detail)
+        built_on_node = build_detail.get('builtOn')
+
         return {
             'pipeline_name': pipeline_path,
             'build_number': build_detail.get('number'),
@@ -127,12 +150,12 @@ class JenkinsBuildExporter:
             'build_end_time': end_time,
             'status': status,
             'total_duration': duration_ms / 1000.0,
-            'duration_ms': duration_ms,
-            'timestamp_ms': timestamp_ms,
             'url': build_detail.get('url'),
             'building': build_detail.get('building', False),
-            'queue_id': build_detail.get('queueId'),
             'estimated_duration': estimated_duration_ms / 1000.0 if estimated_duration_ms else None,
+            'queue_wait_time_seconds': queue_wait_time_ms / 1000.0 if queue_wait_time_ms else None,
+            'built_on_node': built_on_node,
+            'triggered_by': triggered_by,
         }
 
     async def _fetch_pipeline_data(self, pipeline_path: str, page_size: int | None = None) -> list[dict]:
