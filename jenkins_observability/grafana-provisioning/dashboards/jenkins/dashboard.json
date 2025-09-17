@@ -35,109 +35,77 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "",
+            "axisLabel": "Queue wait duration",
             "axisPlacement": "auto",
-            "fillOpacity": 80,
-            "gradientMode": "none",
+            "fillOpacity": 50,
             "hideFrom": {
               "legend": false,
               "tooltip": false,
               "viz": false
             },
-            "lineWidth": 1,
+            "lineWidth": 0,
+            "pointShape": "circle",
+            "pointSize": {
+              "fixed": 7
+            },
+            "pointStrokeWidth": 1,
             "scaleDistribution": {
               "type": "linear"
             },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
+            "show": "points"
           },
-          "mappings": [
-            {
-              "options": {
-                "failure": {
-                  "color": "red",
-                  "index": 0
-                },
-                "success": {
-                  "color": "green",
-                  "index": 1
-                }
-              },
-              "type": "value"
-            }
-          ],
+          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
                 "color": "green",
                 "value": 0
-              },
-              {
-                "color": "#EAB839",
-                "value": ""
               }
             ]
           },
           "unit": "s"
         },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "build_number"
-            },
-            "properties": [
-              {
-                "id": "unit"
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
-        "h": 12,
+        "h": 8,
         "w": 12,
         "x": 0,
         "y": 0
       },
-      "id": 1,
+      "id": 9,
       "options": {
-        "barRadius": 0,
-        "barWidth": 0.97,
-        "colorByField": "status",
-        "fullHighlight": false,
-        "groupWidth": 0.7,
         "legend": {
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
           "showLegend": true
         },
-        "orientation": "auto",
-        "showValue": "auto",
-        "stacking": "none",
+        "mapping": "auto",
+        "series": [
+          {
+            "frame": {
+              "matcher": {
+                "id": "byIndex",
+                "options": 0
+              }
+            }
+          }
+        ],
         "tooltip": {
           "hideZeros": false,
           "mode": "single",
           "sort": "none"
-        },
-        "xField": "build_number",
-        "xTickLabelRotation": 0,
-        "xTickLabelSpacing": 100
+        }
       },
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-postgresql-datasource",
-            "uid": "P6C954CFB67022DE8"
-          },
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT \n  pipeline_name, \n  build_number, \n  status, \n  total_duration\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time)\nORDER BY build_number ASC;\n",
+          "rawSql": "SELECT\n  build_start_time AS time,\n  queue_wait_time\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time)\nORDER BY build_start_time;\n",
           "refId": "A",
           "sql": {
             "columns": [
@@ -158,8 +126,8 @@
           }
         }
       ],
-      "title": "Build Duration",
-      "type": "barchart"
+      "title": "Queue time",
+      "type": "xychart"
     },
     {
       "datasource": {
@@ -445,8 +413,7 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "fixedColor": "blue",
-            "mode": "fixed"
+            "mode": "palette-classic"
           },
           "custom": {
             "axisBorderShow": false,
@@ -469,7 +436,21 @@
               "mode": "off"
             }
           },
-          "mappings": [],
+          "mappings": [
+            {
+              "options": {
+                "failure": {
+                  "color": "red",
+                  "index": 0
+                },
+                "success": {
+                  "color": "green",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -478,25 +459,38 @@
                 "value": 0
               },
               {
-                "color": "red",
-                "value": 80
+                "color": "#EAB839",
+                "value": ""
               }
             ]
           },
           "unit": "s"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "build_number"
+            },
+            "properties": [
+              {
+                "id": "unit"
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
-        "h": 9,
+        "h": 12,
         "w": 12,
         "x": 0,
-        "y": 12
+        "y": 8
       },
-      "id": 5,
+      "id": 1,
       "options": {
         "barRadius": 0,
         "barWidth": 0.97,
+        "colorByField": "status",
         "fullHighlight": false,
         "groupWidth": 0.7,
         "legend": {
@@ -513,16 +507,21 @@
           "mode": "single",
           "sort": "none"
         },
+        "xField": "build_number",
         "xTickLabelRotation": 0,
-        "xTickLabelSpacing": 0
+        "xTickLabelSpacing": 100
       },
       "pluginVersion": "12.1.1",
       "targets": [
         {
+          "datasource": {
+            "type": "grafana-postgresql-datasource",
+            "uid": "P6C954CFB67022DE8"
+          },
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT duration_range, count\nFROM (\n    SELECT \n        CASE \n            WHEN total_duration <= 60 THEN '0-1min'\n            WHEN total_duration <= 120 THEN '1-2min'\n            WHEN total_duration <= 240 THEN '2-4min'\n            WHEN total_duration <= 480 THEN '4-8min'\n            WHEN total_duration <= 960 THEN '8-16min'\n            WHEN total_duration <= 1920 THEN '16-32min'\n            WHEN total_duration <= 3840 THEN '32-64min'\n            WHEN total_duration <= 7680 THEN '64-128min'\n            WHEN total_duration <= 10800 THEN '128-180min'\n            ELSE '180min+'\n        END AS duration_range,\n        COUNT(*) AS count\n    FROM builds\n    WHERE pipeline_name = '$pipeline'\n      AND total_duration IS NOT NULL\n      AND build_start_time IS NOT NULL\n      AND $__timeFilter(build_start_time)\n    GROUP BY \n        CASE \n            WHEN total_duration <= 60 THEN '0-1min'\n            WHEN total_duration <= 120 THEN '1-2min'\n            WHEN total_duration <= 240 THEN '2-4min'\n            WHEN total_duration <= 480 THEN '4-8min'\n            WHEN total_duration <= 960 THEN '8-16min'\n            WHEN total_duration <= 1920 THEN '16-32min'\n            WHEN total_duration <= 3840 THEN '32-64min'\n            WHEN total_duration <= 7680 THEN '64-128min'\n            WHEN total_duration <= 10800 THEN '128-180min'\n            ELSE '180min+'\n        END\n) AS duration_dist\nORDER BY \n    CASE duration_range\n        WHEN '0-1min' THEN 1\n        WHEN '1-2min' THEN 2\n        WHEN '2-4min' THEN 3\n        WHEN '4-8min' THEN 4\n        WHEN '8-16min' THEN 5\n        WHEN '16-32min' THEN 6\n        WHEN '32-64min' THEN 7\n        WHEN '64-128min' THEN 8\n        WHEN '128-180min' THEN 9\n        WHEN '180min+' THEN 10\n    END;",
+          "rawSql": "SELECT \n  pipeline_name, \n  build_number, \n  status, \n  total_duration\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time)\nORDER BY build_number ASC;\n",
           "refId": "A",
           "sql": {
             "columns": [
@@ -543,7 +542,7 @@
           }
         }
       ],
-      "title": "Duration Distribution",
+      "title": "Build Duration",
       "type": "barchart"
     },
     {
@@ -569,7 +568,8 @@
                 "value": 80
               }
             ]
-          }
+          },
+          "unit": "s"
         },
         "overrides": []
       },
@@ -624,7 +624,7 @@
           }
         }
       ],
-      "title": "New panel",
+      "title": "Average Queue Wait",
       "type": "stat"
     },
     {
@@ -642,7 +642,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "yellow",
+                "color": "green",
                 "value": 0
               }
             ]
@@ -704,6 +704,115 @@
       ],
       "title": "Average Build Duration",
       "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "P6C954CFB67022DE8"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "blue",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 20
+      },
+      "id": 5,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT duration_range, count\nFROM (\n    SELECT \n        CASE \n            WHEN total_duration <= 60 THEN '0-1min'\n            WHEN total_duration <= 120 THEN '1-2min'\n            WHEN total_duration <= 240 THEN '2-4min'\n            WHEN total_duration <= 480 THEN '4-8min'\n            WHEN total_duration <= 960 THEN '8-16min'\n            WHEN total_duration <= 1920 THEN '16-32min'\n            WHEN total_duration <= 3840 THEN '32-64min'\n            WHEN total_duration <= 7680 THEN '64-128min'\n            WHEN total_duration <= 10800 THEN '128-180min'\n            ELSE '180min+'\n        END AS duration_range,\n        COUNT(*) AS count\n    FROM builds\n    WHERE pipeline_name = '$pipeline'\n      AND total_duration IS NOT NULL\n      AND build_start_time IS NOT NULL\n      AND $__timeFilter(build_start_time)\n    GROUP BY \n        CASE \n            WHEN total_duration <= 60 THEN '0-1min'\n            WHEN total_duration <= 120 THEN '1-2min'\n            WHEN total_duration <= 240 THEN '2-4min'\n            WHEN total_duration <= 480 THEN '4-8min'\n            WHEN total_duration <= 960 THEN '8-16min'\n            WHEN total_duration <= 1920 THEN '16-32min'\n            WHEN total_duration <= 3840 THEN '32-64min'\n            WHEN total_duration <= 7680 THEN '64-128min'\n            WHEN total_duration <= 10800 THEN '128-180min'\n            ELSE '180min+'\n        END\n) AS duration_dist\nORDER BY \n    CASE duration_range\n        WHEN '0-1min' THEN 1\n        WHEN '1-2min' THEN 2\n        WHEN '2-4min' THEN 3\n        WHEN '4-8min' THEN 4\n        WHEN '8-16min' THEN 5\n        WHEN '16-32min' THEN 6\n        WHEN '32-64min' THEN 7\n        WHEN '64-128min' THEN 8\n        WHEN '128-180min' THEN 9\n        WHEN '180min+' THEN 10\n    END;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Duration Distribution",
+      "type": "barchart"
     }
   ],
   "preload": false,
@@ -713,8 +822,8 @@
     "list": [
       {
         "current": {
-          "text": "test1_pipeline",
-          "value": "test1_pipeline"
+          "text": "file_operations",
+          "value": "file_operations"
         },
         "definition": "SELECT DISTINCT pipeline_name FROM builds ORDER BY pipeline_name;",
         "label": "Pipeline",
@@ -728,12 +837,12 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Jenkins Sentinel",
   "uid": "8c49e304-3dd5-4ea8-b690-31af1c9f0fe9",
-  "version": 6
+  "version": 5
 }
