@@ -84,15 +84,15 @@ class JenkinsBuildExporter:
     ) -> list[int]:
         if page_size:
             end_offset = start_offset + page_size
-            params = {'tree': f'builds[{start_offset}:{end_offset}][number]'}
+            params = {'tree': f'allBuilds[number]{{{start_offset},{end_offset}}}'}
         else:
-            params = {'tree': 'builds[number]'}
+            params = {'tree': 'allBuilds[number]'}
 
         try:
             response = await self.jenkins_client.get(f'{pipeline_path}/api/json', params=params)
             response.raise_for_status()
             data = response.json()
-            return [build['number'] for build in data.get('builds', [])]
+            return [build['number'] for build in data.get('allBuilds', [])]
         except httpx.HTTPError as e:
             print(f'error fetching build numbers for {pipeline_path}: {e}')
             return []
