@@ -119,6 +119,12 @@ class JenkinsBuildExporter:
                 )
         return None
 
+    def _extract_execution_time(self, build_detail: dict) -> int | None:
+        for action in build_detail.get('actions', []):
+            if action.get('_class') == 'jenkins.metrics.impl.TimeInQueueAction':
+                return action.get('executingTimeMillis')
+        return None
+
     def _extract_triggered_by(self, build_detail: dict) -> str | None:
         for action in build_detail.get('actions', []):
             if action.get('_class') == 'hudson.model.CauseAction':
@@ -143,6 +149,7 @@ class JenkinsBuildExporter:
         status = build_detail.get('result', 'unknown').lower()
 
         queue_wait_time_ms = self._extract_queue_wait_time(build_detail)
+        executing_time_ms = self._extract_execution_time(build_detail)
         triggered_by = self._extract_triggered_by(build_detail)
 
         return {
@@ -151,10 +158,10 @@ class JenkinsBuildExporter:
             'build_start_time': start_time,
             'build_end_time': end_time,
             'status': status,
-            'total_duration': duration_ms / 1000.0,
-            'url': build_detail.get('url'),
+            'execution_time': executing_time_ms / 1000.0 if executing_time_ms else None,
             'estimated_duration': estimated_duration_ms / 1000.0 if estimated_duration_ms else None,
             'queue_wait_time': queue_wait_time_ms / 1000.0 if queue_wait_time_ms else None,
+            'url': build_detail.get('url'),
             'triggered_by': triggered_by,
         }
 
