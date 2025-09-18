@@ -1,4 +1,4 @@
-.PHONY: build clean test generate run
+.PHONY: build clean test generate run fmt tidy
 
 build:
 	mkdir -p build
@@ -15,3 +15,9 @@ test:
 
 generate:
 	$(shell go env GOPATH)/bin/sqlc generate
+
+fmt:
+	go fmt ./...
+
+tidy:
+	go mod tidy

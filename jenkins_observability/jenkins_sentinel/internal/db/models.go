@@ -9,19 +9,21 @@ import (
 )
 
 type Build struct {
-	ID             int32              `json:"id"`
-	PipelineName   string             `json:"pipeline_name"`
-	BuildNumber    int32              `json:"build_number"`
-	BuildStartTime pgtype.Timestamptz `json:"build_start_time"`
-	BuildEndTime   pgtype.Timestamptz `json:"build_end_time"`
-	Status         string             `json:"status"`
-	TotalDuration  float64            `json:"total_duration"`
-	LastUpdated    pgtype.Timestamptz `json:"last_updated"`
-	ErrorLog       pgtype.Text        `json:"error_log"`
-	CreatedAt      pgtype.Timestamptz `json:"created_at"`
-	UpdatedAt      pgtype.Timestamptz `json:"updated_at"`
-	QueueWaitTime  pgtype.Float8      `json:"queue_wait_time"`
-	TriggeredBy    pgtype.Text        `json:"triggered_by"`
+	ID                   int32              `json:"id"`
+	PipelineName         string             `json:"pipeline_name"`
+	BuildNumber          int32              `json:"build_number"`
+	BuildStartTime       pgtype.Timestamptz `json:"build_start_time"`
+	BuildEndTime         pgtype.Timestamptz `json:"build_end_time"`
+	Status               string             `json:"status"`
+	LastUpdated          pgtype.Timestamptz `json:"last_updated"`
+	ErrorLog             pgtype.Text        `json:"error_log"`
+	CreatedAt            pgtype.Timestamptz `json:"created_at"`
+	UpdatedAt            pgtype.Timestamptz `json:"updated_at"`
+	TriggeredBy          pgtype.Text        `json:"triggered_by"`
+	BuildingTimeSeconds  pgtype.Float8      `json:"building_time_seconds"`
+	BlockedTimeSeconds   pgtype.Float8      `json:"blocked_time_seconds"`
+	BuildableTimeSeconds pgtype.Float8      `json:"buildable_time_seconds"`
+	WaitingTimeSeconds   pgtype.Float8      `json:"waiting_time_seconds"`
 }
 
 type BuildQueue struct {

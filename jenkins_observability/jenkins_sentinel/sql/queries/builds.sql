@@ -5,21 +5,25 @@ INSERT INTO builds (
     build_start_time,
     build_end_time,
     status,
-    total_duration,
+    building_time_seconds,
     error_log,
-    queue_wait_time,
-    triggered_by
+    triggered_by,
+    blocked_time_seconds,
+    buildable_time_seconds,
+    waiting_time_seconds
 ) VALUES (
-    $1, $2, $3, $4, $5, $6, $7, $8, $9
+    $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11
 ) ON CONFLICT (pipeline_name, build_number) 
 DO UPDATE SET
     build_start_time = EXCLUDED.build_start_time,
     build_end_time = EXCLUDED.build_end_time,
     status = EXCLUDED.status,
-    total_duration = EXCLUDED.total_duration,
+    building_time_seconds = EXCLUDED.building_time_seconds,
     error_log = EXCLUDED.error_log,
-    queue_wait_time = EXCLUDED.queue_wait_time,
     triggered_by = EXCLUDED.triggered_by,
+    blocked_time_seconds = EXCLUDED.blocked_time_seconds,
+    buildable_time_seconds = EXCLUDED.buildable_time_seconds,
+    waiting_time_seconds = EXCLUDED.waiting_time_seconds,
     updated_at = NOW()
 RETURNING *;
 

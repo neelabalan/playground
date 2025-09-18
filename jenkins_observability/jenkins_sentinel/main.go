@@ -47,31 +47,6 @@ func convertJenkinsResult(result string) string {
 	}
 }
 
-func extractQueueWaitTime(buildDetail map[string]any) *float64 {
-	actions, ok := buildDetail["actions"].([]any)
-	if !ok {
-		return nil
-	}
-
-	for _, action := range actions {
-		actionMap, ok := action.(map[string]any)
-		if !ok {
-			continue
-		}
-
-		if actionMap["_class"] == "jenkins.metrics.impl.TimeInQueueAction" {
-			blockedTime, _ := actionMap["blockedTimeMillis"].(float64)
-			buildableTime, _ := actionMap["buildableTimeMillis"].(float64)
-			waitingTime, _ := actionMap["waitingTimeMillis"].(float64)
-
-			totalMs := blockedTime + buildableTime + waitingTime
-			totalSeconds := totalMs / 1000.0
-			return &totalSeconds
-		}
-	}
-	return nil
-}
-
 func extractTriggeredBy(buildDetail map[string]any) *string {
 	actions, ok := buildDetail["actions"].([]any)
 	if !ok {
@@ -224,29 +199,46 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 	buildStartTime := time.Unix(int64(buildDetail["timestamp"].(float64))/1000, 0)
 	buildEndTime := buildStartTime.Add(time.Duration(buildDetail["duration"].(float64)) * time.Millisecond)
 
-	queueWaitTime := extractQueueWaitTime(buildDetail)
+	timingMetrics := extractJenkinsTimingMetrics(buildDetail)
 	triggeredBy := extractTriggeredBy(buildDetail)
-
-	var queueWaitTimeField pgtype.Float8
-	if queueWaitTime != nil {
-		queueWaitTimeField = pgtype.Float8{Float64: *queueWaitTime, Valid: true}
-	}
 
 	var triggeredByField pgtype.Text
 	if triggeredBy != nil {
 		triggeredByField = pgtype.Text{String: *triggeredBy, Valid: true}
 	}
 
+	var buildingTimeField pgtype.Float8
+	if timingMetrics.BuildingTimeSeconds > 0 {
+		buildingTimeField = pgtype.Float8{Float64: timingMetrics.BuildingTimeSeconds, Valid: true}
+	}
+
+	var blockedTimeField pgtype.Float8
+	if timingMetrics.BlockedTimeSeconds > 0 {
+		blockedTimeField = pgtype.Float8{Float64: timingMetrics.BlockedTimeSeconds, Valid: true}
+	}
+
+	var buildableTimeField pgtype.Float8
+	if timingMetrics.BuildableTimeSeconds > 0 {
+		buildableTimeField = pgtype.Float8{Float64: timingMetrics.BuildableTimeSeconds, Valid: true}
+	}
+
+	var waitingTimeField pgtype.Float8
+	if timingMetrics.WaitingTimeSeconds > 0 {
+		waitingTimeField = pgtype.Float8{Float64: timingMetrics.WaitingTimeSeconds, Valid: true}
+	}
+
 	_, err = queries.CreateBuild(ctx, db.CreateBuildParams{
-		PipelineName:   pipelineName,
-		BuildNumber:    queueItem.BuildNumber,
-		BuildStartTime: pgtype.Timestamptz{Time: buildStartTime, Valid: true},
-		BuildEndTime:   pgtype.Timestamptz{Time: buildEndTime, Valid: true},
-		Status:         convertJenkinsResult(buildDetail["result"].(string)),
-		TotalDuration:  buildDetail["duration"].(float64) / 1000.0,
-		ErrorLog:       pgtype.Text{Valid: false},
-		QueueWaitTime:  queueWaitTimeField,
-		TriggeredBy:    triggeredByField,
+		PipelineName:         pipelineName,
+		BuildNumber:          queueItem.BuildNumber,
+		BuildStartTime:       pgtype.Timestamptz{Time: buildStartTime, Valid: true},
+		BuildEndTime:         pgtype.Timestamptz{Time: buildEndTime, Valid: true},
+		Status:               convertJenkinsResult(buildDetail["result"].(string)),
+		BuildingTimeSeconds:  buildingTimeField,
+		ErrorLog:             pgtype.Text{Valid: false},
+		TriggeredBy:          triggeredByField,
+		BlockedTimeSeconds:   blockedTimeField,
+		BuildableTimeSeconds: buildableTimeField,
+		WaitingTimeSeconds:   waitingTimeField,
 	})
 
 	if err != nil {
@@ -257,17 +249,17 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 		slog.String("pipeline", pipelineName),
 		slog.Int("build_number", int(queueItem.BuildNumber)),
 		slog.String("status", convertJenkinsResult(buildDetail["result"].(string))),
-	}
-
-	if queueWaitTime != nil {
-		logAttrs = append(logAttrs, slog.Float64("queue_wait_seconds", *queueWaitTime))
+		slog.Float64("building_time_seconds", timingMetrics.BuildingTimeSeconds),
+		slog.Float64("waiting_time_seconds", timingMetrics.WaitingTimeSeconds),
+		slog.Float64("buildable_time_seconds", timingMetrics.BuildableTimeSeconds),
+		slog.Float64("blocked_time_seconds", timingMetrics.BlockedTimeSeconds),
 	}
 
 	if triggeredBy != nil {
 		logAttrs = append(logAttrs, slog.String("triggered_by", *triggeredBy))
 	}
 
-	slog.Info("processed build", logAttrs...)
+	slog.Info("processed build with timing metrics", logAttrs...)
 
 	return nil
 }
