@@ -17,7 +17,7 @@
   },
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "graphTooltip": 0,
+  "graphTooltip": 2,
   "id": 1,
   "links": [],
   "panels": [
@@ -70,7 +70,7 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 12,
+        "w": 14,
         "x": 0,
         "y": 0
       },
@@ -105,7 +105,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\n  build_start_time AS time,\n  queue_wait_time\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time)\nORDER BY build_start_time;\n",
+          "rawSql": "SELECT\n    build_start_time          AS time,\n    SUM(COALESCE(blocked_time_seconds,0)\n        + COALESCE(buildable_time_seconds,0)\n        + COALESCE(waiting_time_seconds,0)) AS total_seconds\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time)\nGROUP BY build_start_time\nORDER BY build_start_time;",
           "refId": "A",
           "sql": {
             "columns": [
@@ -137,88 +137,6 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "fixedColor": "red",
-            "mode": "fixed"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 4,
-        "x": 12,
-        "y": 0
-      },
-      "id": 2,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.1.1",
-      "targets": [
-        {
-          "editorMode": "code",
-          "format": "table",
-          "rawQuery": true,
-          "rawSql": "SELECT COUNT(*) AS failed_total\nFROM   builds\nWHERE  pipeline_name = '$pipeline'\n  AND  status = 'failure'\n  AND $__timeFilter(build_start_time);",
-          "refId": "A",
-          "sql": {
-            "columns": [
-              {
-                "parameters": [],
-                "type": "function"
-              }
-            ],
-            "groupBy": [
-              {
-                "property": {
-                  "type": "string"
-                },
-                "type": "groupBy"
-              }
-            ],
-            "limit": 50
-          }
-        }
-      ],
-      "title": "Failed Builds",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "grafana-postgresql-datasource",
-        "uid": "P6C954CFB67022DE8"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
             "mode": "thresholds"
           },
           "mappings": [],
@@ -239,9 +157,9 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 4,
-        "x": 16,
+        "h": 8,
+        "w": 5,
+        "x": 14,
         "y": 0
       },
       "id": 3,
@@ -252,9 +170,7 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
@@ -300,80 +216,47 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "fixedColor": "red",
+            "mode": "fixed"
           },
-          "custom": {
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            }
-          },
-          "mappings": []
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "success"
-            },
-            "properties": [
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
               {
-                "id": "color",
-                "value": {
-                  "fixedColor": "green",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "failure"
-            },
-            "properties": [
+                "color": "green",
+                "value": 0
+              },
               {
-                "id": "color",
-                "value": {
-                  "fixedColor": "red",
-                  "mode": "fixed"
-                }
+                "color": "red",
+                "value": 80
               }
             ]
           }
-        ]
+        },
+        "overrides": []
       },
       "gridPos": {
-        "h": 9,
-        "w": 8,
-        "x": 12,
-        "y": 6
+        "h": 8,
+        "w": 5,
+        "x": 19,
+        "y": 0
       },
-      "id": 7,
+      "id": 2,
       "options": {
-        "displayLabels": [
-          "percent"
-        ],
-        "legend": {
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": true,
-          "values": []
-        },
-        "pieType": "pie",
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": [
-            "range"
-          ],
-          "fields": "/^build_count$/",
-          "values": true
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
         },
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
-        }
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
       "pluginVersion": "12.1.1",
       "targets": [
@@ -381,7 +264,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT \n  status,\n  COUNT(*) AS build_count\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time)\n  AND status IN ('success', 'failure')\nGROUP BY status\nORDER BY status;\n",
+          "rawSql": "SELECT COUNT(*) AS failed_total\nFROM   builds\nWHERE  pipeline_name = '$pipeline'\n  AND  status = 'failure'\n  AND $__timeFilter(build_start_time);",
           "refId": "A",
           "sql": {
             "columns": [
@@ -402,8 +285,8 @@
           }
         }
       ],
-      "title": "Sucess/Failed Percentage",
-      "type": "piechart"
+      "title": "Failed Builds",
+      "type": "stat"
     },
     {
       "datasource": {
@@ -481,8 +364,8 @@
         ]
       },
       "gridPos": {
-        "h": 12,
-        "w": 12,
+        "h": 10,
+        "w": 14,
         "x": 0,
         "y": 8
       },
@@ -521,7 +404,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT \n  pipeline_name, \n  build_number, \n  status, \n  total_duration\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time)\nORDER BY build_number ASC;\n",
+          "rawSql": "SELECT \n  pipeline_name, \n  build_number, \n  status, \n  building_time_seconds\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time)\nORDER BY build_number ASC;\n",
           "refId": "A",
           "sql": {
             "columns": [
@@ -553,6 +436,232 @@
       "fieldConfig": {
         "defaults": {
           "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": []
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "success"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "failure"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 10,
+        "x": 14,
+        "y": 8
+      },
+      "id": 7,
+      "options": {
+        "displayLabels": ["percent"],
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true,
+          "values": []
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": ["range"],
+          "fields": "/^build_count$/",
+          "values": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \n  status,\n  COUNT(*) AS build_count\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time)\n  AND status IN ('success', 'failure')\nGROUP BY status\nORDER BY status;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Sucess/Failed Percentage",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "P6C954CFB67022DE8"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "build_number"
+            },
+            "properties": [
+              {
+                "id": "unit"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 14,
+        "x": 0,
+        "y": 18
+      },
+      "id": 10,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xField": "build_number",
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 100
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\n    pipeline_name,\n    build_number,\n    status,\n    SUM(COALESCE(blocked_time_seconds,0) +\n        COALESCE(buildable_time_seconds,0) +\n        COALESCE(waiting_time_seconds,0)) AS total_seconds\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time)\nGROUP BY pipeline_name, build_number, status\nORDER BY build_number ASC;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Queuing Time",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "P6C954CFB67022DE8"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
             "mode": "thresholds"
           },
           "mappings": [],
@@ -562,10 +671,6 @@
               {
                 "color": "green",
                 "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           },
@@ -574,10 +679,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 4,
-        "x": 12,
-        "y": 15
+        "h": 9,
+        "w": 5,
+        "x": 14,
+        "y": 18
       },
       "id": 8,
       "options": {
@@ -587,9 +692,7 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
@@ -603,7 +706,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT \n    ROUND(AVG(queue_wait_time)::numeric, 2) as avg_duration_seconds\nFROM builds\nWHERE queue_wait_time > 0 AND pipeline_name='$pipeline'\n  AND $__timeFilter(build_start_time)",
+          "rawSql": "SELECT\n    ROUND(\n        AVG(\n            COALESCE(blocked_time_seconds,      0) +\n            COALESCE(buildable_time_seconds,    0) +\n            COALESCE(waiting_time_seconds,      0)\n        )::numeric,\n        2\n    ) AS avg_total_seconds\nFROM builds\nWHERE pipeline_name = '$pipeline'\n  AND $__timeFilter(build_start_time);",
           "refId": "A",
           "sql": {
             "columns": [
@@ -652,10 +755,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 4,
-        "x": 16,
-        "y": 15
+        "h": 9,
+        "w": 5,
+        "x": 19,
+        "y": 18
       },
       "id": 6,
       "options": {
@@ -665,9 +768,7 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
@@ -681,7 +782,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT \n    ROUND(AVG(total_duration)::numeric, 2) as avg_duration_seconds\nFROM builds\nWHERE total_duration > 0 AND pipeline_name='$pipeline'\n  AND $__timeFilter(build_start_time)",
+          "rawSql": "SELECT \n    ROUND(AVG(building_time_seconds)::numeric, 2) as avg_duration_seconds\nFROM builds\nWHERE building_time_seconds > 0 AND pipeline_name='$pipeline'\n  AND $__timeFilter(build_start_time)",
           "refId": "A",
           "sql": {
             "columns": [
@@ -757,9 +858,9 @@
       },
       "gridPos": {
         "h": 9,
-        "w": 12,
+        "w": 14,
         "x": 0,
-        "y": 20
+        "y": 27
       },
       "id": 5,
       "options": {
@@ -790,7 +891,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT duration_range, count\nFROM (\n    SELECT \n        CASE \n            WHEN total_duration <= 60 THEN '0-1min'\n            WHEN total_duration <= 120 THEN '1-2min'\n            WHEN total_duration <= 240 THEN '2-4min'\n            WHEN total_duration <= 480 THEN '4-8min'\n            WHEN total_duration <= 960 THEN '8-16min'\n            WHEN total_duration <= 1920 THEN '16-32min'\n            WHEN total_duration <= 3840 THEN '32-64min'\n            WHEN total_duration <= 7680 THEN '64-128min'\n            WHEN total_duration <= 10800 THEN '128-180min'\n            ELSE '180min+'\n        END AS duration_range,\n        COUNT(*) AS count\n    FROM builds\n    WHERE pipeline_name = '$pipeline'\n      AND total_duration IS NOT NULL\n      AND build_start_time IS NOT NULL\n      AND $__timeFilter(build_start_time)\n    GROUP BY \n        CASE \n            WHEN total_duration <= 60 THEN '0-1min'\n            WHEN total_duration <= 120 THEN '1-2min'\n            WHEN total_duration <= 240 THEN '2-4min'\n            WHEN total_duration <= 480 THEN '4-8min'\n            WHEN total_duration <= 960 THEN '8-16min'\n            WHEN total_duration <= 1920 THEN '16-32min'\n            WHEN total_duration <= 3840 THEN '32-64min'\n            WHEN total_duration <= 7680 THEN '64-128min'\n            WHEN total_duration <= 10800 THEN '128-180min'\n            ELSE '180min+'\n        END\n) AS duration_dist\nORDER BY \n    CASE duration_range\n        WHEN '0-1min' THEN 1\n        WHEN '1-2min' THEN 2\n        WHEN '2-4min' THEN 3\n        WHEN '4-8min' THEN 4\n        WHEN '8-16min' THEN 5\n        WHEN '16-32min' THEN 6\n        WHEN '32-64min' THEN 7\n        WHEN '64-128min' THEN 8\n        WHEN '128-180min' THEN 9\n        WHEN '180min+' THEN 10\n    END;",
+          "rawSql": "-- Builds-time-distribution by bucket (seconds → minutes)\nSELECT\n    duration_range,\n    count\nFROM (\n    SELECT\n        CASE\n            WHEN building_time_seconds <= 60        THEN '0-1min'\n            WHEN building_time_seconds <= 120       THEN '1-2min'\n            WHEN building_time_seconds <= 240       THEN '2-4min'\n            WHEN building_time_seconds <= 480       THEN '4-8min'\n            WHEN building_time_seconds <= 960       THEN '8-16min'\n            WHEN building_time_seconds <= 1920      THEN '16-32min'\n            WHEN building_time_seconds <= 3840      THEN '32-64min'\n            WHEN building_time_seconds <= 7680      THEN '64-128min'\n            WHEN building_time_seconds <= 10800     THEN '128-180min'\n            ELSE                                    '180min+'\n        END                      AS duration_range,\n        COUNT(*)                 AS count\n    FROM builds\n    WHERE pipeline_name = '$pipeline'\n      AND building_time_seconds IS NOT NULL\n      AND build_start_time IS NOT NULL\n      AND $__timeFilter(build_start_time)\n    GROUP BY\n        CASE\n            WHEN building_time_seconds <= 60        THEN '0-1min'\n            WHEN building_time_seconds <= 120       THEN '1-2min'\n            WHEN building_time_seconds <= 240       THEN '2-4min'\n            WHEN building_time_seconds <= 480       THEN '4-8min'\n            WHEN building_time_seconds <= 960       THEN '8-16min'\n            WHEN building_time_seconds <= 1920      THEN '16-32min'\n            WHEN building_time_seconds <= 3840      THEN '32-64min'\n            WHEN building_time_seconds <= 7680      THEN '64-128min'\n            WHEN building_time_seconds <= 10800     THEN '128-180min'\n            ELSE                                    '180min+'\n        END\n) AS duration_dist\nORDER BY\n    CASE duration_range\n        WHEN '0-1min'   THEN 1\n        WHEN '1-2min'   THEN 2\n        WHEN '2-4min'   THEN 3\n        WHEN '4-8min'   THEN 4\n        WHEN '8-16min'  THEN 5\n        WHEN '16-32min' THEN 6\n        WHEN '32-64min' THEN 7\n        WHEN '64-128min' THEN 8\n        WHEN '128-180min' THEN 9\n        WHEN '180min+'  THEN 10\n    END;",
           "refId": "A",
           "sql": {
             "columns": [
@@ -822,8 +923,8 @@
     "list": [
       {
         "current": {
-          "text": "file_operations",
-          "value": "file_operations"
+          "text": "ecgo_docker",
+          "value": "ecgo_docker"
         },
         "definition": "SELECT DISTINCT pipeline_name FROM builds ORDER BY pipeline_name;",
         "label": "Pipeline",
@@ -837,12 +938,12 @@
     ]
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Jenkins Sentinel",
   "uid": "8c49e304-3dd5-4ea8-b690-31af1c9f0fe9",
-  "version": 5
+  "version": 10
 }
