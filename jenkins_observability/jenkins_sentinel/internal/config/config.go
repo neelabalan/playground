@@ -1,4 +1,4 @@
-package main
+package config
 
 import (
 	"encoding/json"
@@ -27,7 +27,7 @@ type Config struct {
 	BackfillEnabled bool           `json:"backfill_enabled"`
 }
 
-func loadConfig(filename string) (*Config, error) {
+func LoadConfig(filename string) (*Config, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open config file: %w", err)

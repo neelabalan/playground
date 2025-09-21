@@ -1,4 +1,4 @@
-package main
+package jenkins
 
 import (
 	"encoding/json"
@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-type JenkinsClient struct {
+type Client struct {
 	BaseURL string
 	Client  *http.Client
 }
@@ -33,7 +33,7 @@ func (t *authTransport) RoundTrip(req *http.Request) (*http.Response, error) {
 	return t.base.RoundTrip(req)
 }
 
-func NewJenkinsClient(baseURL, username, token, password string) *JenkinsClient {
+func NewClient(baseURL, username, token, password string) *Client {
 	// Determine authentication method
 	useToken := token != ""
 
@@ -45,7 +45,7 @@ func NewJenkinsClient(baseURL, username, token, password string) *JenkinsClient 
 		slog.Info("Using Jenkins API token authentication", slog.String("username", username))
 	}
 
-	return &JenkinsClient{
+	return &Client{
 		BaseURL: strings.TrimSuffix(baseURL, "/"),
 		Client: &http.Client{
 			Timeout: 30 * time.Second,
@@ -60,16 +60,16 @@ func NewJenkinsClient(baseURL, username, token, password string) *JenkinsClient 
 	}
 }
 
-type JenkinsBuild struct {
+type Build struct {
 	Number int    `json:"number"`
 	Class  string `json:"_class"`
 }
 
-type JenkinsJobResponse struct {
-	Builds []JenkinsBuild `json:"builds"`
+type JobResponse struct {
+	Builds []Build `json:"builds"`
 }
 
-func (j *JenkinsClient) GetBuildNumbers(pipelinePath string) ([]int, error) {
+func (j *Client) GetBuildNumbers(pipelinePath string) ([]int, error) {
 	req, _ := http.NewRequest("GET", fmt.Sprintf("%s/%s/api/json?tree=builds[number]", j.BaseURL, strings.TrimSuffix(pipelinePath, "/")), nil)
 
 	resp, err := j.Client.Do(req)
@@ -86,7 +86,7 @@ func (j *JenkinsClient) GetBuildNumbers(pipelinePath string) ([]int, error) {
 
 	slog.Debug("Jenkins API response for build numbers", slog.String("json", string(bodyBytes)))
 
-	var response JenkinsJobResponse
+	var response JobResponse
 	if err := json.Unmarshal(bodyBytes, &response); err != nil {
 		return nil, fmt.Errorf("failed to decode response: %w", err)
 	}
@@ -99,7 +99,7 @@ func (j *JenkinsClient) GetBuildNumbers(pipelinePath string) ([]int, error) {
 	return numbers, nil
 }
 
-func (j *JenkinsClient) GetBuildDetail(pipelinePath string, buildNumber int) (map[string]any, error) {
+func (j *Client) GetBuildDetail(pipelinePath string, buildNumber int) (map[string]any, error) {
 	req, _ := http.NewRequest("GET", fmt.Sprintf("%s/%s/%d/api/json", j.BaseURL, strings.TrimSuffix(pipelinePath, "/"), buildNumber), nil)
 	resp, err := j.Client.Do(req)
 	if err != nil {
@@ -122,7 +122,7 @@ func (j *JenkinsClient) GetBuildDetail(pipelinePath string, buildNumber int) (ma
 	return buildDetail, nil
 }
 
-func (j *JenkinsClient) GetWorkflowDescribe(pipelinePath string, buildNumber int) (map[string]any, error) {
+func (j *Client) GetWorkflowDescribe(pipelinePath string, buildNumber int) (map[string]any, error) {
 	req, _ := http.NewRequest("GET", fmt.Sprintf("%s/%s/%d/wfapi/describe", j.BaseURL, strings.TrimSuffix(pipelinePath, "/"), buildNumber), nil)
 	resp, err := j.Client.Do(req)
 	if err != nil {

@@ -1,4 +1,4 @@
-package main
+package logging
 
 import (
 	"fmt"
@@ -7,9 +7,11 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	"jenkins_sentinel/internal/config"
 )
 
-func setupLogger(config *Config) error {
+func Setup(config *config.Config) error {
 	var writers []io.Writer
 	writers = append(writers, os.Stdout)
 

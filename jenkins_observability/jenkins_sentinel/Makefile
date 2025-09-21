@@ -1,11 +1,14 @@
-.PHONY: build clean test generate run fmt tidy
+.PHONY: build build-daemon build-mcp clean test generate run run-daemon fmt tidy
 
-build:
+build: build-daemon build-mcp
+
+build-daemon:
 	mkdir -p build
-	go build -o build/jenkins_sentinel .
+	go build -o build/daemon ./cmd/daemon
 
-run: build
-	./build/jenkins_sentinel
+build-mcp:
+	mkdir -p build
+	go build -o build/mcpserver ./cmd/mcp
 
 clean:
 	rm -rf build

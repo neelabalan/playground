@@ -1,4 +1,4 @@
-package main
+package migrations
 
 import (
 	"context"
@@ -12,7 +12,7 @@ import (
 	"github.com/jackc/pgx/v5"
 )
 
-func RunMigrations(ctx context.Context, conn *pgx.Conn, schemaDir string) error {
+func Run(ctx context.Context, conn *pgx.Conn, schemaDir string) error {
 	_, err := conn.Exec(ctx, `
 		CREATE TABLE IF NOT EXISTS schema_migrations (
 			version VARCHAR(255) PRIMARY KEY,

@@ -9,7 +9,12 @@ import (
 	"strings"
 	"time"
 
+	"jenkins_sentinel/internal/config"
 	"jenkins_sentinel/internal/db"
+	"jenkins_sentinel/internal/jenkins"
+	"jenkins_sentinel/internal/logging"
+	"jenkins_sentinel/internal/metrics"
+	"jenkins_sentinel/internal/migrations"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgtype"
@@ -81,10 +86,10 @@ func extractTriggeredBy(buildDetail map[string]any) *string {
 	return nil
 }
 
-func processPipeline(ctx context.Context, queries *db.Queries, jenkins *JenkinsClient, pipelinePath string) error {
+func processPipeline(ctx context.Context, queries *db.Queries, jenkinsClient *jenkins.Client, pipelinePath string) error {
 	slog.Info("processing pipeline", slog.String("pipeline", pipelinePath))
 
-	buildNumbers, err := jenkins.GetBuildNumbers(pipelinePath)
+	buildNumbers, err := jenkinsClient.GetBuildNumbers(pipelinePath)
 	if err != nil {
 		return fmt.Errorf("failed to get build numbers for %s: %w", pipelinePath, err)
 	}
@@ -141,7 +146,7 @@ func processPipeline(ctx context.Context, queries *db.Queries, jenkins *JenkinsC
 	return nil
 }
 
-func processQueuedBuilds(ctx context.Context, queries *db.Queries, jenkins *JenkinsClient) error {
+func processQueuedBuilds(ctx context.Context, queries *db.Queries, jenkinsClient *jenkins.Client) error {
 	pendingItems, err := queries.GetPendingQueueItems(ctx)
 	if err != nil {
 		return fmt.Errorf("failed to get pending queue items: %w", err)
@@ -155,7 +160,7 @@ func processQueuedBuilds(ctx context.Context, queries *db.Queries, jenkins *Jenk
 	slog.Info("processing queued builds", slog.Int("count", len(pendingItems)))
 
 	for _, item := range pendingItems {
-		err := processBuildFromQueue(ctx, queries, jenkins, item)
+		err := processBuildFromQueue(ctx, queries, jenkinsClient, item)
 		if err != nil {
 			slog.Error("failed to process build from queue",
 				slog.String("job_path", item.JobPath),
@@ -181,8 +186,8 @@ func processQueuedBuilds(ctx context.Context, queries *db.Queries, jenkins *Jenk
 	return nil
 }
 
-func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *JenkinsClient, queueItem db.BuildQueue) error {
-	buildDetail, err := jenkins.GetBuildDetail(queueItem.JobPath, int(queueItem.BuildNumber))
+func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkinsClient *jenkins.Client, queueItem db.BuildQueue) error {
+	buildDetail, err := jenkinsClient.GetBuildDetail(queueItem.JobPath, int(queueItem.BuildNumber))
 	if err != nil {
 		return fmt.Errorf("failed to get build detail: %w", err)
 	}
@@ -199,7 +204,7 @@ func processBuildFromQueue(ctx context.Context, queries *db.Queries, jenkins *Je
 	buildStartTime := time.Unix(int64(buildDetail["timestamp"].(float64))/1000, 0)
 	buildEndTime := buildStartTime.Add(time.Duration(buildDetail["duration"].(float64)) * time.Millisecond)
 
-	timingMetrics := extractJenkinsTimingMetrics(buildDetail)
+	timingMetrics := metrics.ExtractJenkinsTimingMetrics(buildDetail)
 	triggeredBy := extractTriggeredBy(buildDetail)
 
 	var triggeredByField pgtype.Text
@@ -274,13 +279,13 @@ func main() {
 	configPath := flag.String("config", "config.json", "Path to the configuration file")
 	flag.Parse()
 
-	config, err := loadConfig(*configPath)
+	config, err := config.LoadConfig(*configPath)
 	if err != nil {
 		slog.Error("error loading config", slog.Any("error", err))
 		os.Exit(1)
 	}
 
-	if err := setupLogger(config); err != nil {
+	if err := logging.Setup(config); err != nil {
 		slog.Error("failed to setup logger", slog.Any("error", err))
 		os.Exit(1)
 	}
@@ -302,17 +307,17 @@ func main() {
 	ctx := context.Background()
 
 	// Run database migrations
-	if err := RunMigrations(ctx, conn, "sql/schema"); err != nil {
+	if err := migrations.Run(ctx, conn, "sql/schema"); err != nil {
 		slog.Error("failed to run migrations", slog.Any("error", err))
 		os.Exit(1)
 	}
 
 	slog.Info("database schema initialized successfully")
 
-	jenkins := NewJenkinsClient(config.BaseURL, config.Username, config.Token, config.Password)
+	jenkinsClient := jenkins.NewClient(config.BaseURL, config.Username, config.Token, config.Password)
 
 	for _, pipelinePath := range config.Pipelines {
-		err := processPipeline(ctx, queries, jenkins, pipelinePath)
+		err := processPipeline(ctx, queries, jenkinsClient, pipelinePath)
 		if err != nil {
 			slog.Error("failed to process pipeline",
 				slog.String("pipeline", pipelinePath),
@@ -321,7 +326,7 @@ func main() {
 		}
 	}
 
-	err = processQueuedBuilds(ctx, queries, jenkins)
+	err = processQueuedBuilds(ctx, queries, jenkinsClient)
 	if err != nil {
 		slog.Error("failed to process queued builds", slog.Any("error", err))
 	}

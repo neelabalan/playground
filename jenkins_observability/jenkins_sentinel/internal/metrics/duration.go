@@ -1,4 +1,4 @@
-package main
+package metrics
 
 type JenkinsTimingMetrics struct {
 	WaitingTimeSeconds   float64
@@ -7,7 +7,7 @@ type JenkinsTimingMetrics struct {
 	BuildingTimeSeconds  float64
 }
 
-func extractJenkinsTimingMetrics(buildDetail map[string]any) *JenkinsTimingMetrics {
+func ExtractJenkinsTimingMetrics(buildDetail map[string]any) *JenkinsTimingMetrics {
 	metrics := &JenkinsTimingMetrics{}
 
 	actions, ok := buildDetail["actions"].([]any)
