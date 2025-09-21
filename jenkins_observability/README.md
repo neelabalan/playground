@@ -92,48 +92,41 @@ flowchart TD
 ### Data model
 
 - build_queue
-    - id
-    - job_path
-    - build_number
-    - last_attempt_at
-    - error_message
-    - collection_time (TIMESTAMP WITH TIME ZONE): When this build's data was captured/collected by the daemon.
-    - collection_status (ENUM: 'complete', 'partial', 'error', 'pending'): 'Partial' for builds collected mid-run; 'pending' for known but uncollected builds during backfill.
+    - id (SERIAL PRIMARY KEY)
+    - job_path (VARCHAR(255)): Jenkins job path identifier
+    - build_number (INTEGER): Sequential build ID from Jenkins
+    - last_attempt_at (TIMESTAMP WITH TIME ZONE): Last collection attempt timestamp
+    - error_message (TEXT): Error details from failed collection attempts
+    - collection_time (TIMESTAMP WITH TIME ZONE): When this build's data was captured/collected by the daemon
+    - collection_status (VARCHAR(50)): 'complete', 'partial', 'error', 'pending' - tracks collection state
+    - created_at/updated_at (TIMESTAMP WITH TIME ZONE): Record lifecycle timestamps
 
-- build_table (This stores the per-build metrics. Primary key: (pipeline_name, build_number) for uniqueness)
-    - pipeline_name (VARCHAR(255), part of PK): Unique identifier for the Jenkins pipeline/job.
-    - build_number (INTEGER, part of PK): Sequential build ID from Jenkins.
-    - build_start_time (TIMESTAMP WITH TIME ZONE): When the build began (from Jenkins API).
-    - build_end_time (TIMESTAMP WITH TIME ZONE): When the build completed/aborted.
-    - status (ENUM: 'success', 'failure', 'aborted', 'unstable', 'not_built', etc.): Matches Jenkins statuses.
-    - total_duration (INTERVAL or DOUBLE PRECISION in seconds): Build runtime. Use INTERVAL for human-readable queries, or seconds for easy math/ML.
-    - steps_successful (INTEGER): Count of successful steps/stages.
-    - steps_failed (INTEGER): Count of failed steps/stages. (Consider adding steps_total = steps_successful + steps_failed for completeness.)
-    - steps_skipped (INTEGER, optional addition): If your pipelines have conditional steps, this could track skipped ones for deeper analysis.
-    - last_updated (TIMESTAMP WITH TIME ZONE): When this record was last modified (auto-updated via trigger). Useful for auditing changes.
-    - error_log (TEXT): Any errors from Jenkins API during collection (e.g., "API timeout"). Null if successful.
+- builds (This stores the per-build metrics. Primary key: (pipeline_name, build_number) for uniqueness)
+    - id (SERIAL PRIMARY KEY): Auto-incrementing unique identifier
+    - pipeline_name (VARCHAR(255)): Unique identifier for the Jenkins pipeline/job
+    - build_number (INTEGER): Sequential build ID from Jenkins
+    - build_start_time/build_end_time (TIMESTAMP WITH TIME ZONE): Build lifecycle timestamps from Jenkins API
+    - status (VARCHAR(50)): Build status matching Jenkins ('SUCCESS', 'FAILURE', 'ABORTED', etc.)
+    - triggered_by (VARCHAR(255)): Username or ID of who/what triggered the build
+    - building_time_seconds (FLOAT): Actual build execution time including subtasks (from executingTimeMillis)
+    - blocked_time_seconds (FLOAT): Time blocked waiting for resources including subtasks
+    - buildable_time_seconds (FLOAT): Time buildable but waiting for executor including subtasks
+    - waiting_time_seconds (FLOAT): Time in waiting state including subtasks
+    - last_updated (TIMESTAMP WITH TIME ZONE): When this record was last modified (auto-updated via trigger)
+    - error_log (TEXT): Any errors from Jenkins API during collection (e.g., "API timeout")
+    - created_at/updated_at (TIMESTAMP WITH TIME ZONE): Record lifecycle timestamps
 
 ### Development and Enhancement Plan
 
-- System handles Jenkins restarts and downtime by remembering last processed build ID and resuming when online
-- Collector crashes are handled through state table that prevents data duplication on restart
-- Backfilling utility resyncs data when state table gets corrupted or missing
-- Jenkins API rate limiting is handled with exponential backoff and retry mechanisms
-- Automated cleanup policies manage data retention for historical build data
-- Code abstraction layer mitigates impact of Jenkins API changes
-- TimescaleDB migration provides automatic partitioning and improved query performance for time-series data
-- Hybrid approach uses Tempo for traces and Postgres for events
-- Parallel build data collection improves performance with worker threads
-- Tracing integrations explore Jenkins Metrics API for generating traces stored in Tempo
-- Step level data collection captures successful, failed, and duration metrics for individual stages
-- Anomaly detection system identifies optimal algorithms through data collection and simulation
-- TimescaleDB migration strategy includes parallel deployment and zero-downtime cutover
-- Data lifecycle management automates archival to object storage with parquet format
-- Dashboard optimization provides dynamic time ranges and context-aware drill-down capabilities
-- LLM powered failure analysis offers triggered root cause analysis with chat integration
-- Natural language queries enable questions like "why did the payment-service build #13 fail"
-- Multi-jenkins support provides unified dashboard across different environments
-- Performance comparison capabilities across multiple Jenkins instances
+- System handles Jenkins restarts and downtime by remembering last processed build ID, with collector crashes managed through state table preventing data duplication and backfilling utility for state corruption recovery
+- Jenkins API rate limiting handled with exponential backoff and retry mechanisms, with code abstraction layer mitigating impact of API changes
+- TimescaleDB migration provides automatic partitioning and improved time-series query performance, with parallel deployment and zero-downtime cutover strategy
+- Hybrid approach uses Tempo for traces and Postgres for events, with parallel build data collection using worker threads for improved performance
+- Step level data collection captures successful, failed, and duration metrics for individual stages, with tracing integrations exploring Jenkins Metrics API for comprehensive traces stored in Tempo
+- Anomaly detection system identifies optimal algorithms through data collection and simulation, with LLM powered failure analysis offering triggered root cause analysis and chat integration
+- Natural language queries enable questions like "why did the payment-service build #13 fail" with dashboard optimization providing dynamic time ranges and context-aware drill-down capabilities
+- Multi-jenkins support provides unified dashboard across different environments with performance comparison capabilities
+- Data lifecycle management automates retention policies for historical build data and archival to object storage with parquet format
   
 ### Business impact
 - Developer productivity increased through faster problem identification, reduced MTTR (Mean time to resolution) for build failures, elimination of debugging guesswork, and decreased context switching overhead
