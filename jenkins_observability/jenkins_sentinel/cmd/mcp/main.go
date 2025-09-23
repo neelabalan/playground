@@ -2,16 +2,23 @@ package main
 
 import (
 	"context"
+	"flag"
 	"fmt"
-	"io"
 	"log"
 	"net/http"
-	"os"
+	"net/url"
 	"regexp"
+	"strconv"
 	"strings"
+
+	"jenkins_sentinel/internal/config"
+	"jenkins_sentinel/internal/jenkins"
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
+
+var appConfig *config.Config
+var jenkinsClient *jenkins.Client
 
 type JenkinsLogAnalyzerInput struct {
 	JobURL string `json:"job_url" jsonschema:"required,description=Jenkins job URL (e.g., http://jenkins.example.com/job/my-job/123/)"`
@@ -23,10 +30,46 @@ type JenkinsLogAnalyzerOutput struct {
 	LogSnippet string   `json:"log_snippet" jsonschema:"description=First 10 and last 10 lines of the log"`
 }
 
-func AnalyzeJenkinsLogs(ctx context.Context, req *mcp.CallToolRequest, input JenkinsLogAnalyzerInput) (*mcp.CallToolResult, JenkinsLogAnalyzerOutput, error) {
-	consoleURL := strings.TrimSuffix(input.JobURL, "/") + "/consoleText"
+func parseJobURL(jobURL string) (string, int, error) {
+	parsedURL, err := url.Parse(jobURL)
+	if err != nil {
+		return "", 0, fmt.Errorf("invalid URL: %w", err)
+	}
 
-	logContent, err := downloadJenkinsLog(consoleURL)
+	path := strings.Trim(parsedURL.Path, "/")
+	parts := strings.Split(path, "/")
+
+	var buildNumber int
+	var pipelinePathParts []string
+
+	for i := len(parts) - 1; i >= 0; i-- {
+		if num, err := strconv.Atoi(parts[i]); err == nil {
+			buildNumber = num
+			pipelinePathParts = parts[:i]
+			break
+		}
+	}
+
+	if buildNumber == 0 {
+		return "", 0, fmt.Errorf("could not find build number in URL: %s", jobURL)
+	}
+
+	pipelinePath := strings.Join(pipelinePathParts, "/")
+	return pipelinePath, buildNumber, nil
+}
+
+func AnalyzeJenkinsLogs(ctx context.Context, req *mcp.CallToolRequest, input JenkinsLogAnalyzerInput) (*mcp.CallToolResult, JenkinsLogAnalyzerOutput, error) {
+	pipelinePath, buildNumber, err := parseJobURL(input.JobURL)
+	if err != nil {
+		return &mcp.CallToolResult{
+			IsError: true,
+			Content: []mcp.Content{
+				&mcp.TextContent{Text: fmt.Sprintf("error parsing job URL: %v", err)},
+			},
+		}, JenkinsLogAnalyzerOutput{}, nil
+	}
+
+	logContent, err := jenkinsClient.GetConsoleLog(pipelinePath, buildNumber)
 	if err != nil {
 		return &mcp.CallToolResult{
 			IsError: true,
@@ -44,45 +87,6 @@ func AnalyzeJenkinsLogs(ctx context.Context, req *mcp.CallToolRequest, input Jen
 				analysis.Summary, len(analysis.ErrorLines), analysis.LogSnippet)},
 		},
 	}, analysis, nil
-}
-
-func downloadJenkinsLog(consoleURL string) (string, error) {
-	resp, err := http.Get(consoleURL)
-	if err != nil {
-		return "", fmt.Errorf("failed to fetch log: %w", err)
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		return "", fmt.Errorf("HTTP %d: %s", resp.StatusCode, resp.Status)
-	}
-
-	tmpDir := "/tmp"
-	if _, err := os.Stat(tmpDir); os.IsNotExist(err) {
-		tmpDir = "."
-	}
-
-	tempFile, err := os.CreateTemp(tmpDir, "jenkins_log_*.txt")
-	if err != nil {
-		return "", fmt.Errorf("failed to create temp file: %w", err)
-	}
-	defer func() {
-		tempFile.Close()
-		os.Remove(tempFile.Name())
-	}()
-
-	_, err = io.Copy(tempFile, resp.Body)
-	if err != nil {
-		return "", fmt.Errorf("failed to write log to temp file: %w", err)
-	}
-
-	tempFile.Seek(0, 0)
-	content, err := io.ReadAll(tempFile)
-	if err != nil {
-		return "", fmt.Errorf("failed to read temp file: %w", err)
-	}
-
-	return string(content), nil
 }
 
 func analyzeLog(content string) JenkinsLogAnalyzerOutput {
@@ -131,17 +135,47 @@ func analyzeLog(content string) JenkinsLogAnalyzerOutput {
 }
 
 func main() {
+	configPath := flag.String("config", "config.json", "Path to the configuration file")
+	port := flag.String("port", "8081", "Port to run the MCP server on")
+	flag.Parse()
+
+	var err error
+	appConfig, err = config.LoadConfig(*configPath)
+	if err != nil {
+		log.Fatalf("error loading config: %v", err)
+	}
+
+	log.Printf("loaded config from %s", *configPath)
+	log.Printf("jenkins base URL: %s", appConfig.BaseURL)
+
+	jenkinsClient = jenkins.NewClient(appConfig.BaseURL, appConfig.Username, appConfig.Token, appConfig.Password)
+	log.Printf("jenkins client initialized with authentication")
+
 	server := mcp.NewServer(&mcp.Implementation{
-		Name:    "jenkins-log-analyzer",
+		Name:    "jenkins-mcp-server",
 		Version: "1.0.0",
 	}, nil)
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "analyze_jenkins_logs",
-		Description: "Analyze Jenkins build logs for errors and failures. Provide a Jenkins job URL and get back error analysis and log snippets.",
+		Description: "Analyze Jenkins build console logs for errors and failures. Provide a Jenkins job URL and get back error analysis and log snippets. This tool helps identify build failures and troubleshoot Jenkins pipeline issues.",
 	}, AnalyzeJenkinsLogs)
 
-	if err := server.Run(context.Background(), &mcp.StdioTransport{}); err != nil {
+	handler := mcp.NewStreamableHTTPHandler(func(req *http.Request) *mcp.Server {
+		return server
+	}, &mcp.StreamableHTTPOptions{
+		Stateless:    false,
+		JSONResponse: true,
+	})
+
+	mux := http.NewServeMux()
+	mux.Handle("/mcp", handler)
+
+	portAddr := ":" + *port
+	log.Printf("starting Jenkins MCP server on port %s", portAddr)
+	log.Printf("MCP endpoint: http://localhost%s/mcp", portAddr)
+
+	if err := http.ListenAndServe(portAddr, mux); err != nil {
 		log.Fatalf("Server failed: %v", err)
 	}
 }

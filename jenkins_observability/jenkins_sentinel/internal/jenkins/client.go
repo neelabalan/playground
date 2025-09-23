@@ -144,3 +144,23 @@ func (j *Client) GetWorkflowDescribe(pipelinePath string, buildNumber int) (map[
 
 	return workflowDetail, nil
 }
+
+func (j *Client) GetConsoleLog(pipelinePath string, buildNumber int) (string, error) {
+	req, _ := http.NewRequest("GET", fmt.Sprintf("%s/%s/%d/consoleText", j.BaseURL, strings.TrimSuffix(pipelinePath, "/"), buildNumber), nil)
+	resp, err := j.Client.Do(req)
+	if err != nil {
+		return "", fmt.Errorf("failed to execute console log request: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return "", fmt.Errorf("jenkins console API returned status %d for build %d", resp.StatusCode, buildNumber)
+	}
+
+	bodyBytes, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return "", fmt.Errorf("failed to read console log: %w", err)
+	}
+
+	return string(bodyBytes), nil
+}
