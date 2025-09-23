@@ -66,11 +66,11 @@ type Build struct {
 }
 
 type JobResponse struct {
-	Builds []Build `json:"builds"`
+	AllBuilds []Build `json:"allBuilds"`
 }
 
 func (j *Client) GetBuildNumbers(pipelinePath string) ([]int, error) {
-	req, _ := http.NewRequest("GET", fmt.Sprintf("%s/%s/api/json?tree=builds[number]", j.BaseURL, strings.TrimSuffix(pipelinePath, "/")), nil)
+	req, _ := http.NewRequest("GET", fmt.Sprintf("%s/%s/api/json?tree=allBuilds[number]", j.BaseURL, strings.TrimSuffix(pipelinePath, "/")), nil)
 
 	resp, err := j.Client.Do(req)
 	if err != nil {
@@ -91,8 +91,8 @@ func (j *Client) GetBuildNumbers(pipelinePath string) ([]int, error) {
 		return nil, fmt.Errorf("failed to decode response: %w", err)
 	}
 
-	numbers := make([]int, len(response.Builds))
-	for i, build := range response.Builds {
+	numbers := make([]int, len(response.AllBuilds))
+	for i, build := range response.AllBuilds {
 		numbers[i] = build.Number
 	}
 
