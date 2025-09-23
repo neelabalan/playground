@@ -21,13 +21,13 @@ var appConfig *config.Config
 var jenkinsClient *jenkins.Client
 
 type JenkinsLogAnalyzerInput struct {
-	JobURL string `json:"job_url" jsonschema:"required,description=Jenkins job URL (e.g., http://jenkins.example.com/job/my-job/123/)"`
+	JobURL string `json:"job_url" jsonschema:"required" jsonschema_description:"Jenkins job URL (e.g., http://jenkins.example.com/job/my-job/123/)"`
 }
 
 type JenkinsLogAnalyzerOutput struct {
-	Summary    string   `json:"summary" jsonschema:"description=Summary of the analysis"`
-	ErrorLines []string `json:"error_lines" jsonschema:"description=Lines containing ERROR or FAILED keywords"`
-	LogSnippet string   `json:"log_snippet" jsonschema:"description=First 10 and last 10 lines of the log"`
+	Summary    string   `json:"summary" jsonschema_description:"Summary of the analysis"`
+	ErrorLines []string `json:"error_lines" jsonschema_description:"Lines containing ERROR or FAILED keywords"`
+	LogSnippet string   `json:"log_snippet" jsonschema_description:"First 10 and last 10 lines of the log"`
 }
 
 func parseJobURL(jobURL string) (string, int, error) {
@@ -164,7 +164,7 @@ func main() {
 	handler := mcp.NewStreamableHTTPHandler(func(req *http.Request) *mcp.Server {
 		return server
 	}, &mcp.StreamableHTTPOptions{
-		Stateless:    false,
+		Stateless:    true,
 		JSONResponse: true,
 	})
 
