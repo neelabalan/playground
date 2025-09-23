@@ -146,10 +146,6 @@
               {
                 "color": "green",
                 "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           }
@@ -170,7 +166,9 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -250,7 +248,9 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -488,7 +488,9 @@
       },
       "id": 7,
       "options": {
-        "displayLabels": ["percent"],
+        "displayLabels": [
+          "percent"
+        ],
         "legend": {
           "displayMode": "list",
           "placement": "bottom",
@@ -497,7 +499,9 @@
         },
         "pieType": "pie",
         "reduceOptions": {
-          "calcs": ["range"],
+          "calcs": [
+            "range"
+          ],
           "fields": "/^build_count$/",
           "values": true
         },
@@ -692,7 +696,9 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -768,7 +774,9 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -845,16 +853,24 @@
               {
                 "color": "green",
                 "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           },
           "unit": "s"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byType",
+              "options": "number"
+            },
+            "properties": [
+              {
+                "id": "unit"
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 9,
@@ -912,7 +928,125 @@
           }
         }
       ],
-      "title": "Duration Distribution",
+      "title": "Build time distribution",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "P6C954CFB67022DE8"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "blue",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byType",
+              "options": "number"
+            },
+            "properties": [
+              {
+                "id": "unit"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 10,
+        "x": 14,
+        "y": 27
+      },
+      "id": 11,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xField": "duration_range",
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "-- Queuing-time-distribution by bucket (seconds → minutes)\nSELECT\n    duration_range,\n    count\nFROM (\n    SELECT\n        CASE\n            WHEN queuing_time_seconds <= 60        THEN '0-1min'\n            WHEN queuing_time_seconds <= 120       THEN '1-2min'\n            WHEN queuing_time_seconds <= 240       THEN '2-4min'\n            WHEN queuing_time_seconds <= 480       THEN '4-8min'\n            WHEN queuing_time_seconds <= 960       THEN '8-16min'\n            WHEN queuing_time_seconds <= 1920      THEN '16-32min'\n            WHEN queuing_time_seconds <= 3840      THEN '32-64min'\n            WHEN queuing_time_seconds <= 7680      THEN '64-128min'\n            WHEN queuing_time_seconds <= 10800     THEN '128-180min'\n            ELSE                                    '180min+'\n        END AS duration_range,\n        COUNT(*) AS count\n    FROM (\n        SELECT\n            build_start_time,\n            COALESCE(blocked_time_seconds, 0)\n            + COALESCE(buildable_time_seconds, 0)\n            + COALESCE(waiting_time_seconds, 0) AS queuing_time_seconds\n        FROM builds\n        WHERE pipeline_name = '$pipeline'\n          AND build_start_time IS NOT NULL\n          AND $__timeFilter(build_start_time)\n    ) AS queuing_data\n    WHERE queuing_time_seconds IS NOT NULL\n    GROUP BY\n        CASE\n            WHEN queuing_time_seconds <= 60        THEN '0-1min'\n            WHEN queuing_time_seconds <= 120       THEN '1-2min'\n            WHEN queuing_time_seconds <= 240       THEN '2-4min'\n            WHEN queuing_time_seconds <= 480       THEN '4-8min'\n            WHEN queuing_time_seconds <= 960       THEN '8-16min'\n            WHEN queuing_time_seconds <= 1920      THEN '16-32min'\n            WHEN queuing_time_seconds <= 3840      THEN '32-64min'\n            WHEN queuing_time_seconds <= 7680      THEN '64-128min'\n            WHEN queuing_time_seconds <= 10800     THEN '128-180min'\n            ELSE                                    '180min+'\n        END\n) AS duration_dist\nORDER BY\n    CASE duration_range\n        WHEN '0-1min'     THEN 1\n        WHEN '1-2min'     THEN 2\n        WHEN '2-4min'     THEN 3\n        WHEN '4-8min'     THEN 4\n        WHEN '8-16min'    THEN 5\n        WHEN '16-32min'   THEN 6\n        WHEN '32-64min'   THEN 7\n        WHEN '64-128min'  THEN 8\n        WHEN '128-180min' THEN 9\n        WHEN '180min+'    THEN 10\n    END;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Queue time distribution",
       "type": "barchart"
     }
   ],
@@ -938,12 +1072,12 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-30d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Jenkins Sentinel",
   "uid": "8c49e304-3dd5-4ea8-b690-31af1c9f0fe9",
-  "version": 10
+  "version": 5
 }
