@@ -9,7 +9,7 @@ RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -o /out/jenkins_sen
 
 FROM almalinux:9-minimal
 RUN microdnf install -y ca-certificates shadow-utils && microdnf clean all
-RUN useradd --system --home /app --shell /usr/sbin/nologin sentinel
+RUN useradd --system --create-home --home-dir /app --shell /sbin/nologin sentinel
 WORKDIR /app
 COPY --from=build /out/jenkins_sentinel /usr/local/bin/jenkins_sentinel
 COPY config.json ./config.json
