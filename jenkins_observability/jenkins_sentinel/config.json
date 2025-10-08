@@ -1,18 +1,61 @@
 {
-  "username": "jenkins",
-  "token": "",
-  "password": "admin",
-  "base_url": "http://localhost:8080/",
-  "pipelines": [
-    "job/ecgo_docker",
-    "job/file_operations/",
-    "job/hello_world",
-    "job/parallel_pipeline",
-    "job/system_info",
-    "job/test1_pipeline",
-    "job/test2_pipeline",
-    "job/test3_pipeline"
-  ],
+    "username": "jenkins",
+    "token": "",
+    "password": "admin",
+    "base_url": "http://localhost:8080/",
+    "pipelines": [
+        {
+            "url": "job/ecgo_docker",
+            "anomaly_detection": {
+                "name": "zscore_sensitive",
+                "params": {
+                    "threshold": 1.8,
+                    "min_samples": 5
+                },
+                "time_window_hours": 24,
+                "metrics": ["build_duration", "queue_time"]
+            }
+        },
+        {
+            "url": "job/file_operations/",
+            "anomaly_detection": {
+                "name": "zscore_sensitive",
+                "params": {
+                    "threshold": 2.0,
+                    "min_samples": 5
+                },
+                "time_window_hours": 24,
+                "metrics": ["build_duration", "queue_time"]
+            }
+        },
+        {
+            "url": "job/hello_world",
+            "anomaly_detection": {
+                "name": "zscore_sensitive",
+                "params": {
+                    "threshold": 2.0,
+                    "min_samples": 5
+                },
+                "time_window_hours": 24,
+                "metrics": ["build_duration", "queue_time"]
+            }
+        },
+        {
+            "url": "job/parallel_pipeline"
+        },
+        {
+            "url": "job/system_info"
+        },
+        {
+            "url": "job/test1_pipeline"
+        },
+        {
+            "url": "job/test2_pipeline"
+        },
+        {
+            "url": "job/test3_pipeline"
+        }
+    ],
   "database": {
     "host": "localhost",
     "port": 5432,
