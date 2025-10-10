@@ -4,9 +4,11 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"log/slog"
 	"os/exec"
 	"path/filepath"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -51,8 +53,89 @@ func (d *PythonDetector) DetectAnomalies(ctx context.Context, input BatchDetecti
 	if err := json.Unmarshal(outputBytes, &output); err != nil {
 		return nil, fmt.Errorf("failed to parse output from %s: %w", d.name, err)
 	}
-	executionTime := time.Since(startTime).Milliseconds()
-	fmt.Printf("execution time: %dms", executionTime)
+
+	slog.Info("detector completed",
+		slog.String("detector", d.name),
+		slog.Duration("duration", time.Since(startTime)))
 
 	return &output, nil
+}
+
+type PipelineAnomalyDetectionJob struct {
+	PipelineName string
+	DetectorName string
+	Input        DetectionInput
+}
+
+type PipelineAnomalyDetectionResult struct {
+	PipelineName string
+	DetectorName string
+	Output       *DetectionOutput
+	Error        error
+}
+
+func RunPipelineDetections(ctx context.Context, registry *DetectorRegistry, jobs []PipelineAnomalyDetectionJob, maxParallel int) []PipelineAnomalyDetectionResult {
+	if len(jobs) == 0 {
+		return nil
+	}
+
+	results := make([]PipelineAnomalyDetectionResult, len(jobs))
+	jobChan := make(chan int, len(jobs))
+	var wg sync.WaitGroup
+
+	for i := 0; i < maxParallel; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			for idx := range jobChan {
+				job := jobs[idx]
+
+				detector, err := registry.Get(job.DetectorName)
+				if err != nil {
+					results[idx] = PipelineAnomalyDetectionResult{
+						PipelineName: job.PipelineName,
+						DetectorName: job.DetectorName,
+						Error:        err,
+					}
+					slog.Error("detector not found",
+						slog.String("pipeline", job.PipelineName),
+						slog.String("detector", job.DetectorName))
+					continue
+				}
+
+				batchInput := BatchDetectionInput{Pipelines: []DetectionInput{job.Input}}
+				output, err := detector.DetectAnomalies(ctx, batchInput)
+
+				if err != nil {
+					results[idx] = PipelineAnomalyDetectionResult{
+						PipelineName: job.PipelineName,
+						DetectorName: job.DetectorName,
+						Error:        err,
+					}
+					slog.Error("detection failed",
+						slog.String("pipeline", job.PipelineName),
+						slog.String("detector", job.DetectorName),
+						slog.String("error", err.Error()))
+					continue
+				}
+
+				if len(output.Results) > 0 {
+					results[idx] = PipelineAnomalyDetectionResult{
+						PipelineName: job.PipelineName,
+						DetectorName: job.DetectorName,
+						Output:       &output.Results[0],
+						Error:        nil,
+					}
+				}
+			}
+		}()
+	}
+
+	for i := range jobs {
+		jobChan <- i
+	}
+	close(jobChan)
+
+	wg.Wait()
+	return results
 }

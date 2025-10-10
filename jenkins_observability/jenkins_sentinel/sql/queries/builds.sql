@@ -96,3 +96,17 @@ RETURNING *;
 
 -- name: DeleteQueueItem :exec
 DELETE FROM build_queue WHERE id = $1;
+
+-- name: GetTimeSeriesForPipeline :many
+SELECT 
+    build_start_time as timestamp,
+    building_time_seconds,
+    blocked_time_seconds,
+    buildable_time_seconds,
+    waiting_time_seconds
+FROM builds 
+WHERE pipeline_name = $1 
+AND build_start_time >= $2 
+AND status = 'success'
+ORDER BY build_start_time ASC;
+

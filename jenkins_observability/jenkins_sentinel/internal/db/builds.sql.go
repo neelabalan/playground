@@ -436,6 +436,59 @@ func (q *Queries) GetQueueItemByJobAndBuild(ctx context.Context, arg GetQueueIte
 	return i, err
 }
 
+const getTimeSeriesForPipeline = `-- name: GetTimeSeriesForPipeline :many
+SELECT 
+    build_start_time as timestamp,
+    building_time_seconds,
+    blocked_time_seconds,
+    buildable_time_seconds,
+    waiting_time_seconds
+FROM builds 
+WHERE pipeline_name = $1 
+AND build_start_time >= $2 
+AND status = 'success'
+ORDER BY build_start_time ASC
+`
+
+type GetTimeSeriesForPipelineParams struct {
+	PipelineName   string             `json:"pipeline_name"`
+	BuildStartTime pgtype.Timestamptz `json:"build_start_time"`
+}
+
+type GetTimeSeriesForPipelineRow struct {
+	Timestamp            pgtype.Timestamptz `json:"timestamp"`
+	BuildingTimeSeconds  pgtype.Float8      `json:"building_time_seconds"`
+	BlockedTimeSeconds   pgtype.Float8      `json:"blocked_time_seconds"`
+	BuildableTimeSeconds pgtype.Float8      `json:"buildable_time_seconds"`
+	WaitingTimeSeconds   pgtype.Float8      `json:"waiting_time_seconds"`
+}
+
+func (q *Queries) GetTimeSeriesForPipeline(ctx context.Context, arg GetTimeSeriesForPipelineParams) ([]GetTimeSeriesForPipelineRow, error) {
+	rows, err := q.db.Query(ctx, getTimeSeriesForPipeline, arg.PipelineName, arg.BuildStartTime)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []GetTimeSeriesForPipelineRow
+	for rows.Next() {
+		var i GetTimeSeriesForPipelineRow
+		if err := rows.Scan(
+			&i.Timestamp,
+			&i.BuildingTimeSeconds,
+			&i.BlockedTimeSeconds,
+			&i.BuildableTimeSeconds,
+			&i.WaitingTimeSeconds,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const updateBuildStatus = `-- name: UpdateBuildStatus :one
 UPDATE builds 
 SET status = $2, updated_at = NOW() 

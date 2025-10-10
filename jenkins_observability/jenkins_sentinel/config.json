@@ -3,6 +3,10 @@
     "token": "",
     "password": "admin",
     "base_url": "http://localhost:8080/",
+    "anomaly_processing": {
+        "max_parallel": 3,
+        "batch_size": 10
+    },
     "pipelines": [
         {
             "url": "job/ecgo_docker",
