@@ -14,11 +14,10 @@ type AnomalyDetector interface {
 }
 
 type DetectionInput struct {
-	PipelineName    string                 `json:"pipeline_name"`
-	TimeWindowHours int                    `json:"time_window_hours"`
-	Metrics         []string               `json:"metrics"`
-	TimeSeries      []MetricTimeSeries     `json:"time_series"`
-	DetectorParams  map[string]interface{} `json:"params,omitempty"`
+	PipelineName    string             `json:"pipeline_name"`
+	TimeWindowHours int                `json:"time_window_hours"`
+	Metrics         []string           `json:"metrics"`
+	TimeSeries      []MetricTimeSeries `json:"time_series"`
 }
 
 type BatchDetectionInput struct {
@@ -54,7 +53,7 @@ type AnomalyResult struct {
 }
 
 type DetectionMetadata struct {
-	DetectorName    string `json:"detector_name"`
-	ProcessedPoints int    `json:"processed_points"`
-	ExecutionTimeMs int64  `json:"execution_time_ms"`
+	// DetectorName    string `json:"detector_name"`
+	ProcessedPoints int   `json:"processed_points"`
+	ExecutionTimeMs int64 `json:"execution_time_ms"`
 }

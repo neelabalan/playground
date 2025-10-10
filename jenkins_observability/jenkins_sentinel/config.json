@@ -7,7 +7,7 @@
         {
             "url": "job/ecgo_docker",
             "anomaly_detection": {
-                "name": "zscore_sensitive",
+                "name": "zscore",
                 "params": {
                     "threshold": 1.8,
                     "min_samples": 5
@@ -19,7 +19,7 @@
         {
             "url": "job/file_operations/",
             "anomaly_detection": {
-                "name": "zscore_sensitive",
+                "name": "zscore",
                 "params": {
                     "threshold": 2.0,
                     "min_samples": 5
@@ -31,7 +31,7 @@
         {
             "url": "job/hello_world",
             "anomaly_detection": {
-                "name": "zscore_sensitive",
+                "name": "zscore",
                 "params": {
                     "threshold": 2.0,
                     "min_samples": 5
@@ -41,19 +41,24 @@
             }
         },
         {
-            "url": "job/parallel_pipeline"
+            "url": "job/parallel_pipeline",
+            "anomaly_detection": {}
         },
         {
-            "url": "job/system_info"
+            "url": "job/system_info",
+            "anomaly_detection": {}
         },
         {
-            "url": "job/test1_pipeline"
+            "url": "job/test1_pipeline",
+            "anomaly_detection": {}
         },
         {
-            "url": "job/test2_pipeline"
+            "url": "job/test2_pipeline",
+            "anomaly_detection": {}
         },
         {
-            "url": "job/test3_pipeline"
+            "url": "job/test3_pipeline",
+            "anomaly_detection": {}
         }
     ],
   "database": {

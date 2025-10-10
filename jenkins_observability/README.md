@@ -143,7 +143,7 @@ sequenceDiagram
     Daemon->>DB: Query recent build metrics
     DB-->>Daemon: Time series data
     Daemon->>Daemon: Construct batch input
-    Daemon->>Detector: spawn via uv run<br/>(stdin: JSON)
+    Daemon->>Detector: spawn via uv run<br/>(args: --threshold 2.0 --min-samples 5)<br/>(stdin: JSON)
     Detector->>Detector: Apply algorithm
     Detector-->>Daemon: stdout: JSON results
     Daemon->>DB: Update anomaly flags
@@ -155,7 +155,7 @@ Single process invocation handles multiple pipelines simultaneously, amortizing 
 
 #### Configuration
 
-Per-pipeline anomaly detection with algorithm selection, parameter tuning, time windows, and metric targeting. Empty config disables detection for specific pipelines.
+Per-pipeline anomaly detection with algorithm selection, parameter tuning, time windows, and metric targeting. Parameters from config are passed as command line arguments to detector scripts. Empty config disables detection for specific pipelines.
 
 #### Sample Input
 
@@ -172,8 +172,7 @@ Per-pipeline anomaly detection with algorithm selection, parameter tuning, time 
         {"timestamp": "2025-10-08T11:30:00Z", "value": 47.8},
         {"timestamp": "2025-10-08T13:00:00Z", "value": 120.5}
       ]
-    }],
-    "params": {"threshold": 2.0, "min_samples": 5}
+    }]
   }]
 }
 ```
