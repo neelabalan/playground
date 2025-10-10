@@ -52,8 +52,7 @@ func (d *PythonDetector) DetectAnomalies(ctx context.Context, input BatchDetecti
 		return nil, fmt.Errorf("failed to parse output from %s: %w", d.name, err)
 	}
 	executionTime := time.Since(startTime).Milliseconds()
-	fmt.Printf("execution time: %s", executionTime)
+	fmt.Printf("execution time: %dms", executionTime)
 
 	return &output, nil
-
 }

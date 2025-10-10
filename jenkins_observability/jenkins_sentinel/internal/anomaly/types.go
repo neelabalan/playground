@@ -8,9 +8,7 @@ import (
 type AnomalyDetector interface {
 	GetName() string
 
-	DetectAnomalies(ctx context.Context, input BatchDetectionInput) *BatchDetectionOutput
-
-	SupportsMetrics(metrics []string) error
+	DetectAnomalies(ctx context.Context, input BatchDetectionInput) (*BatchDetectionOutput, error)
 }
 
 type DetectionInput struct {
