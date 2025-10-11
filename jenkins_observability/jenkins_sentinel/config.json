@@ -18,7 +18,7 @@
                     "min_samples": 5
                 },
                 "time_window_hours": 24,
-                "metrics": ["build_duration", "queue_time"]
+                "metrics": ["building_time_seconds", "waiting_time_seconds"]
             }
         },
         {
@@ -30,7 +30,7 @@
                     "min_samples": 5
                 },
                 "time_window_hours": 24,
-                "metrics": ["build_duration", "queue_time"]
+                "metrics": ["building_time_seconds", "waiting_time_seconds"]
             }
         },
         {
@@ -42,7 +42,7 @@
                     "min_samples": 5
                 },
                 "time_window_hours": 24,
-                "metrics": ["build_duration", "queue_time"]
+                "metrics": ["building_time_seconds", "waiting_time_seconds"]
             }
         },
         {

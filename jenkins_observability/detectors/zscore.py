@@ -11,7 +11,7 @@ import math
 import sys
 import time
 
-import models
+import _models
 
 
 class ZScoreDetector:
@@ -25,10 +25,10 @@ class ZScoreDetector:
 
     def detect_anomalies_for_pipeline(
         self,
-        pipeline_data: models.DetectionInput,
+        pipeline_data: _models.DetectionInput,
         threshold: float,
         min_samples: int
-    ) -> models.DetectionOutput:
+    ) -> _models.DetectionOutput:
         start_time = time.time()
         anomalies = []
         total_points = 0
@@ -51,7 +51,7 @@ class ZScoreDetector:
                 is_anomaly = z_score > threshold
 
                 if is_anomaly:
-                    anomalies.append(models.AnomalyResult(
+                    anomalies.append(_models.AnomalyResult(
                         timestamp=point.timestamp,
                         metric_name=time_series.metric_name,
                         score=z_score,
@@ -62,9 +62,9 @@ class ZScoreDetector:
 
         execution_time_ms = int((time.time() - start_time) * 1000)
 
-        return models.DetectionOutput(
+        return _models.DetectionOutput(
             anomalies=anomalies,
-            metadata=models.DetectionMetadata(
+            metadata=_models.DetectionMetadata(
                 detector_name="zscore",
                 processed_points=total_points,
                 exeuction_time_ms=execution_time_ms
@@ -78,7 +78,7 @@ def main():
     args = parser.parse_args()
 
     input_data = json.load(sys.stdin)
-    batch_input = models.BatchDetectionInput(**input_data)
+    batch_input = _models.BatchDetectionInput(**input_data)
 
     detector = ZScoreDetector()
     results = []
@@ -91,7 +91,7 @@ def main():
         )
         results.append(output)
 
-    batch_output = models.BatchDetectionOutput(results=results)
+    batch_output = _models.BatchDetectionOutput(results=results)
     print(batch_output.model_dump_json())
 
 if __name__ == "__main__":
