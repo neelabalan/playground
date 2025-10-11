@@ -30,7 +30,7 @@ func (d *PythonDetector) GetName() string {
 	return d.name
 }
 
-func (d *PythonDetector) DetectAnomalies(ctx context.Context, input BatchDetectionInput) (*BatchDetectionOutput, error) {
+func (d *PythonDetector) DetectAnomalies(ctx context.Context, input BatchDetectionInput, params map[string]string) (*BatchDetectionOutput, error) {
 	startTime := time.Now()
 
 	inputJson, err := json.Marshal(input)
@@ -38,7 +38,12 @@ func (d *PythonDetector) DetectAnomalies(ctx context.Context, input BatchDetecti
 		return nil, fmt.Errorf("failed to serialize input for %s: %w", d.name, err)
 	}
 
-	cmd := exec.CommandContext(ctx, "uv", "run", d.scriptPath)
+	args := []string{"run", d.scriptPath}
+	for key, value := range params {
+		args = append(args, fmt.Sprintf("--%s", key), value)
+	}
+
+	cmd := exec.CommandContext(ctx, "uv", args...)
 	cmd.Stdin = strings.NewReader(string(inputJson))
 
 	outputBytes, err := cmd.Output()
@@ -65,6 +70,7 @@ type PipelineAnomalyDetectionJob struct {
 	PipelineName string
 	DetectorName string
 	Input        DetectionInput
+	Params       map[string]string
 }
 
 type PipelineAnomalyDetectionResult struct {
@@ -104,7 +110,7 @@ func RunPipelineDetections(ctx context.Context, registry *DetectorRegistry, jobs
 				}
 
 				batchInput := BatchDetectionInput{Pipelines: []DetectionInput{job.Input}}
-				output, err := detector.DetectAnomalies(ctx, batchInput)
+				output, err := detector.DetectAnomalies(ctx, batchInput, job.Params)
 
 				if err != nil {
 					results[idx] = PipelineAnomalyDetectionResult{

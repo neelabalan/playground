@@ -20,9 +20,10 @@ type AnomalyProcessingConfig struct {
 }
 
 type AnomalyDetectionConfig struct {
-	Name            string   `json:"name"`
-	TimeWindowHours int      `json:"time_window_hours"`
-	Metrics         []string `json:"metrics"`
+	Name            string         `json:"name,omitempty"`
+	Params          map[string]any `json:"params,omitempty"`
+	TimeWindowHours int            `json:"time_window_hours,omitempty"`
+	Metrics         []string       `json:"metrics,omitempty"`
 }
 
 type PipelineConfig struct {

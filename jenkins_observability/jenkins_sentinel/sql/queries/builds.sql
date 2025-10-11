@@ -97,16 +97,27 @@ RETURNING *;
 -- name: DeleteQueueItem :exec
 DELETE FROM build_queue WHERE id = $1;
 
--- name: GetTimeSeriesForPipeline :many
+-- name: GetMetricTimeSeries :many
 SELECT 
-    build_start_time as timestamp,
-    building_time_seconds,
-    blocked_time_seconds,
-    buildable_time_seconds,
-    waiting_time_seconds
-FROM builds 
-WHERE pipeline_name = $1 
-AND build_start_time >= $2 
-AND status = 'success'
+    build_number,
+    build_start_time,
+    CASE sqlc.arg(metric_name)::text
+        WHEN 'building_time_seconds' THEN building_time_seconds
+        WHEN 'blocked_time_seconds' THEN blocked_time_seconds
+        WHEN 'buildable_time_seconds' THEN buildable_time_seconds
+        WHEN 'waiting_time_seconds' THEN waiting_time_seconds
+        ELSE NULL
+    END as metric_value
+FROM builds
+WHERE pipeline_name = $1
+AND build_start_time >= $2
+AND build_start_time <= $3
+AND CASE sqlc.arg(metric_name)::text
+        WHEN 'building_time_seconds' THEN building_time_seconds
+        WHEN 'blocked_time_seconds' THEN blocked_time_seconds
+        WHEN 'buildable_time_seconds' THEN buildable_time_seconds
+        WHEN 'waiting_time_seconds' THEN waiting_time_seconds
+        ELSE NULL
+    END IS NOT NULL
 ORDER BY build_start_time ASC;
 
