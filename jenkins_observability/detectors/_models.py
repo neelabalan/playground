@@ -6,6 +6,7 @@ import pydantic
 class TimeSeriesPoint(pydantic.BaseModel):
     timestamp: datetime.datetime
     value: float
+    build_number: int
 
 class MetricTimeSeries(pydantic.BaseModel):
     metric_name: str
@@ -26,6 +27,7 @@ class AnomalyResult(pydantic.BaseModel):
     threshold: float
     is_anomaly: bool
     value: float
+    build_number: int
 
 class DetectionMetadata(pydantic.BaseModel):
     detector_name: str

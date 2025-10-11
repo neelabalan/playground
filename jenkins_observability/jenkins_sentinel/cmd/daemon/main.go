@@ -288,12 +288,14 @@ func buildTimeSeriesData(ctx context.Context, queries *db.Queries, pipelineName 
 	}
 
 	points := make([]anomaly.TimeSeriesPoint, 0, len(rows))
+
 	for _, row := range rows {
 		if row.MetricValue != nil {
 			if value, ok := row.MetricValue.(float64); ok {
 				points = append(points, anomaly.TimeSeriesPoint{
-					Timestamp: row.BuildStartTime.Time,
-					Value:     value,
+					Timestamp:   row.BuildStartTime.Time,
+					Value:       value,
+					BuildNumber: row.BuildNumber,
 				})
 			}
 		}
@@ -321,6 +323,7 @@ func buildPipelineAnomalyDetectionJob(ctx context.Context, queries *db.Queries, 
 		slog.Int("time_window_hours", pipelineCfg.AnomalyDetection.TimeWindowHours))
 
 	var timeSeries []anomaly.MetricTimeSeries
+
 	for _, metricName := range pipelineCfg.AnomalyDetection.Metrics {
 		ts, err := buildTimeSeriesData(ctx, queries, pipelineName, metricName, startTime, endTime)
 		if err != nil {
@@ -409,25 +412,9 @@ func processAnomalyDetection(ctx context.Context, queries *db.Queries, registry 
 		pipelineName := result.PipelineName
 
 		for _, anomalyResult := range result.Output.Anomalies {
-			var buildNumber *int32
-			rows, err := queries.GetMetricTimeSeries(ctx, db.GetMetricTimeSeriesParams{
-				PipelineName:     pipelineName,
-				BuildStartTime:   pgtype.Timestamptz{Time: anomalyResult.Timestamp.Add(-time.Minute), Valid: true},
-				BuildStartTime_2: pgtype.Timestamptz{Time: anomalyResult.Timestamp.Add(time.Minute), Valid: true},
-				MetricName:       anomalyResult.MetricName,
-			})
-			if err == nil && len(rows) > 0 {
-				buildNumber = &rows[0].BuildNumber
-			}
-
-			var buildNumParam pgtype.Int4
-			if buildNumber != nil {
-				buildNumParam = pgtype.Int4{Int32: *buildNumber, Valid: true}
-			}
-
-			_, err = queries.CreateAnomalyScore(ctx, db.CreateAnomalyScoreParams{
+			_, err := queries.CreateAnomalyScore(ctx, db.CreateAnomalyScoreParams{
 				PipelineName: pipelineName,
-				BuildNumber:  buildNumParam,
+				BuildNumber:  pgtype.Int4{Int32: anomalyResult.BuildNumber, Valid: true},
 				MetricName:   anomalyResult.MetricName,
 				DetectorName: result.DetectorName,
 				Timestamp:    pgtype.Timestamptz{Time: anomalyResult.Timestamp, Valid: true},

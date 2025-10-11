@@ -57,7 +57,8 @@ class ZScoreDetector:
                         score=z_score,
                         threshold=threshold,
                         is_anomaly=is_anomaly,
-                        value=point.value
+                        value=point.value,
+                        build_number=point.build_number
                     ))
 
         execution_time_ms = int((time.time() - start_time) * 1000)

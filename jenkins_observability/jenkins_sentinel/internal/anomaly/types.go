@@ -27,8 +27,9 @@ type BatchDetectionOutput struct {
 }
 
 type TimeSeriesPoint struct {
-	Timestamp time.Time `json:"timestamp"`
-	Value     float64   `json:"value"`
+	Timestamp   time.Time `json:"timestamp"`
+	Value       float64   `json:"value"`
+	BuildNumber int32     `json:"build_number"`
 }
 
 type MetricTimeSeries struct {
@@ -42,12 +43,13 @@ type DetectionOutput struct {
 }
 
 type AnomalyResult struct {
-	Timestamp  time.Time `json:"timestamp"`
-	MetricName string    `json:"metric_name"`
-	Score      float64   `json:"score"`
-	Threshold  float64   `json:"threshold"`
-	IsAnomaly  bool      `json:"is_anomaly"`
-	Value      float64   `json:"value"`
+	Timestamp   time.Time `json:"timestamp"`
+	MetricName  string    `json:"metric_name"`
+	Score       float64   `json:"score"`
+	Threshold   float64   `json:"threshold"`
+	IsAnomaly   bool      `json:"is_anomaly"`
+	Value       float64   `json:"value"`
+	BuildNumber int32     `json:"build_number"`
 }
 
 type DetectionMetadata struct {
