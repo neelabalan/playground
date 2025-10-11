@@ -502,7 +502,9 @@ func main() {
 		slog.Error("failed to process queued builds", slog.Any("error", err))
 	}
 
-	detectorRegistry, err := anomaly.NewDetectorRegistry("detectors")
+	detectorDir := config.AnomalyProcessing.DetectorDirectory
+
+	detectorRegistry, err := anomaly.NewDetectorRegistry(detectorDir)
 	if err != nil {
 		slog.Error("failed to initialize anomaly detector registry", slog.Any("error", err))
 	} else {

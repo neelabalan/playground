@@ -5,7 +5,8 @@
     "base_url": "http://localhost:8080/",
     "anomaly_processing": {
         "max_parallel": 3,
-        "batch_size": 10
+        "batch_size": 10,
+        "detector_directory": "../detectors"
     },
     "pipelines": [
         {

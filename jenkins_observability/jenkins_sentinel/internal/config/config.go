@@ -15,8 +15,9 @@ type DatabaseConfig struct {
 }
 
 type AnomalyProcessingConfig struct {
-	MaxParallel int `json:"max_parallel"`
-	BatchSize   int `json:"batch_size"`
+	MaxParallel       int    `json:"max_parallel"`
+	BatchSize         int    `json:"batch_size"`
+	DetectorDirectory string `json:"detector_directory"`
 }
 
 type AnomalyDetectionConfig struct {
