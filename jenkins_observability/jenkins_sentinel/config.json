@@ -15,7 +15,7 @@
                 "name": "zscore",
                 "params": {
                     "threshold": 1.8,
-                    "min_samples": 5
+                    "min-samples": 5
                 },
                 "time_window_hours": 24,
                 "metrics": ["building_time_seconds", "waiting_time_seconds"]
@@ -27,7 +27,7 @@
                 "name": "zscore",
                 "params": {
                     "threshold": 2.0,
-                    "min_samples": 5
+                    "min-samples": 5
                 },
                 "time_window_hours": 24,
                 "metrics": ["building_time_seconds", "waiting_time_seconds"]
@@ -39,7 +39,7 @@
                 "name": "zscore",
                 "params": {
                     "threshold": 2.0,
-                    "min_samples": 5
+                    "min-samples": 5
                 },
                 "time_window_hours": 24,
                 "metrics": ["building_time_seconds", "waiting_time_seconds"]

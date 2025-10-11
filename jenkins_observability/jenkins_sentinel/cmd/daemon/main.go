@@ -349,10 +349,19 @@ func buildPipelineAnomalyDetectionJob(ctx context.Context, queries *db.Queries, 
 		TimeSeries:      timeSeries,
 	}
 
+	var params map[string]string
+	if pipelineCfg.AnomalyDetection.Params != nil {
+		params = make(map[string]string)
+		for key, value := range pipelineCfg.AnomalyDetection.Params {
+			params[key] = fmt.Sprintf("%v", value)
+		}
+	}
+
 	return &anomaly.PipelineAnomalyDetectionJob{
 		PipelineName: pipelineName,
 		DetectorName: pipelineCfg.AnomalyDetection.Name,
 		Input:        detectionInput,
+		Params:       params,
 	}, nil
 }
 
