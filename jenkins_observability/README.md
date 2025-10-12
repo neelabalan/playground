@@ -128,6 +128,81 @@ flowchart TD
 - Multi-jenkins support provides unified dashboard across different environments with performance comparison capabilities
 - Data lifecycle management automates retention policies for historical build data and archival to object storage with parquet format
   
+### Anomaly Detection Design
+
+#### Architecture
+
+Go daemon orchestrates detection while Python scripts execute statistical algorithms via subprocess calls with JSON I/O.
+
+```mermaid
+sequenceDiagram
+    participant Daemon as Go Daemon
+    participant DB as PostgreSQL
+    participant Detector as Python Detector
+    
+    Daemon->>DB: Query recent build metrics
+    DB-->>Daemon: Time series data
+    Daemon->>Daemon: Construct batch input
+    Daemon->>Detector: spawn via uv run<br/>(args: --threshold 2.0 --min-samples 5)<br/>(stdin: JSON)
+    Detector->>Detector: Apply algorithm
+    Detector-->>Daemon: stdout: JSON results
+    Daemon->>DB: Update anomaly flags
+```
+
+#### Why Batching
+
+Single process invocation handles multiple pipelines simultaneously, amortizing Python interpreter startup cost across all detections. Reduces context switching and enables efficient resource utilization during periodic polling cycles.
+
+#### Configuration
+
+Per-pipeline anomaly detection with algorithm selection, parameter tuning, time windows, and metric targeting. Parameters from config are passed as command line arguments to detector scripts. Empty config disables detection for specific pipelines.
+
+#### Sample Input
+
+```json
+{
+  "pipelines": [{
+    "pipeline_name": "job/ecgo_docker",
+    "time_window_hours": 24,
+    "metrics": ["build_duration", "queue_time"],
+    "time_series": [{
+      "metric_name": "build_duration",
+      "points": [
+        {"timestamp": "2025-10-08T10:00:00Z", "value": 45.2},
+        {"timestamp": "2025-10-08T11:30:00Z", "value": 47.8},
+        {"timestamp": "2025-10-08T13:00:00Z", "value": 120.5}
+      ]
+    }]
+  }]
+}
+```
+
+#### Sample Output
+
+```json
+{
+  "results": [{
+    "anomalies": [{
+      "timestamp": "2025-10-08T13:00:00Z",
+      "metric_name": "build_duration",
+      "score": 3.2,
+      "threshold": 2.0,
+      "is_anomaly": true,
+      "value": 120.5
+    }],
+    "metadata": {
+      "detector_name": "detector_script_name",
+      "processed_points": 48,
+      "execution_time_ms": 12
+    }
+  }]
+}
+```
+
+#### Design Rationale
+
+Separation of concerns: Go handles orchestration and persistence, Python handles numerical computation. Pluggable detector architecture via filesystem convention. Type-safe contracts enforced through Pydantic/Go structs. Subprocess isolation prevents detector crashes from affecting daemon stability.
+
 ### Business impact
 - Developer productivity increased through faster problem identification, reduced MTTR (Mean time to resolution) for build failures, elimination of debugging guesswork, and decreased context switching overhead
 - Overall pipeline success rate improvement through proactive anomaly detection

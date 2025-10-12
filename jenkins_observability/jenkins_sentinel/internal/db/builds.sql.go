@@ -373,6 +373,69 @@ func (q *Queries) GetLatestBuilds(ctx context.Context, limit int32) ([]Build, er
 	return items, nil
 }
 
+const getMetricTimeSeries = `-- name: GetMetricTimeSeries :many
+SELECT 
+    build_number,
+    build_start_time,
+    CASE $4::text
+        WHEN 'building_time_seconds' THEN building_time_seconds
+        WHEN 'blocked_time_seconds' THEN blocked_time_seconds
+        WHEN 'buildable_time_seconds' THEN buildable_time_seconds
+        WHEN 'waiting_time_seconds' THEN waiting_time_seconds
+        ELSE NULL
+    END as metric_value
+FROM builds
+WHERE pipeline_name = $1
+AND build_start_time >= $2
+AND build_start_time <= $3
+AND CASE $4::text
+        WHEN 'building_time_seconds' THEN building_time_seconds
+        WHEN 'blocked_time_seconds' THEN blocked_time_seconds
+        WHEN 'buildable_time_seconds' THEN buildable_time_seconds
+        WHEN 'waiting_time_seconds' THEN waiting_time_seconds
+        ELSE NULL
+    END IS NOT NULL
+ORDER BY build_start_time ASC
+`
+
+type GetMetricTimeSeriesParams struct {
+	PipelineName     string             `json:"pipeline_name"`
+	BuildStartTime   pgtype.Timestamptz `json:"build_start_time"`
+	BuildStartTime_2 pgtype.Timestamptz `json:"build_start_time_2"`
+	MetricName       string             `json:"metric_name"`
+}
+
+type GetMetricTimeSeriesRow struct {
+	BuildNumber    int32              `json:"build_number"`
+	BuildStartTime pgtype.Timestamptz `json:"build_start_time"`
+	MetricValue    interface{}        `json:"metric_value"`
+}
+
+func (q *Queries) GetMetricTimeSeries(ctx context.Context, arg GetMetricTimeSeriesParams) ([]GetMetricTimeSeriesRow, error) {
+	rows, err := q.db.Query(ctx, getMetricTimeSeries,
+		arg.PipelineName,
+		arg.BuildStartTime,
+		arg.BuildStartTime_2,
+		arg.MetricName,
+	)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []GetMetricTimeSeriesRow
+	for rows.Next() {
+		var i GetMetricTimeSeriesRow
+		if err := rows.Scan(&i.BuildNumber, &i.BuildStartTime, &i.MetricValue); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getPendingQueueItems = `-- name: GetPendingQueueItems :many
 SELECT id, job_path, build_number, last_attempt_at, error_message, collection_time, collection_status, created_at, updated_at FROM build_queue 
 WHERE collection_status = 'pending' 

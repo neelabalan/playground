@@ -1,18 +1,71 @@
 {
-  "username": "jenkins",
-  "token": "",
-  "password": "admin",
-  "base_url": "http://localhost:8080/",
-  "pipelines": [
-    "job/ecgo_docker",
-    "job/file_operations/",
-    "job/hello_world",
-    "job/parallel_pipeline",
-    "job/system_info",
-    "job/test1_pipeline",
-    "job/test2_pipeline",
-    "job/test3_pipeline"
-  ],
+    "username": "jenkins",
+    "token": "",
+    "password": "admin",
+    "base_url": "http://localhost:8080/",
+    "anomaly_processing": {
+        "max_parallel": 3,
+        "batch_size": 10,
+        "detector_directory": "../detectors"
+    },
+    "pipelines": [
+        {
+            "url": "job/ecgo_docker",
+            "anomaly_detection": {
+                "name": "zscore",
+                "params": {
+                    "threshold": 1.8,
+                    "min-samples": 5
+                },
+                "time_window_hours": 24,
+                "metrics": ["building_time_seconds", "waiting_time_seconds"]
+            }
+        },
+        {
+            "url": "job/file_operations/",
+            "anomaly_detection": {
+                "name": "zscore",
+                "params": {
+                    "threshold": 2.0,
+                    "min-samples": 5
+                },
+                "time_window_hours": 24,
+                "metrics": ["building_time_seconds", "waiting_time_seconds"]
+            }
+        },
+        {
+            "url": "job/hello_world",
+            "anomaly_detection": {
+                "name": "zscore",
+                "params": {
+                    "threshold": 2.0,
+                    "min-samples": 5
+                },
+                "time_window_hours": 24,
+                "metrics": ["building_time_seconds", "waiting_time_seconds"]
+            }
+        },
+        {
+            "url": "job/parallel_pipeline",
+            "anomaly_detection": {}
+        },
+        {
+            "url": "job/system_info",
+            "anomaly_detection": {}
+        },
+        {
+            "url": "job/test1_pipeline",
+            "anomaly_detection": {}
+        },
+        {
+            "url": "job/test2_pipeline",
+            "anomaly_detection": {}
+        },
+        {
+            "url": "job/test3_pipeline",
+            "anomaly_detection": {}
+        }
+    ],
   "database": {
     "host": "localhost",
     "port": 5432,

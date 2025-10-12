@@ -296,7 +296,8 @@ async def export_command(args):
     ) as jenkins_client:
         exporter = JenkinsBuildExporter(jenkins_client, args.workers)
 
-        for pipeline_path in config['pipelines']:
+        for pipeline in config['pipelines']:
+            pipeline_path = pipeline['url']
             try:
                 page_size = getattr(args, 'page_size', None)
                 await exporter.export_pipeline_builds(pipeline_path, args.output, page_size)
@@ -326,7 +327,8 @@ async def execute_job_schedule(args):
         total_triggered = 0
         total_queued = 0
 
-        for pipeline_path in config['pipelines']:
+        for pipeline in config['pipelines']:
+            pipeline_path = pipeline['url']
             job_name = pipeline_path.replace('job/', '')
 
             if job_name in job_trigger_counts:
@@ -373,7 +375,8 @@ async def list_command(args):
             for build_num in builds:
                 print(f'  build number: {build_num}')
         else:
-            for pipeline_path in config['pipelines']:
+            for pipeline in config['pipelines']:
+                pipeline_path = pipeline['url']
                 job_name = pipeline_path.replace('job/', '')
                 builds = await list_job_builds(jenkins_client, job_name)
                 print(f"builds for job '{job_name}': {len(builds)} builds")
