@@ -68,7 +68,7 @@ class ZScoreDetector:
             metadata=_models.DetectionMetadata(
                 detector_name="zscore",
                 processed_points=total_points,
-                exeuction_time_ms=execution_time_ms
+                execution_time_ms=execution_time_ms
             )
         )
 

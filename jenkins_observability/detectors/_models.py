@@ -32,7 +32,7 @@ class AnomalyResult(pydantic.BaseModel):
 class DetectionMetadata(pydantic.BaseModel):
     detector_name: str
     processed_points: int
-    exeuction_time_ms: int
+    execution_time_ms: int
 
 class DetectionOutput(pydantic.BaseModel):
     anomalies: list[AnomalyResult]
