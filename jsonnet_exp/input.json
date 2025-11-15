@@ -1,0 +1,5 @@
+{
+  "numbers": [6, 27, 19, 42],
+  "title": "Collatz Analysis",
+  "description": "Computing Collatz sequences for multiple numbers"
+}
