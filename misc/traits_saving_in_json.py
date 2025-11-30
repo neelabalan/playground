@@ -135,8 +135,6 @@ kryptohaus.residents[1].pgp_key_id = '60F3A15D'
 kryptohaus.computer.model = 'Lidl Longitude'
 print(kryptohaus)
 
-print(
-    '\nAfter a political turnover, Alice and Bob can reintegrate into their ' 'former life (except from the computer):'
-)
+print('\nAfter a political turnover, Alice and Bob can reintegrate into their former life (except from the computer):')
 kryptohaus.load_traits('kryptohaus.json')
 print(kryptohaus.__str__())

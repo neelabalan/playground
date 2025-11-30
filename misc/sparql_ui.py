@@ -1,9 +1,13 @@
 import json
+
 from rdflib import Graph
 from textual import on
-from textual.app import App, ComposeResult
+from textual.app import App
+from textual.app import ComposeResult
 from textual.containers import Container
-from textual.widgets import Input, Button, TextArea
+from textual.widgets import Button
+from textual.widgets import Input
+from textual.widgets import TextArea
 
 
 def execute_query(ttl_file, sparql_query):

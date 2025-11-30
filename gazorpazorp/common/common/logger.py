@@ -4,6 +4,7 @@ from logging.handlers import RotatingFileHandler
 
 DEFAULT_LOG_FILE = os.path.join(os.path.dirname(__file__), 'app.log')
 
+
 def get_logger(name, log_file=DEFAULT_LOG_FILE, level=logging.INFO):
     """Get a logger with the specified name, log file, and level. Uses a default log file if not provided."""
 

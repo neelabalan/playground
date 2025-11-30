@@ -27,8 +27,8 @@ with open(fullpath) as book:
     jsondict = json.loads(book.read())
     blist = jsondict['roots']['bookmark_bar']['children']
     for element in blist:
-        line.append(f"{get_time(int(element.get('date_added')))}")
-        line.append(f"[{element.get('name')}]({element.get('url')})")
+        line.append(f'{get_time(int(element.get("date_added")))}')
+        line.append(f'[{element.get("name")}]({element.get("url")})')
         md.append(line)
         line = []
 

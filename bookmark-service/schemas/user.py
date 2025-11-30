@@ -1,6 +1,5 @@
 from marshmallow import Schema
 from marshmallow import fields
-
 from utils import hash_password
 
 
@@ -11,7 +10,7 @@ class UserSchema(Schema):
     id = fields.Int(dump_only=True)
     username = fields.String(required=True)
     email = fields.Email(required=True)
-    password = fields.Method(required=True, deserialize="load_password")
+    password = fields.Method(required=True, deserialize='load_password')
 
     created_at = fields.DateTime(dump_only=True)
     updated_at = fields.DateTime(dump_only=True)

@@ -1,12 +1,11 @@
+from extensions import db
 from sqlalchemy import asc
 from sqlalchemy import desc
 from sqlalchemy import or_
 
-from extensions import db
-
 
 class Bookmark(db.Model):
-    __tablename__ = "recipe"
+    __tablename__ = 'recipe'
 
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.String(1000), nullable=False)
@@ -22,14 +21,13 @@ class Bookmark(db.Model):
         onupdate=db.func.now(),
     )
 
-    user_id = db.Column(db.Integer(), db.ForeignKey("user.id"))
+    user_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
 
     @classmethod
     def get_all_bookmarks(cls, q, page, per_page, sort, order):
+        keyword = '%{keyword}%'.format(keyword=q)
 
-        keyword = "%{keyword}%".format(keyword=q)
-
-        if order == "asc":
+        if order == 'asc':
             sort_logic = asc(getattr(cls, sort))
         else:
             sort_logic = desc(getattr(cls, sort))

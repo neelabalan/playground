@@ -31,7 +31,7 @@ def generate_class_code(schema: dict[str, Any], model_name: str) -> str:
             continue
 
         if attr_properties['type'] == 'object':
-            nested_model_name = f"{model_name}{attr.replace('_', ' ').title().replace(' ', '')}"
+            nested_model_name = f'{model_name}{attr.replace("_", " ").title().replace(" ", "")}'
             nested_classes += generate_class_code(attr_properties['properties'], nested_model_name)[1]
             pydantic_type = nested_model_name
         else:

@@ -1,10 +1,9 @@
 from typing import List
 
-from fastapi import FastAPI
-from pydantic import BaseModel
-
 from common.load_data import load_characters
 from common.logger import get_logger
+from fastapi import FastAPI
+from pydantic import BaseModel
 
 logger = get_logger(__name__)
 
@@ -20,7 +19,7 @@ class Character(BaseModel):
     species: str
 
 
-@app.get("/characters", response_model=List[Character])
+@app.get('/characters', response_model=List[Character])
 def get_characters():
-    logger.info("Getting characters...")
+    logger.info('Getting characters...')
     return characters

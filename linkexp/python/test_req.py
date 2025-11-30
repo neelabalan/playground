@@ -22,7 +22,7 @@ def get_all(links: list[str]) -> list[dict[str, str]]:
     for count, url in enumerate(links):
         result = fetch(url)
         data.append({'url': url, 'status_code': result})
-        print(f'{count+1}={url}')
+        print(f'{count + 1}={url}')
     return data
 
 

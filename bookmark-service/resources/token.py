@@ -8,7 +8,6 @@ from flask_jwt_extended import get_raw_jwt
 from flask_jwt_extended import jwt_refresh_token_required
 from flask_jwt_extended import jwt_required
 from flask_restx import Resource
-
 from models.user import User
 from utils import check_password
 
@@ -17,23 +16,22 @@ black_list = set()
 
 class TokenResource(Resource):
     def post(self):
-
         json_data = request.get_json()
 
-        email = json_data.get("email")
-        password = json_data.get("password")
+        email = json_data.get('email')
+        password = json_data.get('password')
 
         user = User.get_by_email(email=email)
 
         if not user or not check_password(password, user.password):
-            return {"message": "username or password is incorrect"}, HTTPStatus.UNAUTHORIZED
+            return {'message': 'username or password is incorrect'}, HTTPStatus.UNAUTHORIZED
 
         access_token = create_access_token(identity=user.id, fresh=True)
         refresh_token = create_refresh_token(identity=user.id)
 
         return {
-            "access_token": access_token,
-            "refresh_token": refresh_token,
+            'access_token': access_token,
+            'refresh_token': refresh_token,
         }, HTTPStatus.OK
 
 
@@ -44,14 +42,14 @@ class RefreshResource(Resource):
 
         token = create_access_token(identity=current_user, fresh=False)
 
-        return {"token": token}, HTTPStatus.OK
+        return {'token': token}, HTTPStatus.OK
 
 
 class RevokeResource(Resource):
     @jwt_required
     def post(self):
-        jti = get_raw_jwt()["jti"]
+        jti = get_raw_jwt()['jti']
 
         black_list.add(jti)
 
-        return {"message": "Successfully logged out"}, HTTPStatus.OK
+        return {'message': 'Successfully logged out'}, HTTPStatus.OK

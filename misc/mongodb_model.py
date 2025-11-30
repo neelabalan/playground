@@ -1,96 +1,72 @@
-from pymongo import Connection
-from bson import ObjectId
-from itertools import imap
+import typing
+
+import bson
+import pymongo
+import pymongo.collection
 
 
 class Model(dict):
-    """
-    A simple model that wraps mongodb document
-    """
+    collection: typing.ClassVar[pymongo.collection.Collection]
+
     __getattr__ = dict.get
     __delattr__ = dict.__delitem__
     __setattr__ = dict.__setitem__
 
-    def save(self):
+    def save(self) -> None:
         if not self._id:
-            self.collection.insert(self)
+            result = self.collection.insert_one(self)
+            self['_id'] = result.inserted_id
         else:
-            self.collection.update(
-                { "_id": ObjectId(self._id) }, self)
+            self.collection.replace_one({'_id': bson.ObjectId(self._id)}, self)
 
-    def reload(self):
+    def reload(self) -> None:
         if self._id:
-            self.update(self.collection\
-                    .find_one({"_id": ObjectId(self._id)}))
+            doc = self.collection.find_one({'_id': bson.ObjectId(self._id)})
+            if doc:
+                self.update(doc)
 
-    def remove(self):
+    def remove(self) -> None:
         if self._id:
-            self.collection.remove({"_id": ObjectId(self._id)})
+            self.collection.delete_one({'_id': bson.ObjectId(self._id)})
             self.clear()
 
+    @classmethod
+    def find_all(cls) -> list[typing.Self]:
+        return [cls(doc) for doc in cls.collection.find()]
 
-# ------------------------------
-# Here is the example model
-# ------------------------------
+    @classmethod
+    def find_by_id(cls, id: str) -> typing.Self | None:
+        doc = cls.collection.find_one({'_id': bson.ObjectId(id)})
+        return cls(doc) if doc else None
+
 
 class Document(Model):
-    collection = Connection()["test_database"]["test_collections"]
+    collection: typing.ClassVar[pymongo.collection.Collection] = pymongo.MongoClient()['test_database'][
+        'test_collections'
+    ]
 
     @property
-    def keywords(self):
-        return self.title.split()
+    def keywords(self) -> list[str]:
+        return self.title.split() if self.title else []
 
 
-# ------------------------------
-# Mapping documents to the model
-# ------------------------------
+if __name__ == '__main__':
+    documents = Document.find_all()
+    for document in documents:
+        print(document.title, document.keywords)
 
-documents = imap(Document, Document.collection.find())
+    document = Document({'title': 'test document', 'slug': 'test-document'})
+    print(document._id)
+    document.save()
+    print(document._id)
 
-# that's all
+    document = Document.find_by_id('50d3cb0068c0064a21e76be4')
+    if document:
+        print(document.title)
 
-for document in documents:
-    print document.title, document.keywords
+        document.title = 'test document 2'
+        document.save()
+        print(document.title)
 
-
-# ------------------------------
-# Creating new document
-# ------------------------------
-
-document = Document({
-    "title": "test document",
-    "slug": "test-document"
-})
-
-print document._id # none
-document.save()
-print document._id # "50d3cb0068c0064a21e76be4"
-
-# -------------------------
-# Getting a single document
-# -------------------------
-
-document = Document({
-    "_id": "50d3cb0068c0064a21e76be4"
-})
-
-print document.title # None
-document.reload()
-print document.title # "test document"
-
-# -----------------
-# Updating document
-# -----------------
-
-document.title = "test document 2"
-document.save()
-print document.title # "test document 2"
-document.reload()
-print document.title # "test document 2"
-
-# -----------------
-# Removing document
-# -----------------
-
-document.remove()
-print document # {}
+        document.remove()
+        print(document)

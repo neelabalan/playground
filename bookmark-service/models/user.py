@@ -2,7 +2,7 @@ from extensions import db
 
 
 class User(db.Model):
-    __tablename__ = "user"
+    __tablename__ = 'user'
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), nullable=False, unique=True)
@@ -17,7 +17,7 @@ class User(db.Model):
         onupdate=db.func.now(),
     )
 
-    bookmarks = db.relationship("Bookmark", backref="user")
+    bookmarks = db.relationship('Bookmark', backref='user')
 
     @classmethod
     def get_by_username(cls, username):

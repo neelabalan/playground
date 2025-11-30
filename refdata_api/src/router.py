@@ -1,15 +1,16 @@
-import pandas as pd
-from fastapi import Request
-from fastapi import APIRouter
-from model import Query
-from functools import cache
-from model import ReferenceDataStore
 import json
+from functools import cache
 
+import pandas as pd
+from fastapi import APIRouter
+from fastapi import Request
+from model import Query
+from model import ReferenceDataStore
 
 api = APIRouter()
 reference_data_store = ReferenceDataStore()
 reference_data_store.initialize()
+
 
 @cache
 def get_reference_data(reference_data):
@@ -18,15 +19,17 @@ def get_reference_data(reference_data):
     print(df.head())
     return df
 
+
 @api.post('/reference/{reference_data}')
 async def api_reference(reference_data, request: Query):
     df = get_reference_data(reference_data)
     return df.query(request.query).to_dict('records')
 
+
 @api.get('/reference_list/{reference_data}')
 async def api_reference_list(reference_data):
     df = get_reference_data(reference_data)
-    df = pd.DataFrame({'column':df.dtypes.index, 'type':df.dtypes.values})
+    df = pd.DataFrame({'column': df.dtypes.index, 'type': df.dtypes.values})
     return json.loads(df.to_json(default_handler=str, orient='records'))
 
 

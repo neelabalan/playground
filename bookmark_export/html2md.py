@@ -20,7 +20,7 @@ with open(inputfile) as html:
     for dt in soup.find_all('a'):
         time = datetime.fromtimestamp(int(dt.get('add_date'))).strftime('%c')
         line.append(f'{time}')
-        line.append(f"[{dt.text}]({dt.get('href')})")
+        line.append(f'[{dt.text}]({dt.get("href")})')
         md.append(line)
         line = []
 

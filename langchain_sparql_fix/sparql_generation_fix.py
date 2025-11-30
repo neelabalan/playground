@@ -48,7 +48,7 @@ def content_str(content: Union[str, list, None]) -> str:
         elif item['type'] == 'image_url':
             rst += '<image>'
         else:
-            raise ValueError(f"Wrong content format: unknown type {item['type']} within the content")
+            raise ValueError(f'Wrong content format: unknown type {item["type"]} within the content')
     return rst
 
 

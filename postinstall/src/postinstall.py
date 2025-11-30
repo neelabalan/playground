@@ -1,20 +1,21 @@
+import os
+import shutil
 import subprocess
 import sys
-import os
+
 import toml
-import shutil
 from rich.console import Console
 
 console = Console()
 
 
 def are_all_commands_valid(config):
-    '''
+    """
     args (dict) - config
     returns (bool, list)
         - True if atleast one command is found in PATH
         - the commands not found in PATH
-    '''
+    """
     commands_not_found = list()
     for item in config.values():
         command = item.get('dependent')
@@ -30,10 +31,10 @@ def get_commands(package_info):
 
 
 def execute_commands(config):
-    '''
+    """
     args (dict) - config
     returns (None)
-    '''
+    """
     for item in config:
         commands = get_commands(config[item])
         with console.status('[bold green]Installing {} packages...'.format()) as status:
@@ -47,10 +48,10 @@ def execute_commands(config):
 
 
 def parse_config(path):
-    '''
+    """
     args (str) - path
     return (dict) - config
-    '''
+    """
     try:
         config = toml.load(path)
     except:
@@ -79,11 +80,7 @@ def run():
     config = parse_config(path)
     proceed_further, invalid_commands = are_all_commands_valid(config)
     if proceed_further:
-        console.print(
-            'The commands {} are not found in PATH or not installed'.format(
-                str(invalid_commands)
-            )
-        )
+        console.print('The commands {} are not found in PATH or not installed'.format(str(invalid_commands)))
         if proceed_further:
             console.print('Would like to proceed further with the installation (y/n) ')
             choice = input()
@@ -92,9 +89,7 @@ def run():
             else:
                 sys.exit('exiting program')
     else:
-        console.print(
-            'All of the given commands are not found in PATH or is not installed'
-        )
+        console.print('All of the given commands are not found in PATH or is not installed')
 
 
 if __name__ == '__main__':

@@ -1,13 +1,12 @@
-from flask import Flask
-from flask_migrate import Migrate
-from flask_restx import Api
-from loguru import logger
-
 # from config import AppConfig
 from extensions import cache
 from extensions import db
 from extensions import jwt
 from extensions import limiter
+from flask import Flask
+from flask_migrate import Migrate
+from flask_restx import Api
+from loguru import logger
 from resources.bookmark import BookmarkListResource
 from resources.bookmark import BookmarkResource
 from resources.token import RefreshResource
@@ -21,7 +20,7 @@ from resources.user import UserListResource
 from resources.user import UserResource
 
 app = Flask(__name__)
-app.config.from_object("config.AppConfig")
+app.config.from_object('config.AppConfig')
 
 
 def create_app():
@@ -40,28 +39,28 @@ def register_extensions(app):
 
     @jwt.token_in_blacklist_loader
     def check_if_token_in_blacklist(decrypted_token):
-        jti = decrypted_token["jti"]
+        jti = decrypted_token['jti']
         return jti in black_list
 
 
 def register_resources(app):
     api = Api(app)
 
-    api.add_resource(UserListResource, "/users")
-    api.add_resource(UserActivateResource, "/users/activate/<string:token>")
-    api.add_resource(UserResource, "/users/<string:username>")
-    api.add_resource(UserBookmarkListResource, "/users/<string:username>/bookmarks")
+    api.add_resource(UserListResource, '/users')
+    api.add_resource(UserActivateResource, '/users/activate/<string:token>')
+    api.add_resource(UserResource, '/users/<string:username>')
+    api.add_resource(UserBookmarkListResource, '/users/<string:username>/bookmarks')
 
-    api.add_resource(MeResource, "/me")
+    api.add_resource(MeResource, '/me')
 
-    api.add_resource(TokenResource, "/token")
-    api.add_resource(RefreshResource, "/refresh")
-    api.add_resource(RevokeResource, "/revoke")
+    api.add_resource(TokenResource, '/token')
+    api.add_resource(RefreshResource, '/refresh')
+    api.add_resource(RevokeResource, '/revoke')
 
-    api.add_resource(BookmarkListResource, "/bookmarks")
-    api.add_resource(BookmarkResource, "/bookmarks/<int:bookmark_id>")
+    api.add_resource(BookmarkListResource, '/bookmarks')
+    api.add_resource(BookmarkResource, '/bookmarks/<int:bookmark_id>')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app = create_app()
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host='0.0.0.0', port=5000)
