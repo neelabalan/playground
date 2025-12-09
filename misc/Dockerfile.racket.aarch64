@@ -1,0 +1,54 @@
+FROM almalinux:9 AS builder
+
+ARG RACKET_VERSION=8.17
+
+RUN dnf install -y --allowerasing \
+    gcc \
+    gcc-c++ \
+    make \
+    libffi-devel \
+    openssl-devel \
+    curl \
+    ca-certificates \
+    sqlite \
+    sqlite-devel \
+    cairo-devel \
+    pango-devel \
+    libjpeg-turbo-devel \
+    libpng-devel \
+    glib2-devel \
+    tar \
+    gzip \
+    && dnf clean all
+
+RUN curl -L --retry 5 --retry-delay 3 --retry-max-time 900 -C - -o racket-src.tar.gz \
+    https://download.racket-lang.org/installers/${RACKET_VERSION}/racket-${RACKET_VERSION}-src.tgz \
+    && tar xzf racket-src.tar.gz \
+    && cd racket-${RACKET_VERSION}/src \
+    && ./configure --prefix=/usr/local --enable-arm64 \
+    && make -j$(nproc) \
+    && make install \
+    && cd ../.. \
+    && rm -rf racket-${RACKET_VERSION} racket-src.tar.gz
+
+
+FROM almalinux:9
+
+RUN dnf install -y \
+    libffi \
+    openssl-libs \
+    sqlite \
+    ca-certificates \
+    cairo \
+    pango \
+    libjpeg-turbo \
+    libpng \
+    glib2 \
+    libedit \
+    && dnf clean all
+
+COPY --from=builder /usr/local /usr/local
+
+RUN racket --version
+
+CMD ["racket"]
