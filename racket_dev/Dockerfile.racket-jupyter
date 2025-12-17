@@ -9,7 +9,11 @@ RUN dnf install -y epel-release \
     zeromq-devel \
     tar \
     gzip \
+    python3.11 \
+    python3.11-pip \
     && dnf clean all
+
+RUN python3.11 -m pip install --no-cache-dir ipykernel
 
 RUN raco pkg install --auto iracket \
     && raco iracket install
