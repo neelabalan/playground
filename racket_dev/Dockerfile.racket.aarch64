@@ -1,6 +1,7 @@
 FROM almalinux:9 AS builder
 
 ARG RACKET_VERSION=8.17
+ARG TARGETARCH=arm64
 
 RUN dnf install -y --allowerasing \
     gcc \
@@ -25,7 +26,11 @@ RUN curl -L --retry 5 --retry-delay 3 --retry-max-time 900 -C - -o racket-src.ta
     https://download.racket-lang.org/installers/${RACKET_VERSION}/racket-${RACKET_VERSION}-src.tgz \
     && tar xzf racket-src.tar.gz \
     && cd racket-${RACKET_VERSION}/src \
-    && ./configure --prefix=/usr/local --enable-arm64 \
+    && if [ "${TARGETARCH}" = "arm64" ]; then \
+        ./configure --prefix=/usr/local --enable-arm64; \
+       else \
+        ./configure --prefix=/usr/local; \
+       fi \
     && make -j$(nproc) \
     && make install \
     && cd ../.. \

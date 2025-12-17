@@ -1,0 +1,34 @@
+ARG RACKET_VERSION=8.17
+
+FROM racket:${RACKET_VERSION}
+
+ARG VSCODE_SERVER_VERSION=latest
+
+RUN dnf install -y \
+    zeromq-devel \
+    tar \
+    gzip \
+    && dnf clean all
+
+RUN raco pkg install --auto iracket \
+    && raco iracket install
+
+RUN ARCH=$(uname -m | sed 's/aarch64/arm64/;s/x86_64/x64/') \
+    && if [ "${VSCODE_SERVER_VERSION}" = "latest" ]; then \
+        COMMIT_ID=$(curl -s https://update.code.visualstudio.com/api/commits/stable/server-linux-${ARCH} | head -n 1); \
+       else \
+        COMMIT_ID="${VSCODE_SERVER_VERSION}"; \
+       fi \
+    && mkdir -p /root/.vscode-server/bin/${COMMIT_ID} \
+    && curl -L "https://update.code.visualstudio.com/commit:${COMMIT_ID}/server-linux-${ARCH}/stable" -o vscode-server.tar.gz \
+    && tar xzf vscode-server.tar.gz -C /root/.vscode-server/bin/${COMMIT_ID} --strip-components=1 \
+    && rm vscode-server.tar.gz \
+    && touch /root/.vscode-server/bin/${COMMIT_ID}/0
+
+RUN mkdir -p /root/.vscode-server/extensions \
+    && curl -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/evzen-wybitul/vsextensions/magic-racket/latest/vspackage -o magic-racket.vsix \
+    && unzip -q magic-racket.vsix "extension/*" \
+    && mv extension /root/.vscode-server/extensions/evzen-wybitul.magic-racket \
+    && rm magic-racket.vsix
+
+CMD ["/bin/bash"]
