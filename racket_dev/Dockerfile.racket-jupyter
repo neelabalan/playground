@@ -4,7 +4,8 @@ FROM racket:${RACKET_VERSION}
 
 ARG VSCODE_SERVER_VERSION=latest
 
-RUN dnf install -y \
+RUN dnf install -y epel-release \
+    && dnf install -y \
     zeromq-devel \
     tar \
     gzip \
