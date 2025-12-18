@@ -1,0 +1,8 @@
+# VS Code Extensions
+# Add one extension ID per line (format: publisher.extension-name)
+# Example extensions:
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+GitHub.copilot
+# evzen-wybitul.magic-racket

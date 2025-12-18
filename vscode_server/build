@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e
+
+get_vscode_version() {
+    CODE_PATH=$(which code 2>/dev/null)
+    if [ -n "$CODE_PATH" ]; then
+        COMMIT=$("$CODE_PATH" --version 2>/dev/null | sed -n '2p')
+        if [ -n "$COMMIT" ]; then
+            echo "$COMMIT"
+            return 0
+        fi
+    fi
+    
+    echo "latest"
+}
+
+VSCODE_VERSION=$(get_vscode_version)
+
+echo "building VS Code server Docker image with version: $VSCODE_VERSION"
+
+docker build \
+    --build-arg VSCODE_SERVER_VERSION="$VSCODE_VERSION" \
+    --platform linux/amd64 \
+    -t vscode-server:latest \
+    -t "vscode-server:$VSCODE_VERSION" \
+    .
+
+echo "build complete!"
+echo "image tags:"
+echo "  - vscode-server:latest"
+echo "  - vscode-server:$VSCODE_VERSION"
