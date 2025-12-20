@@ -1,1 +1,3 @@
 evzen-wybitul.magic-racket
+ms-toolsai.jupyter
+ms-python.python
