@@ -1,7 +1,7 @@
 FROM almalinux:9 AS builder
 
 ARG RACKET_VERSION=8.17
-ARG TARGETARCH=arm64
+ARG TARGETARCH=x64
 
 RUN dnf install -y --allowerasing \
     gcc \
@@ -22,19 +22,22 @@ RUN dnf install -y --allowerasing \
     gzip \
     && dnf clean all
 
-RUN curl -L --retry 5 --retry-delay 3 --retry-max-time 900 -C - -o racket-src.tar.gz \
-    https://download.racket-lang.org/installers/${RACKET_VERSION}/racket-${RACKET_VERSION}-src.tgz \
-    && tar xzf racket-src.tar.gz \
-    && cd racket-${RACKET_VERSION}/src \
-    && if [ "${TARGETARCH}" = "arm64" ]; then \
+RUN echo "building Racket ${RACKET_VERSION} for architecture: ${TARGETARCH}" && \
+    curl -L --retry 5 --retry-delay 3 --retry-max-time 900 -C - -o racket-src.tar.gz \
+    https://download.racket-lang.org/installers/${RACKET_VERSION}/racket-${RACKET_VERSION}-src.tgz && \
+    tar xzf racket-src.tar.gz && \
+    cd racket-${RACKET_VERSION}/src && \
+    if [ "${TARGETARCH}" = "arm64" ]; then \
+        echo "configuring for arm64..." && \
         ./configure --prefix=/usr/local --enable-arm64; \
-       else \
+    else \
+        echo "configuring for x64..." && \
         ./configure --prefix=/usr/local; \
-       fi \
-    && make -j$(nproc) \
-    && make install \
-    && cd ../.. \
-    && rm -rf racket-${RACKET_VERSION} racket-src.tar.gz
+    fi && \
+    make -j$(nproc) && \
+    make install && \
+    cd ../.. && \
+    rm -rf racket-${RACKET_VERSION} racket-src.tar.gz
 
 
 FROM almalinux:9

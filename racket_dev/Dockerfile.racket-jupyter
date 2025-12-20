@@ -3,14 +3,17 @@ ARG RACKET_VERSION=8.17
 FROM racket:${RACKET_VERSION}
 
 ARG VSCODE_SERVER_VERSION=latest
+ARG ARCH=x64
 
 RUN dnf install -y epel-release \
-    && dnf install -y \
+    && dnf install -y --allowerasing \
     zeromq-devel \
     tar \
     gzip \
+    curl \
     python3.11 \
     python3.11-pip \
+    unzip \
     && dnf clean all
 
 RUN python3.11 -m pip install --no-cache-dir ipykernel
@@ -18,15 +21,24 @@ RUN python3.11 -m pip install --no-cache-dir ipykernel
 RUN raco pkg install --auto iracket \
     && raco iracket install
 
-COPY code_setup.sh /tmp/
-RUN chmod +x /tmp/code_setup.sh \
-    && /tmp/code_setup.sh ${VSCODE_SERVER_VERSION} \
-    && rm /tmp/code_setup.sh
+# install VS Code Server
+RUN mkdir -p /root/.vscode-server/bin && \
+    if [ "$VSCODE_SERVER_VERSION" = "latest" ]; then \
+        echo "fetching latest VS Code Server version for ${ARCH}..." && \
+        VSCODE_SERVER_VERSION=$(curl -s https://update.code.visualstudio.com/api/releases/stable | head -n 1); \
+    fi && \
+    echo "installing VS Code Server version: $VSCODE_SERVER_VERSION for architecture: $ARCH" && \
+    curl -sSL "https://update.code.visualstudio.com/commit:${VSCODE_SERVER_VERSION}/server-linux-${ARCH}/stable" -o /tmp/vscode-server.tar.gz && \
+    tar -xzf /tmp/vscode-server.tar.gz -C /root/.vscode-server/bin/ && \
+    mv /root/.vscode-server/bin/vscode-server-linux-${ARCH} /root/.vscode-server/bin/${VSCODE_SERVER_VERSION} && \
+    rm /tmp/vscode-server.tar.gz && \
+    ls -la /root/.vscode-server/bin/ && echo "vscode server installed successfully"
 
-RUN mkdir -p /root/.vscode-server/extensions \
-    && curl -L https://marketplace.visualstudio.com/_apis/public/gallery/publishers/evzen-wybitul/vsextensions/magic-racket/latest/vspackage -o magic-racket.vsix \
-    && unzip -q magic-racket.vsix "extension/*" \
-    && mv extension /root/.vscode-server/extensions/evzen-wybitul.magic-racket \
-    && rm magic-racket.vsix
+# install extensions
+COPY extensions.txt /tmp/
+COPY install_extensions.sh /tmp/
+RUN chmod +x /tmp/install_extensions.sh && \
+    /tmp/install_extensions.sh /tmp/extensions.txt && \
+    rm /tmp/install_extensions.sh /tmp/extensions.txt
 
 CMD ["/bin/bash"]

@@ -1,0 +1,94 @@
+#!/bin/bash
+
+set -e
+
+get_vscode_version() {
+    CODE_PATH=$(which code 2>/dev/null)
+    if [ -n "$CODE_PATH" ]; then
+        COMMIT=$("$CODE_PATH" --version 2>/dev/null | sed -n '2p')
+        if [ -n "$COMMIT" ]; then
+            echo "$COMMIT"
+            return 0
+        fi
+    fi
+    
+    echo "latest"
+}
+
+get_arch() {
+    UNAME_ARCH=$(uname -m)
+    case "$UNAME_ARCH" in
+        x86_64)
+            echo "x64"
+            ;;
+        aarch64|arm64)
+            echo "arm64"
+            ;;
+        *)
+            echo "x64"
+            ;;
+    esac
+}
+
+ARCH=${1:-$(get_arch)}
+RACKET_VERSION=${2:-8.17}
+
+case "$ARCH" in
+    x64|x86_64|amd64)
+        ARCH="x64"
+        PLATFORM="linux/amd64"
+        ;;
+    arm64|aarch64|aarch)
+        ARCH="arm64"
+        PLATFORM="linux/arm64"
+        ;;
+    *)
+        echo "unsupported architecture: $ARCH"
+        exit 1
+        ;;
+esac
+
+VSCODE_VERSION=$(get_vscode_version)
+
+echo "building Racket Docker images"
+echo "  racket version: $RACKET_VERSION"
+echo "  vscode version: $VSCODE_VERSION"
+echo "  architecture: $ARCH"
+echo "  platform: $PLATFORM"
+
+echo ""
+echo "building base racket image..."
+docker build \
+    -f Dockerfile.racket \
+    --build-arg RACKET_VERSION="$RACKET_VERSION" \
+    --build-arg TARGETARCH="$ARCH" \
+    --platform "$PLATFORM" \
+    -t racket:latest \
+    -t "racket:$RACKET_VERSION" \
+    -t "racket:$RACKET_VERSION-$ARCH" \
+    .
+
+echo ""
+echo "building racket-jupyter image..."
+docker build \
+    -f Dockerfile.racket-jupyter \
+    --build-arg RACKET_VERSION="$RACKET_VERSION" \
+    --build-arg VSCODE_SERVER_VERSION="$VSCODE_VERSION" \
+    --build-arg ARCH="$ARCH" \
+    --platform "$PLATFORM" \
+    -t racket-jupyter:latest \
+    -t "racket-jupyter:$RACKET_VERSION" \
+    -t "racket-jupyter:$RACKET_VERSION-$ARCH" \
+    .
+
+echo ""
+echo "build complete!"
+echo "racket image tags:"
+echo "  - racket:latest"
+echo "  - racket:$RACKET_VERSION"
+echo "  - racket:$RACKET_VERSION-$ARCH"
+echo ""
+echo "racket-jupyter image tags:"
+echo "  - racket-jupyter:latest"
+echo "  - racket-jupyter:$RACKET_VERSION"
+echo "  - racket-jupyter:$RACKET_VERSION-$ARCH"
