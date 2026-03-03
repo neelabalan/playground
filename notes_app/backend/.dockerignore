@@ -1,0 +1,4 @@
+bin/
+dbstore/
+*.db
+tests/

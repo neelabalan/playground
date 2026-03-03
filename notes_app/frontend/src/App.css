@@ -1,0 +1,85 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  font-size: 24px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 0.5em 1em;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+ul li.pico-background-slate-750 {
+  border-radius: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333c4e;
+  border-radius: 4px;
+  resize: none;
+  overflow: hidden;
+  height: auto;
+  min-height: 60px;
+}
+
+.thought-card {
+  text-align: left;
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-top: 20px;
+  border: 1px solid #333c4e;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.7fr 0.3fr;
+  margin-right: 60px;
+  margin-left: 60px;
+  gap: 0px 40px;
+  grid-auto-flow: row;
+  grid-template-areas: ". .";
+}
+.icon-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.edit-icon,
+.trash-icon {
+  cursor: pointer;
+}
+.trash-icon:hover,
+.edit-icon:hover {
+  color: aliceblue;
+}
+
+.wrapper {
+  margin-left: 60px;
+  margin-right: 60px;
+  display: flex;
+}
+
+.modal-button {
+  text-align: center;
+  height: 60px;
+}
