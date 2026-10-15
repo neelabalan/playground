@@ -1,0 +1,27 @@
+{
+  "defaults": {
+    "key_name": "my-key",
+    "volume_size_gb": 200,
+    "name": "gpu-dev"
+  },
+  "targets": [
+    {
+      "region": "us-east-1",
+      "instance_type": "g6e.2xlarge",
+      "azs": ["us-east-1a", "us-east-1b", "us-east-1c"],
+      "security_group_ids": ["sg-0123456789abcdef0"]
+    },
+    {
+      "region": "us-east-2",
+      "instance_type": "g6e.2xlarge",
+      "azs": [],
+      "security_group_ids": ["sg-0fedcba9876543210"]
+    },
+    {
+      "region": "us-east-1",
+      "instance_type": "g6e.4xlarge",
+      "azs": ["us-east-1a", "us-east-1b"],
+      "security_group_ids": ["sg-0123456789abcdef0"]
+    }
+  ]
+}
